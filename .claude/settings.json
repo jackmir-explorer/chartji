@@ -1,0 +1,14 @@
+{
+  "allow": [
+    "rm",
+    "rm -rf",
+    "mv",
+    "cp",
+    "mkdir",
+    "git",
+    "npm",
+    "node",
+    "npx",
+    "python"
+  ]
+}
