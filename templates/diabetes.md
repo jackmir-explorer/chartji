@@ -1,10 +1,5 @@
 # templates/diabetes.md — 당뇨 Working Draft 필수 필드
 
-## 트리거 키워드
-당뇨, 혈당, 인슐린, 메트포르민, HbA1c, 공복혈당, DM
-
----
-
 ## 필수 포함 필드
 
 ### 혈당 조절 상태

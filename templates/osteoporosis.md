@@ -1,10 +1,5 @@
 # templates/osteoporosis.md — 골다공증 Working Draft 필수 필드
 
-## 트리거 키워드
-골다공증, 골밀도, BMD, T-score, 비스포스포네이트, 포사맥스, 악토넬, 데노수맙, 프롤리아, 칼슘, 비타민D
-
----
-
 ## 필수 포함 필드
 
 ### 골밀도 수치

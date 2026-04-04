@@ -97,44 +97,27 @@ ROS: [관련 계통만 — 확인(+) / 부정(-) 구분]
 PE: [doctor-stated 소견만 — 없으면 이 줄 생략]
 Objective: [활력징후·수치 — transcript 언급만. 없으면 생략]
 Assessment: [working assessment — 불확실성 허용, DDx 나열 금지]
-Plan: [doctor-stated plan만 — 처방·검사·교육·추적 포함. 없으면 이 줄 생략]`;
+Plan: [doctor-stated plan만 — 처방·검사·교육·추적 포함. 없으면 이 줄 생략]
 
-/* F. Guideline Panel — 의사 온디맨드 참고 패널. 자동 표시 아님. */
-const GUIDELINE_PROMPT=`한국 가정의학과 외래 Guideline Panel 생성 도구.
-역할: 진료 transcript에서 확인된 임상 문제에 대해 외래 의사가 빠르게 참고할 수 있는 가이드라인 패널을 생성한다.
-==절대 금지==
-- SOAP note 작성 금지
-- EMR 문장 생성 금지
-- Red flag 경고 반복 금지
-- Missing history 질문 생성 금지
-- 장문 교과서 설명·병태생리 설명 금지
-- 감별진단 나열 금지
-- 가이드라인 원문 복사 금지
-- 환자 교육용 문장 금지
-==출력 규칙==
-- bullet point 중심. 각 섹션 3~6개 bullet.
-- 수치·기준·기간·검사 시점·약 시작 기준 위주.
-- 문제당 한 화면에 들어갈 분량.
-==출력 형식 (문제마다 반복)==
-=== Guideline Panel ===
+---
+[질환별 템플릿]
+transcript를 읽고 아래 카테고리 중 해당하는 것을 하나 선택하라.
+해당 없으면 null.
 
-Problem: [문제명]
+카테고리:
+- diabetes: 혈당 조절, 당뇨 관련 대화
+- dyslipidemia: 콜레스테롤, 지질, 스타틴 관련 대화
+- obesity: 체중 감량, 비만 치료 관련 대화
+- musculoskeletal: 관절/근육/척추 통증 관련 대화
+- gastrointestinal: 소화기 증상 관련 대화
+- insomnia: 수면 장애, 만성 피로 관련 대화
+- osteoporosis: 골밀도, 골다공증 관련 대화
+- thyroid: 갑상선 기능/결절 관련 대화
+- depression: 우울, 불안, 기분 장애 관련 대화
 
-[ Overview ]
-- (임상적으로 중요한 요약, 외래 핵심 포인트)
+선택된 카테고리가 있으면, 해당 템플릿의 필수 항목 중
+transcript에서 언급된 것만 Working Draft에 포함할 것.
+언급되지 않은 항목은 생략.
+키워드 매칭이 아닌 대화 맥락으로 판단할 것.
+{{TEMPLATE_CONTENT}}`;
 
-[ Risk / Important considerations ]
-- (위험요인, 중증도 판단 요소, Risk score 또는 판단 기준)
-
-[ Evaluation / Tests ]
-- (기본 검사, 추가 검사 고려 시점, 검사 필요 기준)
-
-[ Treatment / Management ]
-- (1차 치료, 약물/비약물, escalation 기준)
-
-[ Follow-up ]
-- (추적 간격, 재평가 시점, 모니터링 항목)
-
-[ Prognosis / Course ]
-- (일반적 경과, 증상 호전 예상 기간, 호전 기준)
-6축 중심: Risk · Threshold · Test · Treatment · Follow-up · Prognosis`;

@@ -33,16 +33,19 @@
 금지: App 공유 상태 직접 참조, 패널 간 데이터 공유
 원칙: 각 패널은 자체 state·debounce·API 호출로 완전 독립
 
-## src/components/chart-output.js
-책임: Final Chart 파싱 및 렌더
-포함: parseChartText(), SectionBlock, VisitTypeBadge,
-      OnDemandPanel, ProblemCard, GuidelineRenderer, ChartOutput
-금지: 실시간 패널 로직, App 상태 직접 변경
+## src/templates.js
+책임: 질환별 Working Draft 필수 필드 상수
+포함: TEMPLATES 객체 (카테고리 키 → 필수 필드 문자열)
+      카테고리: diabetes, dyslipidemia, obesity, musculoskeletal,
+               gastrointestinal, insomnia, osteoporosis, thyroid, depression
+선택 방식: 키워드 매칭 아님 — WORKING_DRAFT_PROMPT 내 Claude가 맥락으로 판단
+금지: 로직, API 호출, UI 코드
+참조: templates/*.md (원본 문서), templates/README.md (카테고리 설명)
 
 ## src/app.js
 책임: 공유 상태 관리 + 레이아웃 조율
-포함: raw, apiKey, followUpCtx, screen, consent 등 공유 상태
-      WorkingDraft, Guideline, FinalChart 생성 로직
+포함: raw, apiKey, followUpCtx, consent 등 공유 상태
+      WorkingDraft 생성 로직
 금지: 패널별 debounce 로직 (각 패널이 직접 소유)
       비즈니스 로직 (api.js에 위임)
 

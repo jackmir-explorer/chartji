@@ -75,22 +75,11 @@ async function generateProblemsPanel(raw,apiKey,ctx){
 }
 
 /* Working Draft */
-async function generateWorkingDraft(raw,apiKey,ctx){
+async function generateWorkingDraft(raw,apiKey,ctx,customPrompt){
   var ctxLine=ctx&&ctx.trim()?"\n\n재진 Context (한 줄만 반영): "+ctx.trim().slice(0,200):"";
-  var sys=WORKING_DRAFT_PROMPT+ctxLine;
+  var sys=(customPrompt||WORKING_DRAFT_PROMPT)+ctxLine;
   return callClaude(
     sys,
     "다음 진료 transcript로 Working Draft를 작성하라.\n\n[Transcript]\n"+raw,
     apiKey,700);
-}
-
-/* Guideline Panel — on-demand */
-async function generateGuidelinePanel(raw,problems,apiKey){
-  var probHint=(problems&&problems.length>0)
-    ?"\n\n[감지된 문제 목록]\n"+problems.map(function(p){return "- "+p.title;}).join("\n")
-    :"";
-  return callClaude(
-    GUIDELINE_PROMPT,
-    "다음 외래 진료 transcript에서 임상 문제를 파악하고 각 문제에 대한 Guideline Panel을 생성하라."+probHint+"\n\n[Transcript]\n"+raw,
-    apiKey,1400);
 }

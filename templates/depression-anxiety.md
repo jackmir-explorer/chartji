@@ -1,10 +1,5 @@
 # templates/depression-anxiety.md — 우울/불안 Working Draft 필수 필드
 
-## 트리거 키워드
-우울, 불안, 공황, 무기력, 의욕, 기분, 항우울제, SSRI, 정신건강, 심리, PHQ, GAD
-
----
-
 ## 필수 포함 필드
 
 ### 증상 및 중증도

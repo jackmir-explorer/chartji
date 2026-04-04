@@ -13,9 +13,8 @@ rules/file-ownership.md 테이블을 기준으로 즉시 결정한다.
 | 새 패널 추가 | panels.js | api.js, prompts.js |
 | 프롬프트 내용 수정 | prompts.js | — |
 | API 함수 수정 | api.js | — |
-| Final Chart 수정 | chart-output.js | — |
 | Working Draft 수정 | app.js | prompts.js |
-| Guideline 수정 | app.js | prompts.js |
+| 질환 템플릿 수정 | templates.js | templates/*.md |
 | 공통 UI 컴포넌트 수정 | primitives.js | — |
 | 스타일 수정 | styles.css | — |
 | 상수/샘플 수정 | constants.js | — |

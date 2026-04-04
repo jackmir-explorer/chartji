@@ -12,6 +12,7 @@ src/
 ├── styles.css              스타일 전체
 ├── constants.js            PROB_COLORS, CC_KEYWORDS, detectLocalCC,
 │                           EMPTY_PANEL_STATE, SAMPLE 등
+├── templates.js            TEMPLATES 상수 — 9개 질환별 필수 포함 필드 (templates/*.md 인라인)
 ├── prompts.js              *_PROMPT 상수 (Triage·Missing·RedFlag·Problems·WorkingDraft·Guideline)
 ├── api.js                  callClaude + generate* 순수함수
 ├── components/
@@ -20,7 +21,7 @@ src/
 └── app.js                  App() 배선판 (WorkingDraft·안전패널 조율)
 ```
 
-> **현재 버전: v15** — Final Chart / Guideline 탭 제거됨. 추천검사/치료 탭은 다음 세션에서 신규 구현 예정.
+> **현재 버전: v16** — 질환별 템플릿 동적 주입 추가. Working Draft 생성 시 transcript 맥락으로 카테고리 선택 후 필수 필드 주입.
 
 파일별 책임 경계 → `rules/file-ownership.md`
 

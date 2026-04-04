@@ -60,7 +60,11 @@ function App(){
         lastDraftRef.current=trimmed;
         setDraftLoading(true);
         try{
-          var d=await generateWorkingDraft(trimmed,apiKey,followUpCtx);
+          var templateContent=Object.keys(TEMPLATES)
+            .map(function(key){return "["+key+"]\n"+TEMPLATES[key];})
+            .join("\n\n");
+          var draftPrompt=WORKING_DRAFT_PROMPT.replace("{{TEMPLATE_CONTENT}}",templateContent);
+          var d=await generateWorkingDraft(trimmed,apiKey,followUpCtx,draftPrompt);
           setDraftText(d);
         }catch(_){}
         finally{setDraftLoading(false);}
@@ -105,6 +109,7 @@ function App(){
   function clearSession(){
     setRaw(""); finalTextRef.current="";
     setDraftText(""); setDraftLoading(false);
+    setFollowUpCtx("");
     lastDraftRef.current=""; clearTimeout(draftTimerRef.current);
     setRfKey(function(k){return k+1;});
     setTriageKey(function(k){return k+1;});

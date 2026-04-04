@@ -30,10 +30,7 @@ QA가 기술적 회귀와 임상 안전을 동시에 확인하는 스킬.
 
 ### WorkingDraft
 - [ ] 50자 이상 + 3초 debounce 후 생성
-
-### Final Chart
-- [ ] generate() → parseChartText() → ProblemCard 렌더
-- [ ] editMode 동작
+- [ ] 템플릿 주입: TEMPLATES → replace('{{TEMPLATE_CONTENT}}') → customPrompt 경로 정상
 
 ### 세션 관리
 - [ ] clearSession() 시 전체 리셋
@@ -45,7 +42,7 @@ QA가 기술적 회귀와 임상 안전을 동시에 확인하는 스킬.
 ```
 [QA 결과]
 임상 안전: N/6 통과
-기능 회귀: N/9 통과
+기능 회귀: N/8 통과
 
 실패:
   - 항목: 예상 → 실제 → 원인
