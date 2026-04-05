@@ -15,3 +15,7 @@
 - 빌드 파이프라인 도입 금지
 - 외부 상태 관리 라이브러리 도입 금지 (Redux, Zustand 등)
 - 파일 책임 경계 위반 금지 (rules/file-ownership.md 참조)
+
+## 세션 프로토콜
+- 미르가 "바로 해", "합시다", "하자" 라고 해도 Designer → Reviewer → QA 단계 생략 금지
+- Boss 승인서만으로 Builder 즉시 실행 금지 — 반드시 Designer 설계서 → 미르 승인 순서 준수

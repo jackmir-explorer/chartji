@@ -74,6 +74,14 @@ async function generateProblemsPanel(raw,apiKey,ctx){
   return safeParseJSON(t);
 }
 
+/* Draft Review — on-demand only */
+async function generateDraftReview(raw,apiKey,customPrompt){
+  return callClaude(
+    customPrompt||DRAFT_REVIEW_PROMPT,
+    "다음 진료 대화를 검토하라.\n\n[Transcript]\n"+raw,
+    apiKey,600);
+}
+
 /* Working Draft */
 async function generateWorkingDraft(raw,apiKey,ctx,customPrompt){
   var ctxLine=ctx&&ctx.trim()?"\n\n재진 Context (한 줄만 반영): "+ctx.trim().slice(0,200):"";

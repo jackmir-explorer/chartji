@@ -14,9 +14,11 @@ function App(){
   var [showCtxInput, setShowCtxInput] = useState(false);
 
   /* ── Working Draft ── */
-  var [draftText,   setDraftText]   = useState("");
-  var [draftLoading,setDraftLoading]= useState(false);
-  var [leftTab,     setLeftTab]     = useState("raw"); /* "raw" | "draft" */
+  var [draftText,    setDraftText]    = useState("");
+  var [draftLoading, setDraftLoading] = useState(false);
+  var [reviewText,   setReviewText]   = useState("");
+  var [reviewLoading,setReviewLoading]= useState(false);
+  var [leftTab,      setLeftTab]      = useState("raw"); /* "raw" | "draft" */
 
   var [liveEnabled,setLiveEnabled] = useState(true);
   var [rfKey,setRfKey] = useState(0);
@@ -109,6 +111,7 @@ function App(){
   function clearSession(){
     setRaw(""); finalTextRef.current="";
     setDraftText(""); setDraftLoading(false);
+    setReviewText(""); setReviewLoading(false);
     setFollowUpCtx("");
     lastDraftRef.current=""; clearTimeout(draftTimerRef.current);
     setRfKey(function(k){return k+1;});
@@ -140,7 +143,7 @@ function App(){
           <span style={{fontSize:16,fontWeight:800,color:"#c96442",letterSpacing:"-.02em"}}>차트지</span>
           <span style={{fontSize:10,color:"#2e374f",background:"#0d1018",
             border:"1px solid #1e2538",padding:"2px 8px",borderRadius:20,
-            fontFamily:"'JetBrains Mono',monospace"}}>FM v15</span>
+            fontFamily:"'JetBrains Mono',monospace"}}>FM v18</span>
         </div>
         <div style={{display:"flex",alignItems:"center",gap:8}}>
           <div style={{display:"flex",alignItems:"center",gap:5,background:"#0d1018",
@@ -412,6 +415,40 @@ function App(){
                         )}
                       </div>
                       {draftText}
+                      {/* 판단 검토 버튼 */}
+                      <div style={{marginTop:10,borderTop:"1px solid #1e2538",paddingTop:8}}>
+                        <button
+                          onClick={async function(){
+                            if(!apiKey||reviewLoading) return;
+                            setReviewLoading(true); setReviewText("");
+                            try{
+                              var reviewPrompt=DRAFT_REVIEW_PROMPT.replace("{{CLINIC_SCOPE}}",CLINIC_SCOPE);
+                              var r=await generateDraftReview(raw,apiKey,reviewPrompt);
+                              setReviewText(r);
+                            }catch(e){setReviewText("[오류: "+e.message+"]");}
+                            finally{setReviewLoading(false);}
+                          }}
+                          disabled={reviewLoading||!apiKey}
+                          style={{fontSize:10,fontWeight:700,padding:"4px 12px",
+                            borderRadius:6,cursor:(reviewLoading||!apiKey)?"not-allowed":"pointer",
+                            color:"#a78bfa",background:"transparent",
+                            border:"1px solid rgba(167,139,250,.35)",
+                            opacity:(reviewLoading||!apiKey)?.5:1,
+                            display:"flex",alignItems:"center",gap:5}}>
+                          {reviewLoading&&(
+                            <span style={{width:7,height:7,border:"1px solid #252d42",
+                              borderTopColor:"#a78bfa",borderRadius:"50%",display:"inline-block",
+                              animation:"spin .65s linear infinite"}}/>
+                          )}
+                          판단 검토
+                        </button>
+                        {reviewText&&(
+                          <div style={{marginTop:8,fontSize:12,color:"#94a3b8",
+                            lineHeight:1.8,whiteSpace:"pre-wrap"}}>
+                            {reviewText}
+                          </div>
+                        )}
+                      </div>
                     </div>
                   )}
                 </div>
@@ -421,7 +458,7 @@ function App(){
                 background:"rgba(96,165,250,.04)",
                 border:"1px solid rgba(96,165,250,.12)",borderRadius:8}}>
                 <div style={{fontSize:11,color:"#4a5268",lineHeight:1.7}}>
-                  v15 · Triage 10자↑·900ms / RedFlag 20자↑·1.2s / Missing 30자↑·1.8s / Draft 50자↑·3s
+                  v18 · Triage 10자↑·900ms / RedFlag 20자↑·1.2s / Missing 30자↑·1.8s / Draft 50자↑·3s
                 </div>
                 <div style={{fontSize:10,color:"#2e374f",marginTop:3}}>
                   각 패널 독립 갱신 · Working Draft 실시간 구조화

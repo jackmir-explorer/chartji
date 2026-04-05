@@ -1,6 +1,9 @@
-# skills/scope-gate/SKILL.md — Scope Gate
+# skills/scope-gate/SKILL.md — Scope Gate (Deprecated)
 
-Boss가 개발 요청 승인 전에 실행하는 범위 체크.
+> **⚠ Deprecated** — 이 스킬은 `skills/file-map/SKILL.md`의 Phase 0으로 이관되었습니다.
+> Designer가 구현 워크플로우 진입 시 범위 체크를 직접 수행합니다.
+
+Boss가 개발 요청 승인 전에 실행하던 범위 체크. (기록 보존용)
 
 ## 체크리스트
 ```

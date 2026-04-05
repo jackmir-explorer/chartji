@@ -1,73 +1,54 @@
 # CLAUDE.md — Chartji 개발 하네스
 
 Chartji는 한국 가정의학과 외래 대화 기반 진료 보조 도구다.
-
----
-
-## src/ 파일 구조 및 책임
-
-```
-src/
-├── index.html              뼈대 (CDN + script 태그만)
-├── styles.css              스타일 전체
-├── constants.js            PROB_COLORS, CC_KEYWORDS, detectLocalCC,
-│                           EMPTY_PANEL_STATE, SAMPLE 등
-├── templates.js            TEMPLATES 상수 — 9개 질환별 필수 포함 필드 (templates/*.md 인라인)
-├── prompts.js              *_PROMPT 상수 (Triage·Missing·RedFlag·Problems·WorkingDraft·Guideline)
-├── api.js                  callClaude + generate* 순수함수
-├── components/
-│   ├── primitives.js       BulletList, PanelEmpty, SubLabel, PanelCard
-│   └── panels.js           RedFlagPanel, MissingPanel, TriagePanel, ProblemsPanel
-└── app.js                  App() 배선판 (WorkingDraft·안전패널 조율)
-```
-
-> **현재 버전: v16** — 질환별 템플릿 동적 주입 추가. Working Draft 생성 시 transcript 맥락으로 카테고리 선택 후 필수 필드 주입.
-
-파일별 책임 경계 → `rules/file-ownership.md`
+이 어플은 의사가 진료할 때 반드시 빠트려서는 안되는 사항들을 간단하고 선명하게 보여준다.
+이 어플은 진료 대화를 기반으로, 핵심이 잘 축약된 문서를 출력한다.
 
 ---
 
 ## 핵심 제품 원칙
 
 1. 화면 출력은 짧고 선명하게 — reasoning dump 금지
-2. Safety core > Guideline assist
-3. 패널 역할 분리 — 침범 금지
-4. 전체 재작성 금지 — 국소 수정만
-5. RedFlag는 transcript-only — context 주입 절대 금지
+2. 패널 역할 분리 — 침범 금지
+3. 전체 재작성 금지 — 국소 수정만
+4. RedFlag는 transcript-only — context 주입 절대 금지
 
 ---
 
-## 하네스 구조
+## 호출 규칙
 
-```
-agents/   판단 주체
-skills/   에이전트가 호출하는 도구 (각 폴더의 SKILL.md)
-rules/    불변 규칙
-sessions/ 개발 기록 (지식 축적)
-src/      소스 파일
-```
+- **전략 리뷰가 필요할 때** → `Boss` 호출 (Board 심층 리뷰)
+- **구현 작업이 필요할 때** → `Designer` 호출 (실무진 파이프라인)
 
-| 에이전트 | 스킬 |
-|---------|------|
-| Boss | skills/scope-gate |
-| Designer | skills/file-map |
-| Builder | skills/edit-file |
-| Reviewer | skills/review-change |
-| QA | skills/clinical-qa |
+워크플로우 상세 → `rules/workflow.md`
 
 ---
 
 ## 세션 프로토콜
 
-1. Boss → scope-gate → 승인서
-2. Designer → file-map → 설계서
-3. **미르 승인**
-4. Builder → edit-file → 실행
-5. Reviewer → review-change → 검토
-6. QA → clinical-qa → 판정
-7. 통과: 버전 업 + sessions/ 기록 / 실패: 롤백 + 2번으로
+0. `rules/forbidden.md` 문서를 매 세션 시작 시 먼저 읽는다.
 
-### 세션 기록 규칙 (필수)
+### 기본 워크플로우 (구현)
+
+1. Designer → 범위 체크 + 설계서
+2. **미르 승인**
+3. Builder → 실행
+4. Reviewer → 검토
+5. QA → 판정
+6. 통과: sessions/ 기록 / 실패: 롤백 + 1번으로
+
+### 심층 워크플로우 (전략 리뷰)
+
+1. Boss → CMO · CLO · CFO · CVO 순차 분석
+2. Boss 종합 보고서 → 미르 검토
+3. 미르가 다음 행동 결정
+
+## Gotchas
+- Boss를 호출한 경우에도 구현이 필요하면 반드시 Designer부터 시작한다.
+
+---
+
+## 세션 기록 규칙 (필수)
 
 **모든 코드 변경 작업이 끝나면 반드시 `sessions/YYYY-MM-DD-[작업명].md` 를 생성한다.**
 
@@ -80,6 +61,7 @@ src/      소스 파일
 
 ## 상세 규칙 참조
 
+- 워크플로우 → `rules/workflow.md`
 - 파일별 책임 경계 → `rules/file-ownership.md`
 - 패널 역할 계약 → `rules/panel-contracts.md`
 - 절대 금지 목록 → `rules/forbidden.md`
