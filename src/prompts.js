@@ -11,12 +11,19 @@ const TRIAGE_PROMPT=`한국 일차진료 외래 초반 방향 anchor 도구.
 - "확인 필요", "고려", "위험", "주의", "의심", "rule out", "가능성" 남발 금지
 - transcript에 없는 정보 생성 금지
 JSON만 반환 (다른 텍스트 절대 금지):
-{"chiefComplaint":"...","initialFocus":"..."}
+{"chiefComplaint":"...","initialFocus":"...","calcCategories":["..."]}
 규칙:
 - chiefComplaint: 1~2개 짧은 증상 표현
 - initialFocus: 초기 접근 방향 한 줄 (사실형, 예: "기간·발열·호흡곤란부터 정리")
 - 재진 Context가 있으면 follow-up / lab review / medication adjustment 등 방문 성격을 initialFocus에 제한적으로 반영 가능
-- 2줄 이상 길어지지 않게`;
+- 2줄 이상 길어지지 않게
+- calcCategories: 대화 맥락에서 아래 5개 중 해당하는 질환 카테고리 배열. 해당 없으면 빈 배열 [].
+  dyslipidemia (콜레스테롤/지질/스타틴 관련)
+  osteoporosis (골밀도/골다공증/골절위험 관련)
+  depression (우울/불안/기분장애 관련)
+  diabetes (혈당/당뇨 관련)
+  obesity (체중/비만 관련)
+  복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */
 const MISSING_PROMPT=`한국 일차진료 외래 안전 관련 누락 항목 감지 도구.
@@ -99,27 +106,9 @@ Objective: [활력징후·수치 — transcript 언급만. 없으면 생략]
 Assessment: [working assessment — 불확실성 허용, DDx 나열 금지]
 Plan: [doctor-stated plan만 — 처방·검사·교육·추적 포함. 없으면 이 줄 생략]
 
----
-[질환별 템플릿]
-transcript를 읽고 아래 카테고리 중 해당하는 것을 하나 선택하라.
-해당 없으면 null.
-
-카테고리:
-- diabetes: 혈당 조절, 당뇨 관련 대화
-- dyslipidemia: 콜레스테롤, 지질, 스타틴 관련 대화
-- obesity: 체중 감량, 비만 치료 관련 대화
-- musculoskeletal: 관절/근육/척추 통증 관련 대화
-- gastrointestinal: 소화기 증상 관련 대화
-- insomnia: 수면 장애, 만성 피로 관련 대화
-- osteoporosis: 골밀도, 골다공증 관련 대화
-- thyroid: 갑상선 기능/결절 관련 대화
-- depression: 우울, 불안, 기분 장애 관련 대화
-
-선택된 카테고리가 있으면, 해당 템플릿의 필수 항목 중
-transcript에서 언급된 것만 Working Draft에 포함할 것.
-언급되지 않은 항목은 생략.
-키워드 매칭이 아닌 대화 맥락으로 판단할 것.
-{{TEMPLATE_CONTENT}}`;
+`;
+/* 참고: 질환별 템플릿은 Working Draft에서 분리됨.
+   계산기 탭(CALCULATORS)으로 이관 — templates.js 참조. */
 
 /* F. Draft Review — 온디맨드 판단 검토. 자동 실행 금지. */
 const DRAFT_REVIEW_PROMPT=`한국 가정의학과 외래 진료 판단 검토 도구.

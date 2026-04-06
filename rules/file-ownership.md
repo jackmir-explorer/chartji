@@ -33,14 +33,22 @@
 금지: App 공유 상태 직접 참조, 패널 간 데이터 공유
 원칙: 각 패널은 자체 state·debounce·API 호출로 완전 독립
 
+## src/components/sections.js
+책임: app.js에서 추출한 탭 콘텐츠 컴포넌트
+포함: CalcTabHeaders (계산기 탭 헤더 + 추가 메뉴),
+      DraftTab (Working Draft 표시 + 판단 검토),
+      CalcTabContent (계산기 폼 + 결과 + 참조표 + 면책)
+금지: 공유 상태 직접 참조 (props로만 수신), API 호출
+
 ## src/templates.js
-책임: 질환별 Working Draft 필수 필드 상수
-포함: TEMPLATES 객체 (카테고리 키 → 필수 필드 문자열)
-      카테고리: diabetes, dyslipidemia, obesity, musculoskeletal,
-               gastrointestinal, insomnia, osteoporosis, thyroid, depression
-선택 방식: 키워드 매칭 아님 — WORKING_DRAFT_PROMPT 내 Claude가 맥락으로 판단
-금지: 로직, API 호출, UI 코드
-참조: templates/*.md (원본 문서), templates/README.md (카테고리 설명)
+책임: 질환별 계산 도구 정의 상수
+포함: CALCULATORS 객체 (질환 키 → {label, description, fields[], calculate()?, referenceTable?, externalLink?})
+      질환: dyslipidemia, osteoporosis, depression, diabetes, obesity
+      calculate() 있는 질환: dyslipidemia (한국 가이드라인 위험군+LDL 목표), obesity (BMI)
+      externalLink 있는 질환: dyslipidemia (MDCalc), osteoporosis (FRAX)
+      Triage 패널의 calcCategories 감지 결과로 탭 활성화
+금지: API 호출, UI 코드
+참조: templates/*.md (원본 문서)
 
 ## src/app.js
 책임: 공유 상태 관리 + 레이아웃 조율

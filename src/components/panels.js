@@ -1,7 +1,7 @@
 const {useState,useRef,useEffect}=React;
 
 function TriagePanel(props){
-  var raw=props.raw, apiKey=props.apiKey, followUpCtx=props.followUpCtx;
+  var raw=props.raw, apiKey=props.apiKey, followUpCtx=props.followUpCtx, onDetect=props.onDetect;
   var [data,setData]=useState(null);
   var [loading,setLoading]=useState(false);
   var timerRef=useRef(null);
@@ -22,6 +22,7 @@ function TriagePanel(props){
       try{
         var result=await generateTriagePanel(trimmed,apiKey,followUpCtx);
         setData(result); setLoading(false);
+        if(onDetect&&result&&result.calcCategories){onDetect(result.calcCategories);}
       }catch(e){
         setLoading(false);
       }

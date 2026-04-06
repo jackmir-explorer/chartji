@@ -7,8 +7,6 @@ function App(){
   /* ── UI state ── */
   var [raw,       setRaw]       = useState("");
   var [consent,   setConsent]   = useState(false);
-  var [autoDelete,setAutoDelete]= useState(false);
-
   /* ── 재진 Context ── */
   var [followUpCtx,  setFollowUpCtx]  = useState("");
   var [showCtxInput, setShowCtxInput] = useState(false);
@@ -18,7 +16,13 @@ function App(){
   var [draftLoading, setDraftLoading] = useState(false);
   var [reviewText,   setReviewText]   = useState("");
   var [reviewLoading,setReviewLoading]= useState(false);
-  var [leftTab,      setLeftTab]      = useState("raw"); /* "raw" | "draft" */
+  var [leftTab,      setLeftTab]      = useState("raw"); /* "raw" | "draft" | "calc-xxx" */
+
+  /* ── 계산기 탭 ── */
+  var [detectedCalcs, setDetectedCalcs] = useState([]);
+  var [activeCalcs,   setActiveCalcs]   = useState([]);
+  var [calcInputs,    setCalcInputs]    = useState({});
+  var [calcResults,   setCalcResults]   = useState({});
 
   var [liveEnabled,setLiveEnabled] = useState(true);
   var [rfKey,setRfKey] = useState(0);
@@ -47,6 +51,18 @@ function App(){
     (window.SpeechRecognition||window.webkitSpeechRecognition);
 
 
+  /* ── 감지된 계산기 → 활성 탭 자동 추가 ── */
+  useEffect(function(){
+    if(!detectedCalcs.length) return;
+    setActiveCalcs(function(prev){
+      var next=prev.slice();
+      detectedCalcs.forEach(function(c){
+        if(CALCULATORS[c]&&next.indexOf(c)===-1) next.push(c);
+      });
+      return next;
+    });
+  },[detectedCalcs]);
+
   /* ─────────────────────────────────────────────────────────────
      Working Draft
   ───────────────────────────────────────────────────────────── */
@@ -62,11 +78,7 @@ function App(){
         lastDraftRef.current=trimmed;
         setDraftLoading(true);
         try{
-          var templateContent=Object.keys(TEMPLATES)
-            .map(function(key){return "["+key+"]\n"+TEMPLATES[key];})
-            .join("\n\n");
-          var draftPrompt=WORKING_DRAFT_PROMPT.replace("{{TEMPLATE_CONTENT}}",templateContent);
-          var d=await generateWorkingDraft(trimmed,apiKey,followUpCtx,draftPrompt);
+          var d=await generateWorkingDraft(trimmed,apiKey,followUpCtx);
           setDraftText(d);
         }catch(_){}
         finally{setDraftLoading(false);}
@@ -113,6 +125,7 @@ function App(){
     setDraftText(""); setDraftLoading(false);
     setReviewText(""); setReviewLoading(false);
     setFollowUpCtx("");
+    setDetectedCalcs([]); setActiveCalcs([]); setCalcInputs({}); setCalcResults({});
     lastDraftRef.current=""; clearTimeout(draftTimerRef.current);
     setRfKey(function(k){return k+1;});
     setTriageKey(function(k){return k+1;});
@@ -143,7 +156,7 @@ function App(){
           <span style={{fontSize:16,fontWeight:800,color:"#c96442",letterSpacing:"-.02em"}}>차트지</span>
           <span style={{fontSize:10,color:"#2e374f",background:"#0d1018",
             border:"1px solid #1e2538",padding:"2px 8px",borderRadius:20,
-            fontFamily:"'JetBrains Mono',monospace"}}>FM v18</span>
+            fontFamily:"'JetBrains Mono',monospace"}}>FM v19</span>
         </div>
         <div style={{display:"flex",alignItems:"center",gap:8}}>
           <div style={{display:"flex",alignItems:"center",gap:5,background:"#0d1018",
@@ -348,6 +361,8 @@ function App(){
                       </button>
                     );
                   })}
+                  <CalcTabHeaders activeCalcs={activeCalcs} leftTab={leftTab}
+                    setLeftTab={setLeftTab} setActiveCalcs={setActiveCalcs}/>
                   {leftTab==="raw"&&isRecording&&(
                     <span style={{fontSize:9,color:"#f87171",
                       background:"rgba(248,113,113,.1)",
@@ -385,80 +400,54 @@ function App(){
 
               {/* Working Draft 탭 */}
               {leftTab==="draft"&&(
-                <div style={{background:"#0d1018",border:"1px solid #1e2538",borderRadius:8,
-                  padding:"10px 12px",minHeight:240,overflowY:"auto",fontSize:12.5,
-                  color:"#94a3b8",lineHeight:1.9,
-                  fontFamily:"'JetBrains Mono',monospace",whiteSpace:"pre-wrap"}}>
-                  {draftLoading&&!draftText&&(
-                    <div style={{display:"flex",alignItems:"center",gap:6,color:"#2e374f",fontStyle:"italic"}}>
-                      <span style={{width:8,height:8,border:"1.5px solid #252d42",
-                        borderTopColor:"#60a5fa",borderRadius:"50%",display:"inline-block",
-                        animation:"spin .65s linear infinite"}}/>
-                      Working Draft 생성 중...
-                    </div>
-                  )}
-                  {!draftLoading&&!draftText&&(
-                    <span style={{color:"#2e374f",fontStyle:"italic"}}>
-                      전사 탭에 50자 이상 입력되면 자동 생성됩니다.
-                    </span>
-                  )}
-                  {draftText&&(
-                    <div>
-                      <div style={{fontSize:9,fontWeight:700,color:"#2e374f",
-                        textTransform:"uppercase",letterSpacing:".07em",marginBottom:8,
-                        borderBottom:"1px solid #1e2538",paddingBottom:4}}>
-                        Working Draft — 의사 검토 필수
-                        {draftLoading&&(
-                          <span style={{marginLeft:8,width:6,height:6,border:"1px solid #252d42",
-                            borderTopColor:"#60a5fa",borderRadius:"50%",display:"inline-block",
-                            animation:"spin .65s linear infinite",verticalAlign:"middle"}}/>
-                        )}
-                      </div>
-                      {draftText}
-                      {/* 판단 검토 버튼 */}
-                      <div style={{marginTop:10,borderTop:"1px solid #1e2538",paddingTop:8}}>
-                        <button
-                          onClick={async function(){
-                            if(!apiKey||reviewLoading) return;
-                            setReviewLoading(true); setReviewText("");
-                            try{
-                              var reviewPrompt=DRAFT_REVIEW_PROMPT.replace("{{CLINIC_SCOPE}}",CLINIC_SCOPE);
-                              var r=await generateDraftReview(raw,apiKey,reviewPrompt);
-                              setReviewText(r);
-                            }catch(e){setReviewText("[오류: "+e.message+"]");}
-                            finally{setReviewLoading(false);}
-                          }}
-                          disabled={reviewLoading||!apiKey}
-                          style={{fontSize:10,fontWeight:700,padding:"4px 12px",
-                            borderRadius:6,cursor:(reviewLoading||!apiKey)?"not-allowed":"pointer",
-                            color:"#a78bfa",background:"transparent",
-                            border:"1px solid rgba(167,139,250,.35)",
-                            opacity:(reviewLoading||!apiKey)?.5:1,
-                            display:"flex",alignItems:"center",gap:5}}>
-                          {reviewLoading&&(
-                            <span style={{width:7,height:7,border:"1px solid #252d42",
-                              borderTopColor:"#a78bfa",borderRadius:"50%",display:"inline-block",
-                              animation:"spin .65s linear infinite"}}/>
-                          )}
-                          판단 검토
-                        </button>
-                        {reviewText&&(
-                          <div style={{marginTop:8,fontSize:12,color:"#94a3b8",
-                            lineHeight:1.8,whiteSpace:"pre-wrap"}}>
-                            {reviewText}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  )}
-                </div>
+                <DraftTab draftText={draftText} draftLoading={draftLoading}
+                  reviewText={reviewText} reviewLoading={reviewLoading} apiKey={apiKey}
+                  onReview={async function(){
+                    if(!apiKey||reviewLoading) return;
+                    setReviewLoading(true); setReviewText("");
+                    try{
+                      var reviewPrompt=DRAFT_REVIEW_PROMPT.replace("{{CLINIC_SCOPE}}",CLINIC_SCOPE);
+                      var r=await generateDraftReview(raw,apiKey,reviewPrompt);
+                      setReviewText(r);
+                    }catch(e){setReviewText("[오류: "+e.message+"]");}
+                    finally{setReviewLoading(false);}
+                  }}/>
               )}
+
+              {/* 계산기 탭 콘텐츠 */}
+              {leftTab.indexOf("calc-")===0&&(function(){
+                var calcKey=leftTab.replace("calc-","");
+                var calc=CALCULATORS[calcKey];
+                if(!calc) return null;
+                var inputs=calcInputs[calcKey]||{};
+                function setField(fieldId,value){
+                  setCalcInputs(function(prev){
+                    var updated=Object.assign({},prev);
+                    var calcFields=Object.assign({},updated[calcKey]||{});
+                    calcFields[fieldId]=value;
+                    updated[calcKey]=calcFields;
+                    return updated;
+                  });
+                }
+                return (
+                  <CalcTabContent calcKey={calcKey} calc={calc} inputs={inputs}
+                    setField={setField} calcResults={calcResults}
+                    onCalculate={function(){
+                      var result=calc.calculate(inputs);
+                      setCalcResults(function(prev){
+                        var updated=Object.assign({},prev);
+                        updated[calcKey]=result;
+                        return updated;
+                      });
+                    }}/>
+                );
+              })()}
 
               <div style={{marginTop:10,padding:"9px 12px",
                 background:"rgba(96,165,250,.04)",
                 border:"1px solid rgba(96,165,250,.12)",borderRadius:8}}>
                 <div style={{fontSize:11,color:"#4a5268",lineHeight:1.7}}>
-                  v18 · Triage 10자↑·900ms / RedFlag 20자↑·1.2s / Missing 30자↑·1.8s / Draft 50자↑·3s
+                  v19 · Triage 10자↑·900ms / RedFlag 20자↑·1.2s / Missing 30자↑·1.8s / Draft 50자↑·3s
                 </div>
                 <div style={{fontSize:10,color:"#2e374f",marginTop:3}}>
                   각 패널 독립 갱신 · Working Draft 실시간 구조화
@@ -495,7 +484,8 @@ function App(){
 
             <RedFlagPanel key={rfKey} raw={raw} apiKey={apiKey}/>
             <MissingPanel key={missingKey} raw={raw} apiKey={apiKey} followUpCtx={followUpCtx}/>
-            <TriagePanel key={triageKey} raw={raw} apiKey={apiKey} followUpCtx={followUpCtx}/>
+            <TriagePanel key={triageKey} raw={raw} apiKey={apiKey} followUpCtx={followUpCtx}
+              onDetect={function(cats){setDetectedCalcs(cats||[]);}}/>
           </div>
 
         </div>

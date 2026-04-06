@@ -1,286 +1,181 @@
 /* ══════════════════════════════════════════════════════════
-   TEMPLATES — 질환별 Working Draft 필수 포함 필드
-   출처: templates/*.md 의 "## 필수 포함 필드" 섹션만 인라인
-   "## 주의 문구" 섹션은 포함하지 않음
+   CALCULATORS — 질환별 계산/참조 도구 정의
+   Triage 패널의 calcCategories 감지 결과로 탭 활성화
+   - calculate() 있는 경우: 입력 폼 + 계산 버튼 + 결과
+   - calculate() 없는 경우: 참조표만 표시
+   - externalLink 있는 경우: 외부 도구 링크
 ══════════════════════════════════════════════════════════ */
-const TEMPLATES = {
+const CALCULATORS = {
 
-  diabetes: `### 혈당 조절 상태
-- 최근 HbA1c (수치 + 측정일)
-- 공복혈당 / 식후혈당
-- 자가혈당 측정 여부 및 패턴
+  dyslipidemia: {
+    label: "이상지질혈증",
+    description: "한국지질동맥경화학회 가이드라인 기반 LDL 목표",
+    fields: [
+      {id:"cad",       label:"관상동맥질환",                          type:"select", options:["아니오","예"]},
+      {id:"ascvd",     label:"뇌졸중·TIA·경동맥·말초동맥·복부대동맥류", type:"select", options:["아니오","예"]},
+      {id:"dm",        label:"당뇨",                                 type:"select", options:["없음","10년 미만","10년 이상"]},
+      {id:"organDmg",  label:"표적장기손상(알부민뇨,CKD,망막병증 등)",  type:"select", options:["아니오","예"]},
+      {id:"age",       label:"나이",          type:"number", placeholder:"세"},
+      {id:"sex",       label:"성별",          type:"select", options:["남","여"]},
+      {id:"fhx",       label:"조기 심혈관질환 가족력", type:"select", options:["아니오","예"]},
+      {id:"htn",       label:"고혈압(≥140/90 또는 약물)", type:"select", options:["아니오","예"]},
+      {id:"smoking",   label:"현재 흡연",     type:"select", options:["아니오","예"]},
+      {id:"hdl",       label:"HDL-C",         type:"number", placeholder:"mg/dL"},
+    ],
+    resultLabel: "위험군 분류 + LDL / non-HDL 목표",
+    calculate: function(inp){
+      /* ── 1. 기존 심혈관질환 → 초고위험/매우고위험 ── */
+      if(inp.cad==="예")
+        return {위험군:"초고위험 (관상동맥질환)",LDL목표:"< 55 mg/dL","non-HDL목표":"< 85 mg/dL",비고:"기저치 대비 50%↓ 동시 권고"};
 
-### 저혈당
-- 최근 저혈당 에피소드 여부
-- 저혈당 인지 능력 (무감지 저혈당 여부)
+      if(inp.ascvd==="예")
+        return {위험군:"매우고위험 (죽상경화성 혈관질환)",LDL목표:"< 70 mg/dL","non-HDL목표":"< 100 mg/dL",비고:"기저치 대비 50%↓ 동시 권고"};
 
-### 현재 약물
-- 약물명 + 용량 + 복용 기간
-- 효과 평가 (목표 혈당 도달 여부)
-- 부작용 여부 (위장장애, 부종, 체중 변화 등)
-- 인슐린 사용 시: 종류, 단위, 주사 부위 상태
+      /* ── 2. 당뇨 분기 ── */
+      if(inp.dm==="10년 이상"||inp.dm==="10년 미만"){
+        /* 위험인자 카운팅 (당뇨 환자용) */
+        var age=parseFloat(inp.age), hdl=parseFloat(inp.hdl);
+        var rf=0;
+        if(age&&inp.sex==="남"&&age>=45) rf++;
+        if(age&&inp.sex==="여"&&age>=55) rf++;
+        if(inp.fhx==="예") rf++;
+        if(inp.htn==="예") rf++;
+        if(inp.smoking==="예") rf++;
+        if(hdl&&hdl<40) rf++;
+        if(hdl&&hdl>=60) rf--;
 
-### 합병증 스크리닝 (연 1회 이상)
-- 신장: 최근 eGFR, 단백뇨 (microalbumin)
-- 눈: 최근 안과 검진일
-- 발: 신경병증 증상 (저림, 감각 저하), 발 상처 여부
-- 심혈관: 흉통, 호흡곤란 여부
+        var hasOrganDmg=inp.organDmg==="예";
+        var longDm=inp.dm==="10년 이상";
 
-### 활력징후 및 신체 계측
-- 혈압 (목표 <130/80)
-- 체중 / BMI / 허리둘레
+        if(longDm||hasOrganDmg||rf>=1){
+          var result={위험군:"매우고위험 (당뇨 + ",LDL목표:"< 70 mg/dL","non-HDL목표":"< 100 mg/dL",비고:"기저치 대비 50%↓ 동시 권고"};
+          if(longDm) result.위험군+="유병기간 ≥10년";
+          else if(hasOrganDmg) result.위험군+="표적장기손상";
+          else result.위험군+="위험인자 동반";
+          result.위험군+=")";
+          if(hasOrganDmg&&rf>=3) result.비고+=" / LDL < 55 선택적 고려 가능";
+          return result;
+        }
+        /* DM <10년, 위험인자 없음 */
+        return {위험군:"고위험 (당뇨, 위험인자 없음)",LDL목표:"< 100 mg/dL","non-HDL목표":"< 130 mg/dL"};
+      }
 
-### 생활습관
-- 식이 조절 상태
-- 운동 빈도 및 종류
-- 흡연 / 음주`,
+      /* ── 3. 기존 질환·당뇨 없음 → 위험인자 카운팅 ── */
+      var age=parseFloat(inp.age), hdl=parseFloat(inp.hdl);
+      if(!age) return {error:"나이를 입력하세요."};
 
-  dyslipidemia: `### 지질 수치
-- 최근 지질 검사 결과 (측정일 포함)
-  - TC / LDL-C / HDL-C / TG
-- LDL 목표 수치 및 달성 여부
-  - 초고위험군: <55 mg/dL
-  - 고위험군: <70 mg/dL
-  - 중등도: <100 mg/dL
+      var rf=0;
+      if(inp.sex==="남"&&age>=45) rf++;
+      if(inp.sex==="여"&&age>=55) rf++;
+      if(inp.fhx==="예") rf++;
+      if(inp.htn==="예") rf++;
+      if(inp.smoking==="예") rf++;
+      if(hdl&&hdl<40) rf++;
+      if(hdl&&hdl>=60) rf--;
 
-### 심혈관 위험인자 평가
-- 고혈압, 당뇨, 흡연, 비만, 가족력
-- 기존 심혈관질환 또는 뇌혈관질환 여부 (초고위험군 해당)
+      if(rf>=2)
+        return {위험군:"중등도 위험군 (위험인자 "+rf+"개)",LDL목표:"< 130 mg/dL","non-HDL목표":"< 160 mg/dL"};
+      return {위험군:"저위험군 (위험인자 "+rf+"개)",LDL목표:"< 160 mg/dL","non-HDL목표":"< 190 mg/dL"};
+    },
+  },
 
-### 현재 약물
-- 약물명 (성분명) + 용량 + 복용 기간
-- 효과 평가 (LDL 목표 도달 여부)
-- 부작용 여부
-  - 근육통 / 근육 압통 (myopathy 감별 필수)
-  - CK 수치 확인 여부
-  - 간기능 이상 (피로, 황달 여부)
+  obesity: {
+    label: "비만",
+    description: "BMI 등급 분류",
+    fields: [
+      {id:"weight",  label:"체중",     type:"number", placeholder:"kg"},
+      {id:"height",  label:"키",       type:"number", placeholder:"cm"},
+      {id:"waist",   label:"허리둘레",  type:"number", placeholder:"cm (선택)"},
+      {id:"sex",     label:"성별",     type:"select", options:["남","여"]},
+    ],
+    resultLabel: "BMI + 비만 등급 (아시아태평양 기준)",
+    calculate: function(inp){
+      var w=parseFloat(inp.weight), h=parseFloat(inp.height);
+      if(!w||!h) return {error:"체중과 키를 입력하세요."};
+      var hm=h/100;
+      var bmi=(w/(hm*hm)).toFixed(1);
 
-### 생활습관
-- 식이: 포화지방, 트랜스지방 섭취 줄이고 있는지
-- 운동 빈도
-- 음주 (TG 상승의 주요 원인)
-- 흡연`,
+      var grade;
+      if(bmi<18.5) grade="저체중";
+      else if(bmi<23) grade="정상";
+      else if(bmi<25) grade="과체중 (위험)";
+      else if(bmi<30) grade="비만 1단계";
+      else grade="비만 2단계";
 
-  obesity: `### 신체 계측 (매 방문)
-- 체중 (kg) / 키 (cm) / BMI
-- 허리둘레 (대사증후군 기준: 남 ≥90, 여 ≥85)
-- 전 방문 대비 체중 변화
+      var result={bmi:bmi, grade:grade};
 
-### 현재 약물 (사용 중인 경우)
-- 약물명 (성분명) + 용량 + 사용 기간
-- 효과 평가: 체중 감소량, 목표 대비
-- 부작용 여부
-  - 오심/구토/설사 (GLP-1 계열)
-  - 심박수 증가, 혈압 변화
-  - 불면, 구강건조 (교감신경 계열)
-  - 기분 변화, 자살 사고 (날트렉손/부프로피온)
+      var waist=parseFloat(inp.waist);
+      if(waist){
+        var isMale=inp.sex==="남";
+        var threshold=isMale?90:85;
+        result.waistResult=waist>=threshold
+          ?"복부비만 ("+inp.sex+" 기준 ≥"+threshold+"cm)"
+          :"정상 범위";
+      }
+      return result;
+    },
+    referenceTable: {
+      bmi: [
+        {range:"<18.5",    grade:"저체중"},
+        {range:"18.5~22.9",grade:"정상"},
+        {range:"23~24.9",  grade:"과체중 (위험)"},
+        {range:"25~29.9",  grade:"비만 1단계"},
+        {range:"≥30",      grade:"비만 2단계"},
+      ],
+    },
+  },
 
-### 동반 대사 이상
-- 혈압 / 공복혈당 또는 HbA1c / 지질
-- 수면무호흡 증상 (코골이, 주간 졸림)
-- 지방간 여부 (초음파)
+  depression: {
+    label: "우울/불안",
+    description: "PHQ-9 / GAD-7 점수 참조",
+    resultLabel: "점수별 중증도",
+    referenceTable: {
+      "PHQ-9 (우울)": [
+        {range:"0~4",   grade:"정상"},
+        {range:"5~9",   grade:"경도 우울"},
+        {range:"10~14", grade:"중등도 우울"},
+        {range:"15~19", grade:"중등도-중증 우울"},
+        {range:"20~27", grade:"중증 우울"},
+      ],
+      "GAD-7 (불안)": [
+        {range:"0~4",   grade:"정상"},
+        {range:"5~9",   grade:"경도 불안"},
+        {range:"10~14", grade:"중등도 불안"},
+        {range:"15~21", grade:"중증 불안"},
+      ],
+    },
+  },
 
-### 생활습관
-- 식이: 일일 칼로리 섭취 추정, 식습관 패턴
-- 운동: 빈도, 종류, 지속 시간
-- 음주 빈도 및 양`,
+  diabetes: {
+    label: "당뇨",
+    description: "eGFR 기반 약물 적합성 참조",
+    resultLabel: "eGFR별 메트포르민 가이드",
+    referenceTable: {
+      "eGFR (mL/min/1.73m²)": [
+        {range:"≥60",    guidance:"정상 용량 가능"},
+        {range:"45~59",  guidance:"유지, 신기능 3~6개월 추적"},
+        {range:"30~44",  guidance:"감량 (최대 1000mg/일), 신기능 3개월 추적"},
+        {range:"<30",    guidance:"메트포르민 금기"},
+      ],
+    },
+  },
 
-  musculoskeletal: `### 통증 특성
-- 부위 (구체적으로)
-- 양상: 둔통/예리한 통증/타는 듯한/저림
-- 발생 시점 및 기간
-- 악화/완화 요인 (움직임, 자세, 휴식)
-- VAS 통증 점수 (0~10)
-
-### Red Flag 항목 (반드시 확인 및 기록)
-- 야간 통증 (수면 중 깨는지)
-- 안정 시 통증 지속 여부
-- 발열 동반 여부
-- 최근 외상력
-- 원인 불명 체중 감소
-- 배뇨/배변 장애 (마미증후군 감별)
-- 악성 종양 기왕력
-
-### 신경 증상
-- 방사통 여부 (부위 명시)
-- 저림, 감각 저하, 근력 약화
-
-### 기능 제한
-- 일상 활동 제한 정도
-- 직업/업무 영향
-
-### 현재 치료
-- 약물: 진통제, 근이완제, 스테로이드 (용량, 기간)
-- 물리치료 여부
-- 주사 치료 여부 (횟수, 효과)`,
-
-  gastrointestinal: `### 주증상 특성
-- 주증상 (소화불량/속쓰림/복통/구역/구토/설사/변비 중 명시)
-- 발생 부위 (상복부/하복부/전체)
-- 기간 및 경과 (급성/만성)
-- 식사와의 연관성 (식전/식후/무관)
-- 빈도 및 정도
-
-### Red Flag 항목 (반드시 확인 및 기록)
-- 체중 감소 (기간과 양 명시)
-- 혈변 또는 흑변
-- 연하곤란 / 연하통
-- 지속적 구토
-- 야간 증상으로 수면 방해
-- 55세 이상 신규 발생
-- 악성 종양 가족력 (위암, 대장암)
-
-### 관련 약물 확인
-- NSAIDs 복용 여부 (종류, 기간)
-- 스테로이드 복용 여부
-- 아스피린 복용 여부
-- 항생제 최근 복용 (설사의 경우)
-
-### 검사 결과 (해당 시)
-- H. pylori 검사 여부 및 결과
-- 최근 내시경 결과 (날짜 포함)
-- 복부 초음파 결과
-
-### 현재 치료
-- 약물명 + 용량 + 기간
-- 효과 평가`,
-
-  insomnia: `### 수면 패턴 (불면 시)
-- 입면 시간 (잠드는 데 걸리는 시간)
-- 총 수면 시간
-- 중간 각성 빈도 및 재입면 어려움
-- 기상 시간 및 기상 후 개운함 여부
-- 주간 졸림 정도
-- 코골이 / 무호흡 여부 (수면무호흡 감별)
-
-### 피로 양상
-- 신체적 피로 vs 정신적 피로 구분
-- 발생 시점 및 기간
-- 활동 후 악화 여부 (PEM: post-exertional malaise)
-- 휴식 후 회복 여부
-
-### 감별 진단 확인 항목
-- 갑상선 기능 (TSH 최근 수치)
-- 빈혈 (CBC 최근 수치)
-- 혈당 이상 (공복혈당/HbA1c)
-- 우울/불안 동반 증상
-- 수면무호흡 동반 증상
-
-### 현재 약물
-- 수면제 사용 여부 (약물명, 용량, 기간)
-- 의존성/내성 여부
-- 기타 피로 관련 약물
-
-### 수면위생
-- 취침/기상 규칙성
-- 카페인 섭취 시간
-- 스마트폰/화면 노출
-- 낮잠 여부`,
-
-  osteoporosis: `### 골밀도 수치
-- 최근 DXA 결과 (측정일 포함)
-  - 요추 T-score
-  - 대퇴골 T-score
-- 이전 측정과 비교 (골소실 속도)
-
-### 골절 위험인자
-- 나이 / 성별 / 폐경 여부 (폐경 시 시점)
-- 흡연 여부
-- 음주 (주 단위)
-- 스테로이드 복용 이력 (용량, 기간)
-- 골다공증성 골절 기왕력 (부위 명시)
-- 부모의 고관절 골절 가족력
-- FRAX 점수 (계산된 경우)
-
-### 낙상 위험 평가
-- 최근 1년 내 낙상 여부
-- 균형 장애 / 근력 저하
-- 복용 약물 중 낙상 위험 약물 (수면제, 이뇨제, 혈압약 등)
-- 시력 이상
-
-### 현재 약물
-- 약물명 (성분명) + 용량 + 복용 기간 + 복용 방법
-  - 비스포스포네이트: 공복 복용, 30분 직립 유지 여부 확인
-- 칼슘 보충제: 용량 + 시간
-- 비타민D: 용량
-- 효과 평가: 골밀도 변화
-
-### 치과 관련 (비스포스포네이트 사용 시)
-- 최근 치과 치료 여부
-- 악골괴사 증상 여부 (턱 통증, 잇몸 이상)
-- 향후 발치/임플란트 계획 여부`,
-
-  thyroid: `### 갑상선 기능 수치
-- 최근 TSH (측정일 포함)
-- Free T4 (해당 시)
-- T3 또는 Free T3 (항진증 추적 시)
-- 이전 수치와 비교 (추세 확인)
-
-### 현재 증상
-기능저하 증상 확인:
-- 피로, 무기력, 체중 증가
-- 변비, 추위 민감
-- 피부 건조, 탈모
-- 부종
-
-기능항진 증상 확인:
-- 심계항진, 빈맥
-- 체중 감소, 더위 민감
-- 손 떨림, 불안
-- 설사, 발한 증가
-
-### 현재 약물
-- 약물명 (성분명) + 용량 + 복용 기간
-- 효과 평가: TSH 목표 도달 여부
-  - 기능저하: TSH 0.5~2.5 mIU/L (임신 시 별도 기준)
-  - 항진증 치료 중: TSH 정상화 여부
-- 부작용 여부
-  - 메티마졸: 무과립구증 증상 (발열, 인후통 → 즉시 CBC 필요)
-  - 레보티록신 과용량: 심계항진, 불면
-
-### 갑상선 결절 (해당 시)
-- 최근 초음파 결과 (날짜, 크기)
-- 세침흡인세포검사(FNA) 여부 및 결과
-- 추적 관찰 계획
-
-### 특수 상황
-- 임신 여부 또는 계획 (TSH 목표 다름)
-- 방사성요오드 치료 이력`,
-
-  depression: `### 증상 및 중증도
-- 주증상 (우울/불안/공황 중 명시)
-- 증상 지속 기간
-- PHQ-9 점수 (우울) 또는 GAD-7 점수 (불안) — 해당 시 기록
-- 일상 기능 영향 정도 (직장/학업/대인관계)
-
-### 안전 확인 (매 방문 필수)
-- 자해 사고 여부 (있음/없음 반드시 명시)
-- 자살 사고 여부 (있음/없음 반드시 명시)
-- 자살 계획 또는 수단 여부 (사고 있을 시)
-- 과거 자해 또는 자살 시도 이력
-
-### 핵심 증상 확인
-- 수면: 불면/과수면
-- 식욕: 감소/증가, 체중 변화
-- 에너지/집중력
-- 흥미/즐거움 상실 (무쾌감증)
-- 죄책감/무가치감
-
-### 현재 약물
-- 약물명 (성분명) + 용량 + 복용 기간
-- 효과 평가 (증상 호전 정도)
-- 부작용 여부
-  - SSRI: 초기 불안 증가, 성기능 장애, 오심
-  - SNRI: 혈압 상승, 발한
-- 복약 순응도
-
-### 비약물 치료
-- 심리치료 여부 (종류, 빈도)
-- 정신건강의학과 협진 여부
-
-### 유발/악화 요인
-- 최근 스트레스 사건
-- 음주 패턴 (우울과 상호 악화)
-- 수면 상태`,
+  osteoporosis: {
+    label: "골다공증",
+    description: "FRAX 골절 위험도",
+    externalLink: {
+      url: "https://frax.shef.ac.uk/FRAX/tool.aspx?country=25",
+      label: "FRAX 공식 계산기 (Sheffield)",
+    },
+    resultLabel: "골다공증 치료 기준 참조",
+    referenceTable: {
+      "치료 시작 기준 (NOF)": [
+        {range:"T-score ≤ -2.5",          guidance:"약물 치료 권고"},
+        {range:"T-score -1.0 ~ -2.5",     guidance:"FRAX 결과에 따라 판단"},
+        {range:"FRAX 주요골절 ≥20%",       guidance:"약물 치료 권고"},
+        {range:"FRAX 고관절골절 ≥3%",      guidance:"약물 치료 권고"},
+      ],
+    },
+  },
 
 };
