@@ -8,8 +8,8 @@ function App(){
   var [raw,       setRaw]       = useState("");
   var [consent,   setConsent]   = useState(false);
   /* ── 재진 Context ── */
-  var [followUpCtx,  setFollowUpCtx]  = useState("");
-  var [showCtxInput, setShowCtxInput] = useState(false);
+  var [isFollowUp, setIsFollowUp] = useState(false);
+  var followUpCtx = isFollowUp ? "재진" : "";
 
   /* ── Working Draft ── */
   var [draftText,    setDraftText]    = useState("");
@@ -124,7 +124,7 @@ function App(){
     setRaw(""); finalTextRef.current="";
     setDraftText(""); setDraftLoading(false);
     setReviewText(""); setReviewLoading(false);
-    setFollowUpCtx("");
+    setIsFollowUp(false);
     setDetectedCalcs([]); setActiveCalcs([]); setCalcInputs({}); setCalcResults({});
     lastDraftRef.current=""; clearTimeout(draftTimerRef.current);
     setRfKey(function(k){return k+1;});
@@ -224,43 +224,22 @@ function App(){
           </div>
 
           {/* ── 재진 Context ── */}
-          <div style={{paddingTop:10,borderTop:"1px solid #1e2538"}}>
-            <div onClick={function(){setShowCtxInput(function(v){return !v;});}}
-              style={{display:"flex",alignItems:"center",justifyContent:"space-between",
-                cursor:"pointer",userSelect:"none"}}>
-              <span style={{fontSize:11,fontWeight:600,
-                color:followUpCtx.trim()?"#60a5fa":"#4a5268",
-                display:"flex",alignItems:"center",gap:5}}>
-                재진 Context
-                {followUpCtx.trim()&&(
-                  <span style={{fontSize:9,background:"rgba(96,165,250,.15)",
-                    border:"1px solid rgba(96,165,250,.3)",color:"#60a5fa",
-                    borderRadius:10,padding:"1px 6px",fontFamily:"'JetBrains Mono',monospace"}}>ON</span>
-                )}
-              </span>
-              <span style={{fontSize:9,color:"#2e374f"}}>{showCtxInput?"▲":"▼"}</span>
+          <div onClick={function(){setIsFollowUp(function(v){return !v;});}}
+            style={{paddingTop:10,borderTop:"1px solid #1e2538",
+              display:"flex",alignItems:"center",gap:10,cursor:"pointer",userSelect:"none"}}>
+            <div style={{width:18,height:18,borderRadius:4,flexShrink:0,
+              border:"2px solid "+(isFollowUp?"#60a5fa":"#2e374f"),
+              background:isFollowUp?"#60a5fa":"transparent",
+              display:"flex",alignItems:"center",justifyContent:"center"}}>
+              {isFollowUp&&<span style={{color:"#fff",fontSize:12,fontWeight:900,lineHeight:1}}>✓</span>}
             </div>
-            {showCtxInput&&(
-              <div style={{marginTop:8,animation:"slideDown .15s ease"}}>
-                <textarea value={followUpCtx}
-                  onChange={function(e){setFollowUpCtx(e.target.value);}}
-                  rows={3}
-                  placeholder={"예) DM f/u. 지난달 HbA1c 8.2. metformin 500mg bid 복용 중.\n비워두면 초진과 동일하게 동작."}
-                  style={{width:"100%",background:"#0d1018",
-                    border:"1px solid rgba(96,165,250,.2)",
-                    borderRadius:6,padding:"8px 10px",color:"#94a3b8",fontSize:12,
-                    lineHeight:1.65,resize:"vertical"}}/>
-                <div style={{display:"flex",justifyContent:"space-between",
-                  alignItems:"center",marginTop:4}}>
-                  <span style={{fontSize:10,color:"#2e374f"}}>
-                    ⚑ Red Flag 판단에 영향 없음
-                  </span>
-                  <span style={{fontSize:10,color:"#2e374f",
-                    fontFamily:"'JetBrains Mono',monospace"}}>
-                    {followUpCtx.length}자
-                  </span>
-                </div>
-              </div>
+            <span style={{fontSize:12,color:isFollowUp?"#60a5fa":"#94a3b8",fontWeight:isFollowUp?600:400}}>
+              재진
+            </span>
+            {isFollowUp&&(
+              <span style={{fontSize:10,color:"#2e374f",marginLeft:"auto"}}>
+                ⚑ Red Flag 판단에 영향 없음
+              </span>
             )}
           </div>
         </div>
@@ -402,6 +381,7 @@ function App(){
               {leftTab==="draft"&&(
                 <DraftTab draftText={draftText} draftLoading={draftLoading}
                   reviewText={reviewText} reviewLoading={reviewLoading} apiKey={apiKey}
+                  onDraftChange={function(v){setDraftText(v);}}
                   onReview={async function(){
                     if(!apiKey||reviewLoading) return;
                     setReviewLoading(true); setReviewText("");

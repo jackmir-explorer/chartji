@@ -79,7 +79,9 @@ function CalcTabHeaders(props){
 function DraftTab(props){
   var draftText=props.draftText, draftLoading=props.draftLoading,
       reviewText=props.reviewText, reviewLoading=props.reviewLoading,
-      onReview=props.onReview, apiKey=props.apiKey;
+      onReview=props.onReview, apiKey=props.apiKey, onDraftChange=props.onDraftChange;
+  var _useState=React.useState(false), editing=_useState[0], setEditing=_useState[1];
+  var _useState2=React.useState(""), copyMsg=_useState2[0], setCopyMsg=_useState2[1];
   return (
     <div style={{background:"#0d1018",border:"1px solid #1e2538",borderRadius:8,
       padding:"10px 12px",minHeight:240,overflowY:"auto",fontSize:12.5,
@@ -102,15 +104,55 @@ function DraftTab(props){
         <div>
           <div style={{fontSize:9,fontWeight:700,color:"#2e374f",
             textTransform:"uppercase",letterSpacing:".07em",marginBottom:8,
-            borderBottom:"1px solid #1e2538",paddingBottom:4}}>
-            Working Draft — 의사 검토 필수
-            {draftLoading&&(
-              <span style={{marginLeft:8,width:6,height:6,border:"1px solid #252d42",
-                borderTopColor:"#60a5fa",borderRadius:"50%",display:"inline-block",
-                animation:"spin .65s linear infinite",verticalAlign:"middle"}}/>
-            )}
+            borderBottom:"1px solid #1e2538",paddingBottom:4,
+            display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+            <span>
+              Working Draft — 의사 검토 필수
+              {draftLoading&&(
+                <span style={{marginLeft:8,width:6,height:6,border:"1px solid #252d42",
+                  borderTopColor:"#60a5fa",borderRadius:"50%",display:"inline-block",
+                  animation:"spin .65s linear infinite",verticalAlign:"middle"}}/>
+              )}
+            </span>
+            <div style={{display:"flex",gap:4}}>
+              {!editing?(
+                <button onClick={function(){setEditing(true);}}
+                  style={{fontSize:9,fontWeight:700,padding:"2px 8px",borderRadius:4,
+                    color:"#60a5fa",background:"transparent",
+                    border:"1px solid rgba(96,165,250,.3)",cursor:"pointer"}}>
+                  수정
+                </button>
+              ):(
+                <button onClick={function(){
+                  setEditing(false);
+                  navigator.clipboard.writeText(draftText).then(function(){
+                    setCopyMsg("복사됨");
+                    setTimeout(function(){setCopyMsg("");},2000);
+                  });
+                }}
+                  style={{fontSize:9,fontWeight:700,padding:"2px 8px",borderRadius:4,
+                    color:"#34c77b",background:"rgba(52,199,123,.08)",
+                    border:"1px solid rgba(52,199,123,.35)",cursor:"pointer"}}>
+                  완료 + 복사
+                </button>
+              )}
+              {copyMsg&&(
+                <span style={{fontSize:9,color:"#34c77b",alignSelf:"center"}}>
+                  {copyMsg}
+                </span>
+              )}
+            </div>
           </div>
-          {draftText}
+          {editing?(
+            <textarea value={draftText}
+              onChange={function(e){if(onDraftChange) onDraftChange(e.target.value);}}
+              style={{width:"100%",background:"#131924",border:"1px solid rgba(96,165,250,.25)",
+                borderRadius:6,padding:"8px 10px",color:"#e2e4ec",fontSize:12.5,
+                lineHeight:1.9,minHeight:200,resize:"vertical",
+                fontFamily:"'JetBrains Mono',monospace"}}/>
+          ):(
+            draftText
+          )}
           <div style={{marginTop:10,borderTop:"1px solid #1e2538",paddingTop:8}}>
             <button onClick={onReview}
               disabled={reviewLoading||!apiKey}

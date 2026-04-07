@@ -15,7 +15,7 @@ JSON만 반환 (다른 텍스트 절대 금지):
 규칙:
 - chiefComplaint: 1~2개 짧은 증상 표현
 - initialFocus: 초기 접근 방향 한 줄 (사실형, 예: "기간·발열·호흡곤란부터 정리")
-- 재진 Context가 있으면 follow-up / lab review / medication adjustment 등 방문 성격을 initialFocus에 제한적으로 반영 가능
+- 재진 방문으로 표시된 경우 follow-up / lab review / medication adjustment 등 방문 성격을 initialFocus에 제한적으로 반영 가능
 - 2줄 이상 길어지지 않게
 - calcCategories: 대화 맥락에서 아래 5개 중 해당하는 질환 카테고리 배열. 해당 없으면 빈 배열 [].
   dyslipidemia (콜레스테롤/지질/스타틴 관련)
@@ -33,7 +33,7 @@ Triage의 initialFocus 내용 반복 금지.
 Red Flag Detector에 들어갈 고위험 조합 반복 금지 — 미확인 항목은 여기, 위험 조합은 Red Flag에서 담당.
 총합 3개 이내 엄수. 현재 chief complaint 맥락에서 실제로 안전에 의미 있는 것만.
 같은 의미를 wording만 바꿔 반복 금지.
-재진 Context가 있으면 improvement / worsening / adherence / side effects / results review / new symptoms 같은 follow-up 질문을 우선한다.
+재진 방문으로 표시된 경우 improvement / worsening / adherence / side effects / results review / new symptoms 같은 follow-up 질문을 우선한다.
 JSON만 반환:
 {"missingQuestions":["..."],"missingExam":["..."],"missingObjectiveData":["..."]}
 규칙:
@@ -73,7 +73,7 @@ const PROBLEMS_PROMPT=`한국 일차진료 외래 문제 목록 실시간 구조
 - polypharmacy / 다약제 가능성 / 약물상호작용 / 우울 가능성 / 기능성 가능성 등 AI 추론 금지
 - transcript에 환자나 의사가 직접 말하지 않은 숨은 문제 생성 금지
 - summary에 "확인 필요", "평가 필요", "고려 필요", "의심", "가능성", "제안", "권장", "주의" 금지
-재진 Context가 있으면 문제 구조를 follow-up 중심으로 잡을 수 있음. 처방 연장·결과 확인 등 follow-up 항목을 우선 배치 가능.
+재진 방문으로 표시된 경우 문제 구조를 follow-up 중심으로 잡을 수 있음. 처방 연장·결과 확인 등 follow-up 항목을 우선 배치 가능.
 JSON만 반환:
 {"problems":[{"id":"p1","title":"...","summary":"..."}]}
 규칙:
@@ -95,6 +95,7 @@ const WORKING_DRAFT_PROMPT=`한국 일차진료 외래 Working Draft 생성 도�
 - 가이드라인·교과서 설명문 금지
 - transcript에 없는 정보 생성 금지
 - doctor-stated 아닌 plan 생성 금지
+- **굵게**, *기울임* 등 마크다운 서식 금지 — plain text만 출력
 ==출력 형식 (EMR 스타일 짧은 문장. 해당 없으면 줄 전체 생략)==
 Visit: [방문 성격 한 줄 — 초진/재진/follow-up/lab review 등. 재진 Context 있으면 한 줄 반영]
 CC: [주호소 1~2개]
