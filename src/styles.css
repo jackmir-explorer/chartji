@@ -14,6 +14,6 @@ input::placeholder{color:#2e374f;font-family:'JetBrains Mono',monospace}
 .input-layout{display:flex;flex-direction:column;gap:10px}
 @media(min-width:768px){
   .input-layout{flex-direction:row;align-items:flex-start}
-  .input-left{flex:1.15;min-width:0}
-  .input-right{flex:1;min-width:0}
+  .input-left{flex:1.5;min-width:0}
+  .input-right{flex:0.65;min-width:0}
 }

@@ -204,100 +204,79 @@ function App(){
       {/* ── 2-column: transcript (left) | 4-panel dashboard (right) ── */}
       <div style={{flex:1,padding:12,overflowY:"auto"}}>
 
-        {/* 사용 설정 */}
-        <div style={{background:"#131924",border:"1px solid #1e2538",
-          borderRadius:12,padding:14,marginBottom:10}}>
-          <div style={{fontSize:10,fontWeight:700,color:"#4a5268",textTransform:"uppercase",
-            letterSpacing:".08em",marginBottom:12,
-            fontFamily:"'JetBrains Mono',monospace"}}>사용 설정</div>
-          <div onClick={function(){setConsent(function(v){return !v;});}}
-            style={{display:"flex",alignItems:"flex-start",gap:10,cursor:"pointer",marginBottom:12}}>
-            <div style={{width:18,height:18,borderRadius:4,flexShrink:0,marginTop:1,
-              border:"2px solid "+(consent?"#c96442":"#2e374f"),
-              background:consent?"#c96442":"transparent",
-              display:"flex",alignItems:"center",justifyContent:"center"}}>
-              {consent&&<span style={{color:"#fff",fontSize:12,fontWeight:900,lineHeight:1}}>✓</span>}
-            </div>
-            <span style={{fontSize:12,color:"#94a3b8",lineHeight:1.75}}>
-              음성 전사 사용에 동의합니다. 녹음은 브라우저에서만 처리되며 외부 저장 없음. 환자 식별 정보 미포함 주의.
-            </span>
-          </div>
-
-          {/* ── 재진 Context ── */}
-          <div onClick={function(){setIsFollowUp(function(v){return !v;});}}
-            style={{paddingTop:10,borderTop:"1px solid #1e2538",
-              display:"flex",alignItems:"center",gap:10,cursor:"pointer",userSelect:"none"}}>
-            <div style={{width:18,height:18,borderRadius:4,flexShrink:0,
-              border:"2px solid "+(isFollowUp?"#60a5fa":"#2e374f"),
-              background:isFollowUp?"#60a5fa":"transparent",
-              display:"flex",alignItems:"center",justifyContent:"center"}}>
-              {isFollowUp&&<span style={{color:"#fff",fontSize:12,fontWeight:900,lineHeight:1}}>✓</span>}
-            </div>
-            <span style={{fontSize:12,color:isFollowUp?"#60a5fa":"#94a3b8",fontWeight:isFollowUp?600:400}}>
-              재진
-            </span>
-            {isFollowUp&&(
-              <span style={{fontSize:10,color:"#2e374f",marginLeft:"auto"}}>
-                ⚑ Red Flag 판단에 영향 없음
-              </span>
-            )}
-          </div>
-        </div>
-
-        {/* 음성 컨트롤 */}
+        {/* ── 컨트롤 바 ── */}
         <div style={{background:"#131924",
-          border:"1px solid "+(isRecording?"rgba(248,113,113,.35)":"#1e2538"),
-          borderRadius:12,padding:14,marginBottom:10}}>
-          <div style={{fontSize:10,fontWeight:700,color:"#4a5268",textTransform:"uppercase",
-            letterSpacing:".08em",marginBottom:12,
-            fontFamily:"'JetBrains Mono',monospace"}}>음성 입력</div>
-          {!voiceOk?(
-            <div style={{padding:"10px 12px",background:"rgba(245,166,35,.07)",
-              border:"1px solid rgba(245,166,35,.2)",borderRadius:8,fontSize:12,
-              color:"#f5a623",lineHeight:1.7}}>
-              ⚠ Chrome 브라우저에서만 음성인식이 지원됩니다.
-            </div>
-          ):(
-            <div>
-              <div style={{display:"flex",gap:8,marginBottom:10}}>
-                {!isRecording?(
-                  <button onClick={startRecording} disabled={!consent}
-                    style={{flex:1,padding:"12px 0",fontSize:14,fontWeight:700,
-                      borderRadius:8,cursor:consent?"pointer":"not-allowed",
-                      background:consent?"#c96442":"#1e2538",
-                      color:consent?"#fff":"#4a5268",
-                      display:"flex",alignItems:"center",justifyContent:"center",gap:8}}>
-                    <span style={{fontSize:18}}>🎙</span> 녹음 시작
-                  </button>
-                ):(
-                  <button onClick={stopRecording}
-                    style={{flex:1,padding:"12px 0",fontSize:14,fontWeight:700,
-                      borderRadius:8,cursor:"pointer",
-                      background:"rgba(248,113,113,.1)",color:"#f87171",
-                      border:"1px solid rgba(248,113,113,.4)",
-                      display:"flex",alignItems:"center",justifyContent:"center",gap:8,
-                      animation:"blink 1.4s ease-in-out infinite"}}>
-                    <span style={{width:12,height:12,borderRadius:2,
-                      background:"#f87171",display:"inline-block"}}/> 녹음 중지
-                  </button>
-                )}
-                <button onClick={clearSession}
-                  style={{background:"#0d1018",color:"#4a5268",
-                    border:"1px solid #1e2538",borderRadius:8,
-                    padding:"12px 14px",fontSize:13,fontWeight:600}}>🗑 초기화</button>
+          border:"1px solid "+(isRecording?"rgba(248,113,113,.3)":"#1e2538"),
+          borderRadius:10,padding:"8px 12px",marginBottom:10,
+          display:"flex",flexDirection:"column",gap:6}}>
+          {/* 상단: 체크박스 + 버튼 한 줄 */}
+          <div style={{display:"flex",alignItems:"center",gap:8,flexWrap:"wrap"}}>
+            {/* 동의 체크박스 */}
+            <div onClick={function(){setConsent(function(v){return !v;});}}
+              style={{display:"flex",alignItems:"center",gap:6,cursor:"pointer",userSelect:"none"}}>
+              <div style={{width:15,height:15,borderRadius:3,flexShrink:0,
+                border:"2px solid "+(consent?"#c96442":"#2e374f"),
+                background:consent?"#c96442":"transparent",
+                display:"flex",alignItems:"center",justifyContent:"center"}}>
+                {consent&&<span style={{color:"#fff",fontSize:10,fontWeight:900,lineHeight:1}}>✓</span>}
               </div>
-              {interimText&&(
-                <div style={{padding:"8px 10px",background:"rgba(96,165,250,.05)",
-                  border:"1px dashed rgba(96,165,250,.25)",borderRadius:6,
-                  fontSize:12,color:"#60a5fa",lineHeight:1.75,marginBottom:8,fontStyle:"italic"}}>
-                  <span style={{fontSize:10,color:"#2e374f",display:"block",
-                    marginBottom:2,fontStyle:"normal"}}>인식 중...</span>
-                  {interimText}
-                </div>
-              )}
+              <span style={{fontSize:11,color:consent?"#94a3b8":"#4a5268"}}>동의</span>
+            </div>
+            {/* 구분선 */}
+            <span style={{color:"#1e2538",fontSize:12}}>|</span>
+            {/* 재진 체크박스 */}
+            <div onClick={function(){setIsFollowUp(function(v){return !v;});}}
+              style={{display:"flex",alignItems:"center",gap:6,cursor:"pointer",userSelect:"none"}}>
+              <div style={{width:15,height:15,borderRadius:3,flexShrink:0,
+                border:"2px solid "+(isFollowUp?"#60a5fa":"#2e374f"),
+                background:isFollowUp?"#60a5fa":"transparent",
+                display:"flex",alignItems:"center",justifyContent:"center"}}>
+                {isFollowUp&&<span style={{color:"#fff",fontSize:10,fontWeight:900,lineHeight:1}}>✓</span>}
+              </div>
+              <span style={{fontSize:11,color:isFollowUp?"#60a5fa":"#4a5268",fontWeight:isFollowUp?600:400}}>재진</span>
+            </div>
+            {/* 구분선 */}
+            <span style={{color:"#1e2538",fontSize:12}}>|</span>
+            {/* 녹음 버튼 */}
+            {!voiceOk?(
+              <span style={{fontSize:11,color:"#f5a623"}}>⚠ Chrome 전용</span>
+            ):!isRecording?(
+              <button onClick={startRecording} disabled={!consent}
+                style={{fontSize:11,fontWeight:700,padding:"4px 12px",borderRadius:6,
+                  cursor:consent?"pointer":"not-allowed",
+                  background:consent?"#c96442":"transparent",
+                  color:consent?"#fff":"#2e374f",
+                  border:"1px solid "+(consent?"#c96442":"#2e374f"),
+                  display:"flex",alignItems:"center",gap:5}}>
+                🎙 녹음 시작
+              </button>
+            ):(
+              <button onClick={stopRecording}
+                style={{fontSize:11,fontWeight:700,padding:"4px 12px",borderRadius:6,
+                  cursor:"pointer",background:"rgba(248,113,113,.1)",color:"#f87171",
+                  border:"1px solid rgba(248,113,113,.4)",
+                  display:"flex",alignItems:"center",gap:5,
+                  animation:"blink 1.4s ease-in-out infinite"}}>
+                <span style={{width:8,height:8,borderRadius:2,background:"#f87171",display:"inline-block"}}/>
+                녹음 중지
+              </button>
+            )}
+            {/* 초기화 */}
+            <button onClick={clearSession}
+              style={{fontSize:11,color:"#4a5268",padding:"4px 10px",
+                borderRadius:6,border:"1px solid #1e2538",background:"none"}}>
+              🗑 초기화
+            </button>
+          </div>
+          {/* interim text */}
+          {interimText&&(
+            <div style={{fontSize:11,color:"#60a5fa",fontStyle:"italic",
+              borderTop:"1px dashed rgba(96,165,250,.2)",paddingTop:5,lineHeight:1.6}}>
+              <span style={{fontSize:9,color:"#2e374f",fontStyle:"normal",marginRight:6}}>인식 중...</span>
+              {interimText}
             </div>
           )}
-          {voiceMsg&&<div style={{fontSize:12,color:"#4a5268",lineHeight:1.6,marginTop:8}}>ℹ {voiceMsg}</div>}
+          {voiceMsg&&<div style={{fontSize:11,color:"#4a5268",lineHeight:1.5}}>ℹ {voiceMsg}</div>}
         </div>
 
         <div className="input-layout">
