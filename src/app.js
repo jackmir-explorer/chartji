@@ -24,6 +24,7 @@ function App(){
   var [calcInputs,    setCalcInputs]    = useState({});
   var [calcResults,   setCalcResults]   = useState({});
 
+  var [compactMode,setCompactMode] = useState(false);
   var [liveEnabled,setLiveEnabled] = useState(true);
   var [rfKey,setRfKey] = useState(0);
   var [triageKey,setTriageKey] = useState(0);
@@ -173,11 +174,17 @@ function App(){
               border:"1px solid "+(apiKey?"rgba(52,199,123,.3)":"rgba(245,166,35,.3)")}}>
             {apiKey?"🔑 키 등록됨":"🔑 API 키 입력"}
           </button>
+          <button onClick={function(){setCompactMode(function(v){return !v;});}}
+            style={{fontSize:11,padding:"4px 10px",borderRadius:5,background:"none",
+              color:compactMode?"#a78bfa":"#4a5268",
+              border:"1px solid "+(compactMode?"rgba(167,139,250,.3)":"#1e2538")}}>
+            {compactMode?"⊞ 전체":"⊡ 간략"}
+          </button>
         </div>
       </div>
 
       {/* API 키 패널 */}
-      {showKey&&(
+      {!compactMode&&showKey&&(
         <div style={{background:"#131924",borderBottom:"1px solid #1e2538",
           padding:"14px 16px",flexShrink:0,animation:"slideDown .2s ease"}}>
           <div style={{fontSize:11,fontWeight:700,color:"#4a5268",marginBottom:10,
@@ -205,7 +212,7 @@ function App(){
       <div style={{flex:1,padding:12,overflowY:"auto"}}>
 
         {/* ── 컨트롤 바 ── */}
-        <div style={{background:"#131924",
+        {!compactMode&&<div style={{background:"#131924",
           border:"1px solid "+(isRecording?"rgba(248,113,113,.3)":"#1e2538"),
           borderRadius:10,padding:"8px 12px",marginBottom:10,
           display:"flex",flexDirection:"column",gap:6}}>
@@ -277,12 +284,12 @@ function App(){
             </div>
           )}
           {voiceMsg&&<div style={{fontSize:11,color:"#4a5268",lineHeight:1.5}}>ℹ {voiceMsg}</div>}
-        </div>
+        </div>}
 
         <div className="input-layout">
 
           {/* LEFT: Working Draft / Raw 탭 */}
-          <div className="input-left">
+          {!compactMode&&<div className="input-left">
             <div style={{background:"#131924",border:"1px solid #1e2538",
               borderRadius:12,padding:14,display:"flex",flexDirection:"column"}}>
 
@@ -413,10 +420,10 @@ function App(){
                 </div>
               </div>
             </div>
-          </div>
+          </div>}
 
           {/* RIGHT: 4-panel safety dashboard */}
-          <div className="input-right">
+          <div className={compactMode?"compact-right":"input-right"}>
             <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",
               marginBottom:7,padding:"0 2px"}}>
               <div style={{display:"flex",alignItems:"center",gap:6}}>
@@ -445,6 +452,7 @@ function App(){
             <MissingPanel key={missingKey} raw={raw} apiKey={apiKey} followUpCtx={followUpCtx}/>
             <TriagePanel key={triageKey} raw={raw} apiKey={apiKey} followUpCtx={followUpCtx}
               onDetect={function(cats){setDetectedCalcs(cats||[]);}}/>
+
           </div>
 
         </div>

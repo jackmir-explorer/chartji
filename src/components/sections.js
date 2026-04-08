@@ -105,7 +105,7 @@ function DraftTab(props){
           <div style={{fontSize:9,fontWeight:700,color:"#2e374f",
             textTransform:"uppercase",letterSpacing:".07em",marginBottom:8,
             borderBottom:"1px solid #1e2538",paddingBottom:4,
-            display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+            display:"flex",alignItems:"center"}}>
             <span>
               Working Draft — 의사 검토 필수
               {draftLoading&&(
@@ -114,34 +114,6 @@ function DraftTab(props){
                   animation:"spin .65s linear infinite",verticalAlign:"middle"}}/>
               )}
             </span>
-            <div style={{display:"flex",gap:4}}>
-              {!editing?(
-                <button onClick={function(){setEditing(true);}}
-                  style={{fontSize:9,fontWeight:700,padding:"2px 8px",borderRadius:4,
-                    color:"#60a5fa",background:"transparent",
-                    border:"1px solid rgba(96,165,250,.3)",cursor:"pointer"}}>
-                  수정
-                </button>
-              ):(
-                <button onClick={function(){
-                  setEditing(false);
-                  navigator.clipboard.writeText(draftText).then(function(){
-                    setCopyMsg("복사됨");
-                    setTimeout(function(){setCopyMsg("");},2000);
-                  });
-                }}
-                  style={{fontSize:9,fontWeight:700,padding:"2px 8px",borderRadius:4,
-                    color:"#34c77b",background:"rgba(52,199,123,.08)",
-                    border:"1px solid rgba(52,199,123,.35)",cursor:"pointer"}}>
-                  완료 + 복사
-                </button>
-              )}
-              {copyMsg&&(
-                <span style={{fontSize:9,color:"#34c77b",alignSelf:"center"}}>
-                  {copyMsg}
-                </span>
-              )}
-            </div>
           </div>
           {editing?(
             <textarea value={draftText}
@@ -153,7 +125,37 @@ function DraftTab(props){
           ):(
             draftText
           )}
-          <div style={{marginTop:10,borderTop:"1px solid #1e2538",paddingTop:8}}>
+          <div style={{marginTop:10,marginBottom:2}}>
+            {!editing?(
+              <button onClick={function(){setEditing(true);}}
+                style={{fontSize:12,fontWeight:700,padding:"7px 0",borderRadius:7,
+                  width:"100%",cursor:"pointer",color:"#60a5fa",
+                  background:"rgba(96,165,250,.06)",
+                  border:"1px solid rgba(96,165,250,.3)"}}>
+                ✏ 수정하기
+              </button>
+            ):(
+              <button onClick={function(){
+                  setEditing(false);
+                  navigator.clipboard.writeText(draftText).then(function(){
+                    setCopyMsg("복사됨");
+                    setTimeout(function(){setCopyMsg("");},2000);
+                  });
+                }}
+                style={{fontSize:12,fontWeight:700,padding:"7px 0",borderRadius:7,
+                  width:"100%",cursor:"pointer",color:"#34c77b",
+                  background:"rgba(52,199,123,.08)",
+                  border:"1px solid rgba(52,199,123,.35)"}}>
+                ✓ 완료하고 클립보드에 저장하기
+              </button>
+            )}
+            {copyMsg&&(
+              <div style={{fontSize:11,color:"#34c77b",textAlign:"center",marginTop:5}}>
+                {copyMsg}
+              </div>
+            )}
+          </div>
+          <div style={{marginTop:8,borderTop:"1px solid #1e2538",paddingTop:8}}>
             <button onClick={onReview}
               disabled={reviewLoading||!apiKey}
               style={{fontSize:10,fontWeight:700,padding:"4px 12px",
