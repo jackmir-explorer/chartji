@@ -79,7 +79,21 @@ function App(){
         lastDraftRef.current=trimmed;
         setDraftLoading(true);
         try{
-          var d=await generateWorkingDraft(trimmed,apiKey,followUpCtx);
+          var knowledgeCtx="";
+          var appendParts=[];
+          var draftTemplate=null;
+          if(typeof KNOWLEDGE_BUNDLE!=="undefined"&&detectedCalcs.length){
+            detectedCalcs.forEach(function(c){
+              if(KNOWLEDGE_BUNDLE[c]){
+                if(KNOWLEDGE_BUNDLE[c].treatment) knowledgeCtx+=KNOWLEDGE_BUNDLE[c].treatment+"\n";
+                if(KNOWLEDGE_BUNDLE[c].differential) knowledgeCtx+=KNOWLEDGE_BUNDLE[c].differential+"\n";
+                if(KNOWLEDGE_BUNDLE[c].draftAppend) appendParts.push(KNOWLEDGE_BUNDLE[c].draftAppend);
+                if(KNOWLEDGE_BUNDLE[c].draftTemplate&&!draftTemplate) draftTemplate=KNOWLEDGE_BUNDLE[c].draftTemplate;
+              }
+            });
+          }
+          var d=await generateWorkingDraft(trimmed,apiKey,followUpCtx,knowledgeCtx||null,draftTemplate);
+          if(appendParts.length) d=d+"\n\n---\n"+appendParts.join("\n");
           setDraftText(d);
         }catch(_){}
         finally{setDraftLoading(false);}
@@ -367,6 +381,16 @@ function App(){
               {leftTab==="draft"&&(
                 <DraftTab draftText={draftText} draftLoading={draftLoading}
                   reviewText={reviewText} reviewLoading={reviewLoading} apiKey={apiKey}
+                  draftHints={typeof KNOWLEDGE_BUNDLE!=="undefined"&&detectedCalcs.length?(function(){
+                    var parts=[];
+                    detectedCalcs.forEach(function(c){
+                      if(KNOWLEDGE_BUNDLE[c]){
+                        if(KNOWLEDGE_BUNDLE[c].treatment) parts.push("처방/치료:\n"+KNOWLEDGE_BUNDLE[c].treatment);
+                        if(KNOWLEDGE_BUNDLE[c].differential) parts.push("감별진단:\n"+KNOWLEDGE_BUNDLE[c].differential);
+                      }
+                    });
+                    return parts.length?parts.join("\n\n"):null;
+                  })():null}
                   onDraftChange={function(v){setDraftText(v);}}
                   onReview={async function(){
                     if(!apiKey||reviewLoading) return;
@@ -449,7 +473,14 @@ function App(){
             </div>
 
             <RedFlagPanel key={rfKey} raw={raw} apiKey={apiKey}/>
-            <MissingPanel key={missingKey} raw={raw} apiKey={apiKey} followUpCtx={followUpCtx}/>
+            <MissingPanel key={missingKey} raw={raw} apiKey={apiKey} followUpCtx={followUpCtx}
+              knowledgeExamCtx={typeof KNOWLEDGE_BUNDLE!=="undefined"&&detectedCalcs.length?(function(){
+                var s="";
+                detectedCalcs.forEach(function(c){
+                  if(KNOWLEDGE_BUNDLE[c]&&KNOWLEDGE_BUNDLE[c].exam) s+=KNOWLEDGE_BUNDLE[c].exam+"\n";
+                });
+                return s||null;
+              })():null}/>
             <TriagePanel key={triageKey} raw={raw} apiKey={apiKey} followUpCtx={followUpCtx}
               onDetect={function(cats){setDetectedCalcs(cats||[]);}}/>
 

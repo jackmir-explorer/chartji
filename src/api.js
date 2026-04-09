@@ -47,11 +47,12 @@ async function generateTriagePanel(raw,apiKey,ctx){
     apiKey,500);
   return safeParseJSON(t);
 }
-async function generateMissingPanel(raw,apiKey,ctx){
+async function generateMissingPanel(raw,apiKey,ctx,knowledgeExamCtx){
   var extra=buildCtxNote(
     "improvement / worsening / adherence / side effects / results review / new symptoms 같은 follow-up 질문을 우선한다.",ctx);
+  var examLine=knowledgeExamCtx?"\n\n==질환 특이 문진/검사 참고 (transcript에 이미 언급된 항목은 제외)==\n"+knowledgeExamCtx:"";
   var t=await callClaude(
-    MISSING_PROMPT+extra,
+    MISSING_PROMPT+extra+examLine,
     "외래 transcript에서 안전 관련 누락 항목을 JSON으로 반환하라.\n\n[Transcript]\n"+raw,
     apiKey,400);
   return safeParseJSON(t);
@@ -83,9 +84,25 @@ async function generateDraftReview(raw,apiKey,customPrompt){
 }
 
 /* Working Draft */
-async function generateWorkingDraft(raw,apiKey,ctx,customPrompt){
+async function generateWorkingDraft(raw,apiKey,ctx,knowledgeCtx,draftTemplate){
+  var knowledgeLine=knowledgeCtx?"\n\n==임상 경험 컨텍스트 (API 일반 지식보다 우선 적용)==\n"+knowledgeCtx:"";
   var ctxLine=ctx&&ctx.trim()?"\n\n재진 Context (한 줄만 반영): "+ctx.trim().slice(0,200):"";
-  var sys=(customPrompt||WORKING_DRAFT_PROMPT)+ctxLine;
+  var sys;
+  if(draftTemplate){
+    sys="한국 일차진료 외래 Working Draft 생성 도구.\n"
+      +"==절대 금지==\n"
+      +"- transcript에 없는 정보 생성 금지\n"
+      +"- doctor-stated 아닌 plan 생성 금지\n"
+      +"- 하지 않은 신체진찰(PE) 생성 금지\n"
+      +"- 마크다운 서식 금지 — plain text만 출력\n"
+      +"==출력 형식==\n"
+      +draftTemplate+"\n\n"
+      +"위 형식을 우선 사용하되, 형식과 무관한 새 증상·호소가 있으면 "
+      +"하단에 [추가 호소] 섹션을 기존 EMR 형식(CC/HPI/PE/Assessment/Plan)으로 별도 기록한다. 누락 금지.\n"
+      +knowledgeLine+ctxLine;
+  } else {
+    sys=WORKING_DRAFT_PROMPT+knowledgeLine+ctxLine;
+  }
   return callClaude(
     sys,
     "다음 진료 transcript로 Working Draft를 작성하라.\n\n[Transcript]\n"+raw,

@@ -13,7 +13,8 @@ RedFlag 패널에는 어떤 경우에도 inject 하지 않는다.
 | exam | Missing 패널 컨텍스트 | 진료 중 실시간 |
 | treatment | Draft 탭 힌트 (접이식) + Working Draft 컨텍스트 | Draft 검토 시 |
 | differential | Draft 탭 힌트 (접이식) + Working Draft 컨텍스트 | Draft 검토 시 |
-| draftAppend | Draft 하단 고정 문구 | EMR 입력 전 |
+| draftTemplate | 질환 특이 Template — Working Draft 출력 형식 강제 (범용 포맷 대체) | Draft 생성 시 |
+| draftAppend | Draft 출력사항 — Draft 하단 고정 문구 | EMR 입력 전 |
 
 ## 동작
 앱 런타임에서 KNOWLEDGE_BUNDLE[calcCategory] 조회.

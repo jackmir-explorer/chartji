@@ -88,10 +88,11 @@ BUNDLE 필드 구조 (섹션별 분리):
 ```javascript
 var KNOWLEDGE_BUNDLE = {
   "{keyword}": {
-    "exam":        "문진/검사 내용 (없으면 null)",
-    "treatment":   "처방/치료 내용 (없으면 null)",
-    "differential":"감별진단 내용 (없으면 null)",
-    "draftAppend": "주의사항 내용 (없으면 null)"
+    "exam":          "문진/검사 내용 (없으면 null)",
+    "treatment":     "처방/치료 내용 (없으면 null)",
+    "differential":  "감별진단 내용 (없으면 null)",
+    "draftTemplate": "질환 특이 Template (없으면 null — 범용 포맷 사용)",
+    "draftAppend":   "Draft 출력사항 내용 (없으면 null)"
   }
 };
 ```

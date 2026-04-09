@@ -34,18 +34,21 @@ var KNOWLEDGE_BUNDLE = {
     "exam": null,
     "treatment": null,
     "differential": null,
+    "draftTemplate": "접종: [백신명]\n부위: [접종 부위]\n이상반응: [없음 / 있으면 기술]\nPlan: [접종 후 안정, 귀가 지시]",
     "draftAppend": "예방접종 후 원내 30분 안정 취한 후 귀가 권고함."
   },
   "예방접종": {
     "exam": null,
     "treatment": null,
     "differential": null,
+    "draftTemplate": "접종: [백신명]\n부위: [접종 부위]\n이상반응: [없음 / 있으면 기술]\nPlan: [접종 후 안정, 귀가 지시]",
     "draftAppend": "예방접종 후 원내 30분 안정 취한 후 귀가 권고함."
   },
   "백신": {
     "exam": null,
     "treatment": null,
     "differential": null,
+    "draftTemplate": "접종: [백신명]\n부위: [접종 부위]\n이상반응: [없음 / 있으면 기술]\nPlan: [접종 후 안정, 귀가 지시]",
     "draftAppend": "예방접종 후 원내 30분 안정 취한 후 귀가 권고함."
   }
 };

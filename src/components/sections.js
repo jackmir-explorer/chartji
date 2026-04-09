@@ -79,9 +79,11 @@ function CalcTabHeaders(props){
 function DraftTab(props){
   var draftText=props.draftText, draftLoading=props.draftLoading,
       reviewText=props.reviewText, reviewLoading=props.reviewLoading,
-      onReview=props.onReview, apiKey=props.apiKey, onDraftChange=props.onDraftChange;
+      onReview=props.onReview, apiKey=props.apiKey, onDraftChange=props.onDraftChange,
+      draftHints=props.draftHints||null;
   var _useState=React.useState(false), editing=_useState[0], setEditing=_useState[1];
   var _useState2=React.useState(""), copyMsg=_useState2[0], setCopyMsg=_useState2[1];
+  var _useState3=React.useState(false), hintsOpen=_useState3[0], setHintsOpen=_useState3[1];
   return (
     <div style={{background:"#0d1018",border:"1px solid #1e2538",borderRadius:8,
       padding:"10px 12px",minHeight:240,overflowY:"auto",fontSize:12.5,
@@ -155,6 +157,28 @@ function DraftTab(props){
               </div>
             )}
           </div>
+          {draftHints&&(
+            <div style={{marginTop:8,borderTop:"1px solid rgba(167,139,250,.15)",paddingTop:8}}>
+              <div onClick={function(){setHintsOpen(function(v){return !v;});}}
+                style={{display:"flex",alignItems:"center",justifyContent:"space-between",
+                  cursor:"pointer",marginBottom:hintsOpen?6:0}}>
+                <span style={{fontSize:9,fontWeight:700,color:"#4a3f6b",
+                  textTransform:"uppercase",letterSpacing:".07em",
+                  fontFamily:"'JetBrains Mono',monospace"}}>
+                  💡 Liby 힌트
+                </span>
+                <span style={{fontSize:9,color:"#4a3f6b"}}>{hintsOpen?"▲":"▼"}</span>
+              </div>
+              {hintsOpen&&(
+                <div style={{fontSize:11,color:"#6b5c8a",lineHeight:1.8,
+                  whiteSpace:"pre-wrap",padding:"6px 8px",
+                  background:"rgba(167,139,250,.04)",
+                  border:"1px solid rgba(167,139,250,.12)",borderRadius:6}}>
+                  {draftHints}
+                </div>
+              )}
+            </div>
+          )}
           <div style={{marginTop:8,borderTop:"1px solid #1e2538",paddingTop:8}}>
             <button onClick={onReview}
               disabled={reviewLoading||!apiKey}
