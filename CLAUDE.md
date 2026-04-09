@@ -19,6 +19,7 @@ Chartji는 한국 가정의학과 외래 대화 기반 진료 보조 도구다.
 
 - **전략 리뷰가 필요할 때** → `Boss` 호출 (Board 심층 리뷰)
 - **구현 작업이 필요할 때** → `Designer` 호출 (실무진 파이프라인)
+- **임상 지식 저장/주입** → `Liby` 호출 (knowledge/ 관리) → `agents/librarian.md`
 
 워크플로우 상세 → `rules/workflow.md`
 
