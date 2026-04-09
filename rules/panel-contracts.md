@@ -15,9 +15,9 @@
 금지: routine reminder, followUpCtx 주입 (transcript-only 절대 원칙)
 
 ## Missing Checklist
-역할: 아직 나오지 않은 핵심 정보 감지
-출력: 항목 목록 (최대 5개)
-금지: 이미 나온 내용 반복, 5개 초과, 진단/치료 제안
+역할: 안전상 놓치면 안 되는 항목(1순위) + 감별진단·치료 방향을 직접 바꾸는 결정적 항목(2순위)
+출력: 항목 목록 (최대 3개)
+금지: 이미 언급된 항목, generic 체크리스트, 교과서적 항목, 진단/치료 제안
 
 ## Working Draft
 역할: EMR-ready 초안 자동 생성

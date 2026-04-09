@@ -19,3 +19,7 @@
 ## 세션 프로토콜
 - 미르가 "바로 해", "합시다", "하자" 라고 해도 Designer → Reviewer → QA 단계 생략 금지
 - Boss 승인서만으로 Builder 즉시 실행 금지 — 반드시 Designer 설계서 → 미르 승인 순서 준수
+
+## Liby (Librarian)
+- Liby ingest 후 KNOWLEDGE_BUNDLE에 새 키가 추가되면 Triage 감지 확장을 물어보지 말고 자동 실행
+- Triage 감지 확장 = TRIAGE_PROMPT calcCategories 목록에 새 항목 추가 (prompts.js)
