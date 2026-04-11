@@ -193,19 +193,19 @@ var KNOWLEDGE_BUNDLE = {
   },
   "LPR": {
     "exam": null,
-    "treatment": "PPI (1차 치료, 근거 확립)\n뮤테란 병용 [출처 미확인 — 성분 확인 필요]\nPPI 부작용 시: 알긴산(알긴산염) — 위 내용물 위에 raft 형성, 역류 물리적 차단",
+    "treatment": "PPI (1차 치료, 근거 확립)\n뮤테란(아세틸시스테인 경구) 병용 — LPR 인후 분비물·점액 거담 목적 [TIPS]\nPPI 부작용 시: 알긴산(알긴산염) — 위 내용물 위에 raft 형성, 역류 물리적 차단",
     "differential": null,
     "draftAppend": null
   },
   "후두염": {
     "exam": null,
-    "treatment": "PPI (1차 치료, 근거 확립)\n뮤테란 병용 [출처 미확인 — 성분 확인 필요]\nPPI 부작용 시: 알긴산(알긴산염) — 위 내용물 위에 raft 형성, 역류 물리적 차단",
+    "treatment": "PPI (1차 치료, 근거 확립)\n뮤테란(아세틸시스테인 경구) 병용 — LPR 인후 분비물·점액 거담 목적 [TIPS]\nPPI 부작용 시: 알긴산(알긴산염) — 위 내용물 위에 raft 형성, 역류 물리적 차단",
     "differential": null,
     "draftAppend": null
   },
   "인후두역류": {
     "exam": null,
-    "treatment": "PPI (1차 치료, 근거 확립)\n뮤테란 병용 [출처 미확인 — 성분 확인 필요]\nPPI 부작용 시: 알긴산(알긴산염) — 위 내용물 위에 raft 형성, 역류 물리적 차단",
+    "treatment": "PPI (1차 치료, 근거 확립)\n뮤테란(아세틸시스테인 경구) 병용 — LPR 인후 분비물·점액 거담 목적 [TIPS]\nPPI 부작용 시: 알긴산(알긴산염) — 위 내용물 위에 raft 형성, 역류 물리적 차단",
     "differential": null,
     "draftAppend": null
   }
