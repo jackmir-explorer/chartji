@@ -54,7 +54,7 @@ function App(){
 
   /* ── 감지된 계산기 → 활성 탭 자동 추가 ── */
   useEffect(function(){
-    if(!detectedCalcs.length) return;
+    if(!detectedCalcs.length||!raw.trim()) return;
     setActiveCalcs(function(prev){
       var next=prev.slice();
       detectedCalcs.forEach(function(c){
@@ -62,7 +62,7 @@ function App(){
       });
       return next;
     });
-  },[detectedCalcs]);
+  },[detectedCalcs,raw]);
 
   /* ─────────────────────────────────────────────────────────────
      Working Draft
@@ -349,14 +349,8 @@ function App(){
                       padding:"2px 7px",borderRadius:10,marginLeft:4}}>● 자동 입력 중</span>
                   )}
                 </div>
-                {/* 우: 예시/지우기 버튼 */}
+                {/* 우: 지우기 버튼 */}
                 <div style={{display:"flex",gap:6}}>
-                  <button onClick={function(){setRaw(SAMPLE);finalTextRef.current=SAMPLE;setVoiceMsg("예시(단순) 입력됨.");}}
-                    style={{fontSize:11,color:"#4a5268",padding:"4px 10px",
-                      borderRadius:5,border:"1px solid #1e2538",background:"none"}}>예시(단순)</button>
-                  <button onClick={function(){setRaw(SAMPLE_COMPLEX);finalTextRef.current=SAMPLE_COMPLEX;setVoiceMsg("예시(복합) 입력됨.");}}
-                    style={{fontSize:11,color:"#f5a623",padding:"4px 10px",
-                      borderRadius:5,border:"1px solid rgba(245,166,35,.3)",background:"none"}}>예시(복합)</button>
                   {raw&&<button onClick={function(){setRaw("");finalTextRef.current="";}}
                     style={{fontSize:11,color:"#4a5268",padding:"4px 10px",
                       borderRadius:5,border:"1px solid #1e2538",background:"none"}}>지우기</button>}
@@ -482,7 +476,18 @@ function App(){
                 return s||null;
               })():null}/>
             <TriagePanel key={triageKey} raw={raw} apiKey={apiKey} followUpCtx={followUpCtx}
-              onDetect={function(cats){setDetectedCalcs(cats||[]);}}/>
+              onDetect={function(cats){setDetectedCalcs(cats||[]);}}
+              differentialShort={typeof KNOWLEDGE_BUNDLE!=="undefined"&&detectedCalcs.length?(function(){
+                var list=[];
+                detectedCalcs.forEach(function(c){
+                  if(KNOWLEDGE_BUNDLE[c]&&KNOWLEDGE_BUNDLE[c].differentialShort){
+                    KNOWLEDGE_BUNDLE[c].differentialShort.forEach(function(item){
+                      if(!list.some(function(x){return x.d===item.d;})) list.push(item);
+                    });
+                  }
+                });
+                return list.length?list:null;
+              })():null}/>
 
           </div>
 

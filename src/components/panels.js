@@ -1,14 +1,14 @@
 const {useState,useRef,useEffect}=React;
 
 function TriagePanel(props){
-  var raw=props.raw, apiKey=props.apiKey, followUpCtx=props.followUpCtx, onDetect=props.onDetect;
+  var raw=props.raw, apiKey=props.apiKey, followUpCtx=props.followUpCtx, onDetect=props.onDetect,
+      differentialShort=props.differentialShort||null;
   var [data,setData]=useState(null);
   var [loading,setLoading]=useState(false);
   var timerRef=useRef(null);
   var lastRef=useRef("");
 
   var localCC=detectLocalCC(raw||"");
-  var rawLen=raw?raw.length:0;
 
   useEffect(function(){
     if(!apiKey) return;
@@ -30,71 +30,41 @@ function TriagePanel(props){
     return function(){clearTimeout(timerRef.current);};
   },[raw,apiKey,followUpCtx]);
 
-  var [expanded,setExpanded]=useState(true);
-  useEffect(function(){
-    if(rawLen>=50) setExpanded(false);
-  },[rawLen]);
-
   var cc=(data&&data.chiefComplaint)||localCC||null;
-  var focus=data&&data.initialFocus;
 
   if(!cc&&!loading) return null;
 
   return (
     <div style={{
       marginBottom:8,
+      padding:"5px 10px",
       border:"1px solid rgba(245,166,35,.18)",
       borderLeft:"2px solid rgba(245,166,35,.35)",
       borderRadius:7,
-      overflow:"hidden",
-      opacity:.85,
+      background:"rgba(245,166,35,.03)",
+      display:"flex",flexDirection:"column",gap:4,
     }}>
-      <div
-        onClick={function(){setExpanded(function(v){return !v;});}}
-        style={{
-          padding:"5px 10px",
-          display:"flex",alignItems:"center",
-          justifyContent:"space-between",
-          cursor:"pointer",
-          background:"rgba(245,166,35,.03)",
-        }}
-      >
-        <div style={{display:"flex",alignItems:"center",gap:7,minWidth:0,flex:1}}>
-          <span style={{fontSize:8,fontWeight:700,color:"rgba(245,166,35,.55)",
-            fontFamily:"'JetBrains Mono',monospace",flexShrink:0,textTransform:"uppercase",
-            letterSpacing:".06em"}}>CC</span>
-          {cc?(
-            <span style={{fontSize:12,color:"#c9a84c",fontWeight:600,
-              whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis"}}>
-              {cc}
-              {!expanded&&focus&&(
-                <span style={{fontSize:10.5,color:"#6b5c2e",fontWeight:400,marginLeft:6}}>
-                  · {focus}
-                </span>
-              )}
-            </span>
-          ):(
-            <span style={{fontSize:11,color:"#3a3018",fontStyle:"italic"}}>분석 중...</span>
-          )}
-        </div>
-        <div style={{display:"flex",alignItems:"center",gap:5,flexShrink:0}}>
-          {loading&&(
-            <span style={{width:7,height:7,border:"1px solid rgba(245,166,35,.2)",
-              borderTopColor:"rgba(245,166,35,.6)",borderRadius:"50%",display:"inline-block",
-              animation:"spin .7s linear infinite"}}/>
-          )}
-          <span style={{fontSize:8,color:"rgba(245,166,35,.35)"}}>
-            {expanded?"▲":"▼"}
+      {/* CC 행 */}
+      <div style={{display:"flex",alignItems:"center",gap:7}}>
+        <span style={{fontSize:8,fontWeight:700,color:"rgba(245,166,35,.55)",
+          fontFamily:"'JetBrains Mono',monospace",flexShrink:0,textTransform:"uppercase",
+          letterSpacing:".06em"}}>CC</span>
+        {cc?(
+          <span style={{fontSize:12,color:"#c9a84c",fontWeight:600,
+            whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis",flex:1}}>
+            {cc}
           </span>
-        </div>
+        ):(
+          <span style={{fontSize:11,color:"#3a3018",fontStyle:"italic"}}>분석 중...</span>
+        )}
+        {loading&&(
+          <span style={{width:7,height:7,border:"1px solid rgba(245,166,35,.2)",
+            borderTopColor:"rgba(245,166,35,.6)",borderRadius:"50%",display:"inline-block",
+            animation:"spin .7s linear infinite",flexShrink:0}}/>
+        )}
       </div>
-
-      {expanded&&focus&&(
-        <div style={{padding:"4px 10px 6px 22px",fontSize:11,color:"#7a6d4a",
-          lineHeight:1.55,borderTop:"1px solid rgba(245,166,35,.1)"}}>
-          {focus}
-        </div>
-      )}
+      {/* differentialShort 렌더링 비활성화 — Boss 권고 (risk>benefit) */}
+      {/* 데이터/파이프라인은 유지, 재활성화 필요 시 위 블록 복원 */}
     </div>
   );
 }

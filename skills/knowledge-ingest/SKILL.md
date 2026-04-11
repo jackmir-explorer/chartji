@@ -88,11 +88,12 @@ BUNDLE 필드 구조 (섹션별 분리):
 ```javascript
 var KNOWLEDGE_BUNDLE = {
   "{keyword}": {
-    "exam":          "문진/검사 내용 (없으면 null)",
-    "treatment":     "처방/치료 내용 (없으면 null)",
-    "differential":  "감별진단 내용 (없으면 null)",
-    "draftTemplate": "질환 특이 Template (없으면 null — 범용 포맷 사용)",
-    "draftAppend":   "Draft 출력사항 내용 (없으면 null)"
+    "exam":              "문진/검사 내용 (없으면 null)",
+    "treatment":         "처방/치료 내용 (없으면 null)",
+    "differential":      "감별진단 상세 설명 — Draft 💡 힌트용 긴 텍스트 (없으면 null)",
+    "differentialShort": "Triage 패널 표시용 구조화 배열 (없으면 null) — 형식: [{\"d\":\"진단명\",\"t\":\"h\"},...] t=h(horse/흔함) or t=z(zebra/드물지만치명적)",
+    "draftTemplate":     "질환 특이 Template (없으면 null — 범용 포맷 사용)",
+    "draftAppend":       "Draft 출력사항 내용 (없으면 null)"
   }
 };
 ```

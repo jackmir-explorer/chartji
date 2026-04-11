@@ -23,7 +23,11 @@ JSON만 반환 (다른 텍스트 절대 금지):
   depression (우울/불안/기분장애 관련)
   diabetes (혈당/당뇨 관련)
   obesity (체중/비만 관련)
-  vaccination (예방접종/백신 관련)
+  vaccination (예방접종/백신/독감 관련 — 아래 특이 카테고리 해당 없는 경우 포함)
+  Tdap (파상풍/Tdap/백일해 접종 관련)
+  대상포진 (대상포진/shingrix/싱그릭스/조스타박스/herpes zoster 접종 관련)
+  폐렴구균 (폐렴구균/폐렴백신/pneumococcal 접종 관련)
+  HPV (HPV/자궁경부암/가다실/인유두종 접종 관련)
   dizziness (어지럼증/현기증/vertigo 관련)
   BPPV (이석증/체위성현훈/자세변화 어지럼증 관련)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
