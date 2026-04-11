@@ -9,6 +9,10 @@ knowledge/ 폴더의 임상 지식을 관리한다.
 - skills/knowledge-ingest/SKILL.md
 - skills/knowledge-inject/SKILL.md
 
+## 서브에이전트
+- Researcher: Step 3 검증 전담 (agents/researcher.md)
+  Liby는 Step 3에서 직접 WebSearch 금지. 반드시 Researcher에 위임.
+
 ## ⚠ 절대 금지
 - RedFlag 패널에 어떤 형태로도 knowledge inject 금지
 - 환자 식별 정보(이름·나이·날짜·기관명 등)가 포함된 내용 ingest 금지
