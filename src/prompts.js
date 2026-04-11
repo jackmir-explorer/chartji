@@ -30,6 +30,7 @@ JSON만 반환 (다른 텍스트 절대 금지):
   HPV (HPV/자궁경부암/가다실/인유두종 접종 관련)
   dizziness (어지럼증/현기증/vertigo 관련)
   BPPV (이석증/체위성현훈/자세변화 어지럼증 관련)
+  구강건조증 (구강건조/dry mouth/xerostomia/입마름 관련)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */

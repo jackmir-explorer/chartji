@@ -2,13 +2,13 @@
 var KNOWLEDGE_BUNDLE = {
   "BPPV": {
     "exam": "BPPV 진단: 1단계 Supine Head Roll Test(Horizontal canal). 안진 없으면 2단계 Dix-Hallpike(Posterior canal).",
-    "treatment": "Horizontal canal 안진: Geotropic(바닥 beating)→병변=강한 쪽, Apogeotropic(천장 beating)→병변=약한 쪽, 치료=Barbeque Roll.\nPosterior canal 안진: 병변=beating 반대방향, 치료=Modified Epley Maneuver(병변 방향에서 시작).",
+    "treatment": "Horizontal canal 안진: Geotropic(바닥 beating)→병변=강한 쪽, Apogeotropic(천장 beating)→병변=약한 쪽, 치료=Barbeque Roll.\nPosterior canal 안진: 병변=beating 반대방향, 치료=Modified Epley Maneuver(병변 방향에서 시작).\n【약물】보나링 po PRN (증상 매우 심할 때만) — 반드시 고지: 졸릴 수 있음. 이석정복술 대비 효과 제한적.",
     "differential": null,
     "draftAppend": null
   },
   "이석증": {
     "exam": "BPPV 진단: 1단계 Supine Head Roll Test(Horizontal canal). 안진 없으면 2단계 Dix-Hallpike(Posterior canal).",
-    "treatment": "Horizontal canal 안진: Geotropic(바닥 beating)→병변=강한 쪽, Apogeotropic(천장 beating)→병변=약한 쪽, 치료=Barbeque Roll.\nPosterior canal 안진: 병변=beating 반대방향, 치료=Modified Epley Maneuver(병변 방향에서 시작).",
+    "treatment": "Horizontal canal 안진: Geotropic(바닥 beating)→병변=강한 쪽, Apogeotropic(천장 beating)→병변=약한 쪽, 치료=Barbeque Roll.\nPosterior canal 안진: 병변=beating 반대방향, 치료=Modified Epley Maneuver(병변 방향에서 시작).\n【약물】보나링 po PRN (증상 매우 심할 때만) — 반드시 고지: 졸릴 수 있음. 이석정복술 대비 효과 제한적.",
     "differential": null,
     "draftAppend": null
   },
@@ -129,6 +129,30 @@ var KNOWLEDGE_BUNDLE = {
     "treatment": "위고비(Semaglutide) 처방 기준: BMI≥30→단독 가능. BMI 27~30+동반질환(고혈압/T2DM/이상지질혈증/OSA/심혈관질환)→가능. 비급여, 전액 환자 부담[FDA].\n절대금기: MTC 개인력/가족력, MEN2, semaglutide 과민반응, 임신(계획 시 2개월 전 중단).\n상대적주의: 췌장염 과거력, 수유중, 당뇨망막병증(혈당 급격 개선 시 악화), 담석증.",
     "differential": null,
     "draftTemplate": "CC 체중감량\n과거 사용했던 비만 약물 :\n* 부작용 :\n* 약물 효과 :\n현재 사용 중인 비만 약물 :\n* 부작용 :\n* 약물 효과 :\n\n현재 Life style\n* 운동 :\n* 식단 :\n\n경과\n0-4week :\n\nO\nV/S\n키 cm,  체중 kg,  BMI (목표체중 kg)\n\nA\n# 진단받은 질병\n# 가족력 :\n# 음주력 :\n# 흡연력 :\n# 수술력 :\n\n# 평소 운동 :\n# 평소 식단 :",
+    "draftAppend": null
+  },
+  "구강건조증": {
+    "exam": null,
+    "treatment": "Pilocarpine(살라겐/필로겐) po\n가이드라인: 두경부암 방사선 후 5mg TID / 쇼그렌증후군 5mg QID [NEJM 1993]\n임상 패턴: BID 가능 (부작용 경감) [출처 미확인]\n급여: 두경부암 방사선 후 or 쇼그렌증후군 진단 시 / 비급여: 그 외 원인",
+    "differential": null,
+    "draftAppend": null
+  },
+  "구강건조": {
+    "exam": null,
+    "treatment": "Pilocarpine(살라겐/필로겐) po\n가이드라인: 두경부암 방사선 후 5mg TID / 쇼그렌증후군 5mg QID [NEJM 1993]\n임상 패턴: BID 가능 (부작용 경감) [출처 미확인]\n급여: 두경부암 방사선 후 or 쇼그렌증후군 진단 시 / 비급여: 그 외 원인",
+    "differential": null,
+    "draftAppend": null
+  },
+  "dry mouth": {
+    "exam": null,
+    "treatment": "Pilocarpine(살라겐/필로겐) po\n가이드라인: 두경부암 방사선 후 5mg TID / 쇼그렌증후군 5mg QID [NEJM 1993]\n임상 패턴: BID 가능 (부작용 경감) [출처 미확인]\n급여: 두경부암 방사선 후 or 쇼그렌증후군 진단 시 / 비급여: 그 외 원인",
+    "differential": null,
+    "draftAppend": null
+  },
+  "xerostomia": {
+    "exam": null,
+    "treatment": "Pilocarpine(살라겐/필로겐) po\n가이드라인: 두경부암 방사선 후 5mg TID / 쇼그렌증후군 5mg QID [NEJM 1993]\n임상 패턴: BID 가능 (부작용 경감) [출처 미확인]\n급여: 두경부암 방사선 후 or 쇼그렌증후군 진단 시 / 비급여: 그 외 원인",
+    "differential": null,
     "draftAppend": null
   }
 };
