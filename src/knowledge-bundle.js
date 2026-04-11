@@ -133,25 +133,43 @@ var KNOWLEDGE_BUNDLE = {
   },
   "구강건조증": {
     "exam": null,
-    "treatment": "Pilocarpine(살라겐/필로겐) po\n가이드라인: 두경부암 방사선 후 5mg TID / 쇼그렌증후군 5mg QID [NEJM 1993]\n임상 패턴: BID 가능 (부작용 경감) [출처 미확인]\n급여: 두경부암 방사선 후 or 쇼그렌증후군 진단 시 / 비급여: 그 외 원인",
+    "treatment": "① Pilocarpine(살라겐/필로겐) po — 가이드라인: 두경부암 방사선 후 5mg TID / 쇼그렌증후군 5mg QID / 임상패턴 BID 가능 [출처 미확인] — 급여: 두경부암 방사선 후 or 쇼그렌증후군 / 비급여: 그 외\n② 뮤코미스트 가글 — 10% 1amp + 물 100cc TID — 방사선 유발 xerostomia: Mayo Clinic RCT 근거 / 일반: 임상 경험 [출처 미확인]",
     "differential": null,
     "draftAppend": null
   },
   "구강건조": {
     "exam": null,
-    "treatment": "Pilocarpine(살라겐/필로겐) po\n가이드라인: 두경부암 방사선 후 5mg TID / 쇼그렌증후군 5mg QID [NEJM 1993]\n임상 패턴: BID 가능 (부작용 경감) [출처 미확인]\n급여: 두경부암 방사선 후 or 쇼그렌증후군 진단 시 / 비급여: 그 외 원인",
+    "treatment": "① Pilocarpine(살라겐/필로겐) po — 가이드라인: 두경부암 방사선 후 5mg TID / 쇼그렌증후군 5mg QID / 임상패턴 BID 가능 [출처 미확인] — 급여: 두경부암 방사선 후 or 쇼그렌증후군 / 비급여: 그 외\n② 뮤코미스트 가글 — 10% 1amp + 물 100cc TID — 방사선 유발 xerostomia: Mayo Clinic RCT 근거 / 일반: 임상 경험 [출처 미확인]",
     "differential": null,
     "draftAppend": null
   },
   "dry mouth": {
     "exam": null,
-    "treatment": "Pilocarpine(살라겐/필로겐) po\n가이드라인: 두경부암 방사선 후 5mg TID / 쇼그렌증후군 5mg QID [NEJM 1993]\n임상 패턴: BID 가능 (부작용 경감) [출처 미확인]\n급여: 두경부암 방사선 후 or 쇼그렌증후군 진단 시 / 비급여: 그 외 원인",
+    "treatment": "① Pilocarpine(살라겐/필로겐) po — 가이드라인: 두경부암 방사선 후 5mg TID / 쇼그렌증후군 5mg QID / 임상패턴 BID 가능 [출처 미확인] — 급여: 두경부암 방사선 후 or 쇼그렌증후군 / 비급여: 그 외\n② 뮤코미스트 가글 — 10% 1amp + 물 100cc TID — 방사선 유발 xerostomia: Mayo Clinic RCT 근거 / 일반: 임상 경험 [출처 미확인]",
     "differential": null,
     "draftAppend": null
   },
   "xerostomia": {
     "exam": null,
-    "treatment": "Pilocarpine(살라겐/필로겐) po\n가이드라인: 두경부암 방사선 후 5mg TID / 쇼그렌증후군 5mg QID [NEJM 1993]\n임상 패턴: BID 가능 (부작용 경감) [출처 미확인]\n급여: 두경부암 방사선 후 or 쇼그렌증후군 진단 시 / 비급여: 그 외 원인",
+    "treatment": "① Pilocarpine(살라겐/필로겐) po — 가이드라인: 두경부암 방사선 후 5mg TID / 쇼그렌증후군 5mg QID / 임상패턴 BID 가능 [출처 미확인] — 급여: 두경부암 방사선 후 or 쇼그렌증후군 / 비급여: 그 외\n② 뮤코미스트 가글 — 10% 1amp + 물 100cc TID — 방사선 유발 xerostomia: Mayo Clinic RCT 근거 / 일반: 임상 경험 [출처 미확인]",
+    "differential": null,
+    "draftAppend": null
+  },
+  "burning mouth": {
+    "exam": null,
+    "treatment": "뮤코미스트 가글 — 10% 1amp + 물 100cc TID\n다기관 임상(2025): VAS 통증 + 삶의 질 유의 개선\nClonazepam 0.5mg/d 병용 시 반응률 60% → 80%\n[출처: Kim JW et al. Sci Rep 2025]",
+    "differential": null,
+    "draftAppend": null
+  },
+  "구강작열감": {
+    "exam": null,
+    "treatment": "뮤코미스트 가글 — 10% 1amp + 물 100cc TID\n다기관 임상(2025): VAS 통증 + 삶의 질 유의 개선\nClonazepam 0.5mg/d 병용 시 반응률 60% → 80%\n[출처: Kim JW et al. Sci Rep 2025]",
+    "differential": null,
+    "draftAppend": null
+  },
+  "BMS": {
+    "exam": null,
+    "treatment": "뮤코미스트 가글 — 10% 1amp + 물 100cc TID\n다기관 임상(2025): VAS 통증 + 삶의 질 유의 개선\nClonazepam 0.5mg/d 병용 시 반응률 60% → 80%\n[출처: Kim JW et al. Sci Rep 2025]",
     "differential": null,
     "draftAppend": null
   }
