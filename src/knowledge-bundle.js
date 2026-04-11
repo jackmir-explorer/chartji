@@ -172,5 +172,41 @@ var KNOWLEDGE_BUNDLE = {
     "treatment": "뮤코미스트 가글 — 10% 1amp + 물 100cc TID\n다기관 임상(2025): VAS 통증 + 삶의 질 유의 개선\nClonazepam 0.5mg/d 병용 시 반응률 60% → 80%\n[출처: Kim JW et al. Sci Rep 2025]",
     "differential": null,
     "draftAppend": null
+  },
+  "구강병변": {
+    "exam": "백반증(white patch)/궤양: 1달 내 호전 확인 필수. 미호전 → 악성 전환 가능성 → ENT refer.",
+    "treatment": "Dexamethasone powder + 물 1L → 하루 3–4회 가글 [TIPS]\n미호전 시 ENT refer (생검 등 정밀검사)\nTriamcinolone 병변 내 주사 — 난치성 궤양 [CLINICAL]",
+    "differential": "구강백반증(악성 전환율 ~1%/년), 구강편평태선, 캔디다증, 외상성 궤양, 구강암",
+    "draftAppend": null
+  },
+  "oral white patch": {
+    "exam": "백반증(white patch)/궤양: 1달 내 호전 확인 필수. 미호전 → 악성 전환 가능성 → ENT refer.",
+    "treatment": "Dexamethasone powder + 물 1L → 하루 3–4회 가글 [TIPS]\n미호전 시 ENT refer (생검 등 정밀검사)\nTriamcinolone 병변 내 주사 — 난치성 궤양 [CLINICAL]",
+    "differential": "구강백반증(악성 전환율 ~1%/년), 구강편평태선, 캔디다증, 외상성 궤양, 구강암",
+    "draftAppend": null
+  },
+  "구강궤양": {
+    "exam": "백반증(white patch)/궤양: 1달 내 호전 확인 필수. 미호전 → 악성 전환 가능성 → ENT refer.",
+    "treatment": "Dexamethasone powder + 물 1L → 하루 3–4회 가글 [TIPS]\n미호전 시 ENT refer (생검 등 정밀검사)\nTriamcinolone 병변 내 주사 — 난치성 궤양 [CLINICAL]",
+    "differential": "구강백반증(악성 전환율 ~1%/년), 구강편평태선, 캔디다증, 외상성 궤양, 구강암",
+    "draftAppend": null
+  },
+  "LPR": {
+    "exam": null,
+    "treatment": "PPI (1차 치료, 근거 확립)\n뮤테란 병용 [출처 미확인 — 성분 확인 필요]\nPPI 부작용 시: 알긴산(알긴산염) — 위 내용물 위에 raft 형성, 역류 물리적 차단",
+    "differential": null,
+    "draftAppend": null
+  },
+  "후두염": {
+    "exam": null,
+    "treatment": "PPI (1차 치료, 근거 확립)\n뮤테란 병용 [출처 미확인 — 성분 확인 필요]\nPPI 부작용 시: 알긴산(알긴산염) — 위 내용물 위에 raft 형성, 역류 물리적 차단",
+    "differential": null,
+    "draftAppend": null
+  },
+  "인후두역류": {
+    "exam": null,
+    "treatment": "PPI (1차 치료, 근거 확립)\n뮤테란 병용 [출처 미확인 — 성분 확인 필요]\nPPI 부작용 시: 알긴산(알긴산염) — 위 내용물 위에 raft 형성, 역류 물리적 차단",
+    "differential": null,
+    "draftAppend": null
   }
 };
