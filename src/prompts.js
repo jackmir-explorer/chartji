@@ -35,6 +35,7 @@ JSON만 반환 (다른 텍스트 절대 금지):
   구강병변 (구강궤양/구강백반증/oral white patch/구강 내 하얀 반점/입안 상처 관련)
   LPR (후두염/인후두역류/laryngopharyngeal reflux/목에 뭔가 걸린 느낌/역류성후두염 관련)
   저음성난청 (저주파난청/귀먹먹함/이충만감/aural fullness/low frequency hearing loss 관련)
+  후각저하 (후각저하/후각감퇴/후각소실/냄새못맡음/hyposmia/anosmia 관련)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */

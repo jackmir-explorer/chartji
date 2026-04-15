@@ -23,3 +23,7 @@
 ## Liby (Librarian)
 - Liby ingest 후 KNOWLEDGE_BUNDLE에 새 키가 추가되면 Triage 감지 확장을 물어보지 말고 자동 실행
 - Triage 감지 확장 = TRIAGE_PROMPT calcCategories 목록에 새 항목 추가 (prompts.js)
+
+### ⚠ GOTCHA — ingest 시 반복 실수
+- **Attribution 임의 추정 금지**: TIPS/INSIGHTS에 출처 힌트가 없을 때 "by 미르"로 자동 저장 금지. 반드시 미르에게 질문 후 저장.
+- **Researcher 호출 생략 금지**: CLINICAL 항목이 하나라도 있으면 Step 3 Researcher 서브에이전트 호출 필수. ingest와 동시에 병렬 호출 가능.
