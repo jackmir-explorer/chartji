@@ -5,6 +5,7 @@
 
 ---
 
+2026-04-15 | by-disease/obesity.md | Mayo Clinic 비만 표현형 4가지 (Hungry Brain/Gut/Emotional Hunger/Slow Burn) + 치료 매칭 [CLINICAL + TIPS — by 로컬원장님]
 2026-04-15 | by-drug/glp1-selection-strategy.md | 위고비 vs 마운자로 선택 기준 10가지 + Dose Escalation 프로토콜 + Interval Tx 유지 전략 [TIPS/INSIGHTS — by 로컬원장님]
 2026-04-08 | by-disease/vaccination.md | 예방접종 후 원내 30분 안정 후 귀가 — Draft 출력사항 [DRAFT_APPEND]
 2026-04-08 | by-disease/dizziness.md  | 어지럼증 시 편두통 과거력 + 편두통 문진 — 문진/검사

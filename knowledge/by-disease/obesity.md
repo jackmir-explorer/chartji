@@ -1,6 +1,18 @@
 # 비만 (Obesity)
 
-keywords: obesity, 비만
+keywords: obesity, 비만, phenotype, hungry brain, hungry gut, slow burn, emotional hunger
+
+## 비만 표현형 (Mayo Clinic Phenotype) [CLINICAL]
+
+> 출처: Acosta A, et al. *Obesity* 2021 (PMID: 33759389)
+> 표현형 기반 처방군 vs 비표현형군: 15.9% vs 9.0% 체중감량 (12개월, 1.75배)
+
+| 표현형 | 핵심 특징 | 권장 접근 |
+|--------|----------|----------|
+| **Hungry Brain** | 뇌의 포만감 신호 이상, 과식 경향 | GLP-1 효과 좋음 [TIPS — by 로컬원장님] |
+| **Hungry Gut** | 위장관 포만감 신호 이상 | GLP-1 효과 좋음 [TIPS — by 로컬원장님] |
+| **Emotional Hunger** | 감정적 섭식, 스트레스·보상 섭식 | 콘트라브 + 행동치료 [TIPS — by 로컬원장님] |
+| **Slow Burn** | 대사율 저하, 식사량·운동량 적음, 근육량 부족 | 약물 효과 크지 않음, 까다로운 편 [TIPS — by 로컬원장님] |
 
 ## 문진/검사
 
