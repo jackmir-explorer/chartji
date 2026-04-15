@@ -1,20 +1,33 @@
 # 위고비 (Wegovy, Semaglutide) — 처방 기준
 
-tags: [REGULATORY]
-keywords: obesity, 비만, 위고비, semaglutide
+tags: [REGULATORY, CLINICAL, TIPS]
+keywords: obesity, 비만, 위고비, semaglutide, 지방간, MASH, 소아청소년
 
-## 처방 적응증 (성인)
+## 처방 적응증
 
+### 성인
 **BMI ≥ 30 kg/m²** — 단독으로 처방 가능
 
-**BMI 27~30 미만 (과체중)** — 아래 동반 질환 중 하나 이상 있을 때 처방 가능:
-- 고혈압
-- 제2형 당뇨병
-- 이상지질혈증
-- 폐쇄성 수면 무호흡증
-- 심혈관 질환 (CVD — 심혈관 사망·심근경색·뇌졸중 위험 감소 적응증 포함)
+**BMI 27~30 미만 (과체중)** — 아래 동반 질환 중 하나 이상 있을 때:
+- 고혈압 (HTN)
+- 제2형 당뇨병 (T2DM)
+- 이상지질혈증 (Dyslipidemia)
+- 폐쇄성 수면 무호흡증 (OSA)
+- 심혈관 질환 (CVD)
+- **MASH (지방간염) + 중등도~중증 섬유화 (F2-F3)** — FDA 2025년 승인
+  - 간경변(cirrhosis) 단계는 효과 미입증
+  - 출처: ESSENCE Phase 3 Trial, NEJM 2025
 
 [출처: FDA prescribing information (Wegovy semaglutide 215256)]
+
+### 소아청소년 [CLINICAL]
+- **12세 이상 + BMI ≥ 95th percentile (연령·성별 기준)** — FDA 2022년 승인
+- 68주 BMI 변화: -16.1% vs placebo +0.6% (STEP TEENS trial)
+- 출처: FDA 2022.12 승인; 한국 식약처 소아 허가 여부는 별도 확인 필요
+
+## 시작 용량 [CLINICAL]
+- **0.25mg에서 시작** 권장
+- > [TIPS — by FM교수님] 이미 비만약을 많이 시도해본 환자는 0.5mg부터 시작해볼 수 있음
 
 ## 절대 금기 (Contraindications)
 

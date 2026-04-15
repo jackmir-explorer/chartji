@@ -5,6 +5,10 @@
 
 ---
 
+2026-04-15 | by-drug/mounjaro.md | 신규 — 마운자로 적응증·용량·실비보험 [CLINICAL + TIPS — by 로컬원장님]
+2026-04-15 | by-drug/ozempic.md | 신규 — 오젬픽 급여 기준 상세 [CLINICAL — 조건부]
+2026-04-15 | by-drug/wegovy.md | 보완 — 지방간(MASH F2-F3), 소아 허가, 시작용량 + FM교수님 TIPS
+2026-04-15 | by-drug/glp1-selection-strategy.md | 보완 — 시작용량·감량속도 비교표 추가
 2026-04-15 | by-disease/obesity.md | Mayo Clinic 비만 표현형 4가지 (Hungry Brain/Gut/Emotional Hunger/Slow Burn) + 치료 매칭 [CLINICAL + TIPS — by 로컬원장님]
 2026-04-15 | by-drug/glp1-selection-strategy.md | 위고비 vs 마운자로 선택 기준 10가지 + Dose Escalation 프로토콜 + Interval Tx 유지 전략 [TIPS/INSIGHTS — by 로컬원장님]
 2026-04-08 | by-disease/vaccination.md | 예방접종 후 원내 30분 안정 후 귀가 — Draft 출력사항 [DRAFT_APPEND]
