@@ -5,6 +5,8 @@
 
 ---
 
+2026-04-15 | by-disease/obesity.md | 문진 보완 — 환자 기대 청취·목표 설정·설문지 법적 보호 [TIPS — by 로컬원장님]
+2026-04-15 | by-drug/glp1-selection-strategy.md | 보완 — 용량 조절 유연성 비교 (마운자로 중간용량 없음 / 위고비 단계 많음) [TIPS — by 로컬원장님]
 2026-04-15 | by-drug/mounjaro.md | 신규 — 마운자로 적응증·용량·실비보험 [CLINICAL + TIPS — by 로컬원장님]
 2026-04-15 | by-drug/ozempic.md | 신규 — 오젬픽 급여 기준 상세 [CLINICAL — 조건부]
 2026-04-15 | by-drug/wegovy.md | 보완 — 지방간(MASH F2-F3), 소아 허가, 시작용량 + FM교수님 TIPS
