@@ -31,10 +31,15 @@ knowledge/ 폴더의 임상 지식을 관리한다.
 
 ## Inbox 트리거 (핸드폰 → GitHub → 데스크탑)
 미르가 "inbox 확인해줘" 호출 시:
-1. `inbox/*.md` 파일 스캔 (processed/ 제외)
-2. 각 파일을 knowledge-ingest SKILL.md로 처리 → draft 생성
+1. `inbox/` 스캔 (processed/ 제외) — 지원 형식:
+   - `.md` → knowledge-ingest SKILL.md로 처리
+   - `.jpg` `.jpeg` `.png` `.webp` → image-extract SKILL.md로 처리
+   - `.pdf` → image-extract SKILL.md로 처리 (PDF 모드)
+2. 각 파일 형식에 맞는 스킬로 draft 생성
 3. 미르 승인 후 정상 ingest
 4. 처리 완료 파일 → `inbox/processed/` 이동
+
+> 여러 파일이 있을 경우 파일별로 순서대로 처리하고 각각 draft를 제시한다.
 
 ## Inject 트리거
 Working Draft 생성 시 Triage 패널의 detectedCalcs 신호를 받아 자동 실행.
