@@ -1,5 +1,2 @@
-# knowledge 로컬 전용 — 의료 정보 보호
-knowledge/
-
 # 컴파일 번들은 추적 (환자 정보 없음)
 !src/knowledge-bundle.js
