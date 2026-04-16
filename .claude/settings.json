@@ -10,5 +10,10 @@
     "node",
     "npx",
     "python"
+    "query"
+    "allowed_domains"
+    "max_results"
+    "sort"
+    "pmids"
   ]
 }

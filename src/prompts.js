@@ -17,7 +17,7 @@ JSON만 반환 (다른 텍스트 절대 금지):
 - initialFocus: 초기 접근 방향 한 줄 (사실형, 예: "기간·발열·호흡곤란부터 정리")
 - 재진 방문으로 표시된 경우 follow-up / lab review / medication adjustment 등 방문 성격을 initialFocus에 제한적으로 반영 가능
 - 2줄 이상 길어지지 않게
-- calcCategories: 대화 맥락에서 아래 5개 중 해당하는 질환 카테고리 배열. 해당 없으면 빈 배열 [].
+- calcCategories: 대화 맥락에서 아래 카테고리 중 해당하는 질환 카테고리 배열. 해당 없으면 빈 배열 [].
   dyslipidemia (콜레스테롤/지질/스타틴 관련)
   osteoporosis (골밀도/골다공증/골절위험 관련)
   depression (우울/불안/기분장애 관련)
@@ -36,6 +36,16 @@ JSON만 반환 (다른 텍스트 절대 금지):
   LPR (후두염/인후두역류/laryngopharyngeal reflux/목에 뭔가 걸린 느낌/역류성후두염 관련)
   저음성난청 (저주파난청/귀먹먹함/이충만감/aural fullness/low frequency hearing loss 관련)
   후각저하 (후각저하/후각감퇴/후각소실/냄새못맡음/hyposmia/anosmia 관련)
+  위고비 (위고비/wegovy/semaglutide 비만약 관련 — obesity와 별도로 약물 특이 정보 제공)
+  마운자로 (마운자로/mounjaro/tirzepatide/zepbound 비만약 관련 — obesity와 별도로 약물 특이 정보 제공)
+  오젬픽 (오젬픽/ozempic/semaglutide 당뇨급여약 관련)
+  A형간염 (A형간염/hepatitis A 접종 관련)
+  B형간염 (B형간염/hepatitis B/HBsAg/HBsAb 접종 관련)
+  일본뇌염 (일본뇌염/Japanese encephalitis 접종 관련)
+  광견병 (광견병/rabies/동물교상 접종 관련)
+  수두 (수두/varicella 접종 관련)
+  MMR (MMR/홍역/풍진/볼거리 접종 관련)
+  폴리오 (폴리오/IPV/polio 접종 관련)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */

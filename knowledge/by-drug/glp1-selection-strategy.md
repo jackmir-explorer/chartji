@@ -61,6 +61,40 @@ keywords: 비만, 위고비, 마운자로, semaglutide, tirzepatide, GLP-1, 용�
 
 ---
 
+## GLP-1 반응 예측 인자 [CLINICAL — by 로컬원장님, Researcher 검증]
+
+### 효과 좋을 것으로 예상되는 경우
+1. ~~위장관 부작용이 큰 경우~~ → **❌ 미신.** 부작용과 체중감량은 독립적 (STEP 1-3 mediation analysis: GI AE 기여 <1%p) [출처: Wharton et al. Diabetes Obes Metab 2021 PMID:34514682]
+2. ~~Insulin resistance 있는 경우~~ → **❌ 반대.** T2DM 환자가 오히려 감량 적음 (STEP2 ~10% vs STEP1 ~15-17%) [출처: Nauck & D'Alessio Cardiovasc Diabetol 2022 PMID:36050763]
+3. 초기 식욕 감소 (식사 시작 욕구↓, meal size↓) [CLINICAL — 조건부]
+4. 음식 보상/갈망 감소, 특히 술 [CLINICAL — 조건부]
+5. **초기 체중감소 속도 — 가장 강력한 predictor** [출처: Maccora et al. Endocr Pract 2019 PMID:31682516]
+
+### Non-responder 기준 [CLINICAL — 조건부]
+- 강의: "12주 5% 미만" → **실제 허가 기준과 다름**
+- Saxenda(리라글루타이드): **16주 4% 미만** → 중단 고려 (FDA label)
+- Wegovy(세마글루타이드): 공식 stopping rule **없음** (증량 자체가 16-20주 소요)
+- 참고: 1개월 체중감소가 6개월 반응의 유일한 유의 예측인자 [출처: Maccora 2019]
+
+### 효과 안 좋을 것으로 예상되는 경우
+1. Adaptive thermogenesis 강한 경우 [CLINICAL] [출처: Egan & Collins Proc Nutr Soc 2022 PMID:35103583]
+2. 식사량 이미 적은 경우 [TIPS — 출처미확인]
+3. 다이어트 반복 이력 [TIPS — 출처미확인]
+4. 조기 체중감소 plateau [CLINICAL — 위 inverse]
+5. 근육량 낮은 경우 [CLINICAL — 조건부] (효능보다 안전성 우려)
+6. GLP-1 사용 중에도 음주 지속 [TIPS — 출처미확인]
+
+---
+
+## 빠른 감량 원하는 환자 대응 [TIPS — by 로컬원장님]
+
+1. 너무 빠른 감량 → 뇌가 위기 인식 → 에너지 절전 모드(adaptive thermogenesis) → **서서히 감량이 장기 만족도 높음을 전달**
+2. 초기에 고용량으로 빨리 올리면 나중에 올릴 용량이 없음
+3. 고용량 노출 시 GLP-1 receptor desensitization 발생 가능성 ↑
+4. 빠른 감량 시 피부 탄력 저하 + 탈모 가능성 ↑
+
+---
+
 ## GLP-1 Interval Tx 유지 전략 [INSIGHTS — by 로컬원장님]
 
 > 근거: RCT 아직 거의 없음. 임상 경험 기반 전략.

@@ -56,21 +56,21 @@ var KNOWLEDGE_BUNDLE = {
   },
   "vaccination": {
     "exam": "예방접종 전 일반 확인: 발열(38도↑ → 연기 고려), 이전 접종 이상반응(아나필락시스 이력), 임신 여부(생백신 금기: MMR·수두·BCG·황열), 면역저하 여부(생백신 주의). 항암치료 중 독감백신: ANC≥1,000 OK / ANC 500-1,000 접종 권고 / ANC<500 연기.",
-    "treatment": null,
+    "treatment": "접종 간격 원칙[CDC]: 생+사→같은날OK, 간격제한없음. 생+생→같은날OK, 다른날이면 최소28일. 사+사→제한없음.\n생+생 간격 미준수→두번째 무효, 4주후 재접종.",
     "differential": null,
     "draftTemplate": "CC: 예방접종\nfever (-) uri sx (-) drug adverse effect (-) allergy (-)\n\n기존 접종력:\n기저 질환:\n\nVital Sign:\n\n접종: [백신명] [n차]\n추후 접종 계획: [백신명] [n개월 뒤] [n차]",
     "draftAppend": "예방접종 후 원내 30분 안정 취한 후 귀가 권고함."
   },
   "예방접종": {
     "exam": "예방접종 전 일반 확인: 발열(38도↑ → 연기 고려), 이전 접종 이상반응(아나필락시스 이력), 임신 여부(생백신 금기: MMR·수두·BCG·황열), 면역저하 여부(생백신 주의). 항암치료 중 독감백신: ANC≥1,000 OK / ANC 500-1,000 접종 권고 / ANC<500 연기.",
-    "treatment": null,
+    "treatment": "접종 간격 원칙[CDC]: 생+사→같은날OK, 간격제한없음. 생+생→같은날OK, 다른날이면 최소28일. 사+사→제한없음.\n생+생 간격 미준수→두번째 무효, 4주후 재접종.",
     "differential": null,
     "draftTemplate": "CC: 예방접종\nfever (-) uri sx (-) drug adverse effect (-) allergy (-)\n\n기존 접종력:\n기저 질환:\n\nVital Sign:\n\n접종: [백신명] [n차]\n추후 접종 계획: [백신명] [n개월 뒤] [n차]",
     "draftAppend": "예방접종 후 원내 30분 안정 취한 후 귀가 권고함."
   },
   "백신": {
     "exam": "예방접종 전 일반 확인: 발열(38도↑ → 연기 고려), 이전 접종 이상반응(아나필락시스 이력), 임신 여부(생백신 금기: MMR·수두·BCG·황열), 면역저하 여부(생백신 주의). 항암치료 중 독감백신: ANC≥1,000 OK / ANC 500-1,000 접종 권고 / ANC<500 연기.",
-    "treatment": null,
+    "treatment": "접종 간격 원칙[CDC]: 생+사→같은날OK, 간격제한없음. 생+생→같은날OK, 다른날이면 최소28일. 사+사→제한없음.\n생+생 간격 미준수→두번째 무효, 4주후 재접종.",
     "differential": null,
     "draftTemplate": "CC: 예방접종\nfever (-) uri sx (-) drug adverse effect (-) allergy (-)\n\n기존 접종력:\n기저 질환:\n\nVital Sign:\n\n접종: [백신명] [n차]\n추후 접종 계획: [백신명] [n개월 뒤] [n차]",
     "draftAppend": "예방접종 후 원내 30분 안정 취한 후 귀가 권고함."
@@ -118,14 +118,14 @@ var KNOWLEDGE_BUNDLE = {
     "draftAppend": null
   },
   "obesity": {
-    "exam": null,
+    "exam": "표현형(Mayo Clinic): Hungry Brain/Gut→GLP-1 유효, Emotional Hunger→콘트라브+행동치료, Slow Burn→약물 제한적.\n\"적게 먹어도 살찐다\" 3유형: Metabolic(저장효율형,GLP-1좋음)/Perception(과소평가형,실제섭취인지)/Sarcopenic(근육↓기초대사↓,근력운동).\n초진Flow: 설문지→인바디→V/S→상담→Lab(HbA1c/Lipid/LFT/Cr)→약물선택→사용교육+주사→F/U안내.\nF/U 체크: A.보상회로(Food Noise·갈망) B.대사(Brain Fog·기력·단백질) C.위장관(포만감·불편) D.운동.\n단백질ABC순서: A(고기생선먼저)→B(채소)→C(탄수화물마지막). 체중×1.2~1.5g/kg.",
     "treatment": "위고비(Semaglutide) 처방 기준: BMI≥30→단독 가능. BMI 27~30+동반질환(고혈압/T2DM/이상지질혈증/OSA/심혈관질환)→가능. 비급여, 전액 환자 부담[FDA].\n절대금기: MTC 개인력/가족력, MEN2, semaglutide 과민반응, 임신(계획 시 2개월 전 중단).\n상대적주의: 췌장염 과거력, 수유중, 당뇨망막병증(혈당 급격 개선 시 악화), 담석증.",
     "differential": null,
     "draftTemplate": "CC 체중감량\n과거 사용했던 비만 약물 :\n* 부작용 :\n* 약물 효과 :\n현재 사용 중인 비만 약물 :\n* 부작용 :\n* 약물 효과 :\n\n현재 Life style\n* 운동 :\n* 식단 :\n\n경과\n0-4week :\n\nO\nV/S\n키 cm,  체중 kg,  BMI (목표체중 kg)\n\nA\n# 진단받은 질병\n# 가족력 :\n# 음주력 :\n# 흡연력 :\n# 수술력 :\n\n# 평소 운동 :\n# 평소 식단 :",
     "draftAppend": null
   },
   "비만": {
-    "exam": null,
+    "exam": "표현형(Mayo Clinic): Hungry Brain/Gut→GLP-1 유효, Emotional Hunger→콘트라브+행동치료, Slow Burn→약물 제한적.\n\"적게 먹어도 살찐다\" 3유형: Metabolic(저장효율형,GLP-1좋음)/Perception(과소평가형,실제섭취인지)/Sarcopenic(근육↓기초대사↓,근력운동).\n초진Flow: 설문지→인바디→V/S→상담→Lab(HbA1c/Lipid/LFT/Cr)→약물선택→사용교육+주사→F/U안내.\nF/U 체크: A.보상회로(Food Noise·갈망) B.대사(Brain Fog·기력·단백질) C.위장관(포만감·불편) D.운동.\n단백질ABC순서: A(고기생선먼저)→B(채소)→C(탄수화물마지막). 체중×1.2~1.5g/kg.",
     "treatment": "위고비(Semaglutide) 처방 기준: BMI≥30→단독 가능. BMI 27~30+동반질환(고혈압/T2DM/이상지질혈증/OSA/심혈관질환)→가능. 비급여, 전액 환자 부담[FDA].\n절대금기: MTC 개인력/가족력, MEN2, semaglutide 과민반응, 임신(계획 시 2개월 전 중단).\n상대적주의: 췌장염 과거력, 수유중, 당뇨망막병증(혈당 급격 개선 시 악화), 담석증.",
     "differential": null,
     "draftTemplate": "CC 체중감량\n과거 사용했던 비만 약물 :\n* 부작용 :\n* 약물 효과 :\n현재 사용 중인 비만 약물 :\n* 부작용 :\n* 약물 효과 :\n\n현재 Life style\n* 운동 :\n* 식단 :\n\n경과\n0-4week :\n\nO\nV/S\n키 cm,  체중 kg,  BMI (목표체중 kg)\n\nA\n# 진단받은 질병\n# 가족력 :\n# 음주력 :\n# 흡연력 :\n# 수술력 :\n\n# 평소 운동 :\n# 평소 식단 :",
@@ -175,19 +175,19 @@ var KNOWLEDGE_BUNDLE = {
   },
   "구강병변": {
     "exam": "백반증(white patch)/궤양: 1달 내 호전 확인 필수. 미호전 → 악성 전환 가능성 → ENT refer.",
-    "treatment": "Dexamethasone powder + 물 1L → 하루 3–4회 가글 [TIPS]\n미호전 시 ENT refer (생검 등 정밀검사)\nTriamcinolone 병변 내 주사 — 난치성 궤양 [CLINICAL]",
+    "treatment": "1단계: Dexamethasone powder + 물 1L → 하루 3-4회 가글\n2단계(가글 무효 시): 가글 유지 + 소론도(prednisolone) 2T #2 ×14일 → f/u\n3단계(미호전): ENT refer (생검 등 정밀검사)\nTriamcinolone 병변 내 주사 — 난치성 궤양 [CLINICAL]",
     "differential": "구강백반증(악성 전환율 ~1%/년), 구강편평태선, 캔디다증, 외상성 궤양, 구강암",
     "draftAppend": null
   },
   "oral white patch": {
     "exam": "백반증(white patch)/궤양: 1달 내 호전 확인 필수. 미호전 → 악성 전환 가능성 → ENT refer.",
-    "treatment": "Dexamethasone powder + 물 1L → 하루 3–4회 가글 [TIPS]\n미호전 시 ENT refer (생검 등 정밀검사)\nTriamcinolone 병변 내 주사 — 난치성 궤양 [CLINICAL]",
+    "treatment": "1단계: Dexamethasone powder + 물 1L → 하루 3-4회 가글\n2단계(가글 무효 시): 가글 유지 + 소론도(prednisolone) 2T #2 ×14일 → f/u\n3단계(미호전): ENT refer (생검 등 정밀검사)\nTriamcinolone 병변 내 주사 — 난치성 궤양 [CLINICAL]",
     "differential": "구강백반증(악성 전환율 ~1%/년), 구강편평태선, 캔디다증, 외상성 궤양, 구강암",
     "draftAppend": null
   },
   "구강궤양": {
     "exam": "백반증(white patch)/궤양: 1달 내 호전 확인 필수. 미호전 → 악성 전환 가능성 → ENT refer.",
-    "treatment": "Dexamethasone powder + 물 1L → 하루 3–4회 가글 [TIPS]\n미호전 시 ENT refer (생검 등 정밀검사)\nTriamcinolone 병변 내 주사 — 난치성 궤양 [CLINICAL]",
+    "treatment": "1단계: Dexamethasone powder + 물 1L → 하루 3-4회 가글\n2단계(가글 무효 시): 가글 유지 + 소론도(prednisolone) 2T #2 ×14일 → f/u\n3단계(미호전): ENT refer (생검 등 정밀검사)\nTriamcinolone 병변 내 주사 — 난치성 궤양 [CLINICAL]",
     "differential": "구강백반증(악성 전환율 ~1%/년), 구강편평태선, 캔디다증, 외상성 궤양, 구강암",
     "draftAppend": null
   },
@@ -225,6 +225,268 @@ var KNOWLEDGE_BUNDLE = {
     "exam": "청력검사 고려 (달팽이관 내압 확인). 이명·반복성 여부.",
     "treatment": "유턴정(베타히스틴) TID [TIPS]\n미호전 시 청력검사\n스트레스 관리 중요 (내압 상승 요인)",
     "differential": null,
+    "draftAppend": null
+  },
+  "lichen planus": {
+    "exam": "백반증(white patch)/궤양: 1달 내 호전 확인 필수. 미호전 → 악성 전환 가능성 → ENT refer.",
+    "treatment": "1단계: Dexamethasone powder + 물 1L → 하루 3-4회 가글\n2단계(가글 무효 시): 가글 유지 + 소론도(prednisolone) 2T #2 ×14일 → f/u\n3단계(미호전): ENT refer (생검 등 정밀검사)\nTriamcinolone 병변 내 주사 — 난치성 궤양 [CLINICAL]",
+    "differential": "구강백반증(악성 전환율 ~1%/년), 구강편평태선, 캔디다증, 외상성 궤양, 구강암",
+    "draftAppend": null
+  },
+  "위고비": {
+    "exam": null,
+    "treatment": "Wegovy(semaglutide) 처방: BMI≥30 단독 / BMI 27~30+동반질환. 비급여.\n시작 0.25mg, 순차증량(0.25→0.5→1.0→1.7→2.4mg).\n절대금기: MTC가족력, MEN2, 과민반응, 임신(2개월전 중단).\n주의: 췌장염, 수유, 당뇨망막병증, 담석.\nMASH F2-F3 지방간염도 적응증(FDA 2025). 소아 12세이상 BMI≥95th%ile(FDA 2022).",
+    "differential": null,
+    "draftAppend": null
+  },
+  "wegovy": {
+    "exam": null,
+    "treatment": "Wegovy(semaglutide) 처방: BMI≥30 단독 / BMI 27~30+동반질환. 비급여.\n시작 0.25mg, 순차증량(0.25→0.5→1.0→1.7→2.4mg).\n절대금기: MTC가족력, MEN2, 과민반응, 임신(2개월전 중단).\n주의: 췌장염, 수유, 당뇨망막병증, 담석.\nMASH F2-F3 지방간염도 적응증(FDA 2025). 소아 12세이상 BMI≥95th%ile(FDA 2022).",
+    "differential": null,
+    "draftAppend": null
+  },
+  "semaglutide": {
+    "exam": null,
+    "treatment": "Wegovy(비만): BMI≥30 단독 / BMI 27~30+동반질환. 비급여. 시작 0.25mg 순차증량.\nOzempic(T2DM급여): Met+SU 2~4개월 + HbA1c≥7% + BMI≥25. 3종병용으로 급여인정.\n절대금기: MTC가족력, MEN2, 과민반응, 임신.",
+    "differential": null,
+    "draftAppend": null
+  },
+  "마운자로": {
+    "exam": null,
+    "treatment": "Mounjaro/Zepbound(tirzepatide): T2DM(Mounjaro) + 비만(Zepbound).\n시작 2.5mg, 4주후 5mg 증량 유지. 웬티카 방식 간단.\n10mg까지 효과뚜렷, 15mg 추가이익 적음(+1.1%p).\n위고비 대비: 초반 감량 빠름, 최종 감량폭 큼(-20.2% vs -13.7%, SURMOUNT-5).\nT2DM 환자 실비보험 활용 가능 — 동반질환·가족력·HbA1c·BST 철저 기록.",
+    "differential": null,
+    "draftAppend": null
+  },
+  "mounjaro": {
+    "exam": null,
+    "treatment": "Mounjaro/Zepbound(tirzepatide): T2DM(Mounjaro) + 비만(Zepbound).\n시작 2.5mg, 4주후 5mg 증량 유지. 웬티카 방식 간단.\n10mg까지 효과뚜렷, 15mg 추가이익 적음(+1.1%p).\n위고비 대비: 초반 감량 빠름, 최종 감량폭 큼(-20.2% vs -13.7%, SURMOUNT-5).\nT2DM 환자 실비보험 활용 가능 — 동반질환·가족력·HbA1c·BST 철저 기록.",
+    "differential": null,
+    "draftAppend": null
+  },
+  "tirzepatide": {
+    "exam": null,
+    "treatment": "Mounjaro/Zepbound(tirzepatide): T2DM(Mounjaro) + 비만(Zepbound).\n시작 2.5mg, 4주후 5mg 증량 유지. 웬티카 방식 간단.\n10mg까지 효과뚜렷, 15mg 추가이익 적음(+1.1%p).\n위고비 대비: 초반 감량 빠름, 최종 감량폭 큼(-20.2% vs -13.7%, SURMOUNT-5).\nT2DM 환자 실비보험 활용 가능 — 동반질환·가족력·HbA1c·BST 철저 기록.",
+    "differential": null,
+    "draftAppend": null
+  },
+  "zepbound": {
+    "exam": null,
+    "treatment": "Mounjaro/Zepbound(tirzepatide): T2DM(Mounjaro) + 비만(Zepbound).\n시작 2.5mg, 4주후 5mg 증량 유지. 웬티카 방식 간단.\n10mg까지 효과뚜렷, 15mg 추가이익 적음(+1.1%p).\n위고비 대비: 초반 감량 빠름, 최종 감량폭 큼(-20.2% vs -13.7%, SURMOUNT-5).\nT2DM 환자 실비보험 활용 가능 — 동반질환·가족력·HbA1c·BST 철저 기록.",
+    "differential": null,
+    "draftAppend": null
+  },
+  "오젬픽": {
+    "exam": null,
+    "treatment": "Ozempic(semaglutide 1mg) — 위고비의 보험급여 버전(T2DM 적응증).\n급여조건: Met+SU 2~4개월 + HbA1c≥7% + BMI≥25(또는 인슐린불가). 3종병용 형태.\n급여 기준 까다로워 대부분 해당 안됨. 비만 목적→위고비(비급여).",
+    "differential": null,
+    "draftAppend": null
+  },
+  "ozempic": {
+    "exam": null,
+    "treatment": "Ozempic(semaglutide 1mg) — 위고비의 보험급여 버전(T2DM 적응증).\n급여조건: Met+SU 2~4개월 + HbA1c≥7% + BMI≥25(또는 인슐린불가). 3종병용 형태.\n급여 기준 까다로워 대부분 해당 안됨. 비만 목적→위고비(비급여).",
+    "differential": null,
+    "draftAppend": null
+  },
+  "A형간염": {
+    "exam": null,
+    "treatment": "A형간염: 고위험군 6-18개월 간격 2회.\n40세 미만→항체검사 없이 접종. 40세 이상→항체검사 후 음성이면 접종.\n여행: 1차 후 ~2주 보호항체 95%↑ → 출국 직전 1차 가능, 귀국 후 2차.",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "hepatitis A": {
+    "exam": null,
+    "treatment": "A형간염: 고위험군 6-18개월 간격 2회.\n40세 미만→항체검사 없이 접종. 40세 이상→항체검사 후 음성이면 접종.\n여행: 1차 후 ~2주 보호항체 95%↑ → 출국 직전 1차 가능, 귀국 후 2차.",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "B형간염": {
+    "exam": "초진 혈액: HBsAg/HBsAb/Anti-HCV Ab/HIV Ag·Ab (4종). B형만: HBsAg/HBsAb (2종).",
+    "treatment": "B형간염: 3회 근육주사(삼각근) 0·1·6개월[CDC].\n항체검사: 3차 1개월 후 anti-HBs.\nNon-responder(의료인등): 3회 재접종→1~2개월 후 재검→음성이면 판정. 추후 노출 시 HBIG+백신.",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "hepatitis B": {
+    "exam": "초진 혈액: HBsAg/HBsAb/Anti-HCV Ab/HIV Ag·Ab (4종). B형만: HBsAg/HBsAb (2종).",
+    "treatment": "B형간염: 3회 근육주사(삼각근) 0·1·6개월[CDC].\n항체검사: 3차 1개월 후 anti-HBs.\nNon-responder(의료인등): 3회 재접종→1~2개월 후 재검→음성이면 판정. 추후 노출 시 HBIG+백신.",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "herpes zoster": {
+    "exam": "대상포진 백신 전 확인: 조스타박스(ZVL) 이전 접종 여부(→2개월 후 싱그릭스 가능), 이전 대상포진 이환 이력(완전 회복 후 가능), 면역저하 여부(18세이상 중증면역저하자도 RZV 권고).",
+    "treatment": "RZV(싱그릭스): 50세이상 or 18세이상 중증면역저하자. 2회 근육주사, 2-6개월 간격(최소 4주)[CDC]. 6개월 초과 지연→재시작 불필요. ZVL(조스타박스): 1회 피하. 면역저하자 ZVL 금기.",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "shingrix": {
+    "exam": "대상포진 백신 전 확인: 조스타박스(ZVL) 이전 접종 여부(→2개월 후 싱그릭스 가능), 이전 대상포진 이환 이력(완전 회복 후 가능), 면역저하 여부(18세이상 중증면역저하자도 RZV 권고).",
+    "treatment": "RZV(싱그릭스): 50세이상 or 18세이상 중증면역저하자. 2회 근육주사, 2-6개월 간격(최소 4주)[CDC]. 6개월 초과 지연→재시작 불필요. ZVL(조스타박스): 1회 피하. 면역저하자 ZVL 금기.",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "싱그릭스": {
+    "exam": "대상포진 백신 전 확인: 조스타박스(ZVL) 이전 접종 여부(→2개월 후 싱그릭스 가능), 이전 대상포진 이환 이력(완전 회복 후 가능), 면역저하 여부(18세이상 중증면역저하자도 RZV 권고).",
+    "treatment": "RZV(싱그릭스): 50세이상 or 18세이상 중증면역저하자. 2회 근육주사, 2-6개월 간격(최소 4주)[CDC]. 6개월 초과 지연→재시작 불필요. ZVL(조스타박스): 1회 피하. 면역저하자 ZVL 금기.",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "조스타박스": {
+    "exam": "대상포진 백신 전 확인: 조스타박스(ZVL) 이전 접종 여부(→2개월 후 싱그릭스 가능), 이전 대상포진 이환 이력(완전 회복 후 가능), 면역저하 여부(18세이상 중증면역저하자도 RZV 권고).",
+    "treatment": "RZV(싱그릭스): 50세이상 or 18세이상 중증면역저하자. 2회 근육주사, 2-6개월 간격(최소 4주)[CDC]. 6개월 초과 지연→재시작 불필요. ZVL(조스타박스): 1회 피하. 면역저하자 ZVL 금기.",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "pneumococcal": {
+    "exam": "폐렴구균 백신 전 확인: 나이(65세이상→PPSV23), 만성질환 여부(당뇨/COPD/심부전/간경화/CKD/알코올/흡연), 면역저하 여부(무비증/HIV/혈액암/신증후군/장기이식→PCV13 우선).",
+    "treatment": "폐렴구균: 65세이상→PPSV23(23가). 65세미만 만성질환자→PCV13. 면역저하자→PCV13 우선. 접종 원하는 경우→PCV13 가능.",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "인유두종바이러스": {
+    "exam": null,
+    "treatment": "HPV 백신: 여성 11~26세 권고(27~45세 상담 후 고려), 남성 9~26세. 3회: 0→2개월(최소1개월)→6개월(최소3개월)[CDC]. 1년 이내 완료.",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "가다실": {
+    "exam": null,
+    "treatment": "HPV 백신: 여성 11~26세 권고(27~45세 상담 후 고려), 남성 9~26세. 3회: 0→2개월(최소1개월)→6개월(최소3개월)[CDC]. 1년 이내 완료.",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "일본뇌염": {
+    "exam": null,
+    "treatment": "사백신(IXIARO): 2회(0일·28일), 필요시 1~2년후 추가. 부작용 적음.\n생백신(Imojev): 성인 1회. 임신부·면역저하자 금기.\n여행 직전(시간없음)→생백신 1회(금기없을때). 시간 여유→사백신 2회.",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "Japanese encephalitis": {
+    "exam": null,
+    "treatment": "사백신(IXIARO): 2회(0일·28일), 필요시 1~2년후 추가. 부작용 적음.\n생백신(Imojev): 성인 1회. 임신부·면역저하자 금기.\n여행 직전(시간없음)→생백신 1회(금기없을때). 시간 여유→사백신 2회.",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "광견병": {
+    "exam": null,
+    "treatment": "노출전예방: 기본 2회(0일·7일). 고위험(실험실/야생동물/유행지역3년초과)→3회(0·7·21-28일).\n추가접종: 완료 1년째 1회, 이후 5년마다.\n직업적 지속노출→항체역가 측정+추가접종[CDC/WHO].",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "rabies": {
+    "exam": null,
+    "treatment": "노출전예방: 기본 2회(0일·7일). 고위험(실험실/야생동물/유행지역3년초과)→3회(0·7·21-28일).\n추가접종: 완료 1년째 1회, 이후 5년마다.\n직업적 지속노출→항체역가 측정+추가접종[CDC/WHO].",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "수두": {
+    "exam": null,
+    "treatment": "수두(생백신): 1970년 이후 출생+면역없는 자. 4~8주 간격 2회.\n대상: 학생/군인/의료인/교사/해외여행/가임기여성/면역저하자 밀접접촉자.",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "varicella": {
+    "exam": null,
+    "treatment": "수두(생백신): 1970년 이후 출생+면역없는 자. 4~8주 간격 2회.\n대상: 학생/군인/의료인/교사/해외여행/가임기여성/면역저하자 밀접접촉자.",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "MMR": {
+    "exam": null,
+    "treatment": "MMR(생백신): 1967년 이전 출생→불필요(자연감염 항체). 1967년 이후+불확실→1회.\n고위험군(의료인/군인/대학생/해외여행)→2회(4주간격).\n항체검사 음성시 접종 고려.",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "홍역": {
+    "exam": null,
+    "treatment": "MMR(생백신): 1967년 이전 출생→불필요(자연감염 항체). 1967년 이후+불확실→1회.\n고위험군(의료인/군인/대학생/해외여행)→2회(4주간격).",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "풍진": {
+    "exam": null,
+    "treatment": "MMR(생백신): 1967년 이전 출생→불필요. 1967년 이후+불확실→1회.\n고위험군→2회(4주간격).",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "폴리오": {
+    "exam": null,
+    "treatment": "IPV(사백신): 접종력 없음→3회(0·1~2개월·6~12개월).\n접종완료+고위험→1회 추가.",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "IPV": {
+    "exam": null,
+    "treatment": "IPV(사백신): 접종력 없음→3회(0·1~2개월·6~12개월).\n접종완료+고위험→1회 추가.",
+    "differential": null,
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "후각감퇴": {
+    "exam": "선행 감염(COVID-19/감기) 여부·발병 시점\n비염·부비동염 증상(코막힘·콧물·안면통)\n두부 외상력\n인지기능 저하·파킨슨 증상\n갑상선기능저하·만성신부전(투석) 여부",
+    "treatment": "식염수 코세척 [CLINICAL — 조건부] CRS 동반 시 효과, post-viral 단독은 보조\nNasal steroid spray [CLINICAL — 조건부] CRS/비용종 효과, post-COVID 단독 미확립\nPrednisolone(소론도) 7일 taper: 4T#2 ×5일 → 2T#2 ×2일 [TIPS — by ENT교수]\nSmell training: 표준 향 4종, 매일 2회, 최소 12주 [CLINICAL]\n비타민 B·C [TIPS — by ENT교수]\n후각검사: F/U 모니터링 목적, 초진 일상 시행 불필요 [TIPS — by ENT교수]",
+    "differential": "1. Post-viral(COVID-19) ★가장 흔함\n2. Sinusitis/CRS/비용종 ★흔함\n3. 두부 외상 (cribriform plate 손상)\n4. 알츠하이머·파킨슨 초기증상 (90%·85% — 운동·인지 증상 수년 선행)\n5. 갑상선저하증(가역적, T4 치료 후 회복) / 만성신부전(uremic toxin)",
+    "differentialShort": [{"d":"Post-viral(COVID-19)","t":"h"},{"d":"Sinusitis/CRS","t":"h"},{"d":"두부외상","t":"z"},{"d":"알츠하이머·파킨슨","t":"z"},{"d":"갑상선저하증/신부전","t":"z"}],
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "후각기능저하": {
+    "exam": "선행 감염(COVID-19/감기) 여부·발병 시점\n비염·부비동염 증상(코막힘·콧물·안면통)\n두부 외상력\n인지기능 저하·파킨슨 증상\n갑상선기능저하·만성신부전(투석) 여부",
+    "treatment": "식염수 코세척 [CLINICAL — 조건부] CRS 동반 시 효과, post-viral 단독은 보조\nNasal steroid spray [CLINICAL — 조건부] CRS/비용종 효과, post-COVID 단독 미확립\nPrednisolone(소론도) 7일 taper: 4T#2 ×5일 → 2T#2 ×2일 [TIPS — by ENT교수]\nSmell training: 표준 향 4종, 매일 2회, 최소 12주 [CLINICAL]\n비타민 B·C [TIPS — by ENT교수]",
+    "differential": "1. Post-viral(COVID-19) ★가장 흔함\n2. Sinusitis/CRS/비용종 ★흔함\n3. 두부 외상\n4. 알츠하이머·파킨슨 초기증상\n5. 갑상선저하증/만성신부전",
+    "differentialShort": [{"d":"Post-viral(COVID-19)","t":"h"},{"d":"Sinusitis/CRS","t":"h"},{"d":"두부외상","t":"z"},{"d":"알츠하이머·파킨슨","t":"z"},{"d":"갑상선저하증/신부전","t":"z"}],
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "hyposmia": {
+    "exam": "선행 감염(COVID-19/감기) 여부·발병 시점\n비염·부비동염 증상(코막힘·콧물·안면통)\n두부 외상력\n인지기능 저하·파킨슨 증상\n갑상선기능저하·만성신부전(투석) 여부",
+    "treatment": "식염수 코세척 [CLINICAL — 조건부]\nNasal steroid spray [CLINICAL — 조건부]\nPrednisolone(소론도) 7일 taper: 4T#2 ×5일 → 2T#2 ×2일\nSmell training: 표준 향 4종, 매일 2회, 최소 12주\n비타민 B·C",
+    "differential": "1. Post-viral(COVID-19) ★가장 흔함\n2. Sinusitis/CRS/비용종 ★흔함\n3. 두부 외상\n4. 알츠하이머·파킨슨 초기증상\n5. 갑상선저하증/만성신부전",
+    "differentialShort": [{"d":"Post-viral(COVID-19)","t":"h"},{"d":"Sinusitis/CRS","t":"h"},{"d":"두부외상","t":"z"},{"d":"알츠하이머·파킨슨","t":"z"},{"d":"갑상선저하증/신부전","t":"z"}],
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "anosmia": {
+    "exam": "선행 감염(COVID-19/감기) 여부·발병 시점\n비염·부비동염 증상(코막힘·콧물·안면통)\n두부 외상력\n인지기능 저하·파킨슨 증상\n갑상선기능저하·만성신부전(투석) 여부",
+    "treatment": "식염수 코세척 [CLINICAL — 조건부]\nNasal steroid spray [CLINICAL — 조건부]\nPrednisolone(소론도) 7일 taper: 4T#2 ×5일 → 2T#2 ×2일\nSmell training: 표준 향 4종, 매일 2회, 최소 12주\n비타민 B·C",
+    "differential": "1. Post-viral(COVID-19) ★가장 흔함\n2. Sinusitis/CRS/비용종 ★흔함\n3. 두부 외상\n4. 알츠하이머·파킨슨 초기증상\n5. 갑상선저하증/만성신부전",
+    "differentialShort": [{"d":"Post-viral(COVID-19)","t":"h"},{"d":"Sinusitis/CRS","t":"h"},{"d":"두부외상","t":"z"},{"d":"알츠하이머·파킨슨","t":"z"},{"d":"갑상선저하증/신부전","t":"z"}],
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "후각소실": {
+    "exam": "선행 감염(COVID-19/감기) 여부·발병 시점\n비염·부비동염 증상(코막힘·콧물·안면통)\n두부 외상력\n인지기능 저하·파킨슨 증상\n갑상선기능저하·만성신부전(투석) 여부",
+    "treatment": "식염수 코세척 [CLINICAL — 조건부]\nNasal steroid spray [CLINICAL — 조건부]\nPrednisolone(소론도) 7일 taper: 4T#2 ×5일 → 2T#2 ×2일\nSmell training: 표준 향 4종, 매일 2회, 최소 12주\n비타민 B·C",
+    "differential": "1. Post-viral(COVID-19) ★가장 흔함\n2. Sinusitis/CRS/비용종 ★흔함\n3. 두부 외상\n4. 알츠하이머·파킨슨 초기증상\n5. 갑상선저하증/만성신부전",
+    "differentialShort": [{"d":"Post-viral(COVID-19)","t":"h"},{"d":"Sinusitis/CRS","t":"h"},{"d":"두부외상","t":"z"},{"d":"알츠하이머·파킨슨","t":"z"},{"d":"갑상선저하증/신부전","t":"z"}],
+    "draftTemplate": null,
+    "draftAppend": null
+  },
+  "냄새 못맡음": {
+    "exam": "선행 감염(COVID-19/감기) 여부·발병 시점\n비염·부비동염 증상\n두부 외상력\n인지기능 저하·파킨슨 증상",
+    "treatment": "식염수 코세척\nNasal steroid spray\nPrednisolone 7일 taper\nSmell training: 표준 향 4종, 매일 2회, 최소 12주\n비타민 B·C",
+    "differential": "1. Post-viral(COVID-19) ★가장 흔함\n2. Sinusitis/CRS/비용종 ★흔함\n3. 두부 외상\n4. 알츠하이머·파킨슨 초기증상\n5. 갑상선저하증/만성신부전",
+    "differentialShort": [{"d":"Post-viral(COVID-19)","t":"h"},{"d":"Sinusitis/CRS","t":"h"},{"d":"두부외상","t":"z"},{"d":"알츠하이머·파킨슨","t":"z"},{"d":"갑상선저하증/신부전","t":"z"}],
+    "draftTemplate": null,
     "draftAppend": null
   },
   "후각저하": {

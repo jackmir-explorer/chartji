@@ -47,3 +47,11 @@
 2026-04-14 | by-disease/LPR.md | 뮤테란 [TIPS] → [TIPS — by ENT교수, 거담 off-label 사용] 소급 수정
 2026-04-14 | by-drug/mucomyst.md | 가글 처방법·구강건조증 일반·LPR [TIPS/INSIGHTS] → by ENT교수 소급 수정
 2026-04-15 | by-disease/hyposmia.md | 신규 — 후각기능 저하 감별진단 5개(post-viral★/sinusitis★/외상/치매/전신질환) + Prednisolone taper·smell training(4향 12주)·후각검사 [CLINICAL/TIPS — by ENT교수] — Researcher 검증완료
+2026-04-16 | by-disease/obesity.md | GLP-1 중간 점검 문진 4파트(보상회로/대사활력/위장관/운동) + 환자교육 메시지 [TIPS — by 로컬원장님]
+2026-04-16 | by-disease/obesity.md | "적게 먹어도 살찐다" 3유형(metabolic/perception/sarcopenic) [TIPS — by 로컬원장님]
+2026-04-16 | by-disease/obesity.md | Adaptive Thermogenesis 환자설명용 병태생리 [TIPS — by 로컬원장님]
+2026-04-16 | by-disease/obesity.md | GLP-1 초진 Flow 8단계 [TIPS — by 로컬원장님]
+2026-04-16 | by-disease/obesity.md | 단백질 섭취 ABC 식사순서 + GLP-1 시너지 [CLINICAL — by 로컬원장님] — Researcher 검증완료 (5/5 SUPPORTED)
+2026-04-16 | by-drug/glp1-selection-strategy.md | 반응 예측 인자 + non-responder 기준 [CLINICAL — by 로컬원장님] — Researcher 검증: GI부작용=효과좋다(❌미신)/IR=효과↑(❌반대) 2건 반박 수정
+2026-04-16 | by-drug/glp1-selection-strategy.md | 빠른 감량 원하는 환자 대응 4가지 [TIPS — by 로컬원장님]
+2026-04-16 | by-disease/oral-lesion.md | 가글 무효 시 소론도 2T #2 x14일 escalation 추가 [TIPS — by ENT교수]

@@ -1,6 +1,6 @@
 # 구강 병변 (Oral White Patch / Ulcer)
 
-keywords: 구강병변, 구강궤양, 구강백반증, oral white patch, oral ulcer, leukoplakia
+keywords: 구강병변, 구강궤양, 구강백반증, oral white patch, oral ulcer, leukoplakia, lichen planus
 
 ## 문진/검사
 - 백반증(white patch) 또는 궤양: **1달 내 호전 확인 필수**
@@ -11,7 +11,12 @@ keywords: 구강병변, 구강궤양, 구강백반증, oral white patch, oral ul
 ### 1단계 — Dexamethasone 가글 [TIPS]
 Dexamethasone powder + 물 1L 혼합 → 하루 3–4회 가글
 
-### 2단계 — 미호전 시 ENT refer
+### 2단계 — 가글 무효 시 경구 스테로이드 [TIPS — by ENT교수]
+Ulcer 장기 지속 또는 lichen planus에서 dexamethasone 가글 무효 시:
+- 가글 유지하면서 소론도(prednisolone) 추가
+- **소론도 2T #2 × 14일** → f/u
+
+### 3단계 — 미호전 시 ENT refer
 정밀검사 (생검 등) 필요
 
 ### 기타 — Triamcinolone injection [CLINICAL]
