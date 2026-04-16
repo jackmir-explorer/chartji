@@ -55,3 +55,7 @@
 2026-04-16 | by-drug/glp1-selection-strategy.md | 반응 예측 인자 + non-responder 기준 [CLINICAL — by 로컬원장님] — Researcher 검증: GI부작용=효과좋다(❌미신)/IR=효과↑(❌반대) 2건 반박 수정
 2026-04-16 | by-drug/glp1-selection-strategy.md | 빠른 감량 원하는 환자 대응 4가지 [TIPS — by 로컬원장님]
 2026-04-16 | by-disease/oral-lesion.md | 가글 무효 시 소론도 2T #2 x14일 escalation 추가 [TIPS — by ENT교수]
+2026-04-16 | by-disease/oral-lesion.md | 통증 심할 때 Tantum Verde spray 추가 [TIPS — by ENT교수]
+2026-04-16 | by-disease/LPR.md | PPI 부작용 시 대안 — Promac(polaprezinc) + 알긴산 [TIPS — by ENT교수]
+2026-04-16 | by-disease/dysphonia.md | 신규 — 목소리이상 생활습관(수분1~1.5L/목앞근육마사지) [CLINICAL — 조건부, by ENT교수] — Researcher 검증완료
+2026-04-16 | by-disease/neck-mass.md | 신규 — 경부종괴 접근법(초음파+도플러/림프절염 관찰기준/림프종 감별 4~6주기준) [CLINICAL — 조건부, by ENT교수] — Researcher 검증완료

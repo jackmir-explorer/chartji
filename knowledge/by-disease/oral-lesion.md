@@ -19,6 +19,9 @@ Ulcer 장기 지속 또는 lichen planus에서 dexamethasone 가글 무효 시:
 ### 3단계 — 미호전 시 ENT refer
 정밀검사 (생검 등) 필요
 
+### 통증 심할 때 — Tantum Verde spray [TIPS — by ENT교수]
+통증이 심한 구강 궤양에 Tantum Verde (benzydamine) spray 처방
+
 ### 기타 — Triamcinolone injection [CLINICAL]
 재발성 구강 병변·난치성 궤양에 병변 내 주사 사용
 

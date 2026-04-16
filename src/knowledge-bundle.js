@@ -175,37 +175,37 @@ var KNOWLEDGE_BUNDLE = {
   },
   "구강병변": {
     "exam": "백반증(white patch)/궤양: 1달 내 호전 확인 필수. 미호전 → 악성 전환 가능성 → ENT refer.",
-    "treatment": "1단계: Dexamethasone powder + 물 1L → 하루 3-4회 가글\n2단계(가글 무효 시): 가글 유지 + 소론도(prednisolone) 2T #2 ×14일 → f/u\n3단계(미호전): ENT refer (생검 등 정밀검사)\nTriamcinolone 병변 내 주사 — 난치성 궤양 [CLINICAL]",
+    "treatment": "1단계: Dexamethasone powder + 물 1L → 하루 3-4회 가글\n2단계(가글 무효 시): 가글 유지 + 소론도(prednisolone) 2T #2 ×14일 → f/u\n3단계(미호전): ENT refer (생검 등 정밀검사)\n통증 심할 때: Tantum Verde(benzydamine) spray\nTriamcinolone 병변 내 주사 — 난치성 궤양 [CLINICAL]",
     "differential": "구강백반증(악성 전환율 ~1%/년), 구강편평태선, 캔디다증, 외상성 궤양, 구강암",
     "draftAppend": null
   },
   "oral white patch": {
     "exam": "백반증(white patch)/궤양: 1달 내 호전 확인 필수. 미호전 → 악성 전환 가능성 → ENT refer.",
-    "treatment": "1단계: Dexamethasone powder + 물 1L → 하루 3-4회 가글\n2단계(가글 무효 시): 가글 유지 + 소론도(prednisolone) 2T #2 ×14일 → f/u\n3단계(미호전): ENT refer (생검 등 정밀검사)\nTriamcinolone 병변 내 주사 — 난치성 궤양 [CLINICAL]",
+    "treatment": "1단계: Dexamethasone powder + 물 1L → 하루 3-4회 가글\n2단계(가글 무효 시): 가글 유지 + 소론도(prednisolone) 2T #2 ×14일 → f/u\n3단계(미호전): ENT refer (생검 등 정밀검사)\n통증 심할 때: Tantum Verde(benzydamine) spray\nTriamcinolone 병변 내 주사 — 난치성 궤양 [CLINICAL]",
     "differential": "구강백반증(악성 전환율 ~1%/년), 구강편평태선, 캔디다증, 외상성 궤양, 구강암",
     "draftAppend": null
   },
   "구강궤양": {
     "exam": "백반증(white patch)/궤양: 1달 내 호전 확인 필수. 미호전 → 악성 전환 가능성 → ENT refer.",
-    "treatment": "1단계: Dexamethasone powder + 물 1L → 하루 3-4회 가글\n2단계(가글 무효 시): 가글 유지 + 소론도(prednisolone) 2T #2 ×14일 → f/u\n3단계(미호전): ENT refer (생검 등 정밀검사)\nTriamcinolone 병변 내 주사 — 난치성 궤양 [CLINICAL]",
+    "treatment": "1단계: Dexamethasone powder + 물 1L → 하루 3-4회 가글\n2단계(가글 무효 시): 가글 유지 + 소론도(prednisolone) 2T #2 ×14일 → f/u\n3단계(미호전): ENT refer (생검 등 정밀검사)\n통증 심할 때: Tantum Verde(benzydamine) spray\nTriamcinolone 병변 내 주사 — 난치성 궤양 [CLINICAL]",
     "differential": "구강백반증(악성 전환율 ~1%/년), 구강편평태선, 캔디다증, 외상성 궤양, 구강암",
     "draftAppend": null
   },
   "LPR": {
     "exam": null,
-    "treatment": "PPI (1차 치료, 근거 확립)\n뮤테란(아세틸시스테인 경구) 병용 — LPR 인후 분비물·점액 거담 목적 [TIPS]\nPPI 부작용 시: 알긴산(알긴산염) — 위 내용물 위에 raft 형성, 역류 물리적 차단",
+    "treatment": "PPI (1차 치료, 근거 확립)\n뮤테란(아세틸시스테인 경구) 병용 — LPR 인후 분비물·점액 거담 목적 [TIPS]\nPPI 부작용 시: ① 알긴산(Gaviscon류) — raft 형성, 역류 물리적 차단 ② Promac(polaprezinc) — 위점막 보호제. 병용 가능 [TIPS — by ENT교수]",
     "differential": null,
     "draftAppend": null
   },
   "후두염": {
     "exam": null,
-    "treatment": "PPI (1차 치료, 근거 확립)\n뮤테란(아세틸시스테인 경구) 병용 — LPR 인후 분비물·점액 거담 목적 [TIPS]\nPPI 부작용 시: 알긴산(알긴산염) — 위 내용물 위에 raft 형성, 역류 물리적 차단",
+    "treatment": "PPI (1차 치료, 근거 확립)\n뮤테란(아세틸시스테인 경구) 병용 — LPR 인후 분비물·점액 거담 목적 [TIPS]\nPPI 부작용 시: ① 알긴산(Gaviscon류) — raft 형성, 역류 물리적 차단 ② Promac(polaprezinc) — 위점막 보호제. 병용 가능 [TIPS — by ENT교수]",
     "differential": null,
     "draftAppend": null
   },
   "인후두역류": {
     "exam": null,
-    "treatment": "PPI (1차 치료, 근거 확립)\n뮤테란(아세틸시스테인 경구) 병용 — LPR 인후 분비물·점액 거담 목적 [TIPS]\nPPI 부작용 시: 알긴산(알긴산염) — 위 내용물 위에 raft 형성, 역류 물리적 차단",
+    "treatment": "PPI (1차 치료, 근거 확립)\n뮤테란(아세틸시스테인 경구) 병용 — LPR 인후 분비물·점액 거담 목적 [TIPS]\nPPI 부작용 시: ① 알긴산(Gaviscon류) — raft 형성, 역류 물리적 차단 ② Promac(polaprezinc) — 위점막 보호제. 병용 가능 [TIPS — by ENT교수]",
     "differential": null,
     "draftAppend": null
   },
@@ -229,7 +229,7 @@ var KNOWLEDGE_BUNDLE = {
   },
   "lichen planus": {
     "exam": "백반증(white patch)/궤양: 1달 내 호전 확인 필수. 미호전 → 악성 전환 가능성 → ENT refer.",
-    "treatment": "1단계: Dexamethasone powder + 물 1L → 하루 3-4회 가글\n2단계(가글 무효 시): 가글 유지 + 소론도(prednisolone) 2T #2 ×14일 → f/u\n3단계(미호전): ENT refer (생검 등 정밀검사)\nTriamcinolone 병변 내 주사 — 난치성 궤양 [CLINICAL]",
+    "treatment": "1단계: Dexamethasone powder + 물 1L → 하루 3-4회 가글\n2단계(가글 무효 시): 가글 유지 + 소론도(prednisolone) 2T #2 ×14일 → f/u\n3단계(미호전): ENT refer (생검 등 정밀검사)\n통증 심할 때: Tantum Verde(benzydamine) spray\nTriamcinolone 병변 내 주사 — 난치성 궤양 [CLINICAL]",
     "differential": "구강백반증(악성 전환율 ~1%/년), 구강편평태선, 캔디다증, 외상성 궤양, 구강암",
     "draftAppend": null
   },
@@ -495,6 +495,68 @@ var KNOWLEDGE_BUNDLE = {
     "differential": "1. Post-viral(COVID-19) ★가장 흔함\n2. Sinusitis/CRS/비용종 ★흔함\n3. 두부 외상 (cribriform plate 손상)\n4. 알츠하이머·파킨슨 초기증상 (90%·85% — 운동·인지 증상 수년 선행)\n5. 갑상선저하증(가역적, T4 치료 후 회복) / 만성신부전(uremic toxin)",
     "differentialShort": [{"d":"Post-viral(COVID-19)","t":"h"},{"d":"Sinusitis/CRS","t":"h"},{"d":"두부외상","t":"z"},{"d":"알츠하이머·파킨슨","t":"z"},{"d":"갑상선저하증/신부전","t":"z"}],
     "draftTemplate": null,
+    "draftAppend": null
+  },
+  "dysphonia": {
+    "exam": null,
+    "treatment": "생활습관: ① 수분 1~1.5L/day — 성대 점막 수분 유지 [CLINICAL — 조건부, PMID:29122414]\n② 목 앞 세로근(strap muscle) 꼬집기 마사지 — MTD(근긴장성발성장애)에서 효과 [CLINICAL — 조건부, PMID:37366280]\n※ 마사지는 MTD 대상. 기질성 병변엔 적응증 아님",
+    "differential": null,
+    "draftAppend": null
+  },
+  "쉰목소리": {
+    "exam": null,
+    "treatment": "생활습관: ① 수분 1~1.5L/day — 성대 점막 수분 유지 [CLINICAL — 조건부, PMID:29122414]\n② 목 앞 세로근(strap muscle) 꼬집기 마사지 — MTD(근긴장성발성장애)에서 효과 [CLINICAL — 조건부, PMID:37366280]\n※ 마사지는 MTD 대상. 기질성 병변엔 적응증 아님",
+    "differential": null,
+    "draftAppend": null
+  },
+  "hoarseness": {
+    "exam": null,
+    "treatment": "생활습관: ① 수분 1~1.5L/day — 성대 점막 수분 유지 [CLINICAL — 조건부, PMID:29122414]\n② 목 앞 세로근(strap muscle) 꼬집기 마사지 — MTD(근긴장성발성장애)에서 효과 [CLINICAL — 조건부, PMID:37366280]\n※ 마사지는 MTD 대상. 기질성 병변엔 적응증 아님",
+    "differential": null,
+    "draftAppend": null
+  },
+  "목소리이상": {
+    "exam": null,
+    "treatment": "생활습관: ① 수분 1~1.5L/day — 성대 점막 수분 유지 [CLINICAL — 조건부, PMID:29122414]\n② 목 앞 세로근(strap muscle) 꼬집기 마사지 — MTD(근긴장성발성장애)에서 효과 [CLINICAL — 조건부, PMID:37366280]\n※ 마사지는 MTD 대상. 기질성 병변엔 적응증 아님",
+    "differential": null,
+    "draftAppend": null
+  },
+  "경부종괴": {
+    "exam": "촉진 → 초음파+도플러(혈관vs림프절 구분. 목정맥 확장이 종괴 오인 경우 있음) → 기저질환 확인 필수.\n필요시 초음파유도 aspiration, 애매한 경우 조직검사.",
+    "treatment": "림프절염(가장 흔한 원인): 증상없음→관찰. 압통/발열/커짐→항생제(S.aureus·GAS 타겟).\n수주~수개월 지속 가능, 반복 발생 흔함.\n⚠️ 4~6주 이상 지속 or 치료 반응 없으면 → 조직검사 (림프종 오진 가능성)",
+    "differential": "【Horses】① 림프절염/반응성 림프절병증 ★가장흔함 ② 피지낭종·지방종 ③ 갑상선결절\n【Zebra】⚠️ 림프종(4~6주지속/B증상/치료무반응) ⚠️ 전이성악성종양",
+    "differentialShort": [
+      {"d":"림프절염","t":"h"},
+      {"d":"피지낭종/지방종","t":"h"},
+      {"d":"갑상선결절","t":"h"},
+      {"d":"림프종","t":"z"},
+      {"d":"전이성악성종양","t":"z"}
+    ],
+    "draftAppend": null
+  },
+  "neck mass": {
+    "exam": "촉진 → 초음파+도플러(혈관vs림프절 구분. 목정맥 확장이 종괴 오인 경우 있음) → 기저질환 확인 필수.\n필요시 초음파유도 aspiration, 애매한 경우 조직검사.",
+    "treatment": "림프절염(가장 흔한 원인): 증상없음→관찰. 압통/발열/커짐→항생제(S.aureus·GAS 타겟).\n수주~수개월 지속 가능, 반복 발생 흔함.\n⚠️ 4~6주 이상 지속 or 치료 반응 없으면 → 조직검사 (림프종 오진 가능성)",
+    "differential": "【Horses】① 림프절염/반응성 림프절병증 ★가장흔함 ② 피지낭종·지방종 ③ 갑상선결절\n【Zebra】⚠️ 림프종(4~6주지속/B증상/치료무반응) ⚠️ 전이성악성종양",
+    "differentialShort": [
+      {"d":"림프절염","t":"h"},
+      {"d":"피지낭종/지방종","t":"h"},
+      {"d":"갑상선결절","t":"h"},
+      {"d":"림프종","t":"z"},
+      {"d":"전이성악성종양","t":"z"}
+    ],
+    "draftAppend": null
+  },
+  "림프절염": {
+    "exam": "초음파+도플러로 혈관 vs 림프절 구분. 기저질환 확인.",
+    "treatment": "증상없음→관찰. 압통/발열/커짐→항생제.\n수주~수개월 지속 가능. 반복 발생 흔함.\n⚠️ 4~6주 이상 지속 or 치료 반응 없으면 조직검사 (림프종 감별)",
+    "differential": null,
+    "draftAppend": null
+  },
+  "lymphadenitis": {
+    "exam": "초음파+도플러로 혈관 vs 림프절 구분. 기저질환 확인.",
+    "treatment": "증상없음→관찰. 압통/발열/커짐→항생제.\n수주~수개월 지속 가능. 반복 발생 흔함.\n⚠️ 4~6주 이상 지속 or 치료 반응 없으면 조직검사 (림프종 감별)",
+    "differential": null,
     "draftAppend": null
   }
 };
