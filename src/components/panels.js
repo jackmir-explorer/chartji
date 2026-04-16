@@ -70,8 +70,7 @@ function TriagePanel(props){
 }
 
 function MissingPanel(props){
-  var raw=props.raw, apiKey=props.apiKey, followUpCtx=props.followUpCtx,
-      knowledgeExamCtx=props.knowledgeExamCtx||null;
+  var raw=props.raw, apiKey=props.apiKey, followUpCtx=props.followUpCtx;
   var [data,setData]=useState(null);
   var [loading,setLoading]=useState(false);
   var [error,setError]=useState("");
@@ -88,7 +87,7 @@ function MissingPanel(props){
       lastRef.current=trimmed;
       setLoading(true); setError("");
       try{
-        var result=await generateMissingPanel(trimmed,apiKey,followUpCtx,knowledgeExamCtx);
+        var result=await generateMissingPanel(trimmed,apiKey,followUpCtx);
         setData(result); setLoading(false);
       }catch(e){
         setError(e.message||"Missing 오류"); setLoading(false);

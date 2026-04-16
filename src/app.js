@@ -391,7 +391,16 @@ function App(){
                     setReviewLoading(true); setReviewText("");
                     try{
                       var reviewPrompt=DRAFT_REVIEW_PROMPT.replace("{{CLINIC_SCOPE}}",CLINIC_SCOPE);
-                      var r=await generateDraftReview(raw,apiKey,reviewPrompt);
+                      var knowledgeCtx="";
+                      if(typeof KNOWLEDGE_BUNDLE!=="undefined"&&detectedCalcs.length){
+                        detectedCalcs.forEach(function(c){
+                          if(KNOWLEDGE_BUNDLE[c]){
+                            if(KNOWLEDGE_BUNDLE[c].treatment) knowledgeCtx+=KNOWLEDGE_BUNDLE[c].treatment+"\n";
+                            if(KNOWLEDGE_BUNDLE[c].differential) knowledgeCtx+=KNOWLEDGE_BUNDLE[c].differential+"\n";
+                          }
+                        });
+                      }
+                      var r=await generateDraftReview(raw,apiKey,reviewPrompt,knowledgeCtx||null);
                       setReviewText(r);
                     }catch(e){setReviewText("[오류: "+e.message+"]");}
                     finally{setReviewLoading(false);}
@@ -467,14 +476,7 @@ function App(){
             </div>
 
             <RedFlagPanel key={rfKey} raw={raw} apiKey={apiKey}/>
-            <MissingPanel key={missingKey} raw={raw} apiKey={apiKey} followUpCtx={followUpCtx}
-              knowledgeExamCtx={typeof KNOWLEDGE_BUNDLE!=="undefined"&&detectedCalcs.length?(function(){
-                var s="";
-                detectedCalcs.forEach(function(c){
-                  if(KNOWLEDGE_BUNDLE[c]&&KNOWLEDGE_BUNDLE[c].exam) s+=KNOWLEDGE_BUNDLE[c].exam+"\n";
-                });
-                return s||null;
-              })():null}/>
+            <MissingPanel key={missingKey} raw={raw} apiKey={apiKey} followUpCtx={followUpCtx}/>
             <TriagePanel key={triageKey} raw={raw} apiKey={apiKey} followUpCtx={followUpCtx}
               onDetect={function(cats){setDetectedCalcs(cats||[]);}}
               differentialShort={typeof KNOWLEDGE_BUNDLE!=="undefined"&&detectedCalcs.length?(function(){

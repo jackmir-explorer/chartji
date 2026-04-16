@@ -47,12 +47,11 @@ async function generateTriagePanel(raw,apiKey,ctx){
     apiKey,500);
   return safeParseJSON(t);
 }
-async function generateMissingPanel(raw,apiKey,ctx,knowledgeExamCtx){
+async function generateMissingPanel(raw,apiKey,ctx){
   var extra=buildCtxNote(
     "improvement / worsening / adherence / side effects / results review / new symptoms 같은 follow-up 질문을 우선한다.",ctx);
-  var examLine=knowledgeExamCtx?"\n\n==질환 특이 문진/검사 참고 (transcript에 이미 언급된 항목은 제외)==\n"+knowledgeExamCtx:"";
   var t=await callClaude(
-    MISSING_PROMPT+extra+examLine,
+    MISSING_PROMPT+extra,
     "외래 transcript에서 안전 관련 누락 항목을 JSON으로 반환하라.\n\n[Transcript]\n"+raw,
     apiKey,400);
   return safeParseJSON(t);
@@ -76,9 +75,11 @@ async function generateProblemsPanel(raw,apiKey,ctx){
 }
 
 /* Draft Review — on-demand only */
-async function generateDraftReview(raw,apiKey,customPrompt){
+async function generateDraftReview(raw,apiKey,customPrompt,knowledgeCtx){
+  var sys=customPrompt||DRAFT_REVIEW_PROMPT;
+  var knowledgeLine=knowledgeCtx?"\n\n==질환 특이 참고 (transcript 맥락에 해당 시만 반영. 억지로 끼워넣기 금지)==\n"+knowledgeCtx:"";
   return callClaude(
-    customPrompt||DRAFT_REVIEW_PROMPT,
+    sys+knowledgeLine,
     "다음 진료 대화를 검토하라.\n\n[Transcript]\n"+raw,
     apiKey,600);
 }
