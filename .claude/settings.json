@@ -9,11 +9,11 @@
     "npm",
     "node",
     "npx",
-    "python"
-    "query"
-    "allowed_domains"
-    "max_results"
-    "sort"
+    "python",
+    "query",
+    "allowed_domains",
+    "max_results",
+    "sort",
     "pmids"
   ]
 }

@@ -77,7 +77,7 @@ async function generateProblemsPanel(raw,apiKey,ctx){
 /* Draft Review — on-demand only */
 async function generateDraftReview(raw,apiKey,customPrompt,knowledgeCtx){
   var sys=customPrompt||DRAFT_REVIEW_PROMPT;
-  var knowledgeLine=knowledgeCtx?"\n\n==질환 특이 참고 (transcript 맥락에 해당 시만 반영. 억지로 끼워넣기 금지)==\n"+knowledgeCtx:"";
+  var knowledgeLine=knowledgeCtx?"\n\n==질환 특이 참고==\n아래는 해당 질환·약물에 대한 임상 지식이다. 이 환자 상황(transcript)에 직접 해당하는 금기·주의·미확인 항목이 있으면 적극적으로 지적하라. 환자 상황과 무관한 일반론은 생략한다.\n\n"+knowledgeCtx:"";
   return callClaude(
     sys+knowledgeLine,
     "다음 진료 대화를 검토하라.\n\n[Transcript]\n"+raw,

@@ -72,11 +72,12 @@ function App(){
     var trimmed=raw.trim();
 
     /* Working Draft — 50자↑ / 3s debounce */
-    if(trimmed.length>=50&&trimmed!==lastDraftRef.current){
+    var cacheKey=trimmed+"|"+(detectedCalcs||[]).join(",");
+    if(trimmed.length>=50&&cacheKey!==lastDraftRef.current){
       clearTimeout(draftTimerRef.current);
       draftTimerRef.current=setTimeout(async function(){
-        if(trimmed===lastDraftRef.current) return;
-        lastDraftRef.current=trimmed;
+        if(cacheKey===lastDraftRef.current) return;
+        lastDraftRef.current=cacheKey;
         setDraftLoading(true);
         try{
           var knowledgeCtx="";
@@ -103,7 +104,7 @@ function App(){
     return function(){
       clearTimeout(draftTimerRef.current);
     };
-  },[raw,liveEnabled,apiKey,followUpCtx]);
+  },[raw,liveEnabled,apiKey,followUpCtx,detectedCalcs]);
 
   /* ── API 키 저장 ── */
   function saveKey(){
