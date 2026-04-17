@@ -85,6 +85,34 @@ Step 1 에서 추출한 키워드로 PubMed 검색
 마지막 줄에 다음 추가:
 `> Scout 완료 {실행시각}. ⭐ {N}건 발견. 원하는 항목 [ ] → [o] 체크 시 정오 12:00에 자동 처리됩니다.`
 
+### Step 7 — main 브랜치에 직접 커밋·푸시
+
+원격 환경 기본 동작(자동 branch 생성)을 우회하고 `main`에 바로 반영한다.
+미르가 모바일 GitHub 앱에서 `main` 브랜치 inbox/scout/ 를 직접 열람·편집할 수 있도록 함.
+
+Bash 실행:
+```bash
+# 1. main 브랜치로 이동 (없으면 origin/main 기준 생성)
+git checkout main 2>/dev/null || git checkout -B main origin/main
+
+# 2. 원격 main 최신 상태 반영 (Deep Extract 등 다른 작업 대비)
+git pull origin main --rebase
+
+# 3. Scout 결과 파일 + archive 이동 결과까지 stage
+git add -A inbox/scout/
+
+# 4. 커밋 (YYYY-MM-DD와 N은 실제 값으로 치환)
+git commit -m "feat(scout): YYYY-MM-DD Scout Report — ⭐ {N}건"
+
+# 5. main에 직접 push (실패 시 1회 재시도)
+git push origin main || (sleep 5 && git push origin main)
+```
+
+주의:
+- 실행 시작 시점에 이미 main이 아닐 수 있으므로 `git checkout main` 먼저
+- `git pull --rebase`로 충돌 방지
+- push 재시도 후에도 실패하면 사유 기록 후 종료 (branch에 fallback 커밋 남기지 말 것)
+
 ---
 
 ## 논문 상태 마커
