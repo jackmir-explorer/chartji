@@ -28,7 +28,7 @@ Chartji는 한국 가정의학과 외래 대화 기반 진료 보조 도구다.
 
 ## 세션 프로토콜
 
-0. `rules/forbidden.md` 문서를 매 세션 시작 시 먼저 읽는다.
+0. `rules/forbidden.md` 와 `rules/coding-behavior.md` 를 매 세션 시작 시 먼저 읽는다.
 
 ### 기본 워크플로우 (구현)
 
@@ -64,3 +64,4 @@ Chartji는 한국 가정의학과 외래 대화 기반 진료 보조 도구다.
 - 파일별 책임 경계 → `rules/file-ownership.md`
 - 패널 역할 계약 → `rules/panel-contracts.md`
 - 절대 금지 목록 → `rules/forbidden.md`
+- 코딩 행동 가이드라인 → `rules/coding-behavior.md`

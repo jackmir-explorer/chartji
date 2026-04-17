@@ -16,12 +16,17 @@ Regression Checker와 임상 안전 체크를 통합한 역할.
 [QA 결과]
 기능 회귀: N/M 통과
 임상 안전: N/M 통과
+성공 기준 충족: N/M (설계서 기준)
 
 실패:
   - 항목: 예상 → 실제 → 원인
 
 롤백 필요: Y/N
 ```
+
+## 행동 원칙 (rules/coding-behavior.md)
+- Designer 설계서에 명시된 성공 기준을 항목별로 판정한다
+- 성공 기준 누락 시 통과 판정 보류 → Designer 재설계
 
 ## 피드백 루프
 실패 → Designer 재설계 (Builder 롤백 후)
