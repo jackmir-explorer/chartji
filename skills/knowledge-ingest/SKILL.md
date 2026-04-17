@@ -150,6 +150,7 @@ BUNDLE 필드 구조 (섹션별 분리):
 ```javascript
 var KNOWLEDGE_BUNDLE = {
   "{keyword}": {
+    "kind":              "\"disease\" or \"drug\" (필수 — 아래 7-A 분류 기준)",
     "exam":              "문진/검사 내용 (없으면 null)",
     "treatment":         "처방/치료 내용 (없으면 null)",
     "differential":      "감별진단 상세 설명 — Draft 💡 힌트용 긴 텍스트 (없으면 null)",
@@ -159,6 +160,34 @@ var KNOWLEDGE_BUNDLE = {
   }
 };
 ```
+
+### 7-A. kind 필드 분류 기준 (필수)
+
+모든 엔트리는 반드시 `kind: "disease"` 또는 `kind: "drug"` 둘 중 하나를 가진다. 기본값 없음 — 누락 시 bundle 불완전.
+
+#### drug (약물)
+**조건:** 엔트리 키가 **명시적인 약물 상품명·성분명·계열명**일 때만.
+- 예: 위고비, wegovy, semaglutide, 마운자로, mounjaro, tirzepatide, zepbound, 오젬픽, ozempic
+- 약물의 용량·적응증·보험급여·금기 정보가 treatment 본문의 중심일 때
+
+> ⚠ **GOTCHA**: 키가 영어 성분명이어도 "그 성분의 계열/기전을 내가 확실히 안다"는 확신이 없으면 drug로 자의 분류 금지. 기존 Step 2의 "약물명 GOTCHA"와 동일 원칙 — 모르면 미르에게 확인.
+
+#### disease (질환·증상·백신접종 카테고리)
+**조건:** 엔트리 키가 **질환명·증상명·예방접종 카테고리**일 때.
+- 예: BPPV, 비만, obesity, 구강건조증, LPR, 후각감퇴
+- **백신류 포함**: Tdap, MMR, HPV, Shingrix, 싱그릭스, 조스타박스, 폐렴구균 등
+  - 이유: 진료 현장에서 "질환 예방 상담" 맥락으로 쓰임 → Liby hint에 원칙이 떠야 자연스러움
+  - 순수 "약 제품명"만 drug, 백신은 disease (2026-04-17 Phase 2 #1 세션 확정)
+
+#### 경계 케이스 판단
+- 약물명이 질환 맥락에서 쓰이면 → disease (예: "싱그릭스" 키는 대상포진 예방 상담에 쓰임 → disease)
+- 질환명이지만 treatment 본문이 특정 약물의 용량/보험에만 집중하면 → 해당 약물명으로 별도 drug 엔트리 추가를 우선 검토
+
+#### 자동 부여 규칙 (Ingest 시)
+- knowledge/by-disease/{파일}.md → 해당 파일의 모든 keyword 엔트리 → **disease**
+- knowledge/by-drug/{파일}.md → 해당 파일의 모든 keyword 엔트리 → **drug**
+- 단, **by-drug 내 백신 파일**(tdap.md, shingrix가 포함된 herpes-zoster-vaccine.md 등)은 예외: keyword가 백신 카테고리면 disease로 부여
+- 경계 판단이 애매하면 저장 전 미르에게 질문
 
 ### 8. Triage 감지 확장 (자동 실행 — 묻지 않음)
 새 keywords가 추가된 경우 src/prompts.js의 TRIAGE_PROMPT calcCategories 목록에 자동 추가.
