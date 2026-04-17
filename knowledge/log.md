@@ -63,3 +63,5 @@
 2026-04-17 | by-disease/resistant-hypertension.md | 신규 — 저항성 고혈압 3제 최적화 + spironolactone 4제 1차, 배제 항목 6가지, 시술 의뢰 기준 [CLINICAL] — AFP 2026 PMID:41544280
 2026-04-17 | by-drug/glp1-selection-strategy.md | 보완 — GLP-1RA 중증 정신질환(SMI) 체중 –6.17kg·HbA1c –0.31% 메타분석 근거 [CLINICAL — 조건부] — Int J Psychiatry Med 2026 PMID:41618880
 2026-04-17 | by-drug/glp1-selection-strategy.md | 보완 — GLP-1RA 전당뇨 정상혈당 회복률 비교(tirzepatide 93.3%/semaglutide 81%/liraglutide 66%) [INSIGHTS] — Diabetes Ther 2026 PMID:41984373
+2026-04-17 | by-disease/urticaria.md | Protocol Deep Dive — 만성 두드러기 4배 증량 프로토콜 (약물별 표준/4배용량 표, 2~4주 재평가, CBC+CRP/ESR+TSH 동반검사, omalizumab 300mg q4w, UAS7/UCT 모니터링, 임신·수유 Pregnancy Category 표, 일차의료 의뢰 기준) [CLINICAL] — EAACI 2021 PMID:34536239 + PMC9533216 (Ryan 2022 primary care review) + PMC9300824 (Kocatürk 2022 pregnancy)
+2026-04-17 | skills/protocol-deep-dive/SKILL.md | 신규 스킬 — 리뷰 초록 한계 넘는 구체 protocol 추적 방법 명세 (PMC full text → publisher WebFetch → primary guideline 순)
