@@ -59,3 +59,7 @@
 2026-04-16 | by-disease/LPR.md | PPI 부작용 시 대안 — Promac(polaprezinc) + 알긴산 [TIPS — by ENT교수]
 2026-04-16 | by-disease/dysphonia.md | 신규 — 목소리이상 생활습관(수분1~1.5L/목앞근육마사지) [CLINICAL — 조건부, by ENT교수] — Researcher 검증완료
 2026-04-16 | by-disease/neck-mass.md | 신규 — 경부종괴 접근법(초음파+도플러/림프절염 관찰기준/림프종 감별 4~6주기준) [CLINICAL — 조건부, by ENT교수] — Researcher 검증완료
+2026-04-17 | by-disease/urticaria.md | 신규 — 급성·만성 두드러기 처방 단계(2세대항히스타민→leukotriene→omalizumab), 장기스테로이드금지, 특수환자군 안전권고 [CLINICAL] — AFP 2026 PMID:41839072
+2026-04-17 | by-disease/resistant-hypertension.md | 신규 — 저항성 고혈압 3제 최적화 + spironolactone 4제 1차, 배제 항목 6가지, 시술 의뢰 기준 [CLINICAL] — AFP 2026 PMID:41544280
+2026-04-17 | by-drug/glp1-selection-strategy.md | 보완 — GLP-1RA 중증 정신질환(SMI) 체중 –6.17kg·HbA1c –0.31% 메타분석 근거 [CLINICAL — 조건부] — Int J Psychiatry Med 2026 PMID:41618880
+2026-04-17 | by-drug/glp1-selection-strategy.md | 보완 — GLP-1RA 전당뇨 정상혈당 회복률 비교(tirzepatide 93.3%/semaglutide 81%/liraglutide 66%) [INSIGHTS] — Diabetes Ther 2026 PMID:41984373
