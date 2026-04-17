@@ -377,9 +377,15 @@ function App(){
                 <DraftTab draftText={draftText} draftLoading={draftLoading}
                   reviewText={reviewText} reviewLoading={reviewLoading} apiKey={apiKey}
                   draftHints={typeof KNOWLEDGE_BUNDLE!=="undefined"&&detectedCalcs.length?(function(){
+                    /* 우선순위: disease 엔트리가 하나라도 있으면 disease만 표시 (drug 중복 방지).
+                       disease 없고 drug만 있으면 drug 표시 (지식 증발 방지). */
+                    var hasDisease=detectedCalcs.some(function(c){
+                      return KNOWLEDGE_BUNDLE[c]&&KNOWLEDGE_BUNDLE[c].kind==="disease";
+                    });
                     var parts=[];
                     detectedCalcs.forEach(function(c){
                       if(KNOWLEDGE_BUNDLE[c]){
+                        if(hasDisease&&KNOWLEDGE_BUNDLE[c].kind==="drug") return;
                         if(KNOWLEDGE_BUNDLE[c].treatment) parts.push("처방/치료:\n"+KNOWLEDGE_BUNDLE[c].treatment);
                         if(KNOWLEDGE_BUNDLE[c].differential) parts.push("감별진단:\n"+KNOWLEDGE_BUNDLE[c].differential);
                       }

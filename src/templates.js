@@ -79,52 +79,6 @@ const CALCULATORS = {
     },
   },
 
-  obesity: {
-    label: "비만",
-    description: "BMI 등급 분류",
-    fields: [
-      {id:"weight",  label:"체중",     type:"number", placeholder:"kg"},
-      {id:"height",  label:"키",       type:"number", placeholder:"cm"},
-      {id:"waist",   label:"허리둘레",  type:"number", placeholder:"cm (선택)"},
-      {id:"sex",     label:"성별",     type:"select", options:["남","여"]},
-    ],
-    resultLabel: "BMI + 비만 등급 (아시아태평양 기준)",
-    calculate: function(inp){
-      var w=parseFloat(inp.weight), h=parseFloat(inp.height);
-      if(!w||!h) return {error:"체중과 키를 입력하세요."};
-      var hm=h/100;
-      var bmi=(w/(hm*hm)).toFixed(1);
-
-      var grade;
-      if(bmi<18.5) grade="저체중";
-      else if(bmi<23) grade="정상";
-      else if(bmi<25) grade="과체중 (위험)";
-      else if(bmi<30) grade="비만 1단계";
-      else grade="비만 2단계";
-
-      var result={bmi:bmi, grade:grade};
-
-      var waist=parseFloat(inp.waist);
-      if(waist){
-        var isMale=inp.sex==="남";
-        var threshold=isMale?90:85;
-        result.waistResult=waist>=threshold
-          ?"복부비만 ("+inp.sex+" 기준 ≥"+threshold+"cm)"
-          :"정상 범위";
-      }
-      return result;
-    },
-    referenceTable: {
-      bmi: [
-        {range:"<18.5",    grade:"저체중"},
-        {range:"18.5~22.9",grade:"정상"},
-        {range:"23~24.9",  grade:"과체중 (위험)"},
-        {range:"25~29.9",  grade:"비만 1단계"},
-        {range:"≥30",      grade:"비만 2단계"},
-      ],
-    },
-  },
-
   depression: {
     label: "우울/불안",
     description: "PHQ-9 / GAD-7 점수 참조",
