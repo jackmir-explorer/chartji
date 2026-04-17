@@ -66,6 +66,41 @@ function App(){
     });
   },[detectedCalcs,raw]);
 
+  /* ── 임상 가이드 큐레이션 핸들러 (버튼·탭진입 양쪽에서 호출) ── */
+  async function handleCuration(){
+    if(!apiKey||curationLoading) return;
+    var knowledgeCtx="";
+    if(typeof KNOWLEDGE_BUNDLE!=="undefined"){
+      detectedCalcs.forEach(function(c){
+        if(KNOWLEDGE_BUNDLE[c]){
+          var b=KNOWLEDGE_BUNDLE[c];
+          if(b.exam)         knowledgeCtx+="["+c+".exam]\n"+b.exam+"\n\n";
+          if(b.treatment)    knowledgeCtx+="["+c+".treatment]\n"+b.treatment+"\n\n";
+          if(b.differential) knowledgeCtx+="["+c+".differential]\n"+b.differential+"\n\n";
+          if(b.draftAppend)  knowledgeCtx+="["+c+".draftAppend]\n"+b.draftAppend+"\n\n";
+        }
+      });
+    }
+    if(!knowledgeCtx){ setCurationText("[감지된 지식 없음]"); return; }
+    setCurationLoading(true); setCurationText("");
+    try{
+      var r=await generateKnowledgeCuration(raw,apiKey,knowledgeCtx);
+      setCurationText(r);
+    }catch(e){setCurationText("[오류: "+e.message+"]");}
+    finally{setCurationLoading(false);}
+  }
+
+  /* ── 임상 가이드 탭 진입 시 자동 큐레이션 (한 번만) ── */
+  useEffect(function(){
+    if(leftTab!=="guide") return;
+    if(curationText||curationLoading) return;
+    if(!apiKey) return;
+    var hasKnowledge=typeof KNOWLEDGE_BUNDLE!=="undefined"
+      &&detectedCalcs.some(function(c){return !!KNOWLEDGE_BUNDLE[c];});
+    if(!hasKnowledge) return;
+    handleCuration();
+  },[leftTab]);
+
   /* ─────────────────────────────────────────────────────────────
      Working Draft
   ───────────────────────────────────────────────────────────── */
@@ -449,28 +484,7 @@ function App(){
                   detectedKeys={typeof KNOWLEDGE_BUNDLE!=="undefined"
                     ? detectedCalcs.filter(function(c){return !!KNOWLEDGE_BUNDLE[c];})
                     : []}
-                  onCurate={async function(){
-                    if(!apiKey||curationLoading) return;
-                    var knowledgeCtx="";
-                    if(typeof KNOWLEDGE_BUNDLE!=="undefined"){
-                      detectedCalcs.forEach(function(c){
-                        if(KNOWLEDGE_BUNDLE[c]){
-                          var b=KNOWLEDGE_BUNDLE[c];
-                          if(b.exam)         knowledgeCtx+="["+c+".exam]\n"+b.exam+"\n\n";
-                          if(b.treatment)    knowledgeCtx+="["+c+".treatment]\n"+b.treatment+"\n\n";
-                          if(b.differential) knowledgeCtx+="["+c+".differential]\n"+b.differential+"\n\n";
-                          if(b.draftAppend)  knowledgeCtx+="["+c+".draftAppend]\n"+b.draftAppend+"\n\n";
-                        }
-                      });
-                    }
-                    if(!knowledgeCtx){ setCurationText("[감지된 지식 없음]"); return; }
-                    setCurationLoading(true); setCurationText("");
-                    try{
-                      var r=await generateKnowledgeCuration(raw,apiKey,knowledgeCtx);
-                      setCurationText(r);
-                    }catch(e){setCurationText("[오류: "+e.message+"]");}
-                    finally{setCurationLoading(false);}
-                  }}/>
+                  onCurate={handleCuration}/>
               )}
 
               {/* 계산기 탭 콘텐츠 */}
