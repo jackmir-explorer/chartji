@@ -16,7 +16,9 @@ function App(){
   var [draftLoading, setDraftLoading] = useState(false);
   var [reviewText,   setReviewText]   = useState("");
   var [reviewLoading,setReviewLoading]= useState(false);
-  var [leftTab,      setLeftTab]      = useState("raw"); /* "raw" | "draft" | "calc-xxx" */
+  var [curationText,   setCurationText]   = useState("");
+  var [curationLoading,setCurationLoading]= useState(false);
+  var [leftTab,      setLeftTab]      = useState("raw"); /* "raw" | "draft" | "guide" | "calc-xxx" */
 
   /* ── 계산기 탭 ── */
   var [detectedCalcs, setDetectedCalcs] = useState([]);
@@ -341,6 +343,31 @@ function App(){
                       </button>
                     );
                   })}
+                  {/* 📖 임상 가이드 탭 — KNOWLEDGE_BUNDLE 매칭되는 감지 지식이 있을 때만 노출 */}
+                  {typeof KNOWLEDGE_BUNDLE!=="undefined"&&detectedCalcs.some(function(c){return !!KNOWLEDGE_BUNDLE[c];})&&(function(){
+                    var on=leftTab==="guide";
+                    return (
+                      <button key="guide"
+                        onClick={function(){setLeftTab("guide");}}
+                        style={{fontSize:10,fontWeight:700,padding:"3px 10px",borderRadius:5,
+                          color:on?"#a78bfa":"#2e374f",
+                          background:on?"#0d1018":"transparent",
+                          border:"1px solid "+(on?"rgba(167,139,250,.35)":"transparent"),
+                          cursor:"pointer",letterSpacing:".05em",
+                          fontFamily:"'JetBrains Mono',monospace",
+                          display:"flex",alignItems:"center",gap:4}}>
+                        📖 임상 가이드
+                        {curationLoading&&(
+                          <span style={{width:6,height:6,border:"1px solid #252d42",
+                            borderTopColor:"#a78bfa",borderRadius:"50%",display:"inline-block",
+                            animation:"spin .65s linear infinite"}}/>
+                        )}
+                        {!curationLoading&&curationText&&(
+                          <span style={{fontSize:8,color:"rgba(167,139,250,.6)"}}>✓</span>
+                        )}
+                      </button>
+                    );
+                  })()}
                   <CalcTabHeaders activeCalcs={activeCalcs} leftTab={leftTab}
                     setLeftTab={setLeftTab} setActiveCalcs={setActiveCalcs}/>
                   {leftTab==="raw"&&isRecording&&(
@@ -411,6 +438,38 @@ function App(){
                       setReviewText(r);
                     }catch(e){setReviewText("[오류: "+e.message+"]");}
                     finally{setReviewLoading(false);}
+                  }}/>
+              )}
+
+              {/* 📖 임상 가이드 탭 콘텐츠 */}
+              {leftTab==="guide"&&(
+                <GuideTab
+                  curationText={curationText} curationLoading={curationLoading}
+                  apiKey={apiKey}
+                  detectedKeys={typeof KNOWLEDGE_BUNDLE!=="undefined"
+                    ? detectedCalcs.filter(function(c){return !!KNOWLEDGE_BUNDLE[c];})
+                    : []}
+                  onCurate={async function(){
+                    if(!apiKey||curationLoading) return;
+                    var knowledgeCtx="";
+                    if(typeof KNOWLEDGE_BUNDLE!=="undefined"){
+                      detectedCalcs.forEach(function(c){
+                        if(KNOWLEDGE_BUNDLE[c]){
+                          var b=KNOWLEDGE_BUNDLE[c];
+                          if(b.exam)         knowledgeCtx+="["+c+".exam]\n"+b.exam+"\n\n";
+                          if(b.treatment)    knowledgeCtx+="["+c+".treatment]\n"+b.treatment+"\n\n";
+                          if(b.differential) knowledgeCtx+="["+c+".differential]\n"+b.differential+"\n\n";
+                          if(b.draftAppend)  knowledgeCtx+="["+c+".draftAppend]\n"+b.draftAppend+"\n\n";
+                        }
+                      });
+                    }
+                    if(!knowledgeCtx){ setCurationText("[감지된 지식 없음]"); return; }
+                    setCurationLoading(true); setCurationText("");
+                    try{
+                      var r=await generateKnowledgeCuration(raw,apiKey,knowledgeCtx);
+                      setCurationText(r);
+                    }catch(e){setCurationText("[오류: "+e.message+"]");}
+                    finally{setCurationLoading(false);}
                   }}/>
               )}
 
