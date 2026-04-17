@@ -91,8 +91,9 @@ Phase 2 #4 Designer 단계에서 "감지된 지식 전부를 AI에 주자"라고
 
 ---
 
-## 내일 Liby 세션 제안 순서
+## 내일 세션 제안 순서
 
+0. **🏛 Architect agent 신설 여부 결정** (아래 상세 참조) — 아키텍처 안전장치 설계 먼저
 1. **긴급 수정 (5분)**: Liby 힌트 vs 임상 가이드 역할 분리 복원 (본 문서 상단)
 2. **Liby ingest skill 업데이트**: 3-tier 출처 규칙 명시, bundle 컴파일 시 출처 보존 강제
 3. **wegovy.md, obesity.md 재ingest**: Tier 1 메타 추가 + 재컴파일
@@ -100,6 +101,76 @@ Phase 2 #4 Designer 단계에서 "감지된 지식 전부를 AI에 주자"라고
 5. **bundle 백필 범위 결정**: 나머지 77 엔트리 처리 방침 미르 판단
 6. **부가 관찰 #1** (curationText 리셋) 수정 여부 판단
 7. **handoff-to-next-session.md** 업데이트 or 아카이빙
+
+---
+
+## 🏛 Architect Agent 신설 논의 (내일 세션 0번 작업)
+
+### 배경
+오늘 사건의 구조적 원인은 **Designer가 구현과 아키텍처 양쪽을 동시에 책임지는 게 과부하**. /compact 후 맥락 재확인 없이 단순 재설계 → 기존 아키텍처 합의(Liby 힌트 vs 가이드 역할 분리) 깨짐.
+
+역할 쪼개면:
+- **Designer** → "이 기능 **어떻게** 구현?" (how)
+- **Architect** → "이 변경이 **구조적으로** 맞나?" (should we?)
+
+Architect는 기본 성향이 **보수적** → "요청 안 한 유연성 금지" 원칙과 정합.
+
+### Chartji 맥락의 특수성
+일반 단일 개발자 프로젝트엔 Architect 역할 과잉이지만, Chartji는:
+- 개발자 미르 1명 / 실제 "손"은 LLM
+- LLM 맥락 손실이 **반복적**으로 발생
+- Architect는 "2인 이상 팀 구조"가 아니라 **LLM 휘발성 맥락 보완용 구조적 안전장치**
+
+### 기존 Agent들과의 경계
+
+| Agent | 질문 | 호출 주기 |
+|---|---|---|
+| **Boss** | "이 방향이 맞나? 위험은?" (4 Chiefs 다각) | 드문 — 전략 전환점 |
+| **Architect** (제안) | "이 변경이 구조 규칙 위반하나?" | 빈번 — 매 작업 or 구조 변경 시 |
+| **Designer** | "어떻게 구현? 옵션?" | 매 작업 |
+
+제안 워크플로우:
+```
+미르 요청
+   ↓
+Architect → "이 변경이 data-flow/file-ownership/panel-contracts 
+            건드리나? 건드리면 어떻게?" 진단
+   ↓
+Designer → Architect 진단을 전제로 구현 설계
+   ↓
+미르 승인 → Builder
+```
+
+### 3가지 구체안
+
+**A. 정식 Architect agent 신설** (`agents/architect.md`)
+- 기능 추가 전 무조건 호출
+- data-flow.md / file-ownership.md / panel-contracts.md 지기
+- 위배되는 설계 제안 시 "STOP — 기존 합의 검토 먼저" 반환
+- 장점: 역할 명확, 구조 실수 기계적 방지
+- 단점: 매번 호출 → 워크플로우 길어짐
+
+**B. "Architecture Gate" 체크리스트만** (`rules/architecture-gate.md`)
+- Agent는 새로 만들지 않음
+- Designer 스킬에 "이 체크리스트 통과 없이 Builder 진입 금지"
+- 장점: 단순
+- 단점: 체크리스트 형식화 위험 (오늘 실수가 체크리스트 있어도 발생 가능)
+
+**C. 하이브리드 — Architect는 구조 문서 변경 시에만 호출**
+- 일상 기능 추가 → Designer 혼자
+- data-flow.md / file-ownership.md / panel-contracts.md 수정 포함 작업만 Architect 호출
+- 장점: 워크플로우 오버헤드 최소
+- 단점: "구조 변경 여부" 판단을 Designer가 함 → 판단 실수 시 여전히 Architect 미호출 가능
+
+### 제 권고
+
+**A 또는 C**. Phase 단위 큰 작업이 자주 있는 상황이면 **A가 정답에 가까움**. 오늘의 역할 중복 실수는 Architect가 있었다면 Designer 단계 직전에 잡혔을 일.
+
+### 내일 세션 0번 결정 사항
+
+1. A / B / C 중 선택
+2. 선택 후 즉시 구현 (agent 파일 or 체크리스트 파일 작성)
+3. 이 아키텍처 안전장치 확보 후에야 1번 이하 실무 작업 진입
 
 ---
 
