@@ -14,6 +14,26 @@
 
 ## 실행 절차
 
+### Step 0 — 오늘 날짜 결정 (KST 기준, 신규 생성 우선)
+
+⚠ 시간대 주의: cron이 UTC 21:00 (= KST 06:00)에 실행되므로,
+runner의 기본 "오늘"이 UTC 기준으로 어제일 수 있다.
+**파일명에 사용하는 "오늘"은 반드시 한국 표준시(KST, UTC+9) 기준이다.**
+
+Bash로 결정:
+```bash
+TODAY=$(TZ=Asia/Seoul date +%Y-%m-%d)
+echo "Scout 대상 날짜 (KST): $TODAY"
+```
+
+이 `$TODAY`를 모든 후속 단계의 파일명에 사용한다.
+
+#### 기존 파일 정책
+- `inbox/scout/$TODAY.md`가 **이미 존재하면 → 신규 생성을 우선**
+- 덮어쓰기·자동 보완 금지 (전날 파일을 잘못 수정하는 사고 방지)
+- 같은 날짜 재실행 시: 기존 파일을 그대로 두고 trigger run을 종료
+  (수동 재시작이 필요하면 미르가 기존 파일을 archive로 이동 후 재실행)
+
 ### Step 1 — 관심 키워드 귀납 추출
 `knowledge/log.md` 마지막 30개 항목을 읽는다.
 자주 등장하는 질환·약물·키워드 TOP 5를 추출한다.
@@ -55,7 +75,7 @@ Step 1 에서 추출한 키워드로 PubMed 검색
 ⭐ 항목만 최종 보고에 포함 (△는 선택 포함, ✕는 제외)
 
 ### Step 4 — 결과 파일 작성
-`inbox/scout/YYYY-MM-DD.md` 파일 생성:
+`inbox/scout/$TODAY.md` 파일 **신규 생성** (Step 0의 KST 날짜 사용):
 
 ```markdown
 # Scout Report — YYYY-MM-DD
