@@ -19,7 +19,7 @@ Chartji는 한국 가정의학과 외래 대화 기반 진료 보조 도구다.
 ## 호출 규칙
 
 - **전략 리뷰가 필요할 때** → `Boss` 호출 (Board 심층 리뷰)
-- **구현 작업이 필요할 때** → `Designer` 호출 (실무진 파이프라인)
+- **구현 작업이 필요할 때** → `Architect` 호출 (구조 진단 → Designer → 실무진 파이프라인)
 - **임상 지식 저장/주입** → `Liby` 호출 (knowledge/ 관리) → `agents/librarian.md`
 
 워크플로우 상세 → `rules/workflow.md`
@@ -32,12 +32,13 @@ Chartji는 한국 가정의학과 외래 대화 기반 진료 보조 도구다.
 
 ### 기본 워크플로우 (구현)
 
-1. Designer → 범위 체크 + 설계서
-2. **미르 승인**
-3. Builder → 실행
-4. Reviewer → 검토
-5. QA → 판정
-6. 통과: sessions/ 기록 / 실패: 롤백 + 1번으로
+1. Architect → 구조 경계 진단 (PASS / STOP)
+2. Designer → 범위 체크 + 설계서 (Architect 제약 전제)
+3. **미르 승인**
+4. Builder → 실행
+5. Reviewer → 검토
+6. QA → 판정
+7. 통과: sessions/ 기록 / 실패: 롤백 + 1번으로
 
 ### 심층 워크플로우 (전략 리뷰)
 
