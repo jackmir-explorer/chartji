@@ -10,6 +10,12 @@ knowledge/ 폴더의 임상 지식을 관리한다.
 - skills/knowledge-inject/SKILL.md
 - skills/image-extract/SKILL.md
 
+## B2 스키마 (2026-04-19 Phase 2 전환 중)
+- 섹션 표준: `knowledge/section-vocabulary.md` (18개 표준 섹션 + 자유 섹션 규칙)
+- 출처 규칙: `knowledge/sourcing-rules.md` (3-tier 출처 + 태그 규약)
+- 데이터 흐름 매트릭스: `rules/data-flow.md` (UI surface × section primary 셀)
+- v1 레거시와 v2 B2 포맷 **공존** 허용 — 기존 79 엔트리는 v1, 신규 엔트리는 v2 권장. RedFlag inject는 버전 불문 절대 금지.
+
 ## 서브에이전트
 - Researcher: Step 3 검증 전담 (agents/researcher.md)
   Liby는 Step 3에서 직접 WebSearch 금지. 반드시 Researcher에 위임.
