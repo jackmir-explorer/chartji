@@ -1,5 +1,11 @@
 # skills/knowledge-ingest/SKILL.md — Knowledge Ingest
 
+> **B2 스키마 전환 중** (2026-04-19 기준 Phase 2).
+> v1 레거시 경로(아래 Step 5/7 템플릿)는 기존 79 엔트리 호환 유지. 신규 엔트리는 **v2 B2 포맷** 권장 (Step 5-B / 7-B 참조).
+> - 섹션 표준: `knowledge/section-vocabulary.md`
+> - 출처 규칙: `knowledge/sourcing-rules.md`
+> - 데이터 흐름: `rules/data-flow.md`
+
 ## 입력
 미르가 제공한 임상 경험/가이드라인 raw 텍스트
 
@@ -14,6 +20,9 @@
 - 공식 가이드라인·심평원 기준·최신지견·실전 Tip → knowledge/guidelines/{파일명}.md
 
 #### Attribution 체크 (TIPS/INSIGHTS 전용)
+
+상세 규칙은 `knowledge/sourcing-rules.md` Attribution 원칙 참조. 핵심 요약:
+
 분류 결과가 [TIPS] 또는 [INSIGHTS]인 경우:
 1. 사용자 입력에 출처 힌트가 있으면 추출
    - "교수님 외래에서", "이비인후과 교수님이" → `by ENT교수`
@@ -72,7 +81,10 @@
 - **Glob 결과 = 파일 있음** → 추가할 섹션만 Read (전체 파일 읽기 금지)
 - **knowledge-bundle.js 삽입 위치** → `Grep(pattern="^};")` 으로 줄 번호 확인 후 마지막 항목 끝만 Read. 전체 파일 Read 금지.
 
-### 5. 파일 템플릿 (by-disease)
+### 5. 파일 템플릿 (by-disease) — v1 레거시
+
+> **v1 레거시 템플릿**. 기존 79 엔트리와의 호환 유지용. **신규 엔트리는 Step 5-B(v2 B2 템플릿)를 우선 사용**한다.
+
 파일 상단 600토큰(≈400자) 초과 시 섹션별 분리 파일로 분할.
 
 ```markdown
@@ -97,6 +109,52 @@ keywords: {Triage calcCategories 값과 일치하는 키워드, 쉼표 구분}
 - 비유·일상 언어 사용 권장 (예: "혈관이 좁아져서" > "동맥경화로 인한 관류 저하")
 - 약물 기전도 동일: "이 약은 ~를 막아서 ~가 줄어듭니다" 형태
 - 해당 내용이 없거나 단순한 질환은 섹션 생략 가능
+
+### 5-B. 파일 템플릿 — v2 (B2) 신규 권장
+
+`##` 헤더는 `knowledge/section-vocabulary.md`의 18개 표준 섹션 vocabulary와 정합되는 한글 제목 사용.
+표준 dictionary에 없는 고유 개념은 원문 섹션명 그대로 유지 (Liby ingest가 자유 섹션으로 slugify).
+
+```markdown
+# {질환명 또는 약물명 또는 주제명}
+
+tags: [CLINICAL|REGULATORY|INSIGHTS|TIPS]   # 파일 전체 성격
+keywords: {쉼표 구분 키워드 — Triage calcCategories와 일치}
+
+> primarySources (Tier 1): {파일 전체 대표 출처}
+> 예: `EAACI 2021 (PMID:34536239, DOI:10.1111/all.15090)`
+
+---
+
+## {표준 섹션 제목 — 예: 분류 기준 / 문진/검사 / 처방/치료 / 용량 / 적응증 / 감별진단 / 임신·수유 / 의뢰 기준 / 급여 기준 / 주의 / 금기}
+
+{해당 섹션 내용}
+
+{해당 섹션 고유 출처 있으면 Tier 2로 섹션 상단에 인용 블록:}
+> 근거: {저자} et al. {저널} {연도} PMID:{번호}
+
+---
+
+## {자유 섹션 — 표준 dictionary에 없는 고유 개념}
+
+{내용}
+```
+
+#### 섹션 이름 선택 가이드
+- `knowledge/section-vocabulary.md` dictionary 18개 중 하나와 의미가 일치하면 해당 표준 섹션 제목 사용
+- 의미가 고유하거나 복합적이면 원문 섹션명 그대로 — Liby가 slugify해서 자유 섹션 key로 보존
+- `Draft 출력사항 [DRAFT_APPEND]` → v2에서는 `draft-append` 섹션으로 자동 정규화
+- **`draft-template` 섹션**: dictionary 등록만 되어 있음. uiHooks 라우팅은 **Phase 3에서 재논의**로 보류 — 파일에 써도 되지만 현재는 UI로 흐르지 않음
+
+#### 출처 처리
+`knowledge/sourcing-rules.md`의 3-tier 모델 준수:
+- Tier 1 `primarySources`: 파일 상단 인용 블록
+- Tier 2 섹션별: 섹션 `##` 직후 인용 블록 (Tier 1과 중복 금지)
+- Tier 3 inline: 표·수치·리스트 주석으로 원문 보존
+
+#### 병태생리/기전 저장 규칙 (v2)
+- 표준 섹션 `notes`로 저장: `## 왜 이런 증상이 생기나 (환자설명용)` → Liby가 `notes`로 정규화
+- 내용 작성 원칙은 v1과 동일: 환자 설명 가능한 수준, 비유·일상 언어
 
 ### 5-A. 긴 문서 축약 규칙
 
@@ -129,7 +187,10 @@ keywords: {Triage calcCategories 값과 일치하는 키워드, 쉼표 구분}
 - 최신지견 (연구·트렌드): [INSIGHTS]
 - 실전 Tip (경험 기반 요령): [TIPS]
 
-### 7. bundle 컴파일
+### 7. bundle 컴파일 — v1 레거시 포맷
+
+> **v1 레거시 포맷**. 기존 79 엔트리 호환 유지용. **v2 B2 포맷은 Step 7-B 참조** — 단, v2 엔트리 컴파일 경로는 **Phase 3 runtime 지원(`src/knowledge-bundle.js` v1/v2 공존) 후 활성화**된다.
+
 내용 변경 후 반드시 src/knowledge-bundle.js 재생성.
 
 형식:
@@ -161,9 +222,39 @@ var KNOWLEDGE_BUNDLE = {
 };
 ```
 
+### 7-B. bundle 컴파일 — v2 (B2) 포맷 소개
+
+> **활성 조건**: Phase 3 runtime (`src/knowledge-bundle.js` v1/v2 공존 허용) 구현 완료 후.
+> Phase 2 시점에는 **설계서 역할만** — 실제 컴파일 경로는 미작동.
+
+v2 엔트리 형상:
+```javascript
+var KNOWLEDGE_BUNDLE = {
+  "{keyword}": {
+    "kind":           "\"disease\" | \"drug\" | \"topic\"",
+    "keywords":       ["...synonyms"],
+    "primarySources": ["파일 전체 Tier 1 출처 배열"],
+    "sections": {
+      "{표준 섹션 key}":  { "content": "...", "sources": ["섹션 Tier 2 출처(Tier 1과 중복 시 생략)"] },
+      "{자유 섹션 key}":  { "content": "...", "sources": [...] }
+    },
+    "uiHooks": {
+      "hint":        ["section key 배열 — 기본값은 section-vocabulary.md kind별 기본값 상속"],
+      "guide":       ["section key 배열"],
+      "draftAppend": ["section key 배열 | null"]
+    }
+  }
+};
+```
+
+엔트리별 uiHooks 오버라이드는 `rules/data-flow.md`의 primary 셀 원칙을 위반하지 않는 범위에서만 허용.
+RedFlag 대상 노출은 uiHooks 어떤 필드에도 **절대 금지** (§rules/data-flow.md §2).
+
 ### 7-A. kind 필드 분류 기준 (필수)
 
-모든 엔트리는 반드시 `kind: "disease"` 또는 `kind: "drug"` 둘 중 하나를 가진다. 기본값 없음 — 누락 시 bundle 불완전.
+모든 엔트리는 반드시 `kind: "disease"` · `kind: "drug"` · `kind: "topic"` 중 하나를 가진다. 기본값 없음 — 누락 시 bundle 불완전.
+
+> **v2 추가**: `topic` kind는 전략·주제 문서용 (예: `glp1-selection-strategy.md`). hint에 뜨지 않고 Guide tab에서만 큐레이션된다. v1 레거시는 disease/drug 2종 체제.
 
 #### drug (약물)
 **조건:** 엔트리 키가 **명시적인 약물 상품명·성분명·계열명**일 때만.
@@ -182,6 +273,7 @@ var KNOWLEDGE_BUNDLE = {
 #### 경계 케이스 판단
 - 약물명이 질환 맥락에서 쓰이면 → disease (예: "싱그릭스" 키는 대상포진 예방 상담에 쓰임 → disease)
 - 질환명이지만 treatment 본문이 특정 약물의 용량/보험에만 집중하면 → 해당 약물명으로 별도 drug 엔트리 추가를 우선 검토
+- **topic 판정 (v2)**: 특정 질환·약물에 귀속되지 않는 **전략·선택 기준·주제 문서**는 topic. 예: `glp1-selection-strategy.md` (위고비 vs 마운자로 선택 전략)
 
 #### 자동 부여 규칙 (Ingest 시)
 - knowledge/by-disease/{파일}.md → 해당 파일의 모든 keyword 엔트리 → **disease**
@@ -196,3 +288,14 @@ var KNOWLEDGE_BUNDLE = {
 ### 9. log.md + index.md 업데이트
 - log.md: `YYYY-MM-DD | 파일명 | 내용 한 줄 요약`
 - index.md: 파일 목록 갱신
+
+---
+
+## 참조
+
+- B2 스키마 설계서: `sessions/2026-04-18-b2-schema-design.md`
+- 섹션 표준: `knowledge/section-vocabulary.md`
+- 출처 규칙: `knowledge/sourcing-rules.md`
+- 데이터 흐름 매트릭스: `rules/data-flow.md`
+- 입력 skill: `skills/paper-extract/SKILL.md` (Deep Extract routine 산출)
+- Librarian agent: `agents/librarian.md`
