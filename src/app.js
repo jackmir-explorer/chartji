@@ -75,8 +75,6 @@ function App(){
         if(KNOWLEDGE_BUNDLE[c]){
           var b=KNOWLEDGE_BUNDLE[c];
           if(b.exam)         knowledgeCtx+="["+c+".exam]\n"+b.exam+"\n\n";
-          if(b.treatment)    knowledgeCtx+="["+c+".treatment]\n"+b.treatment+"\n\n";
-          if(b.differential) knowledgeCtx+="["+c+".differential]\n"+b.differential+"\n\n";
           if(b.draftAppend)  knowledgeCtx+="["+c+".draftAppend]\n"+b.draftAppend+"\n\n";
         }
       });

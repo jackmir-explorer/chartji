@@ -1,5 +1,19 @@
 # 2026-04-17 Handoff — 다음 세션으로 (Liby 세션 예정)
 
+> ⚠ **SUPERSEDED — 2026-04-18 세션에서 방향 대폭 변경.**
+> 내일(다음) 작업자는 이 문서 대신 `sessions/2026-04-18-b2-schema-design.md` 를 먼저 읽을 것.
+> 본 문서는 역사 기록 목적으로 보존 (Boss 리뷰·Architect 신설 결정 배경 포함).
+>
+> **변경 요약 (2026-04-18 반영)**:
+> - 0번(Architect agent) 완료 → `sessions/2026-04-18-architect-agent-new.md`
+> - 1번(역할 분리 복원) 완료 (pre-B2 patch) → `sessions/2026-04-18-liby-hint-guide-role-restore.md`
+> - 2~5번은 **B2 섹션-딕셔너리 스키마 전환 작업**으로 확장·재구성됨 (Liby ingest skill 단순 규칙 업데이트가 아님)
+> - 기존 79 엔트리는 **점진 migration**(v1/v2 공존). "백필 순서"는 migration 우선순위로 재해석
+> - `rules/data-flow.md` 작성은 **B2 운영 시작 후**로 연기 (낭비 방지)
+> - 부가 관찰 3개(curationText 리셋 / Triage 상위 카테고리 생략 / AI의 transcript 인용)는 B2와 독립, 여전히 유효
+
+---
+
 > 이 문서는 오늘 세션의 **휘발성 맥락**을 내일 세션으로 넘기기 위한 브리핑.
 > 새 세션 시작 시 이 파일을 먼저 읽고 작업하면 맥락이 복원된다.
 
