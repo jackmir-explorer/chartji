@@ -50,6 +50,19 @@
 금지: API 호출, UI 코드
 참조: templates/*.md (원본 문서)
 
+## src/knowledge-bundle.js
+책임: Librarian 자동 생성 KNOWLEDGE_BUNDLE 데이터. 순수 데이터 선언, 파서 로직 없음.
+포함: v1 / v2 엔트리 공존 허용 (2026-04-20 Phase 3A 전환 중)
+      - v1 shape: {kind, exam, treatment, differential, differentialShort, draftTemplate, draftAppend}
+      - v2 shape: {kind, keywords, primarySources, sections, uiHooks}
+      Consumer 감지 규칙: `entry.sections ? "v2" : "v1"`
+금지: **직접 편집 금지** — 수정은 Liby ingest skill만 권한 있음
+      v2 엔트리를 3B/3C runtime 준비 전에 추가 금지 (inject 깨짐)
+      파일 내 파싱·변환 로직 도입 금지 (consumer 책임)
+참조: skills/knowledge-ingest/SKILL.md (Step 7 v1 / Step 7-B v2)
+      knowledge/section-vocabulary.md, knowledge/sourcing-rules.md
+      rules/data-flow.md (UI surface × section 매트릭스)
+
 ## src/app.js
 책임: 공유 상태 관리 + 레이아웃 조율
 포함: raw, apiKey, followUpCtx, consent 등 공유 상태

@@ -1,4 +1,55 @@
-/* knowledge-bundle.js — Librarian 자동 생성. 직접 편집 금지. */
+/*
+ * knowledge-bundle.js — Librarian 자동 생성. 직접 편집 금지.
+ *
+ * ============================================================
+ * B2 스키마 전환 중 (Phase 3A, 2026-04-20): v1 / v2 엔트리 공존 허용
+ * ============================================================
+ *
+ * 본 파일은 순수 데이터 선언이다. 파서 로직은 없다.
+ * 엔트리는 아래 두 shape 중 하나를 가질 수 있다.
+ *
+ * ---------- v1 shape (레거시, 기존 79 엔트리) ----------
+ * "{keyword}": {
+ *   "kind":              "disease" | "drug",    // 필수
+ *   "exam":              "문진/검사 내용 | null",
+ *   "treatment":         "처방/치료 내용 | null",
+ *   "differential":      "감별진단 긴 텍스트 | null",
+ *   "differentialShort": [{"d":"진단명","t":"h"|"z"}, ...] | null,
+ *   "draftTemplate":     "질환 특이 Template | null",
+ *   "draftAppend":       "Draft 출력사항 내용 | null"
+ * }
+ *
+ * ---------- v2 shape (B2, 신규 엔트리 — Phase 3B/3C runtime 후 활성) ----------
+ * "{keyword}": {
+ *   "kind":           "disease" | "drug" | "topic",
+ *   "keywords":       ["...synonyms"],
+ *   "primarySources": ["Tier 1 출처"],
+ *   "sections": {
+ *     "{표준 섹션 key}": { "content": "...", "sources": [...] },
+ *     "{자유 섹션 key}": { "content": "...", "sources": [...] }
+ *   },
+ *   "uiHooks": {
+ *     "hint":          ["section key ..."],
+ *     "guide":         ["section key ...", "*"],
+ *     "draftAppend":   ["section key ..."] | null,
+ *     "draftTemplate": "section key" | null   // 단일 key, 배열 불허
+ *   }
+ * }
+ *
+ * ---------- Consumer 감지 규칙 ----------
+ *   entry.sections ? "v2" : "v1"
+ *
+ * v2 엔트리는 `src/app.js` uiHooks 경로(Phase 3B)와 `src/prompts.js` 조정(Phase 3C)
+ * 구현 완료 후부터 실제 소비된다. 그 전에 v2 엔트리를 추가하면 Liby inject가 깨진다.
+ *
+ * ---------- 참조 ----------
+ *   섹션 표준:       knowledge/section-vocabulary.md
+ *   출처 규칙:       knowledge/sourcing-rules.md
+ *   데이터 흐름:     rules/data-flow.md (UI surface × section 매트릭스)
+ *   Librarian:       agents/librarian.md
+ *   Ingest skill:    skills/knowledge-ingest/SKILL.md (Step 7 v1 / Step 7-B v2)
+ * ============================================================
+ */
 var KNOWLEDGE_BUNDLE = {
   "BPPV": {
     "kind": "disease",
