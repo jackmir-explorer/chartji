@@ -1,9 +1,11 @@
 # Routine: Scout (Daily PubMed Radar)
 
 ## 실행 주기
-매일 오전 6:00 자동 실행
-→ 미르가 오전 중 핸드폰으로 확인, [o] 체크 (Deep Extract 대상으로 선택)
-→ Deep Extract Routine이 정오 12:00에 [o] 항목 처리
+매일 오전 6:00 (KST) 자동 실행
+→ 결과는 `claude/scout-YYYY-MM-DD` 브랜치에 커밋되어 PR 생성 (main ← head)
+→ 미르가 모바일 GitHub 앱 알림으로 PR 확인 → 원탭 머지
+→ main 반영된 파일에서 [o] 체크 (Deep Extract 대상으로 선택)
+→ Deep Extract Routine 이 정오 12:00 (KST) 에 [o] 항목 처리
 
 ## 목적
 일차의료 외래 의사에게 유용한 최신 논문을 자동 탐색해
@@ -29,10 +31,8 @@ echo "Scout 대상 날짜 (KST): $TODAY"
 이 `$TODAY`를 모든 후속 단계의 파일명에 사용한다.
 
 #### 기존 파일 정책
-- `inbox/scout/$TODAY.md`가 **이미 존재하면 → 신규 생성을 우선**
-- 덮어쓰기·자동 보완 금지 (전날 파일을 잘못 수정하는 사고 방지)
-- 같은 날짜 재실행 시: 기존 파일을 그대로 두고 trigger run을 종료
-  (수동 재시작이 필요하면 미르가 기존 파일을 archive로 이동 후 재실행)
+- `inbox/scout/$TODAY.md` 가 **이미 존재하면 → 현재 run 종료** (덮어쓰기·자동 보완 금지, 전날 파일을 잘못 수정하는 사고 방지)
+- 같은 날짜 재실행이 필요하면: 미르가 기존 파일을 `inbox/scout/archive/` 로 이동 후 재실행
 
 ### Step 1 — 관심 키워드 귀납 추출
 `knowledge/log.md` 마지막 30개 항목을 읽는다.
@@ -105,33 +105,50 @@ Step 1 에서 추출한 키워드로 PubMed 검색
 마지막 줄에 다음 추가:
 `> Scout 완료 {실행시각}. ⭐ {N}건 발견. 원하는 항목 [ ] → [o] 체크 시 정오 12:00에 자동 처리됩니다.`
 
-### Step 7 — main 브랜치에 직접 커밋·푸시
+### Step 7 — 브랜치 생성 + PR (Deep Extract 와 동일 흐름)
 
-원격 환경 기본 동작(자동 branch 생성)을 우회하고 `main`에 바로 반영한다.
-미르가 모바일 GitHub 앱에서 `main` 브랜치 inbox/scout/ 를 직접 열람·편집할 수 있도록 함.
+**배경 (2026-04-19 변경)**: 이전 Step 7 은 `git push origin main` 직접 푸시였으나,
+플랫폼 샌드박스가 main 직접 push 를 차단하고 `main-{random}` 브랜치로 자동 리다이렉트함이 확인됨 (`sessions/2026-04-19-routines-trigger-diagnosis.md` 참조).
+예측 가능한 브랜치명 + PR 생성으로 전환 — 미르가 모바일 GitHub 앱 알림으로 인지 → 원탭 머지.
 
-Bash 실행:
+#### 7-1. 브랜치 생성 및 push
+
 ```bash
-# 1. main 브랜치로 이동 (없으면 origin/main 기준 생성)
-git checkout main 2>/dev/null || git checkout -B main origin/main
+BRANCH="claude/scout-$TODAY"
 
-# 2. 원격 main 최신 상태 반영 (Deep Extract 등 다른 작업 대비)
-git pull origin main --rebase
+# origin/main 최신을 base 로 새 브랜치 생성
+git fetch origin main
+git checkout -B $BRANCH origin/main
 
-# 3. Scout 결과 파일 + archive 이동 결과까지 stage
+# Scout 결과 파일 + archive 이동 결과 stage
 git add -A inbox/scout/
 
-# 4. 커밋 (YYYY-MM-DD와 N은 실제 값으로 치환)
-git commit -m "feat(scout): YYYY-MM-DD Scout Report — ⭐ {N}건"
+# 커밋 ({TODAY}, {N} 은 실제 값으로 치환)
+git commit -m "feat(scout): $TODAY Scout Report — ⭐ {N}건"
 
-# 5. main에 직접 push (실패 시 1회 재시도)
-git push origin main || (sleep 5 && git push origin main)
+# 브랜치 push (실패 시 1회 재시도)
+git push -u origin $BRANCH || (sleep 5 && git push -u origin $BRANCH)
 ```
 
-주의:
-- 실행 시작 시점에 이미 main이 아닐 수 있으므로 `git checkout main` 먼저
-- `git pull --rebase`로 충돌 방지
-- push 재시도 후에도 실패하면 사유 기록 후 종료 (branch에 fallback 커밋 남기지 말 것)
+#### 7-2. PR 생성 (MCP GitHub 도구)
+
+`mcp__github__create_pull_request` 로:
+- owner: `jackmir-explorer`
+- repo: `chartji`
+- base: `main`
+- head: `$BRANCH` (즉 `claude/scout-$TODAY`)
+- title: `feat(scout): $TODAY Scout Report — ⭐ {N}건`
+- body: ⭐ 논문 각각의 PMID + 한 줄 요약 (미르가 모바일에서 제목·본문만 보고도 대략 파악 가능하도록)
+
+#### 7-3. 동작 흐름
+- 미르가 GitHub 모바일 앱 PR 알림 확인 → 원탭 머지 → main 반영
+- merge 후 [o] 체크는 main 의 `inbox/scout/$TODAY.md` 에서 수행 가능
+- Deep Extract routine 은 정오 12:00 에 main 기준으로 [o] 항목 처리 (기존 동작 그대로)
+
+#### 주의
+- 브랜치명은 예측 가능한 `claude/scout-YYYY-MM-DD` — 랜덤 suffix 금지
+- 재실행 방지는 Step 0 의 "기존 파일 존재 시 종료" 정책이 담당 — Step 7 에 도달하는 시점에는 항상 새 파일
+- PR 생성 실패 시 사유 기록 후 종료 (브랜치는 이미 push 됐으므로 미르가 수동으로 PR 생성 가능)
 
 ---
 
