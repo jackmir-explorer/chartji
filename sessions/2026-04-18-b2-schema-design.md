@@ -175,19 +175,20 @@ B2는 big-bang 아닌 점진 가능:
 5. `agents/librarian.md` ingest skill 전면 개정 (v1→v2 컴파일 규칙)
 6. `agents/auditor.md` vocabulary drift 규칙 추가
 7. `skills/librarian/SKILL.md` (있다면) 개정
+8. **`skills/paper-extract/SKILL.md` B2 포맷으로 업데이트** — Deep Extract routine 이 이 skill 을 사용함. B2 전환 후 Deep Extract 가 v1 포맷으로 쓰면 즉시 drift 발생. ingest skill 과 **동시에** 개정 필수.
 
 **Phase 3 — Runtime 지원**
-8. `src/knowledge-bundle.js` v1/v2 공존 허용 (현재는 v1만)
-9. `src/app.js` uiHooks 경로 추가 (Liby 힌트 · Guide · Draft append 전부)
-10. `src/prompts.js` KNOWLEDGE_CURATION_PROMPT를 uiHooks 기반으로 조정 (오늘 추가한 분업 문구는 그대로 유효, 경로만 바뀜)
+9. `src/knowledge-bundle.js` v1/v2 공존 허용 (현재는 v1만)
+10. `src/app.js` uiHooks 경로 추가 (Liby 힌트 · Guide · Draft append 전부)
+11. `src/prompts.js` KNOWLEDGE_CURATION_PROMPT를 uiHooks 기반으로 조정 (오늘 추가한 분업 문구는 그대로 유효, 경로만 바뀜)
 
 **Phase 4 — 마이그레이션 시작**
-11. `rules/data-flow.md` 신설 (B2 기준 UI surface × section 매트릭스, RedFlag 격리 원칙, Architect/Designer 계약)
-12. 검증용 3개 엔트리 B2 변환 (mounjaro / wegovy / urticaria) → Chrome 실기 검증
-13. 나머지 77 엔트리는 Liby가 건드릴 때 점진 변환
+12. `rules/data-flow.md` 신설 (B2 기준 UI surface × section 매트릭스, RedFlag 격리 원칙, Architect/Designer 계약)
+13. 검증용 3개 엔트리 B2 변환 (mounjaro / wegovy / urticaria) → Chrome 실기 검증
+14. 나머지 77 엔트리는 Liby가 건드릴 때 점진 변환
 
 **Phase 5 — handoff**
-14. 오늘의 handoff 문서 대체/아카이빙 방침 결정
+15. 오늘의 handoff 문서 대체/아카이빙 방침 결정
 
 ---
 
