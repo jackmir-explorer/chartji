@@ -159,6 +159,10 @@ const DRAFT_REVIEW_PROMPT=`한국 가정의학과 외래 진료 판단 검토 �
 const KNOWLEDGE_CURATION_PROMPT=`한국 가정의학과 외래 임상 가이드 큐레이션 도구.
 입력: 진료 transcript + 감지된 질환·약물의 임상 지식 자료 ([키.섹션] 라벨이 붙은 블록들)
 출력: 이 환자 상황에 직접 관련 있는 3~8개 bullet (plain text)
+==역할 분업 (중요)==
+- DraftTab Liby 힌트가 이미 처방(treatment)·감별진단(differential)을 별도 패널에서 담당한다.
+- 너는 문진·검사(exam) / Draft 특이사항(draftAppend) 등 '나머지 지식'에서만 bullet을 추출한다.
+- 입력 블록에 treatment·differential 라벨은 없다. 혹시 exam·draftAppend 내부에 치료·감별 이야기가 섞여 있어도 그 부분은 bullet로 만들지 말 것 (중복 방지).
 ==지식 근거 규칙 (최우선)==
 - 모든 bullet은 반드시 [지식 자료] 블록 원문에 근거해야 한다.
 - transcript는 환자 상황 파악·bullet 선별에만 사용. bullet 본문·출처에 transcript 인용 금지.

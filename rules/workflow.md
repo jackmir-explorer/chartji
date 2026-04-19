@@ -2,15 +2,19 @@
 
 ## 1. 기본 워크플로우 (구현)
 
-사용자가 `Designer`를 호출하면 시작.
+사용자가 `Architect`를 호출하면 시작. (구 워크플로우는 Designer부터였음 — Architect 신설로 변경)
 
 ```
-사용자 → Designer → 미르 승인 → Builder → Reviewer → QA → 사용자
-                                    ↑                |
-                                    └── 이상 소견 ──┘
+사용자 → Architect → Designer → 미르 승인 → Builder → Reviewer → QA → 사용자
+           │                                   ↑                |
+           STOP                                └── 이상 소견 ──┘
+           │
+           └→ 미르 판단 대기 (기존 합의 변경 여부)
 ```
 
-- Designer가 범위 체크 + 설계서를 작성한다
+- Architect가 구조 경계(`panel-contracts.md` / `data-flow.md` / `file-ownership.md`) 위반 여부를 판정한다
+- STOP 판정 시 Designer로 넘기지 않고 미르 판단을 기다린다
+- PASS 판정 시 Architect가 넘긴 제약을 전제로 Designer가 범위 체크 + 설계서를 작성한다
 - 미르 승인 후 Builder가 실행한다
 - Reviewer에서 이상 발견 시 Builder로 반환 (최대 3회)
 - 3회 초과 시 미해결 이슈 목록과 함께 강제 QA 전달
