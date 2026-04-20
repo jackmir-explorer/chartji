@@ -12,7 +12,7 @@
 | Phase 1 — 섹션 vocabulary + 출처 3-tier | ✅ | [#6](https://github.com/jackmir-explorer/chartji/pull/6) | 2026-04-19 |
 | Phase 2 — 도구 개정 + data-flow.md 승격 | ✅ | [#6](https://github.com/jackmir-explorer/chartji/pull/6) | 2026-04-19 |
 | Phase 3A — bundle 헤더 docs + file-ownership | ✅ | [#7](https://github.com/jackmir-explorer/chartji/pull/7) | 2026-04-20 |
-| **Phase 3B — app.js uiHooks 4-field + confidence 필터 + mounjaro v2 fixture** | 🟡 착수 대기 | — | — |
+| **Phase 3B — app.js uiHooks 3-field(hint/guide/draftAppend) + mounjaro v2 fixture** | 🟡 착수 대기 | — | — |
 | Phase 3C — prompts.js KNOWLEDGE_CURATION_PROMPT | ⏸ | — | — |
 | Phase 4 — 엔트리 B2 마이그레이션 | ⏸ | — | — |
 | Phase 5 — handoff 문서 아카이빙 | ⏸ | — | — |
@@ -24,15 +24,13 @@
 ### 코드 변경 — `src/app.js`
 - **엔트리 소비 시점에 v1/v2 dispatch** (bundle 헤더 감지 규칙 준수)
   - `entry.sections ? v2경로 : v1경로`
-- **v2 경로 구현**: uiHooks 4-field 순회
-  - `uiHooks.hint`  (배열) → Liby 힌트 패널
+- **v2 경로 구현**: uiHooks **3-field** 순회 (draftTemplate은 Phase 4로 이연 — §3 참조)
+  - `uiHooks.hint`  (배열) → Liby 힌트 (DraftTab draftHints)
   - `uiHooks.guide` (배열, `"*"` 허용) → Guide tab 큐레이션
   - `uiHooks.draftAppend` (배열 or null) → Working Draft 하단 append
-  - `uiHooks.draftTemplate` (단일 key or null) → Working Draft **전체 교체**
+  - `uiHooks.draftTemplate` → **Phase 3B에서 소비하지 않음**. bundle data layer에 field만 보존.
+    v2 경로 Working Draft 생성은 generic template 사용 (v1 동작과 동일).
 - **RedFlag exclusion**: uiHooks 어떤 field도 RedFlag 패널에 주입 금지 (`rules/data-flow.md` §2)
-- **confidence 필터링** (CMO 안전 장치):
-  - Liby 감지 confidence 임계값 미만이면 `draftTemplate` 배포 보류 → `draftAppend`로 fallback
-  - 임계값 **결정 필요** (초안: 0.8). Designer 단계에서 미르와 확정
 
 ### 데이터 추가 — `src/knowledge-bundle.js`
 - **mounjaro v2 fixture 엔트리 최초 도입** (end-to-end 검증용)
@@ -55,7 +53,7 @@
 
 ## 3. 이미 결정된 것들 (재논의 금지)
 
-### ⭐ draft-template uiHooks 라우팅 — Option A 확정
+### ⭐ draft-template schema — Option A 확정
 **Boss 4관점(CMO/CLO/CFO/CVO) 만장일치 (2026-04-19)**
 
 - `uiHooks.draftTemplate`: `"section key" | null` (신규 field)
@@ -64,12 +62,19 @@
 - 의미: Working Draft **전체 교체** (draftAppend = 하단 append와 다른 layer)
 - 현재 사용 엔트리: `obesity.md`, `vaccination.md` 2개 (아직 v2 변환 전)
 
-메모리 참조: `project_b2_draft_template_pending.md`
+### ⭐ draft-template 소비 경로 — 의사 수동 선택 확정 (2026-04-20 Boss 재검토)
+**Boss 4관점 만장일치 — 자동 swap + confidence 필터 방안 폐기**
 
-### CMO 안전 장치 (필수 구현)
-- draftTemplate는 "전체 교체" 파괴적 동작 — Liby 감지 confidence 기준 필터링 필수
-- confidence < 임계값 → draftTemplate 보류 + draftAppend fallback
-- 임계값 결정은 Phase 3B Designer 단계 (권고: 0.8)
+- 이전 plan(자동 swap + confidence ≥ 0.8 필터)은 CMO false-positive 파괴 리스크 최대 우려 → 원천 제거 위해 폐기
+- **확정 정책**: Working Draft 기본 생성은 generic template. 엔트리에 `draftTemplate` 값이 있을 때
+  UI에 "템플릿 적용" 버튼/드롭다운 노출 → 의사 수동 클릭 시에만 전체 교체
+- UI wiring은 **Phase 4** (obesity/vaccination v2 마이그레이션 시점)와 함께 구현.
+  Phase 3B는 bundle data layer field 보존만.
+- 근거: confidence 기계 제거로 (a) CMO 파괴 리스크 소멸, (b) CLO 의사 주도권 명시,
+  (c) CFO 코드·유지보수 단순화, (d) CVO 인지부하 감소 — 4관점 모두 개선.
+
+(이전 확정 메모리 `project_b2_draft_template_pending.md`는 repo에 물리 파일로 존재하지 않음 — ghost reference.
+본 §3가 확정 상태의 단일 source of truth.)
 
 ### 섹션 vocabulary 18개 + uiHooks 기본값 (confirmed 2026-04-19)
 - `knowledge/section-vocabulary.md`에 확정
@@ -103,26 +108,36 @@ sessions/2026-04-20-b2-phase3a.md   - 직전 세션 기록
 ## 5. Architect 호출 예상 진단
 
 ### 영향 경계
-- **UI Surface: 3개** — Liby 힌트 / Guide tab / Working Draft (RedFlag는 제외)
-- **Data Field**: 본격적 변경. bundle entry dispatch + uiHooks 전체 field 소비
+- **UI Surface: 3개** — Liby 힌트 / Guide tab / Working Draft draftAppend (RedFlag는 제외)
+- **Data Field**: bundle entry dispatch + uiHooks **3-field**(hint/guide/draftAppend) 소비.
+  draftTemplate은 Phase 4로 이연 (§3 참조).
 - **파일**:
   - `src/app.js` (필수 수정)
   - `src/knowledge-bundle.js` (mounjaro v2 엔트리 추가 — Liby ingest skill 경유가 원칙이나 수동 추가 불가피, 이 예외 Designer 설계서에 명시)
   - **미건드림**: `src/prompts.js` (3C), `src/components/panels.js` (패널 props 변경 없이 app.js 단에서 dispatch)
 
-### 기존 합의 대조 (예상)
-- `panel-contracts.md`: Liby hint / Guide tab / Working Draft / RedFlag 역할 경계 — 3B가 역할 확장 아닌 라우팅 구현이므로 무관
-- `data-flow.md`: ⭐ **primary ✓ 준수 필수**. 새 primary 추가 변경 있으면 STOP
-- `file-ownership.md`: src/app.js 책임 "공유 상태 관리 + 레이아웃 조율" 넘기지 말 것 — 비즈니스 로직은 api.js 위임
-- `forbidden.md`: "Liby ingest 후 KNOWLEDGE_BUNDLE 새 키 → Triage 감지 확장 자동 실행" — mounjaro v2 엔트리 추가 시 이 규칙 발동 검토 필요
+### 기존 합의 대조 (Architect 2026-04-20 진단 결과)
+- `panel-contracts.md`: **무관** — 3B는 역할 확장 아닌 라우팅 구현
+- `data-flow.md`: **primary ✓ 준수 필수**. mounjaro 섹션은 전부 표준 key — 매트릭스 primary 이동·추가 없음
+- `file-ownership.md`: src/app.js 책임 "공유 상태 관리 + 레이아웃 조율" 유지
+- `forbidden.md`: "KNOWLEDGE_BUNDLE 직접 편집 금지" — mounjaro 수동 추가는 **1회 한정 예외**로 설계서 명시 필요
 
-### 예상 Designer 제약
-1. v1 경로 코드 완전 보존 (함수 분리 권장, if-else dispatch)
-2. RedFlag 패널 props 변경 금지
-3. uiHooks 4 field 순서 고정: hint / guide / draftAppend / draftTemplate
-4. confidence 임계값 결정 후 착수 (미르 확정)
-5. mounjaro 컴파일 시 dosing 섹션 처리 방식 확정 (병합 vs 분리)
-6. rules/data-flow.md matrix 위반 변경 발견 시 STOP 후 미르 질문
+### Designer 제약 (확정)
+1. v1 경로 코드 완전 보존. `entry.sections` 감지 후 if-else dispatch. 기존 v1 인라인 수집 로직은 함수 분리 권장.
+2. v2 경로 uiHooks **3-field** 순서 고정: hint → guide → draftAppend.
+3. `draftTemplate`은 Phase 3B에서 소비 금지. bundle data layer에서 field만 보존 (Phase 4 UI wiring과 함께 consumer 구현).
+4. RedFlagPanel props 변경 절대 금지. Reviewer diff 검사 필수.
+5. `"*"` guide 값 처리 (topic kind 기본값) — 전 섹션 순서대로 펼치는 generic 로직. mounjaro는 drug이라 해당 없으나 구현은 3C 호환되게.
+6. mounjaro dosing 섹션 처리 — 원본 md 3개(시작/증량 / 최대 / 감량):
+   - 옵션 A: 단일 `dosing` 섹션 병합
+   - 옵션 B: `dosing` + 자유 섹션 분리
+   - → Designer 설계서에 선택 근거 명시, 미르 승인 포함.
+7. mounjaro 수동 추가는 Liby ingest 원칙의 **1회 한정 예외**. 설계서에 "Phase 3B end-to-end 검증용 — Phase 3C 이후 재ingest 유예" 명기.
+8. v2 경로 Working Draft LLM 프롬프트에 섹션 content inject 정책 결정 필요:
+   - v1은 treatment/differential을 knowledgeCtx로 prompt에 inject
+   - v2는 uiHooks가 UI surface 라우팅만 정의
+   - 권고: Phase 3B는 `draftAppend`만 literal append. hint/guide content의 prompt inject는 Phase 3C prompts.js 개편과 묶어 결정.
+9. 구조 문서 업데이트 필요 **없음** — 본 Phase 3B는 기존 rule 계약의 구현.
 
 ---
 
@@ -131,10 +146,11 @@ sessions/2026-04-20-b2-phase3a.md   - 직전 세션 기록
 - [ ] v1 엔트리 동작 regression-free (Chrome 실기 샘플 3개 이상)
 - [ ] v2 mounjaro end-to-end:
   - [ ] Liby 힌트에 indication/dosing 뜸
-  - [ ] Guide tab에 insurance/precaution 뜸
+  - [ ] Guide tab에 insurance/precaution/contraindication/comparison 뜸
   - [ ] RedFlag에 미표시
-  - [ ] Working Draft 정상 생성 (draftTemplate 없음, generic template 사용)
-- [ ] confidence 필터링 로직 존재 + 테스트 케이스 통과
+  - [ ] Working Draft 정상 생성 (generic template 사용 — v1 동작과 동일)
+- [ ] confidence 관련 코드 **전무** (grep으로 확인 — 채택 안 함)
+- [ ] draftTemplate 소비 코드 **전무** (Phase 4로 이연 — field 보존만)
 - [ ] `rules/data-flow.md` matrix primary ✓ 준수 (시나리오 테스트)
 - [ ] console 에러 없음
 - [ ] `git diff` 스코프: `src/app.js` + `src/knowledge-bundle.js` (mounjaro 엔트리만)
@@ -144,17 +160,14 @@ sessions/2026-04-20-b2-phase3a.md   - 직전 세션 기록
 ## 7. 위험·GOTCHA
 
 ### 높음
-- **draftTemplate 파괴적 동작**: Working Draft 전체 교체 — confidence 필터링 누락 시 오감지로 전체 draft 망가짐
-- **mounjaro 컴파일의 dosing 처리**: 원본 md에 dosing 관련 섹션 3개(시작/최대/감량). 단일 `dosing` 섹션으로 병합할지, 자유 섹션으로 분리할지 Designer에서 결정 필요
+- **mounjaro 컴파일의 dosing 처리**: 원본 md에 dosing 관련 섹션 3개(시작·증량 / 최대 / 감량). 단일 `dosing` 섹션으로 병합할지, 자유 섹션으로 분리할지 Designer에서 결정 필요
 - **Liby ingest 규칙 우회**: mounjaro 엔트리를 수동 추가하는 것은 Librarian 원칙("Liby ingest만 수정 권한") 위반이므로 설계서에 **명시적 예외** 기재 필요 ("Phase 3B end-to-end 검증용 1회 한정 수동 추가")
+- **draftTemplate 소비 금지**: Phase 3B에서 draftTemplate field를 읽어 Working Draft 교체 코드 작성 금지 (Phase 4 UI와 함께 구현). 실수로 v1 draftTemplate 경로 제거도 금지 — v1 엔트리에는 그대로 남아 있어야 함.
 
 ### 중간
 - **kind 감지 vs sections 감지**: v1은 `kind: "disease"|"drug"`만, v2는 `kind: "disease"|"drug"|"topic"`. Consumer는 `entry.sections` 먼저 검사 후 kind 읽기
 - **"*" guide 처리**: topic kind 기본값 `guide: ["*"]` — "전체 섹션 순서대로" 의미. 구현 시 순회 로직 주의
-- **draftAppend는 배열, draftTemplate은 단일 key**: 쓰임새 다름. 타입 체크 필수
-
-### 낮음
-- confidence 0.8 임계값은 초안 — Chrome 실기 중 감지 확인해서 0.7/0.85 등 조정 가능성
+- **draftAppend 타입**: 배열(section key 리스트). 엔트리의 해당 섹션 content를 Working Draft 하단에 순서대로 append.
 
 ---
 
@@ -187,7 +200,7 @@ sessions/2026-04-20-b2-phase3a.md   - 직전 세션 기록
 - `sessions/2026-04-20-b2-phase3a.md` — bundle 헤더 + file-ownership 블록
 
 ### Memory
-- `project_b2_draft_template_pending.md` — **Option A 확정 상태** (단일 key field)
+- `project_b2_draft_template_pending.md` — ghost reference (물리 파일 없음). 확정 상태는 본 문서 §3 참조.
 
 ---
 

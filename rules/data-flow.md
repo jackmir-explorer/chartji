@@ -47,7 +47,7 @@ RedFlag 열은 **전 row에서 ✗**로 고정 (§2 참조).
 | `comparison` | | ✓ (drug) | | ✗ 절대 금지 |
 | `notes` | | ✓ (설명용) | | ✗ 절대 금지 |
 | `draft-append` | | | ✓ (disease primary) | ✗ 절대 금지 |
-| `draft-template` | (uiHooks 라우팅 **보류** — Phase 3 재논의) | | | ✗ 절대 금지 |
+| `draft-template` | (의사 수동 선택 UI — Phase 4 wiring) | | | ✗ 절대 금지 |
 | 자유 섹션 | kind별 기본값 보충 | kind별 기본값 보충 | — | ✗ 절대 금지 |
 
 ### uiHooks 기본값 앵커
