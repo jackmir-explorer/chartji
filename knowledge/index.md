@@ -50,6 +50,7 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - dizziness.md    — 어지럼증 기본 문진 11항목 + 편두통 추가 문진 [문진/검사]
 - obesity.md    — 비만 체중감량 Draft Template + 위고비 처방 기준 + Mayo Clinic 표현형 + 단백질 ABC [CLINICAL/TIPS/REGULATORY]
 - dysphonia.md  — 목소리 이상/쉰목소리: 수분 섭취·strap muscle 마사지 (MTD) [CLINICAL — 조건부]
+- heart-failure.md — 심부전 parent: 분류(HFrEF/HFmrEF/HFpEF) + GDMT 4 pillars + 의뢰 6시점 + I NEED HELP + 감염 예방접종 6종 [CLINICAL] — dosing·protocol은 guide 제외 (전문의 titration 영역)
 
 ### by-drug/
 - vaccine-interval.md — 백신 접종 간격 원칙 (생+사/생+생/사+사) [CLINICAL] — topic
@@ -69,4 +70,5 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - glp1-selection-strategy.md — GLP-1 비만약 선택 전략: 위고비 vs 마운자로 10기준·Dose Escalation·반응예측·Interval Tx·SMI·전당뇨 [TIPS/INSIGHTS/CLINICAL]
 
 ### guidelines/
-- adult-vaccination-summary.md — 성인 예방접종 전체 요약 + 항암 독감백신 **타이밍 기반** (ANC 폐기, ASCO 2024) [CLINICAL] — topic
+- adult-vaccination-summary.md — 성인 예방접종 전체 요약 + 항암 독감백신 **타이밍 기반** (ANC 폐기, ASCO 2024) + 심부전 환자 고위험 예방접종 링크 [CLINICAL] — topic
+- heart-failure-referral.md — 심부전 상급병원 의뢰 기준: 의뢰 6시점 세밀화 + I NEED HELP 약어 + 전원 최적시기 4단계 곡선 [CLINICAL] — topic (parent: heart-failure)
