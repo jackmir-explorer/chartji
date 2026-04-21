@@ -183,7 +183,7 @@ function RedFlagPanel(props){
           {findings.map(function(f,i){
             var ss=sevStyle[f.severity]||sevStyle.clarify;
             return (
-              <div key={i} style={{padding:"5px 8px",background:ss.bg,
+              <div key={(f.label||f.severity||"")+"-"+i} style={{padding:"5px 8px",background:ss.bg,
                 border:"1px solid "+ss.border,borderRadius:5}}>
                 <div style={{display:"flex",alignItems:"center",gap:6,marginBottom:2}}>
                   <span style={{fontSize:8,fontWeight:700,color:ss.color,

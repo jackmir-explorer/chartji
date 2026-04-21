@@ -655,9 +655,9 @@ function App(){
               </button>
             </div>
 
-            <RedFlagPanel key={rfKey} raw={raw} apiKey={apiKey}/>
-            <MissingPanel key={missingKey} raw={raw} apiKey={apiKey} followUpCtx={followUpCtx}/>
-            <TriagePanel key={triageKey} raw={raw} apiKey={apiKey} followUpCtx={followUpCtx}
+            <RedFlagPanel key={"rf-"+rfKey} raw={raw} apiKey={apiKey}/>
+            <MissingPanel key={"missing-"+missingKey} raw={raw} apiKey={apiKey} followUpCtx={followUpCtx}/>
+            <TriagePanel key={"triage-"+triageKey} raw={raw} apiKey={apiKey} followUpCtx={followUpCtx}
               onDetect={function(cats){setDetectedCalcs(cats||[]);}}
               differentialShort={differentialShort}/>
 

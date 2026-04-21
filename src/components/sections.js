@@ -403,7 +403,7 @@ function CalcTabContent(props){
                   textTransform:"uppercase"}}>{tableKey}</div>
                 {table.map(function(row,i){
                   return (
-                    <div key={i} style={{fontSize:11,color:"#94a3b8",
+                    <div key={(row.range||"")+"-"+i} style={{fontSize:11,color:"#94a3b8",
                       display:"flex",gap:8,padding:"2px 0"}}>
                       <span style={{color:"#60a5fa",minWidth:70,
                         fontFamily:"'JetBrains Mono',monospace"}}>{row.range}</span>

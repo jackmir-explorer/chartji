@@ -7,7 +7,7 @@ function BulletList(props){
     <div style={{display:"flex",flexDirection:"column",gap:3}}>
       {items.map(function(item,i){
         return (
-          <div key={i} style={{display:"flex",gap:5,alignItems:"flex-start"}}>
+          <div key={String(item).slice(0,80)+"-"+i} style={{display:"flex",gap:5,alignItems:"flex-start"}}>
             <span style={{color:color,flexShrink:0,marginTop:3,fontSize:7}}>•</span>
             <span style={{fontSize:small?10.5:11.5,color:"#c8cfe0",lineHeight:1.6}}>{item}</span>
           </div>
