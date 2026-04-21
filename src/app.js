@@ -1,4 +1,34 @@
 const {useState,useRef,useEffect}=React;
+
+/* kind별 uiHooks 기본값 (knowledge/section-vocabulary.md line 70-99 정합).
+   엔트리가 uiHooks 필드를 명시하지 않으면 kind별 기본값을 상속. 필드별 부분 override 허용. */
+var UIHOOKS_DEFAULTS={
+  disease:{hint:["protocol"],guide:["classification","exam","monitoring","contraindication","pregnancy","referral","differential"],draftAppend:["draft-append"]},
+  drug:   {hint:["indication","dosing","schedule"],guide:["contraindication","precaution","comparison","insurance"],draftAppend:null},
+  topic:  {hint:[],guide:["*"],draftAppend:null}
+};
+function getUiHooks(e){
+  var base=UIHOOKS_DEFAULTS[e&&e.kind]||{};
+  var over=(e&&e.uiHooks)||{};
+  return {
+    hint:        over.hint        !==undefined?over.hint        :base.hint,
+    guide:       over.guide       !==undefined?over.guide       :base.guide,
+    draftAppend: over.draftAppend !==undefined?over.draftAppend :base.draftAppend,
+    draftTemplate: over.draftTemplate
+  };
+}
+/* Guide tab 노출 조건 — 엔트리가 실제 큐레이션 가능한 섹션을 가질 때만 true.
+   기본값 상속 후 교집합이 공집합이면 탭 자체 숨김 (panel-contracts.md Guideline Assist 강화). */
+function hasGuidableContent(e){
+  if(!e) return false;
+  if(e.sections){
+    var keys=getUiHooks(e).guide||[];
+    if(keys.indexOf("*")!==-1) return Object.keys(e.sections).length>0;
+    return keys.some(function(k){return e.sections[k]&&e.sections[k].content;});
+  }
+  return !!(e.exam||e.draftAppend||e.treatment||e.differential);
+}
+
 /* ══════════════════════════════════════════════════════════
    APP
 ══════════════════════════════════════════════════════════ */
@@ -76,7 +106,7 @@ function App(){
         if(e.sections){
           /* v2: uiHooks.guide 키 순회. "*"는 전 섹션 펼침.
                  primarySources·sections[k].sources는 LLM이 [출처: ...]에 쓰도록 ctx에 동봉. */
-          var hooks=e.uiHooks||{};
+          var hooks=getUiHooks(e);
           var keys=hooks.guide||[];
           if(keys.indexOf("*")!==-1) keys=Object.keys(e.sections);
           if(e.primarySources&&e.primarySources.length){
@@ -94,7 +124,7 @@ function App(){
         }
       });
     }
-    if(!knowledgeCtx){ setCurationText("[감지된 지식 없음]"); return; }
+    if(!knowledgeCtx) return;  /* C: Guide tab 노출 조건 강화로 도달 불가 — 안전 guard만 유지 */
     setCurationLoading(true); setCurationText("");
     try{
       var r=await generateKnowledgeCuration(raw,apiKey,knowledgeCtx);
@@ -139,7 +169,7 @@ function App(){
               if(e.sections){
                 /* v2: draftAppend 키만 literal append. knowledgeCtx inject 없음 (3C와 묶음).
                        draftTemplate 소비 안 함 (Phase 4 UI wiring 시점). */
-                var hooks=e.uiHooks||{};
+                var hooks=getUiHooks(e);
                 (hooks.draftAppend||[]).forEach(function(k){
                   var s=e.sections[k];
                   if(s&&s.content) appendParts.push(s.content);
@@ -400,8 +430,9 @@ function App(){
                       </button>
                     );
                   })}
-                  {/* 📖 임상 가이드 탭 — KNOWLEDGE_BUNDLE 매칭되는 감지 지식이 있을 때만 노출 */}
-                  {typeof KNOWLEDGE_BUNDLE!=="undefined"&&detectedCalcs.some(function(c){return !!KNOWLEDGE_BUNDLE[c];})&&(function(){
+                  {/* 📖 임상 가이드 탭 — 실제 큐레이션 가능한 섹션이 있을 때만 노출 (C 개선).
+                       uiHooks.guide ∩ sections 교집합이 공집합이면 탭 자체 숨김. */}
+                  {typeof KNOWLEDGE_BUNDLE!=="undefined"&&detectedCalcs.some(function(c){return hasGuidableContent(KNOWLEDGE_BUNDLE[c]);})&&(function(){
                     var on=leftTab==="guide";
                     return (
                       <button key="guide"
@@ -471,7 +502,7 @@ function App(){
                       var e=KNOWLEDGE_BUNDLE[c]; if(!e) return;
                       if(hasDisease&&e.kind==="drug") return;
                       if(e.sections){
-                        var hooks=e.uiHooks||{};
+                        var hooks=getUiHooks(e);
                         (hooks.hint||[]).forEach(function(k){
                           var s=e.sections[k];
                           if(s&&s.content) parts.push(k+":\n"+s.content);

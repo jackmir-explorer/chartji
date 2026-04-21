@@ -215,12 +215,7 @@ var KNOWLEDGE_BUNDLE = {
         "sources": []
       }
     },
-    "uiHooks": {
-      "hint": ["protocol"],
-      "guide": ["classification","exam","monitoring","contraindication","pregnancy","referral","differential"],
-      "draftAppend": ["draft-append"],
-      "draftTemplate": null
-    }
+    "uiHooks": null
   },
   "비만": {
     "kind": "disease",
@@ -254,12 +249,7 @@ var KNOWLEDGE_BUNDLE = {
         "sources": []
       }
     },
-    "uiHooks": {
-      "hint": ["protocol"],
-      "guide": ["classification","exam","monitoring","contraindication","pregnancy","referral","differential"],
-      "draftAppend": ["draft-append"],
-      "draftTemplate": null
-    }
+    "uiHooks": null
   },
   "구강건조증": {
     "kind": "disease",
@@ -872,12 +862,7 @@ var KNOWLEDGE_BUNDLE = {
         ]
       }
     },
-    "uiHooks": {
-      "hint": ["protocol"],
-      "guide": ["classification","exam","monitoring","contraindication","pregnancy","referral","differential"],
-      "draftAppend": ["draft-append"],
-      "draftTemplate": null
-    }
+    "uiHooks": null
   },
   "쉰목소리": {
     "kind": "disease",
@@ -894,12 +879,7 @@ var KNOWLEDGE_BUNDLE = {
         ]
       }
     },
-    "uiHooks": {
-      "hint": ["protocol"],
-      "guide": ["classification","exam","monitoring","contraindication","pregnancy","referral","differential"],
-      "draftAppend": ["draft-append"],
-      "draftTemplate": null
-    }
+    "uiHooks": null
   },
   "hoarseness": {
     "kind": "disease",
@@ -916,12 +896,7 @@ var KNOWLEDGE_BUNDLE = {
         ]
       }
     },
-    "uiHooks": {
-      "hint": ["protocol"],
-      "guide": ["classification","exam","monitoring","contraindication","pregnancy","referral","differential"],
-      "draftAppend": ["draft-append"],
-      "draftTemplate": null
-    }
+    "uiHooks": null
   },
   "목소리이상": {
     "kind": "disease",
@@ -938,12 +913,7 @@ var KNOWLEDGE_BUNDLE = {
         ]
       }
     },
-    "uiHooks": {
-      "hint": ["protocol"],
-      "guide": ["classification","exam","monitoring","contraindication","pregnancy","referral","differential"],
-      "draftAppend": ["draft-append"],
-      "draftTemplate": null
-    }
+    "uiHooks": null
   },
   "경부종괴": {
     "kind": "disease",
@@ -1027,12 +997,7 @@ var KNOWLEDGE_BUNDLE = {
         "sources": []
       }
     },
-    "uiHooks": {
-      "hint": ["protocol"],
-      "guide": ["classification","exam","monitoring","contraindication","pregnancy","referral","differential"],
-      "draftAppend": ["draft-append"],
-      "draftTemplate": null
-    }
+    "uiHooks": null
   },
   /* v2 (B2) topic — Phase 4 Liby ingest. 원본: knowledge/by-drug/glp1-selection-strategy.md */
   "glp1": {
@@ -1082,11 +1047,6 @@ var KNOWLEDGE_BUNDLE = {
         ]
       }
     },
-    "uiHooks": {
-      "hint": [],
-      "guide": ["*"],
-      "draftAppend": null,
-      "draftTemplate": null
-    }
+    "uiHooks": null
   }
 };

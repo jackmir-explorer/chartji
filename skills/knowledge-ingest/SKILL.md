@@ -250,6 +250,24 @@ var KNOWLEDGE_BUNDLE = {
 엔트리별 uiHooks 오버라이드는 `rules/data-flow.md`의 primary 셀 원칙을 위반하지 않는 범위에서만 허용.
 RedFlag 대상 노출은 uiHooks 어떤 필드에도 **절대 금지** (§rules/data-flow.md §2).
 
+#### uiHooks 기본값 상속 (2026-04-21 Phase 6 적용)
+
+`src/app.js` `UIHOOKS_DEFAULTS` + `getUiHooks()` 로 kind별 기본값 상속 구현됨. 엔트리 작성 시:
+
+- **kind 기본값과 완전 동일** → `"uiHooks": null` 로 저장 (필드 전체 생략). 상속으로 resolve.
+- **일부 필드만 다름** → `"uiHooks": { "hint": [...] }` 처럼 다른 필드만 명시 (필드별 partial override 지원). 명시하지 않은 필드는 기본값 상속.
+- **전혀 다른 커스텀** → 전 필드 명시. 이유를 주석으로 남겨 미래 엔트리가 기본값 복귀 여부 판단 가능하게 함.
+
+예) `위고비` 엔트리는 drug 기본값(`hint: indication,dosing,schedule`)과 다르게 `hint: dosing,contraindication`으로 customize — 이유는 "비만약은 schedule 불필요, 금기/용량이 최우선" (Phase 5c 회고).
+
+> ⚠ **GOTCHA — 중복 저장 금지**: 기본값과 동일한 필드를 관행적으로 복붙해 저장하면 D 리팩터(Phase 6) 효과 무력화. 기본값 확인 후 생략.
+
+#### kind 부여 일관성 점검 (2026-04-21 Phase 6 GOTCHA)
+
+ingest 완료 후 반드시 확인:
+- `knowledge/by-drug/{파일}.md` → bundle에 `kind: "drug"` 엔트리가 **실제로 등록**되었는지 Glob/grep으로 확인
+- 파일은 있으나 bundle 엔트리가 없는 경우(예: `mucomyst.md` · `pilocarpine.md` Phase 6 스캔에서 발견) → **분리 ingest 누락**. 기존 disease 엔트리 treatment에 내용이 묻혀있다면 drug 엔트리로 별도 등록 필요.
+
 ### 7-A. kind 필드 분류 기준 (필수)
 
 모든 엔트리는 반드시 `kind: "disease"` · `kind: "drug"` · `kind: "topic"` 중 하나를 가진다. 기본값 없음 — 누락 시 bundle 불완전.
