@@ -230,6 +230,13 @@ var KNOWLEDGE_BUNDLE = {
       "chemotherapy-influenza": {
         "content": "### 항암치료 중 독감백신 — 타이밍 기반 (ASCO 2024 / IDSA 2025)\n- **불활성 독감백신 권고** (생백신 금기)\n- 이상적 타이밍: **화학요법 직전 치료 ≥7일 후 & 다음 치료 2주 전** — 사이클 사이 접종\n- ANC 절대수치 기준(이전 500/1000 cutoff)은 현행 지침에서 **폐기** — 타이밍 중심으로 전환\n- 표적항암치료 중 경도~중등도 leukopenia → 독감백신 특히 권고\n- 생백신(MMR·수두·ZVL 등): 항암 중·후 3-6개월 금기 (개별 상담)",
         "sources": []
+      },
+      "heart-failure-link": {
+        "content": "### 심부전 환자 고위험 예방접종\n심부전 환자: 감염은 심혈관 합병증(급성 심근염·부정맥·혈전·사망) 위험 계기 → 독감·폐렴구균·대상포진·RSV·COVID·Tdap 권고. 세부 권고·기전은 `heart-failure.schedule` 참조.",
+        "sources": [
+          "대한심부전학회 심부전 생활백서 2025",
+          "Roubille F et al. Eur J Prev Cardiol 2025. doi:10.1093/eurjpc/zwaf366"
+        ]
       }
     },
     "uiHooks": null
@@ -1552,6 +1559,187 @@ var KNOWLEDGE_BUNDLE = {
         "content": "### GLP-1RA — 전당뇨 치료 [INSIGHTS]\n리뷰 논문 — 향후 대규모 RCT 필요\n\n적응 환자군: 전당뇨(공복혈당장애 또는 내당능장애) + 과체중/비만\n\n정상혈당 회복률:\n| 약물 | 정상혈당 회복 |\n|---|---|\n| Tirzepatide | 최대 93.3% |\n| Semaglutide | 최대 81% |\n| Liraglutide | 최대 66% |\n\n추가 효과: T2DM 진행 지연 / 체중↓ / 지방량↓ / 인슐린 감수성↑ / ASCVD·심부전 위험↓ (특히 tirzepatide) / MASLD 개선 가능성\n주의: 약물 중단 후 효과 부분적 소실 → 장기 유지 필요성 환자 교육 필수\n\n1차의료 적용:\n- 전당뇨+비만 환자 GLP-1RA 처방 시 '살 빼면서 혈당도 잡는다' 수치 근거\n- 약물 중단 후 효과 감소 → 장기 유지 필요성 상담 활용",
         "sources": [
           "Panou T et al. Diabetes Ther 2026. PMID:41984373, DOI:10.1007/s13300-026-01865-5"
+        ]
+      }
+    },
+    "uiHooks": null
+  },
+  /* ═══════════════════════════════════════════════════════════════════════
+     v2 (B2) — 2026-04-21 Liby ingest. 원본: knowledge/by-disease/heart-failure.md
+     Boss 승인안 D안: dosing·protocol은 guide에서 제외 (전문의 titration 영역).
+     hint: referral·schedule·monitoring → 일차진료에서 놓치면 안 되는 것만.
+     ═══════════════════════════════════════════════════════════════════════ */
+  "heart-failure": {
+    "kind": "disease",
+    "keywords": ["heart-failure","심부전","heart failure","CHF","congestive heart failure","HFrEF","HFpEF","HFmrEF","GDMT"],
+    "primarySources": [
+      "대한심부전학회. 심부전 진료지침 2022",
+      "대한심부전학회 사회봉사사/공헌위원회. 심부전 생활백서 2025 (https://www.kshf.or.kr/renewal/page/kshf_date.php)",
+      "Roubille F et al. Eur J Prev Cardiol 2025. doi:10.1093/eurjpc/zwaf366",
+      "Dunlay SM et al. JACC Heart Fail 2021;9(10):722-732"
+    ],
+    "sections": {
+      "definition": {
+        "content": "심부전은 심장이 구조적·기능적 이상으로 전신에 필요한 혈액을 충분히 박출하지 못하거나 충분히 받아들이지 못해 증상·징후(호흡곤란·부종·피로)가 발생하는 임상 증후군. 단일 질환이 아니라 다양한 심혈관·대사 원인이 수렴하는 최종 표현형.",
+        "sources": ["대한심부전학회 심부전 진료지침 2022"]
+      },
+      "classification": {
+        "content": "### LVEF 기반 3분류\n| 구분 | LVEF | 특징 |\n|---|---|---|\n| HFrEF | ≤ 40% | 수축기능 저하. GDMT 4 pillars 대상 |\n| HFmrEF | 41–49% | 중간 범주. HFrEF 치료 일부 준용 |\n| HFpEF | ≥ 50% | 이완기능 장애 중심 |",
+        "sources": ["대한심부전학회 심부전 진료지침 2022"]
+      },
+      "exam": {
+        "content": "### 증상·징후\n- 호흡곤란(운동 시 → 안정 시 → 좌위 호흡 순으로 진행)\n- 하지 부종, 체중 증가\n- 피로·운동능력 저하\n- 야간 기침, 발작성 야간 호흡곤란(PND)\n- 경정맥 팽대, 폐 수포음, S3 gallop\n\n### 초기 평가 (일차진료 범위)\n- 병력·신체진찰\n- 심전도 (좌각차단 등 비정상 시 주의)\n- 흉부 X선 (심비대·폐울혈)\n- NT-proBNP 또는 BNP\n- 혈액검사: CBC, 전해질, BUN/Cr, LFT, TSH, 철 대사(ferritin·TSAT), HbA1c\n- 심초음파 (LVEF 확인 — 상급기관 필요 시 의뢰)",
+        "sources": ["대한심부전학회 심부전 진료지침 2022"]
+      },
+      "protocol": {
+        "content": "### 1차 표준치료 — GDMT 4 Pillars (HFrEF)\n동시 또는 빠른 순차 titration이 원칙. **용량 titration은 전문의 영역**.\n1. ARNI / ACEi / ARB\n2. Beta-blocker (베타차단제)\n3. MRA (Spironolactone·Eplerenone)\n4. SGLT2 inhibitor\n\n### 2차 추가치료\n- 동율동·안정 시 HR ≥ 70 → 이바브라딘\n- 표준치료에도 악화로 입원 필요 → 베리시구앗\n- 심박수 조절 필요한 심방세동 → 디곡신\n\n### 비약물\n- 좌심실보조장치(LVAD), 심장이식, 완화치료\n- ICD/CRT-D (부정맥 예방)",
+        "sources": ["대한심부전학회 심부전 진료지침 2022"]
+      },
+      "dosing": {
+        "content": "> **전문의 titration 영역 — 일차진료는 모니터링 용도로만 참조**.\n\n### 표 1. ACEi 시작·목표 용량\n| 약제 | 시작 | 목표 |\n|---|---|---|\n| Captopril | 6.25 mg tid | 50 mg tid |\n| Enalapril | 2.5 mg bid | 10–20 mg bid |\n| Fosinopril | 5–10 mg qd | 40 mg qd |\n| Lisinopril | 2.5–5 mg qd | 20–40 mg qd |\n| Perindopril | 2 mg qd | 8–16 mg qd |\n| Ramipril | 2.5 mg qd | 5 mg bid |\n| Trandolapril | 0.5 mg qd | 4 mg qd |\n\n### 표 2. ARB 시작·목표 용량\n| 약제 | 시작 | 목표 |\n|---|---|---|\n| Candesartan | 4–8 mg qd | 32 mg qd |\n| Valsartan | 20–40 mg qd | 160 mg bid |\n| Losartan | 25–50 mg qd | 150 mg qd |\n\n### 표 3. ARNI\n| 약제 | 시작 | 목표 |\n|---|---|---|\n| Sacubitril/Valsartan | 49/51 mg bid | 97/103 mg bid |\n\n### 표 4. Beta-blocker\n| 약제 | 시작 | 목표 |\n|---|---|---|\n| Bisoprolol | 1.25 mg qd | 10 mg qd |\n| Carvedilol | 3.125 mg bid | 25 mg bid |\n| Metoprolol succinate (서방) | 12.5–25 mg qd | 200 mg qd |\n| Nebivolol | 1.25 mg qd | 10 mg qd |\n\n### 표 5. 신장기능별 MRA\n| 약제 | eGFR > 50 시작·유지 | eGFR 30–49 시작·유지 |\n|---|---|---|\n| Spironolactone | 12.5–25 → 25 qd / QOD | 12.5 → 12.5–25 qd |\n| Eplerenone | 25 → 50 qd | 25 QOD → 25 qd |",
+        "sources": ["대한심부전학회 심부전 진료지침 2022"]
+      },
+      "monitoring": {
+        "content": "1. 표준약물 치료 후 LVEF 40% 이상으로 개선된 경우에도 **표준약물 치료 유지 권고** (중단 금지)\n2. **혈압(BP), 심박수(HR) 확인**\n3. **신기능(BUN/Cr), 전해질(ELE) 모니터링**\n\n재진 시 고정 체크 항목 — 일차진료의 역할.",
+        "sources": ["대한심부전학회 심부전 진료지침 2022"]
+      },
+      "contraindication": {
+        "content": "- ACEi → ARNI 전환 시: **최소 36시간 wash-out** 필요 (혈관부종 위험)\n- 양쪽 콩팥동맥 협착\n- 임신 (ACEi/ARB/ARNI/SGLT2 모두 금기)\n- 기타 약물별 절대금기는 개별 제품 허가사항 참조",
+        "sources": ["대한심부전학회 심부전 진료지침 2022"]
+      },
+      "schedule": {
+        "content": "### 감염 = 심부전 악화 계기\n독감·COVID-19·폐렴구균·RSV·대상포진 감염은 심혈관 합병증 위험을 높인다(염증·응고항진·직접독성 경로). 심부전 환자에서 예방접종은 심부전 악화·입원·사망 예방의 선제적 관리 수단.\n\n### 심부전 환자 권고 예방접종 6종 (대한심부전학회 생활백서 2025)\n- **독감(인플루엔자) 백신**: 매년\n- **폐렴구균 백신**: PCV20 1회 또는 PCV15 + PPSV23 순차접종\n- **대상포진 백신**: 재조합 대상포진 백신(싱그릭스) 2회(0–6개월)\n- **RSV 백신**: ≥60세 1회 권고\n- **COVID-19 백신**: 최신 권장 간격대로 추가접종\n- **Tdap 백신**: 파상풍·디프테리아·백일해 매 10년마다\n\n### 2025 글로벌 심장학회 신규 발표 예방접종 권고\n- ACC (미국), ESC (유럽), EJPC (유럽), TSOC (대만), CSANZ (호주·뉴질랜드), FAC·SAC·CONAREC (아르헨티나) — 6개 학회 2025년 가이드라인에서 심부전/심혈관 환자 예방접종 권고 공통.\n\n성인 전체 예방접종 요약은 `vaccination-summary`, 개별 백신 엔트리는 `Tdap` / `대상포진` / `폐렴구균` 참조.",
+        "sources": [
+          "대한심부전학회 사회봉사사/공헌위원회. 심부전 생활백서 2025",
+          "Roubille F et al. Eur J Prev Cardiol 2025. doi:10.1093/eurjpc/zwaf366"
+        ]
+      },
+      "referral": {
+        "content": "### 진료지침에 따른 심부전 전문가 의뢰 6시점\n1. **LVEF와 상관없이 새롭게 발생한 심부전**\n2. **만성 심부전에서 위험요인이 새롭게 발생하거나 지속적으로 보일 때**\n   - 수축기 혈압 < 90 mmHg 또는 증상이 동반된 저혈압\n   - (지속적·반복적) 주사용 강심제 필요\n   - 폐울혈에 의해 NYHA III–IV 증상이나 심각한 피로 지속\n3. **3개월 이상 GDMT에도 지속적인 LVEF ≤ 35%**\n4. **심부전의 원인으로 2차적인 소견이 요구될 때** (심근염 의심, 판막질환 교정, 관상동맥 재관류)\n5. **매년 환자의 전반적 검토를 통한 예후 및 근본적 치료 계획 수립**\n6. **임상연구 등록 가능성 평가**\n\n### I NEED HELP (Stage D HF 약어)\n중증 심부전 대표 예시: Persistent or progressive severe LV failure / Repeated worsening (ER·hospitalization) / Persistent severe symptoms (NYHA III–IV).\n- **I**notropes need (강심제 필요)\n- **N**YHA Fc IV\n- **E**nd-organ dysfunction\n- **E**F < 20%\n- **D**efibrillator shock for VAs\n- **H**F hospitalization (recurrent)\n- **E**scalating diuretics dose\n- **L**ow BP\n- **P**rogressive GDMT intolerance",
+        "sources": [
+          "대한심부전학회 심부전 진료지침 2022",
+          "Dunlay SM et al. JACC Heart Fail 2021;9(10):722-732"
+        ]
+      },
+      "comparison": {
+        "content": "### HFrEF vs HFpEF 약물 차이\n| 구분 | HFrEF | HFpEF |\n|---|---|---|\n| 기본 약물 | GDMT 4 pillars (ARNI/ACE/ARB + BB + MRA + SGLT2) | SGLT2 억제제 + RAS 차단제 + 이뇨제 |\n| 이바브라딘 | 동율동·HR ≥ 70 조건부 추가 | 일반 권고 아님 |\n| 베리시구앗 | 표준치료에도 악화 시 | 일반 권고 아님 |",
+        "sources": ["대한심부전학회 심부전 진료지침 2022"]
+      },
+      "notes": {
+        "content": "### 전원 최적시기 개념 (그림 1)\n심부전 상태는 시간에 따라 중증도가 변동. 전원 시점은 너무 조기도, 너무 늦지도 않은 \"최적기\"가 중요.\n| 단계 | 상태 | 전원 판단 |\n|---|---|---|\n| 심부전 시작·지속 | NYHA I–II / GDMT 충족 / 입원 없음 | 조기 전원 불필요 |\n| **심부전 진행·악화** | NYHA III–IV / GDMT 감량 필요 / 잦은 입원 / ICD shock 반복 / 신장기능 악화 | **전원·의뢰 최적기** |\n| 심장 펌프 부전 | 다발성 장기 부전 / 심각한 영양실조 / 심장 액사 | 의뢰 너무 늦음 (비가역) |\n\n### 동반 고혈압 관리\n- LVEF 관계없이 BP ≥ 140/90 → 고혈압 약물치료 권고\n- HFrEF: ACEi/ARB + BB + 이뇨제 + MRA 사용 권고\n- 목표 미달 시 디하이드로피리딘계 CCB 추가 고려\n- HFpEF: HFrEF와 유사 기준·목표\n- 좌심실비대 동반 시 RAS 차단제 + CCB + 이뇨제 조합, SBP 120–130 mmHg 목표\n\n### 동반 당뇨병 관리\n- CVD 있거나 위험 높은 당뇨 환자: 심부전 없어도 SGLT2 억제제 표준치료 권고 (심혈관 사망·심부전 입원 예방)\n- HFrEF/HFmrEF + 당뇨: empagliflozin 또는 dapagliflozin 표준치료",
+        "sources": [
+          "대한심부전학회 심부전 진료지침 2022",
+          "Dunlay SM et al. JACC Heart Fail 2021;9(10):722-732"
+        ]
+      },
+      "draft-append": {
+        "content": "심부전 환자 재진 시 체크: ① 예방접종 상태(독감·폐렴구균·RSV·대상포진·COVID·Tdap) ② 의뢰 기준 해당 여부(I NEED HELP) ③ BP/HR ④ BUN·Cr·전해질.",
+        "sources": []
+      }
+    },
+    /* Boss D안: dosing·protocol은 guide에서 제외 (전문의 titration 영역). hint는 referral/schedule/monitoring 우선. */
+    "uiHooks": {
+      "hint":        ["referral","schedule","monitoring"],
+      "guide":       ["definition","classification","exam","schedule","monitoring","contraindication","comparison","referral","notes"],
+      "draftAppend": ["draft-append"]
+    }
+  },
+  "심부전": {
+    "kind": "disease",
+    "keywords": ["심부전","heart-failure","heart failure","CHF","HFrEF","HFpEF"],
+    "primarySources": [
+      "대한심부전학회. 심부전 진료지침 2022",
+      "대한심부전학회 사회봉사사/공헌위원회. 심부전 생활백서 2025",
+      "Roubille F et al. Eur J Prev Cardiol 2025. doi:10.1093/eurjpc/zwaf366",
+      "Dunlay SM et al. JACC Heart Fail 2021;9(10):722-732"
+    ],
+    "sections": {
+      "referral": {
+        "content": "### 의뢰 6시점\n1. LVEF와 상관없이 새롭게 발생한 심부전\n2. 만성 심부전에서 위험요인이 새롭게 발생·지속 (SBP < 90 / 주사용 강심제 필요 / NYHA III–IV 증상·피로)\n3. 3개월 이상 GDMT에도 지속적인 LVEF ≤ 35%\n4. 심부전의 원인으로 2차적 소견 요구 (심근염·판막·관상동맥)\n5. 매년 전반적 검토·예후·치료계획 수립\n6. 임상연구 등록 가능성 평가\n\n### I NEED HELP (Stage D HF)\nInotropes need / NYHA Fc IV / End-organ dysfunction / EF < 20% / Defibrillator shock for VAs / Recurrent HF hospitalization / Escalating diuretics dose / Low BP / Progressive GDMT intolerance",
+        "sources": [
+          "대한심부전학회 심부전 진료지침 2022",
+          "Dunlay SM et al. JACC Heart Fail 2021;9(10):722-732"
+        ]
+      },
+      "schedule": {
+        "content": "### 심부전 환자 권고 예방접종 6종 (생활백서 2025)\n독감(매년) / 폐렴구균(PCV20 1회 또는 PCV15+PPSV23) / 대상포진(싱그릭스 2회 0–6개월) / RSV(≥60세) / COVID-19 / Tdap(10년마다)\n\n감염 = 심부전 악화 계기. 염증·응고항진·직접독성 경로로 심혈관 합병증 위험↑.",
+        "sources": [
+          "대한심부전학회 사회봉사사/공헌위원회. 심부전 생활백서 2025",
+          "Roubille F et al. Eur J Prev Cardiol 2025. doi:10.1093/eurjpc/zwaf366"
+        ]
+      },
+      "monitoring": {
+        "content": "1. 표준약물 치료 후 LVEF ≥ 40%로 개선돼도 표준약물 유지\n2. BP·HR 확인\n3. BUN/Cr·전해질 모니터링",
+        "sources": ["대한심부전학회 심부전 진료지침 2022"]
+      },
+      "classification": {
+        "content": "HFrEF(LVEF ≤ 40%) / HFmrEF(41–49%) / HFpEF(≥ 50%)",
+        "sources": ["대한심부전학회 심부전 진료지침 2022"]
+      },
+      "draft-append": {
+        "content": "심부전 환자 재진 시 체크: ① 예방접종 상태(독감·폐렴구균·RSV·대상포진·COVID·Tdap) ② 의뢰 기준 해당 여부(I NEED HELP) ③ BP/HR ④ BUN·Cr·전해질.",
+        "sources": []
+      }
+    },
+    "uiHooks": {
+      "hint":        ["referral","schedule","monitoring"],
+      "guide":       ["classification","schedule","monitoring","referral"],
+      "draftAppend": ["draft-append"]
+    }
+  },
+  /* v2 (B2) topic — 2026-04-21 Liby ingest. 원본: knowledge/guidelines/heart-failure-referral.md */
+  "heart-failure-referral": {
+    "kind": "topic",
+    "parents": ["heart-failure"],
+    "keywords": ["heart-failure-referral","심부전 의뢰","심부전 전원","상급병원 의뢰","GDMT intolerance","I NEED HELP","Stage D HF"],
+    "primarySources": [
+      "대한심부전학회 심부전 진료지침 2022",
+      "Dunlay SM et al. JACC Heart Fail 2021;9(10):722-732"
+    ],
+    "sections": {
+      "referral": {
+        "content": "### 의뢰 6시점 — 세밀화\n**01. LVEF와 상관없이 새롭게 발생한 심부전**\n- 새 진단 시 원인 감별·초기 약물치료·심초음파 위해 의뢰\n- HFrEF/HFmrEF/HFpEF 어느 쪽이든 최초 진단 시점은 상급 평가 대상\n\n**02. 만성 심부전에서 위험요인이 새롭게 발생·지속**\n- 수축기 혈압 < 90 mmHg 또는 증상이 동반된 저혈압\n- (지속적·반복적) 주사용 강심제 필요\n- 폐울혈에 의해 NYHA III–IV 증상·심각한 피로 지속\n\n**03. 3개월 이상 GDMT에도 지속적인 LVEF ≤ 35%**\n- ICD/CRT 등 device therapy 후보\n\n**04. 심부전의 원인으로 2차적 소견 요구**\n- 심근염 의심, 심장판막질환·판막교정, 관상동맥질환 재관류 가능성\n\n**05. 매년 전반적 검토·예후·근본치료 계획**\n- 안정기 환자도 연 1회 정기 검토\n\n**06. 임상연구 등록 가능성 평가**",
+        "sources": ["대한심부전학회 심부전 진료지침 2022"]
+      },
+      "notes": {
+        "content": "### I NEED HELP — Stage D HF 9개 단서\n| 약어 | 의미 | 일차진료 관찰 포인트 |\n|---|---|---|\n| **I**notropes need | 강심제 필요 | 타기관 입원력·주사제 기록 |\n| **N**YHA Fc IV | 안정 시에도 증상 | 일상생활 수행력 |\n| **E**nd-organ dysfunction | 말단장기기능 이상 | Cr·AST/ALT 상승, 저산소증 |\n| **E**F < 20% | 박출률 심한 감소 | 최근 심초음파 |\n| **D**efibrillator shock for VAs | 심실 부정맥 ICD shock | ICD 기록 |\n| **H**F hospitalization (recurrent) | 반복 입원 | 1년 이내 2회 이상 |\n| **E**scalating diuretics dose | 이뇨제 용량 증가 | furosemide 추이 |\n| **L**ow BP | 저혈압 | SBP < 90 반복 |\n| **P**rogressive GDMT intolerance | 표준치료 점진적 내약성 저하 | 신장·혈압·칼륨으로 GDMT 감량·중단 |\n\n특히 GDMT 내약성 저하(P)는 일차진료에서 가장 먼저 관찰되는 신호.\n\n### 전원 최적시기 4단계 곡선\n| 단계 | 축상 위치 | 상태 | 전원 판단 |\n|---|---|---|---|\n| 심부전 시작·지속 | 중증도 낮음 | NYHA I–II / GDMT 충족 / 입원 없음 | 조기 전원 불필요 |\n| **심부전 진행·악화** | 중증도 상승 | NYHA III–IV / GDMT 감량 필요 / 잦은 입원 / ICD shock / 신장 악화 | **전원·의뢰 최적기** |\n| 심장 펌프 부전 | 중증도 매우 높음 | 다발성 장기 부전 / 심각한 영양실조 / 심장 액사 | 의뢰 너무 늦음 (비가역 진입) |\n| 사망 | — | — | — |\n\n**상급 심부전센터 다학제팀**: 말기완화치료 / 정신건강의학과 / 약사 / 심장내과 / 심장혈관외과 / 간호사 / 의료보조사 / 사회사업팀.",
+        "sources": [
+          "Dunlay SM et al. JACC Heart Fail 2021;9(10):722-732",
+          "대한심부전학회 심부전 진료지침 2022"
+        ]
+      }
+    },
+    "uiHooks": null
+  },
+  "I NEED HELP": {
+    "kind": "topic",
+    "parents": ["heart-failure"],
+    "keywords": ["I NEED HELP","Stage D HF","심부전 의뢰","GDMT intolerance"],
+    "primarySources": [
+      "Dunlay SM et al. JACC Heart Fail 2021;9(10):722-732"
+    ],
+    "sections": {
+      "notes": {
+        "content": "### I NEED HELP — Stage D HF 9개 단서\nInotropes need / NYHA Fc IV / End-organ dysfunction / EF < 20% / Defibrillator shock for VAs / Recurrent HF hospitalization / Escalating diuretics dose / Low BP / Progressive GDMT intolerance\n\n다수 해당 시 전원·의뢰 최적기 단서. 상세 표는 `heart-failure-referral` 엔트리 참조.",
+        "sources": ["Dunlay SM et al. JACC Heart Fail 2021;9(10):722-732"]
+      }
+    },
+    "uiHooks": null
+  },
+  "GDMT intolerance": {
+    "kind": "topic",
+    "parents": ["heart-failure"],
+    "keywords": ["GDMT intolerance","심부전 표준치료 내약성","Progressive GDMT intolerance"],
+    "primarySources": [
+      "Dunlay SM et al. JACC Heart Fail 2021;9(10):722-732",
+      "대한심부전학회 심부전 진료지침 2022"
+    ],
+    "sections": {
+      "notes": {
+        "content": "GDMT(Guideline-Directed Medical Therapy) 점진적 내약성 저하는 I NEED HELP 9 단서 중 P에 해당. 일차진료에서 가장 먼저 관찰되는 신호 — 신장·혈압·칼륨 수치로 GDMT 감량·중단이 반복되면 전원 검토.",
+        "sources": [
+          "Dunlay SM et al. JACC Heart Fail 2021;9(10):722-732",
+          "대한심부전학회 심부전 진료지침 2022"
         ]
       }
     },
