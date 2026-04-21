@@ -74,13 +74,19 @@ function App(){
       detectedCalcs.forEach(function(c){
         var e=KNOWLEDGE_BUNDLE[c]; if(!e) return;
         if(e.sections){
-          /* v2: uiHooks.guide 키 순회. "*"는 전 섹션 펼침. */
+          /* v2: uiHooks.guide 키 순회. "*"는 전 섹션 펼침.
+                 primarySources·sections[k].sources는 LLM이 [출처: ...]에 쓰도록 ctx에 동봉. */
           var hooks=e.uiHooks||{};
           var keys=hooks.guide||[];
           if(keys.indexOf("*")!==-1) keys=Object.keys(e.sections);
+          if(e.primarySources&&e.primarySources.length){
+            knowledgeCtx+="["+c+".primarySources]\n"+e.primarySources.join("\n")+"\n\n";
+          }
           keys.forEach(function(k){
-            var s=e.sections[k];
-            if(s&&s.content) knowledgeCtx+="["+c+"."+k+"]\n"+s.content+"\n\n";
+            var s=e.sections[k]; if(!(s&&s.content)) return;
+            knowledgeCtx+="["+c+"."+k+"]\n"+s.content;
+            if(s.sources&&s.sources.length) knowledgeCtx+="\n[sources]\n"+s.sources.join("\n");
+            knowledgeCtx+="\n\n";
           });
         } else {
           if(e.exam)         knowledgeCtx+="["+c+".exam]\n"+e.exam+"\n\n";

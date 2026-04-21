@@ -160,10 +160,10 @@ const DRAFT_REVIEW_PROMPT=`한국 가정의학과 외래 진료 판단 검토 �
 const KNOWLEDGE_CURATION_PROMPT=`한국 가정의학과 외래 임상 가이드 큐레이션 도구.
 입력: 진료 transcript + 감지된 질환·약물의 임상 지식 자료 ([키.섹션] 라벨이 붙은 블록들)
 출력: 이 환자 상황에 직접 관련 있는 3~8개 bullet (plain text)
-==역할 분업 (중요)==
-- DraftTab Liby 힌트가 이미 처방(treatment)·감별진단(differential)을 별도 패널에서 담당한다.
-- 너는 문진·검사(exam) / Draft 특이사항(draftAppend) 등 '나머지 지식'에서만 bullet을 추출한다.
-- 입력 블록에 treatment·differential 라벨은 없다. 혹시 exam·draftAppend 내부에 치료·감별 이야기가 섞여 있어도 그 부분은 bullet로 만들지 말 것 (중복 방지).
+==역할 분업==
+- 입력 [지식 자료] 블록은 Guide tab에 할당된 섹션만 포함한다. 처방 프로토콜(protocol)·약물 dosing·schedule·indication 같은 "Liby 힌트" 담당 섹션은 이 입력에 들어오지 않는다.
+- 들어온 블록 범위 안에서만 bullet을 만든다 (예: classification/exam/monitoring/contraindication/pregnancy/referral/differential/notes 등).
+- 블록 안에 다른 역할(치료 단계·처방 용량 등)에 해당하는 문장이 섞여 있어도 그 부분은 bullet로 만들지 말 것 (중복 방지).
 ==지식 근거 규칙 (최우선)==
 - 모든 bullet은 반드시 [지식 자료] 블록 원문에 근거해야 한다.
 - transcript는 환자 상황 파악·bullet 선별에만 사용. bullet 본문·출처에 transcript 인용 금지.
@@ -185,6 +185,12 @@ const KNOWLEDGE_CURATION_PROMPT=`한국 가정의학과 외래 임상 가이드 
       · 예: "2023 대한비만학회 가이드라인" → [출처: 2023 대한비만학회 가이드라인]
   ⑥ [출처 미확인] 태그가 원문에 있으면 → [출처 미확인]
   ⑦ 위 어디에도 해당 안 되면 → [출처 미확인]
+  ⑧ 지식 자료 블록 본문 뒤에 [sources] 하위 블록, 또는 별도 [키.primarySources] 블록이 붙어 있으면:
+      · bullet 근거로 가장 부합하는 항목 1개를 그대로 [출처: <항목 원문>] 에 사용한다 (PMID/DOI 포함된 경우 그대로 유지)
+      · 예: [sources] "Ryan D. Clin Transl Allergy 2022;12(10):e12195. PMID:36225262, DOI:10.1002/clt2.12195"
+             → [출처: Ryan D. Clin Transl Allergy 2022;12(10):e12195. PMID:36225262]
+      · 해당 섹션 [sources]가 비어 있고 [키.primarySources]만 있으면 primarySources 항목 중 하나를 선택
+      · [sources]·[primarySources]가 모두 없으면 ②~⑤ 규칙으로 fallback
 - [키이름.섹션] 형태 출처 금지 — 이건 자료 분류 이름이지 실제 출처가 아니다.
 ==출력 형식==
 - 의사에게 지시하는 톤 금지 ("~하세요" 금지).
