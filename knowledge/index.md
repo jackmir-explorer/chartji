@@ -48,7 +48,8 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - LPR.md          — 인후두역류(LPR): PPI + 뮤테란, 알긴산 대안 [처방/치료]
 - low-freq-hearing-loss.md — 저음성난청/귀먹먹함: 유턴정(베타히스틴), 다이크로짇(HCTZ) [TIPS]
 - dizziness.md    — 어지럼증 기본 문진 11항목 + 편두통 추가 문진 [문진/검사]
-- obesity.md    — 비만 체중감량 Draft Template + 위고비 처방 기준 [TIPS/REGULATORY]
+- obesity.md    — 비만 체중감량 Draft Template + 위고비 처방 기준 + Mayo Clinic 표현형 + 단백질 ABC [CLINICAL/TIPS/REGULATORY]
+- dysphonia.md  — 목소리 이상/쉰목소리: 수분 섭취·strap muscle 마사지 (MTD) [CLINICAL — 조건부]
 
 ### by-drug/
 - vaccine-interval.md — 백신 접종 간격 원칙 (생+사/생+생/사+사) [CLINICAL]
@@ -63,6 +64,7 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - wegovy.md — 위고비(Semaglutide) 처방 기준·비급여 [REGULATORY]
 - pilocarpine.md — 살라겐/필로겐 용량(TID/QID/BID)·급여기준 [REGULATORY]
 - mucomyst.md — NAC 가글 처방법·BMS/구강건조증/LPR 근거 [TIPS/CLINICAL/INSIGHTS]
+- glp1-selection-strategy.md — GLP-1 비만약 선택 전략: 위고비 vs 마운자로 10기준·Dose Escalation·반응예측·Interval Tx·SMI·전당뇨 [TIPS/INSIGHTS/CLINICAL]
 
 ### guidelines/
 - adult-vaccination-summary.md — 성인 예방접종 전체 권장 요약·고위험군·ANC 독감백신 기준 [CLINICAL]

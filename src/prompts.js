@@ -49,6 +49,7 @@ JSON만 반환 (다른 텍스트 절대 금지):
   dysphonia (목소리이상/쉰목소리/hoarseness/발성장애 관련)
   경부종괴 (목에혹/목멍울/neck mass/림프절염/경부림프절 관련)
   urticaria (두드러기/urticaria/혈관부종/angioedema/만성두드러기/CSU 관련)
+  glp1 (GLP-1 비만약 선택 전략/위고비 vs 마운자로 비교/용량 증량·감량 전략/Interval Tx/반응 예측 관련 — 전략·비교 질문일 때만 감지. 단순 처방·용량 문의는 위고비·마운자로·오젬픽 키로 충분)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */
