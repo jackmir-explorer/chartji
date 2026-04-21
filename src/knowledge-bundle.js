@@ -380,68 +380,242 @@ var KNOWLEDGE_BUNDLE = {
     "differential": "구강백반증(악성 전환율 ~1%/년), 구강편평태선, 캔디다증, 외상성 궤양, 구강암",
     "draftAppend": null
   },
+  /* v2 (B2) drug — Phase 5c Liby ingest. 원본: knowledge/by-drug/wegovy.md */
   "위고비": {
     "kind": "drug",
-    "exam": null,
-    "treatment": "Wegovy(semaglutide) 처방: BMI≥30 단독 / BMI 27~30+동반질환. 비급여.\n시작 0.25mg, 순차증량(0.25→0.5→1.0→1.7→2.4mg).\n절대금기: MTC가족력, MEN2, 과민반응, 임신(2개월전 중단).\n주의: 췌장염, 수유, 당뇨망막병증, 담석.\nMASH F2-F3 지방간염도 적응증(FDA 2025). 소아 12세이상 BMI≥95th%ile(FDA 2022).",
-    "differential": null,
-    "draftAppend": null
+    "keywords": ["위고비","wegovy","semaglutide 2.4mg"],
+    "primarySources": [
+      "FDA prescribing information — Wegovy (semaglutide 2.4mg)"
+    ],
+    "sections": {
+      "indication": {
+        "content": "### 성인\n- BMI ≥ 30 → 단독 처방 가능\n- BMI 27~30 + 동반질환(고혈압/T2DM/이상지질혈증/OSA/심혈관질환) → 처방 가능\n- MASH + 중등도~중증 섬유화(F2-F3) → FDA 2025 승인 (간경변 단계는 효과 미입증, ESSENCE Phase 3, NEJM 2025)\n\n### 소아청소년\n- 12세 이상 + BMI ≥ 95th percentile → FDA 2022.12 승인\n- STEP TEENS: 68주 BMI -16.1% vs placebo +0.6%\n- 한국 식약처 소아 허가 여부는 별도 확인",
+        "sources": []
+      },
+      "dosing": {
+        "content": "### 시작 및 증량 스케줄\n- 시작: 0.25mg\n- 순차 증량: 0.25 → 0.5 → 1.0 → 1.7 → 2.4mg (4주 간격)\n- 저칼로리 식이 + 신체활동 증가 병행\n\n> [TIPS — by FM교수님] 이미 비만약을 많이 시도해본 환자는 0.5mg부터 시작해볼 수 있음",
+        "sources": []
+      },
+      "contraindication": {
+        "content": "### 절대 금기\n- MTC(수질성 갑상선암) 개인력/가족력\n- MEN 2 (다발성 내분비 종양 2형)\n- Semaglutide/부형제 중증 과민반응(아나필락시스)\n- 임신 — 계획 시 최소 2개월 전 중단 (반감기 길어 체내 잔류)\n\n### 상대적 주의\n- 췌장염 과거력 — 급성 췌장염(괴사성 포함) 보고, 복통 시 중단 고려\n- 수유 중 — 동물실험 모유 분비 확인\n- 당뇨망막병증 — 혈당 급격 개선 시 망막병증 악화, 안과 모니터링\n- 담석증/담낭질환 — 체중 감량 과정에서 담석 발생 위험 증가",
+        "sources": []
+      },
+      "insurance": {
+        "content": "비급여 약물. 처방 시 비용 전액 환자 부담.",
+        "sources": []
+      }
+    },
+    "uiHooks": {
+      "hint": ["dosing","contraindication"],
+      "guide": ["indication","dosing","contraindication","insurance"],
+      "draftAppend": null,
+      "draftTemplate": null
+    }
   },
   "wegovy": {
     "kind": "drug",
-    "exam": null,
-    "treatment": "Wegovy(semaglutide) 처방: BMI≥30 단독 / BMI 27~30+동반질환. 비급여.\n시작 0.25mg, 순차증량(0.25→0.5→1.0→1.7→2.4mg).\n절대금기: MTC가족력, MEN2, 과민반응, 임신(2개월전 중단).\n주의: 췌장염, 수유, 당뇨망막병증, 담석.\nMASH F2-F3 지방간염도 적응증(FDA 2025). 소아 12세이상 BMI≥95th%ile(FDA 2022).",
-    "differential": null,
-    "draftAppend": null
+    "keywords": ["wegovy","위고비","semaglutide 2.4mg"],
+    "primarySources": [
+      "FDA prescribing information — Wegovy (semaglutide 2.4mg)"
+    ],
+    "sections": {
+      "indication": {
+        "content": "### 성인\n- BMI ≥ 30 → 단독 처방 가능\n- BMI 27~30 + 동반질환(고혈압/T2DM/이상지질혈증/OSA/심혈관질환) → 처방 가능\n- MASH + 중등도~중증 섬유화(F2-F3) → FDA 2025 승인 (간경변 단계는 효과 미입증, ESSENCE Phase 3, NEJM 2025)\n\n### 소아청소년\n- 12세 이상 + BMI ≥ 95th percentile → FDA 2022.12 승인\n- STEP TEENS: 68주 BMI -16.1% vs placebo +0.6%\n- 한국 식약처 소아 허가 여부는 별도 확인",
+        "sources": []
+      },
+      "dosing": {
+        "content": "### 시작 및 증량 스케줄\n- 시작: 0.25mg\n- 순차 증량: 0.25 → 0.5 → 1.0 → 1.7 → 2.4mg (4주 간격)\n- 저칼로리 식이 + 신체활동 증가 병행\n\n> [TIPS — by FM교수님] 이미 비만약을 많이 시도해본 환자는 0.5mg부터 시작해볼 수 있음",
+        "sources": []
+      },
+      "contraindication": {
+        "content": "### 절대 금기\n- MTC(수질성 갑상선암) 개인력/가족력\n- MEN 2 (다발성 내분비 종양 2형)\n- Semaglutide/부형제 중증 과민반응(아나필락시스)\n- 임신 — 계획 시 최소 2개월 전 중단 (반감기 길어 체내 잔류)\n\n### 상대적 주의\n- 췌장염 과거력 — 급성 췌장염(괴사성 포함) 보고, 복통 시 중단 고려\n- 수유 중 — 동물실험 모유 분비 확인\n- 당뇨망막병증 — 혈당 급격 개선 시 망막병증 악화, 안과 모니터링\n- 담석증/담낭질환 — 체중 감량 과정에서 담석 발생 위험 증가",
+        "sources": []
+      },
+      "insurance": {
+        "content": "비급여 약물. 처방 시 비용 전액 환자 부담.",
+        "sources": []
+      }
+    },
+    "uiHooks": {
+      "hint": ["dosing","contraindication"],
+      "guide": ["indication","dosing","contraindication","insurance"],
+      "draftAppend": null,
+      "draftTemplate": null
+    }
   },
+  /* v2 (B2) drug — Phase 5c Liby ingest. semaglutide 성분명 fallback (상품명 기준 상세 참조). */
   "semaglutide": {
     "kind": "drug",
-    "exam": null,
-    "treatment": "Wegovy(비만): BMI≥30 단독 / BMI 27~30+동반질환. 비급여. 시작 0.25mg 순차증량.\nOzempic(T2DM급여): Met+SU 2~4개월 + HbA1c≥7% + BMI≥25. 3종병용으로 급여인정.\n절대금기: MTC가족력, MEN2, 과민반응, 임신.",
-    "differential": null,
-    "draftAppend": null
+    "keywords": ["semaglutide","세마글루타이드"],
+    "primarySources": [],
+    "sections": {
+      "overview": {
+        "content": "Semaglutide 성분은 한국에서 두 상품명으로 시판 — 적응증·급여가 다름.\n- Wegovy(위고비): 비만 적응증, 비급여. 상세는 `위고비` 키 참조.\n- Ozempic(오젬픽): T2DM 적응증, 급여 조건부. 상세는 `오젬픽` 키 참조.",
+        "sources": []
+      }
+    },
+    "uiHooks": {
+      "hint": [],
+      "guide": ["overview"],
+      "draftAppend": null,
+      "draftTemplate": null
+    }
   },
+  /* v2 (B2) drug — Phase 5c Liby ingest. 원본: knowledge/by-drug/mounjaro.md */
   "마운자로": {
     "kind": "drug",
-    "exam": null,
-    "treatment": "Mounjaro/Zepbound(tirzepatide): T2DM(Mounjaro) + 비만(Zepbound).\n시작 2.5mg, 4주후 5mg 증량 유지. 웬티카 방식 간단.\n10mg까지 효과뚜렷, 15mg 추가이익 적음(+1.1%p).\n위고비 대비: 초반 감량 빠름, 최종 감량폭 큼(-20.2% vs -13.7%, SURMOUNT-5).\nT2DM 환자 실비보험 활용 가능 — 동반질환·가족력·HbA1c·BST 철저 기록.",
-    "differential": null,
-    "draftAppend": null
+    "keywords": ["마운자로","mounjaro","zepbound","tirzepatide"],
+    "primarySources": [],
+    "sections": {
+      "indication": {
+        "content": "- T2DM (Mounjaro) — 단독 또는 병용, FDA 2022 승인\n- 비만 (Zepbound) — HTN/이상지질혈증/OSA/CVD 동반 시, FDA 2023.11 승인\n  - CVD: 우월성 미입증, 비열등성 수준 (SURPASS-CVOT)",
+        "sources": []
+      },
+      "dosing": {
+        "content": "### 시작 및 증량\n- 시작: 2.5mg\n- 4주 후: 5mg 증량 후 유지\n- 주사 방법: 웬티카 방식, 위고비보다 간단\n\n### 최대 용량 [CLINICAL — 조건부]\n- 4단계(10mg)까지 효과 뚜렷\n- 5단계(12.5mg) / 6단계(15mg) 추가 이익 크지 않음\n  - SURMOUNT-1: 10mg -21.4% / 15mg -22.5% (+1.1%p 증분)\n  - 12.5mg 단독 비교 RCT는 없음; 임상적 추론",
+        "sources": []
+      },
+      "insurance": {
+        "content": "### 실비보험 활용 [TIPS — by 로컬원장님]\n2형 당뇨 환자에게 처방 시 실비보험 적용 가능.\n\n처방 시 철저히 조사·기록해야 할 항목:\n- 동반질환 (HTN, 이상지질혈증, OSA, CVD 등)\n- 가족력\n- 최근 측정 HbA1c\n- 당일 BST\n- 현재 복용 중인 약물\n\n> 보험회사에 제출할 수 있도록 차트에 명확히 기록",
+        "sources": []
+      }
+    },
+    "uiHooks": {
+      "hint": ["dosing","insurance"],
+      "guide": ["indication","dosing","insurance"],
+      "draftAppend": null,
+      "draftTemplate": null
+    }
   },
   "mounjaro": {
     "kind": "drug",
-    "exam": null,
-    "treatment": "Mounjaro/Zepbound(tirzepatide): T2DM(Mounjaro) + 비만(Zepbound).\n시작 2.5mg, 4주후 5mg 증량 유지. 웬티카 방식 간단.\n10mg까지 효과뚜렷, 15mg 추가이익 적음(+1.1%p).\n위고비 대비: 초반 감량 빠름, 최종 감량폭 큼(-20.2% vs -13.7%, SURMOUNT-5).\nT2DM 환자 실비보험 활용 가능 — 동반질환·가족력·HbA1c·BST 철저 기록.",
-    "differential": null,
-    "draftAppend": null
+    "keywords": ["mounjaro","마운자로","zepbound","tirzepatide"],
+    "primarySources": [],
+    "sections": {
+      "indication": {
+        "content": "- T2DM (Mounjaro) — 단독 또는 병용, FDA 2022 승인\n- 비만 (Zepbound) — HTN/이상지질혈증/OSA/CVD 동반 시, FDA 2023.11 승인\n  - CVD: 우월성 미입증, 비열등성 수준 (SURPASS-CVOT)",
+        "sources": []
+      },
+      "dosing": {
+        "content": "### 시작 및 증량\n- 시작: 2.5mg\n- 4주 후: 5mg 증량 후 유지\n- 주사 방법: 웬티카 방식, 위고비보다 간단\n\n### 최대 용량 [CLINICAL — 조건부]\n- 4단계(10mg)까지 효과 뚜렷\n- 5단계(12.5mg) / 6단계(15mg) 추가 이익 크지 않음\n  - SURMOUNT-1: 10mg -21.4% / 15mg -22.5% (+1.1%p 증분)\n  - 12.5mg 단독 비교 RCT는 없음; 임상적 추론",
+        "sources": []
+      },
+      "insurance": {
+        "content": "### 실비보험 활용 [TIPS — by 로컬원장님]\n2형 당뇨 환자에게 처방 시 실비보험 적용 가능.\n\n처방 시 철저히 조사·기록해야 할 항목:\n- 동반질환 (HTN, 이상지질혈증, OSA, CVD 등)\n- 가족력\n- 최근 측정 HbA1c\n- 당일 BST\n- 현재 복용 중인 약물\n\n> 보험회사에 제출할 수 있도록 차트에 명확히 기록",
+        "sources": []
+      }
+    },
+    "uiHooks": {
+      "hint": ["dosing","insurance"],
+      "guide": ["indication","dosing","insurance"],
+      "draftAppend": null,
+      "draftTemplate": null
+    }
   },
   "tirzepatide": {
     "kind": "drug",
-    "exam": null,
-    "treatment": "Mounjaro/Zepbound(tirzepatide): T2DM(Mounjaro) + 비만(Zepbound).\n시작 2.5mg, 4주후 5mg 증량 유지. 웬티카 방식 간단.\n10mg까지 효과뚜렷, 15mg 추가이익 적음(+1.1%p).\n위고비 대비: 초반 감량 빠름, 최종 감량폭 큼(-20.2% vs -13.7%, SURMOUNT-5).\nT2DM 환자 실비보험 활용 가능 — 동반질환·가족력·HbA1c·BST 철저 기록.",
-    "differential": null,
-    "draftAppend": null
+    "keywords": ["tirzepatide","티어제파타이드","마운자로","zepbound"],
+    "primarySources": [],
+    "sections": {
+      "indication": {
+        "content": "- T2DM (Mounjaro) — 단독 또는 병용, FDA 2022 승인\n- 비만 (Zepbound) — HTN/이상지질혈증/OSA/CVD 동반 시, FDA 2023.11 승인\n  - CVD: 우월성 미입증, 비열등성 수준 (SURPASS-CVOT)",
+        "sources": []
+      },
+      "dosing": {
+        "content": "### 시작 및 증량\n- 시작: 2.5mg\n- 4주 후: 5mg 증량 후 유지\n- 주사 방법: 웬티카 방식, 위고비보다 간단\n\n### 최대 용량 [CLINICAL — 조건부]\n- 4단계(10mg)까지 효과 뚜렷\n- 5단계(12.5mg) / 6단계(15mg) 추가 이익 크지 않음\n  - SURMOUNT-1: 10mg -21.4% / 15mg -22.5% (+1.1%p 증분)\n  - 12.5mg 단독 비교 RCT는 없음; 임상적 추론",
+        "sources": []
+      },
+      "insurance": {
+        "content": "### 실비보험 활용 [TIPS — by 로컬원장님]\n2형 당뇨 환자에게 처방 시 실비보험 적용 가능.\n\n처방 시 철저히 조사·기록해야 할 항목:\n- 동반질환 (HTN, 이상지질혈증, OSA, CVD 등)\n- 가족력\n- 최근 측정 HbA1c\n- 당일 BST\n- 현재 복용 중인 약물\n\n> 보험회사에 제출할 수 있도록 차트에 명확히 기록",
+        "sources": []
+      }
+    },
+    "uiHooks": {
+      "hint": ["dosing","insurance"],
+      "guide": ["indication","dosing","insurance"],
+      "draftAppend": null,
+      "draftTemplate": null
+    }
   },
   "zepbound": {
     "kind": "drug",
-    "exam": null,
-    "treatment": "Mounjaro/Zepbound(tirzepatide): T2DM(Mounjaro) + 비만(Zepbound).\n시작 2.5mg, 4주후 5mg 증량 유지. 웬티카 방식 간단.\n10mg까지 효과뚜렷, 15mg 추가이익 적음(+1.1%p).\n위고비 대비: 초반 감량 빠름, 최종 감량폭 큼(-20.2% vs -13.7%, SURMOUNT-5).\nT2DM 환자 실비보험 활용 가능 — 동반질환·가족력·HbA1c·BST 철저 기록.",
-    "differential": null,
-    "draftAppend": null
+    "keywords": ["zepbound","마운자로","mounjaro","tirzepatide"],
+    "primarySources": [],
+    "sections": {
+      "indication": {
+        "content": "- T2DM (Mounjaro) — 단독 또는 병용, FDA 2022 승인\n- 비만 (Zepbound) — HTN/이상지질혈증/OSA/CVD 동반 시, FDA 2023.11 승인\n  - CVD: 우월성 미입증, 비열등성 수준 (SURPASS-CVOT)",
+        "sources": []
+      },
+      "dosing": {
+        "content": "### 시작 및 증량\n- 시작: 2.5mg\n- 4주 후: 5mg 증량 후 유지\n- 주사 방법: 웬티카 방식, 위고비보다 간단\n\n### 최대 용량 [CLINICAL — 조건부]\n- 4단계(10mg)까지 효과 뚜렷\n- 5단계(12.5mg) / 6단계(15mg) 추가 이익 크지 않음\n  - SURMOUNT-1: 10mg -21.4% / 15mg -22.5% (+1.1%p 증분)\n  - 12.5mg 단독 비교 RCT는 없음; 임상적 추론",
+        "sources": []
+      },
+      "insurance": {
+        "content": "### 실비보험 활용 [TIPS — by 로컬원장님]\n2형 당뇨 환자에게 처방 시 실비보험 적용 가능.\n\n처방 시 철저히 조사·기록해야 할 항목:\n- 동반질환 (HTN, 이상지질혈증, OSA, CVD 등)\n- 가족력\n- 최근 측정 HbA1c\n- 당일 BST\n- 현재 복용 중인 약물\n\n> 보험회사에 제출할 수 있도록 차트에 명확히 기록",
+        "sources": []
+      }
+    },
+    "uiHooks": {
+      "hint": ["dosing","insurance"],
+      "guide": ["indication","dosing","insurance"],
+      "draftAppend": null,
+      "draftTemplate": null
+    }
   },
+  /* v2 (B2) drug — Phase 5c Liby ingest. 원본: knowledge/by-drug/ozempic.md */
   "오젬픽": {
     "kind": "drug",
-    "exam": null,
-    "treatment": "Ozempic(semaglutide 1mg) — 위고비의 보험급여 버전(T2DM 적응증).\n급여조건: Met+SU 2~4개월 + HbA1c≥7% + BMI≥25(또는 인슐린불가). 3종병용 형태.\n급여 기준 까다로워 대부분 해당 안됨. 비만 목적→위고비(비급여).",
-    "differential": null,
-    "draftAppend": null
+    "keywords": ["오젬픽","ozempic","semaglutide 1mg"],
+    "primarySources": [
+      "건강보험심사평가원 2024.02 고시 (오젬픽 급여 기준)"
+    ],
+    "sections": {
+      "indication": {
+        "content": "오젬픽 = 위고비의 **보험급여 버전** (성분 동일: semaglutide, 용량 다름)\n- 오젬픽: T2DM 적응증, 보험급여 가능\n- 위고비: 비만 적응증, 비급여",
+        "sources": []
+      },
+      "insurance": {
+        "content": "### 한국 급여 기준 [CLINICAL — 조건부]\n아래 조건 **모두** 충족 시 급여 인정:\n\n1. Metformin + Sulfonylurea 2~4개월 이상 병용 중\n2. HbA1c ≥ 7.0% (조절 불충분)\n3. BMI ≥ 25 kg/m² 또는 인슐린 요법 불가 조건 중 하나\n\n> 3종 병용(오젬픽 + Metformin + SU) 형태로 급여 인정\n> ⚠ 급여 기준은 변경될 수 있으므로 최신 심평원 기준 확인 필요",
+        "sources": []
+      },
+      "notes": {
+        "content": "- 급여 기준이 까다로워 대부분 환자는 해당 안 됨\n- 급여 가능한 경우 비용 부담 크게 감소\n- 비만 목적이면 위고비(비급여) 처방",
+        "sources": []
+      }
+    },
+    "uiHooks": {
+      "hint": ["insurance"],
+      "guide": ["indication","insurance","notes"],
+      "draftAppend": null,
+      "draftTemplate": null
+    }
   },
   "ozempic": {
     "kind": "drug",
-    "exam": null,
-    "treatment": "Ozempic(semaglutide 1mg) — 위고비의 보험급여 버전(T2DM 적응증).\n급여조건: Met+SU 2~4개월 + HbA1c≥7% + BMI≥25(또는 인슐린불가). 3종병용 형태.\n급여 기준 까다로워 대부분 해당 안됨. 비만 목적→위고비(비급여).",
-    "differential": null,
-    "draftAppend": null
+    "keywords": ["ozempic","오젬픽","semaglutide 1mg"],
+    "primarySources": [
+      "건강보험심사평가원 2024.02 고시 (오젬픽 급여 기준)"
+    ],
+    "sections": {
+      "indication": {
+        "content": "오젬픽 = 위고비의 **보험급여 버전** (성분 동일: semaglutide, 용량 다름)\n- 오젬픽: T2DM 적응증, 보험급여 가능\n- 위고비: 비만 적응증, 비급여",
+        "sources": []
+      },
+      "insurance": {
+        "content": "### 한국 급여 기준 [CLINICAL — 조건부]\n아래 조건 **모두** 충족 시 급여 인정:\n\n1. Metformin + Sulfonylurea 2~4개월 이상 병용 중\n2. HbA1c ≥ 7.0% (조절 불충분)\n3. BMI ≥ 25 kg/m² 또는 인슐린 요법 불가 조건 중 하나\n\n> 3종 병용(오젬픽 + Metformin + SU) 형태로 급여 인정\n> ⚠ 급여 기준은 변경될 수 있으므로 최신 심평원 기준 확인 필요",
+        "sources": []
+      },
+      "notes": {
+        "content": "- 급여 기준이 까다로워 대부분 환자는 해당 안 됨\n- 급여 가능한 경우 비용 부담 크게 감소\n- 비만 목적이면 위고비(비급여) 처방",
+        "sources": []
+      }
+    },
+    "uiHooks": {
+      "hint": ["insurance"],
+      "guide": ["indication","insurance","notes"],
+      "draftAppend": null,
+      "draftTemplate": null
+    }
   },
   "A형간염": {
     "kind": "disease",
