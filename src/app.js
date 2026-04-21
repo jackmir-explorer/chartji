@@ -72,10 +72,19 @@ function App(){
     var knowledgeCtx="";
     if(typeof KNOWLEDGE_BUNDLE!=="undefined"){
       detectedCalcs.forEach(function(c){
-        if(KNOWLEDGE_BUNDLE[c]){
-          var b=KNOWLEDGE_BUNDLE[c];
-          if(b.exam)         knowledgeCtx+="["+c+".exam]\n"+b.exam+"\n\n";
-          if(b.draftAppend)  knowledgeCtx+="["+c+".draftAppend]\n"+b.draftAppend+"\n\n";
+        var e=KNOWLEDGE_BUNDLE[c]; if(!e) return;
+        if(e.sections){
+          /* v2: uiHooks.guide 키 순회. "*"는 전 섹션 펼침. */
+          var hooks=e.uiHooks||{};
+          var keys=hooks.guide||[];
+          if(keys.indexOf("*")!==-1) keys=Object.keys(e.sections);
+          keys.forEach(function(k){
+            var s=e.sections[k];
+            if(s&&s.content) knowledgeCtx+="["+c+"."+k+"]\n"+s.content+"\n\n";
+          });
+        } else {
+          if(e.exam)         knowledgeCtx+="["+c+".exam]\n"+e.exam+"\n\n";
+          if(e.draftAppend)  knowledgeCtx+="["+c+".draftAppend]\n"+e.draftAppend+"\n\n";
         }
       });
     }
@@ -120,11 +129,20 @@ function App(){
           var draftTemplate=null;
           if(typeof KNOWLEDGE_BUNDLE!=="undefined"&&detectedCalcs.length){
             detectedCalcs.forEach(function(c){
-              if(KNOWLEDGE_BUNDLE[c]){
-                if(KNOWLEDGE_BUNDLE[c].treatment) knowledgeCtx+=KNOWLEDGE_BUNDLE[c].treatment+"\n";
-                if(KNOWLEDGE_BUNDLE[c].differential) knowledgeCtx+=KNOWLEDGE_BUNDLE[c].differential+"\n";
-                if(KNOWLEDGE_BUNDLE[c].draftAppend) appendParts.push(KNOWLEDGE_BUNDLE[c].draftAppend);
-                if(KNOWLEDGE_BUNDLE[c].draftTemplate&&!draftTemplate) draftTemplate=KNOWLEDGE_BUNDLE[c].draftTemplate;
+              var e=KNOWLEDGE_BUNDLE[c]; if(!e) return;
+              if(e.sections){
+                /* v2: draftAppend 키만 literal append. knowledgeCtx inject 없음 (3C와 묶음).
+                       draftTemplate 소비 안 함 (Phase 4 UI wiring 시점). */
+                var hooks=e.uiHooks||{};
+                (hooks.draftAppend||[]).forEach(function(k){
+                  var s=e.sections[k];
+                  if(s&&s.content) appendParts.push(s.content);
+                });
+              } else {
+                if(e.treatment) knowledgeCtx+=e.treatment+"\n";
+                if(e.differential) knowledgeCtx+=e.differential+"\n";
+                if(e.draftAppend) appendParts.push(e.draftAppend);
+                if(e.draftTemplate&&!draftTemplate) draftTemplate=e.draftTemplate;
               }
             });
           }
@@ -438,16 +456,23 @@ function App(){
                   reviewText={reviewText} reviewLoading={reviewLoading} apiKey={apiKey}
                   draftHints={typeof KNOWLEDGE_BUNDLE!=="undefined"&&detectedCalcs.length?(function(){
                     /* 우선순위: disease 엔트리가 하나라도 있으면 disease만 표시 (drug 중복 방지).
-                       disease 없고 drug만 있으면 drug 표시 (지식 증발 방지). */
+                       v1·v2 공통 적용. */
                     var hasDisease=detectedCalcs.some(function(c){
                       return KNOWLEDGE_BUNDLE[c]&&KNOWLEDGE_BUNDLE[c].kind==="disease";
                     });
                     var parts=[];
                     detectedCalcs.forEach(function(c){
-                      if(KNOWLEDGE_BUNDLE[c]){
-                        if(hasDisease&&KNOWLEDGE_BUNDLE[c].kind==="drug") return;
-                        if(KNOWLEDGE_BUNDLE[c].treatment) parts.push("처방/치료:\n"+KNOWLEDGE_BUNDLE[c].treatment);
-                        if(KNOWLEDGE_BUNDLE[c].differential) parts.push("감별진단:\n"+KNOWLEDGE_BUNDLE[c].differential);
+                      var e=KNOWLEDGE_BUNDLE[c]; if(!e) return;
+                      if(hasDisease&&e.kind==="drug") return;
+                      if(e.sections){
+                        var hooks=e.uiHooks||{};
+                        (hooks.hint||[]).forEach(function(k){
+                          var s=e.sections[k];
+                          if(s&&s.content) parts.push(k+":\n"+s.content);
+                        });
+                      } else {
+                        if(e.treatment) parts.push("처방/치료:\n"+e.treatment);
+                        if(e.differential) parts.push("감별진단:\n"+e.differential);
                       }
                     });
                     return parts.length?parts.join("\n\n"):null;
@@ -461,10 +486,10 @@ function App(){
                       var knowledgeCtx="";
                       if(typeof KNOWLEDGE_BUNDLE!=="undefined"&&detectedCalcs.length){
                         detectedCalcs.forEach(function(c){
-                          if(KNOWLEDGE_BUNDLE[c]){
-                            if(KNOWLEDGE_BUNDLE[c].treatment) knowledgeCtx+=KNOWLEDGE_BUNDLE[c].treatment+"\n";
-                            if(KNOWLEDGE_BUNDLE[c].differential) knowledgeCtx+=KNOWLEDGE_BUNDLE[c].differential+"\n";
-                          }
+                          var e=KNOWLEDGE_BUNDLE[c]; if(!e) return;
+                          if(e.sections) return;  /* v2: knowledgeCtx inject 없음 (3C와 묶음) */
+                          if(e.treatment) knowledgeCtx+=e.treatment+"\n";
+                          if(e.differential) knowledgeCtx+=e.differential+"\n";
                         });
                       }
                       var r=await generateDraftReview(raw,apiKey,reviewPrompt,knowledgeCtx||null);

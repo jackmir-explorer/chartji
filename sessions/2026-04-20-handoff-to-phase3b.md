@@ -12,7 +12,7 @@
 | Phase 1 — 섹션 vocabulary + 출처 3-tier | ✅ | [#6](https://github.com/jackmir-explorer/chartji/pull/6) | 2026-04-19 |
 | Phase 2 — 도구 개정 + data-flow.md 승격 | ✅ | [#6](https://github.com/jackmir-explorer/chartji/pull/6) | 2026-04-19 |
 | Phase 3A — bundle 헤더 docs + file-ownership | ✅ | [#7](https://github.com/jackmir-explorer/chartji/pull/7) | 2026-04-20 |
-| **Phase 3B — app.js uiHooks 3-field(hint/guide/draftAppend) + mounjaro v2 fixture** | 🟡 착수 대기 | — | — |
+| Phase 3B — app.js uiHooks 3-field + urticaria v2 fixture | ✅ | main 직접 머지 | 2026-04-21 |
 | Phase 3C — prompts.js KNOWLEDGE_CURATION_PROMPT | ⏸ | — | — |
 | Phase 4 — 엔트리 B2 마이그레이션 | ⏸ | — | — |
 | Phase 5 — handoff 문서 아카이빙 | ⏸ | — | — |
@@ -33,20 +33,22 @@
 - **RedFlag exclusion**: uiHooks 어떤 field도 RedFlag 패널에 주입 금지 (`rules/data-flow.md` §2)
 
 ### 데이터 추가 — `src/knowledge-bundle.js`
-- **mounjaro v2 fixture 엔트리 최초 도입** (end-to-end 검증용)
-  - 원본: `knowledge/by-drug/mounjaro.md` (5 섹션: 적응증 / 실비보험 활용 / 시작 용량 / 최대 용량 / 감량 속도)
+- **urticaria v2 fixture 엔트리 최초 도입** (end-to-end 검증용, 2026-04-21 확정)
+  - 원본: `knowledge/by-disease/urticaria.md` (Tier 1~3 출처 정합 완성본 — PMID 4개 / DOI 4개)
+  - 사유: 초기에 mounjaro.md로 계획했으나 md 원본에 PMID/DOI 없고 출처 밀도 약함 → 자료 가치 확보 위해
+    출처 정합 완성된 urticaria로 교체 (Boss 재검토 결과, §3 소비 경로 재확정과 동일 세션)
   - 컴파일 포맷: `skills/knowledge-ingest/SKILL.md` Step 7-B
-  - 섹션 매핑 주의: dosing 3개(시작/최대/감량)를 **단일 `dosing` 섹션에 병합** or **자유 섹션으로 분리** 중 하나 — Designer에서 결정
-  - uiHooks: drug 기본값 상속 (`hint: [indication, dosing, schedule]`, `guide: [contraindication, precaution, comparison, insurance]`)
-  - "실비보험 활용" [TIPS — by 로컬원장님] → `insurance` 섹션, hint로 승격할지는 엔트리 오버라이드 옵션
+  - uiHooks: disease 기본값 상속 (`hint: [protocol]`, `guide: [classification, exam, monitoring, contraindication, pregnancy, referral, differential]`)
+  - 자유 섹션 2개: `ocs-short-term-limit`, `not-recommended` (section-vocabulary.md 예시 slugify)
+  - 출처 간결 원칙: content에는 가이드라인·저자 이름 수준만, PMID/DOI 정밀 메타는 `primarySources[]` / `sections[].sources[]` 배열에 보관 (Phase 3C/4 렌더링 경로 개통 시 활용)
 
 ### 검증 — Chrome 실기
 - v1 엔트리 중 무작위 3개 샘플 (BPPV / dizziness / wegovy 등) regression-free 확인
-- v2 mounjaro 엔트리 end-to-end:
-  - hint에 indication/dosing 뜸
-  - guide에 insurance/precaution 뜸
+- v2 urticaria 엔트리 end-to-end:
+  - hint에 protocol 섹션 뜸
+  - guide에 classification/monitoring/pregnancy/referral 큐레이션
   - RedFlag에 미표시
-  - Working Draft 생성 정상
+  - Working Draft 생성 정상 (knowledgeCtx inject 없음, generic template)
 - console 에러 없음
 
 ---
@@ -112,57 +114,54 @@ sessions/2026-04-20-b2-phase3a.md   - 직전 세션 기록
 - **Data Field**: bundle entry dispatch + uiHooks **3-field**(hint/guide/draftAppend) 소비.
   draftTemplate은 Phase 4로 이연 (§3 참조).
 - **파일**:
-  - `src/app.js` (필수 수정)
-  - `src/knowledge-bundle.js` (mounjaro v2 엔트리 추가 — Liby ingest skill 경유가 원칙이나 수동 추가 불가피, 이 예외 Designer 설계서에 명시)
-  - **미건드림**: `src/prompts.js` (3C), `src/components/panels.js` (패널 props 변경 없이 app.js 단에서 dispatch)
+  - `src/app.js` (v1/v2 dispatch — 4개 소비 지점)
+  - `src/knowledge-bundle.js` (urticaria v2 엔트리 — Liby ingest 1회 한정 예외)
+  - `src/prompts.js` (TRIAGE calcCategories에 `urticaria` 1줄 추가 — forbidden.md Liby 규칙 "새 키 → Triage 감지 확장 자동 실행" 반사)
+  - **미건드림**: `src/components/panels.js` (패널 props 변경 없이 app.js 단에서 dispatch)
 
 ### 기존 합의 대조 (Architect 2026-04-20 진단 결과)
 - `panel-contracts.md`: **무관** — 3B는 역할 확장 아닌 라우팅 구현
-- `data-flow.md`: **primary ✓ 준수 필수**. mounjaro 섹션은 전부 표준 key — 매트릭스 primary 이동·추가 없음
+- `data-flow.md`: **primary ✓ 준수**. urticaria 섹션은 전부 표준 key(+ 자유 섹션 2개) — 매트릭스 primary 이동·추가 없음
 - `file-ownership.md`: src/app.js 책임 "공유 상태 관리 + 레이아웃 조율" 유지
-- `forbidden.md`: "KNOWLEDGE_BUNDLE 직접 편집 금지" — mounjaro 수동 추가는 **1회 한정 예외**로 설계서 명시 필요
+- `forbidden.md`: "KNOWLEDGE_BUNDLE 직접 편집 금지" — urticaria 수동 추가는 **1회 한정 예외**로 설계서 명시
 
 ### Designer 제약 (확정)
-1. v1 경로 코드 완전 보존. `entry.sections` 감지 후 if-else dispatch. 기존 v1 인라인 수집 로직은 함수 분리 권장.
+1. v1 경로 코드 완전 보존. `entry.sections` 감지 후 if-else dispatch.
 2. v2 경로 uiHooks **3-field** 순서 고정: hint → guide → draftAppend.
 3. `draftTemplate`은 Phase 3B에서 소비 금지. bundle data layer에서 field만 보존 (Phase 4 UI wiring과 함께 consumer 구현).
 4. RedFlagPanel props 변경 절대 금지. Reviewer diff 검사 필수.
-5. `"*"` guide 값 처리 (topic kind 기본값) — 전 섹션 순서대로 펼치는 generic 로직. mounjaro는 drug이라 해당 없으나 구현은 3C 호환되게.
-6. mounjaro dosing 섹션 처리 — 원본 md 3개(시작/증량 / 최대 / 감량):
-   - 옵션 A: 단일 `dosing` 섹션 병합
-   - 옵션 B: `dosing` + 자유 섹션 분리
-   - → Designer 설계서에 선택 근거 명시, 미르 승인 포함.
-7. mounjaro 수동 추가는 Liby ingest 원칙의 **1회 한정 예외**. 설계서에 "Phase 3B end-to-end 검증용 — Phase 3C 이후 재ingest 유예" 명기.
-8. v2 경로 Working Draft LLM 프롬프트에 섹션 content inject 정책 결정 필요:
-   - v1은 treatment/differential을 knowledgeCtx로 prompt에 inject
-   - v2는 uiHooks가 UI surface 라우팅만 정의
-   - 권고: Phase 3B는 `draftAppend`만 literal append. hint/guide content의 prompt inject는 Phase 3C prompts.js 개편과 묶어 결정.
-9. 구조 문서 업데이트 필요 **없음** — 본 Phase 3B는 기존 rule 계약의 구현.
+5. `"*"` guide 값 처리 (topic kind 기본값) — 전 섹션 순서대로 펼치는 generic 로직. urticaria는 disease라 해당 없으나 구현은 3C 호환되게.
+6. urticaria 섹션 컴파일: 표준 섹션 5개(classification/protocol/monitoring/pregnancy/referral) + 자유 섹션 2개(ocs-short-term-limit/not-recommended). section-vocabulary.md 예시 slugify 준수.
+7. urticaria 수동 추가는 Liby ingest 원칙의 **1회 한정 예외**. Phase 4 마이그레이션에서 재ingest로 정합성 재확인.
+8. v2 경로 Working Draft 정책: `draftAppend`만 literal append. hint/guide content의 prompt inject는 Phase 3C prompts.js 개편과 묶어 결정.
+9. 출처 간결 원칙: content는 가이드라인/저자 이름 수준까지만. PMID/DOI 정밀 메타는 `primarySources[]`/`sections[].sources[]` 배열에 보관 (Phase 3C/4에서 UI inject 경로 결정).
+10. 구조 문서 업데이트 필요 **없음** — 본 Phase 3B는 기존 rule 계약의 구현.
 
 ---
 
 ## 6. 성공 기준 (QA 체크리스트)
 
 - [ ] v1 엔트리 동작 regression-free (Chrome 실기 샘플 3개 이상)
-- [ ] v2 mounjaro end-to-end:
-  - [ ] Liby 힌트에 indication/dosing 뜸
-  - [ ] Guide tab에 insurance/precaution/contraindication/comparison 뜸
-  - [ ] RedFlag에 미표시
-  - [ ] Working Draft 정상 생성 (generic template 사용 — v1 동작과 동일)
-- [ ] confidence 관련 코드 **전무** (grep으로 확인 — 채택 안 함)
-- [ ] draftTemplate 소비 코드 **전무** (Phase 4로 이연 — field 보존만)
+- [ ] v2 urticaria end-to-end:
+  - [ ] Triage가 "두드러기가 6주 넘었고 Cetirizine 먹어도..." 입력 시 `urticaria` 감지
+  - [ ] Liby 힌트에 `protocol` 섹션(Step 1~4) 표시
+  - [ ] Guide tab 큐레이션에 classification/monitoring/pregnancy/referral 내용 inject
+  - [ ] RedFlag 패널에 미표시
+  - [ ] Working Draft 정상 생성 (knowledgeCtx inject 없음, generic template 사용)
+- [x] confidence 관련 코드 **전무** (grep 결과 0건)
+- [x] draftTemplate 소비는 v1 else 블록 내부 한정 (Phase 4 UI는 이연)
 - [ ] `rules/data-flow.md` matrix primary ✓ 준수 (시나리오 테스트)
 - [ ] console 에러 없음
-- [ ] `git diff` 스코프: `src/app.js` + `src/knowledge-bundle.js` (mounjaro 엔트리만)
+- [x] `git diff` 스코프: `src/app.js` + `src/knowledge-bundle.js` + `src/prompts.js` (urticaria 엔트리 + TRIAGE 1줄)
 
 ---
 
 ## 7. 위험·GOTCHA
 
 ### 높음
-- **mounjaro 컴파일의 dosing 처리**: 원본 md에 dosing 관련 섹션 3개(시작·증량 / 최대 / 감량). 단일 `dosing` 섹션으로 병합할지, 자유 섹션으로 분리할지 Designer에서 결정 필요
-- **Liby ingest 규칙 우회**: mounjaro 엔트리를 수동 추가하는 것은 Librarian 원칙("Liby ingest만 수정 권한") 위반이므로 설계서에 **명시적 예외** 기재 필요 ("Phase 3B end-to-end 검증용 1회 한정 수동 추가")
+- **Liby ingest 규칙 우회**: urticaria 엔트리 수동 추가는 Librarian 원칙("Liby ingest만 수정 권한")의 1회 한정 예외. Phase 4 마이그레이션에서 재ingest로 정합성 재확인.
 - **draftTemplate 소비 금지**: Phase 3B에서 draftTemplate field를 읽어 Working Draft 교체 코드 작성 금지 (Phase 4 UI와 함께 구현). 실수로 v1 draftTemplate 경로 제거도 금지 — v1 엔트리에는 그대로 남아 있어야 함.
+- **출처 배열 사문화 상태**: `primarySources[]` / `sections[].sources[]`는 Phase 3B runtime에서 어떤 UI 경로에도 inject되지 않음. 의사에게 도달하는 출처는 `content` text에 녹아있는 것뿐. Phase 3C/4에서 inject 경로 개통 필수.
 
 ### 중간
 - **kind 감지 vs sections 감지**: v1은 `kind: "disease"|"drug"`만, v2는 `kind: "disease"|"drug"|"topic"`. Consumer는 `entry.sections` 먼저 검사 후 kind 읽기
@@ -185,7 +184,7 @@ sessions/2026-04-20-b2-phase3a.md   - 직전 세션 기록
 - `rules/panel-contracts.md` — 4 패널 역할
 - `knowledge/section-vocabulary.md` — 18개 + uiHooks 기본값
 - `knowledge/sourcing-rules.md` — 3-tier
-- `knowledge/by-drug/mounjaro.md` — v2 컴파일 원본
+- `knowledge/by-disease/urticaria.md` — v2 컴파일 원본 (Phase 3B 확정 fixture)
 
 ### Skills & Agents
 - `skills/knowledge-ingest/SKILL.md` — Step 7-B v2 bundle 포맷 (컴파일 레퍼런스)
@@ -210,7 +209,7 @@ sessions/2026-04-20-b2-phase3a.md   - 직전 세션 기록
 2. routine/trigger/CI 영향? **YES** — Deep Extract → bundle compile → v2 경로. 머지 지연 시 drift
 3. 다른 브랜치·외부 시스템 의존? **YES**
 
-→ **main 대상 PR 생성 필수**. 머지 후 Phase 3C 진입.
+→ **Claude가 main에 직접 머지** (2026-04-20 확정 원칙, `CLAUDE.md` 참조). PR 생성 금지. 머지 후 Phase 3C 진입.
 
 ---
 
