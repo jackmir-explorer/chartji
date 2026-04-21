@@ -20,6 +20,10 @@ Liby와 독립적으로 동작 — 수집자가 자기 수집물을 감사하는
 | **kind 부정합** (Phase 6 신설) | `knowledge/by-drug/{파일}.md` 존재하지만 bundle에 `kind: "drug"` 엔트리 없음 / 파일 위치와 bundle kind 불일치 |
 | **v1/v2 혼재 비율** (Phase 6 신설) | v1 엔트리 중 v2 승격 가치 있는 후보(md 섹션 ≥3 + PMID ≥1 또는 Researcher 검증 완료) 자동 선별 |
 | **uiHooks 기본값 중복 저장** (Phase 6 신설) | v2 엔트리의 `uiHooks`가 kind 기본값과 완전 동일하면서도 명시 저장된 경우 → `null`로 축소 제안 (`src/app.js` `UIHOOKS_DEFAULTS` 참조) |
+| **parents dangling 참조** (2026-04-21 신설) | 엔트리의 `parents` 배열에 나열된 key가 bundle에 실제 존재하지 않는 경우 → 삭제 또는 parent ingest 제안 |
+| **parents 순환 참조** (2026-04-21 신설) | A.parents=[B] ∧ B.parents=[A] 또는 장기 순환 검출 → 즉시 조치 권고 |
+| **parents 깊이 과다** (2026-04-21 신설) | 확장 후 한 child에서 parents 체인이 3단계 이상 전개되면 검토 권고 (inject 토큰 낭비 리스크) |
+| **parents 누락 child 후보** (2026-04-21 신설) | Triage 상·하위 구조에서 child 엔트리인데 parents 필드 없음 → ingest 당시 판단 누락 의심, 재검토 제안 |
 
 ## 절차
 

@@ -262,6 +262,25 @@ RedFlag 대상 노출은 uiHooks 어떤 필드에도 **절대 금지** (§rules/
 
 > ⚠ **GOTCHA — 중복 저장 금지**: 기본값과 동일한 필드를 관행적으로 복붙해 저장하면 D 리팩터(Phase 6) 효과 무력화. 기본값 확인 후 생략.
 
+#### parents 메타 필드 판단 (2026-04-21 도입 — 영구 규칙)
+
+모든 ingest에서 저장 전 반드시 수행 (미르 지시, 2026-04-21):
+
+1. **child 후보 판단**: 이 엔트리의 기본 문진·감별·draft가 더 상위 개념 엔트리에 있다면 parent 후보.
+   - 예: `BPPV`의 어지럼증 11항목 문진·감별진단 6개는 `dizziness` 엔트리에 이미 상세 저장 → `parents: ["dizziness"]`
+   - 예: `위고비`의 BMI·생활요법 상위 맥락은 `obesity` 엔트리에 → `parents: ["obesity"]`
+2. **parent 선행 존재 확인**: 모든 parent key가 bundle에 실제 존재해야 ingest 진행.
+   - 미존재 parent 발견 → ingest 중단. 미르에게 보고: "parent `___` 엔트리가 bundle에 없습니다. 먼저 ingest 후 재시도하거나 parents에서 제외하시겠습니까?"
+   - silent-skip 동작은 런타임 보호 장치일 뿐, ingest 단계에서는 **명시적 판단 필수**.
+3. **부여 제외 케이스**:
+   - 상위 엔트리가 bundle에 없음 → parents 배열에 넣지 않음
+   - `kind: "topic"` 엔트리 → parents 부여 금지 (`section-vocabulary.md` parents 규칙)
+   - vaccination 계열처럼 schedule 참조 링크로 이미 간접 주입되는 구조 → 부여 보류 (설계 제약 (b) 택일)
+4. **저장 형식**: 엔트리 루트에 `"parents": ["key1","key2"]` 배열 추가 (단일 string 불허). v1/v2 shape 혼재 허용.
+5. **금지**: parents 확장으로 인한 기존 엔트리 본문 수정 — parents는 child→parent 단방향 참조만 추가한다 (parent 본문 편집 금지).
+
+> ⚠ **GOTCHA — parents 판단 생략 금지**: Triage가 child 단독 감지 시 상위 맥락 누락 사고 재발 방지 (BPPV→dizziness 문진 11항목 누락 사건, 2026-04-21 Phase 6 후속). ingest 체크리스트의 **영구 항목**.
+
 #### kind 부여 일관성 점검 (2026-04-21 Phase 6 GOTCHA)
 
 ingest 완료 후 반드시 확인:

@@ -53,6 +53,7 @@
 var KNOWLEDGE_BUNDLE = {
   "BPPV": {
     "kind": "disease",
+    "parents": ["dizziness"],
     "exam": "BPPV 진단: 1단계 Supine Head Roll Test(Horizontal canal). 안진 없으면 2단계 Dix-Hallpike(Posterior canal).",
     "treatment": "Horizontal canal 안진: Geotropic(바닥 beating)→병변=강한 쪽, Apogeotropic(천장 beating)→병변=약한 쪽, 치료=Barbeque Roll.\nPosterior canal 안진: 병변=beating 반대방향, 치료=Modified Epley Maneuver(병변 방향에서 시작).\n【약물】보나링 po PRN (증상 매우 심할 때만) — 반드시 고지: 졸릴 수 있음. 이석정복술 대비 효과 제한적.",
     "differential": null,
@@ -60,6 +61,7 @@ var KNOWLEDGE_BUNDLE = {
   },
   "이석증": {
     "kind": "disease",
+    "parents": ["dizziness"],
     "exam": "BPPV 진단: 1단계 Supine Head Roll Test(Horizontal canal). 안진 없으면 2단계 Dix-Hallpike(Posterior canal).",
     "treatment": "Horizontal canal 안진: Geotropic(바닥 beating)→병변=강한 쪽, Apogeotropic(천장 beating)→병변=약한 쪽, 치료=Barbeque Roll.\nPosterior canal 안진: 병변=beating 반대방향, 치료=Modified Epley Maneuver(병변 방향에서 시작).\n【약물】보나링 po PRN (증상 매우 심할 때만) — 반드시 고지: 졸릴 수 있음. 이석정복술 대비 효과 제한적.",
     "differential": null,
@@ -572,6 +574,7 @@ var KNOWLEDGE_BUNDLE = {
   /* v2 (B2) drug — Phase 5c Liby ingest. 원본: knowledge/by-drug/wegovy.md */
   "위고비": {
     "kind": "drug",
+    "parents": ["obesity"],
     "keywords": ["위고비","wegovy","semaglutide 2.4mg"],
     "primarySources": [
       "FDA prescribing information — Wegovy (semaglutide 2.4mg)"
@@ -603,6 +606,7 @@ var KNOWLEDGE_BUNDLE = {
   },
   "wegovy": {
     "kind": "drug",
+    "parents": ["obesity"],
     "keywords": ["wegovy","위고비","semaglutide 2.4mg"],
     "primarySources": [
       "FDA prescribing information — Wegovy (semaglutide 2.4mg)"
@@ -653,6 +657,7 @@ var KNOWLEDGE_BUNDLE = {
   /* v2 (B2) drug — Phase 5c Liby ingest. 원본: knowledge/by-drug/mounjaro.md */
   "마운자로": {
     "kind": "drug",
+    "parents": ["obesity"],
     "keywords": ["마운자로","mounjaro","zepbound","tirzepatide"],
     "primarySources": [],
     "sections": {
@@ -678,6 +683,7 @@ var KNOWLEDGE_BUNDLE = {
   },
   "mounjaro": {
     "kind": "drug",
+    "parents": ["obesity"],
     "keywords": ["mounjaro","마운자로","zepbound","tirzepatide"],
     "primarySources": [],
     "sections": {
@@ -703,6 +709,7 @@ var KNOWLEDGE_BUNDLE = {
   },
   "tirzepatide": {
     "kind": "drug",
+    "parents": ["obesity"],
     "keywords": ["tirzepatide","티어제파타이드","마운자로","zepbound"],
     "primarySources": [],
     "sections": {
@@ -728,6 +735,7 @@ var KNOWLEDGE_BUNDLE = {
   },
   "zepbound": {
     "kind": "drug",
+    "parents": ["obesity"],
     "keywords": ["zepbound","마운자로","mounjaro","tirzepatide"],
     "primarySources": [],
     "sections": {
@@ -754,6 +762,7 @@ var KNOWLEDGE_BUNDLE = {
   /* v2 (B2) drug — Phase 5c Liby ingest. 원본: knowledge/by-drug/ozempic.md */
   "오젬픽": {
     "kind": "drug",
+    "parents": ["obesity"],
     "keywords": ["오젬픽","ozempic","semaglutide 1mg"],
     "primarySources": [
       "건강보험심사평가원 2024.02 고시 (오젬픽 급여 기준)"
@@ -781,6 +790,7 @@ var KNOWLEDGE_BUNDLE = {
   },
   "ozempic": {
     "kind": "drug",
+    "parents": ["obesity"],
     "keywords": ["ozempic","오젬픽","semaglutide 1mg"],
     "primarySources": [
       "건강보험심사평가원 2024.02 고시 (오젬픽 급여 기준)"

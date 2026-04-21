@@ -17,6 +17,21 @@ function getUiHooks(e){
     draftTemplate: over.draftTemplate
   };
 }
+/* detectedCalcs → parent 엔트리까지 확장한 키 배열 반환.
+   순수 함수. bundle consumer 로직 금지 (설계서 제약 1).
+   parent 미존재는 silent-skip (설계서 제약 8), dedup은 Set 로 보장 (설계서 제약 2). */
+function expandWithParents(detected){
+  if(!detected||!detected.length) return [];
+  if(typeof KNOWLEDGE_BUNDLE==="undefined") return detected.slice();
+  var out=detected.slice();
+  detected.forEach(function(c){
+    var e=KNOWLEDGE_BUNDLE[c]; if(!e||!e.parents) return;
+    e.parents.forEach(function(p){
+      if(KNOWLEDGE_BUNDLE[p]) out.push(p);
+    });
+  });
+  return Array.from(new Set(out));
+}
 /* Guide tab 노출 조건 — 엔트리가 실제 큐레이션 가능한 섹션을 가질 때만 true.
    기본값 상속 후 교집합이 공집합이면 탭 자체 숨김 (panel-contracts.md Guideline Assist 강화). */
 function hasGuidableContent(e){
@@ -84,6 +99,49 @@ function App(){
     (window.SpeechRecognition||window.webkitSpeechRecognition);
 
 
+  /* ── DraftTab hint parts (설계서 §2 #4) — parent 확장 포함하되 hasDisease 판정은 원본 기준.
+         drug 우선순위 회귀 방지: 위고비 단독 감지 시 parent=obesity(disease) 자동 확장돼도 hasDisease=false 유지 → 위고비 hint 소실 방지. */
+  var draftHints=React.useMemo(function(){
+    if(typeof KNOWLEDGE_BUNDLE==="undefined") return null;
+    var expanded=expandWithParents(detectedCalcs);
+    if(!expanded.length) return null;
+    var hasDiseaseOriginal=detectedCalcs.some(function(c){
+      return KNOWLEDGE_BUNDLE[c]&&KNOWLEDGE_BUNDLE[c].kind==="disease";
+    });
+    var parts=[];
+    expanded.forEach(function(c){
+      var e=KNOWLEDGE_BUNDLE[c]; if(!e) return;
+      if(hasDiseaseOriginal&&e.kind==="drug") return;
+      if(e.sections){
+        var hooks=getUiHooks(e);
+        (hooks.hint||[]).forEach(function(k){
+          var s=e.sections[k];
+          if(s&&s.content) parts.push(k+":\n"+s.content);
+        });
+      } else {
+        if(e.treatment) parts.push("처방/치료:\n"+e.treatment);
+        if(e.differential) parts.push("감별진단:\n"+e.differential);
+      }
+    });
+    return parts.length?parts.join("\n\n"):null;
+  },[detectedCalcs]);
+
+  /* ── TriagePanel differentialShort (설계서 §2 #5) — parent 확장 + dedup. */
+  var differentialShort=React.useMemo(function(){
+    if(typeof KNOWLEDGE_BUNDLE==="undefined") return null;
+    var expanded=expandWithParents(detectedCalcs);
+    if(!expanded.length) return null;
+    var list=[];
+    expanded.forEach(function(c){
+      if(KNOWLEDGE_BUNDLE[c]&&KNOWLEDGE_BUNDLE[c].differentialShort){
+        KNOWLEDGE_BUNDLE[c].differentialShort.forEach(function(item){
+          if(!list.some(function(x){return x.d===item.d;})) list.push(item);
+        });
+      }
+    });
+    return list.length?list:null;
+  },[detectedCalcs]);
+
   /* ── 감지된 계산기 → 활성 탭 자동 추가 ── */
   useEffect(function(){
     if(!detectedCalcs.length||!raw.trim()) return;
@@ -101,7 +159,8 @@ function App(){
     if(!apiKey||curationLoading) return;
     var knowledgeCtx="";
     if(typeof KNOWLEDGE_BUNDLE!=="undefined"){
-      detectedCalcs.forEach(function(c){
+      var expandedCalcs=expandWithParents(detectedCalcs);
+      expandedCalcs.forEach(function(c){
         var e=KNOWLEDGE_BUNDLE[c]; if(!e) return;
         if(e.sections){
           /* v2: uiHooks.guide 키 순회. "*"는 전 섹션 펼침.
@@ -138,8 +197,9 @@ function App(){
     if(leftTab!=="guide") return;
     if(curationText||curationLoading) return;
     if(!apiKey) return;
+    var expandedCalcs=expandWithParents(detectedCalcs);
     var hasKnowledge=typeof KNOWLEDGE_BUNDLE!=="undefined"
-      &&detectedCalcs.some(function(c){return !!KNOWLEDGE_BUNDLE[c];});
+      &&expandedCalcs.some(function(c){return !!KNOWLEDGE_BUNDLE[c];});
     if(!hasKnowledge) return;
     handleCuration();
   },[leftTab]);
@@ -163,8 +223,9 @@ function App(){
           var knowledgeCtx="";
           var appendParts=[];
           var draftTemplate=null;
-          if(typeof KNOWLEDGE_BUNDLE!=="undefined"&&detectedCalcs.length){
-            detectedCalcs.forEach(function(c){
+          var expandedCalcs=expandWithParents(detectedCalcs);
+          if(typeof KNOWLEDGE_BUNDLE!=="undefined"&&expandedCalcs.length){
+            expandedCalcs.forEach(function(c){
               var e=KNOWLEDGE_BUNDLE[c]; if(!e) return;
               if(e.sections){
                 /* v2: draftAppend 키만 literal append. knowledgeCtx inject 없음 (3C와 묶음).
@@ -432,7 +493,7 @@ function App(){
                   })}
                   {/* 📖 임상 가이드 탭 — 실제 큐레이션 가능한 섹션이 있을 때만 노출 (C 개선).
                        uiHooks.guide ∩ sections 교집합이 공집합이면 탭 자체 숨김. */}
-                  {typeof KNOWLEDGE_BUNDLE!=="undefined"&&detectedCalcs.some(function(c){return hasGuidableContent(KNOWLEDGE_BUNDLE[c]);})&&(function(){
+                  {typeof KNOWLEDGE_BUNDLE!=="undefined"&&expandWithParents(detectedCalcs).some(function(c){return hasGuidableContent(KNOWLEDGE_BUNDLE[c]);})&&(function(){
                     var on=leftTab==="guide";
                     return (
                       <button key="guide"
@@ -491,29 +552,7 @@ function App(){
               {leftTab==="draft"&&(
                 <DraftTab draftText={draftText} draftLoading={draftLoading}
                   reviewText={reviewText} reviewLoading={reviewLoading} apiKey={apiKey}
-                  draftHints={typeof KNOWLEDGE_BUNDLE!=="undefined"&&detectedCalcs.length?(function(){
-                    /* 우선순위: disease 엔트리가 하나라도 있으면 disease만 표시 (drug 중복 방지).
-                       v1·v2 공통 적용. */
-                    var hasDisease=detectedCalcs.some(function(c){
-                      return KNOWLEDGE_BUNDLE[c]&&KNOWLEDGE_BUNDLE[c].kind==="disease";
-                    });
-                    var parts=[];
-                    detectedCalcs.forEach(function(c){
-                      var e=KNOWLEDGE_BUNDLE[c]; if(!e) return;
-                      if(hasDisease&&e.kind==="drug") return;
-                      if(e.sections){
-                        var hooks=getUiHooks(e);
-                        (hooks.hint||[]).forEach(function(k){
-                          var s=e.sections[k];
-                          if(s&&s.content) parts.push(k+":\n"+s.content);
-                        });
-                      } else {
-                        if(e.treatment) parts.push("처방/치료:\n"+e.treatment);
-                        if(e.differential) parts.push("감별진단:\n"+e.differential);
-                      }
-                    });
-                    return parts.length?parts.join("\n\n"):null;
-                  })():null}
+                  draftHints={draftHints}
                   onDraftChange={function(v){setDraftText(v);}}
                   onReview={async function(){
                     if(!apiKey||reviewLoading) return;
@@ -521,8 +560,9 @@ function App(){
                     try{
                       var reviewPrompt=DRAFT_REVIEW_PROMPT.replace("{{CLINIC_SCOPE}}",CLINIC_SCOPE);
                       var knowledgeCtx="";
-                      if(typeof KNOWLEDGE_BUNDLE!=="undefined"&&detectedCalcs.length){
-                        detectedCalcs.forEach(function(c){
+                      var expandedCalcs=expandWithParents(detectedCalcs);
+                      if(typeof KNOWLEDGE_BUNDLE!=="undefined"&&expandedCalcs.length){
+                        expandedCalcs.forEach(function(c){
                           var e=KNOWLEDGE_BUNDLE[c]; if(!e) return;
                           if(e.sections) return;  /* v2: knowledgeCtx inject 없음 (3C와 묶음) */
                           if(e.treatment) knowledgeCtx+=e.treatment+"\n";
@@ -542,7 +582,7 @@ function App(){
                   curationText={curationText} curationLoading={curationLoading}
                   apiKey={apiKey}
                   detectedKeys={typeof KNOWLEDGE_BUNDLE!=="undefined"
-                    ? detectedCalcs.filter(function(c){return !!KNOWLEDGE_BUNDLE[c];})
+                    ? expandWithParents(detectedCalcs).filter(function(c){return !!KNOWLEDGE_BUNDLE[c];})
                     : []}
                   onCurate={handleCuration}/>
               )}
@@ -619,17 +659,7 @@ function App(){
             <MissingPanel key={missingKey} raw={raw} apiKey={apiKey} followUpCtx={followUpCtx}/>
             <TriagePanel key={triageKey} raw={raw} apiKey={apiKey} followUpCtx={followUpCtx}
               onDetect={function(cats){setDetectedCalcs(cats||[]);}}
-              differentialShort={typeof KNOWLEDGE_BUNDLE!=="undefined"&&detectedCalcs.length?(function(){
-                var list=[];
-                detectedCalcs.forEach(function(c){
-                  if(KNOWLEDGE_BUNDLE[c]&&KNOWLEDGE_BUNDLE[c].differentialShort){
-                    KNOWLEDGE_BUNDLE[c].differentialShort.forEach(function(item){
-                      if(!list.some(function(x){return x.d===item.d;})) list.push(item);
-                    });
-                  }
-                });
-                return list.length?list:null;
-              })():null}/>
+              differentialShort={differentialShort}/>
 
           </div>
 

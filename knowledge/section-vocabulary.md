@@ -106,6 +106,35 @@ B2 스키마에서 knowledge/ 엔트리의 `sections` 딕셔너리가 사용하�
 
 ---
 
+## parents 메타 필드 (엔트리 루트, 2026-04-21 도입)
+
+child 엔트리가 상위(parent) 맥락 주입이 필요할 때 선언하는 배열 필드.
+
+```jsonc
+{
+  "parents": ["상위 엔트리 key", ...]
+}
+```
+
+- 위치: 엔트리 루트 (`sections`·`uiHooks`와 동일 레벨)
+- 타입: `string[]` (단일 string 불허)
+- 동작: `src/app.js` `expandWithParents()` 헬퍼가 detectedCalcs → 확장 키 배열로 변환. 8개 inject 지점 공통 소비. Bundle consumer 로직 아님.
+- parent 미존재 시 silent-skip (warning 없음). Liby ingest 시 "parent 선행 존재" 확인 의무 (→ `skills/knowledge-ingest/SKILL.md`).
+- dedup은 app.js 측에서 `Array.from(new Set(...))` 보장.
+- **금지**: hint/draft/guide 차등 확장 (단일 배열 단일 경로). `topic` kind 엔트리에는 parents 부여 금지.
+
+예:
+```jsonc
+"BPPV": {
+  "kind": "disease",
+  "parents": ["dizziness"],
+  "exam": "...",
+  ...
+}
+```
+
+---
+
 ## Liby ingest 정규화 절차
 
 ingest 시 원문 md 섹션을 다음 순서로 처리한다.
