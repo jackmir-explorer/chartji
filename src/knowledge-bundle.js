@@ -110,77 +110,276 @@ var KNOWLEDGE_BUNDLE = {
     ],
     "draftAppend": null
   },
+  /* v2 (B2) — Phase 5a Liby ingest. 원본: knowledge/by-disease/vaccination.md */
   "vaccination": {
     "kind": "disease",
-    "exam": "예방접종 전 일반 확인: 발열(38도↑ → 연기 고려), 이전 접종 이상반응(아나필락시스 이력), 임신 여부(생백신 금기: MMR·수두·BCG·황열), 면역저하 여부(생백신 주의). 항암치료 중 독감백신: ANC≥1,000 OK / ANC 500-1,000 접종 권고 / ANC<500 연기.",
-    "treatment": "접종 간격 원칙[CDC]: 생+사→같은날OK, 간격제한없음. 생+생→같은날OK, 다른날이면 최소28일. 사+사→제한없음.\n생+생 간격 미준수→두번째 무효, 4주후 재접종.",
-    "differential": null,
-    "draftTemplate": "CC: 예방접종\nfever (-) uri sx (-) drug adverse effect (-) allergy (-)\n\n기존 접종력:\n기저 질환:\n\nVital Sign:\n\n접종: [백신명] [n차]\n추후 접종 계획: [백신명] [n개월 뒤] [n차]",
-    "draftAppend": "예방접종 후 원내 30분 안정 취한 후 귀가 권고함."
+    "keywords": ["vaccination","예방접종","백신","독감","폐렴구균","대상포진","HPV","Tdap"],
+    "primarySources": [
+      "CDC General Best Practice Guidelines for Immunization 2024",
+      "KDCA 성인 예방접종 가이드 2024"
+    ],
+    "sections": {
+      "exam": {
+        "content": "### 예방접종 전 일반 확인\n- 발열(38도↑ → 연기 고려)\n- 이전 접종 이상반응(아나필락시스 이력)\n- 임신 여부 (생백신 금기: MMR·수두·BCG·황열)\n- 면역저하 여부 (생백신 주의 — 전문의 상담)",
+        "sources": []
+      },
+      "schedule": {
+        "content": "세부 스케줄은 개별 엔트리 참조:\n- Tdap / 대상포진 / 폐렴구균 / HPV / A·B형간염 / 일본뇌염 / 광견병 / 수두 / MMR / 폴리오\n- 접종 간격 원칙 → `vaccine-interval` 엔트리\n- 성인 전체 권장 요약 → `vaccination-summary` 엔트리",
+        "sources": []
+      },
+      "draft-template": {
+        "content": "CC: 예방접종\nfever (-) uri sx (-) drug adverse effect (-) allergy (-)\n\n기존 접종력:\n기저 질환:\n\nVital Sign:\n\n접종: [백신명] [n차]\n추후 접종 계획: [백신명] [n개월 뒤] [n차]",
+        "sources": []
+      },
+      "draft-append": {
+        "content": "예방접종 후 원내 30분 안정 취한 후 귀가 권고함.",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "예방접종": {
     "kind": "disease",
-    "exam": "예방접종 전 일반 확인: 발열(38도↑ → 연기 고려), 이전 접종 이상반응(아나필락시스 이력), 임신 여부(생백신 금기: MMR·수두·BCG·황열), 면역저하 여부(생백신 주의). 항암치료 중 독감백신: ANC≥1,000 OK / ANC 500-1,000 접종 권고 / ANC<500 연기.",
-    "treatment": "접종 간격 원칙[CDC]: 생+사→같은날OK, 간격제한없음. 생+생→같은날OK, 다른날이면 최소28일. 사+사→제한없음.\n생+생 간격 미준수→두번째 무효, 4주후 재접종.",
-    "differential": null,
-    "draftTemplate": "CC: 예방접종\nfever (-) uri sx (-) drug adverse effect (-) allergy (-)\n\n기존 접종력:\n기저 질환:\n\nVital Sign:\n\n접종: [백신명] [n차]\n추후 접종 계획: [백신명] [n개월 뒤] [n차]",
-    "draftAppend": "예방접종 후 원내 30분 안정 취한 후 귀가 권고함."
+    "keywords": ["예방접종","vaccination","백신"],
+    "primarySources": [
+      "CDC General Best Practice Guidelines for Immunization 2024",
+      "KDCA 성인 예방접종 가이드 2024"
+    ],
+    "sections": {
+      "exam": {
+        "content": "### 예방접종 전 일반 확인\n- 발열(38도↑ → 연기 고려)\n- 이전 접종 이상반응(아나필락시스 이력)\n- 임신 여부 (생백신 금기: MMR·수두·BCG·황열)\n- 면역저하 여부 (생백신 주의 — 전문의 상담)",
+        "sources": []
+      },
+      "schedule": {
+        "content": "세부 스케줄은 개별 엔트리 참조:\n- Tdap / 대상포진 / 폐렴구균 / HPV / A·B형간염 / 일본뇌염 / 광견병 / 수두 / MMR / 폴리오\n- 접종 간격 원칙 → `vaccine-interval` 엔트리\n- 성인 전체 권장 요약 → `vaccination-summary` 엔트리",
+        "sources": []
+      },
+      "draft-template": {
+        "content": "CC: 예방접종\nfever (-) uri sx (-) drug adverse effect (-) allergy (-)\n\n기존 접종력:\n기저 질환:\n\nVital Sign:\n\n접종: [백신명] [n차]\n추후 접종 계획: [백신명] [n개월 뒤] [n차]",
+        "sources": []
+      },
+      "draft-append": {
+        "content": "예방접종 후 원내 30분 안정 취한 후 귀가 권고함.",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "백신": {
     "kind": "disease",
-    "exam": "예방접종 전 일반 확인: 발열(38도↑ → 연기 고려), 이전 접종 이상반응(아나필락시스 이력), 임신 여부(생백신 금기: MMR·수두·BCG·황열), 면역저하 여부(생백신 주의). 항암치료 중 독감백신: ANC≥1,000 OK / ANC 500-1,000 접종 권고 / ANC<500 연기.",
-    "treatment": "접종 간격 원칙[CDC]: 생+사→같은날OK, 간격제한없음. 생+생→같은날OK, 다른날이면 최소28일. 사+사→제한없음.\n생+생 간격 미준수→두번째 무효, 4주후 재접종.",
-    "differential": null,
-    "draftTemplate": "CC: 예방접종\nfever (-) uri sx (-) drug adverse effect (-) allergy (-)\n\n기존 접종력:\n기저 질환:\n\nVital Sign:\n\n접종: [백신명] [n차]\n추후 접종 계획: [백신명] [n개월 뒤] [n차]",
-    "draftAppend": "예방접종 후 원내 30분 안정 취한 후 귀가 권고함."
+    "keywords": ["백신","vaccination","예방접종"],
+    "primarySources": [
+      "CDC General Best Practice Guidelines for Immunization 2024",
+      "KDCA 성인 예방접종 가이드 2024"
+    ],
+    "sections": {
+      "exam": {
+        "content": "### 예방접종 전 일반 확인\n- 발열(38도↑ → 연기 고려)\n- 이전 접종 이상반응(아나필락시스 이력)\n- 임신 여부 (생백신 금기: MMR·수두·BCG·황열)\n- 면역저하 여부 (생백신 주의 — 전문의 상담)",
+        "sources": []
+      },
+      "schedule": {
+        "content": "세부 스케줄은 개별 엔트리 참조:\n- Tdap / 대상포진 / 폐렴구균 / HPV / A·B형간염 / 일본뇌염 / 광견병 / 수두 / MMR / 폴리오\n- 접종 간격 원칙 → `vaccine-interval` 엔트리\n- 성인 전체 권장 요약 → `vaccination-summary` 엔트리",
+        "sources": []
+      },
+      "draft-template": {
+        "content": "CC: 예방접종\nfever (-) uri sx (-) drug adverse effect (-) allergy (-)\n\n기존 접종력:\n기저 질환:\n\nVital Sign:\n\n접종: [백신명] [n차]\n추후 접종 계획: [백신명] [n개월 뒤] [n차]",
+        "sources": []
+      },
+      "draft-append": {
+        "content": "예방접종 후 원내 30분 안정 취한 후 귀가 권고함.",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
+  /* v2 (B2) topic — Phase 5a Liby ingest. 원본: knowledge/by-drug/vaccine-interval.md */
+  "vaccine-interval": {
+    "kind": "topic",
+    "keywords": ["vaccine-interval","접종 간격","생백신","사백신","live vaccine","inactivated vaccine"],
+    "primarySources": [
+      "CDC General Best Practice Guidelines — Timing and Spacing of Immunobiologics 2024"
+    ],
+    "sections": {
+      "rules": {
+        "content": "### 접종 간격 원칙\n- 생백신 + 사백신 → 같은 날 접종 가능. 간격 제한 없음\n- 생백신 + 생백신 → 같은 날 접종 가능. 다른 날이면 **최소 4주(28일) 간격**\n- 사백신 + 사백신 → 간격 제한 없음\n\n### 비고\n- 생+생 간격 미준수 시 두 번째 접종 무효 → 4주 후 재접종\n- 4일 유예 기간(grace period)은 생백신 간격에 적용되지 않음",
+        "sources": []
+      }
+    },
+    "uiHooks": null
+  },
+  /* v2 (B2) topic — Phase 5a Liby ingest. 원본: knowledge/guidelines/adult-vaccination-summary.md */
+  "vaccination-summary": {
+    "kind": "topic",
+    "keywords": ["vaccination-summary","성인예방접종 요약","adult vaccination","성인 백신"],
+    "primarySources": [
+      "CDC Adult Immunization Schedule 2025",
+      "ASCO 2024 Vaccination of Adults With Cancer (JCO.24.00032)",
+      "IDSA 2025 Immunocompromised RTI Vaccines"
+    ],
+    "sections": {
+      "overview": {
+        "content": "### 일반 성인 기본 권장\n| 백신 | 주기 / 대상 |\n|---|---|\n| 파상풍(Td/Tdap) | 10년마다 |\n| 인플루엔자 | 매년 (특히 ≥65세·만성질환자·의료종사자) |\n| MMR | 1968년 이후 출생, 항체 불확실 시 (KDCA 기준) |",
+        "sources": []
+      },
+      "high-risk": {
+        "content": "### 고위험군별 추가 권장\n| 백신 | 대상 |\n|---|---|\n| 폐렴구균 | ≥65세 PPSV23 (KDCA) / ≥50세 PCV15/20/21 (ACIP) / 만성질환·면역저하자 PCV13 |\n| B형간염 | ACIP 19-59세 universal / KDCA 의료인·고위험군 |\n| A형간염 | 40세 미만 항체 없이, 40세 이상 항체검사 후, 의료인·해외여행자 |\n| 대상포진 | ≥50세 RZV (ACIP) / ≥60세 RZV (KDCA) |\n| HPV | 9-26세 routine (성별 무관), 27-45세 SCDM |\n| 수두·수막구균 | 집단생활·군인·해외유학 |\n| 광견병·일본뇌염·황열 | 해외여행·봉사 (지역별 맞춤) |",
+        "sources": []
+      },
+      "chemotherapy-influenza": {
+        "content": "### 항암치료 중 독감백신 — 타이밍 기반 (ASCO 2024 / IDSA 2025)\n- **불활성 독감백신 권고** (생백신 금기)\n- 이상적 타이밍: **화학요법 직전 치료 ≥7일 후 & 다음 치료 2주 전** — 사이클 사이 접종\n- ANC 절대수치 기준(이전 500/1000 cutoff)은 현행 지침에서 **폐기** — 타이밍 중심으로 전환\n- 표적항암치료 중 경도~중등도 leukopenia → 독감백신 특히 권고\n- 생백신(MMR·수두·ZVL 등): 항암 중·후 3-6개월 금기 (개별 상담)",
+        "sources": []
+      }
+    },
+    "uiHooks": null
+  },
+  /* v2 (B2) — Phase 5a Liby ingest. 원본: knowledge/by-drug/tdap.md */
   "Tdap": {
     "kind": "disease",
-    "exam": "Tdap 전 확인: 임신 여부(임신부→27~36주 접종 권고), 마지막 Td/Tdap 접종 시기(10년 경과 여부), 상처 방문 시 이전 Tdap 접종력 확인.",
-    "treatment": "Tdap 스케줄: DTaP 완료자→매 10년 Tdap/Td. 임신부→매 임신 27~36주 Tdap[CDC]. DTaP 미접종/불명→3회[Tdap→Td(4-8주)→Td(6-12개월)]. 외상+Tdap 미접종→Tdap. 0.5mL 근육주사.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["Tdap","파상풍","백일해","pertussis"],
+    "primarySources": [
+      "CDC DTaP/Tdap/Td ACIP Recommendations 2024"
+    ],
+    "sections": {
+      "indication": {
+        "content": "- **DTaP 완료자**: 매 10년마다 Tdap 또는 Td 1회 (Td 공급 제약으로 **Tdap 우선**)\n- **DTaP 미접종 / 기록 불명 / 1958년 이전 출생**: 3회 접종\n- **임신부**: 매 임신마다 27~36주에 Tdap\n- **영아 밀접접촉자** (의료·보육 종사자, 신생아 부모·조부모): Tdap 미접종 시 접촉 2주 전까지\n- **외상 후 상처**:\n  - 청결 상처: 접종력 없으면 Tdap, 완료자는 마지막 ≥10년 시 booster\n  - 오염 상처(dirty wound): 마지막 접종 ≥5년 경과 시 booster",
+        "sources": []
+      },
+      "schedule": {
+        "content": "3회 접종자 스케줄: Tdap → Td or Tdap (4-8주 후) → Td or Tdap (6-12개월 후). 3회 중 최소 1회는 Tdap (3회 모두 Tdap 허용)",
+        "sources": []
+      },
+      "dosing": {
+        "content": "0.5 mL 근육주사 (삼각근)",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "파상풍": {
     "kind": "disease",
-    "exam": "Tdap 전 확인: 임신 여부(임신부→27~36주 접종 권고), 마지막 Td/Tdap 접종 시기(10년 경과 여부), 상처 방문 시 이전 Tdap 접종력 확인.",
-    "treatment": "Tdap 스케줄: DTaP 완료자→매 10년 Tdap/Td. 임신부→매 임신 27~36주 Tdap[CDC]. DTaP 미접종/불명→3회[Tdap→Td(4-8주)→Td(6-12개월)]. 외상+Tdap 미접종→Tdap. 0.5mL 근육주사.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["파상풍","Tdap","백일해"],
+    "primarySources": [
+      "CDC DTaP/Tdap/Td ACIP Recommendations 2024"
+    ],
+    "sections": {
+      "indication": {
+        "content": "- **DTaP 완료자**: 매 10년마다 Tdap 또는 Td 1회 (Td 공급 제약으로 **Tdap 우선**)\n- **DTaP 미접종 / 기록 불명 / 1958년 이전 출생**: 3회 접종\n- **임신부**: 매 임신마다 27~36주에 Tdap\n- **영아 밀접접촉자** (의료·보육 종사자, 신생아 부모·조부모): Tdap 미접종 시 접촉 2주 전까지\n- **외상 후 상처**:\n  - 청결 상처: 접종력 없으면 Tdap, 완료자는 마지막 ≥10년 시 booster\n  - 오염 상처(dirty wound): 마지막 접종 ≥5년 경과 시 booster",
+        "sources": []
+      },
+      "schedule": {
+        "content": "3회 접종자 스케줄: Tdap → Td or Tdap (4-8주 후) → Td or Tdap (6-12개월 후). 3회 중 최소 1회는 Tdap (3회 모두 Tdap 허용)",
+        "sources": []
+      },
+      "dosing": {
+        "content": "0.5 mL 근육주사 (삼각근)",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
+  /* v2 (B2) — Phase 5a Liby ingest. 원본: knowledge/by-drug/herpes-zoster-vaccine.md */
   "대상포진": {
     "kind": "disease",
-    "exam": "대상포진 백신 전 확인: 조스타박스(ZVL) 이전 접종 여부(→2개월 후 싱그릭스 가능), 이전 대상포진 이환 이력(완전 회복 후 가능), 면역저하 여부(18세이상 중증면역저하자도 RZV 권고).",
-    "treatment": "RZV(싱그릭스): 50세이상 or 18세이상 중증면역저하자. 2회 근육주사, 2-6개월 간격(최소 4주)[CDC]. 6개월 초과 지연→재시작 불필요. ZVL(조스타박스): 1회 피하. 면역저하자 ZVL 금기.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["대상포진","herpes zoster","shingrix","싱그릭스","조스타박스","ZVL","RZV"],
+    "primarySources": [
+      "MMWR 71(3), 2022 — RZV in Immunocompromised Adults",
+      "CDC Shingrix HCP Considerations 2024",
+      "KDCA 성인 예방접종 가이드 2024"
+    ],
+    "sections": {
+      "comparison": {
+        "content": "| 백신 | 종류 | 접종 | 상태 |\n|---|---|---|---|\n| RZV (Shingrix, 싱그릭스) | 사백신 | 2회 근주 | 1차 권고 |\n| ZVL (Zostavax, 조스타박스) | 생백신 | 1회 피하 | **2020년 미국 단종**, KDCA NIP 미포함 |",
+        "sources": []
+      },
+      "indication": {
+        "content": "- **ACIP**: ≥50세 성인 / **≥19세** 중증면역저하자 (암치료 중, 면역억제제 복용 중)\n- **KDCA**: ≥60세 권고. 면역저하자 RZV는 임상 상황에 따라 자비 접종\n- ZVL: 미국 단종으로 사실상 폐용",
+        "sources": []
+      },
+      "schedule": {
+        "content": "**면역정상 성인** (RZV 2회): 2-6개월 간격 (최소 4주). 6개월 초과 지연 시 재시작 불필요, 바로 2차\n\n**면역저하자** (RZV 2회): **1-2개월 간격** (단축 스케줄)",
+        "sources": []
+      },
+      "contraindication": {
+        "content": "면역저하자: 생백신(ZVL) 금기 → **RZV만** 사용",
+        "sources": []
+      },
+      "notes": {
+        "content": "- 조스타박스(ZVL) 접종 이력 → 2개월 후부터 싱그릭스(RZV) 접종 가능\n- 이전 대상포진 이환 이력 → 완전 회복 후 싱그릭스 접종 가능",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
+  /* v2 (B2) — Phase 5a Liby ingest. 원본: knowledge/by-drug/pneumococcal-vaccine.md */
   "폐렴구균": {
     "kind": "disease",
-    "exam": "폐렴구균 백신 전 확인: 나이(65세이상→PPSV23), 만성질환 여부(당뇨/COPD/심부전/간경화/CKD/알코올/흡연), 면역저하 여부(무비증/HIV/혈액암/신증후군/장기이식→PCV13 우선).",
-    "treatment": "폐렴구균: 65세이상→PPSV23(23가). 65세미만 만성질환자→PCV13. 면역저하자→PCV13 우선. 접종 원하는 경우→PCV13 가능.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["폐렴구균","pneumococcal","폐렴백신","PCV13","PCV15","PCV20","PCV21","PPSV23"],
+    "primarySources": [
+      "MMWR 74(1), 2025 — Expanded PCV Recs for Adults ≥50y (PMID:39773952)",
+      "KDCA 성인 예방접종 가이드 2024"
+    ],
+    "sections": {
+      "indication": {
+        "content": "### ACIP 2024 (≥50세 universal PCV)\n| 대상 | 권고 |\n|---|---|\n| ≥50세 PCV-naive | PCV20 **또는** PCV21 단독 / **또는** PCV15 후 1년 뒤 PPSV23 |\n| ≥19세 면역저하·무비증·CSF 누출·인공와우 | PCV20/21 단독 / 또는 PCV15 후 ≥8주 PPSV23 |\n| ≥65세 PCV-naive | 위 ≥50세 공식과 동일 |\n| PPSV23만 기접종자 | ≥1년 후 PCV15/20/21 1회 보완 |\n\n> PCV13 단독 신규 접종은 면역저하·무비증·CSF 누출·인공와우 중심으로 축소",
+        "sources": []
+      },
+      "insurance": {
+        "content": "### 한국 KDCA 2024\n- ≥65세 **PPSV23 국가사업 유지** (1회)\n- ≥19세 PCV13: 면역저하자·무비증·CSF 누출·인공와우에만 NIP 적용\n- PCV15·PCV20·PCV21은 KDCA NIP 미포함, 자비 접종 고려\n- 실전: **국가사업 대상은 PPSV23 유지 + 고위험군은 PCV13 우선**, ACIP 확대안은 참고",
+        "sources": []
+      },
+      "notes": {
+        "content": "### 만성질환자 해당 범위\n알코올중독 · 만성 심혈관질환 · 만성 간질환 · 만성 폐질환(COPD·폐기종·천식) · 흡연 · 당뇨병\n\n### 면역저하자 해당 범위\n선천·후천성 무비증 · 낫적혈구병 · 만성 신질환 · 전신성 암 · HIV · 호지킨병 · 면역억제제 · 백혈병 · 림프종 · 다발성 골수종 · 신증후군 · 고형장기이식",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
+  /* v2 (B2) — Phase 5a Liby ingest. 원본: knowledge/by-drug/hpv-vaccine.md */
   "HPV": {
     "kind": "disease",
-    "exam": null,
-    "treatment": "HPV 백신: 여성 11~26세 권고(27~45세 상담 후 고려), 남성 9~26세. 3회: 0→2개월(최소1개월)→6개월(최소3개월)[CDC]. 1년 이내 완료.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["HPV","자궁경부암","인유두종바이러스","가다실","가다실9"],
+    "primarySources": [
+      "CDC ACIP HPV Vaccination Considerations 2024",
+      "KDCA 예방접종도우미 — HPV 국가사업"
+    ],
+    "sections": {
+      "indication": {
+        "content": "- **9~26세**: routine 권고 (성별 구분 없음)\n- **27~45세**: shared clinical decision-making (SCDM) — 파트너·감염 이력·미접종 상태 고려\n- **면역저하자**: 9~26세 routine, 연령 무관 3-dose",
+        "sources": []
+      },
+      "schedule": {
+        "content": "| 개시 연령 | 스케줄 | 최소 간격 |\n|---|---|---|\n| 9~14세 | **2회** (0·6-12개월) | 1-2차 ≥5개월 |\n| ≥15세 또는 면역저하자 | **3회** (0·2·6개월) | 1-2차 4주 / 2-3차 12주 / 1-3차 5개월 |\n\n> 2회 스케줄은 <15세 개시 시에만. 15세 이상으로 미완 시 3회로 전환",
+        "sources": []
+      },
+      "insurance": {
+        "content": "### 한국 KDCA 국가사업\n- **여성 만 12세**: NIP 무료 접종 (2가 또는 4가)\n- **저소득층 만 13~17세 여성**: 무료 접종\n- **성인 routine 권고**: 여성 자비 / 남성 routine 권고 제한적\n- 27~45세 shared decision은 ACIP 기준으로 임상 판단",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "자궁경부암": {
     "kind": "disease",
-    "exam": null,
-    "treatment": "HPV 백신: 여성 11~26세 권고(27~45세 상담 후 고려), 남성 9~26세. 3회: 0→2개월(최소1개월)→6개월(최소3개월)[CDC]. 1년 이내 완료.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["자궁경부암","HPV","인유두종바이러스"],
+    "primarySources": [
+      "CDC ACIP HPV Vaccination Considerations 2024",
+      "KDCA 예방접종도우미 — HPV 국가사업"
+    ],
+    "sections": {
+      "indication": {
+        "content": "- **9~26세**: routine 권고 (성별 구분 없음)\n- **27~45세**: shared clinical decision-making (SCDM)\n- **면역저하자**: 9~26세 routine, 연령 무관 3-dose",
+        "sources": []
+      },
+      "schedule": {
+        "content": "| 개시 연령 | 스케줄 |\n|---|---|\n| 9~14세 | **2회** (0·6-12개월) |\n| ≥15세 또는 면역저하자 | **3회** (0·2·6개월) |",
+        "sources": []
+      },
+      "insurance": {
+        "content": "KDCA NIP: 여성 만 12세 무료. 저소득층 만 13~17세 여성 무료. 성인 자비.",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   /* v2 (B2) — Phase 4 Liby ingest. 원본: knowledge/by-disease/obesity.md */
   "obesity": {
@@ -607,181 +806,480 @@ var KNOWLEDGE_BUNDLE = {
       "draftTemplate": null
     }
   },
+  /* v2 (B2) — Phase 5a Liby ingest. 원본: knowledge/by-drug/hepatitis-ab-vaccine.md */
   "A형간염": {
     "kind": "disease",
-    "exam": null,
-    "treatment": "A형간염: 고위험군 6-18개월 간격 2회.\n40세 미만→항체검사 없이 접종. 40세 이상→항체검사 후 음성이면 접종.\n여행: 1차 후 ~2주 보호항체 95%↑ → 출국 직전 1차 가능, 귀국 후 2차.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["A형간염","hepatitis A"],
+    "primarySources": [
+      "CDC Hepatitis A Vaccination HCP 2024",
+      "KDCA 성인 예방접종 가이드 2024"
+    ],
+    "sections": {
+      "indication": {
+        "content": "### 한국 임상 기준\n- 고위험군(의료인·해외여행자·만성 간질환자 등): 2회 접종\n- **40세 미만**: 항체검사 없이 접종 권고\n- **40세 이상**: 항체검사 후 음성이면 접종 권고\n\n> 미국 CDC는 2020 이후 요청 시 모든 성인 접종 가능. 한국은 연령 기반 임상 기준 유지.",
+        "sources": []
+      },
+      "schedule": {
+        "content": "2회: 6-18개월 간격",
+        "sources": []
+      },
+      "notes": {
+        "content": "### 여행 관련\n- 1차 접종 후 ~2주: 보호항체 95%↑ → **여행 직전 1차만 맞고 출국 가능**\n- 장기면역(20년+): 2차 완료 필요 → 귀국 후 추가 접종",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "hepatitis A": {
     "kind": "disease",
-    "exam": null,
-    "treatment": "A형간염: 고위험군 6-18개월 간격 2회.\n40세 미만→항체검사 없이 접종. 40세 이상→항체검사 후 음성이면 접종.\n여행: 1차 후 ~2주 보호항체 95%↑ → 출국 직전 1차 가능, 귀국 후 2차.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["hepatitis A","A형간염"],
+    "primarySources": [
+      "CDC Hepatitis A Vaccination HCP 2024",
+      "KDCA 성인 예방접종 가이드 2024"
+    ],
+    "sections": {
+      "indication": {
+        "content": "### 한국 임상 기준\n- 고위험군(의료인·해외여행자·만성 간질환자 등): 2회 접종\n- **40세 미만**: 항체검사 없이 접종 권고\n- **40세 이상**: 항체검사 후 음성이면 접종 권고",
+        "sources": []
+      },
+      "schedule": {
+        "content": "2회: 6-18개월 간격",
+        "sources": []
+      },
+      "notes": {
+        "content": "여행: 1차 후 ~2주 보호항체 95%↑ → 여행 직전 1차만 맞고 출국 가능. 20년+ 장기면역은 2차 완료 필요",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "B형간염": {
     "kind": "disease",
-    "exam": "초진 혈액: HBsAg/HBsAb/Anti-HCV Ab/HIV Ag·Ab (4종). B형만: HBsAg/HBsAb (2종).",
-    "treatment": "B형간염: 3회 근육주사(삼각근) 0·1·6개월[CDC].\n항체검사: 3차 1개월 후 anti-HBs.\nNon-responder(의료인등): 3회 재접종→1~2개월 후 재검→음성이면 판정. 추후 노출 시 HBIG+백신.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["B형간염","hepatitis B","Heplisav-B"],
+    "primarySources": [
+      "MMWR 71(13), 2022 — Universal HepB in Adults 19-59y",
+      "MMWR 73(48), 2024 — Updated Universal HepB Recs",
+      "KDCA 성인 예방접종 가이드 2024"
+    ],
+    "sections": {
+      "indication": {
+        "content": "### ACIP Universal 전략 (2022)\n- **19~59세 성인**: 위험군 평가 없이 **universal 접종 권고**\n- ≥60세: 위험군 기반 접종 (의료인·투석·감염 노출 가능성 등)\n\n> 한국 KDCA는 **universal 미채택** — 위험군·고위험군 기반 유지. 의료인·신생아·고위험군 중심 NIP",
+        "sources": []
+      },
+      "schedule": {
+        "content": "| 백신 | 스케줄 | 경로 |\n|---|---|---|\n| Engerix-B / Recombivax HB | 0·1·6개월 (3회) | 삼각근 근주 |\n| **Heplisav-B** | 0·1개월 (**2회**) | 삼각근 근주 |\n\n> Heplisav-B는 임신부에게도 허용 (2024.9 ACIP)",
+        "sources": []
+      },
+      "exam": {
+        "content": "### 초진 시 혈액검사 세트\n- B형간염 + 기타: HBsAg / HBsAb / Anti-HCV Ab / HIV Ag/Ab — 4종\n- B형만 확인: HBsAg / HBsAb — 2종\n- 항체검사 원하는 경우: 3차 접종 1개월 후 anti-HBs",
+        "sources": []
+      },
+      "notes": {
+        "content": "### Non-responder 관리 (노출 고위험군·면역저하자)\n1. 기본 3회 완료 후 anti-HBs (-) → 3회 재접종 (0·1·6개월)\n2. 재접종 완료 1-2개월 후 anti-HBs 재검사\n3. 재접종 후에도 (-) → Non-responder 판정 — 추가접종 불필요, HBsAg 음성 확인, 추후 노출 시 즉시 HBIG + HBV 백신\n\n> 일반인은 재접종 불필요",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "hepatitis B": {
     "kind": "disease",
-    "exam": "초진 혈액: HBsAg/HBsAb/Anti-HCV Ab/HIV Ag·Ab (4종). B형만: HBsAg/HBsAb (2종).",
-    "treatment": "B형간염: 3회 근육주사(삼각근) 0·1·6개월[CDC].\n항체검사: 3차 1개월 후 anti-HBs.\nNon-responder(의료인등): 3회 재접종→1~2개월 후 재검→음성이면 판정. 추후 노출 시 HBIG+백신.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["hepatitis B","B형간염","Heplisav-B"],
+    "primarySources": [
+      "MMWR 71(13), 2022 — Universal HepB in Adults 19-59y",
+      "MMWR 73(48), 2024 — Updated Universal HepB Recs",
+      "KDCA 성인 예방접종 가이드 2024"
+    ],
+    "sections": {
+      "indication": {
+        "content": "### ACIP Universal (2022)\n- 19~59세 universal / ≥60세 위험군 기반\n- 한국 KDCA는 universal 미채택, 위험군 기반 유지",
+        "sources": []
+      },
+      "schedule": {
+        "content": "Engerix-B / Recombivax HB: 3회 (0·1·6개월)\n**Heplisav-B**: **2회** (0·1개월), 임신부 허용",
+        "sources": []
+      },
+      "exam": {
+        "content": "초진 혈액: HBsAg/HBsAb/Anti-HCV Ab/HIV Ag·Ab (4종). B형만: HBsAg/HBsAb (2종)",
+        "sources": []
+      },
+      "notes": {
+        "content": "Non-responder: 3회 재접종 → 재검 → (-)이면 판정. 노출 시 HBIG + 백신",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "herpes zoster": {
     "kind": "disease",
-    "exam": "대상포진 백신 전 확인: 조스타박스(ZVL) 이전 접종 여부(→2개월 후 싱그릭스 가능), 이전 대상포진 이환 이력(완전 회복 후 가능), 면역저하 여부(18세이상 중증면역저하자도 RZV 권고).",
-    "treatment": "RZV(싱그릭스): 50세이상 or 18세이상 중증면역저하자. 2회 근육주사, 2-6개월 간격(최소 4주)[CDC]. 6개월 초과 지연→재시작 불필요. ZVL(조스타박스): 1회 피하. 면역저하자 ZVL 금기.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["herpes zoster","대상포진","shingrix","RZV","ZVL"],
+    "primarySources": [
+      "MMWR 71(3), 2022 — RZV in Immunocompromised Adults",
+      "CDC Shingrix HCP Considerations 2024",
+      "KDCA 성인 예방접종 가이드 2024"
+    ],
+    "sections": {
+      "comparison": {
+        "content": "| 백신 | 종류 | 접종 | 상태 |\n|---|---|---|---|\n| RZV (Shingrix, 싱그릭스) | 사백신 | 2회 근주 | 1차 권고 |\n| ZVL (Zostavax, 조스타박스) | 생백신 | 1회 피하 | **2020년 미국 단종**, KDCA NIP 미포함 |",
+        "sources": []
+      },
+      "indication": {
+        "content": "- ACIP: ≥50세 / ≥**19세** 중증면역저하자\n- KDCA: ≥60세 권고. 면역저하자 RZV는 자비",
+        "sources": []
+      },
+      "schedule": {
+        "content": "면역정상: RZV 2회, 2-6개월 간격\n면역저하: RZV 2회, **1-2개월 간격** (단축)",
+        "sources": []
+      },
+      "contraindication": {
+        "content": "면역저하자: ZVL 금기 → **RZV만**",
+        "sources": []
+      },
+      "notes": {
+        "content": "ZVL 접종 이력 → 2개월 후 RZV 가능. 대상포진 이환 이력 → 완전 회복 후 RZV 가능",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "shingrix": {
     "kind": "disease",
-    "exam": "대상포진 백신 전 확인: 조스타박스(ZVL) 이전 접종 여부(→2개월 후 싱그릭스 가능), 이전 대상포진 이환 이력(완전 회복 후 가능), 면역저하 여부(18세이상 중증면역저하자도 RZV 권고).",
-    "treatment": "RZV(싱그릭스): 50세이상 or 18세이상 중증면역저하자. 2회 근육주사, 2-6개월 간격(최소 4주)[CDC]. 6개월 초과 지연→재시작 불필요. ZVL(조스타박스): 1회 피하. 면역저하자 ZVL 금기.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["shingrix","싱그릭스","RZV","대상포진"],
+    "primarySources": [
+      "MMWR 71(3), 2022 — RZV in Immunocompromised Adults",
+      "CDC Shingrix HCP Considerations 2024"
+    ],
+    "sections": {
+      "indication": {
+        "content": "- ACIP: ≥50세 / ≥19세 중증면역저하자\n- KDCA: ≥60세 권고",
+        "sources": []
+      },
+      "schedule": {
+        "content": "면역정상: 2-6개월 간격 2회\n면역저하: **1-2개월 간격** 2회",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "싱그릭스": {
     "kind": "disease",
-    "exam": "대상포진 백신 전 확인: 조스타박스(ZVL) 이전 접종 여부(→2개월 후 싱그릭스 가능), 이전 대상포진 이환 이력(완전 회복 후 가능), 면역저하 여부(18세이상 중증면역저하자도 RZV 권고).",
-    "treatment": "RZV(싱그릭스): 50세이상 or 18세이상 중증면역저하자. 2회 근육주사, 2-6개월 간격(최소 4주)[CDC]. 6개월 초과 지연→재시작 불필요. ZVL(조스타박스): 1회 피하. 면역저하자 ZVL 금기.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["싱그릭스","shingrix","RZV","대상포진"],
+    "primarySources": [
+      "MMWR 71(3), 2022 — RZV in Immunocompromised Adults",
+      "CDC Shingrix HCP Considerations 2024"
+    ],
+    "sections": {
+      "indication": {
+        "content": "- ACIP: ≥50세 / ≥19세 중증면역저하자\n- KDCA: ≥60세 권고",
+        "sources": []
+      },
+      "schedule": {
+        "content": "면역정상: 2-6개월 간격 2회\n면역저하: **1-2개월 간격** 2회",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "조스타박스": {
     "kind": "disease",
-    "exam": "대상포진 백신 전 확인: 조스타박스(ZVL) 이전 접종 여부(→2개월 후 싱그릭스 가능), 이전 대상포진 이환 이력(완전 회복 후 가능), 면역저하 여부(18세이상 중증면역저하자도 RZV 권고).",
-    "treatment": "RZV(싱그릭스): 50세이상 or 18세이상 중증면역저하자. 2회 근육주사, 2-6개월 간격(최소 4주)[CDC]. 6개월 초과 지연→재시작 불필요. ZVL(조스타박스): 1회 피하. 면역저하자 ZVL 금기.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["조스타박스","ZVL","대상포진"],
+    "primarySources": [
+      "CDC Shingrix HCP Considerations 2024"
+    ],
+    "sections": {
+      "notes": {
+        "content": "ZVL(Zostavax, 조스타박스): **2020년 미국 단종**, KDCA NIP 미포함.\n이전 ZVL 접종 이력 → 2개월 후부터 RZV(싱그릭스) 접종 권고",
+        "sources": []
+      },
+      "contraindication": {
+        "content": "면역저하자: 생백신 ZVL **금기** → RZV(싱그릭스)만 사용",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "pneumococcal": {
     "kind": "disease",
-    "exam": "폐렴구균 백신 전 확인: 나이(65세이상→PPSV23), 만성질환 여부(당뇨/COPD/심부전/간경화/CKD/알코올/흡연), 면역저하 여부(무비증/HIV/혈액암/신증후군/장기이식→PCV13 우선).",
-    "treatment": "폐렴구균: 65세이상→PPSV23(23가). 65세미만 만성질환자→PCV13. 면역저하자→PCV13 우선. 접종 원하는 경우→PCV13 가능.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["pneumococcal","폐렴구균","PCV13","PCV15","PCV20","PCV21","PPSV23"],
+    "primarySources": [
+      "MMWR 74(1), 2025 — Expanded PCV Recs for Adults ≥50y (PMID:39773952)",
+      "KDCA 성인 예방접종 가이드 2024"
+    ],
+    "sections": {
+      "indication": {
+        "content": "### ACIP 2024\n- ≥50세 PCV-naive: PCV20 / PCV21 / PCV15+PPSV23\n- ≥19세 면역저하·무비증·CSF누출·인공와우: PCV20/21 / PCV15+PPSV23 (≥8주)\n- ≥65세 PCV-naive: ≥50세와 동일",
+        "sources": []
+      },
+      "insurance": {
+        "content": "### KDCA 2024\n- ≥65세 PPSV23 국가사업 유지\n- ≥19세 PCV13: 면역저하·무비증·CSF누출·인공와우 NIP\n- PCV15/20/21은 NIP 미포함 (자비)\n- 실전: 국가사업 대상 PPSV23 + 고위험 PCV13 우선, ACIP 확대안 참고",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "인유두종바이러스": {
     "kind": "disease",
-    "exam": null,
-    "treatment": "HPV 백신: 여성 11~26세 권고(27~45세 상담 후 고려), 남성 9~26세. 3회: 0→2개월(최소1개월)→6개월(최소3개월)[CDC]. 1년 이내 완료.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["인유두종바이러스","HPV","자궁경부암"],
+    "primarySources": [
+      "CDC ACIP HPV Vaccination Considerations 2024"
+    ],
+    "sections": {
+      "indication": {
+        "content": "- 9~26세: routine 성별 무관\n- 27~45세: SCDM\n- 면역저하: 9~26세 routine",
+        "sources": []
+      },
+      "schedule": {
+        "content": "9~14세: **2회** (0·6-12개월)\n≥15세·면역저하자: **3회** (0·2·6개월)",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "가다실": {
     "kind": "disease",
-    "exam": null,
-    "treatment": "HPV 백신: 여성 11~26세 권고(27~45세 상담 후 고려), 남성 9~26세. 3회: 0→2개월(최소1개월)→6개월(최소3개월)[CDC]. 1년 이내 완료.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["가다실","HPV","인유두종바이러스"],
+    "primarySources": [
+      "CDC ACIP HPV Vaccination Considerations 2024",
+      "KDCA 예방접종도우미"
+    ],
+    "sections": {
+      "indication": {
+        "content": "- 9~26세: routine 성별 무관\n- 27~45세: SCDM",
+        "sources": []
+      },
+      "schedule": {
+        "content": "9~14세: 2회 (0·6-12개월)\n≥15세: 3회 (0·2·6개월)",
+        "sources": []
+      },
+      "insurance": {
+        "content": "KDCA NIP: 여성 만 12세 무료, 저소득층 만 13~17세 여성 무료",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
+  /* v2 (B2) — Phase 5a Liby ingest. 원본: knowledge/by-drug/japanese-encephalitis-vaccine.md */
   "일본뇌염": {
     "kind": "disease",
-    "exam": null,
-    "treatment": "사백신(IXIARO): 2회(0일·28일), 필요시 1~2년후 추가. 부작용 적음.\n생백신(Imojev): 성인 1회. 임신부·면역저하자 금기.\n여행 직전(시간없음)→생백신 1회(금기없을때). 시간 여유→사백신 2회.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["일본뇌염","Japanese encephalitis","IXIARO","Imojev"],
+    "primarySources": [
+      "CDC Yellow Book 2024 — Japanese Encephalitis",
+      "KDCA 예방접종도우미"
+    ],
+    "sections": {
+      "comparison": {
+        "content": "| 구분 | 사백신(IXIARO) | 생백신(Imojev) |\n|---|---|---|\n| 접종 횟수 | 2회 (0·28일) | 성인 1회 |\n| 추가접종 | KDCA 11개월 후 3차 / 이후 필요 시 1-2년마다 | — |\n| 특징 | 부작용 적음, 미국 사용 | 편의성, 호주·아태 사용 (미국 미승인) |\n| 금기 | 없음 | 임신부·면역저하자 금기 |",
+        "sources": []
+      },
+      "schedule": {
+        "content": "- 사백신 IXIARO: 0·28일 2회. KDCA는 11개월 후 3차 추가\n- 생백신 Imojev: 성인 1회. 미국 미승인, 한국·아태 허용",
+        "sources": []
+      },
+      "contraindication": {
+        "content": "생백신(Imojev): 임신부·면역저하자 금기",
+        "sources": []
+      },
+      "notes": {
+        "content": "- 여행 직전(시간 부족): 생백신 1회 (금기 없을 때)\n- 시간 여유: 사백신 2회 완료\n- 소아기 접종 기록 불확실해도 성인 추가접종 안전",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "Japanese encephalitis": {
     "kind": "disease",
-    "exam": null,
-    "treatment": "사백신(IXIARO): 2회(0일·28일), 필요시 1~2년후 추가. 부작용 적음.\n생백신(Imojev): 성인 1회. 임신부·면역저하자 금기.\n여행 직전(시간없음)→생백신 1회(금기없을때). 시간 여유→사백신 2회.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["Japanese encephalitis","일본뇌염"],
+    "primarySources": [
+      "CDC Yellow Book 2024 — Japanese Encephalitis"
+    ],
+    "sections": {
+      "comparison": {
+        "content": "사백신 IXIARO 2회 (0·28일) / 생백신 Imojev 1회. Imojev 미국 미승인.",
+        "sources": []
+      },
+      "schedule": {
+        "content": "사백신: 0·28일 2회 (KDCA는 11개월 후 3차 추가)\n생백신: 성인 1회",
+        "sources": []
+      },
+      "contraindication": {
+        "content": "생백신: 임신부·면역저하자 금기",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
+  /* v2 (B2) — Phase 5a Liby ingest. 원본: knowledge/by-drug/rabies-vaccine.md */
   "광견병": {
     "kind": "disease",
-    "exam": null,
-    "treatment": "노출전예방: 기본 2회(0일·7일). 고위험(실험실/야생동물/유행지역3년초과)→3회(0·7·21-28일).\n추가접종: 완료 1년째 1회, 이후 5년마다.\n직업적 지속노출→항체역가 측정+추가접종[CDC/WHO].",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["광견병","rabies"],
+    "primarySources": [
+      "MMWR 71(18), 2022 — Modified PrEP 2-dose Schedule",
+      "CDC Rabies PrEP Clinical Care 2024"
+    ],
+    "sections": {
+      "indication": {
+        "content": "### 노출 전 예방 (PrEP)\n- **기본 2회** (2022 ACIP): 0일·7일, 어깨세모근 근주\n- 기본 3회 (0·7·21 또는 28일): 실험실 종사자 / 야생동물·유기동물 취급 직업군 / 유행지역 장기 체류(>3년)",
+        "sources": []
+      },
+      "schedule": {
+        "content": "2022 ACIP 개정 — 면역정상 ≥18세 성인 PrEP 2회(0·7일) 근주",
+        "sources": []
+      },
+      "notes": {
+        "content": "### Booster — 2022 ACIP 개정\n위험 카테고리(1-5군)별 titer 기반:\n- 지속 직업 노출군(실험실·동물 취급): titer 측정, <0.5 IU/mL 시 booster\n- 간헐적 노출군: 노출 이벤트 시 post-exposure 처치\n- 과거 \"1년 추가 + 5년마다\" 공식은 구 3회 시대 경험칙, 현 CDC 권고 아님\n\n### KDCA 참고\nKDCA 건강정보포털은 2022 ACIP 2회 스케줄 미반영. 임상은 CDC 2회를 국제 표준 적용",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "rabies": {
     "kind": "disease",
-    "exam": null,
-    "treatment": "노출전예방: 기본 2회(0일·7일). 고위험(실험실/야생동물/유행지역3년초과)→3회(0·7·21-28일).\n추가접종: 완료 1년째 1회, 이후 5년마다.\n직업적 지속노출→항체역가 측정+추가접종[CDC/WHO].",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["rabies","광견병"],
+    "primarySources": [
+      "MMWR 71(18), 2022 — Modified PrEP 2-dose Schedule",
+      "CDC Rabies PrEP Clinical Care 2024"
+    ],
+    "sections": {
+      "indication": {
+        "content": "노출 전 예방 기본 2회(0·7일) / 고위험 3회(0·7·21 or 28일)",
+        "sources": []
+      },
+      "schedule": {
+        "content": "2022 ACIP: 면역정상 성인 PrEP 2회(0·7일) 근주",
+        "sources": []
+      },
+      "notes": {
+        "content": "Booster는 위험 카테고리별 titer 기반 (과거 5년마다 공식 폐기)",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
+  /* v2 (B2) — Phase 5a Liby ingest. 원본: knowledge/by-drug/varicella-mmr-polio-vaccine.md */
   "수두": {
     "kind": "disease",
-    "exam": null,
-    "treatment": "수두(생백신): 1970년 이후 출생+면역없는 자. 4~8주 간격 2회.\n대상: 학생/군인/의료인/교사/해외여행/가임기여성/면역저하자 밀접접촉자.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["수두","varicella"],
+    "primarySources": [
+      "CDC Varicella Vaccine HCP 2024"
+    ],
+    "sections": {
+      "indication": {
+        "content": "1970년 이후 출생 중 면역 없는 자: 학생·군인·의료인·교사·해외여행자·비자발급·고위험군(면역저하자) 밀접접촉자·가임기 여성",
+        "sources": []
+      },
+      "schedule": {
+        "content": "4-8주 간격 2회 (생백신)",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "varicella": {
     "kind": "disease",
-    "exam": null,
-    "treatment": "수두(생백신): 1970년 이후 출생+면역없는 자. 4~8주 간격 2회.\n대상: 학생/군인/의료인/교사/해외여행/가임기여성/면역저하자 밀접접촉자.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["varicella","수두"],
+    "primarySources": [
+      "CDC Varicella Vaccine HCP 2024"
+    ],
+    "sections": {
+      "indication": {
+        "content": "1970년 이후 출생 중 면역 없는 자 — 학생·군인·의료인·교사·해외여행·가임기 여성",
+        "sources": []
+      },
+      "schedule": {
+        "content": "4-8주 간격 2회",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "MMR": {
     "kind": "disease",
-    "exam": null,
-    "treatment": "MMR(생백신): 1967년 이전 출생→불필요(자연감염 항체). 1967년 이후+불확실→1회.\n고위험군(의료인/군인/대학생/해외여행)→2회(4주간격).\n항체검사 음성시 접종 고려.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["MMR","홍역","볼거리","풍진"],
+    "primarySources": [
+      "CDC Measles Vaccine Considerations 2024",
+      "KDCA 예방접종도우미"
+    ],
+    "sections": {
+      "indication": {
+        "content": "| 대상 | 권고 |\n|---|---|\n| **1968년 이전 출생 (KDCA 기준)** | 자연감염 항체 가능성 — 불필요, 음성 시 접종 고려 |\n| CDC 기준 | 1957년 이전 출생자 presumptive immunity |\n| 1968년 이후, 항체 불확실/접종력 불명 | MMR 1회 |\n| 고위험군 (의료인·군인·대학생·해외여행·비자발급) | MMR 2회 (4주 간격) |\n\n> 국내 진료는 KDCA 1968년 기준. CDC 1957 vs KDCA 1968 역학 차이",
+        "sources": []
+      },
+      "schedule": {
+        "content": "고위험군: 4주 간격 2회. 일반: 1회",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "홍역": {
     "kind": "disease",
-    "exam": null,
-    "treatment": "MMR(생백신): 1967년 이전 출생→불필요(자연감염 항체). 1967년 이후+불확실→1회.\n고위험군(의료인/군인/대학생/해외여행)→2회(4주간격).",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["홍역","MMR","measles"],
+    "primarySources": [
+      "CDC Measles Vaccine Considerations 2024",
+      "KDCA 예방접종도우미"
+    ],
+    "sections": {
+      "indication": {
+        "content": "KDCA 1968년 이전 출생 불필요 (CDC 1957 기준). 1968년 이후 불확실 1회, 고위험 2회(4주)",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "풍진": {
     "kind": "disease",
-    "exam": null,
-    "treatment": "MMR(생백신): 1967년 이전 출생→불필요. 1967년 이후+불확실→1회.\n고위험군→2회(4주간격).",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["풍진","MMR","rubella"],
+    "primarySources": [
+      "CDC Measles/Mumps/Rubella Vaccine 2024",
+      "KDCA 예방접종도우미"
+    ],
+    "sections": {
+      "indication": {
+        "content": "KDCA 1968년 이전 출생 불필요. 1968년 이후 불확실 1회, 고위험 2회(4주)",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "폴리오": {
     "kind": "disease",
-    "exam": null,
-    "treatment": "IPV(사백신): 접종력 없음→3회(0·1~2개월·6~12개월).\n접종완료+고위험→1회 추가.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["폴리오","IPV","polio"],
+    "primarySources": [
+      "MMWR 72(49), 2023 — Adult IPV Updated Recs",
+      "KDCA 예방접종도우미"
+    ],
+    "sections": {
+      "indication": {
+        "content": "### 2023 ACIP 개정\n- **미접종 또는 불완전 접종 성인 (전 대상)**: IPV 3회\n- 접종 완료 + 고위험 직업 / 유행지역 여행: 1회 booster\n\n> 2023 ACIP로 기존 \"고위험군 한정\" → 모든 미접종 성인 확대. 2022 NY 유행 이후 정책 변경",
+        "sources": []
+      },
+      "schedule": {
+        "content": "3회: 0·1-2개월·6-12개월. 고위험 booster 1회",
+        "sources": []
+      },
+      "insurance": {
+        "content": "KDCA: 성인 폴리오 routine 권고 제한적 — 여행자·고위험 직업 중심. 미접종 성인 IPV 3회는 임상 판단 자비",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "IPV": {
     "kind": "disease",
-    "exam": null,
-    "treatment": "IPV(사백신): 접종력 없음→3회(0·1~2개월·6~12개월).\n접종완료+고위험→1회 추가.",
-    "differential": null,
-    "draftTemplate": null,
-    "draftAppend": null
+    "keywords": ["IPV","폴리오","polio"],
+    "primarySources": [
+      "MMWR 72(49), 2023 — Adult IPV Updated Recs"
+    ],
+    "sections": {
+      "indication": {
+        "content": "2023 ACIP: 미접종·불완전 성인 전체 IPV 3회 / 완료+고위험 1회 booster",
+        "sources": []
+      },
+      "schedule": {
+        "content": "3회: 0·1-2개월·6-12개월",
+        "sources": []
+      }
+    },
+    "uiHooks": null
   },
   "후각감퇴": {
     "kind": "disease",

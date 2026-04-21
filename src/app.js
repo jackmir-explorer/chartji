@@ -3,7 +3,7 @@ const {useState,useRef,useEffect}=React;
 /* kind별 uiHooks 기본값 (knowledge/section-vocabulary.md line 70-99 정합).
    엔트리가 uiHooks 필드를 명시하지 않으면 kind별 기본값을 상속. 필드별 부분 override 허용. */
 var UIHOOKS_DEFAULTS={
-  disease:{hint:["protocol"],guide:["classification","exam","monitoring","contraindication","pregnancy","referral","differential"],draftAppend:["draft-append"]},
+  disease:{hint:["protocol","indication","schedule"],guide:["classification","indication","exam","schedule","dosing","comparison","contraindication","precaution","monitoring","pregnancy","insurance","referral","differential","notes"],draftAppend:["draft-append"]},
   drug:   {hint:["indication","dosing","schedule"],guide:["contraindication","precaution","comparison","insurance"],draftAppend:null},
   topic:  {hint:[],guide:["*"],draftAppend:null}
 };

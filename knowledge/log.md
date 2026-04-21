@@ -5,6 +5,7 @@
 
 ---
 
+2026-04-21 | bundle compile | Phase 5a 백신 묶음 v2 마이그레이션 — 10 md (vaccination·tdap·herpes-zoster·pneumococcal·hpv·hepatitis-ab·japanese-encephalitis·rabies·varicella-mmr-polio·adult-summary·vaccine-interval) + 기존 31 v1 keys → 31 v2 + 2 신규 topic(vaccine-interval·vaccination-summary) = 33 keys v2. Z-full 에스컬레이션 — Researcher 2 배치(critical 5+moderate 3). md 본문 8건 개정: PCV15/20/21 ≥50세 universal / HPV 2-dose <15세 / B형간염 19-59세 universal + Heplisav-B / 폴리오 모든 미접종 성인 / 항암 독감 ANC 폐기 타이밍 기반 / RZV ≥19세 면역저하 + ZVL 2020 단종 / 광견병 booster titer 기반 / MMR KDCA 1968년 기준. primarySources 각 md별 최신 MMWR+CDC+KDCA. TRIAGE 2줄 추가
 2026-04-21 | bundle compile | Phase 5c drug v2 마이그레이션 — wegovy(3 aliases, 4섹션) + mounjaro(4 aliases, 3섹션) + ozempic(2 aliases, 3섹션) + semaglutide(1 alias, overview 1섹션). drug↔glp1 topic 역할 재정립: SURMOUNT-5 위고비 비교 drug에서 제거(glp1.dosing에만 유지). primarySources: wegovy=FDA / ozempic=심평원 2024.02. 키 이름 유지 → TRIAGE 변경 없음
 2026-04-21 | bundle compile | Phase 4 v2 마이그레이션 — obesity (disease, 5섹션) + dysphonia (disease, 1섹션) + glp1 topic 신규 (8섹션) — TRIAGE calcCategories에 glp1 추가
 2026-04-15 | by-disease/obesity.md | 문진 보완 — 환자 기대 청취·목표 설정·설문지 법적 보호 [TIPS — by 로컬원장님]

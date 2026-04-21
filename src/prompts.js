@@ -46,6 +46,8 @@ JSON만 반환 (다른 텍스트 절대 금지):
   수두 (수두/varicella 접종 관련)
   MMR (MMR/홍역/풍진/볼거리 접종 관련)
   폴리오 (폴리오/IPV/polio 접종 관련)
+  vaccine-interval (백신 접종 간격/생백신 vs 사백신 동시 접종 가능 여부/간격 원칙 질문 시)
+  vaccination-summary (성인 예방접종 전체 요약/어떤 백신 맞아야 하나/항암치료 중 독감백신 타이밍 관련)
   dysphonia (목소리이상/쉰목소리/hoarseness/발성장애 관련)
   경부종괴 (목에혹/목멍울/neck mass/림프절염/경부림프절 관련)
   urticaria (두드러기/urticaria/혈관부종/angioedema/만성두드러기/CSU 관련)

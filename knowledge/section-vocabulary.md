@@ -74,11 +74,12 @@ B2 스키마에서 knowledge/ 엔트리의 `sections` 딕셔너리가 사용하�
 ### `kind: "disease"`
 ```jsonc
 {
-  "hint":        ["protocol"],
-  "guide":       ["classification","exam","monitoring","contraindication","pregnancy","referral","differential"],
+  "hint":        ["protocol","indication","schedule"],
+  "guide":       ["classification","indication","exam","schedule","dosing","comparison","contraindication","precaution","monitoring","pregnancy","insurance","referral","differential","notes"],
   "draftAppend": ["draft-append"]
 }
 ```
+(2026-04-21 Phase 5a 확대 — 백신 엔트리 indication/schedule/insurance 노출 위해. 기존 obesity·dysphonia·urticaria 동작은 교집합 원리로 안정.)
 
 ### `kind: "drug"`
 ```jsonc
