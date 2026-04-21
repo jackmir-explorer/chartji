@@ -176,6 +176,7 @@ const KNOWLEDGE_CURATION_PROMPT=`한국 가정의학과 외래 임상 가이드 
 - [출처: transcript] 절대 금지 — transcript는 지식이 아니라 의사의 발화다.
 - 환자 상황과 무관한 일반론 생략. 미언급 증상·처방 추정 금지.
 - **출처 없는 bullet 생성 금지** — 할루시네이션 방지. 출처 매핑이 불가능하면 그 bullet은 drop.
+- **섹션 라벨 출처 금지 (절대)** — [출처: obesity.notes]·[출처: heart-failure.exam]·[출처: wegovy.protocol] 같이 **"[키.섹션]" 형태를 출처로 쓰는 것은 금지**. 이는 자료 분류 이름이지 실제 출처가 아니다. 섹션 라벨을 출처로 넣는 것은 **할루시네이션**으로 간주한다. 섹션 sources[]·primarySources에 등록된 **실제 출처 문자열**만 사용한다.
 ==출처 표기 규칙 (bullet 말미에 반드시 1개)==
 - 지식 자료 원문에서 다음 형태의 출처 마커를 찾아 [출처: XXX]로 통일해 표기:
   ① 이미 [출처: XXX] 포맷인 경우 → 그대로 보존
@@ -193,18 +194,25 @@ const KNOWLEDGE_CURATION_PROMPT=`한국 가정의학과 외래 임상 가이드 
   ⑥ 원문에 [출처 미확인] 태그가 명시적으로 있으면 → [출처 미확인] (미르가 의도적으로 붙인 불확실성 표시만 보존)
   ⑦ 위 어디에도 해당 안 되면 → **해당 bullet을 출력하지 않는다**. LLM이 자의로 [출처 미확인] 태그를 생성해 내보내는 것은 금지 (할루시네이션 여지).
   ⑧ 지식 자료 블록 본문 뒤에 [sources] 하위 블록, 또는 별도 [키.primarySources] 블록이 붙어 있으면:
-      · bullet 근거로 가장 부합하는 항목 1개를 그대로 [출처: <항목 원문>] 에 사용한다 (PMID/DOI 포함된 경우 그대로 유지)
-      · 예: [sources] "Ryan D. Clin Transl Allergy 2022;12(10):e12195. PMID:36225262, DOI:10.1002/clt2.12195"
-             → [출처: Ryan D. Clin Transl Allergy 2022;12(10):e12195. PMID:36225262]
-      · 해당 섹션 [sources]가 비어 있고 [키.primarySources]만 있으면 primarySources 항목 중 하나를 선택
-      · [sources]·[primarySources]가 모두 없으면 ②~⑤ 규칙으로 fallback
-- [키이름.섹션] 형태 출처 금지 — 이건 자료 분류 이름이지 실제 출처가 아니다.
+      · bullet 내용이 해당 [sources] 항목의 **주제(subject-matter)와 실제로 일치할 때만** 그 항목을 그대로 [출처: <항목 원문>]에 사용한다 (PMID/DOI 포함된 경우 그대로 유지).
+      · "같은 섹션에 있으니 가장 가까운 출처 아무거나" 방식 금지 — 주제 부조화 시에는 매핑하지 말고 bullet drop.
+      · 예 (좋음): bullet "단백질 1.2g/kg/day" + [sources] "Noronha JC. Obes Pillars 2025. PMID:41322078 (단백질 >1.2g/kg/day 국제 전문가 합의)" → [출처: Noronha JC. Obes Pillars 2025. PMID:41322078]
+      · 예 (나쁨·금지): bullet "adaptive thermogenesis로 렙틴 감소" + primarySources "Acosta A. Mayo Clinic 비만 표현형. Obesity 2021 (PMID:33759389)" — **표현형 논문은 적응성 열발생 주제가 아니므로 매핑 금지 → bullet drop**
+      · 해당 섹션 [sources]가 비어 있고 [키.primarySources]만 있으면, **primarySources 항목 중 bullet 주제와 실제로 일치하는 것만** 선택. 일치하는 것이 없으면 bullet drop.
+      · [sources]·[primarySources]가 모두 없으면 ②~⑤ 규칙으로 fallback. 그래도 매핑 불가 시 bullet drop.
 ==출력 형식==
 - 의사에게 지시하는 톤 금지 ("~하세요" 금지).
 - 출력은 bullet만, 머리말·꼬리말 없이.
 - bullet 개수는 지식 양·상황 복잡도에 따라 3~8 사이 재량. 단, 원문 근거 매핑 가능한 bullet이 3개 미만이면 **3개 미만**으로 출력한다 (억지로 채우지 말 것). 0개면 빈 출력 허용.
 ==출력 예시==
+좋은 예 (실제 출처 사용):
 ● BMI 30 이상이면 위고비 단독 가능 [출처: FDA]
 ● 초기 0.25mg 주 1회, 순차증량(0.25→0.5→1.0→1.7→2.4mg) [출처: FDA]
-● 표현형(Hungry Brain/Gut)에 GLP-1 유효 [출처: Mayo Clinic]`;
+● 표현형(Hungry Brain/Gut)에 GLP-1 유효 [출처: Mayo Clinic]
+● 단백질 섭취 1.2-1.5g/kg/day [출처: Noronha JC et al. Obes Pillars 2025;17:100234. PMID:41322078]
+
+절대 금지 (섹션 라벨 복사):
+● adaptive thermogenesis로 렙틴↓ 그렐린↑ [출처: obesity.notes]  ← 섹션 라벨을 출처로 쓰면 안 됨
+● GLP-1 follow-up 4파트 체크 [출처: obesity.exam]  ← 섹션 라벨을 출처로 쓰면 안 됨
+→ 이런 내용은 원문에 실제 출처가 없으면 **bullet 자체를 출력하지 말 것**.`;
 
