@@ -191,7 +191,7 @@ const KNOWLEDGE_CURATION_PROMPT=`한국 가정의학과 외래 임상 가이드 
 ① 환자 주호소·우려 직결 bullet (최우선. DROP 절대 금지)
    · transcript에 환자가 명시한 우려 사항(예: "작년에 방광염 3번")에 대응하는 지식 엔트리 정보가 있으면 **반드시** 출력한다.
    · 예: 환자가 UTI 기왕력을 호소 → sglt2-inhibitors 엔트리의 UTI 관련 bullet은 drop 금지.
-   · 단, 이 bullet도 아래 "공식 출처 라벨 3 class" 중 하나를 sections[k].sources[] 또는 primarySources에서 가져와야 한다. 출처 없는 정보 합성·추정은 절대 금지.
+   · 단, 이 bullet도 아래 "공식 출처 라벨 2 class" 중 하나를 sections[k].sources[] 또는 primarySources에서 가져와야 한다. 출처 없는 정보 합성·추정은 절대 금지.
 ② RedFlag 동반 환자 맥락 (기왕력·복용 약·가족력)
    · 예: "acute SOB + 심부전 병력" → ACS 감별 bullet 포함.
 ③ Drug safety / 금기 / 환자 교육
@@ -233,9 +233,9 @@ const KNOWLEDGE_CURATION_PROMPT=`한국 가정의학과 외래 임상 가이드 
       · 예 (나쁨·금지): bullet "adaptive thermogenesis로 렙틴 감소" + primarySources "Acosta A. Mayo Clinic 비만 표현형. Obesity 2021 (PMID:33759389)" — **표현형 논문은 적응성 열발생 주제가 아니므로 매핑 금지 → bullet drop**
       · 해당 섹션 [sources]가 비어 있고 [키.primarySources]만 있으면, **primarySources 항목 중 bullet 주제와 실제로 일치하는 것만** 선택. 일치하는 것이 없으면 bullet drop.
       · [sources]·[primarySources]가 모두 없으면 ②~⑤ 규칙으로 fallback. 그래도 매핑 불가 시 bullet drop.
-==공식 출처 라벨 3 class (Phase L2 - 2026-04-22, 전부 1급 동등)==
+==공식 출처 라벨 2 class (Phase L2-patch - 2026-04-22, 전부 1급 동등)==
 (knowledge/sourcing-rules.md 공식 체계 준수. 신설 라벨 없음, 기존 체계의 prompt 반영)
-bullet 말미 [출처: XXX]에 쓸 수 있는 공식 라벨은 아래 3 class 중 하나다. 세 클래스는 **동등한 1급 근거**로 다룬다.
+bullet 말미 [출처: XXX]에 쓸 수 있는 공식 라벨은 아래 2 class 중 하나다. 두 클래스는 **동등한 1급 근거**로 다룬다.
 
 1. Tier 1 — 학술 논문 / 가이드라인 / 규제 (sourcing-rules.md tags: [CLINICAL]·[REGULATORY])
    · 논문: [출처: {저자} et al. {저널} {연도};{권}({호}):{페이지}. PMID:{번호}]
@@ -248,20 +248,15 @@ bullet 말미 [출처: XXX]에 쓸 수 있는 공식 라벨은 아래 3 class �
    · 범위: 임상적으로 확립된 실전 관례 (Epley maneuver·경험적 PPI·뮤테란 off-label·가글 제조법 등)
    · 예: [출처: TIPS — by ENT교수] · [출처: TIPS — by 로컬원장님] · [출처: TIPS — 교수님 외래 참관]
 
-3. TIPS — 일반 약리 지식 (sourcing-rules.md의 2 class sub-form)
-   · 형식: [출처: TIPS — 일반 약리 지식]
-   · 범위: 약품 공식 정보 (indication·contraindication·reimbursement 등 시스템 기반)
-   · 예: sglt2-inhibitors·vitamin-d 엔트리에서 도입 (2026-04-22)
-
-위 3 라벨 중 하나가 sections[k].sources[] 또는 primarySources에 매핑되면 bullet 출력 가능.
+위 2 라벨 중 하나가 sections[k].sources[] 또는 primarySources에 매핑되면 bullet 출력 가능.
 - 매핑 불가 시 bullet drop. [출처 미확인] 태그를 LLM이 자의로 생성해 내보내는 것은 **금지** (기존 규칙 ⑦ 유지).
 - [출처 미확인]은 원문이 이미 그 태그를 달고 있는 경우에만 그대로 보존 (규칙 ⑥).
 
 ==Tier 편향 금지 (Phase L2 - 2026-04-22)==
-- TIPS 라벨(by {이름/소속}·일반 약리 지식) 섹션을 Tier 1과 **동일 우선순위**로 다룬다.
+- TIPS 라벨(by {이름/소속}) 섹션을 Tier 1과 **동일 우선순위**로 다룬다.
 - 한 엔트리에 Tier 1 + TIPS 혼재 시, 주호소 직결이면 모든 라벨의 bullet을 고루 출력한다.
 - "학술 출처가 더 확실" "PMID 있는 것만 믿을 수 있음" 같은 판단으로 TIPS bullet을 우선순위에서 내리는 행위 금지.
-- 공식 라벨 3 class는 동등하다. 편향으로 drop·축소 금지.
+- 공식 라벨 2 class는 동등하다. 편향으로 drop·축소 금지.
 
 ==출력 형식==
 - 의사에게 지시하는 톤 금지 ("~하세요" 금지).
