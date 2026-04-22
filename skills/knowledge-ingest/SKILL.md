@@ -152,9 +152,51 @@ keywords: {쉼표 구분 키워드 — Triage calcCategories와 일치}
 - Tier 2 섹션별: 섹션 `##` 직후 인용 블록 (Tier 1과 중복 금지)
 - Tier 3 inline: 표·수치·리스트 주석으로 원문 보존
 
+#### sections[].sources[] 채움 원칙 (2026-04-22 신설 — 3층 방어선 창작층)
+
+curation 주제 부조화 할루시네이션의 근본 원인은 섹션 sources[] 공백 → primarySources fallback 과의존. ingest 단계에서 차단한다.
+
+1. **원칙**: 섹션 content가 Tier 1 `primarySources`로 **온전히 뒷받침되지 않으면** `sections[key].sources[]`를 반드시 채운다 (빈 배열 금지).
+   - "온전히 뒷받침" = Tier 1 출처의 주제 범위가 섹션 content 주제를 포괄할 때.
+   - 포괄 여부가 애매하면 채우는 쪽으로 판단 (curation fallback 의존 축소).
+
+2. **TIPS 출처 타입 공식화**: 섹션 content가 **임상 경험·관찰·강의 기반** (문헌/가이드라인/심평원 출처가 없을 때)인 경우 → sources[]에 **TIPS 타입 문자열**을 명시 등록:
+   - `"[TIPS — 임상 경험 (미르 관찰)]"`
+   - `"[TIPS — by 로컬원장님]"`
+   - `"[TIPS — by ENT교수]"`
+   - `"[TIPS — 연수강의]"`
+   → **출처가 없는 게 아니라 TIPS가 곧 출처 타입**. curation rule ⑧이 이 문자열을 그대로 `[출처: ...]`에 매핑하므로 라벨 할루시네이션이 재발하지 않는다.
+
+3. **매핑 진짜 불가능** → ingest 중단, 미르에게 질문. `[출처 미확인]` 자동 부여 금지 (Attribution GOTCHA와 동일 원칙).
+
+4. **Tier 1 중복 금지 예외**: 섹션 주제가 Tier 1 출처와 정확히 일치해 Tier 2에 같은 출처를 재기재해야 하는 상황이면 — Tier 2를 비워두고 Tier 1 자동 상속으로 처리 (`sourcing-rules.md` 기존 규칙).
+
+> ⚠ **GOTCHA — sources[] 공백 방치 금지**: 2026-04-21 오젬픽 재진 QA에서 섹션 라벨 `[출처: obesity.notes]`가 3건 발생한 뿌리 원인. prompt 사후 패치로 막았지만 창작층에서 sources[] 채워야 근본 해소. Phase 5b (미르 담당) 전이라도 신규 ingest부터는 적용.
+
 #### 병태생리/기전 저장 규칙 (v2)
 - 표준 섹션 `notes`로 저장: `## 왜 이런 증상이 생기나 (환자설명용)` → Liby가 `notes`로 정규화
 - 내용 작성 원칙은 v1과 동일: 환자 설명 가능한 수준, 비유·일상 언어
+
+### 5-C. 섹션↔출처 주제 일치 자가검증 (2026-04-22 신설 — 3층 방어선 창작층)
+
+curation rule ⑧ "주제 일치" 조건의 **사전 방어선**. 저장 직전 Liby가 스스로 확인한다.
+
+절차:
+1. 각 섹션에 대해 content 주제 키워드 1~2개 추출 (예: `adaptive thermogenesis`·`렙틴` / `HFrEF 4제 요법`·`SGLT2i`).
+2. 해당 섹션 `sources[]` 항목별로 주제 키워드와 source 문자열(저자·저널·가이드라인명·TIPS 라벨) 비교.
+3. 판정:
+   - ✓ 주제 키워드와 source 문자열에 공통 개념이 있음 → 유지
+   - ✗ 명백한 부조화 (공통 단어·개념 0) → 해당 source 제거 또는 섹션 분리
+   - 애매 → 미르에게 보고. 자동 매핑 금지.
+4. TIPS 라벨 source는 자가검증 면제 (TIPS는 주제 매핑이 아니라 **출처 타입 선언**이기 때문).
+
+예시 (좋음):
+- 섹션 `## 단백질 섭취` + sources `["Noronha JC. Obes Pillars 2025;17:100234. PMID:41322078"]` → "단백질" 키워드가 source Obes Pillars 주제 범주와 일치 ✓
+
+예시 (나쁨):
+- 섹션 `## adaptive thermogenesis` + sources `["Acosta A. Mayo Clinic 비만 표현형. Obesity 2021"]` → "표현형" 논문이 "적응성 열발생" 주제 아님 → source 제거 후 정확한 출처로 교체 or 미르에게 보고.
+
+목적: primarySources fallback 의존을 줄여 curation 할루시네이션 재발 차단. 감사층(auditor)이 사후 잡는 것보다 창작층에서 걸러내는 게 우선.
 
 ### 5-A. 긴 문서 축약 규칙
 

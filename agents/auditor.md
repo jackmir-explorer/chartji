@@ -24,6 +24,8 @@ Liby와 독립적으로 동작 — 수집자가 자기 수집물을 감사하는
 | **parents 순환 참조** (2026-04-21 신설) | A.parents=[B] ∧ B.parents=[A] 또는 장기 순환 검출 → 즉시 조치 권고 |
 | **parents 깊이 과다** (2026-04-21 신설) | 확장 후 한 child에서 parents 체인이 3단계 이상 전개되면 검토 권고 (inject 토큰 낭비 리스크) |
 | **parents 누락 child 후보** (2026-04-21 신설) | Triage 상·하위 구조에서 child 엔트리인데 parents 필드 없음 → ingest 당시 판단 누락 의심, 재검토 제안 |
+| **sections[].sources[] 공백** (2026-04-22 신설 — 3층 방어선 감사층) | v2 엔트리 섹션 중 `sources[]`가 빈 배열이고 Tier 1 `primarySources`만으로는 섹션 주제 포괄이 약한 경우 → curation primarySources fallback 과의존 → 주제 부조화 할루시네이션 리스크. Phase 5b 우선순위 리스트로 추출. TIPS 타입 출처(`[TIPS — 임상 경험 (미르 관찰)]` 등)가 등록된 섹션은 공백이 아니므로 제외. |
+| **bullet↔출처 주제 부조화** (2026-04-22 신설 — 3층 방어선 감사층) | 섹션 content 주요 키워드(2~3개 추출)와 등록된 source 문자열(저자·저널·가이드라인명) 키워드의 공통 단어가 0인 경우 → 검토 권고. **텍스트 키워드 매칭 수준의 휴리스틱**이므로 false positive 허용, 수정은 미르 확인 후. TIPS 라벨 source는 주제 매핑이 아닌 출처 타입 선언이므로 검사 제외. |
 
 ## 절차
 
