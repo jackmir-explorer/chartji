@@ -45,7 +45,8 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - dry-mouth.md  — 구강건조증: pilocarpine + 뮤코미스트 가글 [처방/치료]
 - burning-mouth.md — 구강작열감증후군(BMS): 뮤코미스트 가글 [처방/치료]
 - oral-lesion.md  — 구강병변(백반증/궤양): 1달 기준, dexamethasone 가글, ENT refer [문진/처방]
-- LPR.md          — 인후두역류(LPR): PPI + 뮤테란, 알긴산 대안 [처방/치료]
+- LPR.md          — 인후두역류(LPR): PPI + 뮤테란, 알긴산 대안 [처방/치료] · San Diego Consensus 2025 (LPS vs LPRD/식도증상별 알고리즘) topic 분리 [CLINICAL]
+- depression-screening.md — 성인 우울증·자살위험 스크리닝(USPSTF 2026): PHQ-2→PHQ-9, C-SSRS [REGULATORY] — topic
 - low-freq-hearing-loss.md — 저음성난청/귀먹먹함: 유턴정(베타히스틴), 다이크로짇(HCTZ) [TIPS]
 - dizziness.md    — 어지럼증 기본 문진 11항목 + 편두통 추가 문진 [문진/검사]
 - obesity.md    — 비만 체중감량 Draft Template + 위고비 처방 기준 + Mayo Clinic 표현형 + 단백질 ABC [CLINICAL/TIPS/REGULATORY]
@@ -68,6 +69,9 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - pilocarpine.md — 살라겐/필로겐 용량(TID/QID/BID)·급여기준 [REGULATORY]
 - mucomyst.md — NAC 가글 처방법·BMS/구강건조증/LPR 근거 [TIPS/CLINICAL/INSIGHTS]
 - glp1-selection-strategy.md — GLP-1 비만약 선택 전략: 위고비 vs 마운자로 10기준·Dose Escalation·반응예측·Interval Tx·SMI·전당뇨 [TIPS/INSIGHTS/CLINICAL]
+- sglt2-inhibitors.md — SGLT-2 억제제 계열: 적응증(당뇨/HFrEF·HFpEF/CKD) + **비뇨생식기 감염 위험** 처방 전 환자교육 [CLINICAL]
+- vitamin-d.md — 비타민D: Endocrine Society 2025 가이드라인 (75세↑·임신부·흡수불량 권고, 일반 광범위 보충 미권고) [REGULATORY] — topic
+- neffy.md — 비강내 에피네프린 Neffy: 아나필락시스 응급 (EpiPen 대체) — 비강 분무 2 mg/비공 + 응급실 이송 필수 [CLINICAL]
 
 ### guidelines/
 - adult-vaccination-summary.md — 성인 예방접종 전체 요약 + 항암 독감백신 **타이밍 기반** (ANC 폐기, ASCO 2024) + 심부전 환자 고위험 예방접종 링크 [CLINICAL] — topic
