@@ -5,6 +5,12 @@
 
 ---
 
+2026-04-22 | by-disease/LPR.md | San Diego Consensus 2025 추가 — LPS vs LPRD 구분 / 후두경 한계 / 식도증상 유무별 치료 알고리즘 / 후두과반응 [CLINICAL] PMID:40197644
+2026-04-22 | by-drug/sglt2-inhibitors.md | 신규 — SGLT-2 억제제 비뇨생식기 감염 위험 / 처방 전 환자교육 요점 / 주의사항 [CLINICAL] PMID:41839088
+2026-04-22 | by-disease/depression-screening.md | 신규 — USPSTF 성인 우울증·자살위험 스크리닝 / PHQ-2→PHQ-9 / 의뢰 기준 [REGULATORY] PMID:41839080
+2026-04-22 | by-drug/vitamin-d.md | 신규 — 내분비학회 비타민D 질병예방 가이드라인 / 일반 성인 광범위 보충 근거 불충분 / 연령별 권고 [REGULATORY] PMID:41839092
+2026-04-22 | by-drug/neffy.md | 신규 — 비강내 에피네프린(Neffy) 아나필락시스 응급치료 / EpiPen 비교 / 환자교육 [CLINICAL] PMID:41839078
+
 2026-04-21 | by-disease/heart-failure.md | 신규 — 심부전 parent(12 섹션): 정의/분류(HFrEF·HFmrEF·HFpEF)/증상·초기평가/GDMT 4 pillars+2차치료/용량표(ACEi·ARB·ARNI·BB·MRA)/모니터링/금기(ARNI 36h wash-out)/감염 예방접종 6종+2025 글로벌 학회/의뢰 6시점+I NEED HELP/HFrEF vs HFpEF 비교/전원 최적시기+고혈압·당뇨 동반관리 [CLINICAL] — 대한심부전학회 진료지침 2022 + 생활백서 2025 + Roubille F EJPC 2025 + Dunlay SM JACC HF 2021. Boss D안: dosing·protocol은 guide 제외 (전문의 titration 영역), hint는 referral/schedule/monitoring만
 2026-04-21 | guidelines/heart-failure-referral.md | 신규 topic — 심부전 상급병원 의뢰 기준 세밀화(6시점) + I NEED HELP Stage D 약어 + 전원 최적시기 4단계 곡선 [CLINICAL] — parent=heart-failure
 2026-04-21 | guidelines/adult-vaccination-summary.md | 심부전 환자 고위험 예방접종 링크 섹션 추가 — heart-failure.schedule 참조
