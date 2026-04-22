@@ -18,6 +18,18 @@ JSON만 반환 (다른 텍스트 절대 금지):
 - 재진 방문으로 표시된 경우 follow-up / lab review / medication adjustment 등 방문 성격을 initialFocus에 제한적으로 반영 가능
 - 2줄 이상 길어지지 않게
 - calcCategories: 대화 맥락에서 아래 카테고리 중 해당하는 질환 카테고리 배열. 해당 없으면 빈 배열 [].
+  ━━━ 감지 원칙 (Phase L2 - 2026-04-22) ━━━
+  - 단일 카테고리 선택 금지. 환자 호소에 관련된 **모든** 카테고리를 감지한다.
+  - 구(舊) 카테고리와 신(新) 카테고리가 동일 증상군을 커버하면 **양쪽 모두 감지**. 중복 노출이 결론 편향보다 안전.
+  - 의심되면 감지하라 — 누락보다 중복이 안전.
+  ━━━ 구·신 관계 매트릭스 ━━━
+  - LPR · LPR-consensus: 만성 인후 증상에서 **양쪽 동시 감지** (v1 LPR은 경험적 치료, v2 LPR-consensus는 2025 진단 알고리즘)
+  - urticaria · 아나필락시스: 피부 발진만이면 urticaria, 전신 응급 징후 동반이면 양쪽 감지
+  - diabetes · sglt2-inhibitors · obesity: SGLT2 관련 처방 상담이면 3개 동시 감지
+  - heart-failure · heart-failure-referral · sglt2-inhibitors: 심부전 환자에 SGLT2 추가 시 3개 감지
+  (관계 매트릭스는 bundle 변경 시 보강. 예시는 샘플이며 원칙은 "동일 증상군이면 양쪽 감지")
+  복수 감지 예시: ["LPR", "LPR-consensus"] · ["heart-failure", "sglt2-inhibitors", "vaccination"]
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   dyslipidemia (콜레스테롤/지질/스타틴 관련)
   osteoporosis (골밀도/골다공증/골절위험 관련)
   depression (우울/불안/기분장애 관련)
@@ -174,6 +186,22 @@ const KNOWLEDGE_CURATION_PROMPT=`한국 가정의학과 외래 임상 가이드 
 - 입력 [지식 자료] 블록은 Guide tab에 할당된 섹션만 포함한다. 처방 프로토콜(protocol)·약물 dosing·schedule·indication 같은 "Liby 힌트" 담당 섹션은 이 입력에 들어오지 않는다.
 - 들어온 블록 범위 안에서만 bullet을 만든다 (예: classification/exam/monitoring/contraindication/pregnancy/referral/differential/notes 등).
 - 블록 안에 다른 역할(치료 단계·처방 용량 등)에 해당하는 문장이 섞여 있어도 그 부분은 bullet로 만들지 말 것 (중복 방지).
+==bullet 선택 우선순위 (Phase L2 - 2026-04-22, 필수 준수)==
+각 bullet을 출력할지 결정할 때 아래 우선순위를 먼저 적용한다 (DROP 규칙보다 먼저).
+① 환자 주호소·우려 직결 bullet (최우선. DROP 절대 금지)
+   · transcript에 환자가 명시한 우려 사항(예: "작년에 방광염 3번")에 대응하는 지식 엔트리 정보가 있으면 **반드시** 출력한다.
+   · 예: 환자가 UTI 기왕력을 호소 → sglt2-inhibitors 엔트리의 UTI 관련 bullet은 drop 금지.
+   · 단, 이 bullet도 아래 "공식 출처 라벨 3 class" 중 하나를 sections[k].sources[] 또는 primarySources에서 가져와야 한다. 출처 없는 정보 합성·추정은 절대 금지.
+② RedFlag 동반 환자 맥락 (기왕력·복용 약·가족력)
+   · 예: "acute SOB + 심부전 병력" → ACS 감별 bullet 포함.
+③ Drug safety / 금기 / 환자 교육
+   · 예: SGLT2i → DKA 경고·생활 지도.
+④ 일반 indication·protocol·monitoring
+   · 예: SGLT2i 적응증·투약 프로토콜·신기능 모니터링.
+━━━ DROP 규칙은 위 4단계 이후에 적용 ━━━
+- ① 단계 bullet은 주제-일치 출처가 있으면 drop 금지. 출처가 전혀 없을 때만 drop.
+- ② 이하에서만 기존 "sources 주제 부조화 시 drop" 규칙을 그대로 적용.
+
 ==지식 근거 규칙 (최우선, 절대 준수)==
 - 모든 bullet은 반드시 [지식 자료] 블록 원문에 명시된 사실이어야 한다.
 - 원문에 없는 내용을 "상식"·"class effect"·"일반 통념"으로 bullet 만들지 말 것. Guide tab은 의사가 **검증해서 ingest한 지식만** 큐레이션하는 도구이므로, 원문 근거가 없으면 bullet 자체를 생성하지 않는다.
@@ -205,6 +233,36 @@ const KNOWLEDGE_CURATION_PROMPT=`한국 가정의학과 외래 임상 가이드 
       · 예 (나쁨·금지): bullet "adaptive thermogenesis로 렙틴 감소" + primarySources "Acosta A. Mayo Clinic 비만 표현형. Obesity 2021 (PMID:33759389)" — **표현형 논문은 적응성 열발생 주제가 아니므로 매핑 금지 → bullet drop**
       · 해당 섹션 [sources]가 비어 있고 [키.primarySources]만 있으면, **primarySources 항목 중 bullet 주제와 실제로 일치하는 것만** 선택. 일치하는 것이 없으면 bullet drop.
       · [sources]·[primarySources]가 모두 없으면 ②~⑤ 규칙으로 fallback. 그래도 매핑 불가 시 bullet drop.
+==공식 출처 라벨 3 class (Phase L2 - 2026-04-22, 전부 1급 동등)==
+(knowledge/sourcing-rules.md 공식 체계 준수. 신설 라벨 없음, 기존 체계의 prompt 반영)
+bullet 말미 [출처: XXX]에 쓸 수 있는 공식 라벨은 아래 3 class 중 하나다. 세 클래스는 **동등한 1급 근거**로 다룬다.
+
+1. Tier 1 — 학술 논문 / 가이드라인 / 규제 (sourcing-rules.md tags: [CLINICAL]·[REGULATORY])
+   · 논문: [출처: {저자} et al. {저널} {연도};{권}({호}):{페이지}. PMID:{번호}]
+   · 가이드라인: [출처: {기관명} {연도} — {가이드라인명} (DOI:...)]
+   · 규제: [출처: 심평원 고시 YYYY-제N호]
+   · 예: [출처: Swanson J et al. Am Fam Physician 2026;113(3):281-282. PMID:41839088]
+
+2. TIPS — by {이름/소속} (sourcing-rules.md tags: [TIPS]·[INSIGHTS])
+   · 형식: [출처: TIPS — by {이름/소속}]
+   · 범위: 임상적으로 확립된 실전 관례 (Epley maneuver·경험적 PPI·뮤테란 off-label·가글 제조법 등)
+   · 예: [출처: TIPS — by ENT교수] · [출처: TIPS — by 로컬원장님] · [출처: TIPS — 교수님 외래 참관]
+
+3. TIPS — 일반 약리 지식 (sourcing-rules.md의 2 class sub-form)
+   · 형식: [출처: TIPS — 일반 약리 지식]
+   · 범위: 약품 공식 정보 (indication·contraindication·reimbursement 등 시스템 기반)
+   · 예: sglt2-inhibitors·vitamin-d 엔트리에서 도입 (2026-04-22)
+
+위 3 라벨 중 하나가 sections[k].sources[] 또는 primarySources에 매핑되면 bullet 출력 가능.
+- 매핑 불가 시 bullet drop. [출처 미확인] 태그를 LLM이 자의로 생성해 내보내는 것은 **금지** (기존 규칙 ⑦ 유지).
+- [출처 미확인]은 원문이 이미 그 태그를 달고 있는 경우에만 그대로 보존 (규칙 ⑥).
+
+==Tier 편향 금지 (Phase L2 - 2026-04-22)==
+- TIPS 라벨(by {이름/소속}·일반 약리 지식) 섹션을 Tier 1과 **동일 우선순위**로 다룬다.
+- 한 엔트리에 Tier 1 + TIPS 혼재 시, 주호소 직결이면 모든 라벨의 bullet을 고루 출력한다.
+- "학술 출처가 더 확실" "PMID 있는 것만 믿을 수 있음" 같은 판단으로 TIPS bullet을 우선순위에서 내리는 행위 금지.
+- 공식 라벨 3 class는 동등하다. 편향으로 drop·축소 금지.
+
 ==출력 형식==
 - 의사에게 지시하는 톤 금지 ("~하세요" 금지).
 - 출력은 bullet만, 머리말·꼬리말 없이.
