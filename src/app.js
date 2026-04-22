@@ -173,6 +173,15 @@ function App(){
           }
           keys.forEach(function(k){
             var s=e.sections[k]; if(!(s&&s.content)) return;
+            /* L2-patch (2026-04-22): 임시 라벨(`[TIPS — 임시`)만 있는 섹션은 ctx 제외 (invisible drop).
+               sources[] 전부가 임시 라벨이면 해당 섹션 skip — LLM·UI에 전달하지 않는다.
+               정상 라벨과 혼재 시에는 포함 (예외적 데이터 이상). knowledge/sourcing-rules.md 참조. */
+            if(s.sources&&s.sources.length){
+              var allTemp=s.sources.every(function(src){
+                return typeof src==="string"&&src.indexOf("[TIPS — 임시")===0;
+              });
+              if(allTemp) return;
+            }
             knowledgeCtx+="["+c+"."+k+"]\n"+s.content;
             if(s.sources&&s.sources.length) knowledgeCtx+="\n[sources]\n"+s.sources.join("\n");
             knowledgeCtx+="\n\n";

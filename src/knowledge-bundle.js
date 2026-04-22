@@ -459,55 +459,6 @@ var KNOWLEDGE_BUNDLE = {
     },
     "uiHooks": null
   },
-  "구강건조증": {
-    "kind": "disease",
-    "exam": null,
-    "treatment": "① Pilocarpine(살라겐/필로겐) po — 가이드라인: 두경부암 방사선 후 5mg TID / 쇼그렌증후군 5mg QID / 임상패턴 BID 가능 [출처 미확인] — 급여: 두경부암 방사선 후 or 쇼그렌증후군 / 비급여: 그 외\n② 뮤코미스트 가글 — 10% 1amp + 물 100cc TID — 방사선 유발 xerostomia: Mayo Clinic RCT 근거 / 일반: 임상 경험 [출처 미확인]",
-    "differential": null,
-    "draftAppend": null
-  },
-  "구강건조": {
-    "kind": "disease",
-    "exam": null,
-    "treatment": "① Pilocarpine(살라겐/필로겐) po — 가이드라인: 두경부암 방사선 후 5mg TID / 쇼그렌증후군 5mg QID / 임상패턴 BID 가능 [출처 미확인] — 급여: 두경부암 방사선 후 or 쇼그렌증후군 / 비급여: 그 외\n② 뮤코미스트 가글 — 10% 1amp + 물 100cc TID — 방사선 유발 xerostomia: Mayo Clinic RCT 근거 / 일반: 임상 경험 [출처 미확인]",
-    "differential": null,
-    "draftAppend": null
-  },
-  "dry mouth": {
-    "kind": "disease",
-    "exam": null,
-    "treatment": "① Pilocarpine(살라겐/필로겐) po — 가이드라인: 두경부암 방사선 후 5mg TID / 쇼그렌증후군 5mg QID / 임상패턴 BID 가능 [출처 미확인] — 급여: 두경부암 방사선 후 or 쇼그렌증후군 / 비급여: 그 외\n② 뮤코미스트 가글 — 10% 1amp + 물 100cc TID — 방사선 유발 xerostomia: Mayo Clinic RCT 근거 / 일반: 임상 경험 [출처 미확인]",
-    "differential": null,
-    "draftAppend": null
-  },
-  "xerostomia": {
-    "kind": "disease",
-    "exam": null,
-    "treatment": "① Pilocarpine(살라겐/필로겐) po — 가이드라인: 두경부암 방사선 후 5mg TID / 쇼그렌증후군 5mg QID / 임상패턴 BID 가능 [출처 미확인] — 급여: 두경부암 방사선 후 or 쇼그렌증후군 / 비급여: 그 외\n② 뮤코미스트 가글 — 10% 1amp + 물 100cc TID — 방사선 유발 xerostomia: Mayo Clinic RCT 근거 / 일반: 임상 경험 [출처 미확인]",
-    "differential": null,
-    "draftAppend": null
-  },
-  "burning mouth": {
-    "kind": "disease",
-    "exam": null,
-    "treatment": "뮤코미스트 가글 — 10% 1amp + 물 100cc TID\n다기관 임상(2025): VAS 통증 + 삶의 질 유의 개선\nClonazepam 0.5mg/d 병용 시 반응률 60% → 80%\n[출처: Kim JW et al. Sci Rep 2025]",
-    "differential": null,
-    "draftAppend": null
-  },
-  "구강작열감": {
-    "kind": "disease",
-    "exam": null,
-    "treatment": "뮤코미스트 가글 — 10% 1amp + 물 100cc TID\n다기관 임상(2025): VAS 통증 + 삶의 질 유의 개선\nClonazepam 0.5mg/d 병용 시 반응률 60% → 80%\n[출처: Kim JW et al. Sci Rep 2025]",
-    "differential": null,
-    "draftAppend": null
-  },
-  "BMS": {
-    "kind": "disease",
-    "exam": null,
-    "treatment": "뮤코미스트 가글 — 10% 1amp + 물 100cc TID\n다기관 임상(2025): VAS 통증 + 삶의 질 유의 개선\nClonazepam 0.5mg/d 병용 시 반응률 60% → 80%\n[출처: Kim JW et al. Sci Rep 2025]",
-    "differential": null,
-    "draftAppend": null
-  },
   "구강병변": {
     "kind": "disease",
     "exam": "백반증(white patch)/궤양: 1달 내 호전 확인 필수. 미호전 → 악성 전환 가능성 → ENT refer.",
@@ -527,27 +478,6 @@ var KNOWLEDGE_BUNDLE = {
     "exam": "백반증(white patch)/궤양: 1달 내 호전 확인 필수. 미호전 → 악성 전환 가능성 → ENT refer.",
     "treatment": "1단계: Dexamethasone powder + 물 1L → 하루 3-4회 가글\n2단계(가글 무효 시): 가글 유지 + 소론도(prednisolone) 2T #2 ×14일 → f/u\n3단계(미호전): ENT refer (생검 등 정밀검사)\n통증 심할 때: Tantum Verde(benzydamine) spray\nTriamcinolone 병변 내 주사 — 난치성 궤양 [CLINICAL]",
     "differential": "구강백반증(악성 전환율 ~1%/년), 구강편평태선, 캔디다증, 외상성 궤양, 구강암",
-    "draftAppend": null
-  },
-  "LPR": {
-    "kind": "disease",
-    "exam": null,
-    "treatment": "PPI (1차 치료, 근거 확립)\n뮤테란(아세틸시스테인 경구) 병용 — LPR 인후 분비물·점액 거담 목적 [TIPS]\nPPI 부작용 시: ① 알긴산(Gaviscon류) — raft 형성, 역류 물리적 차단 ② Promac(polaprezinc) — 위점막 보호제. 병용 가능 [TIPS — by ENT교수]",
-    "differential": null,
-    "draftAppend": null
-  },
-  "후두염": {
-    "kind": "disease",
-    "exam": null,
-    "treatment": "PPI (1차 치료, 근거 확립)\n뮤테란(아세틸시스테인 경구) 병용 — LPR 인후 분비물·점액 거담 목적 [TIPS]\nPPI 부작용 시: ① 알긴산(Gaviscon류) — raft 형성, 역류 물리적 차단 ② Promac(polaprezinc) — 위점막 보호제. 병용 가능 [TIPS — by ENT교수]",
-    "differential": null,
-    "draftAppend": null
-  },
-  "인후두역류": {
-    "kind": "disease",
-    "exam": null,
-    "treatment": "PPI (1차 치료, 근거 확립)\n뮤테란(아세틸시스테인 경구) 병용 — LPR 인후 분비물·점액 거담 목적 [TIPS]\nPPI 부작용 시: ① 알긴산(Gaviscon류) — raft 형성, 역류 물리적 차단 ② Promac(polaprezinc) — 위점막 보호제. 병용 가능 [TIPS — by ENT교수]",
-    "differential": null,
     "draftAppend": null
   },
   "저음성난청": {
@@ -1797,8 +1727,8 @@ var KNOWLEDGE_BUNDLE = {
     "uiHooks": null
   },
   /* v2 (B2) drug — 2026-04-22 Liby ingest. 원본: knowledge/by-drug/sglt2-inhibitors.md.
-     일부 섹션은 Tier 1(AFP 비뇨생식기 감염 논문) 주제 범위를 넘어 일반 SGLT2 약리 지식 — TIPS 타입으로 명시.
-     Phase 5b에서 정확한 약리·심평원 출처로 보강 대상. */
+     일부 섹션은 Tier 1(AFP 비뇨생식기 감염 논문) 주제 범위를 넘어 임시 (Phase 5b 보강 대상) — [TIPS — 임시 (보강 대상)] 라벨.
+     임시 라벨 섹션은 Guide tab curation ctx에 전달되지 않는다 (invisible, L2-patch 2026-04-22). */
   "sglt2-inhibitors": {
     "kind": "drug",
     "keywords": ["sglt2-inhibitors","SGLT2i","SGLT-2억제제","포시가","자디앙","다파글리플로진","엠파글리플로진","dapagliflozin","empagliflozin"],
@@ -1808,7 +1738,7 @@ var KNOWLEDGE_BUNDLE = {
     "sections": {
       "indication": {
         "content": "- 2형 당뇨병 혈당 조절\n- 심부전 (HFrEF·HFpEF) — 입원율·사망률 감소\n- 만성 콩팥병 진행 억제",
-        "sources": ["[TIPS — 일반 약리 지식]"]
+        "sources": ["[TIPS — 임시 (보강 대상)]"]
       },
       "notes": {
         "content": "### 비뇨생식기 감염 위험\nSGLT-2 억제제 처방 시 요로감염(UTI) 및 생식기 진균감염(여성: 질효모균증, 남성: 음경포피염) 위험 상승.\n\n**위험인자:**\n- 여성 (특히 반복성 UTI 기왕력)\n- 불량한 회음부 위생\n- 면역저하자\n\n**처방 전 반드시 교육:**\n- 충분한 수분 섭취 권고\n- 회음부 위생 교육 (소변 후 앞→뒤 닦기, 속옷 관리)\n- 증상 발생 시 즉시 내원 지시 (소변 시 통증·작열감, 분비물 변화)\n- 반복성 UTI 기왕력 환자: 위험-편익 재평가 후 처방 여부 결정",
@@ -1816,18 +1746,19 @@ var KNOWLEDGE_BUNDLE = {
       },
       "contraindication": {
         "content": "- 당뇨병성 케톤산증(DKA) 위험 — 수술·공복 시 일시 중단 고려\n- 하지 절단 위험 (엠파글리플로진 > 다파글리플로진, 주의 환자에서)\n- Fournier 괴저 (희귀하나 심각)\n- eGFR < 45 ml/min/1.73m² 이하에서 혈당 강하 효과 감소 (신장·심부전 적응증은 eGFR 기준 별도)",
-        "sources": ["[TIPS — 일반 약리 지식]"]
+        "sources": ["[TIPS — 임시 (보강 대상)]"]
       },
       "reimbursement": {
         "content": "- 2형 당뇨: 메트포르민 병용 또는 인슐린과 병용 기준으로 급여\n- 심부전/CKD 적응증: 별도 급여 기준 확인 필요 (적응증별 차이)",
-        "sources": ["[TIPS — 일반 약리 지식]"]
+        "sources": ["[TIPS — 임시 (보강 대상)]"]
       }
     },
     "uiHooks": null
   },
   /* v2 (B2) topic — 2026-04-22 Liby ingest. 원본: knowledge/by-drug/vitamin-d.md.
      md 파일 위치는 by-drug이나, 내용 중심이 일반 보충 근거 가이드라인 해석 → topic 분류.
-     dosing 섹션은 Tier 1 가이드라인이 직접 다루지 않아 TIPS 등록. Phase 5b 보강 대상. */
+     dosing 섹션은 Tier 1 가이드라인이 직접 다루지 않아 임시 (Phase 5b 보강 대상) — [TIPS — 임시 (보강 대상)] 라벨.
+     임시 라벨 섹션은 Guide tab curation ctx에 전달되지 않는다 (invisible, L2-patch 2026-04-22). */
   "vitamin-d": {
     "kind": "topic",
     "keywords": ["vitamin-d","비타민D","vitamin D","cholecalciferol","비타민D보충","질병예방","Endocrine Society"],
@@ -1841,7 +1772,7 @@ var KNOWLEDGE_BUNDLE = {
       },
       "dosing": {
         "content": "- 일반 성인 (결핍 확인 시): 1,500-2,000 IU/일 (cholecalciferol)\n- 유지 목표 혈중 25(OH)D: 20-50 ng/mL (결핍 < 20 ng/mL)\n- 고용량 치료 (결핍 교정): 50,000 IU 주 1회 × 8주 후 유지용량 전환",
-        "sources": ["[TIPS — 일반 약리 지식]"]
+        "sources": ["[TIPS — 임시 (보강 대상)]"]
       },
       "notes": {
         "content": "### 모니터링\n- 결핍 치료 중: 3개월 후 25(OH)D 재측정\n- 과잉 독성 (25(OH)D > 150 ng/mL): 고칼슘혈증 → 신부전 위험\n- 일반 건강인 정기 측정: 근거 없음 (증상 없는 일반 성인 스크리닝 불필요)",
@@ -1883,3 +1814,78 @@ var KNOWLEDGE_BUNDLE = {
     "uiHooks": null
   }
 };
+
+/* ═══════════════════════════════════════════════════════════════════
+   L1 Phase B1 — v2 승격 (참조 공유 aliasing) · 2026-04-22
+   설계서: sessions/design-2026-04-22-L1b-v1-migration.md
+   원본 md 라벨을 sections[k].sources[]에 이식. 신설 라벨 없음.
+   참조 공유 주의: unique 본체 변수(_XXX_v2) 수정 시 모든 alias 자동 반영.
+                   객체 mutation 금지.
+═══════════════════════════════════════════════════════════════════ */
+
+/* v2 승격 — 2026-04-22 L1 B1 — 원본: knowledge/by-disease/LPR.md
+   원본 md 라벨: [TIPS — by ENT교수] (뮤테란 off-label 거담, PPI 부작용 대안).
+   경험적 치료 파트만 이 엔트리에 담는다. San Diego Consensus 진단 알고리즘은
+   별도 topic `LPR-consensus` 엔트리가 커버 (TRIAGE 동시 감지). */
+var _LPR_v2 = {
+  kind: "disease",
+  keywords: ["LPR","후두염","인후두역류","laryngopharyngeal reflux","역류성후두염"],
+  primarySources: [],
+  sections: {
+    treatment: {
+      content: "PPI (1차 치료, 근거 확립)\n뮤테란(아세틸시스테인 경구) 병용 — LPR 인후 분비물·점액 거담 목적 (off-label)\nPPI 부작용 시:\n① 알긴산(Gaviscon류) — raft 형성, 역류 물리적 차단\n② Promac(polaprezinc) — 위점막 보호제. 알긴산과 병용 가능",
+      sources: ["[TIPS — by ENT교수]"]
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["LPR"] = _LPR_v2;
+KNOWLEDGE_BUNDLE["후두염"] = _LPR_v2;
+KNOWLEDGE_BUNDLE["인후두역류"] = _LPR_v2;
+
+/* v2 승격 — 2026-04-22 L1 B1 — 원본: knowledge/by-disease/dry-mouth.md
+   원본 md 라벨:
+     - Pilocarpine 섹션: [출처: NEJM 1993 Leveque et al., Salagen SPC] (Tier 1).
+                         임상패턴 BID는 원본이 [출처 미확인] 태그 → 섹션 본문에 그대로 보존.
+     - 뮤코미스트 가글 섹션: [출처: Sio TT et al. Mayo Clin Proc 2019] (Tier 1).
+                             일반 xerostomia 직접 gargle은 [출처 미확인] — 본문 내 인라인 보존. */
+var _xerostomia_v2 = {
+  kind: "disease",
+  keywords: ["구강건조증","구강건조","dry mouth","xerostomia"],
+  primarySources: [],
+  sections: {
+    treatment: {
+      content: "① Pilocarpine(살라겐/필로겐) po\n  - 두경부암 방사선 후 구강건조증: 5mg TID (가이드라인)\n  - 쇼그렌증후군: 5mg QID (가이드라인)\n  - 임상 패턴: BID 가능 (부작용 경감 목적) [출처 미확인]\n  - 급여: 두경부암 방사선 후 or 쇼그렌증후군 진단 시\n  - 비급여: 그 외 원인 (당뇨·약물 유발 등)",
+      sources: ["Leveque FG et al. NEJM 1993 (Pilocarpine)","Salagen SPC"]
+    },
+    "treatment.gargle": {
+      content: "② 뮤코미스트 10% 1 ampule + 물 100cc → TID 가글\n  - 방사선 유발 xerostomia: 10% NAC rinse 주간 유의 개선 (Mayo Clinic Pilot RCT, 2019)\n  - 일반 구강건조증: 직접 gargle 근거 없음, 임상 경험 기반 [출처 미확인]",
+      sources: ["Sio TT et al. Mayo Clin Proc 2019"]
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["구강건조증"] = _xerostomia_v2;
+KNOWLEDGE_BUNDLE["구강건조"] = _xerostomia_v2;
+KNOWLEDGE_BUNDLE["dry mouth"] = _xerostomia_v2;
+KNOWLEDGE_BUNDLE["xerostomia"] = _xerostomia_v2;
+
+/* v2 승격 — 2026-04-22 L1 B1 — 원본: knowledge/by-disease/burning-mouth.md
+   원본 md 라벨: [CLINICAL] + [출처: Kim JW et al. Sci Rep 2025] (Tier 1). */
+var _BMS_v2 = {
+  kind: "disease",
+  keywords: ["burning mouth","구강작열감","구강작열감증후군","BMS"],
+  primarySources: [
+    "Kim JW et al. Sci Rep 2025"
+  ],
+  sections: {
+    treatment: {
+      content: "뮤코미스트 가글 — 10% 1 ampule + 물 100cc → TID 가글\n- 2025 다기관 임상에서 VAS 통증 + 삶의 질(OHIP-14K) 유의 개선\n- Clonazepam 0.5mg/d 병용 시 반응률 증가 (단독 60% → 병용 80%)",
+      sources: ["Kim JW et al. Sci Rep 2025"]
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["burning mouth"] = _BMS_v2;
+KNOWLEDGE_BUNDLE["구강작열감"] = _BMS_v2;
+KNOWLEDGE_BUNDLE["BMS"] = _BMS_v2;
