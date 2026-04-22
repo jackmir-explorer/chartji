@@ -54,6 +54,11 @@ JSON만 반환 (다른 텍스트 절대 금지):
   glp1 (GLP-1 비만약 선택 전략/위고비 vs 마운자로 비교/용량 증량·감량 전략/Interval Tx/반응 예측 관련 — 전략·비교 질문일 때만 감지. 단순 처방·용량 문의는 위고비·마운자로·오젬픽 키로 충분)
   heart-failure (심부전/heart failure/HFrEF·HFpEF/심장 박출률 감소/울혈성 심부전/CHF/GDMT 관련)
   heart-failure-referral (심부전 상급병원 의뢰 타이밍/I NEED HELP/Stage D HF 관련 — referral 판단 맥락일 때만 감지)
+  LPR-consensus (LPR/후두염/인후두역류/LPS/LPRD/San Diego Consensus 관련 — 만성 인후 증상·후두 역류 진단·치료 알고리즘 맥락)
+  depression-screening (우울증/depression/PHQ-9/PHQ-2/자살위험/USPSTF 스크리닝 관련 — 정신건강 선별 맥락)
+  sglt2-inhibitors (SGLT2/SGLT-2억제제/포시가/자디앙/다파글리플로진/엠파글리플로진 관련 — 당뇨·심부전·CKD에 SGLT2 처방 또는 비뇨생식기 감염 우려 맥락)
+  vitamin-d (비타민D/vitamin D/cholecalciferol/비타민D 결핍·보충·질병예방 상담 관련)
+  아나필락시스 (아나필락시스/anaphylaxis/알레르기 응급/EpiPen/Neffy/비강내 에피네프린 관련 — 응급 알레르기 처치 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */
