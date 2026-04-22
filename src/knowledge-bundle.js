@@ -1790,6 +1790,8 @@ var KNOWLEDGE_BUNDLE = {
        drug kind 기본값 guide=["contraindication","precaution","comparison","insurance"] 4개에
        neffy 보유 섹션(indication·dosing·protocol·notes) 미포함 → Guide tab invisible.
        응급 약물 특성상 전체 섹션 노출이 필요 (미래 섹션 추가 자동 포함). */
+  "neffy": {
+    "kind": "drug",
     "keywords": ["neffy","Neffy","비강내에피네프린","intranasal epinephrine","에피네프린","epinephrine","아나필락시스","anaphylaxis","알레르기응급","EpiPen"],
     "primarySources": [
       "Wolf J et al. Am Fam Physician 2026;113(3):270-272. PMID:41839078"
