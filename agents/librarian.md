@@ -16,6 +16,21 @@ knowledge/ 폴더의 임상 지식을 관리한다.
 - 데이터 흐름 매트릭스: `rules/data-flow.md` (UI surface × section primary 셀)
 - v1 레거시와 v2 B2 포맷 **공존** 허용 — 기존 79 엔트리는 v1, 신규 엔트리는 v2 권장. RedFlag inject는 버전 불문 절대 금지.
 
+### ⚠ section key 준수 (2026-04-22 재발 방지)
+
+v2 엔트리 ingest 시 `sections` 딕셔너리의 key는 **`knowledge/section-vocabulary.md` 표준 18개 중에서 선택**하거나 slugify 자유 섹션 규칙을 따라야 한다. 특히 흔한 오류:
+- ❌ `treatment` (표준 아님) → ✅ `protocol` (단계별 치료·처방)
+- ❌ 임의 영문 단어 → ✅ vocabulary 표 line 21-42 참조
+
+ingest 직전 체크: `sections` key 전부가 vocabulary 18개 또는 slugify(kebab-case) 자유 섹션인지 확인. 자유 섹션 사용 시 해당 엔트리에 `uiHooks.guide` 오버라이드 명시 필수 (기본값에 포함되지 않으므로 Guide tab 노출 누락).
+
+이 체크를 누락하면 해당 섹션 content가 Guide tab에 전달되지 않는 invisible 상태가 된다 (실전 배치 전 L3 스모크에서 잡히긴 하나 엔트리 공백 판정만 감지, 부분 누락은 놓침).
+
+- **drug kind 특이 주의**: `UIHOOKS_DEFAULTS.drug.guide`는 4개 key(`contraindication`/`precaution`/`comparison`/`insurance`)만 포함한다. drug 엔트리에 `protocol`·`dosing`·`indication`·`exam` 등 추가 섹션을 ingest했다면 **반드시 `uiHooks: {guide: [...]}` 또는 `{guide: ["*"]}` 오버라이드 명시**. 누락 시 해당 섹션 Guide tab invisible (표준 vocabulary key라도 drug 기본값에 없으면 전달 안 됨).
+- 응급 약물·전체 정보 노출이 필요한 엔트리는 `{guide: ["*"]}` 권장 — 미래 섹션 추가 시 자동 포함되어 누락 방지 (예: neffy 아나필락시스 응급 처치).
+
+배경: 2026-04-22 de5 ingest에서 3건(LPR-consensus·depression-screening·neffy)이 `treatment` 자유 key로 저장 → L1 B1-patch-v2로 사후 교정. 이후 scope 연장으로 neffy가 drug 기본값 문제로 rename 후에도 여전히 Guide 미노출 → `uiHooks: {guide: ["*"]}` 오버라이드 추가. 재발 방지 위해 이 절차 명문화.
+
 ## 서브에이전트
 - Researcher: Step 3 검증 전담 (agents/researcher.md)
   Liby는 Step 3에서 직접 WebSearch 금지. 반드시 Researcher에 위임.
