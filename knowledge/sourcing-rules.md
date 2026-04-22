@@ -97,6 +97,10 @@ Front matter에서 파일 전체 성격을 표시한다.
   - 예: `EAACI 2021 — Urticaria Guideline (DOI:10.1111/all.15090)`
 - 실전 Tip: `[TIPS — by {이름/소속}]`
   - 예: `[TIPS — by 로컬원장님]`, `[TIPS — by ENT교수]`
+- 일반 약리 지식: `[TIPS — 일반 약리 지식]` (TIPS 2 class의 sub-form, 2026-04-22 공식 등재)
+  - 사용 범위: **약품 공식 정보** — indication·contraindication·reimbursement 등 시스템 기반 공식 정보로, 개별 임상의의 노하우(`by {이름/소속}`)가 아니지만 특정 Tier 1 논문 한 편으로 귀속시키기 어려운 약리·급여 기준
+  - 최초 도입: `knowledge/by-drug/sglt2-inhibitors.md` · `knowledge/by-drug/vitamin-d.md` ingest (2026-04-22)
+  - Tier 1(학술·가이드라인·규제)·TIPS by {이름/소속}과 함께 **공식 출처 3 class 중 하나로 1급 동등** 취급 (LLM prompt 계약 — `src/prompts.js` KNOWLEDGE_CURATION_PROMPT)
 - 규제: `심평원 고시 YYYY-제N호` 또는 `식약처 허가사항 YYYY-MM`
 
 ---
