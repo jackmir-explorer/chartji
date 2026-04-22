@@ -5,6 +5,14 @@
 
 ---
 
+2026-04-21 | by-disease/heart-failure.md | 신규 — 심부전 parent(12 섹션): 정의/분류(HFrEF·HFmrEF·HFpEF)/증상·초기평가/GDMT 4 pillars+2차치료/용량표(ACEi·ARB·ARNI·BB·MRA)/모니터링/금기(ARNI 36h wash-out)/감염 예방접종 6종+2025 글로벌 학회/의뢰 6시점+I NEED HELP/HFrEF vs HFpEF 비교/전원 최적시기+고혈압·당뇨 동반관리 [CLINICAL] — 대한심부전학회 진료지침 2022 + 생활백서 2025 + Roubille F EJPC 2025 + Dunlay SM JACC HF 2021. Boss D안: dosing·protocol은 guide 제외 (전문의 titration 영역), hint는 referral/schedule/monitoring만
+2026-04-21 | guidelines/heart-failure-referral.md | 신규 topic — 심부전 상급병원 의뢰 기준 세밀화(6시점) + I NEED HELP Stage D 약어 + 전원 최적시기 4단계 곡선 [CLINICAL] — parent=heart-failure
+2026-04-21 | guidelines/adult-vaccination-summary.md | 심부전 환자 고위험 예방접종 링크 섹션 추가 — heart-failure.schedule 참조
+2026-04-21 | bundle compile | heart-failure + 심부전(alias) + heart-failure-referral(topic, parent=heart-failure) + I NEED HELP(topic) + GDMT intolerance(topic) 총 5 keys 추가. vaccination-summary에 heart-failure-link 섹션 추가. TRIAGE 2줄 추가(heart-failure, heart-failure-referral). index.html cache-bust hf-ingest
+
+2026-04-21 | bundle compile | Phase 5a 백신 묶음 v2 마이그레이션 — 10 md (vaccination·tdap·herpes-zoster·pneumococcal·hpv·hepatitis-ab·japanese-encephalitis·rabies·varicella-mmr-polio·adult-summary·vaccine-interval) + 기존 31 v1 keys → 31 v2 + 2 신규 topic(vaccine-interval·vaccination-summary) = 33 keys v2. Z-full 에스컬레이션 — Researcher 2 배치(critical 5+moderate 3). md 본문 8건 개정: PCV15/20/21 ≥50세 universal / HPV 2-dose <15세 / B형간염 19-59세 universal + Heplisav-B / 폴리오 모든 미접종 성인 / 항암 독감 ANC 폐기 타이밍 기반 / RZV ≥19세 면역저하 + ZVL 2020 단종 / 광견병 booster titer 기반 / MMR KDCA 1968년 기준. primarySources 각 md별 최신 MMWR+CDC+KDCA. TRIAGE 2줄 추가
+2026-04-21 | bundle compile | Phase 5c drug v2 마이그레이션 — wegovy(3 aliases, 4섹션) + mounjaro(4 aliases, 3섹션) + ozempic(2 aliases, 3섹션) + semaglutide(1 alias, overview 1섹션). drug↔glp1 topic 역할 재정립: SURMOUNT-5 위고비 비교 drug에서 제거(glp1.dosing에만 유지). primarySources: wegovy=FDA / ozempic=심평원 2024.02. 키 이름 유지 → TRIAGE 변경 없음
+2026-04-21 | bundle compile | Phase 4 v2 마이그레이션 — obesity (disease, 5섹션) + dysphonia (disease, 1섹션) + glp1 topic 신규 (8섹션) — TRIAGE calcCategories에 glp1 추가
 2026-04-15 | by-disease/obesity.md | 문진 보완 — 환자 기대 청취·목표 설정·설문지 법적 보호 [TIPS — by 로컬원장님]
 2026-04-15 | by-drug/glp1-selection-strategy.md | 보완 — 용량 조절 유연성 비교 (마운자로 중간용량 없음 / 위고비 단계 많음) [TIPS — by 로컬원장님]
 2026-04-15 | by-drug/mounjaro.md | 신규 — 마운자로 적응증·용량·실비보험 [CLINICAL + TIPS — by 로컬원장님]

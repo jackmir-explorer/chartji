@@ -46,8 +46,14 @@ JSON만 반환 (다른 텍스트 절대 금지):
   수두 (수두/varicella 접종 관련)
   MMR (MMR/홍역/풍진/볼거리 접종 관련)
   폴리오 (폴리오/IPV/polio 접종 관련)
+  vaccine-interval (백신 접종 간격/생백신 vs 사백신 동시 접종 가능 여부/간격 원칙 질문 시)
+  vaccination-summary (성인 예방접종 전체 요약/어떤 백신 맞아야 하나/항암치료 중 독감백신 타이밍 관련)
   dysphonia (목소리이상/쉰목소리/hoarseness/발성장애 관련)
   경부종괴 (목에혹/목멍울/neck mass/림프절염/경부림프절 관련)
+  urticaria (두드러기/urticaria/혈관부종/angioedema/만성두드러기/CSU 관련)
+  glp1 (GLP-1 비만약 선택 전략/위고비 vs 마운자로 비교/용량 증량·감량 전략/Interval Tx/반응 예측 관련 — 전략·비교 질문일 때만 감지. 단순 처방·용량 문의는 위고비·마운자로·오젬픽 키로 충분)
+  heart-failure (심부전/heart failure/HFrEF·HFpEF/심장 박출률 감소/울혈성 심부전/CHF/GDMT 관련)
+  heart-failure-referral (심부전 상급병원 의뢰 타이밍/I NEED HELP/Stage D HF 관련 — referral 판단 맥락일 때만 감지)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */
@@ -159,11 +165,18 @@ const DRAFT_REVIEW_PROMPT=`한국 가정의학과 외래 진료 판단 검토 �
 const KNOWLEDGE_CURATION_PROMPT=`한국 가정의학과 외래 임상 가이드 큐레이션 도구.
 입력: 진료 transcript + 감지된 질환·약물의 임상 지식 자료 ([키.섹션] 라벨이 붙은 블록들)
 출력: 이 환자 상황에 직접 관련 있는 3~8개 bullet (plain text)
-==지식 근거 규칙 (최우선)==
-- 모든 bullet은 반드시 [지식 자료] 블록 원문에 근거해야 한다.
+==역할 분업==
+- 입력 [지식 자료] 블록은 Guide tab에 할당된 섹션만 포함한다. 처방 프로토콜(protocol)·약물 dosing·schedule·indication 같은 "Liby 힌트" 담당 섹션은 이 입력에 들어오지 않는다.
+- 들어온 블록 범위 안에서만 bullet을 만든다 (예: classification/exam/monitoring/contraindication/pregnancy/referral/differential/notes 등).
+- 블록 안에 다른 역할(치료 단계·처방 용량 등)에 해당하는 문장이 섞여 있어도 그 부분은 bullet로 만들지 말 것 (중복 방지).
+==지식 근거 규칙 (최우선, 절대 준수)==
+- 모든 bullet은 반드시 [지식 자료] 블록 원문에 명시된 사실이어야 한다.
+- 원문에 없는 내용을 "상식"·"class effect"·"일반 통념"으로 bullet 만들지 말 것. Guide tab은 의사가 **검증해서 ingest한 지식만** 큐레이션하는 도구이므로, 원문 근거가 없으면 bullet 자체를 생성하지 않는다.
 - transcript는 환자 상황 파악·bullet 선별에만 사용. bullet 본문·출처에 transcript 인용 금지.
 - [출처: transcript] 절대 금지 — transcript는 지식이 아니라 의사의 발화다.
 - 환자 상황과 무관한 일반론 생략. 미언급 증상·처방 추정 금지.
+- **출처 없는 bullet 생성 금지** — 할루시네이션 방지. 출처 매핑이 불가능하면 그 bullet은 drop.
+- **섹션 라벨 출처 금지 (절대)** — [출처: obesity.notes]·[출처: heart-failure.exam]·[출처: wegovy.protocol] 같이 **"[키.섹션]" 형태를 출처로 쓰는 것은 금지**. 이는 자료 분류 이름이지 실제 출처가 아니다. 섹션 라벨을 출처로 넣는 것은 **할루시네이션**으로 간주한다. 섹션 sources[]·primarySources에 등록된 **실제 출처 문자열**만 사용한다.
 ==출처 표기 규칙 (bullet 말미에 반드시 1개)==
 - 지식 자료 원문에서 다음 형태의 출처 마커를 찾아 [출처: XXX]로 통일해 표기:
   ① 이미 [출처: XXX] 포맷인 경우 → 그대로 보존
@@ -178,16 +191,28 @@ const KNOWLEDGE_CURATION_PROMPT=`한국 가정의학과 외래 임상 가이드 
       · 예: "Kim JW et al. Sci Rep 2025" → [출처: Kim JW et al. Sci Rep 2025]
   ⑤ 가이드라인 명 → [출처: 가이드라인명]
       · 예: "2023 대한비만학회 가이드라인" → [출처: 2023 대한비만학회 가이드라인]
-  ⑥ [출처 미확인] 태그가 원문에 있으면 → [출처 미확인]
-  ⑦ 위 어디에도 해당 안 되면 → [출처 미확인]
-- [키이름.섹션] 형태 출처 금지 — 이건 자료 분류 이름이지 실제 출처가 아니다.
+  ⑥ 원문에 [출처 미확인] 태그가 명시적으로 있으면 → [출처 미확인] (미르가 의도적으로 붙인 불확실성 표시만 보존)
+  ⑦ 위 어디에도 해당 안 되면 → **해당 bullet을 출력하지 않는다**. LLM이 자의로 [출처 미확인] 태그를 생성해 내보내는 것은 금지 (할루시네이션 여지).
+  ⑧ 지식 자료 블록 본문 뒤에 [sources] 하위 블록, 또는 별도 [키.primarySources] 블록이 붙어 있으면:
+      · bullet 내용이 해당 [sources] 항목의 **주제(subject-matter)와 실제로 일치할 때만** 그 항목을 그대로 [출처: <항목 원문>]에 사용한다 (PMID/DOI 포함된 경우 그대로 유지).
+      · "같은 섹션에 있으니 가장 가까운 출처 아무거나" 방식 금지 — 주제 부조화 시에는 매핑하지 말고 bullet drop.
+      · 예 (좋음): bullet "단백질 1.2g/kg/day" + [sources] "Noronha JC. Obes Pillars 2025. PMID:41322078 (단백질 >1.2g/kg/day 국제 전문가 합의)" → [출처: Noronha JC. Obes Pillars 2025. PMID:41322078]
+      · 예 (나쁨·금지): bullet "adaptive thermogenesis로 렙틴 감소" + primarySources "Acosta A. Mayo Clinic 비만 표현형. Obesity 2021 (PMID:33759389)" — **표현형 논문은 적응성 열발생 주제가 아니므로 매핑 금지 → bullet drop**
+      · 해당 섹션 [sources]가 비어 있고 [키.primarySources]만 있으면, **primarySources 항목 중 bullet 주제와 실제로 일치하는 것만** 선택. 일치하는 것이 없으면 bullet drop.
+      · [sources]·[primarySources]가 모두 없으면 ②~⑤ 규칙으로 fallback. 그래도 매핑 불가 시 bullet drop.
 ==출력 형식==
 - 의사에게 지시하는 톤 금지 ("~하세요" 금지).
 - 출력은 bullet만, 머리말·꼬리말 없이.
-- bullet 개수는 지식 양·상황 복잡도에 따라 3~8 사이 재량.
+- bullet 개수는 지식 양·상황 복잡도에 따라 3~8 사이 재량. 단, 원문 근거 매핑 가능한 bullet이 3개 미만이면 **3개 미만**으로 출력한다 (억지로 채우지 말 것). 0개면 빈 출력 허용.
 ==출력 예시==
+좋은 예 (실제 출처 사용):
 ● BMI 30 이상이면 위고비 단독 가능 [출처: FDA]
 ● 초기 0.25mg 주 1회, 순차증량(0.25→0.5→1.0→1.7→2.4mg) [출처: FDA]
-● 다빈도 부작용: 오심·변비 [출처 미확인]
-● 표현형(Hungry Brain/Gut)에 GLP-1 유효 [출처: Mayo Clinic]`;
+● 표현형(Hungry Brain/Gut)에 GLP-1 유효 [출처: Mayo Clinic]
+● 단백질 섭취 1.2-1.5g/kg/day [출처: Noronha JC et al. Obes Pillars 2025;17:100234. PMID:41322078]
+
+절대 금지 (섹션 라벨 복사):
+● adaptive thermogenesis로 렙틴↓ 그렐린↑ [출처: obesity.notes]  ← 섹션 라벨을 출처로 쓰면 안 됨
+● GLP-1 follow-up 4파트 체크 [출처: obesity.exam]  ← 섹션 라벨을 출처로 쓰면 안 됨
+→ 이런 내용은 원문에 실제 출처가 없으면 **bullet 자체를 출력하지 말 것**.`;
 
