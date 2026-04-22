@@ -1676,7 +1676,8 @@ var KNOWLEDGE_BUNDLE = {
     "uiHooks": null
   },
   /* v2 (B2) topic — 2026-04-22 Liby ingest. 원본: knowledge/by-disease/LPR.md (San Diego Consensus 2025 추가분).
-     기존 v1 "LPR"·"후두염"·"인후두역류" 엔트리는 본문 불변 원칙으로 보존, 신규 consensus 내용은 topic으로 격리. */
+     기존 v1 "LPR"·"후두염"·"인후두역류" 엔트리는 본문 불변 원칙으로 보존, 신규 consensus 내용은 topic으로 격리.
+     2026-04-22 L1 B1-patch-v2: treatment → protocol (vocabulary 정합, Liby de5 ingest 사후 교정) */
   "LPR-consensus": {
     "kind": "topic",
     "keywords": ["LPR-consensus","San Diego Consensus","LPS","LPRD","laryngopharyngeal symptoms","laryngopharyngeal reflux disease","후두 과반응","laryngeal hyperresponsiveness"],
@@ -1688,7 +1689,7 @@ var KNOWLEDGE_BUNDLE = {
         "content": "### LPS vs LPRD 구분 (San Diego Consensus 2025)\n- **LPS** (Laryngopharyngeal Symptoms): 기침·음성변화·인후 청소·과다점액·인후통 — 역류가 원인일 수 있는 인후두 증상 (≥주 2회, ≥8주)\n- **LPRD** (Laryngopharyngeal Reflux Disease): LPS + **객관적 역류 증거** — 둘은 다르다. LPS 환자의 ~60%는 보행성 역류 모니터링 정상.\n\n**핵심 분기 — 식도 증상 동반 여부로 진단·치료 알고리즘 분기**:\n- LPS + 식도 역류 증상(속쓰림·역류감) → PPI 경험적 치료 가능\n- 고립 LPS (식도 증상 없음) → 내시경 + 보행성 역류 모니터링 필요 (PPI 경험적 미권고)\n\n### 후두경의 역할과 한계\n- 후두경: 다른 후두 원인(악성 포함) 배제 목적으로 필요 — **후두경 소견만으로 LPRD 진단 불가**\n- 적막부종·발적 등 LPRD 특이도 낮음 (정상인에서도 관찰)\n- RSI(역류증상지수) ≥13 기준은 LPRD 진단에 충분한 특이도 없음 → 진단 도구로 사용 불가",
         "sources": []
       },
-      "treatment": {
+      "protocol": {
         "content": "### San Diego Consensus 치료 알고리즘\n\n**A. LPS + 식도 증상 동반 (속쓰림·역류감 있음)**\n1. PPI 표준용량 BID × 3개월 + 생활습관 교정\n2. 알긴산 4회/일 (식후 3회 + 취침 전) 병용 가능 — PPI 단독 대비 증상 개선 추가 효과\n3. 반응 없으면 → 내시경 + 보행성 역류 모니터링\n\n**B. 고립 LPS (식도 증상 없음)**\n1. PPI 경험적 치료 미권고 — 객관적 역류 증거 없이 장기 산 억제제 회피\n2. 내시경 + 보행성 역류 모니터링 먼저\n   - 24h pH-impedance (근위 역류·비산성 역류 평가)\n   - 96h wireless pH (AET 일내 변동성 보정)\n3. AET < 4.0% (96h wireless 전 일수) → 역류 기전 가능성 낮음 → 후두 과반응·심리 요인 평가",
         "sources": []
       },
@@ -1699,7 +1700,8 @@ var KNOWLEDGE_BUNDLE = {
     },
     "uiHooks": null
   },
-  /* v2 (B2) topic — 2026-04-22 Liby ingest. 원본: knowledge/by-disease/depression-screening.md */
+  /* v2 (B2) topic — 2026-04-22 Liby ingest. 원본: knowledge/by-disease/depression-screening.md
+     2026-04-22 L1 B1-patch-v2: treatment → protocol (vocabulary 정합, Liby de5 ingest 사후 교정) */
   "depression-screening": {
     "kind": "topic",
     "keywords": ["depression-screening","우울증","depression","PHQ-9","PHQ-2","자살위험","suicide risk","USPSTF","스크리닝","우울증 스크리닝"],
@@ -1715,7 +1717,7 @@ var KNOWLEDGE_BUNDLE = {
         "content": "### 1단계 — 초기 선별 (PHQ-2, 2문항)\n- \"지난 2주간 기분이 가라앉거나 희망이 없다고 느낀 날이 있었습니까?\"\n- \"지난 2주간 평소에 즐기던 일에 흥미를 잃은 날이 있었습니까?\"\n- 각 0-3점 → **PHQ-2 ≥ 3** 시 PHQ-9 시행\n\n### 2단계 — 확인 진단 (PHQ-9, 9문항)\n- 0-4: 최소 / 5-9: 경도 / 10-14: 중등도 / 15-19: 중등고도 / 20-27: 고도\n- **PHQ-9 항목 9 (자해·자살 생각) 양성 → 즉시 자살위험 평가**\n\n### 자살위험 평가\n- **C-SSRS** (Columbia Suicide Severity Rating Scale) 또는 간이 질문:\n  - \"죽고 싶다는 생각이 드신 적 있습니까?\"\n  - \"스스로 해치거나 자해할 계획이 있습니까?\"\n- 고위험: 응급 의뢰 / 입원 조정",
         "sources": []
       },
-      "treatment": {
+      "protocol": {
         "content": "### 경도-중등도 우울증\n- **정신치료(1차)**: CBT 또는 IPT\n- **약물치료**: SSRI (escitalopram, sertraline) — 4-8주 후 PHQ-9 재시행\n\n### 중등고도-고도 우울증\n- 약물치료 + 정신건강의학과 의뢰",
         "sources": []
       },
@@ -1782,9 +1784,12 @@ var KNOWLEDGE_BUNDLE = {
     "uiHooks": null
   },
   /* v2 (B2) drug — 2026-04-22 Liby ingest. 원본: knowledge/by-drug/neffy.md.
-     TRIAGE 감지는 별도 "아나필락시스" 카테고리에서 (Neffy 단독 키 X) — 임상 맥락 우선 (미르 2026-04-22). */
-  "neffy": {
-    "kind": "drug",
+     TRIAGE 감지는 별도 "아나필락시스" 카테고리에서 (Neffy 단독 키 X) — 임상 맥락 우선 (미르 2026-04-22).
+     2026-04-22 L1 B1-patch-v2: treatment → protocol (vocabulary 정합, Liby de5 ingest 사후 교정)
+     2026-04-22 L1 B1-patch-v2 scope 연장: uiHooks.guide={"*"} 오버라이드 추가.
+       drug kind 기본값 guide=["contraindication","precaution","comparison","insurance"] 4개에
+       neffy 보유 섹션(indication·dosing·protocol·notes) 미포함 → Guide tab invisible.
+       응급 약물 특성상 전체 섹션 노출이 필요 (미래 섹션 추가 자동 포함). */
     "keywords": ["neffy","Neffy","비강내에피네프린","intranasal epinephrine","에피네프린","epinephrine","아나필락시스","anaphylaxis","알레르기응급","EpiPen"],
     "primarySources": [
       "Wolf J et al. Am Fam Physician 2026;113(3):270-272. PMID:41839078"
@@ -1798,7 +1803,7 @@ var KNOWLEDGE_BUNDLE = {
         "content": "- **1회 비강 내 분무 (한쪽 비공)**: 에피네프린 2 mg/비공\n- 5-10분 후 증상 지속 시 반대쪽 비공에 추가 투여\n- 투여 후 **반드시 응급실 이송** (에피네프린 효과 소실 후 이상성 반응 위험)",
         "sources": []
       },
-      "treatment": {
+      "protocol": {
         "content": "### 아나필락시스 처치 순서\n1. **Neffy 비강 투여** (즉시) — 자동주사기 대체 가능\n2. 앙와위 (다리 올리기) — 혈압 유지\n3. 119 호출 또는 응급실 이송\n4. 필요 시 2차 투여 (5-10분 후)\n5. 항히스타민제·스테로이드 — 2차 치료 (에피네프린 대체 불가)",
         "sources": []
       },
@@ -1811,7 +1816,7 @@ var KNOWLEDGE_BUNDLE = {
         "sources": []
       }
     },
-    "uiHooks": null
+    "uiHooks": {"guide": ["*"]}
   }
 };
 
@@ -1826,13 +1831,14 @@ var KNOWLEDGE_BUNDLE = {
 /* v2 승격 — 2026-04-22 L1 B1 — 원본: knowledge/by-disease/LPR.md
    원본 md 라벨: [TIPS — by ENT교수] (뮤테란 off-label 거담, PPI 부작용 대안).
    경험적 치료 파트만 이 엔트리에 담는다. San Diego Consensus 진단 알고리즘은
-   별도 topic `LPR-consensus` 엔트리가 커버 (TRIAGE 동시 감지). */
+   별도 topic `LPR-consensus` 엔트리가 커버 (TRIAGE 동시 감지).
+   2026-04-22 L1 B1-patch: treatment → protocol (vocabulary 정합) */
 var _LPR_v2 = {
   kind: "disease",
   keywords: ["LPR","후두염","인후두역류","laryngopharyngeal reflux","역류성후두염"],
   primarySources: [],
   sections: {
-    treatment: {
+    protocol: {
       content: "PPI (1차 치료, 근거 확립)\n뮤테란(아세틸시스테인 경구) 병용 — LPR 인후 분비물·점액 거담 목적 (off-label)\nPPI 부작용 시:\n① 알긴산(Gaviscon류) — raft 형성, 역류 물리적 차단\n② Promac(polaprezinc) — 위점막 보호제. 알긴산과 병용 가능",
       sources: ["[TIPS — by ENT교수]"]
     }
@@ -1848,17 +1854,18 @@ KNOWLEDGE_BUNDLE["인후두역류"] = _LPR_v2;
      - Pilocarpine 섹션: [출처: NEJM 1993 Leveque et al., Salagen SPC] (Tier 1).
                          임상패턴 BID는 원본이 [출처 미확인] 태그 → 섹션 본문에 그대로 보존.
      - 뮤코미스트 가글 섹션: [출처: Sio TT et al. Mayo Clin Proc 2019] (Tier 1).
-                             일반 xerostomia 직접 gargle은 [출처 미확인] — 본문 내 인라인 보존. */
+                             일반 xerostomia 직접 gargle은 [출처 미확인] — 본문 내 인라인 보존.
+   2026-04-22 L1 B1-patch: treatment → protocol, treatment.gargle → protocol-gargle (자유 섹션, slugify) */
 var _xerostomia_v2 = {
   kind: "disease",
   keywords: ["구강건조증","구강건조","dry mouth","xerostomia"],
   primarySources: [],
   sections: {
-    treatment: {
+    protocol: {
       content: "① Pilocarpine(살라겐/필로겐) po\n  - 두경부암 방사선 후 구강건조증: 5mg TID (가이드라인)\n  - 쇼그렌증후군: 5mg QID (가이드라인)\n  - 임상 패턴: BID 가능 (부작용 경감 목적) [출처 미확인]\n  - 급여: 두경부암 방사선 후 or 쇼그렌증후군 진단 시\n  - 비급여: 그 외 원인 (당뇨·약물 유발 등)",
       sources: ["Leveque FG et al. NEJM 1993 (Pilocarpine)","Salagen SPC"]
     },
-    "treatment.gargle": {
+    "protocol-gargle": {
       content: "② 뮤코미스트 10% 1 ampule + 물 100cc → TID 가글\n  - 방사선 유발 xerostomia: 10% NAC rinse 주간 유의 개선 (Mayo Clinic Pilot RCT, 2019)\n  - 일반 구강건조증: 직접 gargle 근거 없음, 임상 경험 기반 [출처 미확인]",
       sources: ["Sio TT et al. Mayo Clin Proc 2019"]
     }
@@ -1871,7 +1878,8 @@ KNOWLEDGE_BUNDLE["dry mouth"] = _xerostomia_v2;
 KNOWLEDGE_BUNDLE["xerostomia"] = _xerostomia_v2;
 
 /* v2 승격 — 2026-04-22 L1 B1 — 원본: knowledge/by-disease/burning-mouth.md
-   원본 md 라벨: [CLINICAL] + [출처: Kim JW et al. Sci Rep 2025] (Tier 1). */
+   원본 md 라벨: [CLINICAL] + [출처: Kim JW et al. Sci Rep 2025] (Tier 1).
+   2026-04-22 L1 B1-patch: treatment → protocol (vocabulary 정합) */
 var _BMS_v2 = {
   kind: "disease",
   keywords: ["burning mouth","구강작열감","구강작열감증후군","BMS"],
@@ -1879,7 +1887,7 @@ var _BMS_v2 = {
     "Kim JW et al. Sci Rep 2025"
   ],
   sections: {
-    treatment: {
+    protocol: {
       content: "뮤코미스트 가글 — 10% 1 ampule + 물 100cc → TID 가글\n- 2025 다기관 임상에서 VAS 통증 + 삶의 질(OHIP-14K) 유의 개선\n- Clonazepam 0.5mg/d 병용 시 반응률 증가 (단독 60% → 병용 80%)",
       sources: ["Kim JW et al. Sci Rep 2025"]
     }
