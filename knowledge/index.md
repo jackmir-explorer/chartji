@@ -52,6 +52,10 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - obesity.md    — 비만 체중감량 Draft Template + 위고비 처방 기준 + Mayo Clinic 표현형 + 단백질 ABC [CLINICAL/TIPS/REGULATORY]
 - dysphonia.md  — 목소리 이상/쉰목소리: 수분 섭취·strap muscle 마사지 (MTD) [CLINICAL — 조건부]
 - heart-failure.md — 심부전 parent: 분류(HFrEF/HFmrEF/HFpEF) + GDMT 4 pillars + 의뢰 6시점 + I NEED HELP + 감염 예방접종 6종 [CLINICAL] — dosing·protocol은 guide 제외 (전문의 titration 영역)
+- resistant-hypertension.md — 저항성 고혈압: 3제 최적화 후 MRA(spironolactone) 추가, 진단 전 백의고혈압·비순응·이차성 배제 [CLINICAL] (AFP 2026 PMID:41544280, 초록 기반)
+- ckd-monitoring.md — 중등도 CKD(G3) 모니터링: 크레아티닌+시스타틴C 이중 방정식 > 크레아티닌 단독 [CLINICAL] (BMJ 2026 PMID:41856526) — topic
+- sex-hormone-vte-risk.md — 성호르몬 요법 VTE·심혈관 위험: HRT/COC/GAHT 제형·혈전성향증·과거력 4축 평가, 경피 우선 [CLINICAL] (NEJM 2026 PMID:41985134) — topic
+- smoking-cessation.md — 금연: 전자담배 vs NRT 껌 AFP 2026 POEM, 장기 안전성 unknowns [CLINICAL — 조건부, 초록 기반] (PMID:41839085) — topic
 
 ### by-drug/
 - vaccine-interval.md — 백신 접종 간격 원칙 (생+사/생+생/사+사) [CLINICAL] — topic
@@ -68,11 +72,12 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - ozempic.md — 오젬픽(Semaglutide 1mg) 한국 급여 기준 3조건 [CLINICAL — 조건부]
 - pilocarpine.md — 살라겐/필로겐 용량(TID/QID/BID)·급여기준 [REGULATORY]
 - mucomyst.md — NAC 가글 처방법·BMS/구강건조증/LPR 근거 [TIPS/CLINICAL/INSIGHTS]
-- glp1-selection-strategy.md — GLP-1 비만약 선택 전략: 위고비 vs 마운자로 10기준·Dose Escalation·반응예측·Interval Tx·SMI·전당뇨 [TIPS/INSIGHTS/CLINICAL]
+- glp1-selection-strategy.md — GLP-1 비만약 선택 전략: 위고비 vs 마운자로 10기준·Dose Escalation·반응예측·Interval Tx·SMI·전당뇨 + Tirzepatide 중단 전환 전략(PMID:41962807) + NEJM 2026 종합 리뷰(PMID:41931049) + AUD 입원↓(PMID:39535805) [TIPS/INSIGHTS/CLINICAL]
 - sglt2-inhibitors.md — SGLT-2 억제제 계열: 적응증(당뇨/HFrEF·HFpEF/CKD) + **비뇨생식기 감염 위험** 처방 전 환자교육 [CLINICAL]
 - vitamin-d.md — 비타민D: Endocrine Society 2025 가이드라인 (75세↑·임신부·흡수불량 권고, 일반 광범위 보충 미권고) [REGULATORY] — topic
 - neffy.md — 비강내 에피네프린 Neffy: 아나필락시스 응급 (EpiPen 대체) — 비강 분무 2 mg/비공 + 응급실 이송 필수 [CLINICAL]
 
 ### guidelines/
-- adult-vaccination-summary.md — 성인 예방접종 전체 요약 + 항암 독감백신 **타이밍 기반** (ANC 폐기, ASCO 2024) + 심부전 환자 고위험 예방접종 링크 [CLINICAL] — topic
+- adult-vaccination-summary.md — 성인 예방접종 전체 요약 + 항암 독감백신 **타이밍 기반** (ANC 폐기, ASCO 2024) + 심부전 환자 고위험 예방접종 링크 + **처방 기반 독감백신 접종률 제고** (Vaccine 2026 PMID:42000148, 처방 루틴 삽입 시 접종률 3배) [CLINICAL] — topic
 - heart-failure-referral.md — 심부전 상급병원 의뢰 기준: 의뢰 6시점 세밀화 + I NEED HELP 약어 + 전원 최적시기 4단계 곡선 [CLINICAL] — topic (parent: heart-failure)
+- afp-top20-poems-2024.md — AFP 2024 TOP 20 POEMs overview: 비만·CV 2차예방·당뇨·IBS·옴·rUTI·담석 외래 적용 요약 [CLINICAL] (AFP 2025 PMID:40736492) — topic (TRIAGE 미등록)

@@ -71,6 +71,10 @@ JSON만 반환 (다른 텍스트 절대 금지):
   sglt2-inhibitors (SGLT2/SGLT-2억제제/포시가/자디앙/다파글리플로진/엠파글리플로진 관련 — 당뇨·심부전·CKD에 SGLT2 처방 또는 비뇨생식기 감염 우려 맥락)
   vitamin-d (비타민D/vitamin D/cholecalciferol/비타민D 결핍·보충·질병예방 상담 관련)
   아나필락시스 (아나필락시스/anaphylaxis/알레르기 응급/EpiPen/Neffy/비강내 에피네프린 관련 — 응급 알레르기 처치 맥락)
+  저항성고혈압 (resistant hypertension/3제 복용에도 혈압 조절 안 됨/MRA/spironolactone/이차성 고혈압 의심 — 저항성 고혈압 맥락)
+  CKD (만성콩팥병/eGFR 30-59/크레아티닌·시스타틴C/신장기능 추적 — 중등도 CKD G3 모니터링 맥락)
+  성호르몬-VTE (피임약 처방/HRT/갱년기 호르몬 치료/성별확정호르몬/VTE 과거력 있는 호르몬 요법 상담 — 성호르몬과 혈전 위험 평가 맥락)
+  smoking-cessation (금연/전자담배 vaping/NRT/varenicline/금연 상담 — 성인 금연 시도 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */
