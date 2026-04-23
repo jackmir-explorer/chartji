@@ -84,6 +84,33 @@ keywords: obesity, 비만, phenotype, hungry brain, hungry gut, slow burn, emoti
 > [출처: Sun et al. Clin Nutr 2019 PMID:31053510 — V-M-R 순서 혈당 최대 억제 + GLP-1 분비 최대 자극]
 > [출처: Noronha et al. Obes Pillars 2025 PMID:41322078 — GLP-1 치료 중 단백질 >1.2g/kg/day 국제 전문가 합의 권고]
 
+## 청소년 비만 — GLP-1 RA [CLINICAL — 조건부]
+
+> 출처: Schoenherr DT, Swinton MK, Madison KE. GLP-1 Receptor Agonists for Obesity in Adolescents. Am Fam Physician 2026;113(1):91-94. PMID:41544290 [초록 기반 — 전문 미확인 · abstract 미공개 논문]
+
+### 적응증 (성인과 차이 포인트)
+
+- 미국 FDA — **Liraglutide (Saxenda) ≥12세**, **Semaglutide (Wegovy) ≥12세** 청소년 비만 적응증 승인 (기존 확립 사실 — 원 논문 외 근거)
+- Tirzepatide는 청소년 적응증 승인 미완 (2026 기준, 성인 적응증만)
+- 국내: 위고비 소아(≥12세) 적응증 — 체중 60kg 이상 + BMI ≥ 성인 비만 기준 (FDA 라벨 참조; 국내 허가사항 별도 확인)
+- 보호자 동반 상담·동의 필수
+
+### 외래 실전 포인트
+
+- 청소년 GLP-1 처방은 **성인 기준 그대로 확장 금지** — 성장·영양·정신건강 동반 평가
+- 체중·BMI percentile·성장속도·생활습관·식이장애 선별 필수
+- 근·골 손실 위험 더 주의 (성장기 → 단백질·칼슘·비타민 D·근력운동 강조)
+- 보호자에게 **장기 사용·중단 후 체중 회복 가능성** 고지
+
+### 1차의료 적용
+
+- 청소년 비만 상담 수요 증가 시 **AFP 2026 가이드 참고** — 성인 기준과 다른 처방·모니터링 포인트
+- 복잡 케이스(섭식장애·정신과 동반·대사 이상)는 소아내분비·청소년정신과 협진 고려
+
+*[초록 기반 — 전문 미확인] AFP 2026 원 논문은 abstract 비공개. 본 섹션은 scout 한 줄 요약과 통용 임상 지식을 결합한 overview — 구체 연령·용량·BMI cutoff·모니터링 프로토콜은 AFP 원문 확인 필요 (Researcher 검증 큐).*
+
+---
+
 ## 처방/치료
 
 위고비(Semaglutide) 처방 기준:

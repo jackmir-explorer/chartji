@@ -5,11 +5,17 @@
 
 ---
 
-2026-04-23 | by-disease/vte-hormone-therapy.md | 신규 — 성호르몬 요법별 VTE 위험 비교(COC·HRT·성확인 호르몬) / 혈전성향증 처방 원칙 / 수술 전후 관리 / VTE 치료 [CLINICAL] PMID:41985134
-2026-04-23 | by-drug/mounjaro.md | 보완 — 마운자로 중단 후 12개월 체중 변화 +1.9%(비유의) / 비용 중단 80.7% / 대체 비만약 전환으로 감량 유지 가능 [CLINICAL] PMID:41962807
-2026-04-23 | by-disease/CKD.md | 신규 — CKD G3 이중 바이오마커(크레아티닌+시스타틴C) 방정식 일치율 우월(78.6% vs 73.1%) / 모니터링 강화 / 의뢰 기준 [CLINICAL] PMID:41856526
-2026-04-23 | by-drug/glp1-selection-strategy.md | 보완 — GLP-1 RA NEJM 2026 종합 리뷰 / 기전 요약 / CV·신장 보호 / 근육·골 감소 주의 / 중단 후 체중 회복 [CLINICAL] PMID:41931049
-2026-04-23 | guidelines/primary-care-top20-2024.md | 신규 — 2024 AFP POEM TOP 20 요약 / T2DM·비만·금연·항생제·UTI·IBS 즉시 적용 핵심 [INSIGHTS] PMID:40736492
+2026-04-23 | by-disease/sex-hormone-vte-risk.md (alias main: vte-hormone-therapy.md) | 신규 — 성호르몬 요법(COC·HRT·GAHT·ART·종양 호르몬)별 VTE·심혈관 위험 평가 4축 (제형·혈전성향증·VTE과거력·임상인자) / 경피 우선 원칙 / 수술 전후 관리 [CLINICAL] PMID:41985134 (NEJM 2026 종합리뷰)
+2026-04-23 | by-drug/glp1-selection-strategy.md | 보완 — Tirzepatide 중단 후 12개월 +1.9% 비유의 / 대체 비만약 전환 81.9% / 약값이 중단 이유 80.7% [CLINICAL — 조건부] PMID:41962807 (JAPhA)
+2026-04-23 | by-disease/ckd-monitoring.md (alias main: CKD.md) | 신규 — 중등도 CKD(G3) 모니터링 크레아티닌+시스타틴C 이중 방정식 우월(80.2% vs 73.1%) / 3년 추적 BMJ 2026 [CLINICAL] PMID:41856526
+2026-04-23 | by-drug/glp1-selection-strategy.md | 보완 — GLP-1 RA NEJM 2026 종합 리뷰 / 기전(위 배출·글루카곤 억제·시상하부)·CV·신 보호·근·골 손실 [CLINICAL] PMID:41931049
+2026-04-23 | guidelines/afp-top20-poems-2024.md (alias main: primary-care-top20-2024.md) | 신규 — AFP 2024 TOP 20 POEMs 요약 [CLINICAL] PMID:40736492
+2026-04-23 | by-disease/obesity.md | 청소년 GLP-1 섹션 추가 — AFP 2026 / FDA liraglutide·semaglutide ≥12세 [CLINICAL — 조건부, 초록 기반] PMID:41544290
+2026-04-23 | by-disease/dizziness.md | 의뢰 기준 추가 — 척추동맥 도플러 90% 불필요 [CLINICAL — 조건부] PMID:40950820
+2026-04-23 | guidelines/adult-vaccination-summary.md | 처방 기반 독감백신 섹션 — 외래 루틴 9.55→30.86% [CLINICAL] PMID:42000148
+2026-04-23 | by-disease/smoking-cessation.md | 신규 — 전자담배 vs NRT 껌 [CLINICAL — 조건부, 초록 기반] PMID:41839085
+2026-04-23 | by-drug/glp1-selection-strategy.md | 보완 — GLP-1 RA AUD 입원 위험 감소 [CLINICAL — 조건부] PMID:39535805
+2026-04-23 | bundle compile | Liby ingest — 11건(신규 7 + 보강 4). dizziness v1→v2 승격(aliases 3 참조공유). TRIAGE 추가: 저항성고혈압·CKD·성호르몬-VTE·smoking-cessation. cache-bust ?v=0423-ingest. bundle 93→115 keys.
 2026-04-22 | by-disease/LPR.md | San Diego Consensus 2025 추가 — LPS vs LPRD 구분 / 후두경 한계 / 식도증상 유무별 치료 알고리즘 / 후두과반응 [CLINICAL] PMID:40197644
 2026-04-22 | by-drug/sglt2-inhibitors.md | 신규 — SGLT-2 억제제 비뇨생식기 감염 위험 / 처방 전 환자교육 요점 / 주의사항 [CLINICAL] PMID:41839088
 2026-04-22 | by-disease/depression-screening.md | 신규 — USPSTF 성인 우울증·자살위험 스크리닝 / PHQ-2→PHQ-9 / 의뢰 기준 [REGULATORY] PMID:41839080

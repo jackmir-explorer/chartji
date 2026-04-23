@@ -67,51 +67,8 @@ var KNOWLEDGE_BUNDLE = {
     "differential": null,
     "draftAppend": null
   },
-  "dizziness": {
-    "kind": "disease",
-    "exam": "어지럼증 기본 문진: ①언제부터 ②갑자기인지 ③과거 유사 episode ④한번 지속시간 ⑤괜찮을 땐 완전히 괜찮은지 ⑥구역/구토·휘청거림 ⑦귀먹먹함 ⑧이명 ⑨만성이면 월 빈도 ⑩어떤 상황에서 특히 어지러운지 ⑪최근 episode 시점\n편두통 추가 문진: 편두통 과거력, 두통 동반, 빛·소리 과민, 전조증상, 가족력, 발작 빈도.",
-    "treatment": null,
-    "differential": "【Horses — 흔한 원인】\n1. BPPV — 자세 변화 시 수초~1분, 가장 흔함\n2. 전정신경염 — 바이러스 후 지속성 현훈, 청력저하 없음\n3. 편두통성 어지럼증 — 편두통 과거력+반복성, 두통 없이도 발생 가능\n4. 기립성 저혈압 — 기립 시 발생, 노인·탈수·강압제 복용자\n5. 메니에르병 — 반복성 현훈+이명+편측 청력저하+이충만감\n【Zebra — 드물지만 절대 놓치면 안 됨】\n⚠ 소뇌경색/TIA — 갑작스러운 발병, 보행장애, 두통, 복시·안면마비·구음장애 동반 시 즉시 의심 [AAFP 2017]",
-    "differentialShort": [
-      {"d":"BPPV",           "t":"h"},
-      {"d":"전정신경염",      "t":"h"},
-      {"d":"편두통성 어지럼", "t":"h"},
-      {"d":"기립성 저혈압",   "t":"h"},
-      {"d":"메니에르",        "t":"h"},
-      {"d":"소뇌경색/TIA",   "t":"z"}
-    ],
-    "draftAppend": null
-  },
-  "어지럼증": {
-    "kind": "disease",
-    "exam": "어지럼증 문진: 편두통 과거력 확인. 편두통 관련 문진 — 두통 동반 여부, 빛·소리 과민, 구역/구토, 전조증상, 두통 양상(박동성/지속시간), 가족력, 발작 빈도.",
-    "treatment": null,
-    "differential": "【Horses — 흔한 원인】\n1. BPPV — 자세 변화 시 수초~1분, 가장 흔함\n2. 전정신경염 — 바이러스 후 지속성 현훈, 청력저하 없음\n3. 편두통성 어지럼증 — 편두통 과거력+반복성, 두통 없이도 발생 가능\n4. 기립성 저혈압 — 기립 시 발생, 노인·탈수·강압제 복용자\n5. 메니에르병 — 반복성 현훈+이명+편측 청력저하+이충만감\n【Zebra — 드물지만 절대 놓치면 안 됨】\n⚠ 소뇌경색/TIA — 갑작스러운 발병, 보행장애, 두통, 복시·안면마비·구음장애 동반 시 즉시 의심 [AAFP 2017]",
-    "differentialShort": [
-      {"d":"BPPV",           "t":"h"},
-      {"d":"전정신경염",      "t":"h"},
-      {"d":"편두통성 어지럼", "t":"h"},
-      {"d":"기립성 저혈압",   "t":"h"},
-      {"d":"메니에르",        "t":"h"},
-      {"d":"소뇌경색/TIA",   "t":"z"}
-    ],
-    "draftAppend": null
-  },
-  "vertigo": {
-    "kind": "disease",
-    "exam": "어지럼증 문진: 편두통 과거력 확인. 편두통 관련 문진 — 두통 동반 여부, 빛·소리 과민, 구역/구토, 전조증상, 두통 양상(박동성/지속시간), 가족력, 발작 빈도.",
-    "treatment": null,
-    "differential": "【Horses — 흔한 원인】\n1. BPPV — 자세 변화 시 수초~1분, 가장 흔함\n2. 전정신경염 — 바이러스 후 지속성 현훈, 청력저하 없음\n3. 편두통성 어지럼증 — 편두통 과거력+반복성, 두통 없이도 발생 가능\n4. 기립성 저혈압 — 기립 시 발생, 노인·탈수·강압제 복용자\n5. 메니에르병 — 반복성 현훈+이명+편측 청력저하+이충만감\n【Zebra — 드물지만 절대 놓치면 안 됨】\n⚠ 소뇌경색/TIA — 갑작스러운 발병, 보행장애, 두통, 복시·안면마비·구음장애 동반 시 즉시 의심 [AAFP 2017]",
-    "differentialShort": [
-      {"d":"BPPV",           "t":"h"},
-      {"d":"전정신경염",      "t":"h"},
-      {"d":"편두통성 어지럼", "t":"h"},
-      {"d":"기립성 저혈압",   "t":"h"},
-      {"d":"메니에르",        "t":"h"},
-      {"d":"소뇌경색/TIA",   "t":"z"}
-    ],
-    "draftAppend": null
-  },
+  /* dizziness v1 → v2 승격 (2026-04-23 ingest batch).
+     참조 공유 본체는 파일 하단 `_dizziness_v2` 변수 참조. */
   /* v2 (B2) — Phase 5a Liby ingest. 원본: knowledge/by-disease/vaccination.md */
   "vaccination": {
     "kind": "disease",
@@ -236,6 +193,12 @@ var KNOWLEDGE_BUNDLE = {
         "sources": [
           "대한심부전학회 심부전 생활백서 2025",
           "Roubille F et al. Eur J Prev Cardiol 2025. doi:10.1093/eurjpc/zwaf366"
+        ]
+      },
+      "prescription-based-flu": {
+        "content": "### 처방 기반 독감백신 접종률 제고 [CLINICAL]\n군집 RCT, ≥60세 839명, 5개 지역보건센터 (중국 Binzhou), 3-arm.\n\n핵심 수치:\n| 중재군 | 독감백신 접종률 |\n|---|---|\n| 일상 진료 (대조군) | 9.55% |\n| 처방 기반 모델 (외래 처방 시 독감백신 권유 루틴 삽입) | 30.86% |\n| 처방 기반 모델 + 소액 수수료 면제 | 83.23% |\n\n중재 메커니즘:\n- 외래 처방 시 의료진이 \"독감백신 맞으셨어요?\" 루틴 질문 삽입 + 당일 접종 연계\n- 처방-접종 동선을 하나로 묶는 것이 핵심 — 별도 예약·방문 장벽 제거\n- 소액 행정수수료 면제만으로 접종률이 추가 ~2.7배 상승 (백신 비용은 본인부담 유지)\n- 교육 수준·소득·인지 기능 낮은 서브그룹에서도 효과 일관\n\n1차의료 적용:\n- 매 처방 시 한 마디 + 당일 접종 → 접종률 3배 향상 전략\n- 한국 상황: 65세 이상 국가 무료 접종(NIP) 맥락에서 \"한 마디\" 중재의 가치 재확인 — NIP 내에서도 우연 접종 유도 가능\n- 의료기관 프로세스 개선 대상: 만성질환 재처방 외래에 접종 권유 루틴 내장",
+        "sources": [
+          "Zhang L et al. Effectiveness of prescription-based influenza vaccination services among older adults in Binzhou, China. Vaccine 2026;82:128588. PMID:42000148, DOI:10.1016/j.vaccine.2026.128588"
         ]
       }
     },
@@ -414,6 +377,12 @@ var KNOWLEDGE_BUNDLE = {
         "content": "### 위고비(Semaglutide) 처방 기준\n- BMI ≥ 30 → 단독 처방 가능\n- BMI 27~30 + 동반질환(고혈압/T2DM/이상지질혈증/OSA/심혈관질환) → 처방 가능\n- 비급여, 전액 환자 부담\n\n### 금기·주의\n- 절대 금기: MTC 개인력/가족력, MEN2, semaglutide 과민반응, 임신(계획 시 2개월 전 중단)\n- 상대적 주의: 췌장염 과거력, 수유 중, 당뇨망막병증(혈당 급격 개선 시 악화), 담석증",
         "sources": []
       },
+      "indication": {
+        "content": "### 청소년 비만 — GLP-1 RA [CLINICAL — 조건부, 초록 기반]\n- FDA: Liraglutide(Saxenda) ≥12세, Semaglutide(Wegovy) ≥12세 청소년 비만 적응증 승인\n- Tirzepatide는 청소년 적응증 미승인 (2026 기준, 성인만)\n- 국내 위고비 소아(≥12세) 적응증: 체중 60kg 이상 + BMI ≥ 성인 비만 기준 (FDA 라벨 참조; 국내 허가사항 별도 확인)\n- 보호자 동반 상담·동의 필수\n\n### 청소년 처방 실전 포인트\n- 성인 기준 그대로 확장 금지 — 성장·영양·정신건강 동반 평가\n- 체중·BMI percentile·성장속도·생활습관·식이장애 선별 필수\n- 근·골 손실 위험 성인보다 더 주의 (성장기 → 단백질·칼슘·비타민 D·근력운동 강조)\n- 보호자에게 장기 사용·중단 후 체중 회복 가능성 고지\n- 복잡 케이스(섭식장애·정신과 동반·대사 이상)는 소아내분비·청소년정신과 협진 고려\n\n*[초록 기반 — 전문 미확인] AFP 2026 원 논문 abstract 비공개. 구체 연령·용량·BMI cutoff·모니터링 프로토콜은 AFP 원문 확인 필요.*",
+        "sources": [
+          "Schoenherr DT, Swinton MK, Madison KE. GLP-1 Receptor Agonists for Obesity in Adolescents. Am Fam Physician 2026;113(1):91-94. PMID:41544290"
+        ]
+      },
       "notes": {
         "content": "### 다이어트 후 요요 — Adaptive Thermogenesis (환자설명용)\n체중이 줄면 몸은 \"위기 상황\"으로 인식. 인류사에서 굶주림이 더 흔했기에 체중 감소를 생존 위협으로 해석.\n\n몸이 하는 일:\n- 포만감 호르몬(렙틴) ↓ → 배고픔 증가\n- 배고픔 호르몬(그렐린) ↑ → 식욕 폭발\n- 갈색지방 열 생산 ↓ → 에너지 절약 모드\n- 무의식적 움직임(NEAT) ↓ → 가만히 앉아있게 됨\n- 근육이 같은 일을 더 적은 에너지로 수행 → 운동 효율 역설적 증가\n\n환자에게 설명: \"살을 너무 빨리 빼면 몸이 '굶고 있구나'로 착각해서 에너지 절약 모드로 들어갑니다. 그래서 천천히 빠지는 게 오히려 요요가 안 옵니다.\"",
         "sources": []
@@ -447,6 +416,12 @@ var KNOWLEDGE_BUNDLE = {
       "protocol": {
         "content": "### 위고비(Semaglutide) 처방 기준\n- BMI ≥ 30 → 단독 처방 가능\n- BMI 27~30 + 동반질환(고혈압/T2DM/이상지질혈증/OSA/심혈관질환) → 처방 가능\n- 비급여, 전액 환자 부담\n\n### 금기·주의\n- 절대 금기: MTC 개인력/가족력, MEN2, semaglutide 과민반응, 임신(계획 시 2개월 전 중단)\n- 상대적 주의: 췌장염 과거력, 수유 중, 당뇨망막병증(혈당 급격 개선 시 악화), 담석증",
         "sources": []
+      },
+      "indication": {
+        "content": "### 청소년 비만 — GLP-1 RA [CLINICAL — 조건부, 초록 기반]\n- FDA: Liraglutide(Saxenda) ≥12세, Semaglutide(Wegovy) ≥12세 청소년 비만 적응증 승인\n- Tirzepatide는 청소년 적응증 미승인 (2026 기준, 성인만)\n- 국내 위고비 소아(≥12세) 적응증: 체중 60kg 이상 + BMI ≥ 성인 비만 기준 (FDA 라벨 참조; 국내 허가사항 별도 확인)\n- 보호자 동반 상담·동의 필수\n\n### 청소년 처방 실전 포인트\n- 성인 기준 그대로 확장 금지 — 성장·영양·정신건강 동반 평가\n- 체중·BMI percentile·성장속도·생활습관·식이장애 선별 필수\n- 근·골 손실 위험 성인보다 더 주의 (성장기 → 단백질·칼슘·비타민 D·근력운동 강조)\n- 보호자에게 장기 사용·중단 후 체중 회복 가능성 고지\n- 복잡 케이스(섭식장애·정신과 동반·대사 이상)는 소아내분비·청소년정신과 협진 고려\n\n*[초록 기반 — 전문 미확인] AFP 2026 원 논문 abstract 비공개. 구체 연령·용량·BMI cutoff·모니터링 프로토콜은 AFP 원문 확인 필요.*",
+        "sources": [
+          "Schoenherr DT, Swinton MK, Madison KE. GLP-1 Receptor Agonists for Obesity in Adolescents. Am Fam Physician 2026;113(1):91-94. PMID:41544290"
+        ]
       },
       "notes": {
         "content": "### 다이어트 후 요요 — Adaptive Thermogenesis (환자설명용)\n체중이 줄면 몸은 \"위기 상황\"으로 인식. 인류사에서 굶주림이 더 흔했기에 체중 감소를 생존 위협으로 해석.\n\n몸이 하는 일:\n- 포만감 호르몬(렙틴) ↓ → 배고픔 증가\n- 배고픔 호르몬(그렐린) ↑ → 식욕 폭발\n- 갈색지방 열 생산 ↓ → 에너지 절약 모드\n- 무의식적 움직임(NEAT) ↓ → 가만히 앉아있게 됨\n- 근육이 같은 일을 더 적은 에너지로 수행 → 운동 효율 역설적 증가\n\n환자에게 설명: \"살을 너무 빨리 빼면 몸이 '굶고 있구나'로 착각해서 에너지 절약 모드로 들어갑니다. 그래서 천천히 빠지는 게 오히려 요요가 안 옵니다.\"",
@@ -1490,6 +1465,24 @@ var KNOWLEDGE_BUNDLE = {
         "sources": [
           "Panou T et al. Diabetes Ther 2026. PMID:41984373, DOI:10.1007/s13300-026-01865-5"
         ]
+      },
+      "tirzepatide-discontinuation": {
+        "content": "### Tirzepatide 중단 후 체중 반동 — 대체 비만약 전환 전략 [CLINICAL — 조건부]\n후향 코호트 n=83, 미국 UNC Health (임상약사 지원 외래).\n\n핵심 수치:\n| 지표 | 값 |\n|---|---|\n| Tirzepatide 중단 전 평균 사용기간 | 11개월 |\n| 중단 전 평균 체중 감소 | -6.7% |\n| 중단 후 12개월 체중 변화 | +1.9% (P=0.11, 비유의) |\n| 대체 비만약으로 전환한 환자 비율 | 81.9% (n=68) |\n| 중단 주된 이유 (약값·접근성 문제) | 80.7% |\n\n임상 적용 (외래 상담 메시지):\n- 비용 부담으로 tirzepatide 중단 상담 시: \"다른 비만약으로 전환하면 평균 체중 반동이 통계적으로 유의하지 않습니다 (12개월 +1.9%)\" — 근거 제시 가능\n- 단순 중단 ≠ 전환 전략. 약사·의사가 다음 약물로의 transition을 적극 지원한 연구 → \"전환\" 자체가 키 중재\n- 전환 대상 약물: OMs 전반 — 다른 GLP-1/GLP-1-GIP, phentermine-topiramate, naltrexone-bupropion 등\n- 한계: 후향·단일 기관. \"중단 후 방치\"한 군과 직접 비교 없음. 평균치이며 개인차 큼",
+        "sources": [
+          "Huang L et al. J Am Pharm Assoc 2026;8:103112. PMID:41962807, DOI:10.1016/j.japh.2026.103112"
+        ]
+      },
+      "glp1-review-nejm2026": {
+        "content": "### GLP-1 RA 종합 리뷰 — NEJM 2026 [CLINICAL]\n\n기전 (환자설명용):\n- 인크레틴 유사체: 포도당 의존적 인슐린 분비 촉진\n- 위 배출 지연 (포만감 지속, 초기 GI 부작용 원인)\n- 글루카곤 분비 억제 (간 포도당 신생 감소)\n- 장내미생물 beneficial 변화\n- 시상하부 직접 작용 → 포만감 증강 (음식 갈망 감소의 중추 기전)\n\n치료 효과 — 확립된 근거:\n- 혈당·체중 개선 외\n- 심혈관 위험 감소 (고위험군·T2DM) — 대규모 RCT 확인\n- 신기능 악화 지연 (신부전 진행 저하)\n\n부작용·미해결 이슈:\n- 위장관 증상 (대부분) — 메스꺼움·변비·소화불량\n- 근육·골량 손실 — 환자 교육 필수 (단백질 1.2g/kg + 근력운동 병행)\n- 장기 순응도 미확인\n- 중단 후 체중 회복 — 개인차 큼\n- 근·골 손실의 기능적 영향 장기 데이터 부족\n\n1차의료 적용:\n- GLP-1 처방 환자 상담 스크립트 근거 자료 — 기전·부작용·장기 이슈 설명\n- `obesity.md` GLP-1 중간 점검 문진(단백질 1.2g/kg, 운동 체크)이 이 리뷰의 근·골 손실 경고와 정합\n- 특히 고령·저근육량 환자에서 aggressive 감량 시 근·골 손실 위험 고지 필수",
+        "sources": [
+          "Rosen CJ, Ingelfinger JR. GLP-1 Receptor Agonists. N Engl J Med 2026;394(13):1313-1324. PMID:41931049, DOI:10.1056/NEJMra2500106"
+        ]
+      },
+      "aud-hospitalization": {
+        "content": "### GLP-1 RA와 알코올사용장애(AUD) — 입원 위험 감소 [CLINICAL — 조건부]\n스웨덴 전국 등록자료 within-individual Cox regression, 2006-2023.\n\n핵심 수치:\n- 대상: AUD 진단자 227,866명 (남성 63.5%, 평균 40세, 중앙값 추적 8.8년)\n- Semaglutide (n=4,321): AUD 입원 위험 aHR 0.64 (95% CI 0.50-0.83) — 36% 감소\n- Liraglutide (n=2,509): AUD 입원 위험 aHR 0.72 (95% CI 0.57-0.92) — 28% 감소\n- 기존 AUD 치료제 (naltrexone/acamprosate/disulfiram) — aHR 0.98 (거의 차이 없음)\n- 추가 효과: 타 물질사용장애 입원↓, 신체질환 입원↓\n- 무효: 자살시도 감소 유의 효과 없음\n\n1차의료 적용:\n- GLP-1 처방 환자 중 음주 문제 동반 사례에서 추가 이득 기대 가능\n- 위고비/오젬픽 초진 시 음주력 문진 강화 근거 (AUD 동반 선별)\n- 비만·T2DM + AUD 환자에서 기존 AUD 치료제보다 GLP-1 우선 고려 근거 형성\n- 한계: 관찰연구 — RCT 필요. AUD 단독 적응증 아님 (비만·T2DM 병존 상태에서만 검증)",
+        "sources": [
+          "Lähteenvuo M et al. Repurposing Semaglutide and Liraglutide for Alcohol Use Disorder. JAMA Psychiatry 2025;82(1):94-98. PMID:39535805, DOI:10.1001/jamapsychiatry.2024.3599"
+        ]
       }
     },
     "uiHooks": null
@@ -1896,3 +1889,287 @@ var _BMS_v2 = {
 KNOWLEDGE_BUNDLE["burning mouth"] = _BMS_v2;
 KNOWLEDGE_BUNDLE["구강작열감"] = _BMS_v2;
 KNOWLEDGE_BUNDLE["BMS"] = _BMS_v2;
+
+/* ═══════════════════════════════════════════════════════════════════
+   2026-04-23 Liby ingest batch — 11건 (A 7신규 + B 4보강)
+   원본 md는 이미 Deep Extract 완료. 본 ingest는 bundle 이식만.
+   설계 메모:
+   - resistant-hypertension: parents=["hypertension"] 후보지만 bundle에 hypertension 없음 → parents 생략
+   - ckd-monitoring: kind=topic → parents 부여 금지 (section-vocabulary.md parents 규칙)
+   - sex-hormone-vte-risk·smoking-cessation·afp-top20-poems-2024: 동일 사유로 parents 없음
+   - mucomyst·pilocarpine: kind=drug + protocol/indication/dosing 섹션 → uiHooks.guide ["*"] 필수
+   - dizziness v2 승격: v1(exam·differential·differentialShort·draftAppend) 매핑 → v2(exam/differential/referral/notes)
+═══════════════════════════════════════════════════════════════════ */
+
+/* dizziness v2 — v1 승격. 2026-04-23 ingest (L1 B1 패턴).
+   v1→v2 매핑:
+   - exam (기본 11항목 + 편두통 추가 문진) → sections.exam
+   - differential (텍스트) → sections.differential.content
+   - differentialShort (구조 배열) → sections.differential 본문에 마크다운으로 삽입 보존
+   - draftAppend (null) → draft-append 섹션 생략
+   - 신규 VA 도플러 의뢰 섹션 → sections.referral [CLINICAL — 조건부] */
+var _dizziness_v2 = {
+  kind: "disease",
+  keywords: ["dizziness","어지럼증","어지러움","현기증","vertigo"],
+  primarySources: [],
+  sections: {
+    exam: {
+      content: "### 어지럼증 기본 문진 11항목 [TIPS — 교수님 외래 참관]\n1. 언제부터 어지러웠는지\n2. 갑자기 발생했는지\n3. 과거 비슷한 episode 있었는지\n4. 한번 어지러울 때 얼마나 지속되는지\n5. 괜찮을 땐 완전히 괜찮은지 (삽화성 vs 지속성)\n6. 심한 정도 — 구역/구토 동반 여부, 휘청거림\n7. 귀먹먹함(이충만감) 동반 여부\n8. 이명 동반 여부\n9. 만성이면 한달 발생 빈도\n10. 어떤 상황에서 특히 어지러운지 (자세변화, 기립, 스트레스 등)\n11. 가장 최근 episode는 언제\n\n### 편두통성 어지럼증 추가 문진\n- 편두통 과거력 확인\n- 두통 동반 여부, 빛·소리 과민, 구역/구토, 전조증상, 두통 양상(박동성/지속시간), 가족력, 발작 빈도",
+      sources: ["[TIPS — 교수님 외래 참관]"]
+    },
+    differential: {
+      content: "### Horses — 흔한 원인 (빈도순)\n1. **BPPV** — 자세 변화 시 수초~1분 내 소실. 가장 흔함(말초성 현훈의 절반 이상)\n2. **전정신경염** — 바이러스 후 급성 지속성 현훈. 청력저하 없음. 오심·보행장애 동반\n3. **편두통성 어지럼증 (Vestibular migraine)** — 편두통 과거력 + 반복성. 두통 없이도 어지럼만 올 수 있음\n4. **기립성 저혈압** — 기립 시 어지럼. 노인·탈수·강압제 복용자\n5. **메니에르병** — 반복성 현훈 + 이명 + 편측 청력저하 + 이충만감 동반\n\n### Zebra — 드물지만 절대 놓치면 안 됨\n- ⚠ **소뇌경색 / TIA** — 갑작스러운 발병. 보행장애, 두통, 복시·안면마비·구음장애 동반 시 즉시 의심. RedFlag 영역.",
+      sources: ["AAFP Am Fam Physician 2017","NCBI StatPearls"]
+    },
+    referral: {
+      content: "### 척추동맥 도플러 — 90%는 불필요 [CLINICAL — 조건부]\n어지럼증 환자 1,021명 후향 분석 (단일 신경과 클리닉).\n\n핵심 수치:\n- 약 90% — 유의한 척추동맥 죽상경화 없음\n- 5.1% — 혈역학적으로 유의한 척추동맥 병변\n- 유의 병변은 ≥60세 + 심혈관 위험인자 보유 남성에 집중\n\n검사 의뢰 기준 (실전 적용):\n| 환자 | 도플러 권고 |\n|---|---|\n| <60세 + 심혈관 위험인자 없음 | 생략 가능 — 불필요한 검사·비용 절감 |\n| ≥60세 + 심혈관 위험인자 있음 (HTN·DM·이상지질·흡연) | 고려 — 5.1%에서 의미 있는 병변 발견 |\n| Red flag 동반 (보행장애·복시·구음장애·편측 위약) | 도플러가 아닌 즉시 뇌영상·응급 의뢰 |\n\n주의:\n- 도플러는 red flag (소뇌·뇌간 경색 의심) 환자의 적합한 first-line이 아님 — 정상 결과가 후순환 뇌졸중을 배제하지 못함\n- 외래 어지럼증에서 선택적 의뢰 기준으로서의 의미. 일반 루틴 screening 금지",
+      sources: ["Kurşun O, Karataş H. Vertebral Artery Doppler Necessity in Vertigo Patients. Noro Psikiyatr Ars 2025;62(3):256-258. PMID:40950820, DOI:10.29399/npa.28793"]
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["dizziness"] = _dizziness_v2;
+KNOWLEDGE_BUNDLE["어지럼증"] = _dizziness_v2;
+KNOWLEDGE_BUNDLE["vertigo"] = _dizziness_v2;
+
+/* 저항성 고혈압 — 신규 (Deep Extract 대기 중이었던 기존 md).
+   parents: hypertension 엔트리가 bundle에 없음 → 생략 (silent skip, librarian GOTCHA 준수). */
+var _resistant_htn_v2 = {
+  kind: "disease",
+  keywords: ["저항성고혈압","resistant hypertension","스피로노락톤","spironolactone","MRA","이차성고혈압","백의고혈압"],
+  primarySources: [
+    "Haley SP et al. Resistant Hypertension. Am Fam Physician 2026;113(1):43-50. PMID:41544280 [초록 기반 — 전문 미확인]"
+  ],
+  sections: {
+    definition: {
+      content: "3제 항고혈압제(이뇨제 포함) 최적 또는 최대 용량에도 혈압 목표 미달.",
+      sources: []
+    },
+    exam: {
+      content: "### 진단 전 배제 사항 (먼저 확인)\n| 확인 항목 | 방법 |\n|----------|------|\n| 백의고혈압 | 가정혈압 모니터링, 정확한 측정 기술 확인 |\n| 약물 비순응 | 복약 이행도 확인 |\n| 이차성 고혈압 | 원인 탐색 (신장·내분비 등) |\n| 치료 최적화 미흡 | 선호 항고혈압제 사용 여부·용량 확인 |\n| 공존질환 미관리 | 동반 질환 조절 상태 확인 |\n| 생활습관·사회적 요인 | 식염, 비만, 음주, 약물 상호작용 등 |",
+      sources: []
+    },
+    protocol: {
+      content: "### 기본 3제 조합 (최적화 우선)\n```\nDHP-CCB (예: amlodipine)\n+ ARB 또는 ACEi (예: losartan, enalapril)\n+ Thiazide 계열 이뇨제 (예: chlorthalidone, HCTZ)\n```\n\n### 4제 추가 — 1차 선택\n- **Mineralocorticoid receptor antagonist (MRA)** — spironolactone 선호\n- 근거: 저항성 고혈압에서 4제 중 가장 강한 근거\n\n### 4제 이후 추가 약물\n- 환자 요인 + 공동 의사결정에 따라 개별화\n\n### 비약물 중재\n- 증거 기반 생활습관 교정\n- 사회적 요인 개선 계획 포함",
+      sources: []
+    },
+    referral: {
+      content: "### 1차의료 적용\n- 가정혈압 모니터링 + 정확한 측정 기술 확인 먼저\n- 3제 최적화 확인 후 spironolactone 추가\n- 조절 불가 시 심장내과·신장내과 의뢰\n\n### 시술적 옵션 (의뢰 고려)\n- 신장 교감신경 차단술 (Renal sympathetic denervation)\n- 경동맥 압수용체 증폭술 (Carotid baroreceptor amplification)\n- 적응: 약물 내성 또는 충분한 혈압 조절 불가 시",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["resistant-hypertension"] = _resistant_htn_v2;
+KNOWLEDGE_BUNDLE["저항성고혈압"] = _resistant_htn_v2;
+KNOWLEDGE_BUNDLE["resistant hypertension"] = _resistant_htn_v2;
+
+/* 뮤코미스트 (NAC) — 신규 drug 엔트리. drug kind 기본 guide 4개가
+   protocol/indication/dosing 섹션을 커버하지 않으므로 uiHooks.guide ["*"] 필수 (librarian GOTCHA). */
+var _mucomyst_v2 = {
+  kind: "drug",
+  keywords: ["mucomyst","뮤코미스트","acetylcysteine","N-Acetylcysteine","NAC"],
+  primarySources: [],
+  sections: {
+    protocol: {
+      content: "### 가글 처방 제조법 [TIPS — by ENT교수]\n뮤코미스트 10% 1 ampule + 물 100cc 혼합 → TID 가글\n\n주의: 황 냄새(계란 냄새)/쓴맛 미리 고지. Preservative-free 제품 사용 권장.",
+      sources: ["[TIPS — by ENT교수]"]
+    },
+    indication: {
+      content: "### Burning Mouth Syndrome (구강작열감증후군) [CLINICAL]\n- 액상 NAC 구강세정(oral rinse) 형태로 효과 확인\n- 2025 다기관 전향 임상: NAC 단독 및 clonazepam 병용군 모두 VAS + 삶의 질(OHIP-14K) 유의 개선\n- Clonazepam 병용 시 효과 증가 (반응률 NAC 단독 60.3% vs 병용 80.0%)\n\n### 구강건조증 — 방사선 유발 [CLINICAL]\n- 10% NAC rinse (swish-and-spit) 5회/일: 주간 xerostomia 유의 개선 (P=.02)\n- Mayo Clinic Pilot RCT: Phase 3 추가 연구 필요\n- 청구 농도(10%) = RCT 농도 일치\n\n### 구강건조증 — 일반 (약물 유발 등) [INSIGHTS — by ENT교수]\n- 방사선 유발 외 일반 구강건조증에 대한 직접 gargle 근거 없음\n- 임상 경험 기반 사용\n\n### LPR (인후두역류 / 후두염) [INSIGHTS — by ENT교수]\n- RCT 존재하나 경구 전신 투여 (gargle 직접 근거 아님)\n- Omeprazole 병용 시에만 RSI(주관적 증상) 유의 개선; NAC 단독 경구는 비유의\n- Gargle 경로 효과는 임상 보고 수준, 직접 RCT 없음",
+      sources: [
+        "Kim JW et al. Sci Rep 2025 (BMS)",
+        "Sio TT et al. Mayo Clin Proc 2019 (방사선 xerostomia)",
+        "Han S et al. Oral Surg Oral Med 2021 (BMS 보조근거)",
+        "Dabirmoghaddam P et al. Acta Med Iranica 2013 (LPR 경구)"
+      ]
+    }
+  },
+  uiHooks: {"guide": ["*"]}
+};
+KNOWLEDGE_BUNDLE["mucomyst"] = _mucomyst_v2;
+KNOWLEDGE_BUNDLE["뮤코미스트"] = _mucomyst_v2;
+KNOWLEDGE_BUNDLE["acetylcysteine"] = _mucomyst_v2;
+KNOWLEDGE_BUNDLE["NAC"] = _mucomyst_v2;
+
+/* 필로카르핀 (Pilocarpine / 살라겐 / 필로겐) — 신규 drug 엔트리.
+   drug kind 기본 guide 미포함 섹션(indication/dosing/insurance) → uiHooks.guide ["*"] 필수. */
+var _pilocarpine_v2 = {
+  kind: "drug",
+  keywords: ["pilocarpine","필로카르핀","살라겐","필로겐"],
+  primarySources: [
+    "Leveque FG et al. NEJM 1993 (Pilocarpine 두경부암 방사선 후)",
+    "Salagen SPC (HPRA)"
+  ],
+  sections: {
+    indication: {
+      content: "- 두경부암 방사선 치료 후 구강건조증 (xerostomia)\n- 쇼그렌증후군(Sjögren's syndrome) 구강건조증·안구건조증",
+      sources: []
+    },
+    dosing: {
+      content: "| 적응증 | 가이드라인 용량 | 비고 |\n|---|---|---|\n| 두경부암 방사선 후 | 5mg TID | NEJM 1993 검증 |\n| 쇼그렌증후군 | 5mg QID | Arch Intern Med 1991 검증 |\n| 임상 패턴 | BID 가능 | 부작용 경감 목적 [출처 미확인] |\n\n급여 인정 기간: 12주",
+      sources: []
+    },
+    insurance: {
+      content: "### 급여 기준 [REGULATORY]\n- 급여: 두경부암 방사선 후 or 쇼그렌증후군 진단 코드 확인 필요\n- 비급여: 그 외 원인 (당뇨·약물 유발 등)",
+      sources: []
+    }
+  },
+  uiHooks: {"guide": ["*"]}
+};
+KNOWLEDGE_BUNDLE["pilocarpine"] = _pilocarpine_v2;
+KNOWLEDGE_BUNDLE["필로카르핀"] = _pilocarpine_v2;
+KNOWLEDGE_BUNDLE["살라겐"] = _pilocarpine_v2;
+KNOWLEDGE_BUNDLE["필로겐"] = _pilocarpine_v2;
+
+/* CKD 모니터링 G3 — 신규. kind=topic (parents 금지). */
+var _ckd_monitoring_v2 = {
+  kind: "topic",
+  keywords: ["CKD","만성콩팥병","ckd-monitoring","eGFR","크레아티닌","시스타틴C","cystatin C","creatinine","CKD-EPI","EKFC"],
+  primarySources: [
+    "Lamb EJ et al. Performance of creatinine and cystatin C based GFR estimating equations in moderate CKD. BMJ 2026;392:e085005. PMID:41856526, DOI:10.1136/bmj-2025-085005"
+  ],
+  sections: {
+    definition: {
+      content: "- 중등도 CKD (G3): eGFR 30-59 mL/min/1.73 m²\n- 대상군: 일차의료에서 3년 이상 모니터링하는 안정 CKD stage 3 환자",
+      sources: []
+    },
+    monitoring: {
+      content: "### 크레아티닌+시스타틴C 이중 방정식 > 크레아티닌 단독 [CLINICAL]\n영국 6센터 다기관 연구, 중등도 CKD 환자 875명 3년 추적.\n\nGFR 변화 일치도 (measured GFR 대비):\n| 방정식 | 일치도 |\n|---|---|\n| CKD-EPI (크레아티닌 단독) | 73.1% |\n| CKD-EPI (크레아티닌+시스타틴C) | **78.6%** |\n| CKD-EPI 2021 (크레아티닌+시스타틴C) | 78.1% |\n| EKFC (크레아티닌+시스타틴C) | **80.2%** |\n\n→ 이중 바이오마커 방정식이 단일 크레아티닌보다 유의하게 정확 (모두 P<0.001).\n\n### 임상 적용\n- 중등도 CKD 환자 추적 시 시스타틴C 추가 검사 권장\n- 크레아티닌 단독은 근육량·식이·약물 영향 커 GFR 감소를 과소평가 → 진행 조기 포착 실패 위험\n- 시스타틴C는 근육량 독립적이어서 sarcopenic·고령·절단·vegan 환자에서 특히 유용\n- 단독이 아닌 크레아티닌+시스타틴C 통합 방정식 사용이 핵심 (시스타틴C 단독 사용 아님)",
+      sources: []
+    },
+    referral: {
+      content: "(파일 대표 근거 밖 — 기존 임상 통용 기준 유지)\n- eGFR <30 (G4 이상), 급격 감소(3개월 내 >25%), 단백뇨 동반, 저항성 고혈압 — 신장내과 의뢰",
+      sources: ["[TIPS — 임상 표준]"]
+    },
+    notes: {
+      content: "- 한국 급여: 시스타틴C는 일부 적응 하에서 급여. 일차의료 CKD G3 모니터링 항목 보강 시 검사 추가 비용·급여 적용 여부 환자 안내 필요\n- 단일 방정식에서 이중으로 넘어가면 GFR 변화 동향이 더 정확 — 진행 vs stable 판단 오류 감소가 핵심 이점",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["ckd-monitoring"] = _ckd_monitoring_v2;
+KNOWLEDGE_BUNDLE["CKD"] = _ckd_monitoring_v2;
+KNOWLEDGE_BUNDLE["만성콩팥병"] = _ckd_monitoring_v2;
+
+/* 성호르몬 요법 VTE·심혈관 위험 — 신규. kind=topic (parents 금지). */
+var _sex_hormone_vte_v2 = {
+  kind: "topic",
+  keywords: ["성호르몬-VTE","피임약","HRT","호르몬대체요법","성별확정호르몬","VTE","정맥혈전색전증","혈전","estrogen","progestin","갱년기"],
+  primarySources: [
+    "Skeith L, Bates SM. Sex Hormone Influences on Venous Thrombotic and Cardiovascular Risk. N Engl J Med 2026;394(15):1514-1528. PMID:41985134, DOI:10.1056/NEJMra2202438"
+  ],
+  sections: {
+    indication: {
+      content: "성호르몬 요법을 처방·상담하는 모든 임상 상황 — 일차의료에서 자주 만나는 맥락:\n- 복합 경구 피임약(COC) 처방\n- 갱년기 호르몬대체요법(HRT)\n- 과다월경 치료용 호르몬\n- 성별 확정 호르몬 치료(GAHT)\n- 난임 보조생식술(ART) 전후 상담\n- 유방암·전립선암 등 항호르몬(oncologic hormone) 치료 위험 평가",
+      sources: []
+    },
+    notes: {
+      content: "NEJM 2026 종합 리뷰. 혈전은 성호르몬 요법 전 범주에서 인지된 합병증이며, 제형·혈전성향증·혈전 과거력·임상 위험인자를 통합한 개별화된 평가 필요.\n\n### 위험 평가 축 4가지\n1. 호르몬 제형 (경구 vs 경피, 에스트라디올 vs 합성 에스트로겐, progestin 종류)\n2. 유전성 혈전성향증 (Factor V Leiden, prothrombin 20210A 변이 등)\n3. VTE 과거력 — 재발 위험 층화\n4. 임상 위험인자 (수술, 부동, 비만, 흡연, 연령, 악성종양 등)",
+      sources: []
+    },
+    precaution: {
+      content: "### 처방 전 점검 (실전 — 리뷰 지배 원칙) [CLINICAL — 조건부]\n> 개별 수치는 전문 미확인 — 리뷰 주요 messaging 정리.\n\n- VTE 과거력·유전성 혈전성향증 보유 → 에스트로겐 함유 요법 피하고 progestin-only·경피 경로 고려\n- 수술·장기 부동 예정 시 수술 전후 관리 (일시 중단 여부 + 기간 + heparin 예방 적응증) 반드시 상담\n- 흡연·비만·연령(≥35세)·고혈압 동반 시 COC 위험 누적 — 비호르몬 피임(구리 IUD 등) 대안 제시\n\n### 경피 vs 경구 (일반 원칙)\n- 경피 에스트라디올은 경구 제제보다 VTE 위험이 낮다고 알려짐 (first-pass hepatic effect 회피)\n- 혈전 위험 있는 환자에서 HRT 필요 시 경피 제형 우선 선택이 리뷰 기조",
+      sources: []
+    },
+    referral: {
+      content: "- VTE 과거력 있는 환자의 호르몬 요법 필요 시 → 혈액내과·산부인과 협진\n- 유전성 혈전성향증 확인된 환자 피임·HRT 결정 → 전문의 의뢰\n- 수술 예정 환자의 호르몬 요법 주산기 관리 → 해당 진료과 협력",
+      sources: []
+    },
+    comparison: {
+      content: "리뷰가 다루는 7개 치료 맥락 (같은 \"성호르몬\"이라도 위험 프로파일 다름):\n1. 호르몬 결핍 대체\n2. 피임\n3. 과다월경 치료\n4. 성별 확정 호르몬 치료\n5. 배란 억제\n6. 종양학적 호르몬 치료\n7. 보조생식\n\n→ 범주 간 일괄 해석 금지. 환자 상황별 제형·목적·기간을 구분하여 위험 재평가.\n\n*전문 미확인. 초록·저자 핵심 conclusion 기반 정리. 상세 수치·제형별 RR·수술 전후 프로토콜은 NEJM 본문 참조 필요 (Researcher 검증 대상).*",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["sex-hormone-vte-risk"] = _sex_hormone_vte_v2;
+KNOWLEDGE_BUNDLE["성호르몬-VTE"] = _sex_hormone_vte_v2;
+KNOWLEDGE_BUNDLE["HRT"] = _sex_hormone_vte_v2;
+KNOWLEDGE_BUNDLE["피임약"] = _sex_hormone_vte_v2;
+
+/* 금연 (Smoking Cessation) — 신규. kind=topic. md 전체가 [초록 기반] 태그 포함 — 본문 보존. */
+var _smoking_cessation_v2 = {
+  kind: "topic",
+  keywords: ["smoking-cessation","금연","smoking cessation","전자담배","vaping","NRT","니코틴 대체요법","varenicline"],
+  primarySources: [
+    "Shaughnessy AF. Vaping Is Better Than Nicotine Replacement Gum for Smoking Cessation. Am Fam Physician 2026;113(3). PMID:41839085 [초록 기반 — 전문 미확인]"
+  ],
+  sections: {
+    definition: {
+      content: "외래 금연 상담 시 약물·비약물 중재 선택지 정리. 2026 AFP POEM은 전자담배(vaping)가 니코틴 대체요법 껌(NRT gum)보다 금연 성공률이 높다고 요약.",
+      sources: []
+    },
+    comparison: {
+      content: "### 전자담배(vaping) vs NRT 껌 — AFP 2026 POEM [CLINICAL — 조건부]\n> [초록 기반 — 전문 미확인]\n\n- **결론:** RCT 근거상 전자담배(vaping)가 NRT 껌보다 금연 성공률 높음\n- **함의:** 기존 NRT 우선 접근을 재고 가능. 금연 시도 상담 시 전자담배를 NRT 대안으로 제시하는 근거 형성.\n\n### 주의\n- 1차 선택으로 전환 금지. POEM 한 편 요약 — 전문 확인 + 지속적 폐·심혈관 위해 평가 필요.\n- 국내 규제·급여 상황 미반영. 성인 금연 시도 환자 맞춤 상담 시 옵션으로 소개하되 장기 안전성 unknowns 고지.\n- 기존 varenicline·NRT 패치/껌/로젠지·bupropion 옵션 병존. 전자담배 단독 추천 아님.",
+      sources: []
+    },
+    protocol: {
+      content: "(초록 외 상세 용량·중재 프로토콜 미확인 — 전문 확인 후 보강 예정)\n\n외래 일반 접근 (기존 가이드라인 통용):\n- 금연 의사 확인 → 5As (Ask, Advise, Assess, Assist, Arrange)\n- 약물 옵션: varenicline, NRT(패치+단기작용 병용), bupropion SR\n- 행동 치료 병용 시 성공률 상승",
+      sources: ["[TIPS — 임상 표준]"]
+    },
+    notes: {
+      content: "전자담배는 청소년·비흡연자 유해로 별도 경고 대상. 본 권고는 흡연 중단 의사가 있는 성인 흡연자 대상.\n\n*초록 기반 — AFP 원문·원 RCT 본문 미확인. 구체 수치·RR·추적 기간은 전문 확인 필요 (Researcher 검증 큐).*",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["smoking-cessation"] = _smoking_cessation_v2;
+KNOWLEDGE_BUNDLE["금연"] = _smoking_cessation_v2;
+
+/* AFP 2024 TOP 20 POEMs overview — 신규. kind=topic.
+   TRIAGE 미등록 (환자 호소에서 직접 감지 불가). keywords에만 POEM·근거기반 진료. */
+var _afp_poems_2024_v2 = {
+  kind: "topic",
+  keywords: ["afp-top20-poems-2024","POEM","patient-oriented evidence","AFP","일차의료 근거","2024 POEM","근거기반 진료"],
+  primarySources: [
+    "Grad R, Ebell MH. Top 20 Research Studies of 2024 for Primary Care Physicians. Am Fam Physician 2025;112(1):34-41. PMID:40736492"
+  ],
+  sections: {
+    overview: {
+      content: "AFP(American Family Physician) 2024 POEM(Patient-Oriented Evidence that Matters) TOP 20 선별 요약. 외래 처방 변경을 유발할 수 있는 근거 집약. 본 문서는 초록·공개된 핵심 conclusion 기반 — 개별 항목의 원논문은 필요 시 별도 Deep Extract 대상.",
+      sources: []
+    },
+    obesity: {
+      content: "### 비만·체중 감량\n- Phentermine-topiramate와 GLP-1 RA가 가장 효과적인 체중감량 약물\n- 관련 knowledge: `obesity`, `glp1` 엔트리 참조",
+      sources: []
+    },
+    "cv-secondary-prevention": {
+      content: "### 심혈관 2차 예방\n- 세마글루타이드(Semaglutide)는 비당뇨 비만 환자의 심혈관 2차 예방에 효과적\n- 외래 적용: 기존 CV 병력 있는 비만 환자 GLP-1 선택 근거 (SELECT trial 맥락)\n- 관련: `wegovy`",
+      sources: []
+    },
+    "diabetes-drugs": {
+      content: "### 당뇨 치료\n- SGLT-2 억제제와 GLP-1 RA가 기존 약물보다 환자중심 아웃컴 우월\n- 관련: `sglt2-inhibitors`, `glp1`",
+      sources: []
+    },
+    "ibs-amitriptyline": {
+      content: "### 과민성대장증후군 (IBS)\n- 저용량 amitriptyline, IBS 2차 치료로 효과적\n- 외래 적용: 식이·섬유 조정 후 증상 지속 환자에서 10-30mg hs 범위 고려 (ATLANTIS trial 맥락)",
+      sources: []
+    },
+    "scabies-benzyl-benzoate": {
+      content: "### 옴(Scabies)\n- Benzyl benzoate 25%, 청소년·성인 옴에 높은 효과\n- 외래 적용: permethrin 대안으로 고려 (국내 제제 가용성 확인 필요)",
+      sources: []
+    },
+    "ruti-probiotics": {
+      content: "### 재발성 요로감염(rUTI)\n- Lactobacillus 함유 프로바이오틱스, 폐경 전 여성 rUTI 예방에 효과\n- 외래 적용: 예방적 항생제 대신 비약물 옵션으로 상담",
+      sources: []
+    },
+    "gallstone-conservative": {
+      content: "### 단순 담석\n- 단순 무증상·경증 담석은 보존적 관리가 합리적 선택\n- 외래 적용: 영상 우연 발견 담석 환자에 수술 의뢰 전 관찰 전략 상담",
+      sources: []
+    },
+    "other-topics": {
+      content: "### 기타 (논문 언급)\n- 항생제·항바이러스제 사용\n- RSV 예방\n- 금연 (전자담배 포함 — `smoking-cessation` 참조)\n- 알코올사용장애 (GLP-1 맥락 — `glp1` 참조)\n- Long COVID\n- 알츠하이머 치료",
+      sources: []
+    },
+    notes: {
+      content: "이 문서는 POEM 리뷰의 외래 적용 포인트 요약이며, 개별 처방 결정은 각 원논문·해당 knowledge 파일의 상세 섹션을 참고한다. 항목별 별도 Deep Extract는 필요 시 scout 대상으로 재선별.\n\n*초록·공개 conclusion 기반. 개별 POEM 항목의 full text는 AFP 링크를 통해 확인 필요 (원논문은 각 POEM마다 별도 출처).*",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["afp-top20-poems-2024"] = _afp_poems_2024_v2;
+KNOWLEDGE_BUNDLE["POEM"] = _afp_poems_2024_v2;
