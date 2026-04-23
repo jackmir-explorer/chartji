@@ -1857,19 +1857,16 @@ KNOWLEDGE_BUNDLE["인후두역류"] = _LPR_v2;
                          임상패턴 BID는 원본이 [출처 미확인] 태그 → 섹션 본문에 그대로 보존.
      - 뮤코미스트 가글 섹션: [출처: Sio TT et al. Mayo Clin Proc 2019] (Tier 1).
                              일반 xerostomia 직접 gargle은 [출처 미확인] — 본문 내 인라인 보존.
-   2026-04-22 L1 B1-patch: treatment → protocol, treatment.gargle → protocol-gargle (자유 섹션, slugify) */
+   2026-04-23 통합: protocol + protocol-gargle 두 섹션을 단일 protocol로 통합 (자유 섹션 제거).
+   가글 치료도 치료 프로토콜의 일부 — 별도 자유 섹션으로 분리할 필요 없음. sources[] 배열로 두 Tier 1 출처 모두 보존. */
 var _xerostomia_v2 = {
   kind: "disease",
   keywords: ["구강건조증","구강건조","dry mouth","xerostomia"],
   primarySources: [],
   sections: {
     protocol: {
-      content: "① Pilocarpine(살라겐/필로겐) po\n  - 두경부암 방사선 후 구강건조증: 5mg TID (가이드라인)\n  - 쇼그렌증후군: 5mg QID (가이드라인)\n  - 임상 패턴: BID 가능 (부작용 경감 목적) [출처 미확인]\n  - 급여: 두경부암 방사선 후 or 쇼그렌증후군 진단 시\n  - 비급여: 그 외 원인 (당뇨·약물 유발 등)",
-      sources: ["Leveque FG et al. NEJM 1993 (Pilocarpine)","Salagen SPC"]
-    },
-    "protocol-gargle": {
-      content: "② 뮤코미스트 10% 1 ampule + 물 100cc → TID 가글\n  - 방사선 유발 xerostomia: 10% NAC rinse 주간 유의 개선 (Mayo Clinic Pilot RCT, 2019)\n  - 일반 구강건조증: 직접 gargle 근거 없음, 임상 경험 기반 [출처 미확인]",
-      sources: ["Sio TT et al. Mayo Clin Proc 2019"]
+      content: "① Pilocarpine(살라겐/필로겐) po\n  - 두경부암 방사선 후 구강건조증: 5mg TID (가이드라인)\n  - 쇼그렌증후군: 5mg QID (가이드라인)\n  - 임상 패턴: BID 가능 (부작용 경감 목적) [출처 미확인]\n  - 급여: 두경부암 방사선 후 or 쇼그렌증후군 진단 시\n  - 비급여: 그 외 원인 (당뇨·약물 유발 등)\n\n② 뮤코미스트 10% 1 ampule + 물 100cc → TID 가글\n  - 방사선 유발 xerostomia: 10% NAC rinse 주간 유의 개선 (Mayo Clinic Pilot RCT, 2019)\n  - 일반 구강건조증: 직접 gargle 근거 없음, 임상 경험 기반 [출처 미확인]",
+      sources: ["Leveque FG et al. NEJM 1993 (Pilocarpine)","Salagen SPC","Sio TT et al. Mayo Clin Proc 2019"]
     }
   },
   uiHooks: null
