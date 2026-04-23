@@ -75,7 +75,7 @@ B2 스키마에서 knowledge/ 엔트리의 `sections` 딕셔너리가 사용하�
 ```jsonc
 {
   "hint":        ["protocol","indication","schedule"],
-  "guide":       ["classification","indication","exam","schedule","dosing","comparison","contraindication","precaution","monitoring","pregnancy","insurance","referral","differential","notes"],
+  "guide":       ["classification","indication","exam","protocol","schedule","dosing","comparison","contraindication","precaution","monitoring","pregnancy","insurance","referral","differential","notes"],
   "draftAppend": ["draft-append"]
 }
 ```
