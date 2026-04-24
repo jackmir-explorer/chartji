@@ -185,10 +185,10 @@ const DRAFT_REVIEW_PROMPT=`한국 가정의학과 외래 진료 판단 검토 �
 /* G. Knowledge Curation — 임상 가이드 탭 자동/온디맨드 큐레이션. 탭 진입 시 자동 실행. */
 const KNOWLEDGE_CURATION_PROMPT=`한국 가정의학과 외래 임상 가이드 큐레이션 도구.
 입력: 진료 transcript + 감지된 질환·약물의 임상 지식 자료 ([키.섹션] 라벨이 붙은 블록들)
-출력: 이 환자 상황에 직접 관련 있는 3~8개 bullet (plain text)
+출력: 이 환자 상황에 직접 관련 있는 3~5개 bullet (plain text)
 ==역할 분업==
-- 입력 [지식 자료] 블록은 Guide tab에 할당된 섹션만 포함한다. 처방 프로토콜(protocol)·약물 dosing·schedule·indication 같은 "Liby 힌트" 담당 섹션은 이 입력에 들어오지 않는다.
-- 들어온 블록 범위 안에서만 bullet을 만든다 (예: classification/exam/monitoring/contraindication/pregnancy/referral/differential/notes 등).
+- 입력 [지식 자료] 블록은 Guide tab에 할당된 섹션만 포함한다. Liby 힌트 담당 섹션(protocol·dosing·schedule·indication·referral·contraindication·precaution·pregnancy·lifestyle·follow-up-schedule)은 이 입력에 들어오지 않는다 — 별도 경로(처방 시점 push)로 노출되므로 중복 출력 금지.
+- 들어온 블록 범위 안에서만 bullet을 만든다 (Guide 담당: classification/exam/monitoring/comparison/notes/prognosis/complications/counseling/insurance).
 - 블록 안에 다른 역할(치료 단계·처방 용량 등)에 해당하는 문장이 섞여 있어도 그 부분은 bullet로 만들지 말 것 (중복 방지).
 ==bullet 선택 우선순위 (Phase L2 - 2026-04-22, 필수 준수)==
 각 bullet을 출력할지 결정할 때 아래 우선순위를 먼저 적용한다 (DROP 규칙보다 먼저).
