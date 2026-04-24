@@ -45,14 +45,14 @@ relations: []
 
 up-dosing (fourfold) — off-label이지만 EAACI 가이드라인 및 다수 RCT 근거로 권고.
 
-| 약물 | 4배 용량 |
-|------|---------|
-| Cetirizine | 40mg/일 (10mg × 4) |
-| Loratadine | 40mg/일 (10mg × 4) |
-| Fexofenadine | 720mg/일 (180mg × 4) |
-| Levocetirizine | 20mg/일 (5mg × 4) |
-| Bilastine | 80mg/일 (20mg × 4) |
-| Desloratadine | 20mg/일 (5mg × 4) |
+| 약물             | 4배 용량               |
+| -------------- | ------------------- |
+| Cetirizine     | 40mg/일 (10mg × 4)   |
+| Loratadine     | 40mg/일 (10mg × 4)   |
+| Fexofenadine   | 720mg/일 (180mg × 4) |
+| Levocetirizine | 20mg/일 (5mg × 4)    |
+| Bilastine      | 80mg/일 (20mg × 4)   |
+| Desloratadine  | 20mg/일 (5mg × 4)    |
 
 - **분할 복용** 가능 (예: cetirizine 10mg BID + 10mg QHS 등)
 - 같은 약물 유지하며 증량 → 약물 변경 시도보다 우선 권고

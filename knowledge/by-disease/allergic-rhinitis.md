@@ -22,11 +22,11 @@ ARIA-EAACI 2024-2025 비강내 치료 가이드라인은 mHealth 리얼월드 �
 INAH+INCS 복합 > INCS 단독 > INAH 단독
 ```
 
-| 비교 | 권고 방향 |
-|---|---|
+| 비교                      | 권고 방향                    |
+| ----------------------- | ------------------------ |
 | INAH+INCS 복합 vs INAH 단독 | **INAH+INCS 우선** (권고 강화) |
 | INAH+INCS 복합 vs INCS 단독 | **INAH+INCS 우선** (권고 강화) |
-| INCS 단독 vs INAH 단독 | **INCS 우선** (유지) |
+| INCS 단독 vs INAH 단독      | **INCS 우선** (유지)         |
 
 ### 약제 분류 (한국 외래 처방 기준)
 
