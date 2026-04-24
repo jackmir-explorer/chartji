@@ -6,8 +6,16 @@
 
 ## Triage Panel
 역할: 진료 초반 방향 anchor, CC 분류
-출력: 방문 유형 + CC + anchor 문장
+출력: 방문 유형 + CC + anchor 문장 + DDx readonly (감별진단 후보 표시, 2026-04-24 Wave 2 재활성화)
 금지: 진단 단정, 치료 계획 제안, RedFlag 언급
+예외: ingested knowledge 기반 DDx readonly 표시 허용 (AI 추론 금지, 면책 문구 상시 노출)
+
+### DDx readonly 가드레일 (2026-04-24 Wave 2, 5개)
+1. **ingested-only**: bundle의 `differentialShort` (v1 레거시) 또는 `sections.differential` (v2, 미래) 데이터만 사용. LLM 생성 경로 전면 금지.
+2. **AI 생성 금지**: prompts.js·api.js 어느 경로에서도 DDx 영역 컨텐츠 생성하지 않음.
+3. **숫자 0개**: 확률·퍼센트·수치 표기 금지 (anchor bias 유발 방지).
+4. **상한**: Horse(흔함) ≤ 3개, Zebra(드물지만 치명적) ≤ 2개. UI에서 slice.
+5. **면책 문구 상시 노출**: `"ingested knowledge (의사 본인 저장, AI 추론 없음)"` DDx 영역 하단 고정 표시.
 
 ## Red Flag Panel
 역할: transcript에서 진짜 위험 신호만 감지
