@@ -52,6 +52,7 @@ forbidden.md 위반: 없음 / 있음 (___)
 - 변경 하나 = old/new 쌍 하나. 묶지 않는다.
 - old 문자열은 해당 파일에서 정확히 1회 등장해야 한다.
 - 위험도 낮은 변경 먼저 정렬.
+- 설계서에 bundle 키를 참조할 때 (smoke 스펙·검증 기준 등) **`src/knowledge-bundle.js` grep으로 실키 존재를 확인**한다. 키 오타·공백/하이픈 착각 방지 (2026-04-24 Wave 2 사례: `neck-mass` 스펙 작성했으나 실키는 `경부종괴`·`neck mass`).
 
 ## 행동 원칙 (rules/coding-behavior.md)
 - 가정은 설계서에 명시한다. 모호하면 멈추고 미르에게 질문한다
