@@ -26,10 +26,11 @@ Vital Sign:
 ## 처방/치료
 
 백신별 세부 스케줄 → by-drug/ 참조
-- tdap.md / herpes-zoster-vaccine.md / pneumococcal-vaccine.md / hpv-vaccine.md
-- rabies-vaccine.md / japanese-encephalitis-vaccine.md / hepatitis-ab-vaccine.md / varicella-mmr-polio-vaccine.md
+- [[tdap]] / [[herpes-zoster-vaccine]] / [[pneumococcal-vaccine]] / [[hpv-vaccine]]
+- [[rabies-vaccine]] / [[japanese-encephalitis-vaccine]] / [[hepatitis-ab-vaccine]] / [[varicella-mmr-polio-vaccine]]
 
-성인 권장사항 요약 → guidelines/adult-vaccination-summary.md
+접종 간격 원칙 → [[vaccine-interval]]
+성인 권장사항 요약 → [[adult-vaccination-summary]]
 
 ## 감별진단
 

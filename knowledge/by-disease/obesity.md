@@ -35,7 +35,7 @@ keywords: obesity, 비만, phenotype, hungry brain, hungry gut, slow burn, emoti
 3. BP, pulse, 심전도(prn)
 4. 인바디 결과지 + 설문지 바탕으로 상담
 5. 필요 시 혈액검사: HbA1c, Lipid, LFT, Cr, HOMA-IR(prn), TSH(prn)
-6. 위고비/오젬픽 vs 마운자로 결정
+6. [[wegovy|위고비]]/[[ozempic|오젬픽]] vs [[mounjaro|마운자로]] 결정 — 상세 기준은 [[glp1-selection-strategy]]
 7. 사용법 교육 + 1회 주사
 8. 주의사항 설명, 다음 내원일 안내, 전화문의 가능 안내
 
@@ -137,6 +137,12 @@ keywords: obesity, 비만, phenotype, hungry brain, hungry gut, slow burn, emoti
 
 **환자에게 설명할 때:**
 "살을 너무 빨리 빼면 몸이 '굶고 있구나'로 착각해서 에너지 절약 모드로 들어갑니다. 그래서 천천히 빠지는 게 오히려 요요가 안 옵니다."
+
+## 관련 엔트리
+
+- [[wegovy]] · [[mounjaro]] · [[ozempic]] — GLP-1 계열 비만약 각 제품
+- [[glp1-selection-strategy]] — 위고비 vs 마운자로 선택·증량·유지 전략 종합
+- [[sglt2-inhibitors]] — 당뇨·심부전·CKD 동반 비만 시 병용 참고
 
 ## Draft 출력사항 [DRAFT_APPEND]
 

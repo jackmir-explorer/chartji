@@ -167,7 +167,7 @@ keywords: heart-failure, 심부전, heart failure, CHF, congestive heart failure
 - **COVID-19 백신**: 최신 권장 간격대로 추가접종
 - **Tdap 백신**: 파상풍·디프테리아·백일해 매 10년마다
 
-성인 전체 예방접종 요약 + 개별 백신 엔트리 상세는 `vaccination-summary` / `Tdap` / `대상포진` / `폐렴구균` 엔트리 참조.
+성인 전체 예방접종 요약 + 개별 백신 엔트리 상세는 [[adult-vaccination-summary]] / [[tdap]] / [[herpes-zoster-vaccine]] / [[pneumococcal-vaccine]] 엔트리 참조.
 
 > 출처 (감염↔심부전 기전·그림 1): Roubille F et al. Eur J Prev Cardiol 2025. doi:10.1093/eurjpc/zwaf366
 > 출처 (6종 권고·환자 상담용): 대한심부전학회 사회봉사사/공헌위원회. 심부전 생활백서 2025
@@ -176,6 +176,8 @@ keywords: heart-failure, 심부전, heart failure, CHF, congestive heart failure
 ---
 
 ## 의뢰 기준 (referral)
+
+> 상급병원 의뢰 절차·I NEED HELP 약어·전원 최적시기 4단계 곡선 상세 → [[heart-failure-referral]]
 
 ### 진료지침에 따른 심부전 전문가 의뢰 6시점
 

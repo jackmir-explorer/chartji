@@ -3,6 +3,12 @@
 tags: [TIPS, INSIGHTS, CLINICAL]
 keywords: 비만, 위고비, 마운자로, semaglutide, tirzepatide, GLP-1, 용량증량, 유지전략
 
+## 관련 엔트리
+
+- [[obesity]] — 비만 진료 전반 (표현형·문진·단백질 ABC·요요 기전)
+- [[wegovy]] · [[mounjaro]] · [[ozempic]] — 각 제품별 적응·용량·급여
+- [[sglt2-inhibitors]] — 당뇨·심부전 동반 시 병용 고려
+
 ---
 
 ## 위고비 vs 마운자로 선택 기준 [TIPS — by 로컬원장님]
