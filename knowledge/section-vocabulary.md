@@ -81,8 +81,8 @@ B2 스키마에서 knowledge/ 엔트리의 `sections` 딕셔너리가 사용하�
 ### `kind: "disease"`
 ```jsonc
 {
-  "hint":        ["protocol","indication","schedule","lifestyle","follow-up-schedule","referral"],
-  "guide":       ["classification","indication","exam","protocol","schedule","dosing","comparison","contraindication","precaution","monitoring","pregnancy","insurance","notes","prognosis","complications","counseling"],
+  "hint":        ["protocol","indication","schedule","lifestyle","follow-up-schedule","referral","contraindication","precaution","pregnancy"],
+  "guide":       ["classification","indication","exam","protocol","schedule","dosing","comparison","monitoring","insurance","notes","prognosis","complications","counseling"],
   "triage":      ["differential"],
   "draftAppend": ["draft-append"]
 }
@@ -91,12 +91,13 @@ B2 스키마에서 knowledge/ 엔트리의 `sections` 딕셔너리가 사용하�
 (2026-04-24 R3 확장 — lifestyle·follow-up-schedule은 치료 성격이므로 hint, prognosis·complications·counseling은 설명 성격이므로 guide. 미르 결단 2026-04-24.)
 (2026-04-24 Wave 2 — `differential` primary를 guide → triage readonly로 이전 (미르 결단 Q1 옵션 B). 신규 필드 `triage` 도입. Phase 3 runtime 시 `UIHOOKS_DEFAULTS`·`getUiHooks`에서 triage 필드 소비 구현 필요 — 본 Wave는 rule 선언 + 현재 v1 `differentialShort` 렌더만 담당.)
 (2026-04-24 — `referral` primary를 guide → hint로 이전 (미르 결단). R7 패널 분리안 불도입, 기존 hint 경로 재활용으로 의뢰 기준을 처방 맥락에서 확인.)
+(2026-04-24 — `contraindication`·`precaution`·`pregnancy` primary를 guide → hint로 이전 (미르 결단, Boss 보고서 `reports/2026-04-24-boss-report-guide-scope.md` 근거). 처방 결정 시점 push가 본질. 선례: 같은 날 `referral` 이전과 동일 구조. Override 보유 엔트리 3건(`wegovy`·`위고비`·`heart-failure`)은 Liby 재ingest로 정리(Phase 2). `rules/data-flow.md` + `src/app.js` UIHOOKS_DEFAULTS 동시 동기화.)
 
 ### `kind: "drug"`
 ```jsonc
 {
-  "hint":        ["indication","dosing","schedule"],
-  "guide":       ["contraindication","precaution","comparison","insurance"],
+  "hint":        ["indication","dosing","schedule","contraindication","precaution"],
+  "guide":       ["comparison","insurance"],
   "draftAppend": null
 }
 ```

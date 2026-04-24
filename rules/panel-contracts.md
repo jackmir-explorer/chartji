@@ -33,6 +33,12 @@
 금지: PE 필드 AI 추론, 의사 미발화 Plan, ROS 자동 완성
 
 ## Guideline Assist (온디맨드)
-역할: 의사가 버튼을 눌렀을 때만 가이드라인 제공
+역할: 의사가 버튼을 눌렀을 때만 가이드라인 제공 — **처방 이전 배경** (분류·비교·장기추적·exam·differential·notes)
 출력: cue 한 줄 → 본문은 클릭 후 열림
 금지: 자동 표시, 지시형 톤
+제외 섹션 (2026-04-24 결단, Liby 힌트로 이전): contraindication · precaution · pregnancy — 처방 결정 시점 push가 본질이므로 Liby hint 전담
+
+## Liby 힌트 (push)
+역할: 처방 결정 시점 선제 감지 — indication/dosing/schedule/protocol/referral/contraindication/precaution/pregnancy
+출력: 엔트리별 uiHooks.hint 섹션의 bundle 원문
+금지: transcript에 없는 일반론 생성, LLM 자유 서술
