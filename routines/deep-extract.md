@@ -36,6 +36,50 @@ Scout ⭐ 항목 중 미르가 `[o]` 체크한 논문을
 3. knowledge/ 형식 draft 작성
 4. 저장 위치 결정 (기존 파일 추가 or 신규 생성)
 
+### Step 2-B — 공부 보고서 생성 (2026-04-24 신설, A층 순수학습용)
+
+Step 2와 **동시에** 각 논문에 대한 공부 보고서를 `inbox/study-notes/` 에 생성한다.
+
+**저장 경로**: `inbox/study-notes/YYYY-MM-DD-[논문제목-slug].md`
+- `YYYY-MM-DD` = 실행 당일 KST
+- `[논문제목-slug]` = 논문 제목을 kebab-case 영문 슬러그 (또는 짧은 한글). 예: `glp1-adolescent-obesity`, `influenza-rx-model`
+
+**양식**:
+```markdown
+# {논문 제목}
+
+- **PMID**: {번호}
+- **저널 / 연도**: {저널명} {연도}
+- **저자**: {제1저자 et al.}
+- **출처 Scout**: inbox/scout/YYYY-MM-DD.md
+
+## 초록 요약
+{초록 재구성 — 원문 재현 금지, 2~3문단}
+
+## 주요 결과
+{핵심 수치·지표·effect size}
+
+## 배경·방법
+{왜 이 연구가 필요했는지, 어떻게 설계됐는지 — 교과서적 설명}
+
+## 일차의료 적용 포인트
+- {외래 실전 연결 포인트 1}
+- {외래 실전 연결 포인트 2}
+
+## 한계·주의
+{표본·edge case·외삽 한계}
+
+## 관련 knowledge/ 엔트리
+- {Deep Extract가 반영한 knowledge/ md 파일 경로}
+```
+
+**격리 원칙** (`rules/file-ownership.md` inbox/study-notes §):
+- 본 보고서는 **Liby ingest 대상 아님**
+- KNOWLEDGE_BUNDLE·Guide·Hint·Draft 어느 경로에도 흘러가지 않음
+- 미르가 **나중에 찬찬히 읽으며 공부하기 위한 자원** 전용
+
+Step 2-B는 Step 2 knowledge/ md 반영 **완료 후** 별도 Write로 생성. 실패해도 Step 2 산출물은 유지 (부분 실패 허용).
+
 ### Step 3 — main 직접 머지
 
 > **PR 생성 금지** — 이 routine은 `rules/forbidden.md` "자동 routine 산출물" 예외 적용. `[o]` 체크 자체가 미르의 ingest 승인 신호이므로 PR 게이트 불필요.
@@ -69,9 +113,9 @@ push: `git push -u origin main` (PR 없이 직접).
 
 ## 처리한 논문
 
-| 논문 | 저장 위치 | 태그 | PMID | 출처 Scout |
-|---|---|---|---|---|
-| {제목 축약} | knowledge/{경로} | [CLINICAL] | {번호} | YYYY-MM-DD |
+| 논문 | knowledge/ 저장 위치 | 공부 보고서 | 태그 | PMID | 출처 Scout |
+|---|---|---|---|---|---|
+| {제목 축약} | knowledge/{경로} | inbox/study-notes/{파일명} | [CLINICAL] | {번호} | YYYY-MM-DD |
 
 ## 핵심 요약
 

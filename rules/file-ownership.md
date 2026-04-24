@@ -78,6 +78,14 @@
       일반 by-disease/by-drug 엔트리를 myth-log로 재배치 금지 (보존 방향 반대)
 참조: rules/forbidden.md Liby §, agents/librarian.md inject 트리거 분기
 
+## inbox/study-notes/
+책임: Deep Extract routine이 추출한 **공부용 논문 보고서** 저장소. A층 순수학습용.
+포함: `YYYY-MM-DD-[논문제목-slug].md` 파일 (Deep Extract 자동 생성)
+금지: **Liby ingest 대상 아님** — Guide tab·Liby 힌트·Draft append·KNOWLEDGE_BUNDLE 전부 제외
+      knowledge/ 트리로 승격 금지 (bundle 편입은 별도 paper-extract 경로로만. study-notes는 원본 상세 보존 전용)
+      아카이브 자동화 금지 (미르 수동 정리)
+참조: routines/deep-extract.md Step 2-B
+
 ## src/styles.css
 책임: 모든 스타일
 금지: 인라인 스타일로 기능 제어 (display:none으로 로직 숨기기 등)

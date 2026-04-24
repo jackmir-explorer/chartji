@@ -52,13 +52,18 @@ ingest 직전 체크: `sections` key 전부가 vocabulary 18개 또는 slugify(k
 
 ## Inbox 트리거 (핸드폰 → GitHub → 데스크탑)
 미르가 "inbox 확인해줘" 호출 시:
-1. `inbox/` 스캔 (processed/ 제외) — 지원 형식:
+1. `inbox/` 스캔 (processed/·scout/·study-notes/ 제외) — 지원 형식:
    - `.md` → knowledge-ingest SKILL.md로 처리
    - `.jpg` `.jpeg` `.png` `.webp` → image-extract SKILL.md로 처리
    - `.pdf` → image-extract SKILL.md로 처리 (PDF 모드)
 2. 각 파일 형식에 맞는 스킬로 draft 생성
 3. 미르 승인 후 정상 ingest
 4. 처리 완료 파일 → `inbox/processed/` 이동
+
+> **스캔 제외 폴더** (2026-04-24):
+> - `inbox/processed/` — 처리 완료 파일 보관
+> - `inbox/scout/` — Scout routine 산출물 (논문 리스트, ingest 대상 아님)
+> - `inbox/study-notes/` — Deep Extract 공부 보고서 (A층 순수학습용, Liby ingest 금지. `rules/file-ownership.md` inbox/study-notes § 참조)
 
 > 여러 파일이 있을 경우 파일별로 순서대로 처리하고 각각 draft를 제시한다.
 
