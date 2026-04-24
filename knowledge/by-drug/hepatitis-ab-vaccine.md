@@ -65,3 +65,39 @@ keywords: A형간염, hepatitis A, B형간염, hepatitis B, Heplisav-B
 - KDCA 2024는 **universal 성인 전략 미채택** — 위험군·고위험군 기반 유지
 - 의료인·신생아·고위험군 중심 NIP 적용
 - 임상 판단으로 성인 접종 확대 가능 (자비)
+
+---
+
+## B형간염 전 성인 Triple Panel 스크리닝 [REGULATORY]
+
+> 출처: Moore II R et al. Hepatitis B: Part I. Updates on Screening and Prevention. Am Fam Physician. 2026 Mar;113(3):229-234. PMID:41839073 [초록 기반 — 전문 미확인]
+
+**배경**: 미국 내 만성 B형간염 환자의 **약 2/3가 자신의 감염을 모름**. 조기 발견 시 항바이러스제로 이환율·사망률 감소 가능.
+
+### CDC 권고 — 성인 전 연령 1회 triple panel 스크리닝
+
+| 항목 | 검사 |
+|---|---|
+| HBsAg | 현재 감염 여부 |
+| Anti-HBs (HBsAb) | 면역 형성 여부 |
+| Anti-HBc | 과거 감염 여부 |
+
+- **대상**: 모든 성인 — 적어도 1회 triple panel 시행 (위험군 평가 없이)
+- **임신 중**: 매 임신마다 스크리닝 (수직감염 차단)
+- **비면역·고위험 성인**: 주기적 재검사 + 접종 시작
+
+### 임상 적용 (한국)
+
+- 한국 KDCA 2024는 아직 전 성인 triple panel 채택 미완 — 임상 판단으로 검진 내원 시 자발적 시행 가능
+- **Anti-HBc 추가**가 핵심 변화 — 과거 감염(natural immunity) vs 미감염 구분 가능
+- 비면역 확인(anti-HBs 음성, anti-HBc 음성) → 즉시 접종 시작
+
+### 해석 패턴
+
+| HBsAg | Anti-HBs | Anti-HBc | 해석 |
+|---|---|---|---|
+| - | + | - | 백신 면역 |
+| - | + | + | 과거 감염 후 자연 회복 |
+| - | - | - | 비면역 (접종 필요) |
+| + | - | + | 현재 감염 (HBV) |
+| - | - | + | 과거 감염 / window기 / 위양성 — 추가 평가 |

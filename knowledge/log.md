@@ -5,6 +5,10 @@
 
 ---
 
+2026-04-24 | by-disease/cardiomyopathy.md | 신규 — 비허혈성 심근증(HCM·DCM·RCM·ARVC) 분류/문진/ECG·echo 평가/GDMT/ICD 위험도/의뢰 기준 [CLINICAL] PMID:41839108 (AFP 2026 Feb)
+2026-04-24 | by-drug/hepatitis-ab-vaccine.md | 보완 — B형간염 전 성인 triple panel 스크리닝(HBsAg+anti-HBs+anti-HBc) CDC 권고 / 해석 패턴 [REGULATORY] PMID:41839073 (AFP 2026 Mar)
+2026-04-24 | by-disease/chronic-cough.md | 신규 — 난치성 만성기침(RCC) duloxetine RCT / 기침횟수 60% 감소 / LCQ 개선 / 부작용(오심·어지럼·졸음) [CLINICAL — 조건부] PMID:41530764 (BMC Med 2026)
+2026-04-24 | by-disease/allergic-rhinitis.md | 신규 — ARIA 2024-2025 비강내 치료 가이드라인 / INAH+INCS>INCS>INAH 권고 서열 / mHealth 근거 반영 [REGULATORY] PMID:41324154 (Allergy 2025)
 2026-04-23 | by-disease/sex-hormone-vte-risk.md (alias main: vte-hormone-therapy.md) | 신규 — 성호르몬 요법(COC·HRT·GAHT·ART·종양 호르몬)별 VTE·심혈관 위험 평가 4축 (제형·혈전성향증·VTE과거력·임상인자) / 경피 우선 원칙 / 수술 전후 관리 [CLINICAL] PMID:41985134 (NEJM 2026 종합리뷰)
 2026-04-23 | by-drug/glp1-selection-strategy.md | 보완 — Tirzepatide 중단 후 12개월 +1.9% 비유의 / 대체 비만약 전환 81.9% / 약값이 중단 이유 80.7% [CLINICAL — 조건부] PMID:41962807 (JAPhA)
 2026-04-23 | by-disease/ckd-monitoring.md (alias main: CKD.md) | 신규 — 중등도 CKD(G3) 모니터링 크레아티닌+시스타틴C 이중 방정식 우월(80.2% vs 73.1%) / 3년 추적 BMJ 2026 [CLINICAL] PMID:41856526
