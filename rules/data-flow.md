@@ -28,37 +28,39 @@ RedFlag 열은 **전 row에서 ✗**로 고정 (§2 참조).
 
 ### 매트릭스
 
-| Section key | Liby 힌트 (hint) | Guide Tab (guide) | Working Draft append (draftAppend) | RedFlag |
-|---|---|---|---|---|
-| `definition` | | ✓ | | ✗ 절대 금지 |
-| `classification` | | ✓ | | ✗ 절대 금지 |
-| `exam` | | ✓ (disease) | | ✗ 절대 금지 |
-| `protocol` | ✓ (disease primary) | | | ✗ 절대 금지 |
-| `dosing` | ✓ (drug primary) | | | ✗ 절대 금지 |
-| `schedule` | ✓ (drug primary) | | | ✗ 절대 금지 |
-| `indication` | ✓ (drug primary) | | | ✗ 절대 금지 |
-| `monitoring` | | ✓ (disease) | | ✗ 절대 금지 |
-| `contraindication` | | ✓ (disease/drug) | | ✗ 절대 금지 |
-| `precaution` | | ✓ (drug) | | ✗ 절대 금지 |
-| `pregnancy` | | ✓ (disease) | | ✗ 절대 금지 |
-| `differential` | | ✓ (disease) | | ✗ 절대 금지 |
-| `referral` | | ✓ (disease) | | ✗ 절대 금지 |
-| `insurance` | | ✓ (drug) | | ✗ 절대 금지 |
-| `comparison` | | ✓ (drug) | | ✗ 절대 금지 |
-| `notes` | | ✓ (설명용) | | ✗ 절대 금지 |
-| `prognosis` | | ✓ (disease) | | ✗ 절대 금지 |
-| `lifestyle` | ✓ (disease) | | | ✗ 절대 금지 |
-| `complications` | | ✓ (disease) | | ✗ 절대 금지 |
-| `counseling` | | ✓ (disease) | | ✗ 절대 금지 |
-| `follow-up-schedule` | ✓ (disease) | | | ✗ 절대 금지 |
-| `draft-append` | | | ✓ (disease primary) | ✗ 절대 금지 |
-| `draft-template` | (의사 수동 선택 UI — Phase 4 wiring) | | | ✗ 절대 금지 |
-| 자유 섹션 | kind별 기본값 보충 | kind별 기본값 보충 | — | ✗ 절대 금지 |
+| Section key | Liby 힌트 (hint) | Guide Tab (guide) | Triage readonly | Working Draft append (draftAppend) | RedFlag |
+|---|---|---|---|---|---|
+| `definition` | | ✓ | | | ✗ 절대 금지 |
+| `classification` | | ✓ | | | ✗ 절대 금지 |
+| `exam` | | ✓ (disease) | | | ✗ 절대 금지 |
+| `protocol` | ✓ (disease primary) | | | | ✗ 절대 금지 |
+| `dosing` | ✓ (drug primary) | | | | ✗ 절대 금지 |
+| `schedule` | ✓ (drug primary) | | | | ✗ 절대 금지 |
+| `indication` | ✓ (drug primary) | | | | ✗ 절대 금지 |
+| `monitoring` | | ✓ (disease) | | | ✗ 절대 금지 |
+| `contraindication` | | ✓ (disease/drug) | | | ✗ 절대 금지 |
+| `precaution` | | ✓ (drug) | | | ✗ 절대 금지 |
+| `pregnancy` | | ✓ (disease) | | | ✗ 절대 금지 |
+| `differential` | | | ✓ (disease) | | ✗ 절대 금지 |
+| `referral` | | ✓ (disease) | | | ✗ 절대 금지 |
+| `insurance` | | ✓ (drug) | | | ✗ 절대 금지 |
+| `comparison` | | ✓ (drug) | | | ✗ 절대 금지 |
+| `notes` | | ✓ (설명용) | | | ✗ 절대 금지 |
+| `prognosis` | | ✓ (disease) | | | ✗ 절대 금지 |
+| `lifestyle` | ✓ (disease) | | | | ✗ 절대 금지 |
+| `complications` | | ✓ (disease) | | | ✗ 절대 금지 |
+| `counseling` | | ✓ (disease) | | | ✗ 절대 금지 |
+| `follow-up-schedule` | ✓ (disease) | | | | ✗ 절대 금지 |
+| `draft-append` | | | | ✓ (disease primary) | ✗ 절대 금지 |
+| `draft-template` | (의사 수동 선택 UI — Phase 4 wiring) | | | | ✗ 절대 금지 |
+| 자유 섹션 | kind별 기본값 보충 | kind별 기본값 보충 | — | — | ✗ 절대 금지 |
 
 ### uiHooks 기본값 앵커
 `knowledge/section-vocabulary.md`의 uiHooks 기본값(disease/drug/topic)이 이 매트릭스의 primary 매핑을 자동 적용한다. 엔트리는 uiHooks를 부분 오버라이드할 수 있으나 **RedFlag 열에는 ✓ 지정 불가**.
 
 > **2026-04-24 R3 Wave 1** — 5행 신설 (prognosis/lifestyle/complications/counseling/follow-up-schedule). 미르 결단 2026-04-24: lifestyle·follow-up-schedule은 hint primary (치료 성격), prognosis·complications·counseling은 guide primary (설명 성격). `knowledge/section-vocabulary.md` uiHooks 기본값 동시 개정.
+
+> **2026-04-24 Wave 2 — Triage readonly 열 신설**: `differential` primary를 Guide → Triage readonly로 이전 (미르 결단 Q1 옵션 B). 현재 v2 엔트리에서 `sections.differential` 실사용 0건 → 노출 영향 없음. Runtime `UIHOOKS_DEFAULTS`(src/app.js)도 동기화. 향후 v2 엔트리 신규 작성 시 `differential` 섹션은 Triage readonly로만 라우팅. Phase 3 runtime 시 `getUiHooks`에 triage 필드 소비 구현 필요 — 본 Wave는 rule 선언 + 현재 v1 `differentialShort` 렌더만 담당.
 
 ### primary 겹침
 한 섹션이 2개 이상 primary ✓를 동시에 갖는 변경은 Architect가 즉시 STOP 판정한다 (`agents/architect.md` 규칙).

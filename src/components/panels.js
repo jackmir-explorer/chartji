@@ -63,8 +63,40 @@ function TriagePanel(props){
             animation:"spin .7s linear infinite",flexShrink:0}}/>
         )}
       </div>
-      {/* differentialShort 렌더링 비활성화 — Boss 권고 (risk>benefit) */}
-      {/* 데이터/파이프라인은 유지, 재활성화 필요 시 위 블록 복원 */}
+      {/* DDx readonly — 2026-04-24 Wave 2 재활성화 (rules/panel-contracts.md Triage § 참조)
+          가드레일: ingested-only / AI 생성 금지 / 숫자 0개 / Horse≤3 Zebra≤2 / 면책 문구 상시 노출 */}
+      {differentialShort&&differentialShort.length>0&&(
+        <div style={{
+          paddingTop:5,
+          marginTop:3,
+          borderTop:"1px solid rgba(245,166,35,.1)",
+          display:"flex",flexDirection:"column",gap:3,
+        }}>
+          {(function(){
+            var horses=differentialShort.filter(function(x){return x.t==="h";}).slice(0,3);
+            var zebras=differentialShort.filter(function(x){return x.t==="z";}).slice(0,2);
+            return (
+              <React.Fragment>
+                {horses.length>0&&(
+                  <div style={{display:"flex",alignItems:"baseline",gap:6,fontSize:10.5,color:"#7a6d4a",lineHeight:1.5}}>
+                    <span style={{fontSize:8,fontWeight:700,color:"rgba(245,166,35,.55)",fontFamily:"'JetBrains Mono',monospace",textTransform:"uppercase",letterSpacing:".06em",flexShrink:0}}>HORSE</span>
+                    <span>{horses.map(function(x){return x.d;}).join(" · ")}</span>
+                  </div>
+                )}
+                {zebras.length>0&&(
+                  <div style={{display:"flex",alignItems:"baseline",gap:6,fontSize:10.5,color:"#7a6d4a",lineHeight:1.5}}>
+                    <span style={{fontSize:8,fontWeight:700,color:"rgba(231,76,60,.55)",fontFamily:"'JetBrains Mono',monospace",textTransform:"uppercase",letterSpacing:".06em",flexShrink:0}}>ZEBRA</span>
+                    <span>{zebras.map(function(x){return x.d;}).join(" · ")}</span>
+                  </div>
+                )}
+                <div style={{fontSize:8.5,color:"rgba(122,109,74,.55)",fontStyle:"italic",marginTop:2,lineHeight:1.4}}>
+                  ingested knowledge (의사 본인 저장, AI 추론 없음)
+                </div>
+              </React.Fragment>
+            );
+          })()}
+        </div>
+      )}
     </div>
   );
 }
