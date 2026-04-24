@@ -2,6 +2,12 @@
 
 keywords: 구강건조증, 구강건조, dry mouth, xerostomia
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 ## 문진/검사
 
 ## 처방/치료

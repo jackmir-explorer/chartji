@@ -2,6 +2,12 @@
 
 keywords: 백신, 예방접종, 생백신, 사백신, 접종 간격, vaccination, live vaccine, inactivated vaccine
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 [출처: CDC Timing and Spacing of Immunobiologics (Table 3-4), WHO Immunization Routine Tables]
 
 ## 접종 간격 원칙

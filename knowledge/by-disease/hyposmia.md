@@ -2,6 +2,12 @@
 
 keywords: 후각저하, 후각감퇴, 후각기능저하, 냄새 못맡음, 후각소실, hyposmia, anosmia
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 ## 문진/검사
 - 발병 시점 및 선행 감염(코로나19/감기) 여부
 - 비염·부비동염 증상 동반 여부 (코막힘, 콧물, 안면통)

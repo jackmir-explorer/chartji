@@ -2,6 +2,12 @@
 
 keywords: 경부종괴, 목에 혹, 목 멍울, neck mass, 경부림프절, cervical lymphadenopathy, 림프절염, lymphadenitis
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 ## 문진/검사
 
 ### 초진 접근 [CLINICAL — 조건부, by ENT교수]

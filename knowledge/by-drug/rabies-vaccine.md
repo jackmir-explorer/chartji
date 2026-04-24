@@ -2,6 +2,12 @@
 
 keywords: 광견병, rabies
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 [출처: MMWR 71(18), 2022 — Modified PrEP 2-dose Schedule]
 [출처: CDC Rabies PrEP Clinical Care 2024]
 

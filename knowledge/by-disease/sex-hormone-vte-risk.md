@@ -3,6 +3,12 @@
 tags: [CLINICAL]
 keywords: 피임약, HRT, 호르몬대체요법, 성별확정호르몬, VTE, 정맥혈전색전증, 혈전, estrogen, progestin, 갱년기
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 [출처: Skeith L, Bates SM. Sex Hormone Influences on Venous Thrombotic and Cardiovascular Risk. N Engl J Med 2026;394(15):1514-1528. PMID:41985134, DOI:10.1056/NEJMra2202438]
 
 ---
@@ -34,7 +40,7 @@ NEJM 2026 종합 리뷰. **혈전은 성호르몬 요법 전 범주에서 인지
 
 - **VTE 과거력·유전성 혈전성향증 보유 → 에스트로겐 함유 요법 피하고 progestin-only·경피 경로 고려**
 - 수술·장기 부동 예정 시 **수술 전후 관리** (일시 중단 여부 + 기간 + heparin 예방 적응증) 반드시 상담
-- 흡연·비만·연령(≥35세)·고혈압 동반 시 COC 위험 누적 — 비호르몬 피임(구리 IUD 등) 대안 제시
+- 흡연·[[obesity|비만]]·연령(≥35세)·고혈압 동반 시 COC 위험 누적 — 비호르몬 피임(구리 IUD 등) 대안 제시
 
 ### 경피 vs 경구 (일반 원칙)
 - 경피 에스트라디올은 경구 제제보다 VTE 위험이 낮다고 알려짐 (first-pass hepatic effect 회피)

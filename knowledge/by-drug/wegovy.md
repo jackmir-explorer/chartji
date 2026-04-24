@@ -3,6 +3,12 @@
 tags: [REGULATORY, CLINICAL, TIPS]
 keywords: obesity, 비만, 위고비, semaglutide, 지방간, MASH, 소아청소년
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 ## 처방 적응증
 
 ### 성인
@@ -10,7 +16,7 @@ keywords: obesity, 비만, 위고비, semaglutide, 지방간, MASH, 소아청소
 
 **BMI 27~30 미만 (과체중)** — 아래 동반 질환 중 하나 이상 있을 때:
 - 고혈압 (HTN)
-- 제2형 당뇨병 (T2DM)
+- 제2형 당뇨병 ([[ozempic|T2DM]])
 - 이상지질혈증 (Dyslipidemia)
 - 폐쇄성 수면 무호흡증 (OSA)
 - 심혈관 질환 (CVD)

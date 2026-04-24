@@ -1,7 +1,7 @@
 # knowledge/section-vocabulary.md — B2 스키마 섹션 표준
 
 tags: [META]
-updated: 2026-04-19
+updated: 2026-04-24
 schema: B2
 
 ---
@@ -18,7 +18,7 @@ B2 스키마에서 knowledge/ 엔트리의 `sections` 딕셔너리가 사용하�
 
 ---
 
-## 표준 섹션 dictionary (18개)
+## 표준 섹션 dictionary (23개)
 
 | key | 정의 | 정규화 대상 동의어 (예시) |
 |---|---|---|
@@ -40,6 +40,13 @@ B2 스키마에서 knowledge/ 엔트리의 `sections` 딕셔너리가 사용하�
 | `notes` | 환자설명용·기타 특이사항 | 왜 이런 증상이 생기나, 환자설명용, 기타 특이사항, 비고 |
 | `draft-append` | Working Draft 하단 literal append 텍스트 | Draft 출력사항, [DRAFT_APPEND] |
 | `draft-template` | 질환·약물 특이 Draft 스켈레톤 | 질환 특이 Template, [TIPS] Template |
+| `prognosis` | 예후·경과 | 예후, 경과, prognosis |
+| `lifestyle` | 생활습관 치료 (운동·식이·수면·절주·금연) | 생활습관, 생활습관 치료, 운동·식이, lifestyle |
+| `complications` | 합병증 | 합병증, complications |
+| `counseling` | 환자 상담 내용 | 환자 상담, 상담 내용, counseling |
+| `follow-up-schedule` | 추적 스케줄 | 추적, 추적 스케줄, follow-up, follow-up schedule |
+
+> 2026-04-24 R3 Wave 1 확장 — 하단 5개(prognosis/lifestyle/complications/counseling/follow-up-schedule) 신설. 미르 결단 2026-04-24: lifestyle·follow-up-schedule은 hint primary (치료 성격), 나머지 3개는 guide primary (설명 성격). `rules/data-flow.md` 매트릭스 동시 개정.
 
 ### 제외·재정의 내역
 
@@ -74,12 +81,13 @@ B2 스키마에서 knowledge/ 엔트리의 `sections` 딕셔너리가 사용하�
 ### `kind: "disease"`
 ```jsonc
 {
-  "hint":        ["protocol","indication","schedule"],
-  "guide":       ["classification","indication","exam","protocol","schedule","dosing","comparison","contraindication","precaution","monitoring","pregnancy","insurance","referral","differential","notes"],
+  "hint":        ["protocol","indication","schedule","lifestyle","follow-up-schedule"],
+  "guide":       ["classification","indication","exam","protocol","schedule","dosing","comparison","contraindication","precaution","monitoring","pregnancy","insurance","referral","differential","notes","prognosis","complications","counseling"],
   "draftAppend": ["draft-append"]
 }
 ```
 (2026-04-21 Phase 5a 확대 — 백신 엔트리 indication/schedule/insurance 노출 위해. 기존 obesity·dysphonia·urticaria 동작은 교집합 원리로 안정.)
+(2026-04-24 R3 확장 — lifestyle·follow-up-schedule은 치료 성격이므로 hint, prognosis·complications·counseling은 설명 성격이므로 guide. 미르 결단 2026-04-24.)
 
 ### `kind: "drug"`
 ```jsonc
@@ -129,6 +137,48 @@ child 엔트리가 상위(parent) 맥락 주입이 필요할 때 선언하는 �
   "kind": "disease",
   "parents": ["dizziness"],
   "exam": "...",
+  ...
+}
+```
+
+> **2026-04-24 R2 예고**: parents 필드는 `relations[]` kind:"parent"로 **6개월 후(2026-10-24) 자연 퇴장** 검토. 그 전까지는 parents 우선(기존 expandWithParents 경로 유지), relations[] kind:"parent"는 관찰용.
+
+---
+
+## 엔트리 루트 메타필드 — R1 (2026-04-24 Wave 1 도입, 빈 값 예약)
+
+`version`, `supersedes`, `freshness.primarySourceYear`, `applicability` 4개 필드를 엔트리 루트에 예약한다.
+
+- 현재는 **모두 빈 값 `(미정)`**. Phase 5 이후 의미 정의 시 값 채움.
+- 타입(예정):
+  - `version`: string — 엔트리 버전 태그 (예: `"2026.04"`)
+  - `supersedes`: string — 대체된 이전 엔트리 키 (없으면 `(미정)`)
+  - `freshness.primarySourceYear`: integer — 대표 출처 연도 (예: `2024`)
+  - `applicability`: string — 적용 범위 메모 (예: `"외래 성인 당뇨"`)
+- md 파일 상단 frontmatter-like 블록에 `tags:`, `keywords:` 아래에 기재.
+- **bundle consumer는 아직 소비하지 않음** — rule level 예약만.
+
+---
+
+## 엔트리 루트 메타필드 — R2 (2026-04-24 Wave 1 도입, relations[])
+
+`relations[]` 배열을 엔트리 루트에 도입한다.
+
+- 타입: `Array<{kind: string, target: string, note?: string}>`
+- kind 5종 (초기): `parent` · `coprescribe` · `contraindicate` · `supersede` · `synergy`
+- target: 엔트리 key (예: `"obesity"`)
+- **parents 필드와 병존**: 6개월 후(2026-10-24) 자연 퇴장 검토. 그 전까지는 **parents 우선** (기존 `expandWithParents` 경로 유지), relations[] kind:"parent"는 관찰용.
+- Liby ingest 시 kind 자가검증 — 5종 외 값 저장 금지 (→ `skills/knowledge-ingest/SKILL.md`).
+- **bundle consumer는 아직 소비하지 않음** — rule level 예약 + 공부용 그래프(Obsidian wikilinks) 보조.
+
+예:
+```jsonc
+"mounjaro": {
+  "kind": "drug",
+  "relations": [
+    { "kind": "coprescribe", "target": "obesity" },
+    { "kind": "contraindicate", "target": "pregnancy" }
+  ],
   ...
 }
 ```

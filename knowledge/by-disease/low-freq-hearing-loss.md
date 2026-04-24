@@ -2,6 +2,12 @@
 
 keywords: 저음성난청, 저주파난청, 귀먹먹함, 이충만감, low frequency hearing loss, aural fullness
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 ## 문진/검사
 - 귀먹먹함 지속 시 청력검사 → 달팽이관 내압 직접 확인
 - 이명 동반 여부, 반복성 여부 확인

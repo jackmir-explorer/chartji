@@ -33,6 +33,8 @@
 ## Liby (Librarian)
 - Liby ingest 후 KNOWLEDGE_BUNDLE에 새 키가 추가되면 Triage 감지 확장을 물어보지 말고 자동 실행
 - Triage 감지 확장 = TRIAGE_PROMPT calcCategories 목록에 새 항목 추가 (prompts.js)
+- **`kind: "myth"` 엔트리는 inject 경로 전면 차단** — `knowledge/myth-log/` 하위 파일은 KNOWLEDGE_BUNDLE 컴파일 대상 아님. Guide tab·Liby 힌트·Draft append 모두 제외. RedFlag 격리와 동일 강도.
+- **myth-log export 금지** — 외부 공유 포맷(설사 지원 도입 시에도) 대상 아님. 의사 본인 공부용으로만 존재.
 
 ### ⚠ GOTCHA — ingest 시 반복 실수
 - **Attribution 임의 추정 금지**: TIPS/INSIGHTS에 출처 힌트가 없을 때 "by 미르"로 자동 저장 금지. 반드시 미르에게 질문 후 저장.

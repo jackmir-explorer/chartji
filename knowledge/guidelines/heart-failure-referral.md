@@ -2,6 +2,12 @@
 
 keywords: heart-failure-referral, 심부전 의뢰, 심부전 전원, 상급병원 의뢰, GDMT intolerance, I NEED HELP, Stage D HF
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 > primarySources (Tier 1):
 > - 대한심부전학회. 심부전 진료지침 2022
 > - Dunlay SM et al. JACC Heart Fail 2021;9(10):722-732
@@ -15,7 +21,7 @@ keywords: heart-failure-referral, 심부전 의뢰, 심부전 전원, 상급병�
 심부전 환자는 다음 6가지 상황 중 하나에 해당할 때 심부전 전문가(상급병원 심장내과) 의뢰를 고려한다. 일차진료 체크리스트.
 
 ### 01. LVEF와 상관없이 새롭게 발생한 심부전
-- 새로 진단된 심부전은 원인 감별·초기 약물치료 설정·심초음파 등 정밀 검사를 위해 의뢰.
+- 새로 진단된 [[heart-failure|심부전]]은 원인 감별·초기 약물치료 설정·심초음파 등 정밀 검사를 위해 의뢰.
 - HFrEF·HFmrEF·HFpEF 어느 쪽이든 최초 진단 시점은 상급병원 평가 대상.
 
 ### 02. 만성 심부전에서 위험요인이 새롭게 발생하거나 지속적으로 보일 때

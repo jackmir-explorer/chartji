@@ -2,6 +2,12 @@
 
 keywords: 폐렴구균, pneumococcal, 폐렴백신, PCV13, PCV15, PCV20, PCV21, PPSV23
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 [출처: ACIP 2024.10 개정 — MMWR 74(1), 2025. PMID:39773952]
 [출처: KDCA 성인 예방접종 가이드 2024]
 
@@ -25,7 +31,7 @@ keywords: 폐렴구균, pneumococcal, 폐렴백신, PCV13, PCV15, PCV20, PCV21, 
 
 ## 만성질환자 해당 범위
 
-알코올중독 · 만성 심혈관질환(심부전·심근병증 포함) · 만성 간질환 · 만성 폐질환(COPD·폐기종·천식 포함) · 흡연 · 당뇨병
+알코올중독 · 만성 심혈관질환([[heart-failure|심부전]]·심근병증 포함) · 만성 간질환 · 만성 폐질환(COPD·폐기종·천식 포함) · 흡연 · 당뇨병
 
 ## 면역저하자 해당 범위
 

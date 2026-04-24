@@ -2,6 +2,12 @@
 
 keywords: 예방접종, 백신, vaccination, 독감, 폐렴구균, 대상포진, HPV, Tdap
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 ## 질환 특이 Template
 CC: 예방접종
 fever (-) uri sx (-) drug adverse effect (-) allergy (-)

@@ -2,6 +2,12 @@
 
 keywords: 우울증, depression, PHQ-9, PHQ-2, 자살위험, suicide risk, USPSTF, 스크리닝
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 primarySources: Mabry-Hernandez IR et al. Am Fam Physician 2026;113(3):273-274. PMID:41839080
 
 ## 적응증 (스크리닝 대상) [REGULATORY]

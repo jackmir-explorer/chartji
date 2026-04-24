@@ -2,12 +2,18 @@
 
 keywords: SGLT2i, SGLT-2억제제, 포시가, 자디앙, 다파글리플로진, 엠파글리플로진, dapagliflozin, empagliflozin
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 primarySources: Swanson J et al. Am Fam Physician 2026;113(3):281-282. PMID:41839088
 
 ## 적응증
 
 - 2형 당뇨병 혈당 조절
-- 심부전 (HFrEF·HFpEF) — 입원율·사망률 감소
+- [[heart-failure|심부전]] (HFrEF·HFpEF) — 입원율·사망률 감소
 - 만성 콩팥병 진행 억제
 
 ## 비뇨생식기 감염 위험 [CLINICAL]
@@ -36,4 +42,4 @@ SGLT-2 억제제 처방 시 요로감염(UTI) 및 생식기 진균감염(여성:
 ## 급여 기준
 
 - 2형 당뇨: 메트포르민 병용 또는 인슐린과 병용 기준으로 급여
-- 심부전/CKD 적응증: 별도 급여 기준 확인 필요 (적응증별 차이)
+- [[heart-failure|심부전]]/[[CKD]] 적응증: 별도 급여 기준 확인 필요 (적응증별 차이)

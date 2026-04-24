@@ -3,6 +3,12 @@
 tags: [CLINICAL]
 keywords: CKD, 만성콩팥병, eGFR, 크레아티닌, 시스타틴C, cystatin C, creatinine, CKD-EPI, EKFC
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 [출처: Lamb EJ et al. Performance of creatinine and cystatin C based GFR estimating equations... BMJ 2026;392:e085005. PMID:41856526, DOI:10.1136/bmj-2025-085005]
 
 ---

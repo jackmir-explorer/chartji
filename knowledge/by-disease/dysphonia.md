@@ -2,6 +2,12 @@
 
 keywords: 목소리이상, 쉰목소리, 발성장애, dysphonia, hoarseness, 음성장애
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 ## 문진/검사
 
 ## 처방/치료

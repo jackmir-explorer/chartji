@@ -3,6 +3,12 @@
 tags: [CLINICAL]
 keywords: CKD, 만성신장병, 만성신부전, eGFR, 시스타틴C, cystatin C, 크레아티닌, creatinine, 신기능 추적
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 > primarySources (Tier 1):
 > - Scandrett K et al. BMJ. 2026;392:e085005. PMID:41856526, DOI:10.1136/bmj-2025-085005
 

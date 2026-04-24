@@ -3,13 +3,19 @@
 tags: [CLINICAL]
 keywords: 오젬픽, ozempic, semaglutide, 급여, T2DM, 당뇨
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 ---
 
 ## 위고비와의 관계
 
-오젬픽 = 위고비의 **보험급여 버전** (성분 동일: semaglutide, 용량 다름)
+오젬픽 = [[wegovy|위고비]]의 **보험급여 버전** (성분 동일: semaglutide, 용량 다름)
 - 오젬픽: T2DM 적응증, 보험급여 가능
-- 위고비: 비만 적응증, 비급여
+- 위고비: [[obesity|비만]] 적응증, 비급여
 
 ---
 

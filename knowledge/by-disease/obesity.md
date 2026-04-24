@@ -2,6 +2,12 @@
 
 keywords: obesity, 비만, phenotype, hungry brain, hungry gut, slow burn, emotional hunger
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 ## 비만 표현형 (Mayo Clinic Phenotype) [CLINICAL]
 
 > 출처: Acosta A, et al. *Obesity* 2021 (PMID: 33759389)

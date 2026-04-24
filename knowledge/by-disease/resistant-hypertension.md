@@ -3,6 +3,12 @@
 tags: [CLINICAL]
 keywords: 저항성고혈압, resistant hypertension, 스피로노락톤, spironolactone, MRA, 이차성고혈압, 백의고혈압
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 ---
 
 ## 정의
@@ -20,7 +26,7 @@ keywords: 저항성고혈압, resistant hypertension, 스피로노락톤, spiron
 | 이차성 고혈압 | 원인 탐색 (신장·내분비 등) |
 | 치료 최적화 미흡 | 선호 항고혈압제 사용 여부·용량 확인 |
 | 공존질환 미관리 | 동반 질환 조절 상태 확인 |
-| 생활습관·사회적 요인 | 식염, 비만, 음주, 약물 상호작용 등 |
+| 생활습관·사회적 요인 | 식염, [[obesity|비만]], 음주, 약물 상호작용 등 |
 
 ---
 

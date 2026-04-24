@@ -3,6 +3,12 @@
 tags: [TIPS, INSIGHTS, CLINICAL]
 keywords: 비만, 위고비, 마운자로, semaglutide, tirzepatide, GLP-1, 용량증량, 유지전략
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 ## 관련 엔트리
 
 - [[obesity]] — 비만 진료 전반 (표현형·문진·단백질 ABC·요요 기전)
@@ -71,7 +77,7 @@ keywords: 비만, 위고비, 마운자로, semaglutide, tirzepatide, GLP-1, 용�
 
 ### 효과 좋을 것으로 예상되는 경우
 1. ~~위장관 부작용이 큰 경우~~ → **❌ 미신.** 부작용과 체중감량은 독립적 (STEP 1-3 mediation analysis: GI AE 기여 <1%p) [출처: Wharton et al. Diabetes Obes Metab 2021 PMID:34514682]
-2. ~~Insulin resistance 있는 경우~~ → **❌ 반대.** T2DM 환자가 오히려 감량 적음 (STEP2 ~10% vs STEP1 ~15-17%) [출처: Nauck & D'Alessio Cardiovasc Diabetol 2022 PMID:36050763]
+2. ~~Insulin resistance 있는 경우~~ → **❌ 반대.** [[ozempic|T2DM]] 환자가 오히려 감량 적음 (STEP2 ~10% vs STEP1 ~15-17%) [출처: Nauck & D'Alessio Cardiovasc Diabetol 2022 PMID:36050763]
 3. 초기 식욕 감소 (식사 시작 욕구↓, meal size↓) [CLINICAL — 조건부]
 4. 음식 보상/갈망 감소, 특히 술 [CLINICAL — 조건부]
 5. **초기 체중감소 속도 — 가장 강력한 predictor** [출처: Maccora et al. Endocr Pract 2019 PMID:31682516]

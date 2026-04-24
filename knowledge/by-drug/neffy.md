@@ -2,6 +2,12 @@
 
 keywords: Neffy, 비강내에피네프린, intranasal epinephrine, 아나필락시스, anaphylaxis, 알레르기응급
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 primarySources: Wolf J et al. Am Fam Physician 2026;113(3):270-272. PMID:41839078
 
 ## 적응증 [CLINICAL]

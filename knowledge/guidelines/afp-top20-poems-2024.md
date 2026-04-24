@@ -3,6 +3,12 @@
 tags: [CLINICAL]
 keywords: POEM, patient-oriented evidence, AFP, 일차의료 근거, 2024 POEM
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 [출처: Grad R, Ebell MH. Top 20 Research Studies of 2024 for Primary Care Physicians. Am Fam Physician 2025;112(1):34-41. PMID:40736492]
 
 ---
@@ -18,7 +24,7 @@ AFP(American Family Physician) 2024 POEM(Patient-Oriented Evidence that Matters)
 - 관련 knowledge: `by-disease/obesity.md`, `by-drug/glp1-selection-strategy.md`
 
 ### 심혈관 2차 예방
-- **세마글루타이드(Semaglutide)는 비당뇨 비만 환자의 심혈관 2차 예방에 효과적**
+- **세마글루타이드(Semaglutide)는 비당뇨 [[obesity|비만]] 환자의 심혈관 2차 예방에 효과적**
 - 외래 적용: 기존 CV 병력 있는 비만 환자 GLP-1 선택 근거 (SELECT trial 맥락)
 - 관련 knowledge: `by-drug/wegovy.md`
 
@@ -45,7 +51,7 @@ AFP(American Family Physician) 2024 POEM(Patient-Oriented Evidence that Matters)
 ### 기타 (논문 언급)
 - 항생제·항바이러스제 사용
 - RSV 예방
-- 금연 (전자담배 포함 — `by-disease/smoking-cessation.md` 참조)
+- [[smoking-cessation|금연]] (전자담배 포함 — `by-disease/smoking-cessation.md` 참조)
 - 알코올사용장애 (GLP-1 맥락 — `by-drug/glp1-selection-strategy.md` 참조)
 - Long COVID
 - 알츠하이머 치료

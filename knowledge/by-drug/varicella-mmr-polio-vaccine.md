@@ -2,6 +2,12 @@
 
 keywords: 수두, varicella, MMR, 홍역, 볼거리, 풍진, 폴리오, IPV
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 [출처: CDC Measles/Varicella/Polio HCP 2024]
 [출처: MMWR 72(49), 2023 — Adult IPV Updated Recs]
 [출처: KDCA 예방접종도우미 2024]

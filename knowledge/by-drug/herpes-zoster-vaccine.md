@@ -2,6 +2,12 @@
 
 keywords: 대상포진, herpes zoster, shingrix, 싱그릭스, 조스타박스, ZVL, RZV
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 [출처: MMWR 71(3), 2022 — RZV in Immunocompromised Adults]
 [출처: CDC Shingrix HCP Considerations 2024]
 [출처: KDCA 성인 예방접종 가이드 2024]

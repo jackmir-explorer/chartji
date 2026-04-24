@@ -2,6 +2,12 @@
 
 keywords: burning mouth, 구강작열감, 구강작열감증후군, BMS
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 ## 문진/검사
 
 ## 처방/치료

@@ -2,6 +2,12 @@
 
 keywords: 구강병변, 구강궤양, 구강백반증, oral white patch, oral ulcer, leukoplakia, lichen planus
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 ## 문진/검사
 - 백반증(white patch) 또는 궤양: **1달 내 호전 확인 필수**
 - 1달 내 미호전 → 악성 전환 가능성 → ENT refer

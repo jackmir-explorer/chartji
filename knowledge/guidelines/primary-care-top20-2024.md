@@ -3,6 +3,12 @@
 tags: [INSIGHTS]
 keywords: AFP, POEM, top20, 2024, 일차의료, evidence, 근거, 항생제, 당뇨, 비만, 금연, 백신
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 > primarySources (Tier 1):
 > - Grad R, Ebell MH. Am Fam Physician. 2025 Jul;112(1):34-41. PMID:40736492
 
@@ -33,11 +39,11 @@ keywords: AFP, POEM, top20, 2024, 일차의료, evidence, 근거, 항생제, 당
 - **단순 담석:** 보존적 관리(watchful waiting) — 수술 대비 합리적 대안 (무증상·경증)
 
 ### 당뇨·비만 [CLINICAL]
-- **T2DM:** SGLT-2 억제제 + GLP-1 RA → 구식 약물 대비 환자중심 아웃컴 우월
+- **[[ozempic|T2DM]]:** SGLT-2 억제제 + GLP-1 RA → 구식 약물 대비 환자중심 아웃컴 우월
 - **연속혈당측정(CGM):** T2DM 혈당 조절에 최소 효과, 오히려 해 가능 → T2DM 일반 처방 주의
 - **체중감량 최고 효과 약물:** 펜터민-토피라메이트 + GLP-1 RA
 - **비당뇨 비만 심혈관 2차예방:** 세마글루타이드 유효
-- **고령 T2DM + 심부전:** SGLT-2 / GLP-1 RA → 심혈관 사망 감소
+- **고령 T2DM + [[heart-failure|심부전]]:** SGLT-2 / GLP-1 RA → 심혈관 사망 감소
 
 ### 심혈관
 - **MI 후 보존 EF (HFpEF):** 베타차단제 → 재발 사건 예방 효과 없음 (처방 재고)

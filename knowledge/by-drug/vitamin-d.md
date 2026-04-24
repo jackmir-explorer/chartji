@@ -2,6 +2,12 @@
 
 keywords: 비타민D, vitamin D, cholecalciferol, 비타민D보충, 질병예방, Endocrine Society
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 primarySources: Dakkak M et al. Am Fam Physician 2026;113(3):291-293. PMID:41839092
 
 ## 적응증 [REGULATORY]

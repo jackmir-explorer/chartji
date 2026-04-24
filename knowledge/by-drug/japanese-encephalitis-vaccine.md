@@ -2,9 +2,15 @@
 
 keywords: 일본뇌염, Japanese encephalitis
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 ## 종류 비교
 
-| 구분 | 사백신 (불활성화, IXIARO 등) | 생백신 (약독화, Imojev 등) |
+| 구분 | [[vaccine-interval|사백신]] (불활성화, IXIARO 등) | [[vaccine-interval|생백신]] (약독화, Imojev 등) |
 |-----|--------------------------|--------------------------|
 | 접종 횟수 | 2회 (0일·28일) | 성인 1회 |
 | 추가접종 | 필요 시 1~2년 후 1회 | — |

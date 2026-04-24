@@ -2,6 +2,12 @@
 
 keywords: HPV, 자궁경부암, 인유두종바이러스, 가다실, 가다실9
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 [출처: CDC ACIP HPV Vaccination Considerations 2024]
 [출처: KDCA 예방접종도우미 — HPV 국가사업]
 

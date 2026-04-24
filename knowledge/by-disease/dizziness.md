@@ -2,6 +2,12 @@
 
 keywords: 어지럼증, 어지러움, 현기증, dizziness, vertigo
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 ## 문진/검사
 
 ### 어지럼증 기본 문진 [TIPS — 교수님 외래 참관]

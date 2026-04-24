@@ -2,6 +2,12 @@
 
 keywords: A형간염, hepatitis A, B형간염, hepatitis B, Heplisav-B
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 [출처: ACIP HepB Universal 2022 — MMWR 71(13); MMWR 73(48), 2024]
 [출처: CDC Hepatitis A Vaccination HCP 2024]
 [출처: KDCA 성인 예방접종 가이드 2024]

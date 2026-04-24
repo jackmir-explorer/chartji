@@ -1,5 +1,11 @@
 # Mucomyst (Acetylcysteine / N-Acetylcysteine, NAC)
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 ## 가글 처방 제조법 [TIPS — by ENT교수]
 뮤코미스트 10% 1 ampule + 물 100cc 혼합 → TID 가글
 
@@ -20,7 +26,7 @@
 - [출처: Sio TT et al. Mayo Clin Proc 2019]
 
 ### 구강건조증 — 일반 (약물 유발 등) [INSIGHTS — by ENT교수]
-- 방사선 유발 외 일반 구강건조증에 대한 직접 gargle 근거 없음
+- 방사선 유발 외 일반 [[dry-mouth|구강건조증]]에 대한 직접 gargle 근거 없음
 - 임상 경험 기반 사용
 
 ### LPR (인후두역류 / 후두염) [INSIGHTS — by ENT교수]

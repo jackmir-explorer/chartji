@@ -121,6 +121,12 @@ keywords: {Triage calcCategories 값과 일치하는 키워드, 쉼표 구분}
 tags: [CLINICAL|REGULATORY|INSIGHTS|TIPS]   # 파일 전체 성격
 keywords: {쉼표 구분 키워드 — Triage calcCategories와 일치}
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 > primarySources (Tier 1): {파일 전체 대표 출처}
 > 예: `EAACI 2021 (PMID:34536239, DOI:10.1111/all.15090)`
 
@@ -198,6 +204,28 @@ curation rule ⑧ "주제 일치" 조건의 **사전 방어선**. 저장 직전 
 
 목적: primarySources fallback 의존을 줄여 curation 할루시네이션 재발 차단. 감사층(auditor)이 사후 잡는 것보다 창작층에서 걸러내는 게 우선.
 
+### 5-D. auto-wikilinks 삽입 (2026-04-24 R2 신설)
+
+ingest 시 본문 중 **기존 엔트리 keywords와 완전 일치하는 토큰**을 Obsidian wikilinks로 자동 변환한다.
+
+절차:
+1. `knowledge/by-disease/`·`by-drug/`·`guidelines/` 스캔하여 모든 엔트리 key + keywords 집계 (myth-log/ 제외)
+2. 현재 ingest 대상 md 본문에서 각 keyword와 완전 일치하는 토큰 탐색 (대소문자·한글 어미 엄격 매칭)
+3. **섹션당 첫 등장 1회만** `[[target-key|원문 토큰]]` 형식으로 변환 (중복 wikilinks 방지)
+4. 자기 자신 key는 제외
+5. `relations[]` 필드에 명시된 target은 kind 힌트로 활용 가능 (parent kind는 parent 맥락 wikilinks, 단 Wave 1에선 keyword 매칭만 필수)
+
+주의:
+- wikilinks는 md 본문 내부에만 — **frontmatter 블록, sources[] 내부 금지**
+- 애매한 토큰(일반 어휘와 우연 일치)은 skip 후 세션 기록에 오변환 후보 목록 첨부
+- myth-log/ 엔트리 본문은 wikilinks 삽입 대상 **포함** (Obsidian 공부 자원). 단, myth-log key 자체가 target이 되는 건 금지(inject 격리 원칙)
+
+예:
+- 원문: `obesity 환자에서 GLP-1 RA 처방 시 모니터링 필요`
+- 변환: `[[obesity|obesity]] 환자에서 [[mounjaro|GLP-1 RA]] 처방 시 [[ckd-monitoring|모니터링]] 필요` (섹션 첫 등장만)
+
+목적: Obsidian 그래프 뷰에서 엔트리 간 연결 가시화 — 미르 공부 자원.
+
 ### 5-A. 긴 문서 축약 규칙
 
 적용 조건: 원문이 600토큰(≈400자) 초과하는 가이드라인·심평원 자료·진단기준
@@ -273,8 +301,16 @@ v2 엔트리 형상:
 ```javascript
 var KNOWLEDGE_BUNDLE = {
   "{keyword}": {
-    "kind":           "\"disease\" | \"drug\" | \"topic\"",
+    "kind":           "\"disease\" | \"drug\" | \"topic\" | \"myth\" (myth는 inject 격리)",
     "keywords":       ["...synonyms"],
+    "version":                       "(미정) — R1 예약",
+    "supersedes":                    "(미정) — R1 예약",
+    "freshness.primarySourceYear":   "(미정) — R1 예약",
+    "applicability":                 "(미정) — R1 예약",
+    "relations":      [
+      // R2 예약 — 예: { "kind": "coprescribe", "target": "obesity" }
+      // kind 5종: parent·coprescribe·contraindicate·supersede·synergy
+    ],
     "primarySources": ["파일 전체 Tier 1 출처 배열"],
     "sections": {
       "{표준 섹션 key}":  { "content": "...", "sources": ["섹션 Tier 2 출처(Tier 1과 중복 시 생략)"] },
@@ -288,6 +324,8 @@ var KNOWLEDGE_BUNDLE = {
   }
 };
 ```
+
+> **2026-04-24 R1/R2 메타필드 예약**: `version`·`supersedes`·`freshness.primarySourceYear`·`applicability`·`relations[]` 5개 필드는 **bundle consumer가 아직 소비하지 않음**. md 파일 상단에 빈 값(`(미정)` / `[]`)으로 예약만. Phase 5 이후 runtime 편입 시 재활성화.
 
 엔트리별 uiHooks 오버라이드는 `rules/data-flow.md`의 primary 셀 원칙을 위반하지 않는 범위에서만 허용.
 RedFlag 대상 노출은 uiHooks 어떤 필드에도 **절대 금지** (§rules/data-flow.md §2).

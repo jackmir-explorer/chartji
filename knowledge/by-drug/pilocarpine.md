@@ -1,7 +1,13 @@
 # Pilocarpine (살라겐 / 필로겐)
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 ## 적응증
-- 두경부암 방사선 치료 후 구강건조증 (xerostomia)
+- 두경부암 방사선 치료 후 [[dry-mouth|구강건조증]] (xerostomia)
 - 쇼그렌증후군(Sjögren's syndrome) 구강건조증·안구건조증
 
 ## 용량

@@ -64,3 +64,14 @@ ingest 직전 체크: `sections` key 전부가 vocabulary 18개 또는 slugify(k
 
 ## Inject 트리거
 Working Draft 생성 시 Triage 패널의 detectedCalcs 신호를 받아 자동 실행.
+
+### ⚠ kind: "myth" 전면 차단 (2026-04-24 R4)
+
+`knowledge/myth-log/` 하위 파일(`kind: "myth"`)은 **inject 경로 전체에서 제외**한다.
+
+- KNOWLEDGE_BUNDLE 컴파일 대상 아님 — bundle consumer가 myth 엔트리를 접근할 경로 자체 없음
+- Guide tab·Liby 힌트·Draft append·detectedCalcs 어느 signal에도 반응 금지
+- 사용자 요청으로 myth 엔트리 inject를 시도해도 **거부** (공부 자원 전용)
+- RedFlag 격리와 동일 강도의 rule — `rules/forbidden.md` "Liby §" 참조
+
+myth-log 엔트리의 유일한 소비 경로는 **의사 본인의 md 직접 읽기 / Obsidian 공부**. 앱 runtime 경로와 분리된 공간.

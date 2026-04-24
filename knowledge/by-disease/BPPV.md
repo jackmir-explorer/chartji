@@ -2,6 +2,12 @@
 
 keywords: BPPV, 이석증, 양성돌발성체위성현훈, 체위성현훈
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 ## 문진/검사
 - 자세변화 시 갑작스러운 어지럼증 → BPPV 의심
 - 1단계: Supine Head Roll Test — Horizontal canal 안진 확인

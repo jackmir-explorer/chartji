@@ -70,6 +70,14 @@
 금지: 패널별 debounce 로직 (각 패널이 직접 소유)
       비즈니스 로직 (api.js에 위임)
 
+## knowledge/myth-log/
+책임: 임상 현장에서 반복되는 **미신·잘못된 통념**을 기록. 의사 본인 공부 자원.
+포함: 각 myth 엔트리 md 파일 (kind: "myth")
+금지: **inject 대상 아님** — Guide tab·Liby 힌트·Draft append·KNOWLEDGE_BUNDLE 컴파일 전부 제외
+      export 대상 아님 (외부 공유 포맷 도입 시에도 제외)
+      일반 by-disease/by-drug 엔트리를 myth-log로 재배치 금지 (보존 방향 반대)
+참조: rules/forbidden.md Liby §, agents/librarian.md inject 트리거 분기
+
 ## src/styles.css
 책임: 모든 스타일
 금지: 인라인 스타일로 기능 제어 (display:none으로 로직 숨기기 등)

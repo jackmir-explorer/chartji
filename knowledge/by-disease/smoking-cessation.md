@@ -3,6 +3,12 @@
 tags: [CLINICAL — 조건부]
 keywords: 금연, smoking cessation, 전자담배, vaping, NRT, 니코틴 대체요법, varenicline
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 [출처: Shaughnessy AF. Vaping Is Better Than Nicotine Replacement Gum for Smoking Cessation. Am Fam Physician 2026;113(3). PMID:41839085] [초록 기반 — 전문 미확인]
 
 ---

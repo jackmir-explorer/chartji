@@ -3,6 +3,12 @@
 tags: [CLINICAL]
 keywords: 혈전, VTE, 정맥혈전색전증, 경구피임약, HRT, 성확인호르몬, 호르몬대체요법, 혈전성향증, thrombophilia, 성호르몬
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 > primarySources (Tier 1):
 > - Skeith L, Bates SM. N Engl J Med. 2026 Apr 16;394(15):1514-1528. PMID:41985134, DOI:10.1056/NEJMra2202438
 

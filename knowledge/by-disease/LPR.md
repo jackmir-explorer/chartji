@@ -2,6 +2,12 @@
 
 keywords: LPR, 후두염, 인후두역류, laryngopharyngeal reflux, 역류성후두염
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 ## 문진/검사
 
 ### LPS vs LPRD 구분 [CLINICAL]

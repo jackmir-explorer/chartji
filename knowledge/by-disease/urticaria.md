@@ -3,6 +3,12 @@
 tags: [CLINICAL]
 keywords: 두드러기, urticaria, 혈관부종, angioedema, 항히스타민, omalizumab, 만성두드러기, CSU
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 ---
 
 ## 분류 기준

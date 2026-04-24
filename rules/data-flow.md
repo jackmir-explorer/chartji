@@ -1,7 +1,7 @@
 # rules/data-flow.md — B2 데이터 흐름 매트릭스
 
 tags: [META]
-updated: 2026-04-19
+updated: 2026-04-24
 schema: B2
 
 > **⚠ 주의**: 본 문서는 Phase 1~2까지 확정된 내용 기반 **의도된 매트릭스**다.
@@ -46,12 +46,19 @@ RedFlag 열은 **전 row에서 ✗**로 고정 (§2 참조).
 | `insurance` | | ✓ (drug) | | ✗ 절대 금지 |
 | `comparison` | | ✓ (drug) | | ✗ 절대 금지 |
 | `notes` | | ✓ (설명용) | | ✗ 절대 금지 |
+| `prognosis` | | ✓ (disease) | | ✗ 절대 금지 |
+| `lifestyle` | ✓ (disease) | | | ✗ 절대 금지 |
+| `complications` | | ✓ (disease) | | ✗ 절대 금지 |
+| `counseling` | | ✓ (disease) | | ✗ 절대 금지 |
+| `follow-up-schedule` | ✓ (disease) | | | ✗ 절대 금지 |
 | `draft-append` | | | ✓ (disease primary) | ✗ 절대 금지 |
 | `draft-template` | (의사 수동 선택 UI — Phase 4 wiring) | | | ✗ 절대 금지 |
 | 자유 섹션 | kind별 기본값 보충 | kind별 기본값 보충 | — | ✗ 절대 금지 |
 
 ### uiHooks 기본값 앵커
 `knowledge/section-vocabulary.md`의 uiHooks 기본값(disease/drug/topic)이 이 매트릭스의 primary 매핑을 자동 적용한다. 엔트리는 uiHooks를 부분 오버라이드할 수 있으나 **RedFlag 열에는 ✓ 지정 불가**.
+
+> **2026-04-24 R3 Wave 1** — 5행 신설 (prognosis/lifestyle/complications/counseling/follow-up-schedule). 미르 결단 2026-04-24: lifestyle·follow-up-schedule은 hint primary (치료 성격), prognosis·complications·counseling은 guide primary (설명 성격). `knowledge/section-vocabulary.md` uiHooks 기본값 동시 개정.
 
 ### primary 겹침
 한 섹션이 2개 이상 primary ✓를 동시에 갖는 변경은 Architect가 즉시 STOP 판정한다 (`agents/architect.md` 규칙).

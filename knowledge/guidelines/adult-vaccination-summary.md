@@ -1,5 +1,11 @@
 # 성인 예방접종 권장사항 요약 [CLINICAL]
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 [출처: CDC Adult Immunization Schedule 2025]
 [출처: ASCO 2024 Vaccination of Adults With Cancer Guideline — JCO.24.00032]
 [출처: IDSA 2025 Immunocompromised RTI Vaccines]
@@ -8,21 +14,21 @@
 
 | 백신 | 주기 / 대상 |
 |---|---|
-| 파상풍 (Td/Tdap) | 10년마다 |
+| 파상풍 (Td/[[tdap|Tdap]]) | 10년마다 |
 | 인플루엔자 | 매년 (특히 ≥65세·만성질환자·의료종사자) |
-| MMR | 1968년 이후 출생, 항체 불확실 시 (KDCA 기준) |
+| [[varicella-mmr-polio-vaccine|MMR]] | 1968년 이후 출생, 항체 불확실 시 (KDCA 기준) |
 
 ## 고위험군별 추가 권장
 
 | 백신 | 대상 |
 |---|---|
-| 폐렴구균 | ≥65세 PPSV23 (KDCA) / ≥50세 PCV15/20/21 (ACIP) / 만성질환·면역저하자 PCV13 |
-| B형간염 | ACIP 19-59세 universal / KDCA 의료인·고위험군 |
-| A형간염 | 40세 미만 항체 없이, 40세 이상 항체검사 후, 의료인·해외여행자 |
-| 대상포진 | ≥50세 RZV (ACIP) / ≥60세 RZV (KDCA) |
-| HPV | 9-26세 routine (성별 무관), 27-45세 SCDM |
-| 수두·수막구균 | 집단생활·군인·해외유학 |
-| 광견병·일본뇌염·황열 | 해외여행·봉사 (지역별 맞춤) |
+| [[pneumococcal-vaccine|폐렴구균]] | ≥65세 PPSV23 (KDCA) / ≥50세 PCV15/20/21 (ACIP) / 만성질환·면역저하자 PCV13 |
+| [[hepatitis-ab-vaccine|B형간염]] | ACIP 19-59세 universal / KDCA 의료인·고위험군 |
+| [[hepatitis-ab-vaccine|A형간염]] | 40세 미만 항체 없이, 40세 이상 항체검사 후, 의료인·해외여행자 |
+| [[herpes-zoster-vaccine|대상포진]] | ≥50세 RZV (ACIP) / ≥60세 RZV (KDCA) |
+| [[hpv-vaccine|HPV]] | 9-26세 routine (성별 무관), 27-45세 SCDM |
+| [[varicella-mmr-polio-vaccine|수두]]·수막구균 | 집단생활·군인·해외유학 |
+| [[rabies-vaccine|광견병]]·[[japanese-encephalitis-vaccine|일본뇌염]]·황열 | 해외여행·봉사 (지역별 맞춤) |
 
 ---
 
@@ -72,7 +78,7 @@
 
 ## 심부전 환자 고위험 예방접종 [CLINICAL]
 
-심부전 환자: 감염은 심혈관 합병증(급성 심근염·부정맥·혈전·사망) 위험을 높이는 계기 → **독감·폐렴구균·대상포진·RSV·COVID·Tdap** 권고. 세부 권고·기전은 `heart-failure.schedule` 참조.
+[[heart-failure|심부전]] 환자: 감염은 심혈관 합병증(급성 심근염·부정맥·혈전·사망) 위험을 높이는 계기 → **독감·폐렴구균·대상포진·RSV·COVID·Tdap** 권고. 세부 권고·기전은 `heart-failure.schedule` 참조.
 
 > [출처: 대한심부전학회 심부전 생활백서 2025]
 > [출처: Roubille F et al. Eur J Prev Cardiol 2025. doi:10.1093/eurjpc/zwaf366]

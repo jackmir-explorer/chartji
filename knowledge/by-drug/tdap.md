@@ -2,6 +2,12 @@
 
 keywords: Tdap, 파상풍, 백일해, pertussis
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 [출처: CDC DTaP/Tdap/Td ACIP Recommendations 2024]
 
 ## 접종 대상 및 스케줄

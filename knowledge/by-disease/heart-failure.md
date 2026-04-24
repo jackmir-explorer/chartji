@@ -2,6 +2,12 @@
 
 keywords: heart-failure, 심부전, heart failure, CHF, congestive heart failure, HFrEF, HFpEF, HFmrEF, GDMT
 
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: (미정)
+applicability: (미정)
+relations: []
+
 > primarySources (Tier 1):
 > - 대한심부전학회. 심부전 진료지침 2022
 > - 대한심부전학회 사회봉사사/공헌위원회. 심부전 생활백서 2025 (https://www.kshf.or.kr/renewal/page/kshf_date.php)
@@ -252,7 +258,7 @@ keywords: heart-failure, 심부전, heart failure, CHF, congestive heart failure
 
 ### 동반 당뇨병 관리 (핵심 권고사항)
 - 이미 심혈관질환을 가지고 있거나 심혈관질환이 발생할 위험이 높은 당뇨병 환자는 현재 심부전이 없더라도 심혈관계 사망과 심부전 발생으로 인한 입원을 예방하기 위해 **나트륨-포도당 공동수송체2 (SGLT2) 억제제**를 표준 치료로 권고한다.
-- 심부전이 동반된 당뇨병 환자에서 심부전으로 인한 입원 또는 심혈관계 사망을 감소시키기 위해 **나트륨-포도당 공동수송체2 (SGLT2) 억제제 (empagliflozin 또는 dapagliflozin)**를 표준치료로 권고한다.
+- 심부전이 동반된 당뇨병 환자에서 심부전으로 인한 입원 또는 심혈관계 사망을 감소시키기 위해 **나트륨-포도당 공동수송체2 (SGLT2) 억제제 ([[sglt2-inhibitors|empagliflozin]] 또는 [[sglt2-inhibitors|dapagliflozin]])**를 표준치료로 권고한다.
 
 > 출처 (전원 최적시기): 대한심부전학회 심부전 진료지침 2022 / Dunlay SM et al. JACC Heart Fail 2021
 > 출처 (고혈압·당뇨 동반): 대한심부전학회 심부전 진료지침 2022
