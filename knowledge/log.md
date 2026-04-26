@@ -5,6 +5,13 @@
 
 ---
 
+2026-04-26 | by-disease/meningitis.md | 신규 — 세균성·무균성 수막염 진단(LP 판독·4대 증상)/경험적 항생제 1시간 rule/덱사메타손 병용/화학예방(수막구균·Hib 접촉자) [CLINICAL] PMID:41839077 (AFP 2026 Mar)
+2026-04-26 | by-disease/croup.md | 신규 — 크루프 3대 증상/Westley score 중증도/Dexamethasone 0.6mg/kg 1회/네뷸라이즈드 에피네프린/응급 감별(세균성기관염·후두개염) [CLINICAL] PMID:41839076 (AFP 2026 Mar)
+2026-04-26 | by-disease/hepatitis-b.md | 신규 — 만성 HBV 치료 기준(ALT↑+DNA>2000 IU/mL)/TDF·TAF·ETV 선택/면역억제 전 예방/HCC 감시(RUQ US+AFP 6개월) [CLINICAL] PMID:41839074 (AFP 2026 Mar)
+2026-04-26 | by-disease/doac-elderly.md | 신규 — 80세 이상 DOAC 출혈 위험 인자/Apixaban 우선/용량 감소 기준/HAS-BLED/공유의사결정 [CLINICAL — 조건부, 초록 기반] PMID:41839090 (AFP 2026 Mar)
+2026-04-26 | by-disease/carpal-tunnel-syndrome.md | 신규 — 손목굴증후군 3단계(부목→주사→수술)/18개월 회복률 수술>주사/NCS 수술 전 권고 [CLINICAL] PMID:41839082 (AFP 2026 Mar)
+2026-04-26 | by-disease/multiple-myeloma.md | 신규 — 다발성골수종 CRAB 증상/초기 검사(SPEP·UPEP)/즉시 혈액종양내과 의뢰/비스포스포네이트/1차의료 협력 역할 [CLINICAL] PMID:41839075 (AFP 2026 Mar)
+2026-04-26 | by-disease/anxiety-depression-cbt.md | 신규 — CBT 효과 크기 통합(375 RCT·32968명): PTSD g=1.27·불안·우울 g=0.5-1.0/외래 의뢰 적응증/1차의료 활용 [CLINICAL] PMID:40238104 (JAMA Psychiatry 2025)
 2026-04-24 | by-disease/cardiomyopathy.md | 신규 — 비허혈성 심근증(HCM·DCM·RCM·ARVC) 분류/문진/ECG·echo 평가/GDMT/ICD 위험도/의뢰 기준 [CLINICAL] PMID:41839108 (AFP 2026 Feb)
 2026-04-24 | by-drug/hepatitis-ab-vaccine.md | 보완 — B형간염 전 성인 triple panel 스크리닝(HBsAg+anti-HBs+anti-HBc) CDC 권고 / 해석 패턴 [REGULATORY] PMID:41839073 (AFP 2026 Mar)
 2026-04-24 | by-disease/chronic-cough.md | 신규 — 난치성 만성기침(RCC) duloxetine RCT / 기침횟수 60% 감소 / LCQ 개선 / 부작용(오심·어지럼·졸음) [CLINICAL — 조건부] PMID:41530764 (BMC Med 2026)
