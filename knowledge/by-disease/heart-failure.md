@@ -57,6 +57,36 @@ relations: []
 
 > 출처: 대한심부전학회 심부전 진료지침 2022
 
+### Volume Overload 진단 정확도 — BNP + POCUS B-lines [CLINICAL]
+
+호흡곤란 환자에서 심인성 부하과다(volume overload) 감별. JAMA 2026 Rational Clinical Examination — 40개 연구, 11,490명, 유병률 35–69%.
+
+**Rule-in (가장 유용한 순)**
+
+| 검사 | LR | 특이도 |
+|---|---|---|
+| BNP ≥100 ng/mL | **6.9** | 87% |
+| CXR 혈관 충혈 | 5.9 | 91% |
+| JVD (흉골각 위 >3 cm 수직) | 4.1 | 92% |
+| POCUS bilateral B-lines | 4.0 | 77% |
+| IVC collapsibility <50% | 3.9 | 79% |
+| POCUS JVP >8 cm | 2.8 | 71% |
+| 폐 수포음 (crackles) | 2.7 | 81% |
+| 하지 부종 | 2.2 | 80% |
+
+**Rule-out (가장 유용한 순)**
+
+| 검사 | LR | 민감도 |
+|---|---|---|
+| POCUS B-lines 없음 | **0.09** | 93% |
+| BNP <100 ng/mL | 0.14 | 87% |
+| IVC collapsibility ≥50% | 0.22 | 82% |
+| POCUS JVP ≤8 cm | 0.26 | 81% |
+
+임상 포인트: BNP ≥100이면 단독 최강 rule-in, B-lines 없으면 단독 최강 rule-out. 두 검사 조합이 JVD·crackles보다 진단 정확도 우월하며 외래·응급 의사결정을 직접 지원한다.
+
+> 출처: Drum B et al. JAMA 2026;335(13):1159-1168. PMID:41729549. DOI:10.1001/jama.2026.0446
+
 ---
 
 ## 단계별 치료 (protocol)

@@ -117,6 +117,44 @@ relations: []
 
 ---
 
+## 비만 약물치료 GRADE 권고 — TOS/OMA/OAC 공동 가이드라인 [CLINICAL]
+
+> 출처: Alexander L et al. (TOS/OMA/OAC). Obes Pillars 2026;18:100254. PMID:41859682. DOI:10.1016/j.obpill.2026.100254
+
+3개 비만 전문학회(Obesity Society·Obesity Medicine Association·Obesity Action Coalition) 공동 GRADE 권고. 성인 BMI ≥27(동반질환 有) 또는 ≥30 kg/m² 대상.
+
+### 강력 권고 (moderate-certainty evidence)
+
+| 약물 | 기전 | 비고 |
+|---|---|---|
+| **Semaglutide** (위고비/Wegovy) | GLP-1 RA | 주 1회 피하주사 |
+| **Tirzepatide** (마운자로/Mounjaro) | GIP/GLP-1 dual RA | 주 1회 피하주사 |
+| **Bupropion-naltrexone** (콘트라브) | 중추 식욕억제 | 경구 |
+| **Setmelanotide** | MC4R 작동제 | 유전성 비만(POMC·PCSK1·LEPR·BBS) 전용 |
+
+### 조건부 권고 (conditional)
+
+- Orlistat, Phentermine, Phentermine-topiramate, Liraglutide
+
+### 동반질환별 조건부 권고 (GLP-1+ 계열)
+
+| 동반질환 | 권고 약물 | 근거 |
+|---|---|---|
+| HFpEF | GLP-1+ | 심부전 증상·기능 개선 |
+| OSA | GLP-1+ | 수면무호흡 개선 |
+| MASH | Semaglutide (FDA 승인) / GLP-1+ | 간섬유화 개선 |
+| 골관절염 | GLP-1+ | 통증·기능 개선 |
+| 기존 심혈관질환(MACE 감소) | Semaglutide | SELECT trial |
+| T2DM 동반 비만 | GLP-1+ | HbA1c·MACE·신보호 |
+
+### 체중 유지 중 약물 지속 — 강력 권고
+
+체중 감량 후 약물 지속이 체중 유지와 합병증 예방에 필수. 중단 시 체중 회복 빠름.
+
+> 임상 포인트: 기저질환(HFpEF·OSA·MASH·관절염)이 있는 비만 환자에서 GLP-1+ 약물 선택은 동반질환 개선 근거까지 통합해 결정 가능. 재정 장벽·접근성 고려 필수.
+
+---
+
 ## 처방/치료
 
 위고비(Semaglutide) 처방 기준:

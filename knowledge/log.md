@@ -5,6 +5,11 @@
 
 ---
 
+2026-04-27 | by-disease/heart-failure.md | 보완 — Volume Overload 진단 정확도(BNP ≥100 LR 6.9 / POCUS B-lines 없음 LR 0.09) exam 서브섹션 추가 [CLINICAL] PMID:41729549 (JAMA 2026)
+2026-04-27 | by-disease/concussion.md | 신규 — 소아 뇌진탕 진단 LR 표(mental fog LR 12 / near-point convergence LR 7.0 / 두통없음 LR 0.20) + SCAT [CLINICAL] PMID:41941197 (JAMA 2026)
+2026-04-27 | by-disease/low-back-pain.md | 신규 — 만성 요통 PT vs CBT SMART RCT (749명/52주): PT 기능 우월(ODI 2.8), 비반응자→마음챙김=전환 동등 [CLINICAL] PMID:42008809 (Ann Intern Med 2026)
+2026-04-27 | by-disease/obesity.md | 보완 — TOS/OMA/OAC GRADE 권고 섹션 추가: 강력권고(semaglutide·tirzepatide·bupropion-naltrexone·setmelanotide) / 동반질환별(HFpEF·OSA·MASH·OA·MACE·T2DM) [CLINICAL] PMID:41859682 (Obes Pillars 2026)
+2026-04-27 | by-disease/recurrent-uti.md | 신규 — AUA 재발성 UTI 가이드라인: 요배양 확인/예방적항생제/D-만노스/질에스트로겐/자가치료 [CLINICAL — 조건부, 초록 기반] PMID:40551332 (Nurse Pract 2025)
 2026-04-26 | by-disease/meningitis.md | 신규 — 세균성·무균성 수막염 진단(LP 판독·4대 증상)/경험적 항생제 1시간 rule/덱사메타손 병용/화학예방(수막구균·Hib 접촉자) [CLINICAL] PMID:41839077 (AFP 2026 Mar)
 2026-04-26 | by-disease/croup.md | 신규 — 크루프 3대 증상/Westley score 중증도/Dexamethasone 0.6mg/kg 1회/네뷸라이즈드 에피네프린/응급 감별(세균성기관염·후두개염) [CLINICAL] PMID:41839076 (AFP 2026 Mar)
 2026-04-26 | by-disease/hepatitis-b.md | 신규 — 만성 HBV 치료 기준(ALT↑+DNA>2000 IU/mL)/TDF·TAF·ETV 선택/면역억제 전 예방/HCC 감시(RUQ US+AFP 6개월) [CLINICAL] PMID:41839074 (AFP 2026 Mar)
