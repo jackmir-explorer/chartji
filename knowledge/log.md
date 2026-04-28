@@ -5,6 +5,14 @@
 
 ---
 
+2026-04-28 | by-disease/covid-outpatient-antivirals.md | 신규 — COVID-19 외래 항바이러스 4종 비교(Simnotrelvir high CoE –35.8h / Molnupiravir moderate CoE 회복+Long COVID 8.5% vs 11.0% / Paxlovid low CoE / Ensitrelvir 효과 불충분) [CLINICAL] PMID:41662710 (Ann Intern Med 2026)
+2026-04-28 | by-drug/glp1-selection-strategy.md | 보완 — 당뇨전단계 T2DM 예방 [CLINICAL] 섹션: Tirzepatide T2DM 발생 90% 감소(HR 0.07) / Semaglutide 정상혈당 84% 회복 / SELECT CV HR 0.80(전당뇨 포함) [CLINICAL] PMID:41565568 (Prim Care Diabetes 2026)
+2026-04-28 | by-disease/heart-failure.md | 보완 — HFpEF+비만 체중감량 전략 섹션 추가: GLP-1 계열 운동능력·증상·삶의질 RCT 확인, 비만 클수록 이익↑, 체중감량=HFpEF 최우선 치료 [CLINICAL] PMID:41802118 (Curr Opin Cardiol 2026)
+2026-04-28 | by-disease/MASH.md | 신규 — MASLD/MASH 지방간염: Tirzepatide·Semaglutide·비만수술 MASH 해소 우월 / TBWL%=핵심 매개변수 / FIB-4 선별·의뢰 기준 [CLINICAL] PMID:41804193 (Diabetes Obes Metab 2026)
+2026-04-28 | by-disease/diabetes-dyslipidemia.md | 신규 — 당뇨 이상지질혈증: Non-HDL-C 위험도별 표적(<130/100/85) / ApoB 우월성 / Statin→Ezetimibe→Bempedoic acid/PCSK9i 단계 전략 / TG 관리 주의사항 [CLINICAL] PMID:41968323 (Cardiovasc Diabetol 2026)
+2026-04-28 | by-disease/COPD.md | 신규 — GOLD 2025 ABE 분류(B=증상 or 악화위험 중 ≥1, E=악화 ≥2회 or 입원) / 호산구 ≥300→ICS 추가·<100→ICS 회피 / 단계별 흡입기 치료 [CLINICAL] PMID:41769574 (Cureus 2026)
+2026-04-28 | by-disease/colorectal-cancer-screening.md | 신규 — 대장암 스크리닝: 우편 FIT 키트가 45~49세 완료율 최고 / FIT 매년 원칙 / 고위험군 대장내시경 기준 [CLINICAL] PMID:41839084 (AFP 2026)
+2026-04-28 | by-disease/pediatric-antibiotic-stewardship.md | 신규 — 소아 항생제 AWaRe: 1차>70% Access(✅) / 2차>50% Watch(⚠️) / 2차에서도 Access 우선 원칙 / 질환별 1차 처방 권고 [CLINICAL] PMID:40896455 (EClinicalMedicine 2025)
 2026-04-27 | by-disease/heart-failure.md | 보완 — Volume Overload 진단 정확도(BNP ≥100 LR 6.9 / POCUS B-lines 없음 LR 0.09) exam 서브섹션 추가 [CLINICAL] PMID:41729549 (JAMA 2026)
 2026-04-27 | by-disease/concussion.md | 신규 — 소아 뇌진탕 진단 LR 표(mental fog LR 12 / near-point convergence LR 7.0 / 두통없음 LR 0.20) + SCAT [CLINICAL] PMID:41941197 (JAMA 2026)
 2026-04-27 | by-disease/low-back-pain.md | 신규 — 만성 요통 PT vs CBT SMART RCT (749명/52주): PT 기능 우월(ODI 2.8), 비반응자→마음챙김=전환 동등 [CLINICAL] PMID:42008809 (Ann Intern Med 2026)

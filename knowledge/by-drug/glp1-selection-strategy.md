@@ -236,6 +236,32 @@ relations: []
 
 ---
 
+## GLP-1 당뇨전단계 T2DM 예방 — RCT 근거 [CLINICAL]
+
+> 출처: Tentolouris A et al. Prim Care Diabetes 2026;20(2):178-184. PMID:41565568. DOI:10.1016/j.pcd.2026.01.003
+> Narrative synthesis — STEP 1·5, SELECT, SURMOUNT-1 RCT 데이터 포함
+
+**적응 환자군:** 비만(과체중 포함) + 당뇨전단계(공복혈당장애 또는 내당능장애)
+
+### 핵심 수치 (RCT 기반)
+
+| 약물 | 효과 | 근거 시험 |
+|------|------|---------|
+| **Semaglutide 2.4mg** | 정상혈당 회복률 최대 **84%** | STEP 1·5 |
+| **Tirzepatide** | T2DM 발생 **90% 감소** (HR **0.07**, p<0.001) — 체중감량이 주 매개 | SURMOUNT-1 |
+| **Semaglutide** | 심혈관 이벤트(CV death·nonfatal MI·stroke) HR **0.80** (95%CI 0.72–0.90) | SELECT |
+
+**SELECT 추가 분석:** 참가자 66.4%가 당뇨전단계 → CV 위험 감소 효과가 HbA1c와 무관하게 확인 (전당뇨에서도 심혈관 보호).
+
+### 1차의료 적용
+
+- **비만 + 당뇨전단계 환자 GLP-1 처방 시:** "살 빼면서 당뇨 예방 + 심혈관도 보호" — 구체 수치 근거 직접 제시 가능
+- Tirzepatide: T2DM 예방 효과 가장 강력 (HR 0.07)
+- Semaglutide: CV 보호 근거 SELECT에서 확립 (전당뇨 포함)
+- 진행 중인 SURMOUNT-MMO: 비당뇨 비만에서 CV 이익 추가 확인 예정
+
+---
+
 ## GLP-1RA — 전당뇨 치료 [INSIGHTS]
 
 > 출처: Panou T et al. Diabetes Ther 2026. PMID:41984373 DOI:10.1007/s13300-026-01865-5
