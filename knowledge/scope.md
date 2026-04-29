@@ -1,7 +1,7 @@
 # 일차의료 학습 스코프
 
 tags: [META]
-updated: 2026-04-24
+updated: 2026-04-29
 
 ---
 
@@ -20,7 +20,75 @@ updated: 2026-04-24
 
 ---
 
-## Tier 1 — 매일 쓴다 (최우선)
+## Mir-Tier 1 — Core Clinical Identity (2026-04-29 선언)
+
+> source of truth: `~/.claude/projects/C--Users-sk-Desktop------Claude-chartji-dev/memory/user_clinical_focus.md`
+> 본 섹션은 chartji 프로젝트 내 mirror. 핵심영역 변경 시 메모리 먼저 갱신.
+
+| # | 영역 | 정의 | 세부 키워드 | Anchor 저널 |
+|---|---|---|---|---|
+| 1 | **POCUS·초음파 중재** | 근골격·복부·흉부(폐)·심장·갑상선·연부조직·혈관 진단·중재 | POCUS · ultrasound-guided injection · MSK ultrasound · lung ultrasound · POCUS B-lines · thyroid US · soft tissue US · vascular US | J Ultrasound Med · AFP |
+| 2 | **비암성 만성통증·근골격** | 통증약물·신경병증·근골격 진찰·통증 중재 + opioid 법적·임상 경계 | chronic non-cancer pain · neuropathic pain · musculoskeletal exam · trigger point · pain intervention · opioid stewardship · CDC opioid guideline | Pain Medicine · AFP |
+| 3 | **암성통증·완화의료 증상관리** | 임종기 호흡곤란·식욕부진·섬망 + Breaking bad news·ACP·가족 의사소통 | cancer pain · palliative care · end-of-life dyspnea · anorexia · delirium · breaking bad news · advance care planning · family meeting | J Pain Symptom Manage · AFP |
+| 4 | **재택의료·노인의학** | 다약제·frailty·낙상·인지장애·가정 방문 모델 + 한국 시범사업·정식사업 정책 | home-based care · house call · frailty · falls prevention · MCI · 재택의료 시범사업 · long-term care | J Am Geriatr Soc · Drugs & Aging |
+| 5 | **만성질환 본체 확장** | 당뇨·고혈압·이상지질·CKD + 갑상선·골다공증·비만/대사·지방간·빈혈 + 노인 다질환 통합 | type 2 diabetes · hypertension · dyslipidemia · CKD · thyroid · osteoporosis · obesity · MASLD · anemia · multimorbidity guideline | Ann Int Med ITC · NEJM Clinical Practice |
+| 6 | **임상약물학·Deprescribing** | 상호작용·신기능 용량 + opioid stewardship·BZD tapering·anticholinergic burden | drug interaction · renal dose adjustment · deprescribing · BZD taper · anticholinergic burden · STOPP/START · polypharmacy | Drugs & Aging · BMJ Practice Pointers |
+| 7 | **생활습관의학** | 운동·수면·스트레스·식이·절주·금연 (만성질환 예방·치료 근본) | exercise prescription · sleep hygiene · stress management · dietary intervention · alcohol counseling · smoking cessation | AFP · JAMA RCE |
+
+### Mir-Tier 1 부속 — 횡단 모듈 (Tier 1과 동급)
+
+| 모듈 | 정의 | 키워드 | Anchor 저널 |
+|---|---|---|---|
+| **A. 통증·완화·노인 정신건강** | 만성통증 + 우울/불안, 완화 + 적응장애, 노인 우울·섬망·인지 (1차 약물치료까지 본인 영역) | chronic pain depression · palliative adjustment disorder · geriatric depression · delirium management | J Pain Symptom Manage · J Am Geriatr Soc · AFP |
+| **B. Communication & Counseling** | Motivational interviewing·Breaking bad news·Shared decision making·가족 면담 | motivational interviewing · breaking bad news · shared decision making · family meeting · serious illness conversation | NEJM Clinical Problem-Solving · JAMA Patient Page · AFP |
+| **C. Diagnostic Reasoning** | NEJM Clinical Problem-Solving 류, 가정의학 본질로서의 진단 추론 | clinical problem solving · diagnostic reasoning · clinical pearls · diagnostic error | NEJM Clinical Problem-Solving · JAMA RCE · AFP |
+
+---
+
+## Tier 2 — 빈발 외래 (Mir-T1 보조, 2026-04-29 재편)
+
+매일 라운드로빈 1슬롯 (8일 cycle):
+
+| Day % 8 | 영역 | 비고 |
+|---|---|---|
+| 0 | 호흡기 | 감기·천식·COPD·폐렴·만성기침 (4-22~28 보강 활발 — 추가 탐색 시 빈도 낮춤) |
+| 1 | 소화기 | GERD·IBS·기능성소화불량·간염·지방간·담석 (4-29 IBS·기능성소화불량 추가) |
+| 2 | 이비인후과 | 비염·LPR·어지럼증·구강·청각 (4-22~28 강점 유지) |
+| 3 | 내분비외 만성질환 | Mir-T1 5에 안 잡히는 보조 만성질환 |
+| 4 | 비뇨·부인 기본 | UTI·전립선·배뇨장애 + 갱년기·월경이상·HRT |
+| 5 | 예방접종·건강검진 | 성인·노인·여행·소아 백신 + 암 스크리닝·검진 결과 상담 |
+| 6 | **외래응급** | **아나필락시스·저혈당·부정맥 초기·호흡곤란·의식소실·경련·열상 봉합·화상 1차 처치 (의뢰가 아닌 본인 처치 영역)** |
+| 7 | 심혈관·신경 | 부정맥·흉통·심부전 / 두통·치매·뇌졸중·안면신경마비 |
+
+---
+
+## 기존 0순위 풀 → Mir 매핑 (4-29 patch 흡수)
+
+4-29 patch에서 신설한 0순위 풀(피부·두통·갱년기·불면)은 Mir-Tier 1 재편으로 다음과 같이 흡수:
+
+| 기존 0순위 영역 | Mir 매핑 위치 |
+|---|---|
+| 피부과 | Tier 2 (외래 만성 분야 — Day % 8 별도 배정 없음, Anchor 저널에서 자연 등장 + Tier 3 흡수) |
+| 두통 | Mir-T1 부속 A (통증·완화·노인 정신건강 — 만성 두통 포함) + Tier 2 day=7 (심혈관·신경) |
+| 갱년기·월경이상 | Tier 2 day=4 (비뇨·부인 기본) |
+| 불면·수면 | Mir-T1 7) 생활습관의학 또는 부속 A (노인 수면장애) |
+
+---
+
+## Scout 적용 규칙 (2026-04-29 재편)
+
+- **Mir-T1 7영역**: 매일 슬롯 보장 (총 7건 의무) — 발행 부족 시 Tier 2로 fallback + footer 기록
+- **부속 횡단 모듈**: 3일 cycle (day%3==0 → A · ==1 → B · ==2 → C), 1슬롯
+- **Tier 2**: 8일 cycle 라운드로빈, 1슬롯 (직전 7일 회피)
+- **합계**: 기본 7 + 1 + 1 = 9건 (⭐ 8~10건 목표 안전 범위)
+- **Anchor 저널**: 영역별 매핑 (위 표) — 매일 평균 7저널 검색
+- **PMID 30일 차단** + 직전 2회 8건 미달 시 14일 자동 완화 (`routines/scout.md` Step 2-B)
+
+---
+
+## Tier 1 — 매일 쓴다 (legacy, 4-22~29 ingest 라벨 호환용 보존)
+
+> ⚠ **DEPRECATED 2026-04-29** — Mir-Tier 1으로 대체. 4-22~29 누적 41⭐ 라벨링 호환을 위해 보존. 5-6 재검증 시 삭제 여부 재결정.
 
 | 분야 | 일차의료 렌즈 |
 |------|-------------|
@@ -62,13 +130,16 @@ updated: 2026-04-24
 
 ---
 
-## Scout 적용 규칙
+## Scout 적용 규칙 (legacy — 4-29 재편 전 규정, 보존)
+
+> ⚠ **DEPRECATED 2026-04-29** — 새 규칙은 상단 Mir-Tier 1 섹션 참조.
 
 - **Tier 1~2**: Anchor Journal 검색 + 귀납 키워드 탐색에서 자연 커버
 - **Tier 3**: Tier 3 랜덤 탐색 카테고리에 포함
 - **필터링 기준**: 이 스코프의 "일차의료 렌즈"에 맞는 논문만 ⭐ 부여
 
 ### 🔴 0순위 미터치 풀 (2026-04-29 추가, scout.md Step 1-B 라운드로빈 대상)
+> ⚠ **DEPRECATED 2026-04-29** — 위 "기존 0순위 풀 → Mir 매핑" 표로 흡수. 본 섹션은 4-29 patch 기록 보존.
 
 4-22~29 8회 scout에서 **⭐ 0~1건만 등장한 Tier 2 영역** — 자기강화 loop 차단을 위해 명시적 cycling 우선:
 
