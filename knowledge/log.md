@@ -5,6 +5,8 @@
 
 ---
 
+2026-04-29 | guidelines/asthma-reflux-comorbidity.md | 신규 — 천식+역류 동반이환: 조절불량 천식 + 위·식도/인후두 증상 시 PPI·알긴산 empiric trial. 무증상 일률 처방 미권고 (Chan WW 2011 메타분석 PEF 소폭 외 효과 없음). GINA 2025·AGA 2023(PMID:37061897)·San Diego 2025(PMID:40197644)·Chan 2011(PMID:21482834) 통합. [CLINICAL — 조건부] [TIPS — by ENT교수, Researcher 검증]
+2026-04-29 | knowledge-bundle.js | 백로그 bundle 반영 batch — 누적 미반영 deep-extract 산출물(4-24·4-26·4-27·4-28) + asthma-reflux 신규 = 신규 20개 + 보완 2개 (heart-failure-volume-overload·obesity-pharmacotherapy-grade) v2 alias 패턴. TRIAGE calcCategories 16개 신규 추가.
 2026-04-28 | by-disease/covid-outpatient-antivirals.md | 신규 — COVID-19 외래 항바이러스 4종 비교(Simnotrelvir high CoE –35.8h / Molnupiravir moderate CoE 회복+Long COVID 8.5% vs 11.0% / Paxlovid low CoE / Ensitrelvir 효과 불충분) [CLINICAL] PMID:41662710 (Ann Intern Med 2026)
 2026-04-28 | by-drug/glp1-selection-strategy.md | 보완 — 당뇨전단계 T2DM 예방 [CLINICAL] 섹션: Tirzepatide T2DM 발생 90% 감소(HR 0.07) / Semaglutide 정상혈당 84% 회복 / SELECT CV HR 0.80(전당뇨 포함) [CLINICAL] PMID:41565568 (Prim Care Diabetes 2026)
 2026-04-28 | by-disease/heart-failure.md | 보완 — HFpEF+비만 체중감량 전략 섹션 추가: GLP-1 계열 운동능력·증상·삶의질 RCT 확인, 비만 클수록 이익↑, 체중감량=HFpEF 최우선 치료 [CLINICAL] PMID:41802118 (Curr Opin Cardiol 2026)
