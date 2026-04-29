@@ -67,3 +67,28 @@ updated: 2026-04-24
 - **Tier 1~2**: Anchor Journal 검색 + 귀납 키워드 탐색에서 자연 커버
 - **Tier 3**: Tier 3 랜덤 탐색 카테고리에 포함
 - **필터링 기준**: 이 스코프의 "일차의료 렌즈"에 맞는 논문만 ⭐ 부여
+
+### 🔴 0순위 미터치 풀 (2026-04-29 추가, scout.md Step 1-B 라운드로빈 대상)
+
+4-22~29 8회 scout에서 **⭐ 0~1건만 등장한 Tier 2 영역** — 자기강화 loop 차단을 위해 명시적 cycling 우선:
+
+| 분야 | 8회 ⭐ 누적 | 외래 빈도 | scout 키워드 예 |
+|---|---|---|---|
+| **피부과** | 0건 | 외래 빈발 (악성 병변·습진·여드름·사마귀·피부감염) | "atopic dermatitis primary care", "skin cancer screening primary care", "common dermatoses primary care review" |
+| **두통/신경과** | 1건 (소아 뇌진탕만) | 두통 자체가 외래 최다 | "primary headache primary care", "migraine prophylaxis", "tension-type headache", "dementia screening primary care", "stroke prevention primary care" |
+| **갱년기·월경이상** | 1건 (성호르몬 VTE만) | 부인과 본체 | "menopause management primary care", "perimenopause symptoms", "abnormal uterine bleeding outpatient", "PMS PMDD treatment" |
+| **불면·수면** | 0건 | Tier 2 정신건강 + 생활습관 | "chronic insomnia CBT-I primary care", "sleep hygiene", "OSA primary care screening" |
+
+라운드로빈 알고리즘은 `routines/scout.md` Step 1-B 참조. 4일 1회 cycling으로 4영역 1회 이상 cover 후 🟡 보강 진행 영역으로 이동.
+
+### 🟡 보강 진행 풀 (이미 일부 ⭐ 등장, 추가 탐색 가치 있음)
+
+호흡기/소화기/노인의학은 4-22~29에 활발히 보강됨 → 다음 cycle에서 빈도 낮춤. 대신 다음 영역들은 Tier 1 핵심임에도 부분 공백:
+
+- **고혈압 본체** (resistant-HTN 외)
+- **이상지질혈증 본체** (당뇨 동반 외)
+- **갑상선·골다공증** (내분비 본체)
+- **건강검진** (FIT 외 — 유방·자궁·간·갑상선·전립선)
+- **근골격·통증** (만성요통·손목굴 외 — 관절통·통풍·신경병증)
+- **비뇨의학 본체** (전립선·배뇨장애·성기능)
+- **생활습관 의학** (금연 외 — 운동·수면·스트레스·식이·절주)
