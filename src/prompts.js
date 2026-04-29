@@ -75,6 +75,22 @@ JSON만 반환 (다른 텍스트 절대 금지):
   CKD (만성콩팥병/eGFR 30-59/크레아티닌·시스타틴C/신장기능 추적 — 중등도 CKD G3 모니터링 맥락)
   성호르몬-VTE (피임약 처방/HRT/갱년기 호르몬 치료/성별확정호르몬/VTE 과거력 있는 호르몬 요법 상담 — 성호르몬과 혈전 위험 평가 맥락)
   smoking-cessation (금연/전자담배 vaping/NRT/varenicline/금연 상담 — 성인 금연 시도 맥락)
+  asthma-reflux-comorbidity (조절되지 않는 천식 + 속쓰림·역류감·만성기침·인후이물감 — 천식·역류 동반 평가/PPI·알긴산 추가 결정 맥락)
+  allergic-rhinitis (알레르기비염/코막힘·재채기·콧물·INCS·INAH·ARIA 가이드라인 관련)
+  chronic-cough (만성기침/8주 이상/표준치료 무반응 RCC/duloxetine·gabapentin 신경조절 — 난치성 기침 맥락)
+  croup (소아 짖는기침/쉰목소리/흡기성 협착음/덱사메타손/네뷸라이즈드 에피네프린 관련)
+  carpal-tunnel-syndrome (손저림/야간 손목 통증/엄지~약지 저림/스테로이드 주사 vs 수술/정중신경 관련)
+  anxiety-depression-cbt (불안장애/PTSD/우울·약물+CBT 병합 의뢰/CBT 효과 크기 — depression-screening 보조 맥락)
+  hepatitis-b-management (만성 B형간염/HBV DNA/ALT 상승/tenofovir·entecavir/HCC 감시 — 진단·치료·추적 맥락)
+  concussion (두부 외상 후 mental fog/소음·빛 과민/오심/near-point convergence — 소아·청소년 뇌진탕 진단 맥락)
+  low-back-pain (만성 요통 12주 이상/PT vs CBT/비약물치료 1차 — 비특이적 요통 비약물 전략 맥락)
+  recurrent-uti (재발성 요로감염/12개월 3회 이상/D-mannose/질 에스트로겐/예방적 항생제 — 폐경 여성 포함)
+  COPD (만성폐쇄성폐질환/GOLD 2025 ABE 분류/혈중 호산구·ICS 결정/흡입기 LABA·LAMA 관련)
+  colorectal-cancer-screening (대장암 스크리닝/45세 이상/FIT 우편 키트/대장내시경 — 스크리닝 전략 상담 맥락)
+  diabetes-dyslipidemia (당뇨 이상지질혈증/Non-HDL·ApoB 표적/스타틴+ezetimibe+PCSK9 단계 — 당뇨 + 지질 잔류 위험 맥락)
+  MASH (MASLD/NAFLD/NASH/지방간염/FIB-4/GLP-1로 MASH 해소·체중감량 — 지방간염 동반 비만·당뇨 맥락)
+  covid-outpatient-antivirals (COVID-19 외래 항바이러스/molnupiravir/Paxlovid/simnotrelvir/Long COVID 예방 맥락)
+  obesity-pharmacotherapy-grade (비만 약물치료 GRADE 권고/TOS·OMA·OAC 강력 권고/HFpEF·OSA·MASH·OA 동반 GLP-1 우선 — 약물 선택 가이드 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */

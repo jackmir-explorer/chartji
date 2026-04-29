@@ -2173,3 +2173,809 @@ var _afp_poems_2024_v2 = {
 };
 KNOWLEDGE_BUNDLE["afp-top20-poems-2024"] = _afp_poems_2024_v2;
 KNOWLEDGE_BUNDLE["POEM"] = _afp_poems_2024_v2;
+
+/* ═══════════════════════════════════════════════════════════════════
+   2026-04-29 Liby ingest batch — 백로그 누적분 + asthma-reflux 신규
+   원본 md는 4-24·4-26·4-27·4-28 Deep Extract 또는 4-29 신규 작성.
+   본 ingest는 md 파일 → bundle 이식.
+   설계 메모:
+   - 모두 disease/topic kind (drug 없음 → uiHooks.guide ["*"] 강제 불필요)
+   - topic kind는 parents 부여 금지 (section-vocabulary.md 규칙)
+   - hepatitis-b-management 키: 기존 v1 "B형간염"·"hepatitis B" 본문 보존, 신규 진단·치료 protocol은 별도 topic 키로 격리
+   - glp1-selection-strategy 키: 기존 v1 "glp1"·"마운자로"·"위고비" 본문 보존, 선택 전략·중단 후 전환·SMI·전당뇨 예방 등 신규 누적분은 별도 topic 키로 격리
+   - asthma-reflux-comorbidity 키: 천식 본 엔트리 부재로 신규 작성. ENT교수 메모(by) + GINA·AGA·San Diego 기반 검증
+═══════════════════════════════════════════════════════════════════ */
+
+/* asthma-reflux-comorbidity — 신규 ingest (4-29 미르 메모 + Researcher 검증).
+   TIPS by ENT교수 + GINA 2025·AGA 2023·San Diego 2025·Chan WW 2011 메타분석 통합. */
+var _asthma_reflux_v2 = {
+  kind: "topic",
+  keywords: ["asthma-reflux-comorbidity","천식-역류","asthma reflux","uncontrolled asthma","조절되지않는 천식","천식 GERD","천식 LPR","asthma comorbidity"],
+  primarySources: [
+    "GINA 2025 Strategy Report (Global Initiative for Asthma)",
+    "AGA Clinical Practice Update on Extraesophageal GERD 2023. PMID:37061897, DOI:10.1016/j.cgh.2023.01.040",
+    "San Diego Consensus on LPR/LPS 2025. PMID:40197644, DOI:10.14309/ajg.0000000000003482",
+    "Chan WW et al. Arch Intern Med 2011 — PPI for Asthma Meta-analysis. PMID:21482834"
+  ],
+  sections: {
+    indication: {
+      content: "조절되지 않는 천식 환자에서 다음과 같은 위·식도/인후두 증상이 동반될 때 GERD/LPR 동반 평가·치료 고려:\n- 속쓰림 (heartburn)\n- 역류감 (regurgitation)\n- 만성 기침\n- 인후이물감 (globus)\n- 음성 변화·잦은 인후 청소\n\nGINA 2025: 무증상 GERD에 일률 PPI 사용 반대. 증상이 있는 GERD에 한해 치료 권고.",
+      sources: ["[TIPS — by ENT교수]"]
+    },
+    protocol: {
+      content: "### A. 증상성 GERD 동반 (속쓰림·역류감 명확)\n- PPI 1일 1회 → 반응 부족 시 2회/일 trial × 8-12주 (AGA 2023, PMID:37061897)\n- 알긴산(Gaviscon류) 병용 가능 — 증상 추가 개선\n- 동시에 표준 천식 치료 (ICS/LABA) 최적화 유지\n\n### B. LPS(인후두역류 의심) 동반\n- 식도 증상 동반 시 → PPI BID × 3개월 + 알긴산 4회/일 (San Diego Consensus 2025)\n- 식도 증상 없는 고립 LPS → PPI 경험적 처방 미권고. 내시경/24h pH-impedance 우선 (LPR-consensus 엔트리 참조)\n\n### C. 무증상 GERD (천식 단독 조절 불량)\n- PPI/알긴산 추가 효과 근거 약함 (Chan WW 2011, n=2524 메타분석: morning PEF 통계적 소폭 차이뿐, 증상·QoL·FEV1 개선 없음)\n- 일률 처방 미권고 — 환자별 증상 평가 후 결정",
+      sources: []
+    },
+    precaution: {
+      content: "- \"천식이 안 잡히면 무조건 PPI 추가\" 식의 일률 처방은 근거 부족 — Chan WW 2011 메타분석에서 임상적 의미 있는 개선 미확인\n- PPI는 골다공증·CKD·소장세균과증식·C. difficile 위험 증가 — 장기 처방 시 위험-편익 재평가\n- 알긴산은 PPI 대비 안전 프로파일 우수 — PPI 부작용 환자에서 우선 고려 가능 (LPR.md 참조)",
+      sources: []
+    },
+    referral: {
+      content: "- PPI BID 8-12주 trial 후 증상 지속 → 소화기내과 (내시경, pH-impedance)\n- 인후두 증상 우세 → 이비인후과 (후두경, 후두 과반응 평가)\n- 천식 자체 조절 불량 지속 (반복 악화·경구 스테로이드 의존) → 호흡기내과 (severe asthma 평가, 생물학적 제제 후보 평가)",
+      sources: []
+    },
+    notes: {
+      content: "[CLINICAL — 조건부] 메모 방향성은 맞지만 \"무증상에도 일률 PPI/알긴산\"은 근거 약함. 식도/인후두 증상 동반 시에 한해 empiric trial이 표준 가이드라인 권고. 처방 전 환자에게 \"속쓰림·역류감·기침·인후 이물감\"을 직접 질문해야 한다 (증상 매핑이 핵심).",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["asthma-reflux-comorbidity"] = _asthma_reflux_v2;
+KNOWLEDGE_BUNDLE["천식-역류"] = _asthma_reflux_v2;
+KNOWLEDGE_BUNDLE["asthma reflux"] = _asthma_reflux_v2;
+
+/* cardiomyopathy — 비허혈성 심근증 (4-24 deep-extract). [초록 기반 — 전문 미확인] */
+var _cardiomyopathy_v2 = {
+  kind: "disease",
+  keywords: ["심근증","cardiomyopathy","비대성심근증","HCM","확장성심근증","DCM","제한성심근증","RCM","ARVC","비허혈성"],
+  primarySources: [
+    "Coppiano J et al. Cardiomyopathy: A Guide for Primary Care. Am Fam Physician 2026;113(2):166-173. PMID:41839108 [초록 기반 — 전문 미확인]"
+  ],
+  sections: {
+    classification: {
+      content: "| 유형 | 특징 |\n|---|---|\n| **HCM** (비대성) | 가장 흔한 원발성. 좌심실 벽 비대, 유출로 폐색 가능. 돌연사 위험. |\n| **DCM** (확장성) | 심실 확장 + 수축기능 저하 (HFrEF 표현형). 가족력·바이러스·음주·자가면역. |\n| **RCM** (제한성) | 이완기능 장애 위주. 아밀로이도증 가장 흔한 원인. |\n| **ARVC** | 우심실 근육 지방·섬유 조직 치환. 부정맥·돌연사 위험. |",
+      sources: []
+    },
+    exam: {
+      content: "### 증상\n- 호흡곤란, 피로 (공통)\n- 부정맥, 실신 → HCM/ARVC 특히 주의\n- 흉통, 기좌호흡, 야간 발작성 호흡곤란\n\n### 초기 평가\n- **개인력 + 가족력** 필수 — 심근증·돌연사 가족력\n- 신체진찰 (수축기 잡음 → HCM 유출로 폐색 시사)\n- 심전도 (좌심실 비대, Q파, ARVC 우각 이상)\n- 심초음파 — 표현형·기능 평가 핵심\n- 필요 시 cardiac MRI",
+      sources: []
+    },
+    protocol: {
+      content: "**공통:**\n- 심부전 동반 시 → GDMT 4 pillars (heart-failure 엔트리 참조)\n- 부정맥 → rate or rhythm control\n- 혈전위험 → 항응고\n\n**HCM 특이:**\n- 모든 환자 ICD 위험도 평가 (AHA/ACC 권고)\n- 유출로 폐색(LVOTO) → disopyramide, beta-blocker, 수술적 격벽절제, 알코올 격벽절제술\n- 운동 제한: 고강도 경쟁 스포츠 주의\n\n**DCM:**\n- HFrEF 기준 GDMT\n- 원인 교정 (음주·독성)\n\n**중증/진행:** 심장이식 고려",
+      sources: []
+    },
+    referral: {
+      content: "| 상황 | 행동 |\n|---|---|\n| 심초음파 이상 (심근증 의심) | 심장 전문의 |\n| HCM 진단 | 심장 전문의 (ICD 평가 포함) |\n| 실신·부정맥·돌연사 가족력 | 즉시 의뢰 |\n| GDMT titration | 심장 전문의 주도 |\n| 중증·진행성 | 심장이식 센터 |",
+      sources: []
+    },
+    notes: {
+      content: "- 가족력 청취 필수: 원인 불명 심근증 = 유전성 가능성. 직계 가족 스크리닝 필요.\n- HCM ≠ 수술 선행: 대부분 약물 관리. 유출로 폐색 증상성 환자에서만 중재.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["cardiomyopathy"] = _cardiomyopathy_v2;
+KNOWLEDGE_BUNDLE["심근증"] = _cardiomyopathy_v2;
+KNOWLEDGE_BUNDLE["HCM"] = _cardiomyopathy_v2;
+KNOWLEDGE_BUNDLE["DCM"] = _cardiomyopathy_v2;
+
+/* chronic-cough — 난치성 만성기침(RCC) Duloxetine RCT (4-24 deep-extract). [CLINICAL — 조건부] */
+var _chronic_cough_v2 = {
+  kind: "disease",
+  keywords: ["만성기침","chronic cough","난치성기침","RCC","refractory chronic cough","duloxetine","SNRI","기침과민"],
+  primarySources: [
+    "Wang S et al. Duloxetine for refractory chronic cough RCT. BMC Med 2026;24(1):82. PMID:41530764, DOI:10.1186/s12916-025-04613-x"
+  ],
+  sections: {
+    definition: {
+      content: "**난치성 만성기침(RCC)**: 표준 치료(PPI·항히스타민·흡입기 등)로 해결되지 않는 8주 이상 지속 기침.\n기전: 기침 과민 증후군 — 감각신경 과반응성(sensory nerve hyperresponsiveness)이 주요 경로.",
+      sources: []
+    },
+    protocol: {
+      content: "### 1단계 — 원인 제거 우선\n- **GERD/LPR**: PPI ± alginic acid (asthma-reflux-comorbidity 참조)\n- **알레르기비염·후비루**: 항히스타민, INCS\n- **천식·기관지경련**: SABA, ICS\n- **약물(ACEi)**: 중단 후 4-6주 관찰\n\n### 2단계 — 난치성(RCC) 확인 후 신경조절 요법\n\n**Duloxetine (RCC에서 1b 수준 근거)**\n\n| 항목 | 내용 |\n|---|---|\n| 대상 | 표준치료 실패 RCC, 기분장애 없는 환자 |\n| 기전 | 5-HT + NE 재흡수 억제 → 기침 감각신경 과반응성 감소 |\n| 효과 | 기침 횟수/시간 83.96→33.12 (위약 87.67→80.36), p<0.001 |\n| 삶의질 | LCQ 12.75→14.88 (위약 12.17→12.81), p<0.001 |\n| 치료기간 | 8주 (RCT 기준) |\n\n**비교 옵션:** Gabapentin (신경병증 기침), Morphine low-dose (영국 가이드, 부작용↑), Speech pathology 기침 억제 훈련.",
+      sources: []
+    },
+    precaution: {
+      content: "- 오심 11.36%, 어지럼 15.91%, 졸음 9.09% — 위약보다 유의 ↑\n- 기분장애(우울·불안) 환자는 RCT 제외 — 동반 시 별도 판단\n- 운전·기계 조작 주의 (졸음)\n- 단일 기관(중국 상하이 동제병원) RCT, n=98 — 근거 강도 한계",
+      sources: []
+    },
+    notes: {
+      content: "현재까지 RCC duloxetine 가장 명확한 RCT (PMID:41530764). 가바펜틴보다 부작용 프로파일 유리, 모르핀보다 일차의료 접근성↑. 기분장애 병발 환자는 오히려 duloxetine 적합할 수 있으나 RCT 범위 밖. [단일기관 n=98 — 대규모 재현 연구 필요. CLINICAL — 조건부]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["chronic-cough"] = _chronic_cough_v2;
+KNOWLEDGE_BUNDLE["만성기침"] = _chronic_cough_v2;
+KNOWLEDGE_BUNDLE["RCC"] = _chronic_cough_v2;
+
+/* allergic-rhinitis — ARIA 2024-2025 (4-24 deep-extract). [REGULATORY] */
+var _allergic_rhinitis_v2 = {
+  kind: "disease",
+  keywords: ["알레르기비염","allergic rhinitis","AR","비강내 스테로이드","INCS","비강내 항히스타민","INAH","ARIA","계절성비염","지속성비염"],
+  primarySources: [
+    "Sousa-Pinto B et al. ARIA-EAACI Guidelines 2024-2025: Intranasal Treatments. Allergy 2025;81(4):954-976. PMID:41324154, DOI:10.1111/all.70131"
+  ],
+  sections: {
+    protocol: {
+      content: "### 비강내 치료 권고 서열 (ARIA 2024-2025)\n```\nINAH+INCS 복합 > INCS 단독 > INAH 단독\n```\n\n| 비교 | 권고 방향 |\n|---|---|\n| INAH+INCS vs INAH 단독 | **INAH+INCS 우선** (강화) |\n| INAH+INCS vs INCS 단독 | **INAH+INCS 우선** (강화 — 핵심 변화) |\n| INCS 단독 vs INAH 단독 | INCS 우선 (유지) |\n\n### 약제 분류 (한국 외래)\n| 분류 | 대표 약제 |\n|---|---|\n| INCS | Fluticasone(플루티카손), Mometasone(모메타손), Budesonide(부데소니드) |\n| INAH | Azelastine(아젤라스틴) |\n| INAH+INCS 복합 | Dymista (azelastine+fluticasone) — 2025 우선 권고 |\n| 비충혈제거제 | Oxymetazoline 등 — 단기(≤3-5일)만 |\n\n### 적용 원칙\n- 계절성 AR: 노출 직전 또는 증상 발현 시 시작 (preseason 전처치 가능)\n- 지속성 AR: 지속 사용 (INCS ± INAH)\n- 단기 증상 → INAH 또는 경구 항히스타민\n- 중등도 이상 또는 QoL 저하 → INCS 또는 INAH+INCS",
+      sources: []
+    },
+    precaution: {
+      content: "- INCS: 비강 건조, 출혈 (올바른 방향 분사 교육 필수 — 비중격 아닌 외측벽 향)\n- Decongestant 비강 스프레이 3-5일 초과 금지 — 약물유발비염(rhinitis medicamentosa)\n- 비충혈제거제 경구: 고혈압·심혈관·녹내장·전립선비대 환자 주의",
+      sources: []
+    },
+    referral: {
+      content: "- INCS+INAH 복합 치료에도 반응 없음 → 알레르기 전문의 (면역요법 고려)\n- 비용종 동반 → 이비인후과\n- 동반 천식 (AR-asthma overlap) → 천식 병행 관리",
+      sources: []
+    },
+    notes: {
+      content: "2024-2025 개정 핵심: INAH+INCS 복합이 INCS 단독보다 우선 권고로 격상. mHealth 데이터 가이드라인 근거 첫 공식 반영. 환자 선호도·약가 고려 명시.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["allergic-rhinitis"] = _allergic_rhinitis_v2;
+KNOWLEDGE_BUNDLE["알레르기비염"] = _allergic_rhinitis_v2;
+KNOWLEDGE_BUNDLE["ARIA"] = _allergic_rhinitis_v2;
+
+/* meningitis — 세균성·무균성 수막염 (4-26 deep-extract). [CLINICAL] */
+var _meningitis_v2 = {
+  kind: "disease",
+  keywords: ["수막염","meningitis","세균성수막염","무균성수막염","경부강직","뇌척수액","화학예방","수막구균"],
+  primarySources: [
+    "Krebs L et al. Am Fam Physician 2026;113(3):260-269. PMID:41839077"
+  ],
+  sections: {
+    definition: {
+      content: "수막염: 뇌·척수를 둘러싼 수막의 염증. 자기제한적부터 사망·장애까지 다양.\n\n| 유형 | 주요 원인균 | 경과 |\n|---|---|---|\n| **세균성** | S. pneumoniae(폐렴구균), N. meningitidis(수막구균), H. influenzae type B, GBS | 응급 — 미치료 시 사망 |\n| **무균성(바이러스성)** | Enterovirus (가장 흔함), HSV, HIV | 대부분 자기제한적 (2주 이내) |",
+      sources: []
+    },
+    exam: {
+      content: "### RedFlag 증상 조합\n- **4대**: 발열 + 두통 + 경부강직 + 의식 변화\n- 수막구균: 점출혈·자반(petechiae/purpura) → 즉시 응급\n- 영·유아: 구토·수유거부·무기력·대천문 팽창\n\n### 요추천자(LP) — 진단 핵심\n| 항목 | 세균성 | 바이러스성 |\n|---|---|---|\n| 개압 | >200 mmH₂O | 정상~경미 ↑ |\n| 백혈구 | 다핵구 우세 수백~수천 | 단핵구 우세 수십~수백 |\n| 단백질 | >100 mg/dL | 정상~경미 ↑ |\n| 당 (CSF/혈당) | <0.4 | ≥0.6 |\n| 그람염색 | 양성(60~80%) | 음성 |\n\nLP 필수 항목: 개압·세포수·총단백·당·그람염색·배양·PCR",
+      sources: []
+    },
+    protocol: {
+      content: "### 세균성 수막염 — **발현 1시간 내 IV 항생제** (1시간 rule)\n```\n경험적 (성인, 지역사회 획득):\n  Ceftriaxone 2g IV q12h\n+ Vancomycin 15-20 mg/kg IV q8-12h  (S. pneumoniae 내성 커버)\n+ Ampicillin 2g IV q4h              (50세 이상·임신·면역저하 — Listeria)\n```\n- **덱사메타손 병용**: Dexamethasone 0.15 mg/kg IV q6h × 4일 — 항생제 직전 또는 동시 (신경학적 후유증 감소)\n\n### 무균성 (바이러스성)\n- 지지치료: 진통제·수액·안정\n- HSV 의심(행동변화·측두엽) → Acyclovir 경험적",
+      sources: []
+    },
+    differential: {
+      content: "| 질환 | 감별 포인트 |\n|---|---|\n| 두개내압 상승 | 유두부종 → LP 전 CT 필요 |\n| Listeria 수막염 | ≥50세·면역저하·임신 — ampicillin 추가 필수 |\n| Herpes encephalitis | 행동변화·측두엽 증상 → Acyclovir |\n| 결핵 수막염 | 만성 경과, 저당·고단백, 림프구 우세 |",
+      sources: []
+    },
+    referral: {
+      content: "### 화학예방 (Chemoprophylaxis)\n| 원인균 | 약제 |\n|---|---|\n| **N. meningitidis** | Rifampin 600mg PO q12h × 2일 / Ciprofloxacin 500mg PO 1회 / Ceftriaxone 250mg IM 1회 |\n| **H. influenzae B** | Rifampin 20mg/kg/일 × 4일 (최대 600mg/일) |\n\n### 의뢰\n- 수막염 임상 의심 → 즉시 응급 이송 (항생제 투여 후 이송)\n- LP 금기(유두부종·의식 저하·국소 신경증상) → CT 먼저\n- 세균성 확진 → 보건당국 신고 의무",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["meningitis"] = _meningitis_v2;
+KNOWLEDGE_BUNDLE["수막염"] = _meningitis_v2;
+KNOWLEDGE_BUNDLE["세균성수막염"] = _meningitis_v2;
+
+/* croup — 소아 상기도 폐쇄 (4-26 deep-extract). [CLINICAL] */
+var _croup_v2 = {
+  kind: "disease",
+  keywords: ["크루프","croup","짖는기침","흡기성협착음","덱사메타손","dexamethasone","에피네프린","소아기침"],
+  primarySources: [
+    "Cooke A et al. Am Fam Physician 2026;113(3):254-258. PMID:41839076"
+  ],
+  sections: {
+    definition: {
+      content: "성문하 구조의 바이러스성 염증으로 인한 소아 상기도 폐쇄.\n- 주요 원인: Parainfluenza virus (1형 가장 흔함)\n- 유행 시기: 10~11월 (가을)\n- 호발 연령: 6개월~3세",
+      sources: []
+    },
+    exam: {
+      content: "### 3대 증상 (Classic triad)\n- 컹컹 짖는 기침 (barking/seal-like cough)\n- 쉰 목소리 (hoarseness)\n- 흡기성 협착음 (inspiratory stridor)\n- 발열 동반 가능\n\n### 중증도 (Westley Croup Score)\n| 점수 | 중증도 | 처치 |\n|---|---|---|\n| 0~2 | 경증 | 덱사메타손 단독 + 귀가 |\n| 3~5 | 중등도 | 덱사메타손 + 흡입 에피네프린 + 관찰 |\n| ≥6 | 중증 | 즉시 응급 이송 |\n\n### 영상 검사\n- 대부분 불필요. AP 경부 X-ray Steeple sign — 특이도 낮아 진단 기준 아님",
+      sources: []
+    },
+    protocol: {
+      content: "### 경증 (Westley 0~2)\n```\nDexamethasone 0.6 mg/kg PO 1회 (최대 12 mg)\n```\n- 프레드니솔론 대체 가능 (1 mg/kg/day × 3일)\n- 2~3시간 관찰 후 개선 확인 → 귀가\n\n### 중등도~중증 (Westley 3 이상)\n```\nDexamethasone 0.6 mg/kg PO/IM 1회\n+ 네뷸라이즈드 에피네프린:\n    L-epinephrine 1:1,000 — 5 mL 흡입\n    (또는 Racemic epinephrine 2.25% — 0.05 mL/kg, 최대 0.5 mL)\n```\n- 에피네프린 후 **2~4시간 관찰 필수** (rebound)\n- 무반응 → 기도확보 + 응급 이송\n\n### 권고하지 않는 처치\n- Cool mist humidifier (근거 없음)\n- 1세대 항히스타민제\n- 항생제 (바이러스성 — 세균성 기관염 의심 시 제외)\n- 헬리옥스",
+      sources: []
+    },
+    differential: {
+      content: "| 질환 | 감별 포인트 |\n|---|---|\n| **세균성 기관염** | 고열 + 독성 외관 + 덱사메타손 무반응 → 즉시 응급 기도 확보 |\n| **후두개염** | 침 흘림 + tripod 자세 + 목 뻣뻣함 + 눕지 않으려 함 |\n| **후인두농양** | 경부 강직 + 경부 X-ray 전방 연조직 비대 |\n| **이물질 흡인** | 갑작스런 발병, 발열 없음 |\n| **혈관성 부종** | 알레르기 노출력, 두드러기 |",
+      sources: []
+    },
+    referral: {
+      content: "- Westley ≥3 (중등도 이상) → 응급 평가\n- 덱사메타손 무반응 → 세균성 기관염·후두개염 의심 → 즉시 이송\n- **반복성 크루프 (3회 이상)** → 해부학적 이상·기저 질환 평가 (이비인후과·소아과)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["croup"] = _croup_v2;
+KNOWLEDGE_BUNDLE["크루프"] = _croup_v2;
+
+/* doac-elderly — 80세 이상 DOAC 출혈 위험 (4-26 deep-extract). [CLINICAL — 조건 기반] */
+var _doac_elderly_v2 = {
+  kind: "topic",
+  keywords: ["DOAC","항응고","고령DOAC","80세이상","출혈위험","노인항응고","apixaban","HAS-BLED"],
+  primarySources: [
+    "Ebell M. Am Fam Physician 2026;113(3):285-286. PMID:41839090 [초록 기반 — 전문 미확인]"
+  ],
+  sections: {
+    definition: {
+      content: "80세 이상 DOAC 사용자에서 출혈 위험이 유의미하게 증가. 뇌졸중 예방 이익(CHA₂DS₂-VASc) vs 출혈 위험(HAS-BLED) 재평가가 필요한 시점.",
+      sources: []
+    },
+    exam: {
+      content: "### 출혈 위험 인자\n| 인자 | 임상 포인트 |\n|---|---|\n| 나이 ≥80세 | 독립 위험 인자 |\n| 신기능 저하 | GFR↓ → DOAC 배설↓ → 농도↑ |\n| 저체중 (≤60 kg) | 용량 조정 기준 |\n| 낙상·프레일티 | 두개내 출혈 위험 |\n| 다약제 복용 | NSAID·아스피린·항생제 상호작용 |\n| 과거 출혈력 | 소화기 출혈 특히 주의 |\n| 조절 불량 고혈압 | 뇌졸중+출혈 위험 동시 ↑ |\n\n### HAS-BLED ≥3 → 고위험: 교정 가능 인자(혈압·NSAID·알코올) 적극 교정",
+      sources: []
+    },
+    protocol: {
+      content: "### 80세 이상 DOAC 선택\n| 약제 | 고령 특이사항 | 용량 조정 |\n|---|---|---|\n| **Apixaban** | 고령 출혈 프로파일 가장 유리 | 2.5 mg BID: ≥80세 + 체중≤60 kg + Cr≥1.5 mg/dL **2가지 이상** 해당 시 |\n| Rivaroxaban | 1일 1회 편의 | GFR 15~50 시 15 mg qd |\n| Dabigatran | 신장 배설 80% — 신기능↓ 특히 주의 | GFR <30 금기 |\n| Edoxaban | — | 체중·신기능 기반 조정 |\n\n→ **80세 이상 Apixaban 우선 고려** (임상 근거 가장 많음)\n\n### 항응고 시작 기준 (심방세동)\n- CHA₂DS₂-VASc ≥2 (남) / ≥3 (여) → 항응고 시작 권고 유지\n- 나이 자체가 점수 포함 (65~74세=1점, ≥75세=2점)",
+      sources: []
+    },
+    notes: {
+      content: "- 처방 전: GFR·체중·다약제 상호작용 확인\n- 정기 모니터링: 신기능(6~12개월), 출혈 징후 교육\n- **낙상 예방**: 항응고 중단 이유보다 낙상 예방에 집중 (낙상 위험만으로 항응고 중단 비권고)\n- 공유의사결정(SDM): 80세 이상에서 뇌졸중 예방 이익과 출혈 위험을 환자·가족과 함께 논의",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["doac-elderly"] = _doac_elderly_v2;
+KNOWLEDGE_BUNDLE["고령DOAC"] = _doac_elderly_v2;
+KNOWLEDGE_BUNDLE["80세이상DOAC"] = _doac_elderly_v2;
+
+/* carpal-tunnel-syndrome — 손목굴증후군 수술 vs 주사 (4-26 deep-extract). [CLINICAL — 초록] */
+var _carpal_tunnel_v2 = {
+  kind: "disease",
+  keywords: ["손목굴증후군","carpal tunnel syndrome","수근관증후군","손저림","스테로이드주사","수근관수술","정중신경"],
+  primarySources: [
+    "Barry HC. Am Fam Physician 2026;113(3):online. PMID:41839082 [초록 기반 — 전문 미확인]"
+  ],
+  sections: {
+    definition: {
+      content: "손목 정중신경(median nerve)의 수근관 내 압박 신경병증.\n- 여성 > 남성 (약 3:1), 40~60대 호발\n- 위험 인자: 반복 손목 동작, 당뇨, 갑상선 저하증, 임신, 비만, RA",
+      sources: []
+    },
+    exam: {
+      content: "### 증상\n- 엄지~약지(1~4번째) 저림·통증 (야간 악화, 손 흔들면 일시 호전)\n- 동작 중 물건 떨어트림\n- 심한 경우: **무지구근(thenar eminence) 위축** — 즉시 수술 의뢰 신호\n\n### 진단 도구\n| 검사 | 민감도 | 특이도 |\n|---|---|---|\n| Phalen's test | ~75% | ~47% |\n| Tinel's sign | ~50% | ~77% |\n| **NCS/EMG** | 진단 표준 (수술 전 권고) | — |",
+      sources: []
+    },
+    protocol: {
+      content: "### Step 1 — 보존적 (경증~중등도)\n- 야간 손목 부목 (wrist splint, 중립위)\n- 활동 수정\n- 기저 질환 교정 (당뇨·갑상선·비만)\n\n### Step 2 — 코르티코스테로이드 주사\n- 수근관 내 국소 (예: triamcinolone 10~40 mg + lidocaine)\n- **단기 증상 완화** 효과 확실\n- **장기(18개월) 회복률은 수술 대비 열등** (PMID:41839082)\n\n### Step 3 — 수술 (확정적 치료)\n적응증:\n- 보존·주사 치료 실패 (2회 이상 주사 후 재발)\n- 무지구근 위축 (중증 신경 손상)\n- NCS 중등도~중증 신경 손상\n\n술식: 수근관 유리술 (Carpal Tunnel Release — 내시경 또는 개방). 18개월 추적 시 수술군 회복률 유의 우월.",
+      sources: []
+    },
+    referral: {
+      content: "- 무지구근 위축 → 신경외과·정형외과 즉시 의뢰\n- 2회 주사 후 재발 → 수술 의뢰\n- NCS 중등도 이상 신경 손상 → 수술 의뢰 고려\n- 환자 상담: \"주사는 단기 완화, 근본 해결은 수술\" — 공유의사결정",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["carpal-tunnel-syndrome"] = _carpal_tunnel_v2;
+KNOWLEDGE_BUNDLE["손목굴증후군"] = _carpal_tunnel_v2;
+KNOWLEDGE_BUNDLE["수근관증후군"] = _carpal_tunnel_v2;
+
+/* multiple-myeloma — 다발성골수종 1차의료 의심·의뢰 (4-26 deep-extract). [CLINICAL] */
+var _multiple_myeloma_v2 = {
+  kind: "disease",
+  keywords: ["다발성골수종","multiple myeloma","형질세포","M-protein","CRAB","SPEP","UPEP","MGUS"],
+  primarySources: [
+    "Hughes PR et al. Am Fam Physician 2026;113(3):244-253. PMID:41839075"
+  ],
+  sections: {
+    definition: {
+      content: "형질세포(plasma cell)의 혈액 악성 종양 — 단클론 단백(M-protein) 과다 생성.\n- 미국 연간 36,000건 신규 진단, 중앙 진단 연령 69세\n- 전구 단계: MGUS → Smoldering → 증상성 다발성골수종",
+      sources: []
+    },
+    exam: {
+      content: "### 의심 증상 조합 — CRAB + 기타\n| 증상 | 기전 |\n|---|---|\n| **C — 고칼슘혈증** | 파골세포 활성화 |\n| **R — 신부전** | M-protein, 고칼슘혈증, 탈수 |\n| **A — 빈혈** | 골수 침범 |\n| **B — 뼈 통증·병적골절** | 용해 병변 |\n| 피로·체중감소 | 전신 악성 |\n| 반복 감염 | 정상 면역글로불린 억제 |\n\n→ 고령 환자에서 빈혈 + 신부전 + 고칼슘혈증 조합 → 다발성골수종 적극 배제\n\n### 초기 평가 (1차의료)\n- CBC + 감별, CMP, **SPEP** (M-protein), **UPEP** (Bence-Jones), UA, TSH, X-ray (증상 부위)",
+      sources: []
+    },
+    protocol: {
+      content: "> 치료 결정·실행은 혈액종양내과 영역. 1차의료 = 의심·의뢰·추적·지지.\n\n### 표준 흐름\n```\n유도 치료 (3~4제 병합)\n→ 자가 줄기세포이식 (ASCT — 적격 시)\n→ 유지 치료 (lenalidomide 등)\n```\n\n### 보조\n- 비스포스포네이트 (zoledronic acid) 또는 Denosumab — 골 보호\n- VTE 예방 (aspirin/항응고 — 면역조절제 사용 시)",
+      sources: []
+    },
+    referral: {
+      content: "- SPEP/UPEP M-protein 확인 → **혈액종양내과 즉시 의뢰**\n- 신부전 + 고칼슘혈증 + 빈혈 → **긴급 의뢰**\n- 척추 압박골절 + M-protein → 정형외과·신경외과 동시\n\n### 협력 관리 (의뢰 후)\n- 합병증 모니터링 (감염·빈혈·신기능·고칼슘혈증)\n- 심리사회적 지지·완화 의료 연계\n- 동반 질환 관리 (당뇨·고혈압·골다공증)\n- 재발 신호 감시 (지속 피로·뼈 통증 재발·감염 반복)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["multiple-myeloma"] = _multiple_myeloma_v2;
+KNOWLEDGE_BUNDLE["다발성골수종"] = _multiple_myeloma_v2;
+KNOWLEDGE_BUNDLE["MGUS"] = _multiple_myeloma_v2;
+
+/* anxiety-depression-cbt — CBT 통합 메타분석 (4-26 deep-extract). [CLINICAL] */
+var _cbt_meta_v2 = {
+  kind: "topic",
+  keywords: ["인지행동치료","CBT","불안장애","우울증","PTSD","강박장애","OCD","심리치료"],
+  primarySources: [
+    "Cuijpers P et al. JAMA Psychiatry 2025;82(6):563-571. PMID:40238104, DOI:10.1001/jamapsychiatry.2025.0482"
+  ],
+  sections: {
+    definition: {
+      content: "인지행동치료(CBT)는 대부분의 정신질환에서 1차 치료(first-line)로 권고되는 구조화된 심리치료. JAMA Psy 2025 메타분석 — 375 RCT, 32,968명.",
+      sources: []
+    },
+    exam: {
+      content: "### 효과 크기 (Hedges g) — CBT vs 대조군\n| 질환 | g | 근거 강도 |\n|---|---|---|\n| **PTSD** | **1.27** (최대) | 강력 |\n| **특정 공포증** | >1.0 | 강력 |\n| 사회불안·공황·GAD | 0.5~1.0 | 강력 |\n| 폭식증·BED | 0.5~1.0 | 강력 |\n| **주요우울증 (MDD)** | 0.5~1.0 | 강력 |\n| 강박장애 (OCD) | 0.5~1.0 | 강력 |\n| 양극성장애·정신증 | <0.5 | 보조적 |\n\n- Waitlist 대조군: g >0.94 (효과 더 큼)\n- 일상치료(TAU) 대조군: 0.22~1.13 (보수적)\n- 중도 탈락률: 특정 공포증 8% ~ PTSD 24%",
+      sources: []
+    },
+    protocol: {
+      content: "### CBT 의뢰 적응증\n| 질환 | 권고 강도 |\n|---|---|\n| PTSD | **1차 치료** — 강력 권고 |\n| 특정 공포증 | **1차 치료** |\n| 불안장애 (공황·사회불안·GAD) | 약물 + CBT 병합 권고 |\n| 주요우울증 | 약물 단독 대비 장기 재발 예방 우수 |\n| OCD | ERP (노출반응방지) — CBT 특수 기법 |\n\n### 외래 실용\n- **불안·우울 초진**: 약물 처방 + CBT 동시 의뢰 → 최적 결과\n- 제공 경로: 임상심리사·정신건강복지사·정신건강의학과 협진\n- 디지털 CBT (iCBT): 전통 CBT 대비 유사 효과 — 접근성 보조\n- 통상 8~20회기 (주 1회)",
+      sources: []
+    },
+    precaution: {
+      content: "- 중증 정신증·양극성장애: CBT 단독 불충분 — 약물 우선, CBT 보조\n- 자살 위험: CBT 의뢰 전 안전 계획 수립\n- 효과 크기는 대조군 종류에 크게 의존 (waitlist vs TAU)\n- 한국: CBT 보험 급여 제한 → 접근성 제약 현실 고려\n- 대부분 RCT 서양 인구 → 문화적 적응 효과 차이 가능",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["anxiety-depression-cbt"] = _cbt_meta_v2;
+KNOWLEDGE_BUNDLE["CBT"] = _cbt_meta_v2;
+KNOWLEDGE_BUNDLE["인지행동치료"] = _cbt_meta_v2;
+
+/* hepatitis-b-management — B형간염 진단·치료·HCC 감시 (4-26 deep-extract).
+   기존 v1 "B형간염"·"hepatitis B" 키 본문 보존(예방 vs 진단/치료 분리), 진단·치료 protocol은 별도 topic으로 격리. */
+var _hepb_mgmt_v2 = {
+  kind: "topic",
+  keywords: ["hepatitis-b-management","만성B형간염","HBV진단","HBV치료","tenofovir","entecavir","HCC감시"],
+  primarySources: [
+    "Moore II R et al. Am Fam Physician 2026;113(3):235-243. PMID:41839074"
+  ],
+  sections: {
+    definition: {
+      content: "| 유형 | 진단 기준 | 자연 경과 |\n|---|---|---|\n| **급성 HBV** | HBsAg(+) + IgM anti-HBc(+) + 증상(황달·AST/ALT↑) | 성인 >95% 자연 회복 |\n| **만성 HBV** | HBsAg(+) **6개월 이상** 지속 | 간경변·HCC 위험 |\n\n예방·스크리닝(triple panel HBsAg/Anti-HBs/Anti-HBc, 백신) → 별도 vaccine 엔트리 참조.",
+      sources: []
+    },
+    exam: {
+      content: "### 급성 HBV\n- 증상: 구역·구토·복통·황달 (잠복기 1~4개월)\n- 검사: HBsAg, IgM anti-HBc, AST/ALT, 빌리루빈, PT\n- **전격성 간염 RedFlag**: PT 연장 + 황달 + 의식 변화 → 즉시 의뢰\n\n### 만성 HBV 초기 평가\n| 영역 | 검사 |\n|---|---|\n| HCC 가족력 | 병력 청취 |\n| 간기능·섬유화 | AST/ALT, 혈소판, FibroScan |\n| 바이러스 상태 | HBeAg/HBeAb, HBV DNA (IU/mL) |\n| 공존 감염 | Anti-HCV, Anti-HDV, HIV |",
+      sources: []
+    },
+    protocol: {
+      content: "### 치료 시작 기준\n```\n아래 중 하나 충족:\n1. ALT 상승 + HBV DNA >2,000 IU/mL\n2. 간경변 + 바이러스 검출 가능 (any level)\n3. 면역억제요법(항암·생물학적제제) 시작 전 — 예방적 투여\n```\n\n### 1차 약제\n| 약제 | 용량 | 특이사항 |\n|---|---|---|\n| **Tenofovir disoproxil (TDF)** | 300 mg PO qd | 신기능·골밀도 모니터링 |\n| **Tenofovir alafenamide (TAF)** | 25 mg PO qd | TDF 대비 신·골 부작용 ↓ |\n| **Entecavir (ETV)** | 0.5 mg PO qd (de novo) | 임신 카테고리 C |\n\n- 내성 장벽 높음 → 장기 복용 가능 (중단 없이 유지)\n- 기능적 치료(HBsAg 소실)는 현행 치료제로 드묾 (<10%/년)\n\n### 예방적 투여\n- 적응: 항암화학·rituximab 등 생물학적제제·장기이식 전\n- 치료 기준 미달이라도 HBsAg(+)이면 예방 투여 권고",
+      sources: []
+    },
+    monitoring: {
+      content: "### 치료 중 추적\n| 항목 | 주기 |\n|---|---|\n| AST/ALT | 3~6개월 |\n| HBV DNA | 6~12개월 |\n| 신기능 (TDF) | 6~12개월 |\n| HBeAg seroconversion | HBeAg(+) 환자 |\n\n### HCC 감시 — 6개월마다\n대상: 간경변 환자 / HCC 고위험군 (50세 이상 남성, 가족력, 지속 고바이러스혈증)\n```\n복부 초음파 (RUQ US) + AFP (알파태아단백)\n```",
+      sources: []
+    },
+    referral: {
+      content: "- 간경변 확인·의심 → 소화기내과 공동 관리\n- 치료 기준 충족 (ALT↑ + HBV DNA >2,000) → 항바이러스제 처방 시작 또는 전문의 협진\n- 전격성 간염 → 즉시 응급·간이식팀\n- HCC 의심 (초음파 결절·AFP 상승) → 즉시 의뢰",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["hepatitis-b-management"] = _hepb_mgmt_v2;
+KNOWLEDGE_BUNDLE["만성B형간염"] = _hepb_mgmt_v2;
+KNOWLEDGE_BUNDLE["HBV치료"] = _hepb_mgmt_v2;
+
+/* concussion — 소아 뇌진탕 임상 진단 (4-27 deep-extract). [CLINICAL — 초록] */
+var _concussion_v2 = {
+  kind: "disease",
+  keywords: ["concussion","뇌진탕","소아뇌진탕","mild traumatic brain injury","mTBI","SCAT","near-point convergence"],
+  primarySources: [
+    "Shah SN et al. Does This Child Have a Concussion? JAMA RCE Systematic Review. JAMA 2026. PMID:41941197, DOI:10.1001/jama.2026.1233 [초록 기반 — 전문 미확인]"
+  ],
+  sections: {
+    definition: {
+      content: "두부 외상에 의한 경증 외상성 뇌손상(mTBI). 구조적 손상 없이 뇌 기능 이상이 나타나는 임상 증후군. 미국 연간 소아 110만~190만 건 추정.",
+      sources: []
+    },
+    exam: {
+      content: "### Rule-in — 특이도 높은 증상 (JAMA 2026 RCE, 23개 연구)\n| 증상 | LR | 특이도 |\n|---|---|---|\n| Mental fog (멘탈 포그) | **11.8–12.0** | 0.96 |\n| 소음 과민 | 6.9 | 0.94 |\n| 오심 | 6.7 | 0.93 |\n| 빛 과민 | 6.4 | 0.93 |\n\n### Rule-out\n| 증상 | LR | 민감도 |\n|---|---|---|\n| 두통 없음 | **0.20** | 0.74 |\n\n→ 두통 없으면 뇌진탕 가능성 낮다 (단, 두통 있다고 단독 확진 불가)\n\n### 신체검진 (안구 운동 — 특이도↑, 민감도↓)\n| 소견 | LR | 특이도 |\n|---|---|---|\n| Near-point convergence 이상 | **7.0** | 0.97 |\n| Smooth pursuits 이상 | 6.5 | 0.96 |\n| Saccades 이상 | 4.8 | 0.92 |\n\n주의: 이상 소견 → 뇌진탕 가능성 매우 높음. 민감도 모두 <40% — 없다고 배제 불가.\n\n### SCAT (Sport Concussion Assessment Tool)\n증상 우려 시 SCAT으로 포괄 평가.",
+      sources: []
+    },
+    protocol: {
+      content: "### 급성기 관리\n1. 즉각 활동 중단 (Return-to-Play/Return-to-Learn 프로토콜 시작)\n2. 인지·신체 활동 단계적 복귀\n3. 소아과·스포츠의학·신경과 의뢰 기준 확인\n\n### 급성 두통\n- 아세트아미노펜(타이레놀) 우선\n- NSAIDs·아스피린 초기 출혈 우려 시 주의",
+      sources: []
+    },
+    referral: {
+      content: "- CT/MRI 적응: 의식소실, 기억상실, 반복 구토, 증상 악화, 신경학적 이상\n- 증상 4주 이상 지속 → 뇌진탕 전문 클리닉·소아신경과·스포츠의학\n- 안구 운동 이상(near-point convergence·smooth pursuits·saccades) 병존 → 조기 의뢰 고려",
+      sources: []
+    },
+    notes: {
+      content: "외래에서:\n1. Mental fog + 소음/빛 과민 + 오심 → 뇌진탕 고강도 의심\n2. **Near-point convergence 검사** — \"코끝에 손가락 대고 천천히 접근, 두 개로 보이는 시점\" 체크. 외래 즉시 가능한 간단 검사\n3. 두통 없으면 배제 유력 — 다른 원인 고려",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["concussion"] = _concussion_v2;
+KNOWLEDGE_BUNDLE["뇌진탕"] = _concussion_v2;
+KNOWLEDGE_BUNDLE["소아뇌진탕"] = _concussion_v2;
+
+/* low-back-pain — 만성 요통 PT vs CBT SMART RCT (4-27 deep-extract). [CLINICAL] */
+var _low_back_pain_v2 = {
+  kind: "disease",
+  keywords: ["low back pain","요통","만성요통","chronic LBP","physical therapy","cognitive behavioral therapy","PT","CBT","물리치료"],
+  primarySources: [
+    "Fritz JM et al. Effectiveness of Nonpharmacologic Treatments for Chronic Low Back Pain: SMART RCT. Ann Intern Med 2026. PMID:42008809, DOI:10.7326/ANNALS-25-04645"
+  ],
+  sections: {
+    definition: {
+      content: "만성 요통(cLBP): 12주 이상 지속 요부 통증. 비특이적 만성 요통이 대부분.",
+      sources: []
+    },
+    exam: {
+      content: "### 만성 요통 초진 체크\n- 통증 기간·부위·방사 여부\n- 야간통·발열·체중감소 → RedFlag 배제\n- 기능장애 평가: Oswestry Disability Index(ODI) 또는 Roland-Morris\n- 이전 치료력 (물리치료·약물·주사·수술)\n- 우울·불안 동반 (만성화 위험인자)",
+      sources: []
+    },
+    protocol: {
+      content: "### 비약물치료 1차 — SMART RCT 근거 (Ann Int Med 2026, n=749, 52주)\n\n**Stage I (8주)**\n| 치료 | 기능 개선(ODI) | 통증 강도 | 권고 |\n|---|---|---|---|\n| **물리치료(PT)** | ODI 2.8점 더 개선 (96% CI 0.38–5.1) | 유의차 없음 | **1차 우선** |\n| 인지행동치료(CBT) | 기준 | 동등 | 2차 대안 |\n\n주의: ODI 2.8점은 통계적으로 유의하나 임상적 최소 유의차(MID 6점) 미만.\n\n**Stage II (비반응자 8주 재치료)**\n| 전략 | 기능·통증 | 결과 |\n|---|---|---|\n| 마음챙김(Mindfulness) | 차이 없음 | 동등 |\n| 치료 전환(switch) | 차이 없음 | 동등 |\n\n→ 1차 비반응자: 마음챙김 또는 치료 전환 모두 동등 효과 — 환자 선호도·접근성으로 선택.",
+      sources: []
+    },
+    referral: {
+      content: "**PT 의뢰 — 1차 우선**\n- 만성 비특이적 요통 → PT 8주 의뢰\n\n**RedFlag → 즉시 영상·전문과**\n- 신경학적 결손 (하지 근력·감각 이상, 방광·직장 기능 이상)\n- 척추 골절 의심 (외상·골다공증)\n- 악성·감염 의심 (발열·체중감소·야간통·면역저하)\n\n**PT 비반응 (8주 후 개선 없음)**\n- 마음챙김 기반 치료 또는 CBT 의뢰\n- 필요 시 통증클리닉·재활의학과 협진",
+      sources: []
+    },
+    notes: {
+      content: "- PT가 CBT보다 기능 회복 우월하나 통증 강도 차이 없음 → 기능 중심 목표 환자에게 PT 근거 제시\n- 비반응자에서 치료 전환 vs 마음챙김 동등 → 환자 선호도·비용·접근성 중심 결정\n- CBT 참여율이 PT보다 낮았음 (연구 제한) → 실제 임상에서 CBT 접근성 고려",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["low-back-pain"] = _low_back_pain_v2;
+KNOWLEDGE_BUNDLE["요통"] = _low_back_pain_v2;
+KNOWLEDGE_BUNDLE["만성요통"] = _low_back_pain_v2;
+
+/* recurrent-uti — 여성 재발성 UTI AUA (4-27 deep-extract). [CLINICAL — 초록] */
+var _recurrent_uti_v2 = {
+  kind: "disease",
+  keywords: ["recurrent UTI","재발성 요로감염","여성 요로감염","UTI prevention","D-mannose","vaginal estrogen","질에스트로겐","예방적항생제"],
+  primarySources: [
+    "Pair LS, Somerall WE. Recurrent uncomplicated UTI based on AUA guidelines. Nurse Pract 2025;50(7):41-47. PMID:40551332, DOI:10.1097/01.NPR.0000000000000333 [초록 기반 — 전문 미확인]"
+  ],
+  sections: {
+    definition: {
+      content: "재발성 UTI: 12개월 내 3회 이상, 또는 6개월 내 2회 이상 비합병 요로감염.",
+      sources: []
+    },
+    exam: {
+      content: "### 진단 확인 (AUA)\n- **요배양 검사 확인** 필수 — 증상만으로 진단 금지\n- 균종·감수성 확인 (항생제 내성 방지)\n- 위험인자 탐색: 성생활 패턴, 살정제 피임, 폐경, 해부학적 이상",
+      sources: []
+    },
+    protocol: {
+      content: "### AUA 16개 권고 — 예방 전략 3축\n\n**1. 예방적 항생제**\n- 저용량 항생제 지속요법 또는 성교 후 단회 요법\n- 균종·감수성 결과 기반 (요배양 선행 필수)\n\n**2. 비항생제 예방**\n- **D-만노스(D-mannose)**: 대장균 요로 부착 억제. 경구 보충제, 부작용 적음\n- 크랜베리: 근거 약하나 환자 선호도 높을 때 고려\n\n**3. 호르몬 치료 (폐경 여성)**\n- **질 에스트로겐**: 폐경 여성 재발성 UTI — 질 점막 회복, 정상 세균총 복원\n- 경구 에스트로겐보다 국소 질 에스트로겐 우선 (전신 흡수 최소)\n\n### 자가 치료 프로토콜\n- 증상 인지 즉시 미리 처방된 항생제 자가 복용\n- 조건: 재발성 UTI 확인 환자, 증상 명확, 요배양 추후 확인",
+      sources: []
+    },
+    referral: {
+      content: "- 해부학적 이상 의심 (잦은 재발·비전형 균종): 비뇨기과\n- 임신 중 재발성 UTI: 산부인과·비뇨기과 협진\n- 다제내성균(MDR) 동반: 감염내과",
+      sources: []
+    },
+    notes: {
+      content: "외래 실전:\n- **폐경 여성 재발성 UTI → 질 에스트로겐 크림/좌제** 처방 고려 (비항생제 1차)\n- 재발 예방 시 요배양 없이 항생제 처방 반복 금지 → 내성 유발\n- D-만노스는 OTC — 경증 예방에 먼저 안내 가능",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["recurrent-uti"] = _recurrent_uti_v2;
+KNOWLEDGE_BUNDLE["재발성요로감염"] = _recurrent_uti_v2;
+KNOWLEDGE_BUNDLE["recurrent UTI"] = _recurrent_uti_v2;
+
+/* covid-outpatient-antivirals — COVID 외래 항바이러스 ACP v3 (4-28 deep-extract). [CLINICAL — 초록] */
+var _covid_antiviral_v2 = {
+  kind: "topic",
+  keywords: ["COVID-19","코로나","항바이러스","molnupiravir","nirmatrelvir","Paxlovid","simnotrelvir","Long COVID"],
+  primarySources: [
+    "Sommer I et al. ACP Living Rapid Review v3. Ann Intern Med 2026;179(4):524-534. PMID:41662710, DOI:10.7326/ANNALS-25-03691 [초록 기반]"
+  ],
+  sections: {
+    indication: {
+      content: "성인 외래 COVID-19 확진자, 특히:\n- 중증 진행 위험인자 (고령, 면역저하, 비만, 당뇨, 심혈관)\n- 증상 발현 5일 이내 치료 시작 가능",
+      sources: []
+    },
+    comparison: {
+      content: "| 약물 | 근거 | 회복 개선 | 회복 시간 | 특이사항 |\n|---|---|---|---|---|\n| **Simnotrelvir-ritonavir** | high CoE | — | **–35.8h** 중앙값 | AE↑ 28.9% vs 21.6% |\n| **Molnupiravir** | moderate CoE | 31.8% vs 22.6% | 9d vs 15d | **3~6개월 지속증상 8.5% vs 11.0% ★** |\n| **Nirmatrelvir-ritonavir (Paxlovid)** | low CoE | 70.7% vs 53.6% | P=0.011 | 약물상호작용 광범위 |\n| **Ensitrelvir 125mg** | low CoE | 차이 없을 수 있음 | — | AE↑ 44.2% vs 24.8% |\n\n### Molnupiravir 장기 이익 ★\n- 3~6개월 지속증상(Long COVID) 감소: 8.5% vs 11.0% (moderate CoE)\n- 사망·입원·중증 이상반응 차이 없음\n- 기존 항바이러스제 중 **Long COVID 예방 근거가 있는 유일한 약물**",
+      sources: []
+    },
+    protocol: {
+      content: "- **Simnotrelvir-ritonavir**: 회복 가장 빠름 (high CoE), 국내 허가 여부 확인\n- **Molnupiravir**: 회복 개선 + Long COVID 감소 → 고령·지속증상 우려 환자 우선 고려\n- **Paxlovid**: 회복 가능성↑ 있으나 낮은 근거, 약물상호작용 주의\n- Ensitrelvir: 표준 용량(125mg) 효과 불충분 가능",
+      sources: []
+    },
+    precaution: {
+      content: "- Paxlovid: 리토나비르 → **약물상호작용 광범위** (스타틴, 항응고제, 면역억제제)\n- Molnupiravir: **임신부 금기** (태아 돌연변이 가능성)\n- 모든 항바이러스제: **증상 발현 5일 이내** 투여 시 효과\n- 근거 제한: 7건 RCT, Omicron 시기, 일부 결과 low CoE",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["covid-outpatient-antivirals"] = _covid_antiviral_v2;
+KNOWLEDGE_BUNDLE["COVID-19"] = _covid_antiviral_v2;
+KNOWLEDGE_BUNDLE["코로나항바이러스"] = _covid_antiviral_v2;
+
+/* MASH — MASLD/MASH GLP-1 네트워크 메타분석 (4-28 deep-extract). [CLINICAL] */
+var _mash_v2 = {
+  kind: "disease",
+  keywords: ["MASH","MASLD","지방간","지방간염","NASH","NAFLD","비알코올성지방간"],
+  primarySources: [
+    "Monami M et al. GLP-1 RA in MASH: Network Meta-Analysis. Diabetes Obes Metab 2026;28(5):4253-4260. PMID:41804193, DOI:10.1111/dom.70617"
+  ],
+  sections: {
+    definition: {
+      content: "- **MASLD** (Metabolic dysfunction-Associated Steatotic Liver Disease): 과거 NAFLD\n- **MASH** (Metabolic dysfunction-Associated SteatoHepatitis): 과거 NASH. 염증+손상 동반 — 간섬유화·간경변 진행 위험\n\n명명 변경 (2023): NAFLD/NASH → MASLD/MASH (국제 합의)",
+      sources: []
+    },
+    exam: {
+      content: "### 적응 환자군 선별\n- 비만(BMI ≥27) + 인슐린저항성(당뇨전단계·T2DM) → MASLD 가능성 높음\n- 대부분 무증상; 일부 우상복부 불편감\n- 비침습 평가: ALT↑ + 지방간 에코 (복부초음파)\n\n### 비침습 섬유화 지표\n- **FIB-4 지수** (나이×AST / [혈소판×√ALT])\n  - <1.30: 고도 섬유화 배제 가능\n  - ≥2.67: 고도 섬유화 의심 → 간전문의 의뢰\n- 간초음파 + FibroScan (탄성초음파)",
+      sources: []
+    },
+    protocol: {
+      content: "### 핵심: 체중 감량 = 조직학적 개선의 핵심 매개변수\n\n6개 RCT 네트워크 메타분석 (n=1379, biopsy-confirmed MASH):\n| 중재 | MASH 해소 |\n|---|---|\n| **Tirzepatide** | 위약 대비 유의 우월 |\n| **Semaglutide** | 위약 대비 유의 우월 |\n| 슬리브 위절제술 | 우월 |\n| 루와이 위우회술(RYGB) | 우월 |\n\n**핵심 발견:** TBWL%(총 체중 감량%)가 MASH 해소율·섬유화 개선의 주요 매개변수.\n\n주의: 네트워크 연결 약하고 위약군 중심 → 간접 비교 추정치 불정확. 약물 간 직접 비교 RCT 부재. **탐색적(exploratory)** 결과.\n\n### FDA 허가\n- **Semaglutide 2.4mg (위고비)**: FDA 2024 MASH F2-F3 섬유화 적응증 추가 (BMI ≥30, 또는 ≥27 + 동반질환)\n\n### 생활습관\n- 체중 5~10% 감량 → 간지방·ALT 개선\n- 체중 10% 이상 감량 → MASH 해소 가능 (조직학적 개선 기대)\n- 알코올 금주, 당 제한, 규칙적 운동",
+      sources: []
+    },
+    notes: {
+      content: "비만 → 인슐린저항성 → 간 지방 축적 → 산화스트레스·염증 → MASH → 간성상세포 활성화 → 섬유화 → 간경변·HCC\n\nGLP-1 효과 경로:\n1. 체중 감량 → 내장지방↓ → 인슐린저항성↓\n2. 직접 간 효과 (체중독립은 불확실)",
+      sources: []
+    },
+    referral: {
+      content: "- FIB-4 ≥1.30 (중간) → FibroScan 또는 소화기내과 협진\n- FIB-4 ≥2.67 → 간전문의 (진행성 섬유화 가능성)\n- 간경변 의심 (복수·황달·혈소판↓) → 즉시 의뢰\n- 비만수술 고려 → 외과",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["MASH"] = _mash_v2;
+KNOWLEDGE_BUNDLE["MASLD"] = _mash_v2;
+KNOWLEDGE_BUNDLE["지방간염"] = _mash_v2;
+
+/* COPD — GOLD 2025 ABE + 호산구 (4-28 deep-extract). [CLINICAL, REGULATORY] */
+var _copd_v2 = {
+  kind: "disease",
+  keywords: ["COPD","만성폐쇄성폐질환","GOLD 2025","ABE","호산구","ICS","LABA","LAMA","흡입기"],
+  primarySources: [
+    "Basoshvili N. GOLD 2025 vs ATS/ERS COPD Review. Cureus 2026;18(1):e102479. PMID:41769574, DOI:10.7759/cureus.102479",
+    "GOLD 2025: Global Initiative for Chronic Obstructive Lung Disease 2025 Update"
+  ],
+  sections: {
+    exam: {
+      content: "### 진단\n- **기도 폐쇄**: 기관지 확장제 후 **FEV1/FVC < 0.70** (GOLD 고정)\n- 증상: 호흡곤란, 만성 기침, 객담\n- 위험인자: 흡연(주요), 대기오염, 직업적 노출, α1-antitrypsin 결핍\n\n### 중증도 (GOLD 등급)\n| 등급 | FEV1 (%) |\n|---|---|\n| 1 (경증) | ≥80 |\n| 2 (중등도) | 50–79 |\n| 3 (중증) | 30–49 |\n| 4 (최중증) | <30 |",
+      sources: []
+    },
+    classification: {
+      content: "### GOLD 2025 ABE 분류\n| 그룹 | 기준 | 처방 |\n|---|---|---|\n| **A** | 증상 없거나 경미 (mMRC 0-1 / CAT <10) AND 악화 위험 없음 (≤1회 비입원) | LABA 또는 LAMA 단독 |\n| **B** | 증상 있음 (mMRC ≥2 / CAT ≥10) OR 악화 위험 ≥1회 | LABA + LAMA 병용 |\n| **E** | 악화 ≥2회/년 OR 입원 ≥1회/년 | LABA + LAMA (±ICS); 호산구 ≥300 → ICS 추가 강력 고려 |\n\n**GOLD 2025 핵심 변경:** B·D 그룹 → B·E 그룹 단순화 (이전 C 그룹 소멸)",
+      sources: []
+    },
+    protocol: {
+      content: "### 흡입기 단계\n```\n초기:\n  A군 → LABA 또는 LAMA 단독\n  B/E군 → LABA + LAMA (이중 기관지확장제)\n\n증상/악화 지속:\n  E군 + 호산구 ≥300 → LABA + LAMA + ICS (삼중)\n  E군 + 호산구 <100 → ICS 회피 (효과↓ + 폐렴↑)\n```\n\n### 혈중 호산구 기반 ICS 결정\n| 호산구 | ICS 권고 |\n|---|---|\n| **≥300 cells/μL** | ICS 강력 고려 |\n| 100–299 | 효과 불확실 — 개별 판단 |\n| **<100 cells/μL** | ICS **회피** (폐렴 위험↑, 효과↓) |\n\nGOLD 2025 핵심: 혈중 호산구를 ICS 사용·제거 의사결정에 공식 바이오마커로 통합.\n\n### 비약물\n- **금연** — 가장 중요한 예후 개선\n- 폐재활 (운동능력·QoL 개선)\n- 예방접종: 독감(매년), 폐렴구균, COVID-19, Tdap",
+      sources: []
+    },
+    monitoring: {
+      content: "- mMRC / CAT 점수 — 매 외래\n- 스파이로메트리: 1–2년마다\n- 혈중 호산구: ICS 결정·유지 시 주기적 재평가\n- 폐렴·악화 에피소드 기록 (E군 분류 근거)\n- 흡입기 사용 기술 확인 (방문마다)",
+      sources: []
+    },
+    precaution: {
+      content: "- ICS 장기 사용 → 폐렴 위험↑ (특히 호산구 <100)\n- Beta-blocker: COPD + 심혈관 동반 시 선택적 β1 차단제(비소프롤롤·메토프롤롤)는 안전 — 금기 아님\n- 산소치료: PaO₂ <55mmHg 또는 SpO₂ ≤88% → 장기 산소치료 적응",
+      sources: []
+    },
+    referral: {
+      content: "- 외래에서 ABE 분류 + 호산구 → 흡입기 처방 결정 가능\n- 의뢰: 진단 불확실, FEV1 <30%, 잦은 입원 악화, 수술 고려, α1-AT 결핍 의심",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["COPD"] = _copd_v2;
+KNOWLEDGE_BUNDLE["만성폐쇄성폐질환"] = _copd_v2;
+
+/* colorectal-cancer-screening — 우편 FIT 키트 45~49세 (4-28 deep-extract). [CLINICAL — 초록] */
+var _crc_screening_v2 = {
+  kind: "topic",
+  keywords: ["대장암","대장암스크리닝","FIT","대장내시경","colonoscopy","45세 스크리닝","colorectal cancer screening"],
+  primarySources: [
+    "Slawson D. AFP POEM. Am Fam Physician 2026;113(3):online. PMID:41839084 [초록 기반 — 전문 미확인]"
+  ],
+  sections: {
+    indication: {
+      content: "### 스크리닝 시작 연령\n| 기관 | 시작 연령 |\n|---|---|\n| USPSTF (2021) | **45세** (이전 50세에서 하향) |\n| ACG | 45세 (일반), 40세 (고위험) |\n| 국내(KNHSP) | 50세 (분변잠혈 2년마다) |\n\n45~49세 연령군은 새로 추가된 스크리닝 대상 — 효과적 전략 선택이 중요.",
+      sources: []
+    },
+    comparison: {
+      content: "### 우편 FIT 키트 — 45~49세 최고 완료율 (PMID:41839084)\n45~49세에서 **우편 FIT 키트 발송**이 스크리닝 완료율 가장 높임 (클리닉 내 의사처방 방식 대비 우월).\n\n| 전략 | 완료율 | 특징 |\n|---|---|---|\n| **우편 FIT 키트** | **최고** | 환자 능동 참여 불필요, 집에서 채취·반송 |\n| 클리닉 내 처방·안내 | 낮음 | 의사 지시 후 환자 스스로 — 탈락 많음 |\n\n### gFOBT vs FIT\n| 검사 | 민감도 | 식이제한 |\n|---|---|---|\n| gFOBT | 낮음 | 필요 (적육류·아스피린 제한) |\n| **FIT** | 높음 | **불필요** |\n\n### 스크리닝 전체 선택지\n| 방법 | 주기 | 일차진료 활용성 |\n|---|---|---|\n| **FIT** | 매년 | ★★★ 1순위 |\n| 대장내시경 | 10년 | ★★ 조직검사·용종 절제 가능 |\n| CT 대장조영술 | 5년 | ★ 전처치 필요 |\n| 분변 DNA (Cologuard) | 1–3년 | ★ 비용↑ |",
+      sources: []
+    },
+    protocol: {
+      content: "- **45세 이상 신환** → 대장암 스크리닝 상담 시 **우편 FIT 전략 우선 권유**\n- FIT 양성 → 대장내시경 의뢰 (내과·외과)\n- FIT는 **매년** 시행 (한 번 음성 = 영구 안전 아님)\n- FIT 양성 → 대장내시경까지 추적 중요 (추적 실패 = 스크리닝 프로그램 실패)\n\n### 고위험군 — 대장내시경 우선\n- 1촌 가족 중 50세 미만 대장암 또는 진행 선종 진단\n- 가족성 선종성 용종증(FAP), 린치증후군 가족력\n- 40세부터 또는 가족 진단 10년 전부터",
+      sources: []
+    },
+    precaution: {
+      content: "- 75세 이상: 개별화 (USPSTF: 75–85세 선택적, 85세 이상 권고 안 함)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["colorectal-cancer-screening"] = _crc_screening_v2;
+KNOWLEDGE_BUNDLE["대장암스크리닝"] = _crc_screening_v2;
+KNOWLEDGE_BUNDLE["FIT"] = _crc_screening_v2;
+
+/* diabetes-dyslipidemia — 당뇨 Non-HDL·ApoB 지질 (4-28 deep-extract). [CLINICAL, REGULATORY] */
+var _dm_dyslipidemia_v2 = {
+  kind: "topic",
+  keywords: ["당뇨이상지질혈증","diabetes dyslipidemia","non-HDL","ApoB","LDL","statin","ezetimibe","PCSK9","잔류위험"],
+  primarySources: [
+    "Brandts J et al. Diabetes Dyslipidemia Management. Cardiovasc Diabetol 2026;25(1). PMID:41968323, DOI:10.1186/s12933-026-03166-4"
+  ],
+  sections: {
+    definition: {
+      content: "**당뇨 환자의 지질 이상은 LDL-C만으로 잡히지 않는다.**\n- 당뇨 특유: 중성지방↑ + HDL↓ + 잔류 죽상경화성 지단백 증가\n- LDL-C가 정상이어도 잔류 죽상위험 높을 수 있음\n- **Non-HDL-C** 와 **ApoB** 가 잔류 위험 파악에 LDL-C보다 우월",
+      sources: []
+    },
+    exam: {
+      content: "### 표적 수치 (Non-HDL-C 기준 — ADA/AACE/ESC 통합)\n| 위험도 | LDL-C | **Non-HDL-C** | ApoB |\n|---|---|---|---|\n| 중등도 | <100 | **<130** | <100 |\n| 고위험 | <70 | **<100** | <80 |\n| 매우 고위험 (기존 ASCVD) | <55 | **<85** | <65 |\n\nNon-HDL-C 계산: 총 콜레스테롤 − HDL-C (일반 검사에서 바로 계산 가능)",
+      sources: []
+    },
+    protocol: {
+      content: "### 단계별 강화 전략\n```\n1단계 — Statin (고강도 우선)\n  ↓ LDL-C 미달 또는 최대용량 불충분\n2단계 — Ezetimibe 추가\n  ↓ 여전히 미달\n3단계 — Bempedoic acid 또는 PCSK9 억제제\n  - Bempedoic acid: statin 불내성 시 대안, LDL-C 20–25% 추가 감소\n  - PCSK9 억제제 (에볼로쿠맙/알리로쿠맙): LDL-C 50–60% 추가 감소\n```\n\n### 중성지방 관리 (TG ≥500 — 췌장염 예방)\n- 고순도 오메가-3 (EPA): REDUCE-IT MACE 감소 근거\n- 피브린산계 (fenofibrate): TG↓↓ 강함, but **CV outcome 개선 불확실**, statin 병용 시 근병증 주의",
+      sources: []
+    },
+    monitoring: {
+      content: "- 지질 패널: 진단 시 + 치료 시작 후 4–12주 + 목표 달성 후 6–12개월\n- 모니터: TC, LDL-C, HDL-C, TG → Non-HDL-C 자동 계산\n- Statin + fibrate 병용: CK, ALT (근병증·간독성)\n- Statin 고용량: 당뇨 악화 가능 (2–3% HbA1c↑) — 위험/이득 상담",
+      sources: []
+    },
+    precaution: {
+      content: "- Fibrate: CKD eGFR <30에서 용량 조절 (fenofibrate 신독성)\n- Statin 금기: 임신, 활성 간질환\n- PCSK9 억제제: 고비용 (급여 확인), 주사제 (2주 또는 월 1회)\n- Bempedoic acid: 통풍 위험 약간↑ (요산↑)",
+      sources: []
+    },
+    notes: {
+      content: "전형적 당뇨 이상지질혈증:\n- TG↑↑ (인슐린저항성 → 간 VLDL 분비↑)\n- HDL-C↓ (CETP 활성↑)\n- Small dense LDL 입자↑ (LDL-C 정상이어도 입자수↑)\n→ Non-HDL-C·ApoB가 잔류 위험 더 잘 포착",
+      sources: []
+    },
+    referral: {
+      content: "- 당뇨 환자 지질 검사 시 **Non-HDL-C 계산해 목표 달성 여부 확인** — 직접 적용\n- Statin → Ezetimibe 추가: 일차진료 처방\n- PCSK9 억제제: 보험 기준 확인 후 처방 (고위험군 급여 요건)\n- 심혈관 전문의: 매우 고위험 + 목표 미달 + PCSK9 고려 시",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["diabetes-dyslipidemia"] = _dm_dyslipidemia_v2;
+KNOWLEDGE_BUNDLE["당뇨이상지질혈증"] = _dm_dyslipidemia_v2;
+KNOWLEDGE_BUNDLE["non-HDL"] = _dm_dyslipidemia_v2;
+
+/* pediatric-antibiotic-stewardship — WHO AWaRe 80개국 (4-28 deep-extract). [CLINICAL — 초록] */
+var _pediatric_abx_v2 = {
+  kind: "topic",
+  keywords: ["소아항생제","pediatric antibiotic","AWaRe","Access","Watch","AMR","항균제내성","소아감염"],
+  primarySources: [
+    "Donà D et al. Pediatric Antibiotic Stewardship Across 80 Countries. EClinicalMedicine 2025;87:103437. PMID:40896455, DOI:10.1016/j.eclinm.2025.103437 [초록 기반]"
+  ],
+  sections: {
+    definition: {
+      content: "### WHO AWaRe 분류\n| 그룹 | 의미 | 대표 약물 |\n|---|---|---|\n| **Access** | 1차 치료, 내성 위험 낮음 | 아목시실린, 아목시실린-클라불라네이트, TMP-SMX, 니트로푸란토인 |\n| **Watch** | 2차 치료, 내성 유발 위험↑ | 세팔로스포린 2/3세대, 마크로라이드, 퀴놀론, 반코마이신 |\n| Reserve | 최후 수단 | 카르바페넴, 콜리스틴 |\n\n**UNGA 2024 목표:** 사람 항생제 사용의 70% 이상을 Access군으로",
+      sources: []
+    },
+    exam: {
+      content: "### 80개국 분석 핵심 (PMID:40896455)\n| 처방 단계 | Access 비율 | 평가 |\n|---|---|---|\n| **1차 항생제** | **>70%** | ✅ WHO 권고 일치 |\n| **2차 항생제** | <50% (Watch >50%) | ⚠️ Watch군 과다 사용 |\n\n→ 1차 실패 후 2차 항생제 선택 시에도 Access군 유지 시도해야 AMR 목표 달성.",
+      sources: []
+    },
+    protocol: {
+      content: "### 질환별 1차 항생제 (Access 우선)\n| 감염 | 1차 선택 | 비고 |\n|---|---|---|\n| **급성 중이염** | 아목시실린 80–90mg/kg/day | 페니실린 알레르기: TMP-SMX |\n| **급성 편도인두염** (A군 연구균) | 아목시실린 또는 페니실린 V | Macrolide: 한국 30~40% 내성 주의 |\n| **지역사회획득 폐렴** | 아목시실린 (경증) | 비전형: Macrolide 병용 |\n| **급성 요로감염** | TMP-SMX 또는 니트로푸란토인 | 지역 내성 패턴 |\n| **피부연조직 감염** | 아목시실린-클라불라네이트 | MRSA 의심: TMP-SMX |\n\n### 2차 항생제 — Access 우선 유지\n1차 실패 시 Watch로 도약 전 고려:\n- 충분한 용량·기간으로 1차 사용했는가?\n- 재배양·내성 확인 가능한가?\n- **아목시실린-클라불라네이트(Access)** — 많은 경우 2차로 선택 가능\n- Watch군(세팔3세대·마크로라이드) 사용 시 기간 최소화",
+      sources: []
+    },
+    monitoring: {
+      content: "- 48–72시간 내 임상 반응 평가\n- 반응 없을 때: 2차 전환 전 재배양·균검사 먼저\n- 알레르기 반응 (특히 아목시실린 — 발진 vs 진성 아나필락시스 감별)",
+      sources: []
+    },
+    precaution: {
+      content: "- 바이러스성 상기도감염에 항생제 불필요 — 처방 전 세균성 근거 확인\n- 아목시실린 발진: 전염성단핵구증 동반 시 발진 흔함 — 진성 페니실린 알레르기와 감별\n- 퀴놀론계: 소아 관절연골 독성 우려 → 회피 (예외: 일부 요로감염)\n- 마크로라이드: A군 연구균 한국 30–40% 내성",
+      sources: []
+    },
+    notes: {
+      content: "왜 2차에서 Watch가 과다 사용되는가?\n- \"강한 약이 더 효과적\" 인식 (근거 없음)\n- 1차 실패 원인 분석 없이 경험적 강화\n- 가이드라인 부재 또는 Watch 기본 처방 관행\n\nAMR 영향: Watch 남용 → 내성균 선택압↑ → CA-MRSA, ESBL 증가. 소아 발생 내성균은 가족·지역사회 전파 위험.",
+      sources: []
+    },
+    referral: {
+      content: "- 소아 외래 1차 처방: **아목시실린계(Access) 우선** — 직접 적용\n- 1차 실패 시: Watch 전환 전 용량·기간 재검토 + 아목시실린-클라불라네이트 고려\n- 의뢰: 패혈증 징후, 2회 이상 항생제 실패, 반복 감염 (면역이상 의심)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["pediatric-antibiotic-stewardship"] = _pediatric_abx_v2;
+KNOWLEDGE_BUNDLE["AWaRe"] = _pediatric_abx_v2;
+KNOWLEDGE_BUNDLE["소아항생제"] = _pediatric_abx_v2;
+
+/* glp1-selection-strategy — GLP-1 비만 선택 전략 누적분 (4-23~4-28 deep-extract).
+   기존 v1 "glp1"·"위고비"·"마운자로" 본문 보존, 선택 전략·중단 후 전환·SMI·전당뇨 예방 등 누적 신규는 별도 topic으로 격리. */
+var _glp1_strategy_v2 = {
+  kind: "topic",
+  keywords: ["glp1-selection-strategy","위고비-마운자로 선택","GLP-1 선택 전략","비만 GLP-1","용량증량","GLP-1 유지전략","Tirzepatide 중단","GLP-1 SMI","GLP-1 전당뇨"],
+  primarySources: [
+    "Rosen CJ, Ingelfinger JR. GLP-1 RA NEJM Review. N Engl J Med 2026;394(13):1313-1324. PMID:41931049, DOI:10.1056/NEJMra2500106",
+    "Huang L et al. Tirzepatide Discontinuation. J Am Pharm Assoc 2026;8:103112. PMID:41962807, DOI:10.1016/j.japh.2026.103112",
+    "Lähteenvuo M et al. Repurposing GLP-1 for AUD. JAMA Psychiatry 2025;82(1):94-98. PMID:39535805, DOI:10.1001/jamapsychiatry.2024.3599",
+    "Tentolouris A et al. GLP-1 in Prediabetes T2DM Prevention. Prim Care Diabetes 2026;20(2):178-184. PMID:41565568, DOI:10.1016/j.pcd.2026.01.003",
+    "Srisurapanont M et al. GLP-1 in Severe Mental Illness. Int J Psychiatry Med 2026;61(3):312-328. PMID:41618880, DOI:10.1177/00912174261422822"
+  ],
+  sections: {
+    comparison: {
+      content: "### 위고비 vs 마운자로 선택 기준\n| 기준 | 위고비 | 마운자로 |\n|---|---|---|\n| 목표 감량 | 15% 미만 | 15% 이상 |\n| 2형 당뇨 동반 | 오젬픽(보험) 고려 | 마운자로 실비 가능 |\n| 주사 편의성 | — | 웬티카, 더 편리 |\n| 소화기 부작용 민감 | 상대적 유리 | 상대적으로 많음 |\n| 근감소 우려 (고령·저근육) | 저용량 전략 | aggressive 감량 주의 |\n| 장기 유지 비용 | 저렴 | — |\n| 장기 유지 편의 | — | 1회용 펜 |\n\n### 시작 용량 비교\n| 항목 | 위고비 | 마운자로 |\n|---|---|---|\n| 시작 용량 | 0.25mg | 2.5mg |\n| 유지 단계 | 0.25→0.5→1.0→1.7→2.4mg | 4주 후 5mg으로 |\n| 초반 감량 속도 | 느림 | 빠름 |\n| 최대 효과 | — | 10mg(4단계)까지 효과 뚜렷 |\n\n> SURMOUNT-5(NEJM 2025): 마운자로 -20.2% vs 위고비 -13.7% 전체 우월성.\n> 마운자로 10mg→15mg 증분 +1.1%p로 급격히 감소.",
+      sources: ["[TIPS — by 로컬원장님]"]
+    },
+    protocol: {
+      content: "### Dose Escalation — 4주마다 3가지 질문 [TIPS — by 로컬원장님]\n1. 체중 몇 % 줄었나?\n2. 식욕 조절 만족도?\n3. 부작용 어느 정도?\n→ 3가지 중 하나라도 불만족 → 증량 보류\n\n### 감량 기준별 결정\n- 4~5% 이상 → 증량 안 함 (잘 되고 있음)\n- 2~4% → 환자 만족도 고려해 결정\n- 2% 미만 → 대체로 증량 (사용 기간 고려)\n- 부작용 tolerable → 증량 가능\n- intolerable → 유지 또는 감량\n\n### Non-responder\n- Saxenda(리라글루타이드): 16주 4% 미만 → 중단 고려 (FDA label)\n- Wegovy(세마글루타이드): 공식 stopping rule **없음** (증량 자체가 16-20주 소요)\n- 1개월 체중감소 = 6개월 반응의 유일한 유의 예측인자 (Maccora 2019, PMID:31682516)\n\n### Interval Tx 유지 전략 [INSIGHTS — by 로컬원장님]\n- 기본 3~4주 간격, 3~4개월마다 내원\n- 2kg 이상 증가 시에만 내원 → 1회 투여 후 귀가\n- 특정 시기(여행·스트레스)에만 사용\n- 장점: 비용↓, 순응도↑, 장기유지 가능성↑\n- 한계: RCT 근거 거의 없음, 개인차 큼",
+      sources: ["[TIPS — by 로컬원장님]"]
+    },
+    indication: {
+      content: "### Tirzepatide 중단 후 전환 (PMID:41962807, n=83 후향)\n- 중단 전 평균 사용기간 11개월, 평균 체중 감소 -6.7%\n- **중단 후 12개월 체중 변화: +1.9% (P=0.11, 비유의)**\n- 81.9%가 다른 비만약으로 전환 (약사·의사 지원)\n- 중단 주된 이유 80.7%: 약값·접근성\n→ \"단순 중단 ≠ 전환 전략\". 비용 부담으로 마운자로 중단 상담 시 \"다른 비만약으로 전환하면 12개월 +1.9% (비유의)\" 근거 제시.\n\n### 당뇨전단계 + 비만 — T2DM 예방·CV 보호 (PMID:41565568)\n| 약물 | 효과 | 근거 |\n|---|---|---|\n| **Semaglutide 2.4mg** | 정상혈당 회복률 최대 84% | STEP 1·5 |\n| **Tirzepatide** | T2DM 발생 90% 감소 (HR 0.07) | SURMOUNT-1 |\n| **Semaglutide** | CV 이벤트 HR 0.80 (전당뇨 포함) | SELECT |\n→ 비만+당뇨전단계 환자 GLP-1 처방 시 \"살 빼면서 당뇨 예방 + 심혈관 보호\" 직접 제시.\n\n### 중증 정신질환(SMI) + 비만 (PMID:41618880, RCT 10건 메타, N=665)\n- 체중 감소 -6.17 kg (95% CI: -9.10 ~ -3.25)\n- HbA1c 감소 -0.31%\n- 부작용 탈락률 위약과 차이 없음\n→ 항정신병약 복용 중 체중 증가 환자에 GLP-1RA 처방 근거.\n\n### 알코올사용장애(AUD) + 비만/T2DM (PMID:39535805, 스웨덴 22.7만명)\n- Semaglutide AUD 입원 위험 36% 감소 (aHR 0.64)\n- Liraglutide 28% 감소 (aHR 0.72)\n- 기존 AUD 치료제 (naltrexone/acamprosate) aHR 0.98 (거의 차이 없음)\n→ 위고비/오젬픽 초진 시 음주력 문진 강화 근거.",
+      sources: []
+    },
+    notes: {
+      content: "### NEJM 2026 종합 리뷰 (PMID:41931049)\n기전:\n- 인크레틴 유사체: 포도당 의존적 인슐린 분비 촉진\n- 위 배출 지연 (포만감 지속, 초기 GI 부작용 원인)\n- 글루카곤 분비 억제\n- 시상하부 직접 작용 → 포만감 증강\n\n확립된 효과: 혈당·체중 + **CV 위험 감소** (고위험·T2DM) + **신기능 악화 지연**\n\n부작용·미해결:\n- 위장관 증상 (대부분)\n- **근육·골량 손실** — 환자 교육 필수 (단백질 1.2g/kg + 근력운동 병행)\n- 장기 순응도 미확인\n- 중단 후 체중 회복 — 개인차 큼\n\n### 빠른 감량 원하는 환자 [TIPS — by 로컬원장님]\n1. 너무 빠른 감량 → 뇌가 위기 인식 → 에너지 절전 모드(adaptive thermogenesis)\n2. 초기 고용량으로 빨리 올리면 나중에 올릴 용량이 없음\n3. 고용량 노출 시 GLP-1 receptor desensitization 가능성↑\n4. 빠른 감량 시 피부 탄력 저하 + 탈모 가능성↑",
+      sources: ["[TIPS — by 로컬원장님]"]
+    },
+    precaution: {
+      content: "### GLP-1 반응 예측 인자 — 미신 vs 근거\n- ❌ **위장관 부작용이 큰 경우** → 미신. 부작용과 체중감량은 독립적 (STEP 1-3 mediation, GI AE 기여 <1%p, PMID:34514682)\n- ❌ **Insulin resistance 있는 경우** → 반대. T2DM 환자가 오히려 감량 적음 (STEP2 ~10% vs STEP1 ~15-17%, PMID:36050763)\n- ✓ 초기 식욕 감소·meal size↓ [CLINICAL — 조건부]\n- ✓ 음식 보상/갈망 감소 [CLINICAL — 조건부]\n- ✓ **초기 체중감소 속도 — 가장 강력한 predictor** (PMID:31682516)\n\n### 효과 안 좋을 것으로 예상\n1. Adaptive thermogenesis 강한 경우 [CLINICAL]\n2. 식사량 이미 적음 [TIPS — 출처미확인]\n3. 다이어트 반복 이력 [TIPS — 출처미확인]\n4. 조기 plateau\n5. 근육량 낮음 [CLINICAL — 조건부] (효능보다 안전성 우려)\n6. GLP-1 사용 중에도 음주 지속 [TIPS — 출처미확인]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["glp1-selection-strategy"] = _glp1_strategy_v2;
+KNOWLEDGE_BUNDLE["GLP1전략"] = _glp1_strategy_v2;
+KNOWLEDGE_BUNDLE["비만GLP-1"] = _glp1_strategy_v2;
+
+/* heart-failure-volume-overload — Volume Overload 평가 (4-27 BNP+POCUS) + HFpEF+비만 체중감량 전략 (4-28).
+   기존 v1 "heart-failure"·"심부전" 본문 보존, 보완 누적분은 별도 topic 키로 격리. */
+var _hf_volume_v2 = {
+  kind: "topic",
+  keywords: ["heart-failure-volume-overload","volume overload","BNP","POCUS","B-lines","HFpEF","비만 심부전","심부전 체중감량"],
+  primarySources: [
+    "Cohen MT et al. Volume Overload Rational Clinical Examination. JAMA 2026. PMID:41729549",
+    "Borlaug BA et al. HFpEF + Obesity Weight-Loss Strategy. PMID:41802118"
+  ],
+  sections: {
+    exam: {
+      content: "### Volume Overload — BNP + POCUS B-lines (JAMA 2026 RCE)\n호흡곤란 환자의 volume overload 평가.\n\n| 검사 | 단독 강도 | LR |\n|---|---|---|\n| **BNP ≥100 ng/mL** | 최강 rule-in | LR 6.9 |\n| **POCUS B-lines 없음** | 최강 rule-out | LR 0.09 |\n| JVD·crackles·하지 부종 | 전통 진찰 | 정확도 BNP+POCUS보다 열등 |\n\n→ 외래·응급에서 호흡곤란 → BNP + POCUS B-lines 조합이 임상 검진보다 우월.\n\n> 출처: Cohen MT et al. JAMA 2026 RCE. PMID:41729549",
+      sources: []
+    },
+    protocol: {
+      content: "### HFpEF + 비만 — 체중감량이 최우선 치료 전략 (PMID:41802118)\n비만 ↔ HFpEF 악순환 기전:\n- 비만 → 심외막 지방·전신 염증 → 좌심실 강성·확장기 기능장애 → 운동내약↓\n- HFpEF → 운동제한 → 체중↑ → 비만 악화\n\n### GLP-1 RCT 근거 (HFpEF + 비만)\n| 약물 | 효과 |\n|---|---|\n| **Semaglutide** (STEP-HFpEF) | 운동능력·증상·QoL 개선 |\n| **Tirzepatide** (SUMMIT) | 운동능력·증상·QoL 개선, 비만 클수록 이익 큼 |\n\n→ HFpEF에서 체중감량=현재 최우선 치료 전략.\n→ HFrEF에서는 obesity paradox로 불확실 (현재 GDMT 4 pillars + 신중 체중관리).\n\n### 외래 적용\n- BMI ≥30 + HFpEF → GLP-1 (semaglutide/tirzepatide) 적극 고려\n- 체중 5~10% 감량 목표 → 운동내약·증상 개선 가시화\n- 동반 OSA·MASH·당뇨 → GLP-1 종합 이익",
+      sources: []
+    },
+    notes: {
+      content: "### 임상 적용 (volume overload 평가)\n- 호흡곤란 환자 외래 → BNP + POCUS B-lines 우선 (POCUS 가능 시)\n- BNP <100 + B-lines 없음 → 심부전 가능성 매우 낮음\n- BNP ≥100 단독 → rule-in 강력. 하지만 신부전·고령에서 위양성 주의 (NT-proBNP age-adjusted cutoff 고려)\n\n### 한계\n- POCUS B-lines: 검사자 의존성, 폐렴·간질성 폐질환에서 위양성\n- HFpEF + 비만 RCT 대부분 비당뇨 비만 — 실세계 다질환 환자 외삽 시 주의",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["heart-failure-volume-overload"] = _hf_volume_v2;
+KNOWLEDGE_BUNDLE["BNP-POCUS"] = _hf_volume_v2;
+KNOWLEDGE_BUNDLE["HFpEF-비만"] = _hf_volume_v2;
+
+/* obesity-pharmacotherapy-grade — TOS/OMA/OAC 비만 약물치료 GRADE 권고 (4-27 deep-extract).
+   기존 v1 "obesity"·"비만" 본문 보존, GRADE 권고 누적은 별도 topic 키로 격리. */
+var _obesity_grade_v2 = {
+  kind: "topic",
+  keywords: ["obesity-pharmacotherapy-grade","비만 약물치료","TOS","OMA","OAC","GRADE","항비만약물 권고","obesity GRADE"],
+  primarySources: [
+    "Apovian CM et al. Pharmacotherapy for Adult Obesity: TOS/OMA/OAC GRADE Recommendations. PMID:41859682"
+  ],
+  sections: {
+    indication: {
+      content: "### 강력 권고 (Strong recommendation)\n- **Semaglutide 2.4mg** (위고비)\n- **Tirzepatide** (마운자로/zepbound)\n- **Bupropion-naltrexone** (Contrave)\n- **Setmelanotide** (특정 유전성 비만)\n→ 위 약물들은 일반 비만(BMI ≥30, 또는 ≥27 + 동반질환)에서 강력 권고.\n\n### 체중 유지 중 약물 지속 — **강력 권고**\n약물 중단 시 체중 회복이 일반적 → 장기 유지 필요성을 환자 교육 필수.",
+      sources: []
+    },
+    comparison: {
+      content: "### 동반질환별 GLP-1 우선 — 조건부 권고\n다음 동반 비만에서 GLP-1 계열 우선 권고:\n| 동반질환 | 권고 강도 | 근거 |\n|---|---|---|\n| **HFpEF** | 조건부 | STEP-HFpEF, SUMMIT — 운동능력·QoL 개선 |\n| **OSA** (수면무호흡) | 조건부 | Tirzepatide SURMOUNT-OSA — AHI 개선 |\n| **MASH** | 조건부 | Semaglutide FDA 적응증 (F2-F3) |\n| **골관절염** (knee OA) | 조건부 | STEP-OA — 통증·기능 개선 |\n| **기존 ASCVD** | 조건부 | SELECT — Semaglutide CV HR 0.80 |\n| **T2DM** | 조건부 | 당뇨·체중 동시 관리 |",
+      sources: []
+    },
+    protocol: {
+      content: "### 외래 적용 알고리즘\n```\n1. BMI ≥30 (또는 ≥27 + 동반질환) 평가\n2. 동반질환 매핑 (HFpEF·OSA·MASH·OA·ASCVD·T2DM)\n3. 약물 선택:\n   - 동반질환 매칭 → GLP-1 (위고비/마운자로) 우선\n   - 동반질환 없음 → 환자 선호·접근성으로 GLP-1 vs Bupropion-naltrexone\n   - 유전성 비만 → Setmelanotide\n4. 효과 확인 후 장기 유지 (중단 시 회복 강조)\n```",
+      sources: []
+    },
+    notes: {
+      content: "### 1차의료 적용 메시지\n- \"비만은 만성질환\" — 약물은 평생 관리 도구로 인식 전환\n- 약물 단독 ≠ 해법: 단백질 1.2g/kg + 근력운동 + 식습관 동반\n- 동반질환 기반 처방은 보험 급여 + 임상 근거 동시 충족 (GLP-1+CV·신·간 보호)\n- glp1-selection-strategy 엔트리 참조: 위고비 vs 마운자로 선택 기준, 4주 dose escalation 질문",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["obesity-pharmacotherapy-grade"] = _obesity_grade_v2;
+KNOWLEDGE_BUNDLE["비만약물 GRADE"] = _obesity_grade_v2;
+KNOWLEDGE_BUNDLE["항비만약물 권고"] = _obesity_grade_v2;
