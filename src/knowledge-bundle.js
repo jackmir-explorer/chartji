@@ -2979,3 +2979,408 @@ var _obesity_grade_v2 = {
 KNOWLEDGE_BUNDLE["obesity-pharmacotherapy-grade"] = _obesity_grade_v2;
 KNOWLEDGE_BUNDLE["비만약물 GRADE"] = _obesity_grade_v2;
 KNOWLEDGE_BUNDLE["항비만약물 권고"] = _obesity_grade_v2;
+
+/* ═══════════════════════════════════════════════════════════════════
+   2026-04-30 Liby ingest batch — Mir-Tier 1 재편 후 첫 cron 산출물
+   원본 md: deep-extract 4-30 (10건 처리, 신규 7 + 보완 4)
+   신규 8건 (post-mi-deprescribing 포함, bundle 미등록 상태였음 — 신규 추가)
+   보완은 별도 topic 키로 격리 (v1 본문 보존 원칙):
+   - heart-failure-pocus-ducs (POCUS DUCS topic)
+   - internal-medicine-2025-update (Cardiology + Endocrinology 2025 update 합본)
+
+   Mir-Tier 1 cover 검증:
+   - POCUS·초음파 중재 ← heart-failure-pocus-ducs ✓
+   - 비암성 만성통증·근골격 ← diabetic-peripheral-neuropathy ✓
+   - 암성통증·완화의료 ← palliative-pain ✓
+   - 재택의료·노인의학 ← home-based-hypertension + frailty ✓✓
+   - 만성질환 본체 확장 ← internal-medicine-2025-update ✓
+   - 임상약물학·Deprescribing ← prescribing-cascade + post-mi-deprescribing ✓✓
+   - Tier 2 소화기 ← ibs + functional-dyspepsia ✓
+═══════════════════════════════════════════════════════════════════ */
+
+/* IBS — 과민성 대장 증후군 (4-30 deep-extract). [CLINICAL] Mir-T2 day=1 소화기 */
+var _ibs_v2 = {
+  kind: "disease",
+  keywords: ["IBS","과민성대장증후군","irritable bowel syndrome","Rome IV","저FODMAP","rifaximin","linaclotide","loperamide","IBS-C","IBS-D","IBS-M"],
+  primarySources: [
+    "Greer KB & Sultan S. Irritable Bowel Syndrome. Ann Intern Med 2025;178(8):ITC113-ITC128. PMID:40789179, DOI:10.7326/ANNALS-25-01965 (In the Clinic) [초록 기반]"
+  ],
+  sections: {
+    definition: {
+      content: "IBS는 기질적 원인 없이 만성 복통 + 배변 습관 이상(설사·변비·혼합)을 동반하는 기능성 위장관 질환. 유병률 4~10%. Rome IV 양성 진단(positive diagnosis)이 핵심 — alarm feature 없으면 광범위 검사 없이 진단 가능.\n\n| 아형 | 우세 패턴 | 특징 |\n|---|---|---|\n| IBS-C | 변비 우세 | 복부 팽만감 심함 |\n| IBS-D | 설사 우세 | 긴박감·사회적 제약 |\n| IBS-M | 변비+설사 교대 | |",
+      sources: []
+    },
+    exam: {
+      content: "### Rome IV 기준\n- 반복 복통 ≥1회/주 (최근 3개월), 시작 6개월 이상\n- 아래 중 ≥2가지 동반: 배변 연관 / 빈도 변화 연관 / 형태 변화 연관\n\n### Alarm feature (즉시 검사)\n- 직장 출혈, 체중 감소, 발열, 야간 증상, 가족력(대장암·IBD), 50세 이상 신규 발생",
+      sources: []
+    },
+    protocol: {
+      content: "### 1단계 — 식이·생활습관\n- **저 FODMAP 식이** (IBS-D/M 1차 권고, 4~8주 시도 후 재도입)\n- 규칙적 식사, 카페인·알코올·고지방식 제한\n\n### 2단계 — 아형별 약물\n**IBS-C (변비형):**\n| 약물 | 기전 |\n|---|---|\n| Linaclotide | 구아닐레이트 시클라아제-C — 복통+변비 동시 개선 |\n| Lubiprostone | CIC-2 Cl 채널 |\n| Psyllium (차전자피) | 수용성 섬유소 1차 |\n\n**IBS-D (설사형):**\n| 약물 | 기전 |\n|---|---|\n| Loperamide | μ-오피오이드 — 긴박감·빈도↓ |\n| Rifaximin | 비흡수 항생제 — 단기(2주), 재투여 가능 |\n| Eluxadoline | 혼합 오피오이드 — 담낭 절제 환자 췌장염 위험 주의 |\n| Alosetron | 5-HT3 길항 — 중증 여성, 허혈성 대장염 risk |\n\n**IBS-M / 복통 우세:**\n- 저용량 TCA (아미트립틸린 10~25mg hs) 또는 SSRI — 내장 통각 과민 조절\n- Peppermint oil 캡슐 — 평활근 경련",
+      sources: []
+    },
+    precaution: {
+      content: "- Rifaximin: 재투여 가능하나 내성 모니터링\n- Eluxadoline: 담낭 절제·오피오이드 복용·중증 변비 시 **금기**\n- 저 FODMAP: 영양사 지도 권장 — 장기 독립 시행 시 영양 불균형",
+      sources: []
+    },
+    referral: {
+      content: "- Alarm feature 존재 → 소화기내과 대장내시경\n- 표준 치료 4~8주 무반응 → 소화기내과\n- 체중 감소·야간 설사 → IBD 감별",
+      sources: []
+    },
+    notes: {
+      content: "- IBS와 기능성 소화불량 중복 흔함 — 동시 치료 ([[functional-dyspepsia]] 참조)\n- 심리 요인(불안·우울) 강한 연관 — CBT 보조 근거 ([[anxiety-depression-cbt]])\n- \"검사 없이 진단\" 패러다임 — Rome 기준 + alarm 배제로 충분",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["ibs"] = _ibs_v2;
+KNOWLEDGE_BUNDLE["IBS"] = _ibs_v2;
+KNOWLEDGE_BUNDLE["과민성대장증후군"] = _ibs_v2;
+
+/* functional-dyspepsia — 기능성 소화불량 (4-30 deep-extract). [CLINICAL] */
+var _fd_v2 = {
+  kind: "disease",
+  keywords: ["기능성소화불량","functional dyspepsia","FD","dyspepsia","PPI","TCA","아미트립틸린","Rome IV","PDS","EPS","식후불편증후군","명치통증증후군"],
+  primarySources: [
+    "Pasricha PJ & Talley NJ. Functional Dyspepsia. N Engl J Med 2026;394(2):166-176. PMID:41499733, DOI:10.1056/NEJMcp2501860 (Clinical Practice) [초록 기반]"
+  ],
+  sections: {
+    definition: {
+      content: "기능성 소화불량(FD): 상부 위장관 증상(식후 포만·조기 포만·명치 통증·작열감) ≥3개월 + 기질적 원인 배제. **\"기능성\"은 위험하지 않다는 의미가 아님** — 입원·체중 감소 가능한 심각한 기능성 질환. 승인 약물 없음 — 모든 치료 증상 기반 경험적.\n\n| 아형 | 핵심 증상 | 기전 가설 |\n|---|---|---|\n| **PDS** (식후불편) | 식후 포만·조기 포만 | 위 적응 장애·배출 지연 |\n| **EPS** (명치통증) | 명치 통증·작열감 | 내장 통각 과민 |\n| 중복 | PDS+EPS 동시 | |",
+      sources: []
+    },
+    exam: {
+      content: "### Rome IV 기준\n- 식후 포만감 / 조기 포만 / 명치 통증 / 명치 작열감 ≥3개월 (시작 ≥6개월 전), 기질적 배제\n\n### Alarm\n- 비자발적 체중 감소, 연하곤란, 구토 반복, 흑변·혈변, 가족력(상부 GI 악성), 55세 이상 신규 → 상부 위내시경\n\n### 동반 질환 중복\n- IBS와 20~30% 중복 ([[ibs]])\n- GERD와 중복 — 제산제 반응 불완전",
+      sources: []
+    },
+    protocol: {
+      content: "### 1단계 — PPI\n- 오메프라졸 20mg 또는 동등 PPI, 4~8주\n- H2 차단제 대안 가능\n- 4주 후 평가 — 무반응 시 2단계\n\n### 2단계 — 신경조절제 병합\n- **저용량 TCA**: 아미트립틸린 10~25mg hs\n  - EPS 아형에 효과적 — 내장 통각 과민 조절\n  - 저용량에서 항콜린 부작용 최소화\n- **SSRI/SNRI**: 불안·우울 동반 시 유용\n- **Mirtazapine**: 식욕 부진 + FD 동반 시 고려\n\n### PDS 특이\n- Acotiamide — 위 적응 개선제 (한국 급여 확인)\n- Itopride, Mosapride — 위운동 촉진제\n\n### 비약물\n- 정신적 지지 + 식이 상담 (지방 제한, 소량 빈번)\n- CBT — 만성 치료불응 FD에 근거\n- Hypnotherapy — 일부 근거",
+      sources: []
+    },
+    precaution: {
+      content: "- TCA: 부정맥·녹내장·전립선비대 주의\n- PPI 장기: 마그네슘 저하·C.diff 위험 — 최소 용량 유지\n- Th2 점막 미세염증 subgroup 존재 — 단순 위산 억제 이상 접근 (전문의 영역)",
+      sources: []
+    },
+    referral: {
+      content: "- Alarm → 소화기내과 상부 위내시경 우선\n- 8~12주 무반응 + 체중 감소 → 소화기내과\n- IBS 중복 + 치료불응 → 소화기내과",
+      sources: []
+    },
+    notes: {
+      content: "환자 교육 시 \"심각하게 인식하고 함께 치료한다\"는 메시지 — \"기능성\" = 가벼운 것 아님. 삶의 질 심각하게 저하·체중 감소·입원 가능.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["functional-dyspepsia"] = _fd_v2;
+KNOWLEDGE_BUNDLE["기능성소화불량"] = _fd_v2;
+KNOWLEDGE_BUNDLE["FD"] = _fd_v2;
+
+/* frailty — 허약 가역성 (4-30 deep-extract, Mir-T1 #4 재택의료·노인의학). [CLINICAL] */
+var _frailty_v2 = {
+  kind: "topic",
+  keywords: ["frailty","허약","노쇠","근감소증","sarcopenia","다약제","polypharmacy","낙상","비계획입원","허약회복","Beers","STOPP","START","CGA"],
+  primarySources: [
+    "Serra-Prat M et al. Frailty reversal and its main determinants. Fam Med Community Health 2025;13(2). PMID:40295111, DOI:10.1136/fmch-2024-003250"
+  ],
+  sections: {
+    definition: {
+      content: "허약(Frailty)은 노화·질병·다약제로 생리적 예비능 저하 → 스트레스 취약 상태. **가역적** — 연간 자연 회복률 7.1% (Catalonia 2019 코호트 n=1,465,312명). 전허약(prefrailty)은 4.6%.\n\n| 상태 | 연간 회복률 |\n|---|---|\n| 허약 | **7.1%** |\n| 전허약 | 4.6% |\n\n회복: 남성 > 여성, 나이 들수록 ↓. 다중이환·다약제·기능적 의존성 시 회복 가능성 ↓.",
+      sources: []
+    },
+    exam: {
+      content: "### 스크리닝 도구\n| 도구 | 항목 | 특징 |\n|---|---|---|\n| **FRAIL Scale** | 5문항 (피로·저항력·보행·질환·체중감소) | 1차 선별 |\n| **Fried Phenotype** | 체중감소·피로·저활동·보행속도·악력 | 표준 |\n| **CFS** | 1–9점 관찰 척도 | 빠른 임상 판단 |\n\n### 평가\n- 보행 속도 (<0.8 m/s = 위험)\n- 악력 (성별·체중 기준 하위 사분위)\n- 기립성 저혈압\n- 약물 목록 검토 (≥5종 = 다약제)",
+      sources: []
+    },
+    protocol: {
+      content: "### 회복 가능성을 높이는 중재 우선순위\n| 중재 | 근거 | 실전 |\n|---|---|---|\n| **비계획 입원 회피** | 가장 큰 인자 | 폐렴·낙상·약물부작용 예방 |\n| **다약제 감소** | 독립 보호 인자 | ≥5종 재검토; 불필요 약물 중단 |\n| **낙상 방지** | 직접 연결 | 기립성 저혈압 교정·환경 개선 |\n| 빈혈 교정 | e-SIF 구성 | Hb 모니터링·철 결핍 교정 |\n| 시력 손상 교정 | e-SIF 구성 | 안과 의뢰 (백내장·굴절) |\n\n### 일차의료 중재\n1. **Deprescribing** — Beers·STOPP/START; 항콜린제·BZD·수면제 우선 검토 ([[prescribing-cascade]])\n2. **낙상 예방** — 집 환경 평가·기립성 저혈압 약물 조정\n3. **영양** — 단백질 ≥1.2 g/kg/일·비타민 D\n4. **운동** — 저항 운동 + 균형 훈련 (주 2~3회)·물리치료\n5. **예방접종** — 독감·폐렴구균·대상포진·COVID",
+      sources: []
+    },
+    precaution: {
+      content: "- 다중이환(≥2개) + 기능 의존성 → 회복 ↓ — 완화의료 논의 병행\n- 근감소성 비만(sarcopenic obesity): BMI 정상이어도 근육량 저하 가능\n- 단기 입원(계획 수술 포함)도 허약 악화 계기",
+      sources: []
+    },
+    referral: {
+      content: "- 허약 + 보행 장애 → 재활의학·노인의학 (운동 처방)\n- 허약 + 다약제 복잡 → 노인의학 (CGA: 포괄적 노인 평가)\n- 허약 + 영양 불량 → 영양사",
+      sources: []
+    },
+    notes: {
+      content: "허약은 **가역적**임을 환자·보호자에게 명확히 — \"노화이니 어쩔 수 없다\"는 허무주의 탈피. 일차의료에서 다약제 재검토·낙상 예방·예방접종이 회복 핵심 레버.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["frailty"] = _frailty_v2;
+KNOWLEDGE_BUNDLE["허약"] = _frailty_v2;
+KNOWLEDGE_BUNDLE["노쇠"] = _frailty_v2;
+
+/* diabetic-peripheral-neuropathy — DPN 통증 (4-30 deep-extract, Mir-T1 #2 비암성 만성통증). [CLINICAL+INSIGHTS] */
+var _dpn_v2 = {
+  kind: "disease",
+  keywords: ["DPN","당뇨신경병증","diabetic peripheral neuropathy","gabapentin","pregabalin","duloxetine","tramadol","신경통","neuropathic pain"],
+  primarySources: [
+    "Schuster NM et al. Real World Treatment Patterns Among Patients with Painful Diabetic Peripheral Neuropathy. Pain Med 2026. PMID:42015888, DOI:10.1093/pm/pnag055 [초록 기반]"
+  ],
+  sections: {
+    definition: {
+      content: "당뇨병성 말초신경병증 통증(DPN): 당뇨로 인한 말초신경 손상에서 발생하는 만성 신경병성 통증. 타는 듯·전기 자극·찌르는 통증·이질통, 주로 하지 원위부.\n\n**현재 치료 옵션의 한계 실증** — 실제 처방 75%가 12개월 내 중단 (Schuster 2026, n=22,955).",
+      sources: []
+    },
+    notes: {
+      content: "### 실제 처방 패턴 핵심 수치\n| 항목 | 수치 |\n|---|---|\n| 1차 가바펜틴 비율 | 59.0% |\n| 1차 프레가발린 | 5.3% |\n| 1차 트라마돌 | 15.1% |\n| 1차 둘록세틴 | 5.2% |\n| 권장 용량 미달 처방 | 79% (가바) / 91% (프레가) / 61% (둘록) |\n| 용량 증량 안 함 | 81~96% |\n| 12개월 내 초치료 중단 | ~75% |\n| 3개월 내 중단 | >50% |\n\n**임상 포인트:** 가바펜티노이드가 우세이나 권장 용량 미달·높은 중단율 — **충분한 용량(증량)·충분한 기간 시도 후 평가**가 핵심.",
+      sources: []
+    },
+    protocol: {
+      content: "### 1단계 — 1차 약물\n| 약물 | 용량 | 근거 |\n|---|---|---|\n| **둘록세틴** | 60~120mg/일 | SNRI; 당뇨+우울 병용 효과 |\n| **가바펜틴** | 300~3600mg/일 (분3) | 용량 의존적; 신기능 조절 |\n| **프레가발린** | 150~600mg/일 (분2) | FDA 승인; 수면 개선 |\n\n→ **권장 용량까지 증량 후 평가** — 용량 미달로 효과 없다고 조기 중단 주의\n\n### 2단계 — 반응 불량 시\n- **저용량 TCA** (아미트립틸린 25~75mg hs) — 저렴, 수면 개선, 항콜린 주의 (고령)\n- **트라마돌** — 단기·구제 목적, 의존성·낙상\n- **병합** (둘록세틴+가바펜틴) — 단독 부분 반응 시\n\n### 3단계 — 전문 의뢰\n- 신경 차단·척수 자극기 → 통증의학과",
+      sources: []
+    },
+    monitoring: {
+      content: "- NRS 통증(0–10): 4주 후 ≥50% 감소 시 효과 판정\n- 둘록세틴: 혈압·간기능\n- 가바펜틴/프레가발린: eGFR 기반 용량·졸음·낙상",
+      sources: []
+    },
+    precaution: {
+      content: "- 가바펜틴 고령: 졸음·어지럼·낙상 — 저용량 시작·천천히 증량\n- 오피오이드(트라마돌·옥시코돈): 만성 통증 장기 1차 사용 권고 안 됨\n- 혈당 조절 자체가 신경병증 통증 완화 — HbA1c 목표 병행",
+      sources: []
+    },
+    referral: {
+      content: "- 2단계 후 NRS ≥6 지속 → 통증의학과\n- 심한 이질통·보행 장애 → 신경과·통증의학과\n- 운동 신경 침범 (근력 약화) → 신경과",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["diabetic-peripheral-neuropathy"] = _dpn_v2;
+KNOWLEDGE_BUNDLE["DPN"] = _dpn_v2;
+KNOWLEDGE_BUNDLE["당뇨신경병증"] = _dpn_v2;
+
+/* palliative-pain — 완화의료 부프레노르핀 (4-30 deep-extract, Mir-T1 #3 암성통증·완화). [CLINICAL] */
+var _palliative_pain_v2 = {
+  kind: "topic",
+  keywords: ["완화의료","palliative care","buprenorphine","부프레노르핀","오피오이드","암성통증","경피패치","transdermal","호스피스"],
+  primarySources: [
+    "Jose V et al. The Effectiveness and Safety of Buprenorphine in Palliative Care: Systematic Review. J Pain Symptom Manage 2025;71(5):e525-e539. PMID:41475688, DOI:10.1016/j.jpainsymman.2025.12.009"
+  ],
+  sections: {
+    definition: {
+      content: "부프레노르핀은 부분 오피오이드 작용제(μ 부분 작용, κ/δ 길항). 완화의료에서 모르핀·펜타닐 등 완전 작용제와 **동등한 진통 효과**. 경피 패치는 연하 곤란·장 기능 저하 환자에 특히 유리.",
+      sources: []
+    },
+    notes: {
+      content: "### 효능 — 43개 연구(RCT 15건, 전향 19건, 후향 9건) 체계적 고찰\n| 비교 | 결과 |\n|---|---|\n| 단기 작용 부프레노르핀 vs 모르핀·트라마돌·펜타닐 | 동등 진통 (6/6 RCT) |\n| 장기 작용 부프레노르핀 vs 펜타닐·모르핀·옥시코돈 | 동등 또는 우월 (4/5 RCT) |\n| 경피 부프레노르핀 vs 위약 | 유의한 진통 |\n| 부작용 프로파일 | 완전 작용제와 통계적으로 차이 없음 |",
+      sources: []
+    },
+    protocol: {
+      content: "### 부프레노르핀 형태별 적응\n| 제형 | 특징 | 적합 환자 |\n|---|---|---|\n| **경피 패치** | 72시간 또는 7일 교체 | 연하곤란·오심·장 기능 저하 말기 |\n| 설하정 | 빠른 흡수, 구강 점막 흡수 | 경구 불가하나 구강 점막 가능 |\n| 정맥/근주 | 빠른 작용 | 입원·CICU |\n\n### 모르핀 환산 (rotation 참고)\n- 경피 부프레노르핀 35 μg/h ≈ 경구 모르핀 60–80mg/일 (대략 — 임상 모니터링 필수)\n- 오피오이드 전환 시 전문의/호스피스 팀 협력",
+      sources: []
+    },
+    precaution: {
+      content: "- 완전 오피오이드 → 부프레노르핀 전환 시 **금단 증상 주의** — 마지막 완전 작용제 후 12~24시간 경과 후 시작 (또는 전문가 지도)\n- 천장 효과: 호흡 억제 ceiling은 안전성 장점, 진통 효과는 고용량에서도 선형 유지\n- 신부전: 간(CYP3A4) 대사 → **신부전 환자에서 안전** (모르핀 M6G 축적 문제 회피)",
+      sources: []
+    },
+    comparison: {
+      content: "| 특성 | 부프레노르핀 | 모르핀 | 펜타닐 |\n|---|---|---|---|\n| 진통 효과 | 동등 | 표준 | 동등 |\n| 투여 경로 | 경피/설하/IV | 경구/IV/SC | 경피/IV |\n| 신부전 | 안전 | 주의 (M6G) | 안전 |\n| 의존 우려 | 낮음 | 높음 | 높음 |\n| 연하곤란 | 경피 유리 | 경구 불가 | 경피 가능 |\n| 부작용 | 모르핀과 유사 | 표준 | 변비 적음 |",
+      sources: []
+    },
+    referral: {
+      content: "- 완화의료 통증 조절 시작 시 — 호스피스·완화의학 팀 초기부터 협력\n- 오피오이드 rotation 필요 → 완화의학·통증의학과\n- 말기 환자 — 가정 호스피스 팀 연계",
+      sources: []
+    },
+    notes_extra: {
+      content: "암성통증 완화의료에서 **경피 부프레노르핀은 연하 곤란·장 기능 저하 말기 환자의 1차 대안**. OUD 우려 환자에서 부분 작용제 스튜어드십 대안으로도 활용.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["palliative-pain"] = _palliative_pain_v2;
+KNOWLEDGE_BUNDLE["완화의료"] = _palliative_pain_v2;
+KNOWLEDGE_BUNDLE["buprenorphine"] = _palliative_pain_v2;
+KNOWLEDGE_BUNDLE["부프레노르핀"] = _palliative_pain_v2;
+
+/* home-based-hypertension — 재택 고혈압 CHW+원격 RCT (4-30 deep-extract, Mir-T1 #4 재택의료). [CLINICAL] */
+var _home_htn_v2 = {
+  kind: "topic",
+  keywords: ["재택의료","home-based care","home-based hypertension","CHW","지역사회건강요원","IMPACT-BP","원격의료","telemedicine","방문진료"],
+  primarySources: [
+    "Siedner MJ et al. Home-Based Care for Hypertension in Rural South Africa (IMPACT-BP). N Engl J Med 2025;393(13):1304-1314. PMID:40888742, DOI:10.1056/NEJMoa2509958"
+  ],
+  sections: {
+    definition: {
+      content: "CHW(지역사회건강요원) 방문 + 원격 간호사 결정지원 결합 모델이 외래 표준 관리 대비 SBP를 유의 감소 (NEJM RCT, n=774, 6개월 추적). **방문 어려운 고령·이동 제한 고혈압 환자**에서 대안 관리 모델 강력 근거.",
+      sources: []
+    },
+    notes: {
+      content: "### 핵심 수치 (IMPACT-BP, n=774, 평균 62세, 여성 76%)\n| 비교 | SBP 차이 (6개월) | 조절률 |\n|---|---|---|\n| CHW 방문군 vs 표준 | **-7.9 mmHg** (95% CI -10.5~-5.3) | 57.4% vs 32.5% |\n| 강화 CHW군(자동 전송) vs 표준 | **-9.1 mmHg** (95% CI -11.7~-6.4) | 61.3% vs 32.5% |\n\n- 12개월까지 개선 지속\n- 이상 반응·사망 군간 유사\n- 추적 유지율 95%+",
+      sources: []
+    },
+    protocol: {
+      content: "### IMPACT-BP 모델 구성\n| 구성 | 역할 |\n|---|---|\n| CHW | 가정 방문 — 혈압 측정·약물 전달·데이터 수집 |\n| 원격 간호사 | 모바일 앱 기반 혈압 검토 + 처방 결정 지원 |\n| 자가 혈압계 | 환자 자가 측정 (강화군: 자동 전송) |\n| 의약품 전달 | CHW 가정 직접 전달 |\n\n### 한국 재택의료 적용 시사점\n- 방문간호사 + 원격 의사 결정 모델 → 한국 재택의료 시범사업과 구조 유사\n- 고령·이동 제한·도서산간 고혈압 → 방문간호 + 원격 처방 조정 가능성\n- 자가 혈압 측정 + 원격 모니터링 앱 결합이 핵심 — 단순 약물 배달만으론 효과 불충분",
+      sources: []
+    },
+    precaution: {
+      content: "- 본 연구 맥락: 남아프리카 농촌, 저자원 환경 (HIV 동반 46.5%) — 한국 일반화 한계 주의\n- 처방 결정 주체(간호사·원격 의사)와 책임 범위 — 국내 의료법 검토 필요\n- 자가 혈압계 정확도·측정 교육이 모델 성공 전제",
+      sources: []
+    },
+    referral: {
+      content: "- 재택 모델에서도 3개월 미조절(SBP ≥160) → 심장내과\n- 이차성 고혈압 의심 → 내과·신장내과\n- 저항성 고혈압 → [[resistant-hypertension]]",
+      sources: []
+    },
+    notes_extra: {
+      content: "한국 재택의료 시범사업 설계 시 참고 가능한 NEJM 수준 근거. 혈압 조절률 32.5% → 57~61% 2배 향상이 핵심. **방문 + 원격 결합**이 단독 방문보다 효과적.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["home-based-hypertension"] = _home_htn_v2;
+KNOWLEDGE_BUNDLE["재택고혈압"] = _home_htn_v2;
+KNOWLEDGE_BUNDLE["IMPACT-BP"] = _home_htn_v2;
+
+/* prescribing-cascade — 처방 연쇄 (4-30 deep-extract, Mir-T1 #6 임상약물학). [CLINICAL] */
+var _cascade_v2 = {
+  kind: "topic",
+  keywords: ["처방연쇄","prescribing cascade","다약제","polypharmacy","ADR","adverse drug reaction","deprescribing","Beers","STOPP","START"],
+  primarySources: [
+    "Carollo M et al. Prescribing Cascades: An Umbrella Review. Drugs Aging 2026. PMID:41949780, DOI:10.1007/s40266-026-01295-9"
+  ],
+  sections: {
+    definition: {
+      content: "처방 연쇄(Prescribing Cascade): **기존 약물 부작용(ADR)을 새 질환 증상으로 오인하여 추가 약물을 처방**하는 패턴. 84가지 ADR이 추가 처방을 유발 (우산 고찰, 190개 연구). 고령 다약제에서 부적절 폴리파머시 핵심 기전.",
+      sources: []
+    },
+    notes: {
+      content: "### 가장 흔한 원인 약물군\n| 약물군 | 대표 ADR | cascade 예시 |\n|---|---|---|\n| **항우울제** | 구역·불면·성기능 장애 | 항구토제·수면제·PDE5 추가 |\n| **AChEI (항치매약)** | 구역·서맥·요실금 악화 | 항구토제·항부정맥제·항무스카린제 |\n| **항정신병약** | 파킨슨 유사 | 항파킨슨제 |\n| **항고혈압제** | 어지럼·기립성저혈압·부종 | 항구토제·이뇨제 |\n| **스타틴** | 근육통 | 진통제·근이완제 |\n| **BZD/수면제** | 낙상·혼동 | 항불안제·항정신병약 |\n\n### 대표 사례\n- CCB → 발목 부종 → 이뇨제 → 전해질 이상 → 보충제\n- 도네페질(AChEI) → 오심 → 메토클로프라미드 → 지연성 운동이상증 → 항파킨슨제\n- 베타차단제 → 우울증상 → 항우울제\n- NSAID → 위장 → PPI → 마그네슘 저하 → 보충제",
+      sources: []
+    },
+    differential: {
+      content: "### 새 증상 발생 시 반드시 물어야 할 것\n**\"최근 처방 변경(새 약 추가·용량 변경)이 있었나요?\"**\n\n| 새 증상 | 의심 cascade 유발 | 확인 |\n|---|---|---|\n| 어지럼·기립 어려움 | 항고혈압·이뇨제·항우울제 | 기립성 BP·시점 대조 |\n| 파킨슨 유사 | 항정신병·메토클로프라미드 | 약물 중단 후 관찰 |\n| 오심·구역 | AChEI·오피오이드·메트포르민 | 용량·시간 조정 |\n| 근육통 | 스타틴·피브레이트 | CK·중단 후 반응 |\n| 변비 | 오피오이드·항콜린·칼슘 보충제 | 원인 조정·하제 우선 |\n| 요실금 악화 | AChEI·이뇨제 | 시간 조정·항무스카린제 cascade 주의 |",
+      sources: []
+    },
+    protocol: {
+      content: "### 감별·중단 알고리즘\n1. **타임라인 확인** — 새 증상 vs 처방 변경 시점 (PSSA 방법론)\n2. **의심 약물 일시 중단** — 부작용 vs 질환 감별\n3. **중단 후 증상 소실** → cascade 확인 → 원인 약물 중단·대체\n4. **중단 후 증상 지속** → 다른 원인 탐색 (진단 재고)\n\n### Deprescribing 도구\n- **Beers Criteria** — 고령 부적절 약물\n- **STOPP/START** — 고령 처방 검토\n- **MedStopper 앱** — 중단 순서 제안",
+      sources: []
+    },
+    monitoring: {
+      content: "- 고령 다약제(≥5종) 재진: 매 3~6개월 약물 목록 전체 재검토\n- 새 약 추가 후 2~4주: 새로운 증상 적극 확인\n- cascade 의심 → 의심 약물 중단 후 2~4주 추적",
+      sources: []
+    },
+    notes_extra: {
+      content: "처방 연쇄는 **인지되지 않은 채 지속**되는 것이 가장 큰 문제. \"새 약이 필요한 증상인가 vs 기존 약 부작용인가\"를 매번 자문하는 습관이 핵심 예방. 고령 외래에서 다약제 처방 전 반드시 cascade 가능성 점검.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["prescribing-cascade"] = _cascade_v2;
+KNOWLEDGE_BUNDLE["처방연쇄"] = _cascade_v2;
+
+/* post-mi-deprescribing — MI 후 BB 재평가 REDUCE-AMI (4-30 신규 bundle 등록, Mir-T1 #6). [CLINICAL] */
+var _post_mi_dep_v2 = {
+  kind: "topic",
+  keywords: ["post-MI","심근경색후","beta-blocker 중단","REDUCE-AMI","preserved EF","LVEF 50","2차예방 다약제","secondary prevention"],
+  primarySources: [
+    "Yndigegn T et al. Beta-Blockers after MI and Preserved EF (REDUCE-AMI). N Engl J Med 2024;390(15):1372-1381. PMID:38587241, DOI:10.1056/NEJMoa2401479",
+    "Johner N et al. Routine BB after acute coronary syndromes: end of an era? Eur J Clin Invest 2024;54(12):e14309. PMID:39257189",
+    "Atalla M et al. Cardiology 2025 update. Ann Intern Med 2026. PMID:41974015 [초록 기반]"
+  ],
+  sections: {
+    definition: {
+      content: "MI 후 \"2차 예방 표준\"으로 수십 년 처방되어 온 베타차단제(BB)는 PCI + 고강도 statin + RAAS 시대에서 **LVEF 보존(≥50%) 환자에게 사망·재MI 예방 이득 없음** — REDUCE-AMI(2024, n=5,020, 추적 3.5년).",
+      sources: []
+    },
+    classification: {
+      content: "### LVEF 3구간 BB 근거\n| LVEF | 근거 | 처방 |\n|---|---|---|\n| **≤ 40% (HFrEF)** | 명확한 사망·입원 감소 | **유지 필수** (GDMT 4 pillars) |\n| **41 – 49%** (mildly reduced) | RCT 부족, 관찰 일부 시사 | **개별 판단** (협심증·AF·HTN 동반?) |\n| **≥ 50% (preserved)** | REDUCE-AMI 이득 **없음** 확증 | **타 적응증 없으면 중단 고려** |",
+      sources: []
+    },
+    protocol: {
+      content: "### Step 1 — LVEF 확인\n에코 또는 관상동맥조영 LV gram. 12개월 내 데이터 없으면 에코 의뢰.\n\n### Step 2 — BB 타 적응증 점검 (하나라도 해당하면 유지)\n- 지속·발작성 AF (심박수 조절)\n- 현재 anginal symptoms\n- 조절 불량 HTN에서 BB 기여\n- 빈맥성 부정맥\n- LVEF 41-49% + 광범위 관상동맥질환\n\n### Step 3 — 중단 의사결정\nLVEF ≥50% + Step 2 적응증 모두 부재 → 중단 고려. 환자 공동 의사결정.\n\n### Step 4 — 점진 감량\n- 메토프롤롤 숙시네이트 100→50→25mg → 중단 (각 2주)\n- 비소프롤롤 5→2.5→1.25mg → 중단 (각 2주)\n- 저용량(예: 12.5mg qd)은 1-2주 감량 후 중단 가능",
+      sources: []
+    },
+    indication: {
+      content: "BB **유지** 적응증:\n- LVEF ≤ 40% (HFrEF) — HF 엔트리 GDMT 경로 ([[heart-failure]])\n- 지속/발작성 AF + RVR\n- 운동 유발 협심증 (CCS II 이상)\n- 다른 약제로 조절 안 되는 HTN\n- 유전성 QT 연장·특정 cardiomyopathy",
+      sources: []
+    },
+    contraindication: {
+      content: "BB **중단 부적절**:\n- MI 발생 후 1개월 이내\n- 최근 VT/VF\n- 급성 ACS 재발 고위험\n- HF 증상 환자 (LVEF ≥50%라도)",
+      sources: []
+    },
+    monitoring: {
+      content: "중단 후 4-8주 체크포인트:\n- 혈압·심박수 (HR 너무 빨라지면 재평가)\n- 증상 재발 (흉통·두근거림·운동 내약성)\n- AF 재발 (기왕력 시)\n\n3개월 안정 → 장기 종결.",
+      sources: []
+    },
+    referral: {
+      content: "- LVEF 41-49% 개별 판단 어려운 경우\n- 중단 후 증상 재발 (협심증·부정맥)\n- 복합 심질환 (판막·cardiomyopathy 공존)",
+      sources: []
+    },
+    notes_extra: {
+      content: "고전적 BB 이득 trials(ISIS-1·BHAT)은 PCI·statin·ACEi 이전 시대. 현대 재관류 + 이차예방 약물로 잔여 위험 급감 → BB 부가 이득 희석. Ann Intern Med 2026 cardiology update(PMID:41974015)에서도 MI 후 BB 일률 처방 재고 방향 재확인. MI 후 연간 리뷰 시 에코 + LVEF 확인 → BB 재평가 루틴화.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["post-mi-deprescribing"] = _post_mi_dep_v2;
+KNOWLEDGE_BUNDLE["MI후-BB중단"] = _post_mi_dep_v2;
+KNOWLEDGE_BUNDLE["REDUCE-AMI"] = _post_mi_dep_v2;
+
+/* heart-failure-pocus-ducs — POCUS DUCS 심부전 예후 (4-30 deep-extract, Mir-T1 #1 POCUS).
+   기존 heart-failure·heart-failure-volume-overload 본문 보존, POCUS DUCS는 별도 topic. [CLINICAL — 조건부] */
+var _hf_ducs_v2 = {
+  kind: "topic",
+  keywords: ["heart-failure-pocus-ducs","DUCS","lung ultrasound","B-lines","VEXUS","POCUS HF","ADHF prognosis","ΔDUCS"],
+  primarySources: [
+    "Garg S et al. POCUS Dual Ultrasound Congestion Score (DUCS) in ADHF. J Ultrasound Med 2026. PMID:41863026, DOI:10.1002/jum.16XXX [초록 기반]"
+  ],
+  sections: {
+    definition: {
+      content: "DUCS(Dual Ultrasound Congestion Score) = **폐초음파(B-lines) + VEXUS** 복합 점수. ADHF(급성 비대상 심부전) 환자의 입원 사망·재입원 예측에 유용.",
+      sources: []
+    },
+    exam: {
+      content: "### 핵심 수치\n| 지표 | AUC | 의미 |\n|---|---|---|\n| **ΔDUCS (입원→퇴원)** | **0.76** | 입원 사망 예측 |\n| **퇴원 시 DUCS** | **0.77** | 30일 사망·재입원 예측 |\n\n→ 폐초음파만 단독 사용보다 VEXUS 결합이 정보량 ↑. 이뇨제 치료 반응 모니터링 도구로 POCUS 확장 개념.",
+      sources: []
+    },
+    protocol: {
+      content: "### POCUS DUCS 임상 적용\n1. 입원 시 DUCS 측정 (baseline)\n2. 이뇨제 치료 후 ΔDUCS 추적\n3. 퇴원 전 DUCS 재측정 → 30일 위험 stratification\n4. 퇴원 시 DUCS 높음 → 30일 follow-up 강화\n\n### POCUS 술기 요점\n- B-lines: 8 zone scan (≥3 B-lines = positive)\n- VEXUS: IVC + 간 정맥·문맥·간세정맥 doppler grade 0~3",
+      sources: []
+    },
+    notes: {
+      content: "기존 heart-failure-volume-overload(BNP+POCUS B-lines 단독) 보강 — VEXUS 추가로 우심부전 동반 평가까지 확장. ADHF 외래·응급 환경에서 POCUS 보유 시 적용 가능 (Mir-T1 #1 POCUS·초음파 중재 영역).",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["heart-failure-pocus-ducs"] = _hf_ducs_v2;
+KNOWLEDGE_BUNDLE["DUCS"] = _hf_ducs_v2;
+KNOWLEDGE_BUNDLE["VEXUS"] = _hf_ducs_v2;
+
+/* internal-medicine-2025-update — Cardiology + Endocrinology 2025 보완 합본 (4-30 deep-extract).
+   기존 키 본문 보존, 보완은 별도 topic으로 격리. [CLINICAL] */
+var _im_2025_v2 = {
+  kind: "topic",
+  keywords: ["internal-medicine-2025-update","cardiology-2025","endocrinology-2025","AF anticoagulation","mavacamten","aficamten","finerenone","피네레논","GLP-1 NAION","SGLT-2 UTI 비교"],
+  primarySources: [
+    "Atalla M et al. Cardiology 2025 update. Ann Intern Med 2026. PMID:41974015, DOI:10.7326/ANNALS-26-01014 [초록 기반]",
+    "Endocrinology 2025 update. Ann Intern Med 2026. PMID:41974004, DOI:10.7326/ANNALS-26-01015 [초록 기반]"
+  ],
+  sections: {
+    cardiology: {
+      content: "### 심장내과 2025 핵심 변화 (PMID:41974015)\n- **AF 항응고**: 아픽사반 vs 리바록사반 재평가\n- **MI 후 BB**: LVEF≥50% 일률 처방 재고 방향 재확인 ([[post-mi-deprescribing]])\n- **HCM 신약**: mavacamten·aficamten 인식 확대\n- **AF + 커피**: 예상보다 안전 (실용 메시지)",
+      sources: []
+    },
+    endocrinology: {
+      content: "### 내분비 2025 핵심 변화 (PMID:41974004)\n- **GLP-1 NAION 부작용 신호**: 시야 변화 모니터링 교육 추가 ([[glp1-selection-strategy]])\n- **SGLT-2 vs GLP-1 비뇨생식기 감염 비교**: SGLT-2 위험 ↑ → **반복 UTI 환자 GLP-1 우선 고려**\n- **피네레논 (Finerenone)**: T2DM + CKD 신보호 추가 근거. SGLT-2i + 피네레논 병합 전략 가능성\n- **MASH + GLP-1**: 적응증 확대 ([[MASH]])",
+      sources: []
+    },
+    notes: {
+      content: "본 엔트리는 두 Ann Intern Med 2026 update 논문 합본. 개별 영역의 상세는 관련 엔트리(post-mi-deprescribing·glp1-selection-strategy·sglt2-inhibitors·CKD·MASH) 본문 참조. 본 엔트리는 **2025년 내과 변화 한눈에 보기** 목적.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["internal-medicine-2025-update"] = _im_2025_v2;
+KNOWLEDGE_BUNDLE["cardiology-2025"] = _im_2025_v2;
+KNOWLEDGE_BUNDLE["endocrinology-2025"] = _im_2025_v2;

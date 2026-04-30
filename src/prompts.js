@@ -91,6 +91,16 @@ JSON만 반환 (다른 텍스트 절대 금지):
   MASH (MASLD/NAFLD/NASH/지방간염/FIB-4/GLP-1로 MASH 해소·체중감량 — 지방간염 동반 비만·당뇨 맥락)
   covid-outpatient-antivirals (COVID-19 외래 항바이러스/molnupiravir/Paxlovid/simnotrelvir/Long COVID 예방 맥락)
   obesity-pharmacotherapy-grade (비만 약물치료 GRADE 권고/TOS·OMA·OAC 강력 권고/HFpEF·OSA·MASH·OA 동반 GLP-1 우선 — 약물 선택 가이드 맥락)
+  ibs (과민성 대장 증후군/IBS-C·D·M 아형/Rome IV/저FODMAP/linaclotide·loperamide·rifaximin 관련)
+  functional-dyspepsia (기능성 소화불량/명치 통증·식후 포만/PPI 1차 + 저용량 TCA 신경조절제/PDS·EPS 아형 관련)
+  frailty (허약·노쇠/65세 이상/다약제·낙상·비계획입원 회복 인자/CGA·FRAIL Scale·Fried 관련)
+  diabetic-peripheral-neuropathy (당뇨 신경병증 통증/타는 듯·전기 자극·이질통/가바펜틴·프레가발린·둘록세틴/충분 용량·기간 시도 맥락)
+  palliative-pain (완화의료 통증·암성통증/경피 부프레노르핀/연하곤란 말기·신부전 환자/호스피스 협진 맥락)
+  home-based-hypertension (재택의료 고혈압/CHW 방문+원격 간호 모델/이동 제한·고령 환자/IMPACT-BP RCT 맥락)
+  prescribing-cascade (처방 연쇄/다약제 부작용→추가 처방 패턴/AChEI·항우울제·항정신병약·항고혈압·스타틴 유발/Beers·STOPP/START 관련)
+  post-mi-deprescribing (MI 기왕력 + LVEF≥50% + BB 유지 이유 검토/REDUCE-AMI 근거/협심증·AF·HTN 적응증 없으면 중단 고려 맥락)
+  heart-failure-pocus-ducs (POCUS 폐초음파 B-lines + VEXUS DUCS 점수/ADHF 입원·재입원 예측/이뇨제 반응 모니터링 맥락)
+  internal-medicine-2025-update (Ann Intern Med 2026 cardiology·endocrinology update 합본/AF 항응고·MI BB·HCM 신약·GLP-1 NAION·SGLT-2 UTI·피네레논 — 2025 내과 변화 한눈에 보기 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */
