@@ -101,6 +101,20 @@ JSON만 반환 (다른 텍스트 절대 금지):
   post-mi-deprescribing (MI 기왕력 + LVEF≥50% + BB 유지 이유 검토/REDUCE-AMI 근거/협심증·AF·HTN 적응증 없으면 중단 고려 맥락)
   heart-failure-pocus-ducs (POCUS 폐초음파 B-lines + VEXUS DUCS 점수/ADHF 입원·재입원 예측/이뇨제 반응 모니터링 맥락)
   internal-medicine-2025-update (Ann Intern Med 2026 cardiology·endocrinology update 합본/AF 항응고·MI BB·HCM 신약·GLP-1 NAION·SGLT-2 UTI·피네레논 — 2025 내과 변화 한눈에 보기 맥락)
+  sinusitis (부비동염/축농증/ABRS/CRS/항생제 ladder/목시클·메이액트·levofloxacin/누적 1개월 후 ENT 의뢰 — 급·만성 부비동염 처방 맥락)
+  epistaxis (코피/비출혈/콧망울 압박 10분/Nasalin·리노힐/응급실 패킹·bipolar — 급성 또는 만성 비출혈 맥락)
+  sleep-apnea (수면무호흡/OSA/코골이/PSG/Mallampati·STOP-BANG/CPAP — 수면호흡장애 진찰·진단 맥락)
+  tinnitus (이명/귀울림/매미·우웅·다다닥/myoclonic tinnitus/clonazepam·carbamazepine·baclofen/편측성→청신경종양/EHF audiometry — 이명 문진·약물·의뢰 맥락)
+  hearing-loss (난청/노인성/감각신경성/보청기/dementia risk factor/ACHIEVE RCT/소음 직업력 — 청력저하 평가·보청기 상담 맥락)
+  low-freq-hearing-loss (저주파난청/귀먹먹함/이충만감/내이수종/ALHL/메칠론 7일 tapering·U-turn·HCTZ·Storgar — 급성 저주파 감각신경성 난청 처방 맥락)
+  meniere (메니에르병/회전성 현훈+변동 청력+이명/U-turn+Dichlozid 유지+보나링 응급/내이수종 그림 시각화 — 메니에르 진단·관리 맥락)
+  sudden-hearing-loss (돌발성난청/SSNHL/72시간 이내 ≥30dB SNHL/메칠론 8T#2 7일 tapering/ITS/당뇨 확인 — 응급 의뢰 맥락)
+  vestibular-neuritis (전정신경염/급성 지속성 회전성 현훈+청력 정상/U-turn·보나링/엄지 응시 도리도리 재활 — 전정 평가 후 외래 처방 맥락)
+  otitis-externa (외이도염/귀가려움/swimmer's ear/아드반탄+오큐프록스 1:1 냉장/perforation 시 금기 — 만성 외이도 가려움 처방 맥락)
+  laryngitis (후두염/소론도+자큐보+뮤테란/voice rest/3주 이상 → ENT — 음성 사용 직업·심한 후두염 처방 맥락)
+  eagle-syndrome (Eagle syndrome/편도 안쪽 통증/tonsillar fossa palpation/elongated styloid >30mm/CT 3D — 만성 정체불명 인후·이부 통증 감별 맥락)
+  thyroid-fna-cnb (갑상선 FNA/CNB/항혈전제 사전 확인/CNB 출혈·혈종/응급 호흡곤란→ER — 갑상선 시술 전 평가·합병증 안내 맥락)
+  salivary-gland-stones (타석증/턱밑샘 부음 한쪽 vs 양쪽/CT 적응증/eye scissor 미세절개·배석 — 침샘 돌 진단·시술 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */

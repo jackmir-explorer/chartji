@@ -1260,7 +1260,7 @@ var KNOWLEDGE_BUNDLE = {
   "후각저하": {
     "kind": "disease",
     "exam": "선행 감염(COVID-19/감기) 여부·발병 시점\n비염·부비동염 증상(코막힘·콧물·안면통)\n두부 외상력\n인지기능 저하·파킨슨 증상\n갑상선기능저하·만성신부전(투석) 여부",
-    "treatment": "식염수 코세척 [CLINICAL — 조건부] CRS 동반 시 효과, post-viral 단독은 보조\nNasal steroid spray [CLINICAL — 조건부] CRS/비용종 효과, post-COVID 단독 미확립\nPrednisolone(소론도) 7일 taper: 4T#2 ×5일 → 2T#2 ×2일 [TIPS — by ENT교수]\nSmell training: 표준 향 4종, 매일 2회, 최소 12주 [CLINICAL]\n비타민 B·C [TIPS — by ENT교수]\n후각검사: F/U 모니터링 목적, 초진 일상 시행 불필요 [TIPS — by ENT교수]",
+    "treatment": "식염수 코세척 [CLINICAL — 조건부] CRS 동반 시 효과, post-viral 단독은 보조\nNasal steroid spray [CLINICAL — 조건부] CRS/비용종 효과, post-COVID 단독 미확립\n**INS 병용 시 후각연습 효과 ↑** [TIPS — by ENT교수] olfactory cleft 점막 부종 감소 → 자극 전달 효율 ↑\nPrednisolone(소론도) 7일 taper: 4T#2 ×5일 → 2T#2 ×2일 [TIPS — by ENT교수]\nSmell training: 표준 향 4종(rose/eucalyptus/lemon/clove), 매일 2회, 최소 12주 [CLINICAL]\n비타민 B·C [TIPS — by ENT교수]\n후각검사: F/U 모니터링 목적, 초진 일상 시행 불필요 [TIPS — by ENT교수]\n\n### 난치성 CRSwNP — Dupilumab(Dupixent) [CLINICAL]\n적응: 난치성 CRSwNP — 표준 INS·코세척·OCS·수술 실패\n후각 회복 효과: UPSIT +10.54 vs placebo (24주, p<0.0001), anosmic 60% 이상이 24주에 후각 회복, week 1 이내 효과\n코막힘(NPS)도 개선되나 **후각 회복 폭이 더 인상적**\n처방: 알레르기·이비인후 전문의 영역 (생물학적 제제, 보험·적응증 평가 필요)\n[출처: Bachert Lancet 2019 PMID:31543428; Mullol JACI-IP 2022 PMID:34628065]",
     "differential": "1. Post-viral(COVID-19) ★가장 흔함\n2. Sinusitis/CRS/비용종 ★흔함\n3. 두부 외상 (cribriform plate 손상)\n4. 알츠하이머·파킨슨 초기증상 (90%·85% — 운동·인지 증상 수년 선행)\n5. 갑상선저하증(가역적, T4 치료 후 회복) / 만성신부전(uremic toxin)",
     "differentialShort": [{"d":"Post-viral(COVID-19)","t":"h"},{"d":"Sinusitis/CRS","t":"h"},{"d":"두부외상","t":"z"},{"d":"알츠하이머·파킨슨","t":"z"},{"d":"갑상선저하증/신부전","t":"z"}],
     "draftTemplate": null,
@@ -1830,19 +1830,32 @@ var KNOWLEDGE_BUNDLE = {
    2026-04-22 L1 B1-patch: treatment → protocol (vocabulary 정합) */
 var _LPR_v2 = {
   kind: "disease",
-  keywords: ["LPR","후두염","인후두역류","laryngopharyngeal reflux","역류성후두염"],
+  keywords: ["LPR","laryngopharyngeal reflux","역류성후두염","인후두역류","목 열감","목 화끈거림","P-CAB","자큐보"],
   primarySources: [],
   sections: {
+    exam: {
+      content: "### 환자 표현 — '목 열감' + 기침 [TIPS — by ENT 교수]\n'목에 열감이 있으면서 기침이 나와요'라고 호소하는 환자에서 **'열감'은 진짜 발열이 아니라 타는 듯한 느낌, 화끈거림의 표현**.\n→ **LPR / GERD 의심** — 인후 burning sensation은 LPS 핵심 증상.\n\n### 동반 증상 점검\n- 식도 증상 (속쓰림·역류감) 동반 여부 — 진단 알고리즘 분기점\n- 인후이물감·잦은 헛기침·잠긴 목소리·점액 과다",
+      sources: []
+    },
     protocol: {
-      content: "PPI (1차 치료, 근거 확립)\n뮤테란(아세틸시스테인 경구) 병용 — LPR 인후 분비물·점액 거담 목적 (off-label)\nPPI 부작용 시:\n① 알긴산(Gaviscon류) — raft 형성, 역류 물리적 차단\n② Promac(polaprezinc) — 위점막 보호제. 알긴산과 병용 가능",
-      sources: ["[TIPS — by ENT교수]"]
+      content: "### 1차 — PPI + 뮤테란 [CLINICAL + TIPS]\n- PPI 표준용량 BID — LPR 1차 치료 (근거 확립)\n- 뮤테란(아세틸시스테인 200mg 경구) 병용 — LPR 인후 분비물·점액 거담 [TIPS — by ENT교수, off-label]\n\n### PPI 부작용 시 대안 [TIPS — by ENT 교수]\n- **알긴산(Alginic acid, Gaviscon류)** — raft 형성, 역류 물리적 차단\n- **Promac(polaprezinc)** — 위점막 보호제. 알긴산과 병용 가능",
+      sources: []
+    },
+    "follow-up-schedule": {
+      content: "### LPR f/u 간격 [TIPS — by ENT 교수]\n- LPR 진단 환자는 **30일 간격으로 약을 주면서 증상 호전될 때까지 지켜본다**\n- 첫 3개월은 PPI 표준 BID 유지, 호전 시 단계적 감량 (de-escalation)",
+      sources: []
     }
   },
-  uiHooks: null
+  uiHooks: {
+    hint: ["protocol","follow-up-schedule","referral","contraindication","precaution","pregnancy"],
+    guide: ["classification","indication","exam","protocol","follow-up-schedule","comparison","monitoring","insurance","notes"],
+    triage: ["differential"],
+    draftAppend: ["draft-append"]
+  }
 };
 KNOWLEDGE_BUNDLE["LPR"] = _LPR_v2;
-KNOWLEDGE_BUNDLE["후두염"] = _LPR_v2;
 KNOWLEDGE_BUNDLE["인후두역류"] = _LPR_v2;
+KNOWLEDGE_BUNDLE["역류성후두염"] = _LPR_v2;
 
 /* v2 승격 — 2026-04-22 L1 B1 — 원본: knowledge/by-disease/dry-mouth.md
    원본 md 라벨:
@@ -1914,7 +1927,7 @@ var _dizziness_v2 = {
   primarySources: [],
   sections: {
     exam: {
-      content: "### 어지럼증 기본 문진 11항목 [TIPS — 교수님 외래 참관]\n1. 언제부터 어지러웠는지\n2. 갑자기 발생했는지\n3. 과거 비슷한 episode 있었는지\n4. 한번 어지러울 때 얼마나 지속되는지\n5. 괜찮을 땐 완전히 괜찮은지 (삽화성 vs 지속성)\n6. 심한 정도 — 구역/구토 동반 여부, 휘청거림\n7. 귀먹먹함(이충만감) 동반 여부\n8. 이명 동반 여부\n9. 만성이면 한달 발생 빈도\n10. 어떤 상황에서 특히 어지러운지 (자세변화, 기립, 스트레스 등)\n11. 가장 최근 episode는 언제\n\n### 편두통성 어지럼증 추가 문진\n- 편두통 과거력 확인\n- 두통 동반 여부, 빛·소리 과민, 구역/구토, 전조증상, 두통 양상(박동성/지속시간), 가족력, 발작 빈도",
+      content: "### 어지럼증 기본 문진 11항목 [TIPS — 교수님 외래 참관]\n1. 언제부터 어지러웠는지\n2. 갑자기 발생했는지\n3. 과거 비슷한 episode 있었는지\n4. 한번 어지러울 때 얼마나 지속되는지\n5. 괜찮을 땐 완전히 괜찮은지 (삽화성 vs 지속성)\n6. 심한 정도 — 구역/구토 동반 여부, 휘청거림\n7. 귀먹먹함(이충만감) 동반 여부\n8. 이명 동반 여부\n9. 만성이면 한달 발생 빈도\n10. 어떤 상황에서 특히 어지러운지 (자세변화, 기립, 스트레스 등)\n11. 가장 최근 episode는 언제\n\n### 편두통성 어지럼증 추가 문진\n- 편두통 과거력 확인\n- 두통 동반 여부, 빛·소리 과민, 구역/구토, 전조증상, 두통 양상(박동성/지속시간), 가족력, 발작 빈도\n\n### 환자가 '어지럽다'고 할 때 [TIPS — by ENT 교수]\n- '어지럽냐'고 물으면 다 어지럽다고 함 → **구체화 질문** 필수\n- **'걸을 때 비틀거리거나 중심을 못 잡은 적 있는지'** — 진짜 vertigo·ataxia 감별의 시작점\n\n### 어지럼증 초진 검사 표준 [TIPS — by ENT 교수]\n| 항목 | 확인 |\n|---|---|\n| 구토 여부 | 동반 여부·빈도 |\n| 일상생활 지장 정도 | 침상안정·휘청거림 정도 |\n| **Head Impulse Test (HIT)** | 말초 vs 중추 감별 (catch-up saccade 유무) |\n| **Tandem gait** | 소뇌·후순환 의심 시 |\n| 난청·이명·귀 먹먹함 | 메니에르·내이수종 감별 |\n| **고막 시진** | 외이염·중이염·천공 |\n\nHIT abnormal + skew deviation 없음·nystagmus 단방향 = **HINTS 양성 → 말초성**\nHIT normal + skew deviation 있음·nystagmus 변화 = **HINTS 음성 → 중추성 의심 (소뇌 경색)**\n\n### 귀에 물약 → 일시적 어지럼 [TIPS — by ENT 교수]\n- 귀에 물약을 넣었을 때 어지러울 수 있음\n- 원인: 물약이 차가움 → 외이도 내 온도 자극 → caloric stimulation\n- 환자 교육: **물약을 손에 잠시 쥐어 체온 정도로 데워서** 점안",
       sources: ["[TIPS — 교수님 외래 참관]"]
     },
     differential: {
@@ -2292,24 +2305,38 @@ KNOWLEDGE_BUNDLE["chronic-cough"] = _chronic_cough_v2;
 KNOWLEDGE_BUNDLE["만성기침"] = _chronic_cough_v2;
 KNOWLEDGE_BUNDLE["RCC"] = _chronic_cough_v2;
 
-/* allergic-rhinitis — ARIA 2024-2025 (4-24 deep-extract). [REGULATORY] */
+/* allergic-rhinitis — ARIA 2024-2025 + 한국 외래 임상 패턴 (4-24 deep-extract + 4-30 ENT bulk). [REGULATORY + TIPS] */
 var _allergic_rhinitis_v2 = {
   kind: "disease",
-  keywords: ["알레르기비염","allergic rhinitis","AR","비강내 스테로이드","INCS","비강내 항히스타민","INAH","ARIA","계절성비염","지속성비염"],
+  keywords: ["알레르기비염","allergic rhinitis","AR","비강내 스테로이드","INCS","비강내 항히스타민","INAH","ARIA","계절성비염","지속성비염","비염","리노벤트","Ipratropium","cryotherapy","ClariFix","NAR","비알러지비염","vasomotor rhinitis"],
   primarySources: [
-    "Sousa-Pinto B et al. ARIA-EAACI Guidelines 2024-2025: Intranasal Treatments. Allergy 2025;81(4):954-976. PMID:41324154, DOI:10.1111/all.70131"
+    "Sousa-Pinto B et al. ARIA-EAACI Guidelines 2024-2025: Intranasal Treatments. Allergy 2025;81(4):954-976. PMID:41324154, DOI:10.1111/all.70131",
+    "Choi et al. ClariFix cryoablation meta-analysis. J Rhinol 2024. DOI:10.18787/jr.2024.00015",
+    "Young et al. ClariFix efficacy. Am J Rhinol Allergy 2023. DOI:10.1177/19458924231152331"
   ],
   sections: {
     protocol: {
       content: "### 비강내 치료 권고 서열 (ARIA 2024-2025)\n```\nINAH+INCS 복합 > INCS 단독 > INAH 단독\n```\n\n| 비교 | 권고 방향 |\n|---|---|\n| INAH+INCS vs INAH 단독 | **INAH+INCS 우선** (강화) |\n| INAH+INCS vs INCS 단독 | **INAH+INCS 우선** (강화 — 핵심 변화) |\n| INCS 단독 vs INAH 단독 | INCS 우선 (유지) |\n\n### 약제 분류 (한국 외래)\n| 분류 | 대표 약제 |\n|---|---|\n| INCS | Fluticasone(플루티카손), Mometasone(모메타손), Budesonide(부데소니드) |\n| INAH | Azelastine(아젤라스틴) |\n| INAH+INCS 복합 | Dymista (azelastine+fluticasone) — 2025 우선 권고 |\n| 비충혈제거제 | Oxymetazoline 등 — 단기(≤3-5일)만 |\n\n### 적용 원칙\n- 계절성 AR: 노출 직전 또는 증상 발현 시 시작 (preseason 전처치 가능)\n- 지속성 AR: 지속 사용 (INCS ± INAH)\n- 단기 증상 → INAH 또는 경구 항히스타민\n- 중등도 이상 또는 QoL 저하 → INCS 또는 INAH+INCS",
       sources: []
     },
+    "clinical-pattern": {
+      content: "### 한국 외래 처방 패턴 [TIPS — by ENT 교수, 조진희 교수님, 강윤진 교수님]\n\n**단순 비염**: INS + 리노에바스텔 (Loratadine 계열) — 최소 처방으로 충분\n\n**심한 비염**:\n- INS **2회 분무 BID** (아침·저녁) → 호전 시 **1회 분무 QD**로 감량\n- 처방 기간: 2주 후 f/u\n\n**INS 사용법 환자 교육**:\n- 사용 시간대 자유 — 꼭 아침에만 쓸 필요 없음. **가장 불편한 시간대**에 사용\n- 분사 방향: 비중격 아닌 **외측벽 향**\n\n**조진희 교수님 처방**: Xyzal (levocetirizine) + Lukio (montelukast) + 코세척 + INS\n— 류코트리엔 차단제 병용 (AR + asthma overlap·비용종 동반 시)\n\n**강윤진 교수님 처방 (비염 + 기침)**: 리노에바스텔 + 애니코프 + 움카민 시럽 + INS + 코세척\n— 스프레이 사용 강조, 미사용자에게 사용법 재교육 핵심\n\n### 비염 환자 문진 표준\n- 코막힘 / 콧물 / 재채기 / 가려움 / **냄새 잘 맡는지** (후각 동반 저하 → 비용종·CRS 의심)\n- **심한 시점**: 하루 중·연중 (계절성 vs 통년성 감별)\n- 알러지 검사력\n- INS 스프레이 사용력 (있다면 효과·순응도)",
+      sources: []
+    },
+    procedure: {
+      content: "### Cryotherapy (posterior nasal nerve cryoablation, ClariFix) [CLINICAL]\n\n- 메커니즘: posterior nasal nerve 동결 (점막 분비세포 자체가 아님)\n- **유효율**: TNSS ≥30% 감소 ~71% (메타분석), 효과 12개월까지 지속\n- AR·NAR (vasomotor) 모두 적응\n- 부작용: 시술부 통증 10–40%, 두통 18–20%, 일시적 비강건조·구개감각저하 <5%\n- **환자 상담 문구**: \"약 70%에서 의미있는 호전, 12개월까지 효과 보고됨\"\n\n[TIPS 미르 인상: 성공률 절반·재발 흔하다고 느낌 — 메타분석 평균과 차이. 환자별 selection·기대치 관리 필요]",
+      sources: ["Choi 2024 J Rhinol DOI:10.18787/jr.2024.00015", "Young 2023 Am J Rhinol Allergy DOI:10.1177/19458924231152331"]
+    },
+    "nar-treatment": {
+      content: "### 노인 비알러지 비염 (NAR / Vasomotor) [TIPS — by ENT 교수]\n\n- **리노벤트 nasal spray (Ipratropium bromide 0.03%)** — anticholinergic\n- 표준 용법: 1–2회 분무 BID–TID per nostril\n- **녹내장·BPH 환자**: 충분히 감량 — **이틀에 1회** 정도로 사용\n\n약리: ipratropium은 muscarinic 차단 → glandular hypersecretion 감소. AR보다는 NAR(특히 watery rhinorrhea)에 효과.",
+      sources: []
+    },
     precaution: {
-      content: "- INCS: 비강 건조, 출혈 (올바른 방향 분사 교육 필수 — 비중격 아닌 외측벽 향)\n- Decongestant 비강 스프레이 3-5일 초과 금지 — 약물유발비염(rhinitis medicamentosa)\n- 비충혈제거제 경구: 고혈압·심혈관·녹내장·전립선비대 환자 주의",
+      content: "- INCS: 비강 건조, 출혈 (올바른 방향 분사 교육 필수 — 비중격 아닌 외측벽 향)\n- Decongestant 비강 스프레이 3-5일 초과 금지 — 약물유발비염(rhinitis medicamentosa)\n- 비충혈제거제 경구: 고혈압·심혈관·녹내장·전립선비대 환자 주의\n- 리노벤트(Ipratropium): 녹내장·BPH 주의 — 이틀에 1회로 감량 가능",
       sources: []
     },
     referral: {
-      content: "- INCS+INAH 복합 치료에도 반응 없음 → 알레르기 전문의 (면역요법 고려)\n- 비용종 동반 → 이비인후과\n- 동반 천식 (AR-asthma overlap) → 천식 병행 관리",
+      content: "- INCS+INAH 복합 치료에도 반응 없음 → 알레르기 전문의 (면역요법 고려)\n- 비용종 동반 → 이비인후과\n- 동반 천식 (AR-asthma overlap) → 천식 병행 관리\n- 후각 저하 동반 → CRS·비용종 평가 위해 ENT (난치성 후각 저하 → Dupixent 적응 가능)",
       sources: []
     },
     notes: {
@@ -2317,11 +2344,20 @@ var _allergic_rhinitis_v2 = {
       sources: []
     }
   },
-  uiHooks: null
+  uiHooks: {
+    hint: ["protocol","clinical-pattern","nar-treatment","procedure","referral","contraindication","precaution","pregnancy"],
+    guide: ["classification","indication","exam","protocol","clinical-pattern","procedure","nar-treatment","comparison","monitoring","insurance","notes"],
+    triage: ["differential"],
+    draftAppend: ["draft-append"]
+  }
 };
 KNOWLEDGE_BUNDLE["allergic-rhinitis"] = _allergic_rhinitis_v2;
 KNOWLEDGE_BUNDLE["알레르기비염"] = _allergic_rhinitis_v2;
 KNOWLEDGE_BUNDLE["ARIA"] = _allergic_rhinitis_v2;
+KNOWLEDGE_BUNDLE["비염"] = _allergic_rhinitis_v2;
+KNOWLEDGE_BUNDLE["NAR"] = _allergic_rhinitis_v2;
+KNOWLEDGE_BUNDLE["리노벤트"] = _allergic_rhinitis_v2;
+KNOWLEDGE_BUNDLE["cryotherapy"] = _allergic_rhinitis_v2;
 
 /* meningitis — 세균성·무균성 수막염 (4-26 deep-extract). [CLINICAL] */
 var _meningitis_v2 = {
@@ -3189,6 +3225,10 @@ var _palliative_pain_v2 = {
     notes_extra: {
       content: "암성통증 완화의료에서 **경피 부프레노르핀은 연하 곤란·장 기능 저하 말기 환자의 1차 대안**. OUD 우려 환자에서 부분 작용제 스튜어드십 대안으로도 활용.",
       sources: []
+    },
+    counseling: {
+      content: "### 암환자의 '원인' 욕구 [INSIGHTS — by 미르 관찰]\n\n암환자들은 '원인'을 항상 알고 싶어한다. 내가 왜 걸린 건지, 유전인지, 환경인지, 무슨 인자가 있는 건지. 전근대에는 그것을 죄나 업보로 해석했다. 사람들은 **'설명'되기를 원하며 적절한 설명을 들으면 마음을 놓는 것 같다**.\n\n### 임상 함의\n- **답할 수 없는 질문에도 답하려는 시도가 정서적 의미** — '정확한 원인은 알기 어렵지만…'으로 시작\n- 가족력 / 환경 / 흡연 / 식이 / 감염 등 **알려진 위험인자를 점검·언급**\n- 환자가 '내 잘못 아닌데' 안심할 수 있는 framing — 자책·죄의식 완화\n- 모를 때는 **'많은 경우 명확한 단일 원인은 없습니다'**라고 명시 — 솔직함이 신뢰 형성\n- **시간을 충분히** — 1–2분의 설명이 환자 만족도·치료 순응도에 큰 영향\n\n### 전근대 vs 현대\n- 전근대: 죄·업보·악령\n- 현대: 유전·환경·생활습관·확률\n- 공통: **사람은 '설명되지 않은 고통'을 견디기 매우 어려워함** → 의사가 의미 부여(meaning-making) 역할\n\n[Related: Communication & Counseling 횡단 모듈]",
+      sources: []
     }
   },
   uiHooks: null
@@ -3268,9 +3308,18 @@ var _cascade_v2 = {
     notes_extra: {
       content: "처방 연쇄는 **인지되지 않은 채 지속**되는 것이 가장 큰 문제. \"새 약이 필요한 증상인가 vs 기존 약 부작용인가\"를 매번 자문하는 습관이 핵심 예방. 고령 외래에서 다약제 처방 전 반드시 cascade 가능성 점검.",
       sources: []
+    },
+    "elderly-mir-tips": {
+      content: "### 노인 부종 → NSAIDs 문진 [TIPS — by 미르 경험]\n노인에서 이유 없이 붓는 경우 **NSAIDs를 꼭 문진**.\n- NSAID-induced edema: PGE2 차단 → renal sodium retention\n- 동반 약물: 칼슘 차단제(amlodipine), TZD, gabapentin\n- Cascade 회피: 이뇨제 추가 전 NSAIDs 중단·교체 우선\n\n### 노인 스테로이드 처방 전 4가지 사전 확인 [TIPS — by ENT 교수]\n| 확인 | 이유 |\n|---|---|\n| **당뇨** | 혈당 상승 — DM도 처방 가능, 환자 교육 필수 |\n| **황반변성** | 스테로이드 악화 — 다른 옵션 우선 고려 |\n| **녹내장** | 안압 상승 |\n| **위궤양·BPSD** | 소화기 출혈·정신 증상 악화 |\n\nDM이 있다고 절대 금지가 아님 — '혈당 상승에 유의'라는 환자 교육.\n\n### Cascade 방지 핵심 질문\n새 증상 호소 노인 환자에서 **첫 질문은 '기존 약 부작용?'**\n- 부종 → NSAIDs·CCB·TZD?\n- 변비 → CCB·항콜린·opioid?\n- 기침 → ACEi?\n- 어지럼 → 항고혈압·BZD·항히스타민?\n- 인지 저하 → 항콜린 burden·BZD?\n\n→ STOPP/START·Beers 활용 우선, 추가 처방은 마지막 수단.",
+      sources: []
     }
   },
-  uiHooks: null
+  uiHooks: {
+    hint: ["protocol","elderly-mir-tips","referral","contraindication","precaution","pregnancy"],
+    guide: ["*"],
+    triage: ["differential"],
+    draftAppend: ["draft-append"]
+  }
 };
 KNOWLEDGE_BUNDLE["prescribing-cascade"] = _cascade_v2;
 KNOWLEDGE_BUNDLE["처방연쇄"] = _cascade_v2;
@@ -3384,3 +3433,691 @@ var _im_2025_v2 = {
 KNOWLEDGE_BUNDLE["internal-medicine-2025-update"] = _im_2025_v2;
 KNOWLEDGE_BUNDLE["cardiology-2025"] = _im_2025_v2;
 KNOWLEDGE_BUNDLE["endocrinology-2025"] = _im_2025_v2;
+
+/* ========== 4-30 ENT bulk ingest (Batch 4 — 비강·축농증) ========== */
+
+/* sinusitis — 부비동염 항생제 ladder + 가이드라인 정렬 (4-30 ENT bulk). [CLINICAL] */
+var _sinusitis_v2 = {
+  kind: "disease",
+  keywords: ["부비동염","축농증","sinusitis","ABRS","acute bacterial rhinosinusitis","rhinosinusitis","만성부비동염","CRS"],
+  primarySources: [
+    "IDSA 2012 ABRS guideline. Chow et al. CID 2012;54:e72",
+    "AAO-HNS 2015 Adult Sinusitis CPG. PMID:25832968",
+    "EPOS 2020 European Position Paper on Rhinosinusitis"
+  ],
+  sections: {
+    protocol: {
+      content: "### 항생제 ladder — 가이드라인 정렬 [CLINICAL]\n| 단계 | 약제 | 비고 |\n|---|---|---|\n| 1차 | **Amoxicillin/clavulanate (목시클)** 5–10일 | IDSA·AAO-HNS·EPOS 1차 |\n| 7일 내 호전 없음 | **High-dose amox/clav** 또는 **Cefditoren (메이액트)** | 다른 베타락탐 step-up |\n| 그래도 실패 | **Levofloxacin / Moxifloxacin** | 퀴놀론 step-up |\n| PCN 알러지 (non-anaphylactic) | **Macrolide** (Clarithromycin / Roxithromycin) 또는 cefditoren | **alternative만**, step-up 약제 아님 |\n\n⚠ Macrolide는 *S. pneumoniae* 내성률 ~30% — IDSA는 경험적 1차 비추천. PCN 알러지·intolerance 시 alternative로만.\n\n### 사용 기간 [TIPS — by ENT 교수]\n- ABRS 표준 5–10일. 호전 없으면 약제 교체.\n- F/U **5–7일 간격** — 호전 무이면 step-up 또는 약제 변경.\n- **누적 1개월(2–3 cycle 합) 후에도 호전 없음** → 항생제 중단 + 대증치료 + ENT 의뢰. 만성 부비동염(CRS)·structural 평가 영역.\n\n### 보조\n- 비강 식염수 세척\n- INS 병용 (점막 부종 감소)",
+      sources: []
+    },
+    exam: {
+      content: "### 영상 — CT 적응증 [TIPS — by ENT 교수]\n- **재발성 부비동염**: CT 적극 권고 (anatomical anomaly·진균성 구분)\n- 항생제 ladder 끝까지 실패 → CT\n- 일회성 ABRS 진단에는 CT 불필요 (임상 진단)",
+      sources: []
+    },
+    referral: {
+      content: "- 누적 1개월 항생제 후에도 증상 지속\n- 재발성 (연 4회 이상)\n- 안와·두개내 합병증 의심 (안구 운동 제한·시력 저하·심한 두통·의식 변화) → **응급**\n- 항진균 의심 (단측 골 침식·면역저하)",
+      sources: []
+    },
+    notes: {
+      content: "한국 외래에서 매크로라이드(특히 Roxithromycin)를 step에 끼워 쓰는 임상 관행 존재 — 가이드라인과 괴리 [TACIT — guideline-vs-practice]. ABRS 90% 이상은 viral → 항생제 없이 자연 호전. 항생제 적응증: 10일 이상 지속 + 악화 + 고열·심한 안면통.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["sinusitis"] = _sinusitis_v2;
+KNOWLEDGE_BUNDLE["부비동염"] = _sinusitis_v2;
+KNOWLEDGE_BUNDLE["축농증"] = _sinusitis_v2;
+KNOWLEDGE_BUNDLE["ABRS"] = _sinusitis_v2;
+KNOWLEDGE_BUNDLE["만성부비동염"] = _sinusitis_v2;
+KNOWLEDGE_BUNDLE["CRS"] = _sinusitis_v2;
+
+/* epistaxis — 코피 응급처치 + 만성 비출혈 (4-30 ENT bulk). [TIPS] */
+var _epistaxis_v2 = {
+  kind: "disease",
+  keywords: ["코피","epistaxis","nosebleed","비출혈","코딱지","비강건조"],
+  primarySources: [],
+  sections: {
+    protocol: {
+      content: "### 가벼운 만성 비출혈·코딱지 [TIPS — by ENT 교수]\n- **Nasalin spray** (식염수 가습) + **리노힐** (창상피복제)\n- 리노힐 대체: **바셀린** (nasal vestibule에 소량 도포)\n- 메커니즘: Kiesselbach plexus 점막 보호 + 가습으로 미세 출혈 예방\n\n### 급성 코피 응급 처치 [TIPS — by ENT 교수]\n| 단계 | 처치 | 시간 |\n|---|---|---|\n| 1단계 | **콧망울(soft cartilaginous portion) 쥐고 고개 숙임** — 떼지 않고 지속 압박 | 10분 |\n| 2단계 | 1단계로 멎지 않으면 **추가 10분** 압박 | +10분 |\n| 3단계 | 그래도 지속 → **응급실 이송** | — |\n\n**응급실 처치**:\n- 1차: 바셀린 거즈 패킹 (anterior nasal packing)\n- 2차: Bipolar electrocautery — ⚠ **Septal perforation 리스크 설명 필수**\n\n**환자 교육 핵심**:\n- 고개를 **뒤로 젖히지 않음** (혈액 후두 흡인 위험) — **앞으로 숙여야** 함\n- 압박 중간에 손 떼지 않음 (응고 진행 차단됨)",
+      sources: []
+    },
+    referral: {
+      content: "- 20분 압박에도 멎지 않음 → ER\n- 반복적·다량 출혈 (Hb 저하 동반)\n- Posterior bleeding 의심 (insertion oral cavity) → ENT 응급\n- 항응고제·항혈소판제 복용자 다량 출혈",
+      sources: []
+    },
+    notes: {
+      content: "응급실은 패킹·cautery까지 가능. 1차 진료에서는 압박 → 미흡 시 즉시 ER 이송이 안전. 만성·반복성 환자는 INS·decongestant 과다 사용 여부 확인 (rhinitis medicamentosa). HHT (유전성 출혈성 모세혈관확장증) 가족력 의심 시 ENT의뢰.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["epistaxis"] = _epistaxis_v2;
+KNOWLEDGE_BUNDLE["코피"] = _epistaxis_v2;
+KNOWLEDGE_BUNDLE["비출혈"] = _epistaxis_v2;
+KNOWLEDGE_BUNDLE["nosebleed"] = _epistaxis_v2;
+
+/* sleep-apnea — 수면무호흡 1차 진찰 (4-30 ENT bulk). [TIPS] */
+var _sleep_apnea_v2 = {
+  kind: "disease",
+  keywords: ["수면무호흡","OSA","sleep apnea","코골이","무호흡","PSG","수면다원검사"],
+  primarySources: [],
+  sections: {
+    exam: {
+      content: "### 1차 진료 진찰 [TIPS — by ENT 교수]\n진단 핵심: 상기도 협착 부위 확인 — **비강 + 인후두 모두**\n\n| 부위 | 가정의학과 진찰 | ENT 추가 |\n|---|---|---|\n| **비강 (부비강 협착)** | 비경 (anterior rhinoscopy) | 내시경 |\n| **구인두** | 설압자 (Mallampati class·tonsil grade) | — |\n| **인후두 (하인두·후두)** | **불가** — 보이지 않음 | **내시경 필수** |\n\n→ 구인두까지는 1차 진료, 인후두는 ENT 의뢰\n\n### 진단 기준\n- **PSG (polysomnography)** = 표준 진단. AHI ≥5 + 증상 또는 AHI ≥15\n- 가정형 simplified test (HSAT) = 보조\n\n### 동반 평가\n- BMI / 목둘레 / Mallampati / Friedman score\n- STOP-BANG questionnaire (선별)\n- 동반: 고혈압·당뇨·심방세동·우울 — 모두 확인",
+      sources: []
+    },
+    referral: {
+      content: "- 코골이 + 주간 졸림 (Epworth ≥10) + 무호흡 목격 → 수면센터·ENT\n- 인후두 협착 의심 → ENT 내시경\n- 소아 OSA 의심 → 소아 ENT (편도·아데노이드)",
+      sources: []
+    },
+    notes: {
+      content: "CPAP은 표준 치료. 적응 어려운 환자에 구강내장치(MAD)·체위 치료. 비만 환자 5–10% 체중 감소만으로 AHI 유의 감소. OSA 미치료 시 심혈관·대사·인지 위험 증가.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["sleep-apnea"] = _sleep_apnea_v2;
+KNOWLEDGE_BUNDLE["수면무호흡"] = _sleep_apnea_v2;
+KNOWLEDGE_BUNDLE["OSA"] = _sleep_apnea_v2;
+KNOWLEDGE_BUNDLE["코골이"] = _sleep_apnea_v2;
+
+/* ========== 4-30 ENT bulk ingest (Batch 5 — 이명·청력) ========== */
+
+/* tinnitus — 이명 (4-30 ENT bulk). [TIPS + CLINICAL] */
+var _tinnitus_v2 = {
+  kind: "disease",
+  keywords: ["이명","tinnitus","ringing in ears","귀울림","일과성 귀잡음","myoclonic tinnitus","middle ear myoclonus","MEM","청신경종양","vestibular schwannoma","리보트릴","clonazepam","baclofen"],
+  primarySources: [
+    "Curr Opin Otolaryngol HNS 2025. PMID:40836771 (MEM pathophysiology and management)",
+    "Westerberg 1996 baclofen RCT. PMID:8915419",
+    "Liu 2011 — Revisiting Baclofen for Severe Chronic Tinnitus. PMC3297816"
+  ],
+  sections: {
+    exam: {
+      content: "### 이명 vs 일과성 귀잡음 감별 [TIPS — by ENT 교수]\n- 지속 시간 + 빈도 질문 — 이명은 지속, 일과성은 가끔\n- \"하루·일주일에 몇 번 발생하는지\"\n- \"안 들릴 때도 있는지\"\n\n### 이명 환자 표준 문진 [TIPS — by ENT 교수]\n- **악화 시점**: 오전·오후·취침 전 (취침 전 강화 → 수면 영향)\n- **동반 증상**: 난청·어지럼·귀먹먹함\n- **들리는 소리 종류**: 매미·우웅·다다닥·고음 단조음·박동성\n- **스트레스 사건**: 발생 시점 사건, 그 사건이 **현재 진행 중인지 해결됐는지**\n- **음역대 청력 저하**: 고주파(2-8 kHz) 청력 저하 동반 시 이명 더 강하게 인지 (central gain)\n- **직업력**: 소음 환경 노출 (공장·건설·군 사격·음악)\n\n### Red flag — 한쪽 이명 [TIPS — by ENT 교수]\n- **편측성 이명** → **청신경종양 (vestibular schwannoma)** 가능성\n- 특수 검사: ABR(청신경 검사), MRI internal auditory canal\n- ENT 의뢰 필수",
+      sources: []
+    },
+    protocol: {
+      content: "### Myoclonic tinnitus (Middle Ear Myoclonus, MEM) [CLINICAL — researcher 4-30 검증]\n\n**임상 단서**: 말하기·씹기·삼키기와 동기화된 클릭/딸각/다다닥 이명, 한쪽 귀, 객관적 (이경·청진으로 들림 가능). Palatal myoclonus는 양측 일정 리듬, MEM은 비주기성·burst.\n\n**약물 선택지** (high-quality evidence 부족, 모두 off-label):\n| 단계 | 약제 | 용량 |\n|---|---|---|\n| 1차 | **Clonazepam (리보트릴)** 0.5 mg HS → 0.5 mg TID | 가장 자주 first-line으로 보고 |\n| 1차 | **Carbamazepine (테그레톨)** 100 mg BID 시작 | — |\n| 2차/병용 | **Baclofen** 5 mg TID(15 mg/day) → 10 mg TID(30 mg/day) | 한국 10 mg 1정 → ½T TID → 1T TID |\n\n해외 표준 baclofen escalation은 60 mg/day까지이나 졸림·어지럼·혼동으로 26% 중도탈락. 외래에서는 30 mg/day 이내 현실적.\n\n**4-6주 시도 후 무효** → ENT 의뢰 (botulinum toxin intratympanic, 또는 stapedius/tensor tympani tenotomy).\n\n[TIPS 미르 routine: 'Baclofen 1.5T#3 줘본다' — 보수적 시작이지만 1차약은 clonazepam·carbamazepine. researcher 검증 4-30 수정]\n\n### 야간 이명 — 수면 영향 [TIPS — by ENT 교수]\n- **Clonazepam (리보트릴) 1 mg HS** (전액 본인부담)\n- 졸음 심하면 **0.5 mg HS**로 감량\n- 적응: 이명으로 입면 곤란",
+      sources: []
+    },
+    referral: {
+      content: "- **편측성 이명** → ENT (ABR + MRI IAC)\n- 박동성 이명(맥박 동기) → 혈관성(vascular loop·glomus tumor) → ENT/neurology\n- 4–6주 약물 무효 → ENT\n- 청력검사 이상 동반 → ENT\n- 내이수종 의심 (저주파 난청·먹먹함·어지럼) → ENT",
+      sources: []
+    },
+    notes: {
+      content: "### 음역대와 이명 [CLINICAL]\n- 인간 가청 범위: 20–20,000 Hz\n- 회화 영역(speech frequencies): 250–4,000 Hz\n- **이명은 고주파 영역(특히 2–8 kHz, EHF >8 kHz) 청력 저하와 강하게 연관**: tinnitus 환자 ~70%에서 EHF hearing loss (대조군 ~40%)\n- 표준 audiogram이 정상이어도 EHF 검사·hidden hearing loss(synaptopathy) 가능\n- **기전**: 고주파 deafferentation → 중추 central gain 보상성 상승 → tinnitus 인식\n- **임상 함의**: 이명 호소 환자 표준 PTA만으로 부족, EHF audiometry(>8 kHz) 의뢰 고려\n\n[researcher 4-30 수정: 미르 raw '음역대 500-2000Hz'는 회화 영역과 가청 범위 혼동. 정확화]\n\n### 내이수종 이명 [TIPS — by ENT 교수]\n매미·우웅 등 다양한 소리, 비행기/물에 들어간 듯한 먹먹함 동반 — 메니에르·저주파 난청 spectrum (low-freq-hearing-loss 참조). U-turn(Betahistine 계열) 고려.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["tinnitus"] = _tinnitus_v2;
+KNOWLEDGE_BUNDLE["이명"] = _tinnitus_v2;
+KNOWLEDGE_BUNDLE["귀울림"] = _tinnitus_v2;
+KNOWLEDGE_BUNDLE["myoclonic-tinnitus"] = _tinnitus_v2;
+KNOWLEDGE_BUNDLE["MEM"] = _tinnitus_v2;
+
+/* hearing-loss — 난청·노인성 난청·보청기 (4-30 ENT bulk). [CLINICAL + TIPS] */
+var _hearing_loss_v2 = {
+  kind: "disease",
+  keywords: ["난청","hearing loss","presbycusis","노인성 난청","감각신경성 난청","sensorineural","보청기","hearing aid","청력검사","audiometry","auditory deprivation"],
+  primarySources: [
+    "Lancet 2024 Dementia Commission",
+    "ACHIEVE RCT 2023. PMID:37478886",
+    "ACHIEVE secondary analysis 2025. PMID:40369891 (DOI:10.1002/alz.70156)"
+  ],
+  sections: {
+    exam: {
+      content: "### 난청 환자 표준 문진 [TIPS — by ENT 교수]\n- **직업력 — 소음 환경 노출** (공장·건설·군 사격·음악·항공) 필수\n- 발병 시점·진행 속도 (점진 vs 급성)\n- 동반 증상: 이명·어지럼·귀먹먹함\n- 약물력: ototoxic (aminoglycoside·cisplatin·loop diuretic·NSAID 장기)\n- 가족력\n\n### 노인 청력 저하 단독 — 1차 진료 접근 [TIPS — by ENT 교수]\n- 동반 증상 없이 청력 저하만 → 감각신경성 난청 의심\n- **고막 시진** → 이상 없으면 **청력검사만 의뢰**\n- 양측 점진성 = presbycusis\n- 편측 또는 급성 = 돌발성 난청 / 메니에르 / vestibular schwannoma → ENT 즉시 의뢰\n\n### 청력 추적 [TIPS — by ENT 교수]\n- 청력 감소 진단된 환자: **2년에 1회** 청력검사\n- 보청기 사용자: 1년에 1회 + fitting 점검",
+      sources: []
+    },
+    counseling: {
+      content: "### 보청기 권유 근거 [CLINICAL — researcher 4-30 검증]\n\n- 청력손실은 **중년기 최대 modifiable dementia risk factor** (Lancet Dementia Commission 2024, PAF ~7%, 14개 위험요인 중 1위)\n- **ACHIEVE RCT 2023**: 전체 cohort 인지저하 차이 없음(p=0.96), **고위험군(ARIC subgroup)에서 3년 인지저하 유의 둔화**\n- **2025 secondary**: 인지저하 위험 상위 25% 환자에서 보청기 사용군 **3년 인지저하 ~62% 둔화**\n- **Auditory deprivation**: 미착용 시 unaided ear word recognition 점진 저하\n\n### 환자 설명문 (권장)\n> \"보청기를 안 쓰면 말소리를 알아듣는 능력이 점점 더 떨어지고, 특히 인지·치매 위험도 함께 높아진다는 연구가 있어 가능한 일찍 시작하시는 것이 좋습니다.\"\n\n### 기전 정확화 [researcher 4-30 정정]\n- '신경 퇴화'는 cochlear nerve atrophy 함의해 부정확\n- 실제 기전: **central auditory pathway 가소성 저하** + 인지·청각 cortex 자극 결핍\n- ACHIEVE primary endpoint는 negative였음 → '반드시 인지 보호' 단정 금지, 고위험군에서만 robust\n\n[TIPS 미르 raw: '보청기 미착용 시 청력·신경 퇴화' → 'central plasticity 저하 + 인지저하 위험'으로 정확화]",
+      sources: []
+    },
+    referral: {
+      content: "- **편측 / 급성 / 변동성 난청** → ENT 즉시 (돌발성 난청·메니에르·vestibular schwannoma)\n- 양측 점진성 + 보청기 적응증 → ENT 또는 청각센터\n- 직업성 소음 노출 + 산재 가능성 → ENT + 산재 진단서\n- 소아 난청 의심 → 소아 ENT (ABR·OAE)",
+      sources: []
+    },
+    notes: {
+      content: "### 음역대 청력 저하 패턴\n- **Presbycusis**: 고주파 우세 (4-8 kHz) → 자음 변별 곤란 ('말소리는 들리는데 무슨 말인지 모르겠다')\n- **소음성 난청**: 4 kHz notch\n- **메니에르**: 저주파 변동성\n\n가청 범위 20-20,000 Hz, 회화 영역 250-4,000 Hz. 이명 동반 흔함 (`tinnitus` 참조). ARIA·AR 심한 환자에서 만성 중이염 동반 가능 → 전음성 난청 감별.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["hearing-loss"] = _hearing_loss_v2;
+KNOWLEDGE_BUNDLE["난청"] = _hearing_loss_v2;
+KNOWLEDGE_BUNDLE["presbycusis"] = _hearing_loss_v2;
+KNOWLEDGE_BUNDLE["노인성난청"] = _hearing_loss_v2;
+KNOWLEDGE_BUNDLE["보청기"] = _hearing_loss_v2;
+KNOWLEDGE_BUNDLE["감각신경성난청"] = _hearing_loss_v2;
+
+/* ========== 4-30 ENT bulk ingest (Batch 7 — 메니에르·저주파·돌발성) ========== */
+
+/* low-freq-hearing-loss — 급성 저주파 감각신경성 난청 (4-30 ENT bulk, v1 alias 마이그레이션). [TIPS] */
+var _low_freq_v2 = {
+  kind: "disease",
+  keywords: ["저음성난청","저주파난청","급성 저주파 감각신경성 난청","ALHL","low-frequency SNHL","귀먹먹함","이충만감","내이수종","endolymphatic hydrops","U-turn","Betahistine","메칠론"],
+  primarySources: [],
+  sections: {
+    definition: {
+      content: "**급성 저주파 감각신경성 난청 (Acute Low-tone Sensorineural Hearing Loss, ALHL)**: 내이수종(달팽이관 내압 상승)으로 저주파 영역(125–500 Hz) 청력이 변동적으로 떨어지는 상태. 메니에르의 전 단계 또는 monosymptomatic spectrum.",
+      sources: []
+    },
+    exam: {
+      content: "### 증상 [TIPS — by ENT 교수]\n- 청력 저하\n- **귀먹먹함 / 이충만감** (비행기 탔거나 물에 들어간 듯한 느낌)\n- 어지럼증 (경미~중등도, 회전성은 드묾)\n- 매미·우웅 등 다양한 소리의 이명 동반 가능\n\n### 진단\n- 청력검사 (PTA): 저주파(125–500 Hz) 손실 — 변동성\n- 고막 시진 정상\n- 내이 MRI는 일반적으로 불필요",
+      sources: []
+    },
+    protocol: {
+      content: "### 급성기 [TIPS — by ENT 교수]\n**스테로이드 + 위장약 + 내이 미세순환제**:\n| 약제 | 용량 | 기간 |\n|---|---|---|\n| **메칠론(Methylprednisolone)** | 10T#2 ×3일 → 8T#2 → 6T#2 → 4T#2 → 2T#2 (1일씩 감량) | 총 7일 tapering |\n| **Storgar** (위장약) | 표준 용량 병용 | 동기간 |\n| **U-turn (Betahistine)** | 1T TID | 동기간 |\n\n30%는 약 무반응 — **컨디션 조절(생활습관)이 더 중요**.\n\n### 유지/만성 [TIPS — by ENT 교수]\n- **U-turn (Betahistine)** TID — 내림프수종 완화 (귀먹먹함 단독 시 단독 처방 가능)\n- **Dichlozid (HCTZ) ½T** 추가 — 티아지드 이뇨제로 내압 감소\n- 미호전 시 청력검사 재평가",
+      sources: []
+    },
+    lifestyle: {
+      content: "### 생활습관 개선 [TIPS — by ENT 교수]\n- **저염식**\n- **금주, 카페인(커피) 제한**\n- **물 많이 마시기**\n- **스트레스 관리** — 스트레스 → 내압 상승 → 증상 악화",
+      sources: []
+    },
+    precaution: {
+      content: "### U-turn (Betahistine) 부작용 [TIPS — researcher 4-30 보강]\n- **흔한 부작용: 두통**\n- **편두통력 미리 확인** — 편두통 동반 시 두통 악화 가능\n- 두통 심하면: U-turn ½T TID로 감량\n- 심한 두통 발생 시 신경과 consult 고려\n\n### 일반\n- 크롬친화세포종(pheochromocytoma) 절대 금기\n- 심계항진·혈압 변화 시 ½T로 감량\n- HCTZ: 저칼륨혈증·저나트륨혈증·고요산혈증 — 노인·이뇨제 병용 주의",
+      sources: []
+    },
+    notes: {
+      content: "### 환자 교육 [TIPS — by ENT 교수]\n환자에게 **내이림프 부종 그림(달팽이관 단면)을 모니터로 보여주며 설명**하면 이해가 빠르다. 내이수종 개념을 환자가 잘 이해 못 함.\n\n### 메니에르 진행\n반복되는 ALHL은 메니에르로 진행 가능 [TIPS — by ENT 교수]. 메니에르 분리 진단: 회전성 현훈 + 변동 청력 + 이명/이충만감 (`meniere.md` 참조). ALHL 단계에서 생활습관·약물 관리가 메니에르 진행 예방.",
+      sources: []
+    },
+    referral: {
+      content: "- 7일 스테로이드 후 호전 없음\n- 회전성 현훈 동반 → 메니에르 의심 → ENT\n- 청력 저하가 저주파 외 영역 동반 → 돌발성 난청 가능성 → ENT 즉시",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["low-freq-hearing-loss"] = _low_freq_v2;
+KNOWLEDGE_BUNDLE["저주파난청"] = _low_freq_v2;
+KNOWLEDGE_BUNDLE["저음성난청"] = _low_freq_v2;
+KNOWLEDGE_BUNDLE["귀먹먹함"] = _low_freq_v2;
+KNOWLEDGE_BUNDLE["이충만감"] = _low_freq_v2;
+KNOWLEDGE_BUNDLE["ALHL"] = _low_freq_v2;
+KNOWLEDGE_BUNDLE["내이수종"] = _low_freq_v2;
+
+/* meniere — 메니에르병 (4-30 ENT bulk). [TIPS] */
+var _meniere_v2 = {
+  kind: "disease",
+  keywords: ["메니에르","메니에르병","Meniere","Menieres","내이수종","endolymphatic hydrops","U-turn","Betahistine","Dichlozid","보나링"],
+  primarySources: [],
+  sections: {
+    definition: {
+      content: "내이림프 수종(endolymphatic hydrops)으로 인한 반복성 회전성 현훈 + 변동 감각신경성 난청 (저주파 우세) + 이명/이충만감 삼주증.",
+      sources: []
+    },
+    exam: {
+      content: "### 진단 기준\n- 자발성 회전성 현훈 ≥2회, 각 20분 이상 ~12시간 미만\n- 변동 감각신경성 난청 (저주파 우세, 청력검사 확인)\n- 이명 또는 이충만감 (편측)\n- 다른 원인 배제\n\n### 환자 교육 — 내이수종 그림 시각화 [TIPS — by ENT 교수]\n환자에게 **내이림프 부종이 일어난 그림(달팽이관 단면)을 모니터로 보여주며 설명**. 환자가 이해하기 어려운 개념이라 시각 자료가 효과적.\n\n### 환자 표현 [TIPS — by ENT 교수]\n- '비행기 탄 듯한 먹먹함' / '물에 들어간 듯한 느낌'\n- 이명: 매미·우웅 등 다양한 소리",
+      sources: []
+    },
+    protocol: {
+      content: "### 유지 약물 [TIPS — by ENT 교수]\n| 약제 | 용량 | 역할 |\n|---|---|---|\n| **U-turn (Betahistine)** | 1T TID | 내림프 수종 완화 (1차) |\n| **Dichlozid (HCTZ)** | ½T 추가 | 티아지드 이뇨제로 내압 감소 |\n\n### 응급 약물 (acute attack) [TIPS — by ENT 교수]\n- **보나링 (Meclizine)** — 회전성 현훈 발작 시\n- 오심·구토 동반 시 항히스타민 진토 효과",
+      sources: []
+    },
+    lifestyle: {
+      content: "- 저염식 (sodium <1500 mg/day)\n- 금주·카페인 제한·물 충분 섭취\n- 스트레스 관리 (내압 상승 요인)",
+      sources: []
+    },
+    precaution: {
+      content: "### U-turn (Betahistine) 부작용 [TIPS — researcher 4-30 보강]\n- **흔한 부작용: 두통**, 편두통력 확인 — 편두통 동반 시 두통 악화 가능\n- 두통 심하면 ½T TID로 감량, 심하면 신경과 consult\n\n### 일반\n- 크롬친화세포종(pheochromocytoma) 절대 금기\n- HCTZ: 저칼륨·저나트륨·고요산 모니터링",
+      sources: []
+    },
+    notes: {
+      content: "반복되는 급성 저주파 감각신경성 난청(ALHL)은 메니에르로 진행 가능 (`low-freq-hearing-loss.md`). 진행성 청력 저하 — 보청기 적응 시점 고려. 양측성 메니에르(~30%)·자가면역 내이질환 의심 시 ENT/면역 평가. 난치성 — 화학적 미로파괴(intratympanic gentamicin)·외과(endolymphatic sac decompression) ENT 영역.",
+      sources: []
+    },
+    referral: {
+      content: "- 처음 메니에르 의심 → ENT 정식 진단·청력검사\n- 약물 무반응·삶의 질 저하 → ENT (intratympanic 치료)\n- 양측성 또는 자가면역 의심 → 이비인후·류마티스/면역",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["meniere"] = _meniere_v2;
+KNOWLEDGE_BUNDLE["메니에르"] = _meniere_v2;
+KNOWLEDGE_BUNDLE["메니에르병"] = _meniere_v2;
+KNOWLEDGE_BUNDLE["Meniere"] = _meniere_v2;
+
+/* sudden-hearing-loss — 돌발성 난청 SSNHL (4-30 ENT bulk). [TIPS] */
+var _sudden_hl_v2 = {
+  kind: "disease",
+  keywords: ["돌발성난청","sudden hearing loss","SSNHL","sudden sensorineural hearing loss","메칠론","MPD","ITS","intratympanic steroid"],
+  primarySources: [],
+  sections: {
+    definition: {
+      content: "72시간 이내 발생한 ≥30 dB 감각신경성 난청 (3개 이상 인접 주파수). 응급 — 발생 후 가능한 빨리(이상적으로 14일 이내) 치료 시작 시 회복률 ↑.",
+      sources: []
+    },
+    exam: {
+      content: "### 증상\n- **갑작스러운 편측 청력 저하** (보통 아침에 일어나 보니 안 들림)\n- 이명·이충만감 동반 흔함\n- 어지럼증 동반 시 예후 불량\n\n### 진단\n- 청력검사 (PTA) — 즉시 시행\n- 고막 시진 정상 (전음성 난청 배제)\n- MRI internal auditory canal — vestibular schwannoma 배제 (특히 이명 동반)\n\n### 동반 평가 [TIPS — by ENT 교수]\n- **당뇨 확인 — 스테로이드 처방 전 필수**\n- 고혈압·심혈관 위험 평가",
+      sources: []
+    },
+    protocol: {
+      content: "### 표준 — 경구 스테로이드 [TIPS — by ENT 교수]\n- **Methylprednisolone (메칠론) 8T#2 → 7일 tapering**\n  - 가능한 빨리 시작 (발생 후 14일 이내가 효과 큼)\n\n### Intratympanic Steroid (ITS) [TIPS — by ENT 교수]\n- 호전을 빠르게 하고 싶을 때 추가\n- 적응: 경구 단독 미반응 / 빠른 회복 필요 / DM·궤양 등 경구 부담\n- ENT 시술\n\n### 보조\n- 산소·hyperbaric oxygen (논쟁 중, 일부 가이드라인 권장)\n- 안정·스트레스 관리",
+      sources: []
+    },
+    precaution: {
+      content: "### 스테로이드 처방 전 필수 확인 [TIPS — by ENT 교수]\n- **당뇨**: 혈당 상승 — DM 환자도 처방 가능하지만 혈당 모니터링·환자 교육 필수\n- **녹내장·황반변성**: 스테로이드 외 옵션 고려 (특히 황반변성)\n- 위궤양·소화기 출혈 과거력\n- 정신질환·BPSD\n- 활동성 감염",
+      sources: []
+    },
+    notes: {
+      content: "자연 회복률 ~30~65% (변동성 큼). 어지럼증 동반·심한 청력 손실·고령 시 예후 불량. 30일 후 청력 plateau — 회복 평가 시점. 보청기 적응 시점 — 6개월 후 청력 안정 시 고려.",
+      sources: []
+    },
+    referral: {
+      content: "- **돌발성 난청 의심 즉시 ENT 의뢰** — 시간이 회복률 결정\n- ITS 시술 필요 → ENT\n- 어지럼증 심한 동반 → 신경이과·내이 진단\n- vestibular schwannoma 의심 (편측·이명 동반) → MRI IAC + ENT",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["sudden-hearing-loss"] = _sudden_hl_v2;
+KNOWLEDGE_BUNDLE["돌발성난청"] = _sudden_hl_v2;
+KNOWLEDGE_BUNDLE["SSNHL"] = _sudden_hl_v2;
+
+/* ========== 4-30 ENT bulk ingest (Batch 6 — 어지럼·BPPV·외이도염) ========== */
+
+/* BPPV — v1 → v2 마이그레이션 + 3일 f/u 보강 (4-30 ENT bulk). [TIPS] */
+var _bppv_v2 = {
+  kind: "disease",
+  parents: ["dizziness"],
+  keywords: ["BPPV","이석증","양성돌발성체위성현훈","체위성현훈"],
+  primarySources: [],
+  sections: {
+    exam: {
+      content: "BPPV 진단:\n- **1단계 Supine Head Roll Test** — Horizontal canal 안진 확인\n- **2단계 Dix-Hallpike** — 안진 없으면 시행, Posterior canal 안진 확인",
+      sources: []
+    },
+    protocol: {
+      content: "### 이석정복술\n**Horizontal canal 안진**:\n- Geotropic(바닥 beating) → 병변 = 안진이 강하게 발생하는 쪽\n- Apogeotropic(천장 beating) → 병변 = 안진이 약하게 발생하는 쪽\n- 치료: **Barbeque Roll** (병변 반대방향으로 360도 회전)\n\n**Posterior canal 안진**:\n- 병변 = beating 반대방향\n- 치료: **Modified Epley Maneuver** (병변 방향에서 시작)\n\n### 약물치료 [TIPS — by ENT 교수]\n- 약물은 이석정복술에 비해 효과 제한적\n- 증상이 매우 심할 때 PRN으로 **보나링(meclizine)** po 처방 가능\n- 반드시 안내: '너무 심할 때만 복용, 졸릴 수 있음'",
+      sources: []
+    },
+    "follow-up-schedule": {
+      content: "### BPPV 치료 후 3일 f/u [TIPS — by ENT 교수]\n| 단계 | 시행 | 판정 |\n|---|---|---|\n| 1 | **Supine roll test** 후 안진 확인 | 안진 없음 → 다음 |\n| 2 | **전정재활** 권고 | side-lying 운동 시작 |\n| 3 | side-lying 운동이 힘듦 | **보나링** 복용 후 재활 |\n| 4 | 2일 이상 이상 없으면 운동 중단 | — |\n\n### 환자 교육\n- **어지럽지 않은 쪽으로 자도록** 권유\n- **몸에 진동 주는 행위 금지** (러닝머신·진동기·자동차 험로 등)",
+      sources: []
+    }
+  },
+  uiHooks: {
+    hint: ["protocol","follow-up-schedule","referral","contraindication","precaution","pregnancy"],
+    guide: ["classification","indication","exam","protocol","follow-up-schedule","comparison","monitoring","insurance","notes"],
+    triage: ["differential"],
+    draftAppend: ["draft-append"]
+  }
+};
+KNOWLEDGE_BUNDLE["BPPV"] = _bppv_v2;
+KNOWLEDGE_BUNDLE["이석증"] = _bppv_v2;
+KNOWLEDGE_BUNDLE["양성돌발성체위성현훈"] = _bppv_v2;
+KNOWLEDGE_BUNDLE["체위성현훈"] = _bppv_v2;
+
+/* vestibular-neuritis — 전정신경염 (4-30 ENT bulk). [TIPS] */
+var _vestibular_neuritis_v2 = {
+  kind: "disease",
+  parents: ["dizziness"],
+  keywords: ["전정신경염","vestibular neuritis","전정장애","급성 전정장애","U-turn","보나링","전정재활"],
+  primarySources: [],
+  sections: {
+    definition: {
+      content: "전정신경 (CN VIII vestibular branch)의 바이러스성 (또는 후바이러스성) 염증. **급성 지속성 회전성 현훈** + 청력 저하/이명 없음. 며칠~수주에 걸쳐 호전.",
+      sources: []
+    },
+    exam: {
+      content: "### 임상 양상\n- 갑작스러운 회전성 현훈 — 수일 지속\n- 오심·구토·보행 장애\n- **청력 저하·이명 없음** (있으면 미로염·메니에르·SSNHL 감별)\n- 자발 안진 — horizontal/torsional, 빠른 상은 정상 측\n\n### 진단 검사\n- **HIT (Head Impulse Test) — abnormal** (catch-up saccade 양성)\n- HINTS — 말초성 패턴\n- Tandem gait — 가능 (중추성이면 곤란)\n\n중추성(소뇌 경색) 감별이 핵심. HINTS 음성 또는 다른 신경학적 이상 → 즉시 뇌영상.",
+      sources: []
+    },
+    protocol: {
+      content: "### 경험적 약물 [TIPS — by ENT 교수]\n- **U-turn (Betahistine)** 1T TID\n- **보나링 (Meclizine)** — 진토·진정 (PRN, 단기 사용)\n\n단기 vestibular suppressant는 회복 기간이 길어질 수 있어 **3–5일 이내**가 원칙.\n\n### 스테로이드 (조건부)\n- 일부 가이드라인 — 발병 3일 이내 prednisolone 시작 (효과 논쟁)\n- 미르 routine은 외래 일상 처방 아님",
+      sources: []
+    },
+    lifestyle: {
+      content: "### 전정재활 (rehabilitation) [TIPS — by ENT 교수]\n빠른 회복의 핵심 — 약물보다 재활 운동이 중심.\n\n**기본 운동 (외래에서 환자에게 가르침)**:\n- **엄지손가락을 응시하며 고개를 천천히 도리도리 30도 정도 젓기**\n  - 1회 1–2분, 하루 3–5회\n  - 응시 안정화 + 전정 보상 자극\n- 보행 시 머리 회전·고개 끄덕임 운동\n- 진행 단계: 침상 → 좌위 → 입위 → 보행 → 고개 회전",
+      sources: []
+    },
+    referral: {
+      content: "- HINTS 음성·중추성 의심 → **즉시 뇌영상·신경과**\n- 청력 저하·이명 동반 → 미로염 의심 → ENT\n- 1주 이상 호전 없음 → ENT\n- 반복 발작 → 메니에르 또는 vestibular migraine 감별 → 신경이과",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["vestibular-neuritis"] = _vestibular_neuritis_v2;
+KNOWLEDGE_BUNDLE["전정신경염"] = _vestibular_neuritis_v2;
+KNOWLEDGE_BUNDLE["전정장애"] = _vestibular_neuritis_v2;
+
+/* otitis-externa — 외이도염 + 미르 가려움 처방 (4-30 ENT bulk). [TIPS] */
+var _otitis_externa_v2 = {
+  kind: "disease",
+  keywords: ["외이도염","otitis externa","swimmer's ear","귀가려움","외이도 가려움","Advantan","오큐프록스","ofloxacin"],
+  primarySources: [],
+  sections: {
+    definition: {
+      content: "외이도(external auditory canal) 점막·피부의 염증. 급성·만성·진균성 구분. 한국 외래에서 가려움 호소가 흔함.",
+      sources: []
+    },
+    exam: {
+      content: "### 임상 양상\n- 가려움 (가장 흔함, 만성)\n- 통증 (급성·세균성)\n- 분비물·딱지·청력 저하 (외이도 폐쇄)\n- Tragus 압통·tugging 통증\n\n### 감별\n- 진균성 (Otomycosis): 검은·흰 점·실 모양 분비물 — 청소 + clotrimazole 점이\n- 세균성 (보통 *Pseudomonas*, *S. aureus*): 강한 통증·분비물\n- 만성 가려움 (eczematous, atopic): 가려움 단독, 분비물 적음",
+      sources: []
+    },
+    protocol: {
+      content: "### 표준 치료 [CLINICAL]\n- Topical antibiotic + steroid otic drop: **ciprofloxacin/dexamethasone (Ciprodex)**, ofloxacin otic\n- 외이도 청소·debris 제거\n- 통증 관리 (NSAID·acetaminophen)\n\n### 가려움 호소 환자 — 미르 임상 처방 (off-label) [TIPS — by ENT 교수, researcher 4-30 보강]\n| 항목 | 내용 |\n|---|---|\n| 약제 | **아드반탄 연고** (methylprednisolone aceponate) + **오큐프록스 안연고** (ofloxacin 0.3%) |\n| 비율 | **1:1 혼합** |\n| 사용량 | **쌀알 크기**, 외이도 입구 도포 |\n| 보관 | **냉장 보관** — 시원한 감각이 가려움 완화 |\n\n오큐**프록스** = ofloxacin 안연고 (한국 brand명). 미르 raw '오큐플렉스'는 오기.",
+      sources: []
+    },
+    precaution: {
+      content: "⚠ **Tympanic membrane perforation 또는 tympanostomy tube 의심 시 사용 금지**\n- Ofloxacin은 fluoroquinolone 중 ototoxicity 가장 낮은 편이나, 혼합 vehicle 미검증\n- 천공 의심 → 안전한 ofloxacin otic 단독 또는 ENT 의뢰\n\n오큐프록스는 **안과용 ofloxacin** — 외이도 사용은 off-label.\n\nAminoglycoside (neomycin·gentamicin) 함유 점이제는 천공 시 **ototoxicity 위험** → 이번 처방은 ofloxacin이라 상대적으로 안전.",
+      sources: []
+    },
+    notes: {
+      content: "한국 외래에서 가려움만 호소하는 만성 외이도염 환자에게 미르 routine 효과적 (냉장 보관 + 시원한 감각 = 가려움 완화 메커니즘). 진균성 의심 시 (검은·흰 분비물) → 별 처방 (clotrimazole 1% 점이) 또는 ENT 의뢰. **당뇨·면역저하 환자 외이도염 → 악성 외이도염(necrotizing OE) 의심 → ENT 응급**.",
+      sources: []
+    },
+    referral: {
+      content: "- 1–2주 치료 무반응\n- 강한 통증·발열·림프절 부음 → 세균성 심한 형 또는 supraurricular 합병증\n- 천공 의심·진단 → ENT\n- 당뇨·면역저하 + 심한 외이도염 → ENT 응급 (necrotizing OE)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["otitis-externa"] = _otitis_externa_v2;
+KNOWLEDGE_BUNDLE["외이도염"] = _otitis_externa_v2;
+KNOWLEDGE_BUNDLE["귀가려움"] = _otitis_externa_v2;
+
+/* ========== 4-30 ENT bulk ingest (Batch 3 — 후두·LPR) ========== */
+
+/* dysphonia v2 — 사레들림 문진·노화 성대·성대마비 CT·red flag 보강 (4-30 ENT bulk) */
+var _dysphonia_v2_full = {
+  kind: "disease",
+  keywords: ["dysphonia","쉰목소리","hoarseness","목소리이상","발성장애","음성장애","vocal palsy","성대마비","presbyphonia","노화성대"],
+  primarySources: [
+    "Alves M et al. J Voice 2019 PMID:29122414 (SR)",
+    "Barsties v. Latoszek et al. Laryngoscope 2024 PMID:37366280 (meta-analysis)"
+  ],
+  sections: {
+    exam: {
+      content: "### 후두 의심 시 — 사레들림 문진 [TIPS — by ENT 교수]\n쉰 목소리·목에 걸리는 느낌·낮은 목소리·목소리 변화 호소 시:\n- **사레들리는지 묻는다** → 양성 시 **vocal palsy 등 의심** → ENT 의뢰\n\n흡인(aspiration) 신호는 후두·뇌신경(CN X) 평가의 결정적 단서.\n\n### Red flag — 호흡곤란 동반 [TIPS — by ENT 교수]\n- **목소리 변화 + 호흡곤란 동반** → **응급실로 즉시 이송**\n- 상기도 폐쇄(상부기도 종양·후두 부종·acute epiglottitis) 가능성\n\n### 노화 성대 (presbyphonia) [TIPS — by ENT 교수]\n- 성대도 근육이라 **나이 들면 근육이 빠지면서 성대도 날씬해져 목이 쉴 수 있다**\n- 자연 노화 — 안심 시키되 vocal palsy·종양 배제 후 진단\n\n### 성대 마비 — 원인 유무에 따른 CT 적응증 [TIPS — by ENT 교수]\n| 분류 | 경과 | CT 필요 |\n|---|---|---|\n| **원인 없는 성대 마비** | 갑자기 이유 없이 좋아질 수 있음 | 즉시 CT 불필요 |\n| **원인 있는 성대 마비** | 종양 관련성 큼 | **CT 적응증** — 목 + 폐 (폐는 LDCT) |\n\nRecurrent laryngeal nerve가 thoracic 경유 (특히 좌측은 aortic arch 지나서 폐·종격 압박 가능). **폐암 first manifestation**이 vocal palsy일 수 있음.",
+      sources: []
+    },
+    protocol: {
+      content: "### 생활습관 개선 [CLINICAL — 조건부, by ENT교수]\n\n**수분 섭취**\n- 하루 1~1.5L 물 섭취 권고\n- 성대 점막 수분 유지 → 진동 효율 개선, 염증 완화\n- ※ 1~1.5L 특정 용량 RCT 없음, 전문가 컨센서스\n\n**목 앞 근육 마사지 (Laryngeal Manual Therapy)**\n- 목 앞 세로 근육(strap muscle)을 꼬집듯 마사지\n- 대상: Muscle Tension Dysphonia (MTD)\n- ※ MTD에서 효과 확립. 일반 기질성 병변에는 적응증 아님",
+      sources: ["Alves 2019 PMID:29122414","Barsties 2024 PMID:37366280"]
+    },
+    referral: {
+      content: "- 호흡곤란 동반 → ER (상기도 폐쇄 의심)\n- 사레들림 양성 (vocal palsy 의심) → ENT\n- 원인 있는 성대 마비 (CT 양성) → 흉부외과·종양내과\n- 3주 이상 지속되는 쉰 목소리 → ENT (성대 polyp·종양 배제)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["dysphonia"] = _dysphonia_v2_full;
+KNOWLEDGE_BUNDLE["쉰목소리"] = _dysphonia_v2_full;
+KNOWLEDGE_BUNDLE["hoarseness"] = _dysphonia_v2_full;
+KNOWLEDGE_BUNDLE["목소리이상"] = _dysphonia_v2_full;
+KNOWLEDGE_BUNDLE["발성장애"] = _dysphonia_v2_full;
+KNOWLEDGE_BUNDLE["음성장애"] = _dysphonia_v2_full;
+KNOWLEDGE_BUNDLE["vocal-palsy"] = _dysphonia_v2_full;
+KNOWLEDGE_BUNDLE["성대마비"] = _dysphonia_v2_full;
+KNOWLEDGE_BUNDLE["presbyphonia"] = _dysphonia_v2_full;
+
+/* laryngitis — 후두염 + 미르 routine (4-30 ENT bulk). [TIPS] */
+var _laryngitis_v2 = {
+  kind: "disease",
+  keywords: ["후두염","laryngitis","인후두염","자큐보","소론도","뮤테란","voice rest","P-CAB"],
+  primarySources: [],
+  sections: {
+    definition: {
+      content: "후두 점막의 염증. 급성(주로 바이러스성)·만성·급성 악화 구분. 한국 외래에서 쉰 목소리·인후통 호소가 흔함.",
+      sources: []
+    },
+    exam: {
+      content: "- 쉰 목소리·인후통·기침\n- 발열 동반 여부 (감염성)\n- 음성 남용력 (말 많이·노래·소리 지름)\n- 흡연·음주\n- 위식도 역류 동반 (LPR — `LPR.md` 참조)\n\n### Red flag\n- **목소리 변화 + 호흡곤란** → 응급 (epiglottitis·상기도 폐쇄)\n- **3주 이상 지속되는 쉰목소리** → ENT (성대 polyp·종양·vocal palsy 배제)",
+      sources: []
+    },
+    protocol: {
+      content: "### 가벼운 후두염\n- **Voice rest** — 가장 중요\n- 충분한 수분 섭취\n- NSAID 인후통 관리\n- 흡연 중단·자극 회피\n\n### 심한 후두염 — 미르 routine [TIPS — by ENT 교수]\n| 약제 | 용량 | 역할 |\n|---|---|---|\n| **소론도 (Prednisolone)** | 2T#2 | 단기 스테로이드 — 후두 부종 감소 |\n| **자큐보 (Zaqubo)** | 1T qd | P-CAB — LPR 동반 시 |\n| **뮤테란 (Acetylcysteine 200mg)** | 3T#3 | 거담·점액 배출 |\n\n**처방 기간**: 보통 5–7일, 호전 시 단계적 감량\n\n**적응** — 위 처방 고려 시점:\n- 음성 사용 직업 (교사·강사·가수)\n- 심한 부종으로 발성 곤란\n- LPR 동반 (목 열감·기침)\n- 단순 voice rest로 호전 안 되는 경우",
+      sources: []
+    },
+    precaution: {
+      content: "**소론도 — 당뇨·녹내장·황반변성 환자 처방 전 확인** [TIPS — by ENT 교수]\n- DM: 혈당 모니터링·환자 교육\n- 황반변성: 다른 옵션 우선 고려\n- 위궤양·소화기 출혈 과거력\n- 정신질환 (BPSD·우울 악화 가능)",
+      sources: []
+    },
+    referral: {
+      content: "- 3주 이상 지속 → ENT (간접후두경·내시경)\n- 호흡곤란 동반 → ER\n- 흡인 의심 (사레들림) → ENT (vocal palsy 평가)\n- 흡연자·음성 사용 직업·중년 이상 + 만성 → ENT (악성 배제)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["laryngitis"] = _laryngitis_v2;
+KNOWLEDGE_BUNDLE["후두염"] = _laryngitis_v2;
+KNOWLEDGE_BUNDLE["인후두염"] = _laryngitis_v2;
+
+/* eagle-syndrome — Eagle syndrome (4-30 ENT bulk, researcher 검증 HIGH). [CLINICAL] */
+var _eagle_syndrome_v2 = {
+  kind: "disease",
+  keywords: ["Eagle syndrome","stylohyoid syndrome","elongated styloid process","편도 안쪽 통증","styloidectomy"],
+  primarySources: [
+    "Baba et al. Clin Case Rep 2017. DOI:10.1002/ccr3.806",
+    "Nogueira-Reis et al. Clin Oral Investig 2021. DOI:10.1007/s00784-021-04285-w (prevalence meta-analysis)"
+  ],
+  sections: {
+    definition: {
+      content: "**Elongated styloid process (>30 mm)** 또는 **calcified stylohyoid ligament**가 인근 신경·혈관 구조를 압박하여 인후·안면·이부 통증을 유발하는 증후군. 일반 인구에서 elongation은 ~30%에서 관찰되나 **대부분 무증상** — 영상만으로 진단 불가.",
+      sources: []
+    },
+    exam: {
+      content: "### 임상 단서\n- **편도 바로 안쪽(tonsillar fossa) 통증**\n- 인후이물감·삼킴 시 통증\n- 귀·얼굴로 referral pain (CN V·IX 분포)\n- **삼차신경통과 유사** → 정체불명 통증으로 **진단 지연 흔함**\n- 만성·일측성\n\n### 진단 핵심 — Tonsillar fossa palpation\n**손가락으로 tonsillar fossa 촉진 시 통증 재현 + 귀·얼굴로 referral**이 임상 진단 핵심.\n- 영상 단독 부족 — 일반인 30%에서 elongation 관찰\n- 임상소견(촉진 + 증상 양상) + 영상 결합 필수\n\n### 영상\n- **CT 3D recon** — styloid 길이·calcification 평가, 진단 표준\n- 일반 X-ray로도 elongation 확인 가능하나 정밀도 낮음",
+      sources: []
+    },
+    differential: {
+      content: "- **삼차신경통 (Trigeminal neuralgia)** — 짧은 발작성, 안면 trigger zone\n- **만성 인두염 / LPR** — 인후 burning, 양측 흔함\n- **TMJ disorder** — 턱 관절 기원, 저작 시 악화\n- **편도결석 / 만성 편도염** — 백색 분비물·악취\n- **악성 종양 (oropharyngeal cancer)** — 흡연·음주 위험인자, 체중 감소",
+      sources: []
+    },
+    protocol: {
+      content: "### 1차 — 보존적\n- NSAID·근이완제·항우울제 (저용량 TCA·SNRI) 신경병증성 통증 약물\n- 가바펜틴/프레가발린 (신경병증성 통증)\n\n### 외과적\n- **Styloidectomy** (transoral 또는 transcervical)\n- 성공률 84–97%이나 **일부 잔존 통증 가능** (~12.5%)\n- ENT/oromaxillofacial 영역",
+      sources: []
+    },
+    referral: {
+      content: "- **만성 일측 인후통/이통 + tonsillar fossa 압통 재현** → ENT 의뢰 + CT 3D recon\n- 삼차신경통·만성 안면통 진단 후에도 호전 없음 → Eagle syndrome 재평가\n- 외과 평가 필요 → ENT 또는 구강악안면외과",
+      sources: []
+    },
+    notes: {
+      content: "가정의학과 1차 진료의 핵심: **Eagle syndrome 가능성 고려 → tonsillar fossa palpation → 양성 시 ENT 의뢰**. 진단 지연 흔하므로 **만성 정체불명 인후·이부 통증 환자는 한 번씩 의심**. 수술 후에도 잔존 가능 — 환자 기대치 관리 (수술 = 완치 보장 아님).",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["eagle-syndrome"] = _eagle_syndrome_v2;
+KNOWLEDGE_BUNDLE["Eagle syndrome"] = _eagle_syndrome_v2;
+KNOWLEDGE_BUNDLE["stylohyoid-syndrome"] = _eagle_syndrome_v2;
+
+/* ========== 4-30 ENT bulk ingest (Batch 1 — 구강·혀) ========== */
+
+/* oral-lesion v2 보강 — 치아문제 우선·헥사메딘 칸디다·디플루칸 (4-30 ENT bulk) */
+var _oral_lesion_v2_full = {
+  kind: "disease",
+  keywords: ["구강병변","oral white patch","구강궤양","leukoplakia","lichen planus","oral candidiasis","구강 칸디다","헥사메딘","chlorhexidine","디플루칸","fluconazole"],
+  primarySources: [],
+  sections: {
+    exam: {
+      content: "백반증(white patch)·궤양: **1달 내 호전 확인 필수**. 미호전 → 악성 전환 가능성 → ENT refer.\n\n### 구강 ulcer ↔ 치아문제 [TIPS — by ENT 교수]\n구강 내 ulcer는 **치아 문제(날카로운 치아·잘 안 맞는 보철·마모면)를 먼저 해결**해야 할 수 있다.\n- 치아·보철 검사 → 적합화·연삭 후 ulcer 자연 호전 확인\n- 치과 의뢰 후 1–2주 관찰 → 미호전 시 약물 치료 단계로",
+      sources: []
+    },
+    protocol: {
+      content: "### 1단계 — Dexamethasone 가글 [TIPS]\nDexamethasone powder + 물 1L 혼합 → 하루 3–4회 가글\n\n### 2단계 — 가글 무효 시 경구 스테로이드 [TIPS — by ENT교수]\nUlcer 장기 지속 또는 lichen planus에서 dexamethasone 가글 무효 시:\n- 가글 유지하면서 소론도(prednisolone) 추가\n- **소론도 2T #2 × 14일** → f/u\n\n### 3단계 — 미호전 시 ENT refer\n정밀검사 (생검 등) 필요\n\n### 통증 심할 때 — Tantum Verde spray [TIPS — by ENT교수]\n통증 심한 구강 궤양에 Tantum Verde (benzydamine) spray 처방\n\n### 기타 — Triamcinolone injection [CLINICAL]\n재발성 구강 병변·난치성 궤양에 병변 내 주사\n\n### 구강 칸디다 — 헥사메딘 가글 [TIPS — by ENT 교수, researcher 4-30 보강]\n- **헥사메딘(chlorhexidine 0.12–0.2%)** 가글: *Candida*에 항진균 활성 있음\n- 가벼운 백태/구내염 **보조 가글**로 가능\n- ⚠ **명확한 oral candidiasis 1차 치료는 nystatin 현탁액 또는 fluconazole(디플루칸)**\n- Nystatin 병용 시 **30분 이상 간격** 둘 것 (상호작용으로 효능 저하)\n\n### 구강 칸디다 심함 — 디플루칸 경구 [TIPS — by ENT 교수]\n- **Fluconazole(디플루칸) 100–200mg PO qd × 7–14일**\n- 적응: 광범위 백태·통증 심함·면역저하·반복성\n- 보조: 헥사메딘 가글 (간격 두고)",
+      sources: []
+    },
+    differential: {
+      content: "구강백반증(악성 전환율 ~1%/년), 구강편평태선, 캔디다증, 외상성 궤양, 구강암",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["구강병변"] = _oral_lesion_v2_full;
+KNOWLEDGE_BUNDLE["oral white patch"] = _oral_lesion_v2_full;
+KNOWLEDGE_BUNDLE["구강궤양"] = _oral_lesion_v2_full;
+KNOWLEDGE_BUNDLE["oral-lesion"] = _oral_lesion_v2_full;
+KNOWLEDGE_BUNDLE["구강칸디다"] = _oral_lesion_v2_full;
+KNOWLEDGE_BUNDLE["디플루칸"] = _oral_lesion_v2_full;
+KNOWLEDGE_BUNDLE["헥사메딘"] = _oral_lesion_v2_full;
+
+/* burning-mouth v2 보강 — 시진 표준·뮤테란/Pilocarpine/제로바·심한 혀통증 routine (4-30 ENT bulk) */
+var _BMS_v2_full = {
+  kind: "disease",
+  keywords: ["burning mouth","구강작열감","구강작열감증후군","BMS","혀통증","glossodynia","glossalgia","뮤테란","제로바","pilocarpine"],
+  primarySources: [
+    "Kim JW et al. Sci Rep 2025"
+  ],
+  sections: {
+    exam: {
+      content: "### 혀 화끈거림 환자 — 시진 표준 [TIPS — by ENT 교수]\n- **건조함 동반 여부**\n- **혀 표면이 울퉁불퉁한지** 시진 (정상인에서는 없는 것이 맞음 — 비정상 소견)\n- 혀 가장자리 indentation (scalloped tongue) — 부종·구강건조 시사\n- 백태·발적·궤양 동반 여부",
+      sources: []
+    },
+    protocol: {
+      content: "### 뮤코미스트 가글 [CLINICAL]\n뮤코미스트 10% 1 ampule + 물 100cc → TID 가글\n- 2025 다기관 임상: VAS 통증 + 삶의 질(OHIP-14K) 유의 개선\n- Clonazepam 0.5mg/d 병용 시 반응률 ↑ (단독 60% → 병용 80%)\n\n### 혀 화끈거림 일반 처방 [TIPS — by ENT 교수]\n- **뮤테란 가글** (효과 ↑) — 탄툼·헥사메딘은 burning에 효과 제한\n- **Pilocarpine** (살라겐/필로겐) — 구강건조 동반 시 (`dry-mouth` 참조)\n- **제로바 spray** — 구강 보습·통증 완화\n\n### 심한 혀통증 — 미르 routine [TIPS — by ENT 교수]\n| 약제 | 용법 |\n|---|---|\n| **Dexa high gargle** | Dexamethasone 2T + 물 1L → 하루 3회 가글 |\n| **제로바 spray** | 통증 부위 도포 |\n| **Clonazepam (리보트릴)** | **½T HS** — 신경병증성 통증·수면 영향 |",
+      sources: ["Kim JW et al. Sci Rep 2025"]
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["burning mouth"] = _BMS_v2_full;
+KNOWLEDGE_BUNDLE["구강작열감"] = _BMS_v2_full;
+KNOWLEDGE_BUNDLE["BMS"] = _BMS_v2_full;
+KNOWLEDGE_BUNDLE["burning-mouth"] = _BMS_v2_full;
+KNOWLEDGE_BUNDLE["혀통증"] = _BMS_v2_full;
+KNOWLEDGE_BUNDLE["glossodynia"] = _BMS_v2_full;
+
+/* xerostomia v2 보강 — 노화 분비량·dry tongue 관리 (4-30 ENT bulk, researcher 4-30 정정) */
+var _xerostomia_v2_full = {
+  kind: "disease",
+  keywords: ["구강건조증","구강건조","dry mouth","xerostomia","dry tongue","saliva aging"],
+  primarySources: [
+    "Leveque FG et al. NEJM 1993 (Pilocarpine)",
+    "Salagen SPC",
+    "Sio TT et al. Mayo Clin Proc 2019",
+    "Affoo et al. JAGS 2015. PMID:26469080"
+  ],
+  sections: {
+    exam: {
+      content: "### 노화와 분비량 [TIPS — by ENT 교수, researcher 4-30 정정]\n- 건강한 성인 침 분비량 약 **0.5–1.5 L/day**, 콧물 약 **1–2 L/day**\n- 노화 시 침 분비는 **gland-specific 점진 감소** — 특히 submandibular/sublingual; parotid는 비교적 보존 (Affoo 2015)\n- ⚠ Dry mouth의 주원인은 **노화 자체보다 polypharmacy·Sjögren·anticholinergic 약제** 가능성이 높음\n- 노인 dry mouth 호소 시 **약물·전신질환부터 점검**\n\n[TIPS 미르 raw: '60대 50% 미만 감소'는 출처 미확인 — 환자 비유로만 사용]\n\n### Dry tongue 관리 [TIPS — by ENT 교수]\n- **Dry tongue을 그냥 내버려 두면 너무 아파서 밥을 아예 못 먹기도 함**\n- 원인: mouth breathing·구강건조·약물·Sjögren·당뇨 미조절·방사선 후\n- 적극 관리 필요",
+      sources: []
+    },
+    protocol: {
+      content: "① **Pilocarpine(살라겐/필로겐)** po\n  - 두경부암 방사선 후 구강건조증: 5mg TID (가이드라인)\n  - 쇼그렌증후군: 5mg QID (가이드라인)\n  - 임상 패턴: BID 가능 (부작용 경감 목적) [출처 미확인]\n  - 급여: 두경부암 방사선 후 or 쇼그렌증후군 진단 시\n\n② **뮤코미스트 10% 1 ampule + 물 100cc → TID 가글**\n  - 방사선 유발 xerostomia: 10% NAC rinse 유의 개선 (Mayo 2019 RCT)\n  - 일반 dry mouth: 직접 gargle 근거 없음, 임상 경험 기반 [출처 미확인]\n\n③ **제로바 spray** — 구강 보습 보조",
+      sources: ["Leveque FG et al. NEJM 1993","Salagen SPC","Sio TT et al. Mayo Clin Proc 2019"]
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["구강건조증"] = _xerostomia_v2_full;
+KNOWLEDGE_BUNDLE["구강건조"] = _xerostomia_v2_full;
+KNOWLEDGE_BUNDLE["dry mouth"] = _xerostomia_v2_full;
+KNOWLEDGE_BUNDLE["xerostomia"] = _xerostomia_v2_full;
+KNOWLEDGE_BUNDLE["dry-mouth"] = _xerostomia_v2_full;
+KNOWLEDGE_BUNDLE["dry-tongue"] = _xerostomia_v2_full;
+
+/* ========== 4-30 ENT bulk ingest (Batch 2 — 경부·갑상선·타석) ========== */
+
+/* neck-mass v2 보강 — 림프절 양상 감별 (4-30 ENT bulk) */
+var _neck_mass_v2 = {
+  kind: "disease",
+  keywords: ["경부종괴","목에 혹","목 멍울","neck mass","경부림프절","cervical lymphadenopathy","림프절염","lymphadenitis"],
+  primarySources: [
+    "Am Fam Physician 2016. PMID:27929264",
+    "Ying M et al. Cancer Imaging 2014. PMID:24434158",
+    "Ahuja AT et al. PMID:28439430"
+  ],
+  sections: {
+    exam: {
+      content: "### 초진 접근 [CLINICAL — 조건부, by ENT 교수]\n1. **촉진** — 위치, 크기, 경도, 압통, 이동성 확인\n2. **기저질환 확인** — 감염, 자가면역, 악성종양 병력\n3. **초음파 + 도플러**\n   - 혈관(목정맥)과 림프절 구분 — 도플러 필수\n   - 목정맥(내경정맥) 확장이 종괴 오인 경우 있음\n4. 필요 시 aspiration (초음파 유도)\n5. 애매한 경우 조직검사 고려\n\n### 경부림프절 양상 감별 [TIPS — by ENT 교수]\n| 양상 | 의심 |\n|---|---|\n| **말랑·움직임 양호** | 양성 (반응성 림프절병증·감염성) |\n| **고정·단단** | 악성·전이 의심 |\n\n- **둘 다 초음파로 관찰 가능**\n- 후자(고정·단단)는 **ENT 의뢰 — 조직검사** 진행\n- 대칭성·압통·표면 양상도 동시 평가",
+      sources: []
+    },
+    protocol: {
+      content: "### 림프절염 (가장 흔한 원인) [CLINICAL — 조건부]\n경부종괴 2/3 이상이 양성 — 림프절염/반응성 림프절병증.\n\n**경과**: 수주~수개월 지속 가능. 감염 소실 후에도 림프절 정상화 1–6개월. 새로운 상기도 감염마다 재발 패턴 흔함.\n\n**치료 원칙**:\n- 증상 없음 → 관찰\n- 압통/커짐/발열 → 항생제 (S. aureus·GAS 타겟)\n- 바이러스성 → 대증치료\n\n⚠ **4–6주 이상 지속 or 치료 반응 없음** → 조직검사 (림프종 오진 가능성)",
+      sources: []
+    },
+    differential: {
+      content: "**Horses**: 림프절염/반응성 림프절병증 ★가장 흔함 / 피지낭종·지방종 / 갑상선 결절\n\n**Zebra**: ⚠ 림프종 (4–6주 지속·B증상·치료 무반응) / ⚠ 전이성 악성종양",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["경부종괴"] = _neck_mass_v2;
+KNOWLEDGE_BUNDLE["neck mass"] = _neck_mass_v2;
+KNOWLEDGE_BUNDLE["neck-mass"] = _neck_mass_v2;
+KNOWLEDGE_BUNDLE["경부림프절"] = _neck_mass_v2;
+KNOWLEDGE_BUNDLE["lymphadenopathy"] = _neck_mass_v2;
+
+/* thyroid-fna-cnb — 갑상선 FNA/CNB 시술 전 항혈전제·합병증 (4-30 ENT bulk). [TIPS] */
+var _thyroid_fna_cnb_v2 = {
+  kind: "topic",
+  keywords: ["갑상선 FNA","갑상선 CNB","fine needle aspiration","core needle biopsy","갑상선 결절","thyroid nodule","hematoma","항혈전제"],
+  primarySources: [],
+  sections: {
+    definition: {
+      content: "갑상선 결절·경부 림프절 평가의 표준 조직 진단 도구.\n- **FNA**: 22–27G 가는 바늘. 출혈 위험 낮음. 세포 진단(Bethesda system).\n- **CNB**: 18–20G 코어 바늘. 조직 진단(architecture 평가). FNA 미진단 또는 atypia 시 사용. **출혈 위험 FNA보다 높음**.",
+      sources: []
+    },
+    protocol: {
+      content: "### 시술 전 평가 — 항혈전제 확인 [TIPS — by ENT 교수]\n**FNA / CNB 하기 전 반드시 먹는 약을 확인한다 (항혈전제)**\n\n| 약제 | FNA | CNB |\n|---|---|---|\n| Aspirin | 보통 지속 가능 | 시술자 판단, 보통 지속 또는 5–7일 중단 |\n| Clopidogrel·prasugrel·ticagrelor | 5–7일 중단 | 7일 중단 |\n| Warfarin | INR <2.0 또는 시술자 판단 | INR <1.5 권고 |\n| DOAC (apixaban·rivaroxaban·dabigatran) | 24–48h 중단 | 48h 중단 |\n\n항혈전제 중단 결정 = **혈전 위험 vs 출혈 위험** (특히 stent 후·기계 판막). 환자별 필수 확인 — 누락 시 합병증 위험.",
+      sources: []
+    },
+    complications: {
+      content: "### CNB 출혈·혈종 [TIPS — by ENT 교수]\n갑상선 CNB 후 합병증으로 **출혈과 혈종**이 있음. 혈종이 심하면 ER로 와서 **응급수술로 목을 열어야 함**.\n\n**환자 교육 (응급실 내원 trigger)**:\n- **숨이 답답해지거나 부어오르면 즉시 ER 내원**\n- 시술 후 24h 이내가 위험 — 환자에게 명시적 안내\n- 압박 지혈을 충분히 (시술 후 10–20분)\n\n**응급 처치 (ER)**: 기도 확보 → 응급 외과적 감압 (drainage / open exploration) → vital·CBC·coagulation panel.\n\n### 기타\n- 일시적 통증 (24–48h)\n- 일시적 음성 변화 (recurrent laryngeal n. 자극)\n- 감염 (드묾)\n- vasovagal 반응",
+      sources: []
+    },
+    referral: {
+      content: "- 갑상선 결절 ATA TI-RADS 4–5 → 갑상선·내분비외과 (FNA/CNB 시행)\n- 시술 후 호흡곤란·심한 부종 → ER 응급\n- 시술 후 음성 변화 지속 → ENT (vocal cord 평가)",
+      sources: []
+    },
+    notes: {
+      content: "가정의학과 1차 진료에서 직접 시술 영역 아님 — 의뢰 후 합병증 인지·환자 교육이 1차 의료 책임. 시술 전 환자 약 복용력 (특히 노인 다약제) 정확 확인 필수 (의뢰 시 약 list 동봉).",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["thyroid-fna-cnb"] = _thyroid_fna_cnb_v2;
+KNOWLEDGE_BUNDLE["갑상선FNA"] = _thyroid_fna_cnb_v2;
+KNOWLEDGE_BUNDLE["갑상선CNB"] = _thyroid_fna_cnb_v2;
+KNOWLEDGE_BUNDLE["thyroid biopsy"] = _thyroid_fna_cnb_v2;
+
+/* salivary-gland-stones — 타석증 (4-30 ENT bulk). [TIPS] */
+var _salivary_stones_v2 = {
+  kind: "disease",
+  keywords: ["타석증","sialolithiasis","salivary gland stones","침샘 돌","설하샘 돌","턱밑샘 돌","submandibular stone","sublingual stone"],
+  primarySources: [],
+  sections: {
+    definition: {
+      content: "침샘관·실질 칼슘 침착(석회화). 타액 분비 폐쇄 → 식사 시 침샘 부음·통증.\n\n| 침샘 | 빈도 | 특징 |\n|---|---|---|\n| **턱밑샘 (Submandibular)** | 80–90% | Wharton's duct, 큰 결석 흔함 |\n| 이하선 (Parotid) | 5–20% | Stensen's duct, 작은 다발 |\n| 설하샘 (Sublingual) | 드묾 | 구강 저면 |",
+      sources: []
+    },
+    exam: {
+      content: "### 임상 양상\n- 식사 시·식후 침샘 부음·통증 (mealtime swelling)\n- 압박 시 통증·악화\n- 탈수·구강건조 시 악화\n- 만성 시 만성 침샘염·농양 합병\n\n### 진찰 — 한쪽 vs 양쪽 [TIPS — by ENT 교수]\n| 부위 | 패턴 | 다음 단계 |\n|---|---|---|\n| **턱밑샘 부음 — 한쪽** | 흔한 타석 양상 | 진단·국소마취 절개 시도 가능 |\n| **턱밑샘 부음 — 양쪽** | 단순 타석 아님 | **CT 꼭 확인** — 다른 원인(Sjögren·IgG4·림프종·림프상피낭종) 의심 |\n\n### 설하샘 돌 [TIPS — by ENT 교수]\n- **눈으로 보이는 표재성 돌** → 국소마취 후 **eye scissor로 미세절개·배석** 가능\n- 시술 후 계속 불편 → **CT 시행** (deep stone·canalicular stenosis 확인)\n\n### 영상\n- 단순 X-ray (occlusal view) — submandibular calcification\n- **초음파** — 1차\n- **CT** — 표준 (소량·작은 결석 검출, 양측성 평가)\n- Sialendoscopy — ENT 영역",
+      sources: []
+    },
+    protocol: {
+      content: "### 보존적 (작은 결석)\n- 충분한 수분 섭취\n- 침샘 마사지 (식전·식후)\n- **Sialagogue** — 신 음식·신 사탕(레몬 사탕)으로 침 분비 자극\n- 항생제 — 급성 감염 동반 시 (amox/clav, clindamycin)\n\n### 시술\n- **Eye scissor 미세절개·배석** — 표재성 설하샘 돌 (1차 진료 가능)\n- **Sialendoscopy** — ENT\n- **외과적 절제** — 큰 결석·재발·만성 sialadenitis (submandibulectomy)",
+      sources: []
+    },
+    referral: {
+      content: "- 미세절개로 안 빠지는 deep stone → ENT (sialendoscopy)\n- **양측성 부음** → CT + ENT (감별진단 광범위)\n- 만성 sialadenitis·반복 감염 → ENT (외과 평가)\n- 농양 형성 → ENT 응급",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["salivary-gland-stones"] = _salivary_stones_v2;
+KNOWLEDGE_BUNDLE["sialolithiasis"] = _salivary_stones_v2;
+KNOWLEDGE_BUNDLE["타석증"] = _salivary_stones_v2;
+KNOWLEDGE_BUNDLE["설하샘 돌"] = _salivary_stones_v2;
+KNOWLEDGE_BUNDLE["턱밑샘 돌"] = _salivary_stones_v2;
+KNOWLEDGE_BUNDLE["침샘염"] = _salivary_stones_v2;
