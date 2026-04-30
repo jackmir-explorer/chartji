@@ -49,6 +49,22 @@ CKD G3 환자 추적 시 **시스타틴C 추가 검사 권장:**
 
 ---
 
+## Finerenone — T2DM 동반 CKD 신보호 [CLINICAL]
+
+> [출처: Escudero C et al. Endocrinology: What You May Have Missed in 2025. Ann Intern Med. 2026. PMID:41974004, DOI:10.7326/ANNALS-26-00925]
+> [초록 기반 — 전문 미확인]
+
+**피네레논(Finerenone)**: 비스테로이드성 MRA(mineralocorticoid receptor antagonist). 2025년 T2DM 동반 CKD에서 신보호 추가 근거 확인.
+
+**핵심 포인트:**
+- T2DM + CKD 환자에서 피네레논이 신기능 보존 및 CKD 진행 억제 효과
+- SGLT-2i와 병용 시 추가 신보호 효과 기대 — 병합 전략 가능성
+- RAAS 차단제 (ACEi/ARB) + SGLT-2i에 더해 피네레논 추가가 CKD+T2DM 환자에서 논의됨
+
+**처방 검토 대상:** T2DM + CKD (단백뇨 동반) + SGLT-2i 사용 중에도 진행하는 경우 → 내분비·신장내과 협진 후 피네레논 추가 고려
+
+---
+
 ## 일차의료 의뢰 기준 (referral) [CLINICAL]
 
 - eGFR < 30 (G4) → 신장내과 의뢰

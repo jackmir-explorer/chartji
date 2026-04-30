@@ -129,6 +129,12 @@ ISIS-1·BHAT 등 고전적 BB 이득 trials은 PCI·statin·ACEi 이전 시대�
 
 > 출처 (뉘앙스): Johner N et al. Eur J Clin Invest 2024. PMID:39257189
 
+### 2025 연례 심장내과 업데이트 — 추가 확인
+
+Ann Intern Med 2026 심장내과 핵심 업데이트(PMID:41974015)에서도 MI 후 베타차단제 일률 처방 재고 방향을 2025년 주요 변화로 재확인. REDUCE-AMI 이후 방향이 국제 전문가 리뷰에서도 공통 메시지로 정착.
+
+> [출처: Atalla M et al. Ann Intern Med. 2026. PMID:41974015, DOI:10.7326/ANNALS-26-01014] [초록 기반]
+
 ---
 
 ## Draft 출력사항 (draft-append)
