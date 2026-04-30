@@ -3225,6 +3225,10 @@ var _palliative_pain_v2 = {
     notes_extra: {
       content: "암성통증 완화의료에서 **경피 부프레노르핀은 연하 곤란·장 기능 저하 말기 환자의 1차 대안**. OUD 우려 환자에서 부분 작용제 스튜어드십 대안으로도 활용.",
       sources: []
+    },
+    counseling: {
+      content: "### 암환자의 '원인' 욕구 [INSIGHTS — by 미르 관찰]\n\n암환자들은 '원인'을 항상 알고 싶어한다. 내가 왜 걸린 건지, 유전인지, 환경인지, 무슨 인자가 있는 건지. 전근대에는 그것을 죄나 업보로 해석했다. 사람들은 **'설명'되기를 원하며 적절한 설명을 들으면 마음을 놓는 것 같다**.\n\n### 임상 함의\n- **답할 수 없는 질문에도 답하려는 시도가 정서적 의미** — '정확한 원인은 알기 어렵지만…'으로 시작\n- 가족력 / 환경 / 흡연 / 식이 / 감염 등 **알려진 위험인자를 점검·언급**\n- 환자가 '내 잘못 아닌데' 안심할 수 있는 framing — 자책·죄의식 완화\n- 모를 때는 **'많은 경우 명확한 단일 원인은 없습니다'**라고 명시 — 솔직함이 신뢰 형성\n- **시간을 충분히** — 1–2분의 설명이 환자 만족도·치료 순응도에 큰 영향\n\n### 전근대 vs 현대\n- 전근대: 죄·업보·악령\n- 현대: 유전·환경·생활습관·확률\n- 공통: **사람은 '설명되지 않은 고통'을 견디기 매우 어려워함** → 의사가 의미 부여(meaning-making) 역할\n\n[Related: Communication & Counseling 횡단 모듈]",
+      sources: []
     }
   },
   uiHooks: null
@@ -3304,9 +3308,18 @@ var _cascade_v2 = {
     notes_extra: {
       content: "처방 연쇄는 **인지되지 않은 채 지속**되는 것이 가장 큰 문제. \"새 약이 필요한 증상인가 vs 기존 약 부작용인가\"를 매번 자문하는 습관이 핵심 예방. 고령 외래에서 다약제 처방 전 반드시 cascade 가능성 점검.",
       sources: []
+    },
+    "elderly-mir-tips": {
+      content: "### 노인 부종 → NSAIDs 문진 [TIPS — by 미르 경험]\n노인에서 이유 없이 붓는 경우 **NSAIDs를 꼭 문진**.\n- NSAID-induced edema: PGE2 차단 → renal sodium retention\n- 동반 약물: 칼슘 차단제(amlodipine), TZD, gabapentin\n- Cascade 회피: 이뇨제 추가 전 NSAIDs 중단·교체 우선\n\n### 노인 스테로이드 처방 전 4가지 사전 확인 [TIPS — by ENT 교수]\n| 확인 | 이유 |\n|---|---|\n| **당뇨** | 혈당 상승 — DM도 처방 가능, 환자 교육 필수 |\n| **황반변성** | 스테로이드 악화 — 다른 옵션 우선 고려 |\n| **녹내장** | 안압 상승 |\n| **위궤양·BPSD** | 소화기 출혈·정신 증상 악화 |\n\nDM이 있다고 절대 금지가 아님 — '혈당 상승에 유의'라는 환자 교육.\n\n### Cascade 방지 핵심 질문\n새 증상 호소 노인 환자에서 **첫 질문은 '기존 약 부작용?'**\n- 부종 → NSAIDs·CCB·TZD?\n- 변비 → CCB·항콜린·opioid?\n- 기침 → ACEi?\n- 어지럼 → 항고혈압·BZD·항히스타민?\n- 인지 저하 → 항콜린 burden·BZD?\n\n→ STOPP/START·Beers 활용 우선, 추가 처방은 마지막 수단.",
+      sources: []
     }
   },
-  uiHooks: null
+  uiHooks: {
+    hint: ["protocol","elderly-mir-tips","referral","contraindication","precaution","pregnancy"],
+    guide: ["*"],
+    triage: ["differential"],
+    draftAppend: ["draft-append"]
+  }
 };
 KNOWLEDGE_BUNDLE["prescribing-cascade"] = _cascade_v2;
 KNOWLEDGE_BUNDLE["처방연쇄"] = _cascade_v2;
