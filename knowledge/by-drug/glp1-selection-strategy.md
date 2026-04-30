@@ -285,3 +285,37 @@ relations: []
 
 - 전당뇨+비만 환자 GLP-1RA 처방 시: "살 빼면서 혈당도 잡는다" — 수치 근거 제공
 - 약물 중단 후 효과 감소 → 장기 유지 필요성 상담에 활용
+
+---
+
+## GLP-1RA 부작용 신호 — NAION (비동맥성 앞시신경병증) [CLINICAL — 조건부]
+
+> [출처: Escudero C et al. Endocrinology: What You May Have Missed in 2025. Ann Intern Med. 2026. PMID:41974004, DOI:10.7326/ANNALS-26-00925]
+> [초록 기반 — 전문 미확인]
+
+**신호:** GLP-1RA 처방 중 **비동맥성 앞시신경병증(NAION, Nonarteritic Anterior Ischemic Optic Neuropathy)** 발생 위험 신호가 2025년 보고됨.
+
+**임상 포인트:**
+- GLP-1RA 처방 환자에서 **시야 변화·시력 저하 증상 발생 시 즉시 안과 의뢰**
+- 처방 시작 전 시야 이상 여부 확인 및 교육 포함 권장
+- 위험도 크기·절대 위험 수치는 아직 확립 중 — 인과관계 확정 전이나 임상 모니터링 포함
+
+**초진 교육 추가 항목:**
+"드물지만 눈 관련 증상(갑작스러운 시야 이상, 한쪽 눈이 흐릿해짐)이 생기면 즉시 알려주세요."
+
+> 이 신호는 Ann Intern Med 2025 내분비 연례 업데이트에서 주요 안전성 항목으로 포함됨.
+
+---
+
+## GLP-1RA vs SGLT-2i — 비뇨생식기 감염 위험 비교 [CLINICAL]
+
+> [출처: Escudero C et al. Endocrinology: What You May Have Missed in 2025. Ann Intern Med. 2026. PMID:41974004, DOI:10.7326/ANNALS-26-00925]
+> [초록 기반 — 전문 미확인]
+
+**핵심:** T2DM 환자에서 GLP-1RA는 SGLT-2 억제제 대비 비뇨생식기 감염(UTI·생식기 진균감염) 위험이 낮음.
+
+**처방 결정 적용:**
+- 반복성 UTI·생식기 진균감염 기왕력 환자 → SGLT-2i보다 GLP-1RA 선택 우선 고려
+- SGLT-2i 전환 검토 시 비뇨생식기 감염 위험 증가 가능성 상담
+
+> SGLT-2i 비뇨생식기 감염 상세 → [[sglt2-inhibitors]] 참조
