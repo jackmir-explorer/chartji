@@ -106,6 +106,9 @@ JSON만 반환 (다른 텍스트 절대 금지):
   sleep-apnea (수면무호흡/OSA/코골이/PSG/Mallampati·STOP-BANG/CPAP — 수면호흡장애 진찰·진단 맥락)
   tinnitus (이명/귀울림/매미·우웅·다다닥/myoclonic tinnitus/clonazepam·carbamazepine·baclofen/편측성→청신경종양/EHF audiometry — 이명 문진·약물·의뢰 맥락)
   hearing-loss (난청/노인성/감각신경성/보청기/dementia risk factor/ACHIEVE RCT/소음 직업력 — 청력저하 평가·보청기 상담 맥락)
+  low-freq-hearing-loss (저주파난청/귀먹먹함/이충만감/내이수종/ALHL/메칠론 7일 tapering·U-turn·HCTZ·Storgar — 급성 저주파 감각신경성 난청 처방 맥락)
+  meniere (메니에르병/회전성 현훈+변동 청력+이명/U-turn+Dichlozid 유지+보나링 응급/내이수종 그림 시각화 — 메니에르 진단·관리 맥락)
+  sudden-hearing-loss (돌발성난청/SSNHL/72시간 이내 ≥30dB SNHL/메칠론 8T#2 7일 tapering/ITS/당뇨 확인 — 응급 의뢰 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */

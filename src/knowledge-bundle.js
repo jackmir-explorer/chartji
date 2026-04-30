@@ -3570,3 +3570,129 @@ KNOWLEDGE_BUNDLE["presbycusis"] = _hearing_loss_v2;
 KNOWLEDGE_BUNDLE["노인성난청"] = _hearing_loss_v2;
 KNOWLEDGE_BUNDLE["보청기"] = _hearing_loss_v2;
 KNOWLEDGE_BUNDLE["감각신경성난청"] = _hearing_loss_v2;
+
+/* ========== 4-30 ENT bulk ingest (Batch 7 — 메니에르·저주파·돌발성) ========== */
+
+/* low-freq-hearing-loss — 급성 저주파 감각신경성 난청 (4-30 ENT bulk, v1 alias 마이그레이션). [TIPS] */
+var _low_freq_v2 = {
+  kind: "disease",
+  keywords: ["저음성난청","저주파난청","급성 저주파 감각신경성 난청","ALHL","low-frequency SNHL","귀먹먹함","이충만감","내이수종","endolymphatic hydrops","U-turn","Betahistine","메칠론"],
+  primarySources: [],
+  sections: {
+    definition: {
+      content: "**급성 저주파 감각신경성 난청 (Acute Low-tone Sensorineural Hearing Loss, ALHL)**: 내이수종(달팽이관 내압 상승)으로 저주파 영역(125–500 Hz) 청력이 변동적으로 떨어지는 상태. 메니에르의 전 단계 또는 monosymptomatic spectrum.",
+      sources: []
+    },
+    exam: {
+      content: "### 증상 [TIPS — by ENT 교수]\n- 청력 저하\n- **귀먹먹함 / 이충만감** (비행기 탔거나 물에 들어간 듯한 느낌)\n- 어지럼증 (경미~중등도, 회전성은 드묾)\n- 매미·우웅 등 다양한 소리의 이명 동반 가능\n\n### 진단\n- 청력검사 (PTA): 저주파(125–500 Hz) 손실 — 변동성\n- 고막 시진 정상\n- 내이 MRI는 일반적으로 불필요",
+      sources: []
+    },
+    protocol: {
+      content: "### 급성기 [TIPS — by ENT 교수]\n**스테로이드 + 위장약 + 내이 미세순환제**:\n| 약제 | 용량 | 기간 |\n|---|---|---|\n| **메칠론(Methylprednisolone)** | 10T#2 ×3일 → 8T#2 → 6T#2 → 4T#2 → 2T#2 (1일씩 감량) | 총 7일 tapering |\n| **Storgar** (위장약) | 표준 용량 병용 | 동기간 |\n| **U-turn (Betahistine)** | 1T TID | 동기간 |\n\n30%는 약 무반응 — **컨디션 조절(생활습관)이 더 중요**.\n\n### 유지/만성 [TIPS — by ENT 교수]\n- **U-turn (Betahistine)** TID — 내림프수종 완화 (귀먹먹함 단독 시 단독 처방 가능)\n- **Dichlozid (HCTZ) ½T** 추가 — 티아지드 이뇨제로 내압 감소\n- 미호전 시 청력검사 재평가",
+      sources: []
+    },
+    lifestyle: {
+      content: "### 생활습관 개선 [TIPS — by ENT 교수]\n- **저염식**\n- **금주, 카페인(커피) 제한**\n- **물 많이 마시기**\n- **스트레스 관리** — 스트레스 → 내압 상승 → 증상 악화",
+      sources: []
+    },
+    precaution: {
+      content: "### U-turn (Betahistine) 부작용 [TIPS — researcher 4-30 보강]\n- **흔한 부작용: 두통**\n- **편두통력 미리 확인** — 편두통 동반 시 두통 악화 가능\n- 두통 심하면: U-turn ½T TID로 감량\n- 심한 두통 발생 시 신경과 consult 고려\n\n### 일반\n- 크롬친화세포종(pheochromocytoma) 절대 금기\n- 심계항진·혈압 변화 시 ½T로 감량\n- HCTZ: 저칼륨혈증·저나트륨혈증·고요산혈증 — 노인·이뇨제 병용 주의",
+      sources: []
+    },
+    notes: {
+      content: "### 환자 교육 [TIPS — by ENT 교수]\n환자에게 **내이림프 부종 그림(달팽이관 단면)을 모니터로 보여주며 설명**하면 이해가 빠르다. 내이수종 개념을 환자가 잘 이해 못 함.\n\n### 메니에르 진행\n반복되는 ALHL은 메니에르로 진행 가능 [TIPS — by ENT 교수]. 메니에르 분리 진단: 회전성 현훈 + 변동 청력 + 이명/이충만감 (`meniere.md` 참조). ALHL 단계에서 생활습관·약물 관리가 메니에르 진행 예방.",
+      sources: []
+    },
+    referral: {
+      content: "- 7일 스테로이드 후 호전 없음\n- 회전성 현훈 동반 → 메니에르 의심 → ENT\n- 청력 저하가 저주파 외 영역 동반 → 돌발성 난청 가능성 → ENT 즉시",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["low-freq-hearing-loss"] = _low_freq_v2;
+KNOWLEDGE_BUNDLE["저주파난청"] = _low_freq_v2;
+KNOWLEDGE_BUNDLE["저음성난청"] = _low_freq_v2;
+KNOWLEDGE_BUNDLE["귀먹먹함"] = _low_freq_v2;
+KNOWLEDGE_BUNDLE["이충만감"] = _low_freq_v2;
+KNOWLEDGE_BUNDLE["ALHL"] = _low_freq_v2;
+KNOWLEDGE_BUNDLE["내이수종"] = _low_freq_v2;
+
+/* meniere — 메니에르병 (4-30 ENT bulk). [TIPS] */
+var _meniere_v2 = {
+  kind: "disease",
+  keywords: ["메니에르","메니에르병","Meniere","Menieres","내이수종","endolymphatic hydrops","U-turn","Betahistine","Dichlozid","보나링"],
+  primarySources: [],
+  sections: {
+    definition: {
+      content: "내이림프 수종(endolymphatic hydrops)으로 인한 반복성 회전성 현훈 + 변동 감각신경성 난청 (저주파 우세) + 이명/이충만감 삼주증.",
+      sources: []
+    },
+    exam: {
+      content: "### 진단 기준\n- 자발성 회전성 현훈 ≥2회, 각 20분 이상 ~12시간 미만\n- 변동 감각신경성 난청 (저주파 우세, 청력검사 확인)\n- 이명 또는 이충만감 (편측)\n- 다른 원인 배제\n\n### 환자 교육 — 내이수종 그림 시각화 [TIPS — by ENT 교수]\n환자에게 **내이림프 부종이 일어난 그림(달팽이관 단면)을 모니터로 보여주며 설명**. 환자가 이해하기 어려운 개념이라 시각 자료가 효과적.\n\n### 환자 표현 [TIPS — by ENT 교수]\n- '비행기 탄 듯한 먹먹함' / '물에 들어간 듯한 느낌'\n- 이명: 매미·우웅 등 다양한 소리",
+      sources: []
+    },
+    protocol: {
+      content: "### 유지 약물 [TIPS — by ENT 교수]\n| 약제 | 용량 | 역할 |\n|---|---|---|\n| **U-turn (Betahistine)** | 1T TID | 내림프 수종 완화 (1차) |\n| **Dichlozid (HCTZ)** | ½T 추가 | 티아지드 이뇨제로 내압 감소 |\n\n### 응급 약물 (acute attack) [TIPS — by ENT 교수]\n- **보나링 (Meclizine)** — 회전성 현훈 발작 시\n- 오심·구토 동반 시 항히스타민 진토 효과",
+      sources: []
+    },
+    lifestyle: {
+      content: "- 저염식 (sodium <1500 mg/day)\n- 금주·카페인 제한·물 충분 섭취\n- 스트레스 관리 (내압 상승 요인)",
+      sources: []
+    },
+    precaution: {
+      content: "### U-turn (Betahistine) 부작용 [TIPS — researcher 4-30 보강]\n- **흔한 부작용: 두통**, 편두통력 확인 — 편두통 동반 시 두통 악화 가능\n- 두통 심하면 ½T TID로 감량, 심하면 신경과 consult\n\n### 일반\n- 크롬친화세포종(pheochromocytoma) 절대 금기\n- HCTZ: 저칼륨·저나트륨·고요산 모니터링",
+      sources: []
+    },
+    notes: {
+      content: "반복되는 급성 저주파 감각신경성 난청(ALHL)은 메니에르로 진행 가능 (`low-freq-hearing-loss.md`). 진행성 청력 저하 — 보청기 적응 시점 고려. 양측성 메니에르(~30%)·자가면역 내이질환 의심 시 ENT/면역 평가. 난치성 — 화학적 미로파괴(intratympanic gentamicin)·외과(endolymphatic sac decompression) ENT 영역.",
+      sources: []
+    },
+    referral: {
+      content: "- 처음 메니에르 의심 → ENT 정식 진단·청력검사\n- 약물 무반응·삶의 질 저하 → ENT (intratympanic 치료)\n- 양측성 또는 자가면역 의심 → 이비인후·류마티스/면역",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["meniere"] = _meniere_v2;
+KNOWLEDGE_BUNDLE["메니에르"] = _meniere_v2;
+KNOWLEDGE_BUNDLE["메니에르병"] = _meniere_v2;
+KNOWLEDGE_BUNDLE["Meniere"] = _meniere_v2;
+
+/* sudden-hearing-loss — 돌발성 난청 SSNHL (4-30 ENT bulk). [TIPS] */
+var _sudden_hl_v2 = {
+  kind: "disease",
+  keywords: ["돌발성난청","sudden hearing loss","SSNHL","sudden sensorineural hearing loss","메칠론","MPD","ITS","intratympanic steroid"],
+  primarySources: [],
+  sections: {
+    definition: {
+      content: "72시간 이내 발생한 ≥30 dB 감각신경성 난청 (3개 이상 인접 주파수). 응급 — 발생 후 가능한 빨리(이상적으로 14일 이내) 치료 시작 시 회복률 ↑.",
+      sources: []
+    },
+    exam: {
+      content: "### 증상\n- **갑작스러운 편측 청력 저하** (보통 아침에 일어나 보니 안 들림)\n- 이명·이충만감 동반 흔함\n- 어지럼증 동반 시 예후 불량\n\n### 진단\n- 청력검사 (PTA) — 즉시 시행\n- 고막 시진 정상 (전음성 난청 배제)\n- MRI internal auditory canal — vestibular schwannoma 배제 (특히 이명 동반)\n\n### 동반 평가 [TIPS — by ENT 교수]\n- **당뇨 확인 — 스테로이드 처방 전 필수**\n- 고혈압·심혈관 위험 평가",
+      sources: []
+    },
+    protocol: {
+      content: "### 표준 — 경구 스테로이드 [TIPS — by ENT 교수]\n- **Methylprednisolone (메칠론) 8T#2 → 7일 tapering**\n  - 가능한 빨리 시작 (발생 후 14일 이내가 효과 큼)\n\n### Intratympanic Steroid (ITS) [TIPS — by ENT 교수]\n- 호전을 빠르게 하고 싶을 때 추가\n- 적응: 경구 단독 미반응 / 빠른 회복 필요 / DM·궤양 등 경구 부담\n- ENT 시술\n\n### 보조\n- 산소·hyperbaric oxygen (논쟁 중, 일부 가이드라인 권장)\n- 안정·스트레스 관리",
+      sources: []
+    },
+    precaution: {
+      content: "### 스테로이드 처방 전 필수 확인 [TIPS — by ENT 교수]\n- **당뇨**: 혈당 상승 — DM 환자도 처방 가능하지만 혈당 모니터링·환자 교육 필수\n- **녹내장·황반변성**: 스테로이드 외 옵션 고려 (특히 황반변성)\n- 위궤양·소화기 출혈 과거력\n- 정신질환·BPSD\n- 활동성 감염",
+      sources: []
+    },
+    notes: {
+      content: "자연 회복률 ~30~65% (변동성 큼). 어지럼증 동반·심한 청력 손실·고령 시 예후 불량. 30일 후 청력 plateau — 회복 평가 시점. 보청기 적응 시점 — 6개월 후 청력 안정 시 고려.",
+      sources: []
+    },
+    referral: {
+      content: "- **돌발성 난청 의심 즉시 ENT 의뢰** — 시간이 회복률 결정\n- ITS 시술 필요 → ENT\n- 어지럼증 심한 동반 → 신경이과·내이 진단\n- vestibular schwannoma 의심 (편측·이명 동반) → MRI IAC + ENT",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["sudden-hearing-loss"] = _sudden_hl_v2;
+KNOWLEDGE_BUNDLE["돌발성난청"] = _sudden_hl_v2;
+KNOWLEDGE_BUNDLE["SSNHL"] = _sudden_hl_v2;
