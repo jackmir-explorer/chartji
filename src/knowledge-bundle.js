@@ -1260,7 +1260,7 @@ var KNOWLEDGE_BUNDLE = {
   "후각저하": {
     "kind": "disease",
     "exam": "선행 감염(COVID-19/감기) 여부·발병 시점\n비염·부비동염 증상(코막힘·콧물·안면통)\n두부 외상력\n인지기능 저하·파킨슨 증상\n갑상선기능저하·만성신부전(투석) 여부",
-    "treatment": "식염수 코세척 [CLINICAL — 조건부] CRS 동반 시 효과, post-viral 단독은 보조\nNasal steroid spray [CLINICAL — 조건부] CRS/비용종 효과, post-COVID 단독 미확립\nPrednisolone(소론도) 7일 taper: 4T#2 ×5일 → 2T#2 ×2일 [TIPS — by ENT교수]\nSmell training: 표준 향 4종, 매일 2회, 최소 12주 [CLINICAL]\n비타민 B·C [TIPS — by ENT교수]\n후각검사: F/U 모니터링 목적, 초진 일상 시행 불필요 [TIPS — by ENT교수]",
+    "treatment": "식염수 코세척 [CLINICAL — 조건부] CRS 동반 시 효과, post-viral 단독은 보조\nNasal steroid spray [CLINICAL — 조건부] CRS/비용종 효과, post-COVID 단독 미확립\n**INS 병용 시 후각연습 효과 ↑** [TIPS — by ENT교수] olfactory cleft 점막 부종 감소 → 자극 전달 효율 ↑\nPrednisolone(소론도) 7일 taper: 4T#2 ×5일 → 2T#2 ×2일 [TIPS — by ENT교수]\nSmell training: 표준 향 4종(rose/eucalyptus/lemon/clove), 매일 2회, 최소 12주 [CLINICAL]\n비타민 B·C [TIPS — by ENT교수]\n후각검사: F/U 모니터링 목적, 초진 일상 시행 불필요 [TIPS — by ENT교수]\n\n### 난치성 CRSwNP — Dupilumab(Dupixent) [CLINICAL]\n적응: 난치성 CRSwNP — 표준 INS·코세척·OCS·수술 실패\n후각 회복 효과: UPSIT +10.54 vs placebo (24주, p<0.0001), anosmic 60% 이상이 24주에 후각 회복, week 1 이내 효과\n코막힘(NPS)도 개선되나 **후각 회복 폭이 더 인상적**\n처방: 알레르기·이비인후 전문의 영역 (생물학적 제제, 보험·적응증 평가 필요)\n[출처: Bachert Lancet 2019 PMID:31543428; Mullol JACI-IP 2022 PMID:34628065]",
     "differential": "1. Post-viral(COVID-19) ★가장 흔함\n2. Sinusitis/CRS/비용종 ★흔함\n3. 두부 외상 (cribriform plate 손상)\n4. 알츠하이머·파킨슨 초기증상 (90%·85% — 운동·인지 증상 수년 선행)\n5. 갑상선저하증(가역적, T4 치료 후 회복) / 만성신부전(uremic toxin)",
     "differentialShort": [{"d":"Post-viral(COVID-19)","t":"h"},{"d":"Sinusitis/CRS","t":"h"},{"d":"두부외상","t":"z"},{"d":"알츠하이머·파킨슨","t":"z"},{"d":"갑상선저하증/신부전","t":"z"}],
     "draftTemplate": null,
@@ -2292,24 +2292,38 @@ KNOWLEDGE_BUNDLE["chronic-cough"] = _chronic_cough_v2;
 KNOWLEDGE_BUNDLE["만성기침"] = _chronic_cough_v2;
 KNOWLEDGE_BUNDLE["RCC"] = _chronic_cough_v2;
 
-/* allergic-rhinitis — ARIA 2024-2025 (4-24 deep-extract). [REGULATORY] */
+/* allergic-rhinitis — ARIA 2024-2025 + 한국 외래 임상 패턴 (4-24 deep-extract + 4-30 ENT bulk). [REGULATORY + TIPS] */
 var _allergic_rhinitis_v2 = {
   kind: "disease",
-  keywords: ["알레르기비염","allergic rhinitis","AR","비강내 스테로이드","INCS","비강내 항히스타민","INAH","ARIA","계절성비염","지속성비염"],
+  keywords: ["알레르기비염","allergic rhinitis","AR","비강내 스테로이드","INCS","비강내 항히스타민","INAH","ARIA","계절성비염","지속성비염","비염","리노벤트","Ipratropium","cryotherapy","ClariFix","NAR","비알러지비염","vasomotor rhinitis"],
   primarySources: [
-    "Sousa-Pinto B et al. ARIA-EAACI Guidelines 2024-2025: Intranasal Treatments. Allergy 2025;81(4):954-976. PMID:41324154, DOI:10.1111/all.70131"
+    "Sousa-Pinto B et al. ARIA-EAACI Guidelines 2024-2025: Intranasal Treatments. Allergy 2025;81(4):954-976. PMID:41324154, DOI:10.1111/all.70131",
+    "Choi et al. ClariFix cryoablation meta-analysis. J Rhinol 2024. DOI:10.18787/jr.2024.00015",
+    "Young et al. ClariFix efficacy. Am J Rhinol Allergy 2023. DOI:10.1177/19458924231152331"
   ],
   sections: {
     protocol: {
       content: "### 비강내 치료 권고 서열 (ARIA 2024-2025)\n```\nINAH+INCS 복합 > INCS 단독 > INAH 단독\n```\n\n| 비교 | 권고 방향 |\n|---|---|\n| INAH+INCS vs INAH 단독 | **INAH+INCS 우선** (강화) |\n| INAH+INCS vs INCS 단독 | **INAH+INCS 우선** (강화 — 핵심 변화) |\n| INCS 단독 vs INAH 단독 | INCS 우선 (유지) |\n\n### 약제 분류 (한국 외래)\n| 분류 | 대표 약제 |\n|---|---|\n| INCS | Fluticasone(플루티카손), Mometasone(모메타손), Budesonide(부데소니드) |\n| INAH | Azelastine(아젤라스틴) |\n| INAH+INCS 복합 | Dymista (azelastine+fluticasone) — 2025 우선 권고 |\n| 비충혈제거제 | Oxymetazoline 등 — 단기(≤3-5일)만 |\n\n### 적용 원칙\n- 계절성 AR: 노출 직전 또는 증상 발현 시 시작 (preseason 전처치 가능)\n- 지속성 AR: 지속 사용 (INCS ± INAH)\n- 단기 증상 → INAH 또는 경구 항히스타민\n- 중등도 이상 또는 QoL 저하 → INCS 또는 INAH+INCS",
       sources: []
     },
+    "clinical-pattern": {
+      content: "### 한국 외래 처방 패턴 [TIPS — by ENT 교수, 조진희 교수님, 강윤진 교수님]\n\n**단순 비염**: INS + 리노에바스텔 (Loratadine 계열) — 최소 처방으로 충분\n\n**심한 비염**:\n- INS **2회 분무 BID** (아침·저녁) → 호전 시 **1회 분무 QD**로 감량\n- 처방 기간: 2주 후 f/u\n\n**INS 사용법 환자 교육**:\n- 사용 시간대 자유 — 꼭 아침에만 쓸 필요 없음. **가장 불편한 시간대**에 사용\n- 분사 방향: 비중격 아닌 **외측벽 향**\n\n**조진희 교수님 처방**: Xyzal (levocetirizine) + Lukio (montelukast) + 코세척 + INS\n— 류코트리엔 차단제 병용 (AR + asthma overlap·비용종 동반 시)\n\n**강윤진 교수님 처방 (비염 + 기침)**: 리노에바스텔 + 애니코프 + 움카민 시럽 + INS + 코세척\n— 스프레이 사용 강조, 미사용자에게 사용법 재교육 핵심\n\n### 비염 환자 문진 표준\n- 코막힘 / 콧물 / 재채기 / 가려움 / **냄새 잘 맡는지** (후각 동반 저하 → 비용종·CRS 의심)\n- **심한 시점**: 하루 중·연중 (계절성 vs 통년성 감별)\n- 알러지 검사력\n- INS 스프레이 사용력 (있다면 효과·순응도)",
+      sources: []
+    },
+    procedure: {
+      content: "### Cryotherapy (posterior nasal nerve cryoablation, ClariFix) [CLINICAL]\n\n- 메커니즘: posterior nasal nerve 동결 (점막 분비세포 자체가 아님)\n- **유효율**: TNSS ≥30% 감소 ~71% (메타분석), 효과 12개월까지 지속\n- AR·NAR (vasomotor) 모두 적응\n- 부작용: 시술부 통증 10–40%, 두통 18–20%, 일시적 비강건조·구개감각저하 <5%\n- **환자 상담 문구**: \"약 70%에서 의미있는 호전, 12개월까지 효과 보고됨\"\n\n[TIPS 미르 인상: 성공률 절반·재발 흔하다고 느낌 — 메타분석 평균과 차이. 환자별 selection·기대치 관리 필요]",
+      sources: ["Choi 2024 J Rhinol DOI:10.18787/jr.2024.00015", "Young 2023 Am J Rhinol Allergy DOI:10.1177/19458924231152331"]
+    },
+    "nar-treatment": {
+      content: "### 노인 비알러지 비염 (NAR / Vasomotor) [TIPS — by ENT 교수]\n\n- **리노벤트 nasal spray (Ipratropium bromide 0.03%)** — anticholinergic\n- 표준 용법: 1–2회 분무 BID–TID per nostril\n- **녹내장·BPH 환자**: 충분히 감량 — **이틀에 1회** 정도로 사용\n\n약리: ipratropium은 muscarinic 차단 → glandular hypersecretion 감소. AR보다는 NAR(특히 watery rhinorrhea)에 효과.",
+      sources: []
+    },
     precaution: {
-      content: "- INCS: 비강 건조, 출혈 (올바른 방향 분사 교육 필수 — 비중격 아닌 외측벽 향)\n- Decongestant 비강 스프레이 3-5일 초과 금지 — 약물유발비염(rhinitis medicamentosa)\n- 비충혈제거제 경구: 고혈압·심혈관·녹내장·전립선비대 환자 주의",
+      content: "- INCS: 비강 건조, 출혈 (올바른 방향 분사 교육 필수 — 비중격 아닌 외측벽 향)\n- Decongestant 비강 스프레이 3-5일 초과 금지 — 약물유발비염(rhinitis medicamentosa)\n- 비충혈제거제 경구: 고혈압·심혈관·녹내장·전립선비대 환자 주의\n- 리노벤트(Ipratropium): 녹내장·BPH 주의 — 이틀에 1회로 감량 가능",
       sources: []
     },
     referral: {
-      content: "- INCS+INAH 복합 치료에도 반응 없음 → 알레르기 전문의 (면역요법 고려)\n- 비용종 동반 → 이비인후과\n- 동반 천식 (AR-asthma overlap) → 천식 병행 관리",
+      content: "- INCS+INAH 복합 치료에도 반응 없음 → 알레르기 전문의 (면역요법 고려)\n- 비용종 동반 → 이비인후과\n- 동반 천식 (AR-asthma overlap) → 천식 병행 관리\n- 후각 저하 동반 → CRS·비용종 평가 위해 ENT (난치성 후각 저하 → Dupixent 적응 가능)",
       sources: []
     },
     notes: {
@@ -2317,11 +2331,20 @@ var _allergic_rhinitis_v2 = {
       sources: []
     }
   },
-  uiHooks: null
+  uiHooks: {
+    hint: ["protocol","clinical-pattern","nar-treatment","procedure","referral","contraindication","precaution","pregnancy"],
+    guide: ["classification","indication","exam","protocol","clinical-pattern","procedure","nar-treatment","comparison","monitoring","insurance","notes"],
+    triage: ["differential"],
+    draftAppend: ["draft-append"]
+  }
 };
 KNOWLEDGE_BUNDLE["allergic-rhinitis"] = _allergic_rhinitis_v2;
 KNOWLEDGE_BUNDLE["알레르기비염"] = _allergic_rhinitis_v2;
 KNOWLEDGE_BUNDLE["ARIA"] = _allergic_rhinitis_v2;
+KNOWLEDGE_BUNDLE["비염"] = _allergic_rhinitis_v2;
+KNOWLEDGE_BUNDLE["NAR"] = _allergic_rhinitis_v2;
+KNOWLEDGE_BUNDLE["리노벤트"] = _allergic_rhinitis_v2;
+KNOWLEDGE_BUNDLE["cryotherapy"] = _allergic_rhinitis_v2;
 
 /* meningitis — 세균성·무균성 수막염 (4-26 deep-extract). [CLINICAL] */
 var _meningitis_v2 = {
@@ -3384,3 +3407,93 @@ var _im_2025_v2 = {
 KNOWLEDGE_BUNDLE["internal-medicine-2025-update"] = _im_2025_v2;
 KNOWLEDGE_BUNDLE["cardiology-2025"] = _im_2025_v2;
 KNOWLEDGE_BUNDLE["endocrinology-2025"] = _im_2025_v2;
+
+/* ========== 4-30 ENT bulk ingest (Batch 4 — 비강·축농증) ========== */
+
+/* sinusitis — 부비동염 항생제 ladder + 가이드라인 정렬 (4-30 ENT bulk). [CLINICAL] */
+var _sinusitis_v2 = {
+  kind: "disease",
+  keywords: ["부비동염","축농증","sinusitis","ABRS","acute bacterial rhinosinusitis","rhinosinusitis","만성부비동염","CRS"],
+  primarySources: [
+    "IDSA 2012 ABRS guideline. Chow et al. CID 2012;54:e72",
+    "AAO-HNS 2015 Adult Sinusitis CPG. PMID:25832968",
+    "EPOS 2020 European Position Paper on Rhinosinusitis"
+  ],
+  sections: {
+    protocol: {
+      content: "### 항생제 ladder — 가이드라인 정렬 [CLINICAL]\n| 단계 | 약제 | 비고 |\n|---|---|---|\n| 1차 | **Amoxicillin/clavulanate (목시클)** 5–10일 | IDSA·AAO-HNS·EPOS 1차 |\n| 7일 내 호전 없음 | **High-dose amox/clav** 또는 **Cefditoren (메이액트)** | 다른 베타락탐 step-up |\n| 그래도 실패 | **Levofloxacin / Moxifloxacin** | 퀴놀론 step-up |\n| PCN 알러지 (non-anaphylactic) | **Macrolide** (Clarithromycin / Roxithromycin) 또는 cefditoren | **alternative만**, step-up 약제 아님 |\n\n⚠ Macrolide는 *S. pneumoniae* 내성률 ~30% — IDSA는 경험적 1차 비추천. PCN 알러지·intolerance 시 alternative로만.\n\n### 사용 기간 [TIPS — by ENT 교수]\n- ABRS 표준 5–10일. 호전 없으면 약제 교체.\n- F/U **5–7일 간격** — 호전 무이면 step-up 또는 약제 변경.\n- **누적 1개월(2–3 cycle 합) 후에도 호전 없음** → 항생제 중단 + 대증치료 + ENT 의뢰. 만성 부비동염(CRS)·structural 평가 영역.\n\n### 보조\n- 비강 식염수 세척\n- INS 병용 (점막 부종 감소)",
+      sources: []
+    },
+    exam: {
+      content: "### 영상 — CT 적응증 [TIPS — by ENT 교수]\n- **재발성 부비동염**: CT 적극 권고 (anatomical anomaly·진균성 구분)\n- 항생제 ladder 끝까지 실패 → CT\n- 일회성 ABRS 진단에는 CT 불필요 (임상 진단)",
+      sources: []
+    },
+    referral: {
+      content: "- 누적 1개월 항생제 후에도 증상 지속\n- 재발성 (연 4회 이상)\n- 안와·두개내 합병증 의심 (안구 운동 제한·시력 저하·심한 두통·의식 변화) → **응급**\n- 항진균 의심 (단측 골 침식·면역저하)",
+      sources: []
+    },
+    notes: {
+      content: "한국 외래에서 매크로라이드(특히 Roxithromycin)를 step에 끼워 쓰는 임상 관행 존재 — 가이드라인과 괴리 [TACIT — guideline-vs-practice]. ABRS 90% 이상은 viral → 항생제 없이 자연 호전. 항생제 적응증: 10일 이상 지속 + 악화 + 고열·심한 안면통.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["sinusitis"] = _sinusitis_v2;
+KNOWLEDGE_BUNDLE["부비동염"] = _sinusitis_v2;
+KNOWLEDGE_BUNDLE["축농증"] = _sinusitis_v2;
+KNOWLEDGE_BUNDLE["ABRS"] = _sinusitis_v2;
+KNOWLEDGE_BUNDLE["만성부비동염"] = _sinusitis_v2;
+KNOWLEDGE_BUNDLE["CRS"] = _sinusitis_v2;
+
+/* epistaxis — 코피 응급처치 + 만성 비출혈 (4-30 ENT bulk). [TIPS] */
+var _epistaxis_v2 = {
+  kind: "disease",
+  keywords: ["코피","epistaxis","nosebleed","비출혈","코딱지","비강건조"],
+  primarySources: [],
+  sections: {
+    protocol: {
+      content: "### 가벼운 만성 비출혈·코딱지 [TIPS — by ENT 교수]\n- **Nasalin spray** (식염수 가습) + **리노힐** (창상피복제)\n- 리노힐 대체: **바셀린** (nasal vestibule에 소량 도포)\n- 메커니즘: Kiesselbach plexus 점막 보호 + 가습으로 미세 출혈 예방\n\n### 급성 코피 응급 처치 [TIPS — by ENT 교수]\n| 단계 | 처치 | 시간 |\n|---|---|---|\n| 1단계 | **콧망울(soft cartilaginous portion) 쥐고 고개 숙임** — 떼지 않고 지속 압박 | 10분 |\n| 2단계 | 1단계로 멎지 않으면 **추가 10분** 압박 | +10분 |\n| 3단계 | 그래도 지속 → **응급실 이송** | — |\n\n**응급실 처치**:\n- 1차: 바셀린 거즈 패킹 (anterior nasal packing)\n- 2차: Bipolar electrocautery — ⚠ **Septal perforation 리스크 설명 필수**\n\n**환자 교육 핵심**:\n- 고개를 **뒤로 젖히지 않음** (혈액 후두 흡인 위험) — **앞으로 숙여야** 함\n- 압박 중간에 손 떼지 않음 (응고 진행 차단됨)",
+      sources: []
+    },
+    referral: {
+      content: "- 20분 압박에도 멎지 않음 → ER\n- 반복적·다량 출혈 (Hb 저하 동반)\n- Posterior bleeding 의심 (insertion oral cavity) → ENT 응급\n- 항응고제·항혈소판제 복용자 다량 출혈",
+      sources: []
+    },
+    notes: {
+      content: "응급실은 패킹·cautery까지 가능. 1차 진료에서는 압박 → 미흡 시 즉시 ER 이송이 안전. 만성·반복성 환자는 INS·decongestant 과다 사용 여부 확인 (rhinitis medicamentosa). HHT (유전성 출혈성 모세혈관확장증) 가족력 의심 시 ENT의뢰.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["epistaxis"] = _epistaxis_v2;
+KNOWLEDGE_BUNDLE["코피"] = _epistaxis_v2;
+KNOWLEDGE_BUNDLE["비출혈"] = _epistaxis_v2;
+KNOWLEDGE_BUNDLE["nosebleed"] = _epistaxis_v2;
+
+/* sleep-apnea — 수면무호흡 1차 진찰 (4-30 ENT bulk). [TIPS] */
+var _sleep_apnea_v2 = {
+  kind: "disease",
+  keywords: ["수면무호흡","OSA","sleep apnea","코골이","무호흡","PSG","수면다원검사"],
+  primarySources: [],
+  sections: {
+    exam: {
+      content: "### 1차 진료 진찰 [TIPS — by ENT 교수]\n진단 핵심: 상기도 협착 부위 확인 — **비강 + 인후두 모두**\n\n| 부위 | 가정의학과 진찰 | ENT 추가 |\n|---|---|---|\n| **비강 (부비강 협착)** | 비경 (anterior rhinoscopy) | 내시경 |\n| **구인두** | 설압자 (Mallampati class·tonsil grade) | — |\n| **인후두 (하인두·후두)** | **불가** — 보이지 않음 | **내시경 필수** |\n\n→ 구인두까지는 1차 진료, 인후두는 ENT 의뢰\n\n### 진단 기준\n- **PSG (polysomnography)** = 표준 진단. AHI ≥5 + 증상 또는 AHI ≥15\n- 가정형 simplified test (HSAT) = 보조\n\n### 동반 평가\n- BMI / 목둘레 / Mallampati / Friedman score\n- STOP-BANG questionnaire (선별)\n- 동반: 고혈압·당뇨·심방세동·우울 — 모두 확인",
+      sources: []
+    },
+    referral: {
+      content: "- 코골이 + 주간 졸림 (Epworth ≥10) + 무호흡 목격 → 수면센터·ENT\n- 인후두 협착 의심 → ENT 내시경\n- 소아 OSA 의심 → 소아 ENT (편도·아데노이드)",
+      sources: []
+    },
+    notes: {
+      content: "CPAP은 표준 치료. 적응 어려운 환자에 구강내장치(MAD)·체위 치료. 비만 환자 5–10% 체중 감소만으로 AHI 유의 감소. OSA 미치료 시 심혈관·대사·인지 위험 증가.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["sleep-apnea"] = _sleep_apnea_v2;
+KNOWLEDGE_BUNDLE["수면무호흡"] = _sleep_apnea_v2;
+KNOWLEDGE_BUNDLE["OSA"] = _sleep_apnea_v2;
+KNOWLEDGE_BUNDLE["코골이"] = _sleep_apnea_v2;

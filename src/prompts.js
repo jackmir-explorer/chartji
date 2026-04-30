@@ -101,6 +101,9 @@ JSON만 반환 (다른 텍스트 절대 금지):
   post-mi-deprescribing (MI 기왕력 + LVEF≥50% + BB 유지 이유 검토/REDUCE-AMI 근거/협심증·AF·HTN 적응증 없으면 중단 고려 맥락)
   heart-failure-pocus-ducs (POCUS 폐초음파 B-lines + VEXUS DUCS 점수/ADHF 입원·재입원 예측/이뇨제 반응 모니터링 맥락)
   internal-medicine-2025-update (Ann Intern Med 2026 cardiology·endocrinology update 합본/AF 항응고·MI BB·HCM 신약·GLP-1 NAION·SGLT-2 UTI·피네레논 — 2025 내과 변화 한눈에 보기 맥락)
+  sinusitis (부비동염/축농증/ABRS/CRS/항생제 ladder/목시클·메이액트·levofloxacin/누적 1개월 후 ENT 의뢰 — 급·만성 부비동염 처방 맥락)
+  epistaxis (코피/비출혈/콧망울 압박 10분/Nasalin·리노힐/응급실 패킹·bipolar — 급성 또는 만성 비출혈 맥락)
+  sleep-apnea (수면무호흡/OSA/코골이/PSG/Mallampati·STOP-BANG/CPAP — 수면호흡장애 진찰·진단 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */
