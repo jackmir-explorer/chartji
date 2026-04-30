@@ -109,6 +109,8 @@ JSON만 반환 (다른 텍스트 절대 금지):
   low-freq-hearing-loss (저주파난청/귀먹먹함/이충만감/내이수종/ALHL/메칠론 7일 tapering·U-turn·HCTZ·Storgar — 급성 저주파 감각신경성 난청 처방 맥락)
   meniere (메니에르병/회전성 현훈+변동 청력+이명/U-turn+Dichlozid 유지+보나링 응급/내이수종 그림 시각화 — 메니에르 진단·관리 맥락)
   sudden-hearing-loss (돌발성난청/SSNHL/72시간 이내 ≥30dB SNHL/메칠론 8T#2 7일 tapering/ITS/당뇨 확인 — 응급 의뢰 맥락)
+  vestibular-neuritis (전정신경염/급성 지속성 회전성 현훈+청력 정상/U-turn·보나링/엄지 응시 도리도리 재활 — 전정 평가 후 외래 처방 맥락)
+  otitis-externa (외이도염/귀가려움/swimmer's ear/아드반탄+오큐프록스 1:1 냉장/perforation 시 금기 — 만성 외이도 가려움 처방 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */

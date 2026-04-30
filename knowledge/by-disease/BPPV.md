@@ -30,6 +30,22 @@ Posterior canal 안진 시:
 - 병변 = beating 반대방향
 - 치료: Modified Epley Maneuver (병변 방향에서 시작)
 
+## 추적 (follow-up) [TIPS — by ENT 교수]
+
+### BPPV 치료 후 3일 f/u
+
+| 단계 | 시행 | 판정 |
+|---|---|---|
+| 1 | **Supine roll test** 후 안진 확인 | 안진 없음 → 다음 |
+| 2 | **전정재활 (vestibular rehab) 권고** | side-lying 운동 시작 |
+| 3 | side-lying 운동이 힘듦 | **보나링** 복용 후 재활 |
+| 4 | 2일 이상 이상 없으면 운동 중단 | — |
+
+### 환자 교육
+
+- **어지럽지 않은 쪽으로 자도록** 권유
+- **몸에 진동 주는 행위 금지** (러닝머신·진동기·자동차 험로 등)
+
 ## 감별진단
 
 ## Draft 출력사항 [DRAFT_APPEND]

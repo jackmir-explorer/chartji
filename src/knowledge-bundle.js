@@ -1914,7 +1914,7 @@ var _dizziness_v2 = {
   primarySources: [],
   sections: {
     exam: {
-      content: "### 어지럼증 기본 문진 11항목 [TIPS — 교수님 외래 참관]\n1. 언제부터 어지러웠는지\n2. 갑자기 발생했는지\n3. 과거 비슷한 episode 있었는지\n4. 한번 어지러울 때 얼마나 지속되는지\n5. 괜찮을 땐 완전히 괜찮은지 (삽화성 vs 지속성)\n6. 심한 정도 — 구역/구토 동반 여부, 휘청거림\n7. 귀먹먹함(이충만감) 동반 여부\n8. 이명 동반 여부\n9. 만성이면 한달 발생 빈도\n10. 어떤 상황에서 특히 어지러운지 (자세변화, 기립, 스트레스 등)\n11. 가장 최근 episode는 언제\n\n### 편두통성 어지럼증 추가 문진\n- 편두통 과거력 확인\n- 두통 동반 여부, 빛·소리 과민, 구역/구토, 전조증상, 두통 양상(박동성/지속시간), 가족력, 발작 빈도",
+      content: "### 어지럼증 기본 문진 11항목 [TIPS — 교수님 외래 참관]\n1. 언제부터 어지러웠는지\n2. 갑자기 발생했는지\n3. 과거 비슷한 episode 있었는지\n4. 한번 어지러울 때 얼마나 지속되는지\n5. 괜찮을 땐 완전히 괜찮은지 (삽화성 vs 지속성)\n6. 심한 정도 — 구역/구토 동반 여부, 휘청거림\n7. 귀먹먹함(이충만감) 동반 여부\n8. 이명 동반 여부\n9. 만성이면 한달 발생 빈도\n10. 어떤 상황에서 특히 어지러운지 (자세변화, 기립, 스트레스 등)\n11. 가장 최근 episode는 언제\n\n### 편두통성 어지럼증 추가 문진\n- 편두통 과거력 확인\n- 두통 동반 여부, 빛·소리 과민, 구역/구토, 전조증상, 두통 양상(박동성/지속시간), 가족력, 발작 빈도\n\n### 환자가 '어지럽다'고 할 때 [TIPS — by ENT 교수]\n- '어지럽냐'고 물으면 다 어지럽다고 함 → **구체화 질문** 필수\n- **'걸을 때 비틀거리거나 중심을 못 잡은 적 있는지'** — 진짜 vertigo·ataxia 감별의 시작점\n\n### 어지럼증 초진 검사 표준 [TIPS — by ENT 교수]\n| 항목 | 확인 |\n|---|---|\n| 구토 여부 | 동반 여부·빈도 |\n| 일상생활 지장 정도 | 침상안정·휘청거림 정도 |\n| **Head Impulse Test (HIT)** | 말초 vs 중추 감별 (catch-up saccade 유무) |\n| **Tandem gait** | 소뇌·후순환 의심 시 |\n| 난청·이명·귀 먹먹함 | 메니에르·내이수종 감별 |\n| **고막 시진** | 외이염·중이염·천공 |\n\nHIT abnormal + skew deviation 없음·nystagmus 단방향 = **HINTS 양성 → 말초성**\nHIT normal + skew deviation 있음·nystagmus 변화 = **HINTS 음성 → 중추성 의심 (소뇌 경색)**\n\n### 귀에 물약 → 일시적 어지럼 [TIPS — by ENT 교수]\n- 귀에 물약을 넣었을 때 어지러울 수 있음\n- 원인: 물약이 차가움 → 외이도 내 온도 자극 → caloric stimulation\n- 환자 교육: **물약을 손에 잠시 쥐어 체온 정도로 데워서** 점안",
       sources: ["[TIPS — 교수님 외래 참관]"]
     },
     differential: {
@@ -3696,3 +3696,108 @@ var _sudden_hl_v2 = {
 KNOWLEDGE_BUNDLE["sudden-hearing-loss"] = _sudden_hl_v2;
 KNOWLEDGE_BUNDLE["돌발성난청"] = _sudden_hl_v2;
 KNOWLEDGE_BUNDLE["SSNHL"] = _sudden_hl_v2;
+
+/* ========== 4-30 ENT bulk ingest (Batch 6 — 어지럼·BPPV·외이도염) ========== */
+
+/* BPPV — v1 → v2 마이그레이션 + 3일 f/u 보강 (4-30 ENT bulk). [TIPS] */
+var _bppv_v2 = {
+  kind: "disease",
+  parents: ["dizziness"],
+  keywords: ["BPPV","이석증","양성돌발성체위성현훈","체위성현훈"],
+  primarySources: [],
+  sections: {
+    exam: {
+      content: "BPPV 진단:\n- **1단계 Supine Head Roll Test** — Horizontal canal 안진 확인\n- **2단계 Dix-Hallpike** — 안진 없으면 시행, Posterior canal 안진 확인",
+      sources: []
+    },
+    protocol: {
+      content: "### 이석정복술\n**Horizontal canal 안진**:\n- Geotropic(바닥 beating) → 병변 = 안진이 강하게 발생하는 쪽\n- Apogeotropic(천장 beating) → 병변 = 안진이 약하게 발생하는 쪽\n- 치료: **Barbeque Roll** (병변 반대방향으로 360도 회전)\n\n**Posterior canal 안진**:\n- 병변 = beating 반대방향\n- 치료: **Modified Epley Maneuver** (병변 방향에서 시작)\n\n### 약물치료 [TIPS — by ENT 교수]\n- 약물은 이석정복술에 비해 효과 제한적\n- 증상이 매우 심할 때 PRN으로 **보나링(meclizine)** po 처방 가능\n- 반드시 안내: '너무 심할 때만 복용, 졸릴 수 있음'",
+      sources: []
+    },
+    "follow-up-schedule": {
+      content: "### BPPV 치료 후 3일 f/u [TIPS — by ENT 교수]\n| 단계 | 시행 | 판정 |\n|---|---|---|\n| 1 | **Supine roll test** 후 안진 확인 | 안진 없음 → 다음 |\n| 2 | **전정재활** 권고 | side-lying 운동 시작 |\n| 3 | side-lying 운동이 힘듦 | **보나링** 복용 후 재활 |\n| 4 | 2일 이상 이상 없으면 운동 중단 | — |\n\n### 환자 교육\n- **어지럽지 않은 쪽으로 자도록** 권유\n- **몸에 진동 주는 행위 금지** (러닝머신·진동기·자동차 험로 등)",
+      sources: []
+    }
+  },
+  uiHooks: {
+    hint: ["protocol","follow-up-schedule","referral","contraindication","precaution","pregnancy"],
+    guide: ["classification","indication","exam","protocol","follow-up-schedule","comparison","monitoring","insurance","notes"],
+    triage: ["differential"],
+    draftAppend: ["draft-append"]
+  }
+};
+KNOWLEDGE_BUNDLE["BPPV"] = _bppv_v2;
+KNOWLEDGE_BUNDLE["이석증"] = _bppv_v2;
+KNOWLEDGE_BUNDLE["양성돌발성체위성현훈"] = _bppv_v2;
+KNOWLEDGE_BUNDLE["체위성현훈"] = _bppv_v2;
+
+/* vestibular-neuritis — 전정신경염 (4-30 ENT bulk). [TIPS] */
+var _vestibular_neuritis_v2 = {
+  kind: "disease",
+  parents: ["dizziness"],
+  keywords: ["전정신경염","vestibular neuritis","전정장애","급성 전정장애","U-turn","보나링","전정재활"],
+  primarySources: [],
+  sections: {
+    definition: {
+      content: "전정신경 (CN VIII vestibular branch)의 바이러스성 (또는 후바이러스성) 염증. **급성 지속성 회전성 현훈** + 청력 저하/이명 없음. 며칠~수주에 걸쳐 호전.",
+      sources: []
+    },
+    exam: {
+      content: "### 임상 양상\n- 갑작스러운 회전성 현훈 — 수일 지속\n- 오심·구토·보행 장애\n- **청력 저하·이명 없음** (있으면 미로염·메니에르·SSNHL 감별)\n- 자발 안진 — horizontal/torsional, 빠른 상은 정상 측\n\n### 진단 검사\n- **HIT (Head Impulse Test) — abnormal** (catch-up saccade 양성)\n- HINTS — 말초성 패턴\n- Tandem gait — 가능 (중추성이면 곤란)\n\n중추성(소뇌 경색) 감별이 핵심. HINTS 음성 또는 다른 신경학적 이상 → 즉시 뇌영상.",
+      sources: []
+    },
+    protocol: {
+      content: "### 경험적 약물 [TIPS — by ENT 교수]\n- **U-turn (Betahistine)** 1T TID\n- **보나링 (Meclizine)** — 진토·진정 (PRN, 단기 사용)\n\n단기 vestibular suppressant는 회복 기간이 길어질 수 있어 **3–5일 이내**가 원칙.\n\n### 스테로이드 (조건부)\n- 일부 가이드라인 — 발병 3일 이내 prednisolone 시작 (효과 논쟁)\n- 미르 routine은 외래 일상 처방 아님",
+      sources: []
+    },
+    lifestyle: {
+      content: "### 전정재활 (rehabilitation) [TIPS — by ENT 교수]\n빠른 회복의 핵심 — 약물보다 재활 운동이 중심.\n\n**기본 운동 (외래에서 환자에게 가르침)**:\n- **엄지손가락을 응시하며 고개를 천천히 도리도리 30도 정도 젓기**\n  - 1회 1–2분, 하루 3–5회\n  - 응시 안정화 + 전정 보상 자극\n- 보행 시 머리 회전·고개 끄덕임 운동\n- 진행 단계: 침상 → 좌위 → 입위 → 보행 → 고개 회전",
+      sources: []
+    },
+    referral: {
+      content: "- HINTS 음성·중추성 의심 → **즉시 뇌영상·신경과**\n- 청력 저하·이명 동반 → 미로염 의심 → ENT\n- 1주 이상 호전 없음 → ENT\n- 반복 발작 → 메니에르 또는 vestibular migraine 감별 → 신경이과",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["vestibular-neuritis"] = _vestibular_neuritis_v2;
+KNOWLEDGE_BUNDLE["전정신경염"] = _vestibular_neuritis_v2;
+KNOWLEDGE_BUNDLE["전정장애"] = _vestibular_neuritis_v2;
+
+/* otitis-externa — 외이도염 + 미르 가려움 처방 (4-30 ENT bulk). [TIPS] */
+var _otitis_externa_v2 = {
+  kind: "disease",
+  keywords: ["외이도염","otitis externa","swimmer's ear","귀가려움","외이도 가려움","Advantan","오큐프록스","ofloxacin"],
+  primarySources: [],
+  sections: {
+    definition: {
+      content: "외이도(external auditory canal) 점막·피부의 염증. 급성·만성·진균성 구분. 한국 외래에서 가려움 호소가 흔함.",
+      sources: []
+    },
+    exam: {
+      content: "### 임상 양상\n- 가려움 (가장 흔함, 만성)\n- 통증 (급성·세균성)\n- 분비물·딱지·청력 저하 (외이도 폐쇄)\n- Tragus 압통·tugging 통증\n\n### 감별\n- 진균성 (Otomycosis): 검은·흰 점·실 모양 분비물 — 청소 + clotrimazole 점이\n- 세균성 (보통 *Pseudomonas*, *S. aureus*): 강한 통증·분비물\n- 만성 가려움 (eczematous, atopic): 가려움 단독, 분비물 적음",
+      sources: []
+    },
+    protocol: {
+      content: "### 표준 치료 [CLINICAL]\n- Topical antibiotic + steroid otic drop: **ciprofloxacin/dexamethasone (Ciprodex)**, ofloxacin otic\n- 외이도 청소·debris 제거\n- 통증 관리 (NSAID·acetaminophen)\n\n### 가려움 호소 환자 — 미르 임상 처방 (off-label) [TIPS — by ENT 교수, researcher 4-30 보강]\n| 항목 | 내용 |\n|---|---|\n| 약제 | **아드반탄 연고** (methylprednisolone aceponate) + **오큐프록스 안연고** (ofloxacin 0.3%) |\n| 비율 | **1:1 혼합** |\n| 사용량 | **쌀알 크기**, 외이도 입구 도포 |\n| 보관 | **냉장 보관** — 시원한 감각이 가려움 완화 |\n\n오큐**프록스** = ofloxacin 안연고 (한국 brand명). 미르 raw '오큐플렉스'는 오기.",
+      sources: []
+    },
+    precaution: {
+      content: "⚠ **Tympanic membrane perforation 또는 tympanostomy tube 의심 시 사용 금지**\n- Ofloxacin은 fluoroquinolone 중 ototoxicity 가장 낮은 편이나, 혼합 vehicle 미검증\n- 천공 의심 → 안전한 ofloxacin otic 단독 또는 ENT 의뢰\n\n오큐프록스는 **안과용 ofloxacin** — 외이도 사용은 off-label.\n\nAminoglycoside (neomycin·gentamicin) 함유 점이제는 천공 시 **ototoxicity 위험** → 이번 처방은 ofloxacin이라 상대적으로 안전.",
+      sources: []
+    },
+    notes: {
+      content: "한국 외래에서 가려움만 호소하는 만성 외이도염 환자에게 미르 routine 효과적 (냉장 보관 + 시원한 감각 = 가려움 완화 메커니즘). 진균성 의심 시 (검은·흰 분비물) → 별 처방 (clotrimazole 1% 점이) 또는 ENT 의뢰. **당뇨·면역저하 환자 외이도염 → 악성 외이도염(necrotizing OE) 의심 → ENT 응급**.",
+      sources: []
+    },
+    referral: {
+      content: "- 1–2주 치료 무반응\n- 강한 통증·발열·림프절 부음 → 세균성 심한 형 또는 supraurricular 합병증\n- 천공 의심·진단 → ENT\n- 당뇨·면역저하 + 심한 외이도염 → ENT 응급 (necrotizing OE)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["otitis-externa"] = _otitis_externa_v2;
+KNOWLEDGE_BUNDLE["외이도염"] = _otitis_externa_v2;
+KNOWLEDGE_BUNDLE["귀가려움"] = _otitis_externa_v2;
