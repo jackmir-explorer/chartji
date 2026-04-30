@@ -1830,19 +1830,32 @@ var KNOWLEDGE_BUNDLE = {
    2026-04-22 L1 B1-patch: treatment → protocol (vocabulary 정합) */
 var _LPR_v2 = {
   kind: "disease",
-  keywords: ["LPR","후두염","인후두역류","laryngopharyngeal reflux","역류성후두염"],
+  keywords: ["LPR","laryngopharyngeal reflux","역류성후두염","인후두역류","목 열감","목 화끈거림","P-CAB","자큐보"],
   primarySources: [],
   sections: {
+    exam: {
+      content: "### 환자 표현 — '목 열감' + 기침 [TIPS — by ENT 교수]\n'목에 열감이 있으면서 기침이 나와요'라고 호소하는 환자에서 **'열감'은 진짜 발열이 아니라 타는 듯한 느낌, 화끈거림의 표현**.\n→ **LPR / GERD 의심** — 인후 burning sensation은 LPS 핵심 증상.\n\n### 동반 증상 점검\n- 식도 증상 (속쓰림·역류감) 동반 여부 — 진단 알고리즘 분기점\n- 인후이물감·잦은 헛기침·잠긴 목소리·점액 과다",
+      sources: []
+    },
     protocol: {
-      content: "PPI (1차 치료, 근거 확립)\n뮤테란(아세틸시스테인 경구) 병용 — LPR 인후 분비물·점액 거담 목적 (off-label)\nPPI 부작용 시:\n① 알긴산(Gaviscon류) — raft 형성, 역류 물리적 차단\n② Promac(polaprezinc) — 위점막 보호제. 알긴산과 병용 가능",
-      sources: ["[TIPS — by ENT교수]"]
+      content: "### 1차 — PPI + 뮤테란 [CLINICAL + TIPS]\n- PPI 표준용량 BID — LPR 1차 치료 (근거 확립)\n- 뮤테란(아세틸시스테인 200mg 경구) 병용 — LPR 인후 분비물·점액 거담 [TIPS — by ENT교수, off-label]\n\n### PPI 부작용 시 대안 [TIPS — by ENT 교수]\n- **알긴산(Alginic acid, Gaviscon류)** — raft 형성, 역류 물리적 차단\n- **Promac(polaprezinc)** — 위점막 보호제. 알긴산과 병용 가능",
+      sources: []
+    },
+    "follow-up-schedule": {
+      content: "### LPR f/u 간격 [TIPS — by ENT 교수]\n- LPR 진단 환자는 **30일 간격으로 약을 주면서 증상 호전될 때까지 지켜본다**\n- 첫 3개월은 PPI 표준 BID 유지, 호전 시 단계적 감량 (de-escalation)",
+      sources: []
     }
   },
-  uiHooks: null
+  uiHooks: {
+    hint: ["protocol","follow-up-schedule","referral","contraindication","precaution","pregnancy"],
+    guide: ["classification","indication","exam","protocol","follow-up-schedule","comparison","monitoring","insurance","notes"],
+    triage: ["differential"],
+    draftAppend: ["draft-append"]
+  }
 };
 KNOWLEDGE_BUNDLE["LPR"] = _LPR_v2;
-KNOWLEDGE_BUNDLE["후두염"] = _LPR_v2;
 KNOWLEDGE_BUNDLE["인후두역류"] = _LPR_v2;
+KNOWLEDGE_BUNDLE["역류성후두염"] = _LPR_v2;
 
 /* v2 승격 — 2026-04-22 L1 B1 — 원본: knowledge/by-disease/dry-mouth.md
    원본 md 라벨:
@@ -3801,3 +3814,112 @@ var _otitis_externa_v2 = {
 KNOWLEDGE_BUNDLE["otitis-externa"] = _otitis_externa_v2;
 KNOWLEDGE_BUNDLE["외이도염"] = _otitis_externa_v2;
 KNOWLEDGE_BUNDLE["귀가려움"] = _otitis_externa_v2;
+
+/* ========== 4-30 ENT bulk ingest (Batch 3 — 후두·LPR) ========== */
+
+/* dysphonia v2 — 사레들림 문진·노화 성대·성대마비 CT·red flag 보강 (4-30 ENT bulk) */
+var _dysphonia_v2_full = {
+  kind: "disease",
+  keywords: ["dysphonia","쉰목소리","hoarseness","목소리이상","발성장애","음성장애","vocal palsy","성대마비","presbyphonia","노화성대"],
+  primarySources: [
+    "Alves M et al. J Voice 2019 PMID:29122414 (SR)",
+    "Barsties v. Latoszek et al. Laryngoscope 2024 PMID:37366280 (meta-analysis)"
+  ],
+  sections: {
+    exam: {
+      content: "### 후두 의심 시 — 사레들림 문진 [TIPS — by ENT 교수]\n쉰 목소리·목에 걸리는 느낌·낮은 목소리·목소리 변화 호소 시:\n- **사레들리는지 묻는다** → 양성 시 **vocal palsy 등 의심** → ENT 의뢰\n\n흡인(aspiration) 신호는 후두·뇌신경(CN X) 평가의 결정적 단서.\n\n### Red flag — 호흡곤란 동반 [TIPS — by ENT 교수]\n- **목소리 변화 + 호흡곤란 동반** → **응급실로 즉시 이송**\n- 상기도 폐쇄(상부기도 종양·후두 부종·acute epiglottitis) 가능성\n\n### 노화 성대 (presbyphonia) [TIPS — by ENT 교수]\n- 성대도 근육이라 **나이 들면 근육이 빠지면서 성대도 날씬해져 목이 쉴 수 있다**\n- 자연 노화 — 안심 시키되 vocal palsy·종양 배제 후 진단\n\n### 성대 마비 — 원인 유무에 따른 CT 적응증 [TIPS — by ENT 교수]\n| 분류 | 경과 | CT 필요 |\n|---|---|---|\n| **원인 없는 성대 마비** | 갑자기 이유 없이 좋아질 수 있음 | 즉시 CT 불필요 |\n| **원인 있는 성대 마비** | 종양 관련성 큼 | **CT 적응증** — 목 + 폐 (폐는 LDCT) |\n\nRecurrent laryngeal nerve가 thoracic 경유 (특히 좌측은 aortic arch 지나서 폐·종격 압박 가능). **폐암 first manifestation**이 vocal palsy일 수 있음.",
+      sources: []
+    },
+    protocol: {
+      content: "### 생활습관 개선 [CLINICAL — 조건부, by ENT교수]\n\n**수분 섭취**\n- 하루 1~1.5L 물 섭취 권고\n- 성대 점막 수분 유지 → 진동 효율 개선, 염증 완화\n- ※ 1~1.5L 특정 용량 RCT 없음, 전문가 컨센서스\n\n**목 앞 근육 마사지 (Laryngeal Manual Therapy)**\n- 목 앞 세로 근육(strap muscle)을 꼬집듯 마사지\n- 대상: Muscle Tension Dysphonia (MTD)\n- ※ MTD에서 효과 확립. 일반 기질성 병변에는 적응증 아님",
+      sources: ["Alves 2019 PMID:29122414","Barsties 2024 PMID:37366280"]
+    },
+    referral: {
+      content: "- 호흡곤란 동반 → ER (상기도 폐쇄 의심)\n- 사레들림 양성 (vocal palsy 의심) → ENT\n- 원인 있는 성대 마비 (CT 양성) → 흉부외과·종양내과\n- 3주 이상 지속되는 쉰 목소리 → ENT (성대 polyp·종양 배제)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["dysphonia"] = _dysphonia_v2_full;
+KNOWLEDGE_BUNDLE["쉰목소리"] = _dysphonia_v2_full;
+KNOWLEDGE_BUNDLE["hoarseness"] = _dysphonia_v2_full;
+KNOWLEDGE_BUNDLE["목소리이상"] = _dysphonia_v2_full;
+KNOWLEDGE_BUNDLE["발성장애"] = _dysphonia_v2_full;
+KNOWLEDGE_BUNDLE["음성장애"] = _dysphonia_v2_full;
+KNOWLEDGE_BUNDLE["vocal-palsy"] = _dysphonia_v2_full;
+KNOWLEDGE_BUNDLE["성대마비"] = _dysphonia_v2_full;
+KNOWLEDGE_BUNDLE["presbyphonia"] = _dysphonia_v2_full;
+
+/* laryngitis — 후두염 + 미르 routine (4-30 ENT bulk). [TIPS] */
+var _laryngitis_v2 = {
+  kind: "disease",
+  keywords: ["후두염","laryngitis","인후두염","자큐보","소론도","뮤테란","voice rest","P-CAB"],
+  primarySources: [],
+  sections: {
+    definition: {
+      content: "후두 점막의 염증. 급성(주로 바이러스성)·만성·급성 악화 구분. 한국 외래에서 쉰 목소리·인후통 호소가 흔함.",
+      sources: []
+    },
+    exam: {
+      content: "- 쉰 목소리·인후통·기침\n- 발열 동반 여부 (감염성)\n- 음성 남용력 (말 많이·노래·소리 지름)\n- 흡연·음주\n- 위식도 역류 동반 (LPR — `LPR.md` 참조)\n\n### Red flag\n- **목소리 변화 + 호흡곤란** → 응급 (epiglottitis·상기도 폐쇄)\n- **3주 이상 지속되는 쉰목소리** → ENT (성대 polyp·종양·vocal palsy 배제)",
+      sources: []
+    },
+    protocol: {
+      content: "### 가벼운 후두염\n- **Voice rest** — 가장 중요\n- 충분한 수분 섭취\n- NSAID 인후통 관리\n- 흡연 중단·자극 회피\n\n### 심한 후두염 — 미르 routine [TIPS — by ENT 교수]\n| 약제 | 용량 | 역할 |\n|---|---|---|\n| **소론도 (Prednisolone)** | 2T#2 | 단기 스테로이드 — 후두 부종 감소 |\n| **자큐보 (Zaqubo)** | 1T qd | P-CAB — LPR 동반 시 |\n| **뮤테란 (Acetylcysteine 200mg)** | 3T#3 | 거담·점액 배출 |\n\n**처방 기간**: 보통 5–7일, 호전 시 단계적 감량\n\n**적응** — 위 처방 고려 시점:\n- 음성 사용 직업 (교사·강사·가수)\n- 심한 부종으로 발성 곤란\n- LPR 동반 (목 열감·기침)\n- 단순 voice rest로 호전 안 되는 경우",
+      sources: []
+    },
+    precaution: {
+      content: "**소론도 — 당뇨·녹내장·황반변성 환자 처방 전 확인** [TIPS — by ENT 교수]\n- DM: 혈당 모니터링·환자 교육\n- 황반변성: 다른 옵션 우선 고려\n- 위궤양·소화기 출혈 과거력\n- 정신질환 (BPSD·우울 악화 가능)",
+      sources: []
+    },
+    referral: {
+      content: "- 3주 이상 지속 → ENT (간접후두경·내시경)\n- 호흡곤란 동반 → ER\n- 흡인 의심 (사레들림) → ENT (vocal palsy 평가)\n- 흡연자·음성 사용 직업·중년 이상 + 만성 → ENT (악성 배제)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["laryngitis"] = _laryngitis_v2;
+KNOWLEDGE_BUNDLE["후두염"] = _laryngitis_v2;
+KNOWLEDGE_BUNDLE["인후두염"] = _laryngitis_v2;
+
+/* eagle-syndrome — Eagle syndrome (4-30 ENT bulk, researcher 검증 HIGH). [CLINICAL] */
+var _eagle_syndrome_v2 = {
+  kind: "disease",
+  keywords: ["Eagle syndrome","stylohyoid syndrome","elongated styloid process","편도 안쪽 통증","styloidectomy"],
+  primarySources: [
+    "Baba et al. Clin Case Rep 2017. DOI:10.1002/ccr3.806",
+    "Nogueira-Reis et al. Clin Oral Investig 2021. DOI:10.1007/s00784-021-04285-w (prevalence meta-analysis)"
+  ],
+  sections: {
+    definition: {
+      content: "**Elongated styloid process (>30 mm)** 또는 **calcified stylohyoid ligament**가 인근 신경·혈관 구조를 압박하여 인후·안면·이부 통증을 유발하는 증후군. 일반 인구에서 elongation은 ~30%에서 관찰되나 **대부분 무증상** — 영상만으로 진단 불가.",
+      sources: []
+    },
+    exam: {
+      content: "### 임상 단서\n- **편도 바로 안쪽(tonsillar fossa) 통증**\n- 인후이물감·삼킴 시 통증\n- 귀·얼굴로 referral pain (CN V·IX 분포)\n- **삼차신경통과 유사** → 정체불명 통증으로 **진단 지연 흔함**\n- 만성·일측성\n\n### 진단 핵심 — Tonsillar fossa palpation\n**손가락으로 tonsillar fossa 촉진 시 통증 재현 + 귀·얼굴로 referral**이 임상 진단 핵심.\n- 영상 단독 부족 — 일반인 30%에서 elongation 관찰\n- 임상소견(촉진 + 증상 양상) + 영상 결합 필수\n\n### 영상\n- **CT 3D recon** — styloid 길이·calcification 평가, 진단 표준\n- 일반 X-ray로도 elongation 확인 가능하나 정밀도 낮음",
+      sources: []
+    },
+    differential: {
+      content: "- **삼차신경통 (Trigeminal neuralgia)** — 짧은 발작성, 안면 trigger zone\n- **만성 인두염 / LPR** — 인후 burning, 양측 흔함\n- **TMJ disorder** — 턱 관절 기원, 저작 시 악화\n- **편도결석 / 만성 편도염** — 백색 분비물·악취\n- **악성 종양 (oropharyngeal cancer)** — 흡연·음주 위험인자, 체중 감소",
+      sources: []
+    },
+    protocol: {
+      content: "### 1차 — 보존적\n- NSAID·근이완제·항우울제 (저용량 TCA·SNRI) 신경병증성 통증 약물\n- 가바펜틴/프레가발린 (신경병증성 통증)\n\n### 외과적\n- **Styloidectomy** (transoral 또는 transcervical)\n- 성공률 84–97%이나 **일부 잔존 통증 가능** (~12.5%)\n- ENT/oromaxillofacial 영역",
+      sources: []
+    },
+    referral: {
+      content: "- **만성 일측 인후통/이통 + tonsillar fossa 압통 재현** → ENT 의뢰 + CT 3D recon\n- 삼차신경통·만성 안면통 진단 후에도 호전 없음 → Eagle syndrome 재평가\n- 외과 평가 필요 → ENT 또는 구강악안면외과",
+      sources: []
+    },
+    notes: {
+      content: "가정의학과 1차 진료의 핵심: **Eagle syndrome 가능성 고려 → tonsillar fossa palpation → 양성 시 ENT 의뢰**. 진단 지연 흔하므로 **만성 정체불명 인후·이부 통증 환자는 한 번씩 의심**. 수술 후에도 잔존 가능 — 환자 기대치 관리 (수술 = 완치 보장 아님).",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["eagle-syndrome"] = _eagle_syndrome_v2;
+KNOWLEDGE_BUNDLE["Eagle syndrome"] = _eagle_syndrome_v2;
+KNOWLEDGE_BUNDLE["stylohyoid-syndrome"] = _eagle_syndrome_v2;

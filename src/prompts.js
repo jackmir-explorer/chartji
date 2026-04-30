@@ -111,6 +111,8 @@ JSON만 반환 (다른 텍스트 절대 금지):
   sudden-hearing-loss (돌발성난청/SSNHL/72시간 이내 ≥30dB SNHL/메칠론 8T#2 7일 tapering/ITS/당뇨 확인 — 응급 의뢰 맥락)
   vestibular-neuritis (전정신경염/급성 지속성 회전성 현훈+청력 정상/U-turn·보나링/엄지 응시 도리도리 재활 — 전정 평가 후 외래 처방 맥락)
   otitis-externa (외이도염/귀가려움/swimmer's ear/아드반탄+오큐프록스 1:1 냉장/perforation 시 금기 — 만성 외이도 가려움 처방 맥락)
+  laryngitis (후두염/소론도+자큐보+뮤테란/voice rest/3주 이상 → ENT — 음성 사용 직업·심한 후두염 처방 맥락)
+  eagle-syndrome (Eagle syndrome/편도 안쪽 통증/tonsillar fossa palpation/elongated styloid >30mm/CT 3D — 만성 정체불명 인후·이부 통증 감별 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */
