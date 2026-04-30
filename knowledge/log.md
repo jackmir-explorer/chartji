@@ -8,6 +8,19 @@
 2026-04-29 | guidelines/asthma-reflux-comorbidity.md | 신규 — 천식+역류 동반이환: 조절불량 천식 + 위·식도/인후두 증상 시 PPI·알긴산 empiric trial. 무증상 일률 처방 미권고 (Chan WW 2011 메타분석 PEF 소폭 외 효과 없음). GINA 2025·AGA 2023(PMID:37061897)·San Diego 2025(PMID:40197644)·Chan 2011(PMID:21482834) 통합. [CLINICAL — 조건부] [TIPS — by ENT교수, Researcher 검증]
 2026-04-29 | knowledge-bundle.js | 백로그 bundle 반영 batch — 누적 미반영 deep-extract 산출물(4-24·4-26·4-27·4-28) + asthma-reflux 신규 = 신규 20개 + 보완 2개 (heart-failure-volume-overload·obesity-pharmacotherapy-grade) v2 alias 패턴. TRIAGE calcCategories 16개 신규 추가.
 2026-04-28 | by-disease/covid-outpatient-antivirals.md | 신규 — COVID-19 외래 항바이러스 4종 비교(Simnotrelvir high CoE –35.8h / Molnupiravir moderate CoE 회복+Long COVID 8.5% vs 11.0% / Paxlovid low CoE / Ensitrelvir 효과 불충분) [CLINICAL] PMID:41662710 (Ann Intern Med 2026)
+2026-04-30 | by-disease/ibs.md | 신규 — IBS 유병률 4~10%, Rome IV 양성진단, 아형별 처방(IBS-C: linaclotide / IBS-D: loperamide·rifaximin / 통증: TCA), 저FODMAP 식이 [CLINICAL] PMID:40789179 (Ann Intern Med 2025) — 과거 누락 복구
+2026-04-30 | by-disease/functional-dyspepsia.md | 신규 — 기능성 소화불량 PPI 1차+저용량 TCA 신경조절제 병합, IBS·GERD 중복 고려, Th2 점막 미세염증 subgroup [CLINICAL] PMID:41499733 (NEJM 2026) — 과거 누락 복구
+2026-04-30 | by-disease/frailty.md | 신규 — 허약 연간 자연 회복률 7.1%, 회복 핵심 인자: 비계획입원 회피·다약제 감소·낙상 방지, 65세+ 147만명 코호트 [CLINICAL] PMID:40295111 (Fam Med Community Health 2025) — 과거 누락 복구
+2026-04-30 | by-disease/heart-failure.md | 추가 — POCUS DUCS(폐초음파+VEXUS) 복합점수: 입원사망 AUC 0.76, 30일 사망·재입원 AUC 0.77 [CLINICAL — 조건부] PMID:41863026 (J Ultrasound Med 2026)
+2026-04-30 | by-disease/heart-failure.md | 추가 — 심장내과 2025 업데이트: AF 항응고 재평가·MI 후 BB 일률처방 재고·HCM 신약 [CLINICAL] PMID:41974015 (Ann Intern Med 2026)
+2026-04-30 | by-disease/diabetic-peripheral-neuropathy.md | 신규 — DPN 실제 처방 패턴: 가바펜틴 59% 1차, 75% 12개월 내 중단, 권장용량 미달 79~91%, 충분한 용량·기간 시도 원칙 [INSIGHTS+CLINICAL] PMID:42015888 (Pain Med 2026)
+2026-04-30 | by-disease/palliative-pain.md | 신규 — 완화의료 부프레노르핀 체계적 고찰: 43개 연구(RCT 15건), 완전 오피오이드 작용제와 동등 진통, 경피패치 연하곤란 환자 유리 [CLINICAL] PMID:41475688 (J Pain Symptom Manage 2025)
+2026-04-30 | by-disease/home-based-hypertension.md | 신규 — 재택 CHW+원격간호 모델 NEJM RCT: SBP -7.9~-9.1 mmHg, 혈압조절률 32.5%→57~61% (6개월) [CLINICAL] PMID:40888742 (NEJM 2025)
+2026-04-30 | by-drug/glp1-selection-strategy.md | 추가 — GLP-1RA NAION 부작용 신호(시야변화 모니터링 교육 추가) + GLP-1 vs SGLT-2 비뇨생식기 감염 비교 [CLINICAL — 조건부] PMID:41974004 (Ann Intern Med 2026)
+2026-04-30 | by-drug/sglt2-inhibitors.md | 추가 — SGLT-2i vs GLP-1RA 비뇨생식기 감염 위험 비교: SGLT-2i 위험 높음, 반복성 UTI 환자에서 GLP-1 우선 고려 [CLINICAL] PMID:41974004 (Ann Intern Med 2026)
+2026-04-30 | by-disease/CKD.md | 추가 — 피네레논(Finerenone) T2DM+CKD 신보호 추가 근거, SGLT-2i+피네레논 병합 전략 가능성 [CLINICAL] PMID:41974004 (Ann Intern Med 2026)
+2026-04-30 | by-disease/post-mi-deprescribing.md | 추가 — Ann Intern Med 2026 심장내과 업데이트에서도 MI 후 BB 일률 처방 재고 방향 재확인 [CLINICAL] PMID:41974015 (Ann Intern Med 2026)
+2026-04-30 | by-disease/prescribing-cascade.md | 신규 — 처방 연쇄 우산 고찰 84가지 ADR, 항우울제·AChEI·항정신병약·항고혈압제·스타틴 주요 유발 약물, PSSA 방법론 [CLINICAL] PMID:41949780 (Drugs Aging 2026)
 2026-04-28 | by-drug/glp1-selection-strategy.md | 보완 — 당뇨전단계 T2DM 예방 [CLINICAL] 섹션: Tirzepatide T2DM 발생 90% 감소(HR 0.07) / Semaglutide 정상혈당 84% 회복 / SELECT CV HR 0.80(전당뇨 포함) [CLINICAL] PMID:41565568 (Prim Care Diabetes 2026)
 2026-04-28 | by-disease/heart-failure.md | 보완 — HFpEF+비만 체중감량 전략 섹션 추가: GLP-1 계열 운동능력·증상·삶의질 RCT 확인, 비만 클수록 이익↑, 체중감량=HFpEF 최우선 치료 [CLINICAL] PMID:41802118 (Curr Opin Cardiol 2026)
 2026-04-28 | by-disease/MASH.md | 신규 — MASLD/MASH 지방간염: Tirzepatide·Semaglutide·비만수술 MASH 해소 우월 / TBWL%=핵심 매개변수 / FIB-4 선별·의뢰 기준 [CLINICAL] PMID:41804193 (Diabetes Obes Metab 2026)

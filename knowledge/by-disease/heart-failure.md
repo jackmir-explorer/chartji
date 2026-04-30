@@ -348,6 +348,55 @@ relations: []
 
 ---
 
+## POCUS DUCS — 급성 심부전 예후 예측 복합 점수 [CLINICAL — 조건부]
+
+> [출처: Scherer HC et al. J Ultrasound Med. 2026. PMID:41863026, DOI:10.1002/jum.70229]
+> 단일 기관, n=109, LVEF<50%, CICU 입원 — [초록 기반 — 전문 미확인]
+
+**DUCS (Dynamic Ultrasound Congestion Score)**: 폐 초음파(B-lines 수정) + VEXUS(정맥 울혈 초음파) 복합 점수.
+
+| DUCS 지표 | 예측 대상 | AUC |
+|---|---|---|
+| ΔDUCS (입원→72시간 변화) | 입원 중 사망 | **0.76** |
+| DUCS (CICU 퇴원 시) | 30일 사망·재입원 | **0.77** |
+
+**임상 포인트:**
+- 폐 초음파 B-lines 단독에서 VEXUS(경정맥·간정맥·신장 정맥 패턴) 통합으로 이뇨제 반응과 볼륨 과부하를 더 정확히 추적 가능
+- 72시간 내 DUCS 개선 여부가 예후 예측에 가장 유용 — 이뇨제 반응 모니터링 도구로 활용
+- 기존 BNP + POCUS B-lines 진단 데이터([[heart-failure|Volume Overload 진단 정확도]] 섹션)에 더해 **치료 모니터링** 용도로 VEXUS 개념 확장
+
+**VEXUS 검사 구성:**
+- IVC 확장(>2 cm + collapsibility↓) + 간정맥 파형(S파 소실·역류) + 문맥 간헐성 + 신장 정맥 간헐성
+
+> POCUS 술기 확장(VEXUS 포함)을 고려하는 임상가를 위한 근거. 일차의료 직접 적용보다는 상급기관·CICU 협진 시 참고.
+
+---
+
+## 심장내과 핵심 업데이트 2025 — 일차의료 적용 [CLINICAL]
+
+> [출처: Atalla M et al. Cardiology: What You May Have Missed in 2025. Ann Intern Med. 2026. PMID:41974015, DOI:10.7326/ANNALS-26-01014]
+> [초록 기반 — 전문 미확인]
+
+### AF 항응고 — 리바록사반 vs 아픽사반 재평가
+
+- 2025년 데이터에서 AF 항응고 약제 선택 근거 업데이트
+- 아픽사반이 리바록사반 대비 일부 결과에서 유리 가능성 — 기존 처방 재평가 검토
+- 상세: [[doac-elderly]] 엔트리 업데이트 참조 필요
+
+### MI 후 베타차단제 — 일률 처방 재고
+
+- LVEF 보존(≥50%) MI 후 환자에서 베타차단제 일률 처방 근거 추가 약화
+- 2025 Ann Intern Med 업데이트에서도 REDUCE-AMI(2024) 이후 방향 재확인
+- 개별 환자별 판단: HFrEF·부정맥 동반 시 유지 / 단순 LVEF보존 MI 후는 재평가
+- 상세: [[post-mi-deprescribing]] 엔트리 참조
+
+### 심부전 업데이트
+
+- HF 치료 전략 변화 지속 — GDMT 4 pillars 기반 유지이나 신약 인식 필요
+- HCM(비후성 심근병증): mavacamten·aficamten 등 신약 확산 → 가정의 인식 강화
+
+---
+
 ## Draft 출력사항 (draft-append)
 
 심부전 환자 재진 시 체크: ① 예방접종 상태(독감·폐렴구균·RSV·대상포진·COVID·Tdap) ② 의뢰 기준 해당 여부(I NEED HELP 약어) ③ BP/HR ④ BUN·Cr·전해질.
