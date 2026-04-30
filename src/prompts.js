@@ -104,6 +104,8 @@ JSON만 반환 (다른 텍스트 절대 금지):
   sinusitis (부비동염/축농증/ABRS/CRS/항생제 ladder/목시클·메이액트·levofloxacin/누적 1개월 후 ENT 의뢰 — 급·만성 부비동염 처방 맥락)
   epistaxis (코피/비출혈/콧망울 압박 10분/Nasalin·리노힐/응급실 패킹·bipolar — 급성 또는 만성 비출혈 맥락)
   sleep-apnea (수면무호흡/OSA/코골이/PSG/Mallampati·STOP-BANG/CPAP — 수면호흡장애 진찰·진단 맥락)
+  tinnitus (이명/귀울림/매미·우웅·다다닥/myoclonic tinnitus/clonazepam·carbamazepine·baclofen/편측성→청신경종양/EHF audiometry — 이명 문진·약물·의뢰 맥락)
+  hearing-loss (난청/노인성/감각신경성/보청기/dementia risk factor/ACHIEVE RCT/소음 직업력 — 청력저하 평가·보청기 상담 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */

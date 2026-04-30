@@ -3497,3 +3497,76 @@ KNOWLEDGE_BUNDLE["sleep-apnea"] = _sleep_apnea_v2;
 KNOWLEDGE_BUNDLE["수면무호흡"] = _sleep_apnea_v2;
 KNOWLEDGE_BUNDLE["OSA"] = _sleep_apnea_v2;
 KNOWLEDGE_BUNDLE["코골이"] = _sleep_apnea_v2;
+
+/* ========== 4-30 ENT bulk ingest (Batch 5 — 이명·청력) ========== */
+
+/* tinnitus — 이명 (4-30 ENT bulk). [TIPS + CLINICAL] */
+var _tinnitus_v2 = {
+  kind: "disease",
+  keywords: ["이명","tinnitus","ringing in ears","귀울림","일과성 귀잡음","myoclonic tinnitus","middle ear myoclonus","MEM","청신경종양","vestibular schwannoma","리보트릴","clonazepam","baclofen"],
+  primarySources: [
+    "Curr Opin Otolaryngol HNS 2025. PMID:40836771 (MEM pathophysiology and management)",
+    "Westerberg 1996 baclofen RCT. PMID:8915419",
+    "Liu 2011 — Revisiting Baclofen for Severe Chronic Tinnitus. PMC3297816"
+  ],
+  sections: {
+    exam: {
+      content: "### 이명 vs 일과성 귀잡음 감별 [TIPS — by ENT 교수]\n- 지속 시간 + 빈도 질문 — 이명은 지속, 일과성은 가끔\n- \"하루·일주일에 몇 번 발생하는지\"\n- \"안 들릴 때도 있는지\"\n\n### 이명 환자 표준 문진 [TIPS — by ENT 교수]\n- **악화 시점**: 오전·오후·취침 전 (취침 전 강화 → 수면 영향)\n- **동반 증상**: 난청·어지럼·귀먹먹함\n- **들리는 소리 종류**: 매미·우웅·다다닥·고음 단조음·박동성\n- **스트레스 사건**: 발생 시점 사건, 그 사건이 **현재 진행 중인지 해결됐는지**\n- **음역대 청력 저하**: 고주파(2-8 kHz) 청력 저하 동반 시 이명 더 강하게 인지 (central gain)\n- **직업력**: 소음 환경 노출 (공장·건설·군 사격·음악)\n\n### Red flag — 한쪽 이명 [TIPS — by ENT 교수]\n- **편측성 이명** → **청신경종양 (vestibular schwannoma)** 가능성\n- 특수 검사: ABR(청신경 검사), MRI internal auditory canal\n- ENT 의뢰 필수",
+      sources: []
+    },
+    protocol: {
+      content: "### Myoclonic tinnitus (Middle Ear Myoclonus, MEM) [CLINICAL — researcher 4-30 검증]\n\n**임상 단서**: 말하기·씹기·삼키기와 동기화된 클릭/딸각/다다닥 이명, 한쪽 귀, 객관적 (이경·청진으로 들림 가능). Palatal myoclonus는 양측 일정 리듬, MEM은 비주기성·burst.\n\n**약물 선택지** (high-quality evidence 부족, 모두 off-label):\n| 단계 | 약제 | 용량 |\n|---|---|---|\n| 1차 | **Clonazepam (리보트릴)** 0.5 mg HS → 0.5 mg TID | 가장 자주 first-line으로 보고 |\n| 1차 | **Carbamazepine (테그레톨)** 100 mg BID 시작 | — |\n| 2차/병용 | **Baclofen** 5 mg TID(15 mg/day) → 10 mg TID(30 mg/day) | 한국 10 mg 1정 → ½T TID → 1T TID |\n\n해외 표준 baclofen escalation은 60 mg/day까지이나 졸림·어지럼·혼동으로 26% 중도탈락. 외래에서는 30 mg/day 이내 현실적.\n\n**4-6주 시도 후 무효** → ENT 의뢰 (botulinum toxin intratympanic, 또는 stapedius/tensor tympani tenotomy).\n\n[TIPS 미르 routine: 'Baclofen 1.5T#3 줘본다' — 보수적 시작이지만 1차약은 clonazepam·carbamazepine. researcher 검증 4-30 수정]\n\n### 야간 이명 — 수면 영향 [TIPS — by ENT 교수]\n- **Clonazepam (리보트릴) 1 mg HS** (전액 본인부담)\n- 졸음 심하면 **0.5 mg HS**로 감량\n- 적응: 이명으로 입면 곤란",
+      sources: []
+    },
+    referral: {
+      content: "- **편측성 이명** → ENT (ABR + MRI IAC)\n- 박동성 이명(맥박 동기) → 혈관성(vascular loop·glomus tumor) → ENT/neurology\n- 4–6주 약물 무효 → ENT\n- 청력검사 이상 동반 → ENT\n- 내이수종 의심 (저주파 난청·먹먹함·어지럼) → ENT",
+      sources: []
+    },
+    notes: {
+      content: "### 음역대와 이명 [CLINICAL]\n- 인간 가청 범위: 20–20,000 Hz\n- 회화 영역(speech frequencies): 250–4,000 Hz\n- **이명은 고주파 영역(특히 2–8 kHz, EHF >8 kHz) 청력 저하와 강하게 연관**: tinnitus 환자 ~70%에서 EHF hearing loss (대조군 ~40%)\n- 표준 audiogram이 정상이어도 EHF 검사·hidden hearing loss(synaptopathy) 가능\n- **기전**: 고주파 deafferentation → 중추 central gain 보상성 상승 → tinnitus 인식\n- **임상 함의**: 이명 호소 환자 표준 PTA만으로 부족, EHF audiometry(>8 kHz) 의뢰 고려\n\n[researcher 4-30 수정: 미르 raw '음역대 500-2000Hz'는 회화 영역과 가청 범위 혼동. 정확화]\n\n### 내이수종 이명 [TIPS — by ENT 교수]\n매미·우웅 등 다양한 소리, 비행기/물에 들어간 듯한 먹먹함 동반 — 메니에르·저주파 난청 spectrum (low-freq-hearing-loss 참조). U-turn(Betahistine 계열) 고려.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["tinnitus"] = _tinnitus_v2;
+KNOWLEDGE_BUNDLE["이명"] = _tinnitus_v2;
+KNOWLEDGE_BUNDLE["귀울림"] = _tinnitus_v2;
+KNOWLEDGE_BUNDLE["myoclonic-tinnitus"] = _tinnitus_v2;
+KNOWLEDGE_BUNDLE["MEM"] = _tinnitus_v2;
+
+/* hearing-loss — 난청·노인성 난청·보청기 (4-30 ENT bulk). [CLINICAL + TIPS] */
+var _hearing_loss_v2 = {
+  kind: "disease",
+  keywords: ["난청","hearing loss","presbycusis","노인성 난청","감각신경성 난청","sensorineural","보청기","hearing aid","청력검사","audiometry","auditory deprivation"],
+  primarySources: [
+    "Lancet 2024 Dementia Commission",
+    "ACHIEVE RCT 2023. PMID:37478886",
+    "ACHIEVE secondary analysis 2025. PMID:40369891 (DOI:10.1002/alz.70156)"
+  ],
+  sections: {
+    exam: {
+      content: "### 난청 환자 표준 문진 [TIPS — by ENT 교수]\n- **직업력 — 소음 환경 노출** (공장·건설·군 사격·음악·항공) 필수\n- 발병 시점·진행 속도 (점진 vs 급성)\n- 동반 증상: 이명·어지럼·귀먹먹함\n- 약물력: ototoxic (aminoglycoside·cisplatin·loop diuretic·NSAID 장기)\n- 가족력\n\n### 노인 청력 저하 단독 — 1차 진료 접근 [TIPS — by ENT 교수]\n- 동반 증상 없이 청력 저하만 → 감각신경성 난청 의심\n- **고막 시진** → 이상 없으면 **청력검사만 의뢰**\n- 양측 점진성 = presbycusis\n- 편측 또는 급성 = 돌발성 난청 / 메니에르 / vestibular schwannoma → ENT 즉시 의뢰\n\n### 청력 추적 [TIPS — by ENT 교수]\n- 청력 감소 진단된 환자: **2년에 1회** 청력검사\n- 보청기 사용자: 1년에 1회 + fitting 점검",
+      sources: []
+    },
+    counseling: {
+      content: "### 보청기 권유 근거 [CLINICAL — researcher 4-30 검증]\n\n- 청력손실은 **중년기 최대 modifiable dementia risk factor** (Lancet Dementia Commission 2024, PAF ~7%, 14개 위험요인 중 1위)\n- **ACHIEVE RCT 2023**: 전체 cohort 인지저하 차이 없음(p=0.96), **고위험군(ARIC subgroup)에서 3년 인지저하 유의 둔화**\n- **2025 secondary**: 인지저하 위험 상위 25% 환자에서 보청기 사용군 **3년 인지저하 ~62% 둔화**\n- **Auditory deprivation**: 미착용 시 unaided ear word recognition 점진 저하\n\n### 환자 설명문 (권장)\n> \"보청기를 안 쓰면 말소리를 알아듣는 능력이 점점 더 떨어지고, 특히 인지·치매 위험도 함께 높아진다는 연구가 있어 가능한 일찍 시작하시는 것이 좋습니다.\"\n\n### 기전 정확화 [researcher 4-30 정정]\n- '신경 퇴화'는 cochlear nerve atrophy 함의해 부정확\n- 실제 기전: **central auditory pathway 가소성 저하** + 인지·청각 cortex 자극 결핍\n- ACHIEVE primary endpoint는 negative였음 → '반드시 인지 보호' 단정 금지, 고위험군에서만 robust\n\n[TIPS 미르 raw: '보청기 미착용 시 청력·신경 퇴화' → 'central plasticity 저하 + 인지저하 위험'으로 정확화]",
+      sources: []
+    },
+    referral: {
+      content: "- **편측 / 급성 / 변동성 난청** → ENT 즉시 (돌발성 난청·메니에르·vestibular schwannoma)\n- 양측 점진성 + 보청기 적응증 → ENT 또는 청각센터\n- 직업성 소음 노출 + 산재 가능성 → ENT + 산재 진단서\n- 소아 난청 의심 → 소아 ENT (ABR·OAE)",
+      sources: []
+    },
+    notes: {
+      content: "### 음역대 청력 저하 패턴\n- **Presbycusis**: 고주파 우세 (4-8 kHz) → 자음 변별 곤란 ('말소리는 들리는데 무슨 말인지 모르겠다')\n- **소음성 난청**: 4 kHz notch\n- **메니에르**: 저주파 변동성\n\n가청 범위 20-20,000 Hz, 회화 영역 250-4,000 Hz. 이명 동반 흔함 (`tinnitus` 참조). ARIA·AR 심한 환자에서 만성 중이염 동반 가능 → 전음성 난청 감별.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["hearing-loss"] = _hearing_loss_v2;
+KNOWLEDGE_BUNDLE["난청"] = _hearing_loss_v2;
+KNOWLEDGE_BUNDLE["presbycusis"] = _hearing_loss_v2;
+KNOWLEDGE_BUNDLE["노인성난청"] = _hearing_loss_v2;
+KNOWLEDGE_BUNDLE["보청기"] = _hearing_loss_v2;
+KNOWLEDGE_BUNDLE["감각신경성난청"] = _hearing_loss_v2;
