@@ -3923,3 +3923,89 @@ var _eagle_syndrome_v2 = {
 KNOWLEDGE_BUNDLE["eagle-syndrome"] = _eagle_syndrome_v2;
 KNOWLEDGE_BUNDLE["Eagle syndrome"] = _eagle_syndrome_v2;
 KNOWLEDGE_BUNDLE["stylohyoid-syndrome"] = _eagle_syndrome_v2;
+
+/* ========== 4-30 ENT bulk ingest (Batch 1 — 구강·혀) ========== */
+
+/* oral-lesion v2 보강 — 치아문제 우선·헥사메딘 칸디다·디플루칸 (4-30 ENT bulk) */
+var _oral_lesion_v2_full = {
+  kind: "disease",
+  keywords: ["구강병변","oral white patch","구강궤양","leukoplakia","lichen planus","oral candidiasis","구강 칸디다","헥사메딘","chlorhexidine","디플루칸","fluconazole"],
+  primarySources: [],
+  sections: {
+    exam: {
+      content: "백반증(white patch)·궤양: **1달 내 호전 확인 필수**. 미호전 → 악성 전환 가능성 → ENT refer.\n\n### 구강 ulcer ↔ 치아문제 [TIPS — by ENT 교수]\n구강 내 ulcer는 **치아 문제(날카로운 치아·잘 안 맞는 보철·마모면)를 먼저 해결**해야 할 수 있다.\n- 치아·보철 검사 → 적합화·연삭 후 ulcer 자연 호전 확인\n- 치과 의뢰 후 1–2주 관찰 → 미호전 시 약물 치료 단계로",
+      sources: []
+    },
+    protocol: {
+      content: "### 1단계 — Dexamethasone 가글 [TIPS]\nDexamethasone powder + 물 1L 혼합 → 하루 3–4회 가글\n\n### 2단계 — 가글 무효 시 경구 스테로이드 [TIPS — by ENT교수]\nUlcer 장기 지속 또는 lichen planus에서 dexamethasone 가글 무효 시:\n- 가글 유지하면서 소론도(prednisolone) 추가\n- **소론도 2T #2 × 14일** → f/u\n\n### 3단계 — 미호전 시 ENT refer\n정밀검사 (생검 등) 필요\n\n### 통증 심할 때 — Tantum Verde spray [TIPS — by ENT교수]\n통증 심한 구강 궤양에 Tantum Verde (benzydamine) spray 처방\n\n### 기타 — Triamcinolone injection [CLINICAL]\n재발성 구강 병변·난치성 궤양에 병변 내 주사\n\n### 구강 칸디다 — 헥사메딘 가글 [TIPS — by ENT 교수, researcher 4-30 보강]\n- **헥사메딘(chlorhexidine 0.12–0.2%)** 가글: *Candida*에 항진균 활성 있음\n- 가벼운 백태/구내염 **보조 가글**로 가능\n- ⚠ **명확한 oral candidiasis 1차 치료는 nystatin 현탁액 또는 fluconazole(디플루칸)**\n- Nystatin 병용 시 **30분 이상 간격** 둘 것 (상호작용으로 효능 저하)\n\n### 구강 칸디다 심함 — 디플루칸 경구 [TIPS — by ENT 교수]\n- **Fluconazole(디플루칸) 100–200mg PO qd × 7–14일**\n- 적응: 광범위 백태·통증 심함·면역저하·반복성\n- 보조: 헥사메딘 가글 (간격 두고)",
+      sources: []
+    },
+    differential: {
+      content: "구강백반증(악성 전환율 ~1%/년), 구강편평태선, 캔디다증, 외상성 궤양, 구강암",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["구강병변"] = _oral_lesion_v2_full;
+KNOWLEDGE_BUNDLE["oral white patch"] = _oral_lesion_v2_full;
+KNOWLEDGE_BUNDLE["구강궤양"] = _oral_lesion_v2_full;
+KNOWLEDGE_BUNDLE["oral-lesion"] = _oral_lesion_v2_full;
+KNOWLEDGE_BUNDLE["구강칸디다"] = _oral_lesion_v2_full;
+KNOWLEDGE_BUNDLE["디플루칸"] = _oral_lesion_v2_full;
+KNOWLEDGE_BUNDLE["헥사메딘"] = _oral_lesion_v2_full;
+
+/* burning-mouth v2 보강 — 시진 표준·뮤테란/Pilocarpine/제로바·심한 혀통증 routine (4-30 ENT bulk) */
+var _BMS_v2_full = {
+  kind: "disease",
+  keywords: ["burning mouth","구강작열감","구강작열감증후군","BMS","혀통증","glossodynia","glossalgia","뮤테란","제로바","pilocarpine"],
+  primarySources: [
+    "Kim JW et al. Sci Rep 2025"
+  ],
+  sections: {
+    exam: {
+      content: "### 혀 화끈거림 환자 — 시진 표준 [TIPS — by ENT 교수]\n- **건조함 동반 여부**\n- **혀 표면이 울퉁불퉁한지** 시진 (정상인에서는 없는 것이 맞음 — 비정상 소견)\n- 혀 가장자리 indentation (scalloped tongue) — 부종·구강건조 시사\n- 백태·발적·궤양 동반 여부",
+      sources: []
+    },
+    protocol: {
+      content: "### 뮤코미스트 가글 [CLINICAL]\n뮤코미스트 10% 1 ampule + 물 100cc → TID 가글\n- 2025 다기관 임상: VAS 통증 + 삶의 질(OHIP-14K) 유의 개선\n- Clonazepam 0.5mg/d 병용 시 반응률 ↑ (단독 60% → 병용 80%)\n\n### 혀 화끈거림 일반 처방 [TIPS — by ENT 교수]\n- **뮤테란 가글** (효과 ↑) — 탄툼·헥사메딘은 burning에 효과 제한\n- **Pilocarpine** (살라겐/필로겐) — 구강건조 동반 시 (`dry-mouth` 참조)\n- **제로바 spray** — 구강 보습·통증 완화\n\n### 심한 혀통증 — 미르 routine [TIPS — by ENT 교수]\n| 약제 | 용법 |\n|---|---|\n| **Dexa high gargle** | Dexamethasone 2T + 물 1L → 하루 3회 가글 |\n| **제로바 spray** | 통증 부위 도포 |\n| **Clonazepam (리보트릴)** | **½T HS** — 신경병증성 통증·수면 영향 |",
+      sources: ["Kim JW et al. Sci Rep 2025"]
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["burning mouth"] = _BMS_v2_full;
+KNOWLEDGE_BUNDLE["구강작열감"] = _BMS_v2_full;
+KNOWLEDGE_BUNDLE["BMS"] = _BMS_v2_full;
+KNOWLEDGE_BUNDLE["burning-mouth"] = _BMS_v2_full;
+KNOWLEDGE_BUNDLE["혀통증"] = _BMS_v2_full;
+KNOWLEDGE_BUNDLE["glossodynia"] = _BMS_v2_full;
+
+/* xerostomia v2 보강 — 노화 분비량·dry tongue 관리 (4-30 ENT bulk, researcher 4-30 정정) */
+var _xerostomia_v2_full = {
+  kind: "disease",
+  keywords: ["구강건조증","구강건조","dry mouth","xerostomia","dry tongue","saliva aging"],
+  primarySources: [
+    "Leveque FG et al. NEJM 1993 (Pilocarpine)",
+    "Salagen SPC",
+    "Sio TT et al. Mayo Clin Proc 2019",
+    "Affoo et al. JAGS 2015. PMID:26469080"
+  ],
+  sections: {
+    exam: {
+      content: "### 노화와 분비량 [TIPS — by ENT 교수, researcher 4-30 정정]\n- 건강한 성인 침 분비량 약 **0.5–1.5 L/day**, 콧물 약 **1–2 L/day**\n- 노화 시 침 분비는 **gland-specific 점진 감소** — 특히 submandibular/sublingual; parotid는 비교적 보존 (Affoo 2015)\n- ⚠ Dry mouth의 주원인은 **노화 자체보다 polypharmacy·Sjögren·anticholinergic 약제** 가능성이 높음\n- 노인 dry mouth 호소 시 **약물·전신질환부터 점검**\n\n[TIPS 미르 raw: '60대 50% 미만 감소'는 출처 미확인 — 환자 비유로만 사용]\n\n### Dry tongue 관리 [TIPS — by ENT 교수]\n- **Dry tongue을 그냥 내버려 두면 너무 아파서 밥을 아예 못 먹기도 함**\n- 원인: mouth breathing·구강건조·약물·Sjögren·당뇨 미조절·방사선 후\n- 적극 관리 필요",
+      sources: []
+    },
+    protocol: {
+      content: "① **Pilocarpine(살라겐/필로겐)** po\n  - 두경부암 방사선 후 구강건조증: 5mg TID (가이드라인)\n  - 쇼그렌증후군: 5mg QID (가이드라인)\n  - 임상 패턴: BID 가능 (부작용 경감 목적) [출처 미확인]\n  - 급여: 두경부암 방사선 후 or 쇼그렌증후군 진단 시\n\n② **뮤코미스트 10% 1 ampule + 물 100cc → TID 가글**\n  - 방사선 유발 xerostomia: 10% NAC rinse 유의 개선 (Mayo 2019 RCT)\n  - 일반 dry mouth: 직접 gargle 근거 없음, 임상 경험 기반 [출처 미확인]\n\n③ **제로바 spray** — 구강 보습 보조",
+      sources: ["Leveque FG et al. NEJM 1993","Salagen SPC","Sio TT et al. Mayo Clin Proc 2019"]
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["구강건조증"] = _xerostomia_v2_full;
+KNOWLEDGE_BUNDLE["구강건조"] = _xerostomia_v2_full;
+KNOWLEDGE_BUNDLE["dry mouth"] = _xerostomia_v2_full;
+KNOWLEDGE_BUNDLE["xerostomia"] = _xerostomia_v2_full;
+KNOWLEDGE_BUNDLE["dry-mouth"] = _xerostomia_v2_full;
+KNOWLEDGE_BUNDLE["dry-tongue"] = _xerostomia_v2_full;
