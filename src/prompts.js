@@ -113,6 +113,8 @@ JSON만 반환 (다른 텍스트 절대 금지):
   otitis-externa (외이도염/귀가려움/swimmer's ear/아드반탄+오큐프록스 1:1 냉장/perforation 시 금기 — 만성 외이도 가려움 처방 맥락)
   laryngitis (후두염/소론도+자큐보+뮤테란/voice rest/3주 이상 → ENT — 음성 사용 직업·심한 후두염 처방 맥락)
   eagle-syndrome (Eagle syndrome/편도 안쪽 통증/tonsillar fossa palpation/elongated styloid >30mm/CT 3D — 만성 정체불명 인후·이부 통증 감별 맥락)
+  thyroid-fna-cnb (갑상선 FNA/CNB/항혈전제 사전 확인/CNB 출혈·혈종/응급 호흡곤란→ER — 갑상선 시술 전 평가·합병증 안내 맥락)
+  salivary-gland-stones (타석증/턱밑샘 부음 한쪽 vs 양쪽/CT 적응증/eye scissor 미세절개·배석 — 침샘 돌 진단·시술 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */

@@ -4009,3 +4009,102 @@ KNOWLEDGE_BUNDLE["dry mouth"] = _xerostomia_v2_full;
 KNOWLEDGE_BUNDLE["xerostomia"] = _xerostomia_v2_full;
 KNOWLEDGE_BUNDLE["dry-mouth"] = _xerostomia_v2_full;
 KNOWLEDGE_BUNDLE["dry-tongue"] = _xerostomia_v2_full;
+
+/* ========== 4-30 ENT bulk ingest (Batch 2 — 경부·갑상선·타석) ========== */
+
+/* neck-mass v2 보강 — 림프절 양상 감별 (4-30 ENT bulk) */
+var _neck_mass_v2 = {
+  kind: "disease",
+  keywords: ["경부종괴","목에 혹","목 멍울","neck mass","경부림프절","cervical lymphadenopathy","림프절염","lymphadenitis"],
+  primarySources: [
+    "Am Fam Physician 2016. PMID:27929264",
+    "Ying M et al. Cancer Imaging 2014. PMID:24434158",
+    "Ahuja AT et al. PMID:28439430"
+  ],
+  sections: {
+    exam: {
+      content: "### 초진 접근 [CLINICAL — 조건부, by ENT 교수]\n1. **촉진** — 위치, 크기, 경도, 압통, 이동성 확인\n2. **기저질환 확인** — 감염, 자가면역, 악성종양 병력\n3. **초음파 + 도플러**\n   - 혈관(목정맥)과 림프절 구분 — 도플러 필수\n   - 목정맥(내경정맥) 확장이 종괴 오인 경우 있음\n4. 필요 시 aspiration (초음파 유도)\n5. 애매한 경우 조직검사 고려\n\n### 경부림프절 양상 감별 [TIPS — by ENT 교수]\n| 양상 | 의심 |\n|---|---|\n| **말랑·움직임 양호** | 양성 (반응성 림프절병증·감염성) |\n| **고정·단단** | 악성·전이 의심 |\n\n- **둘 다 초음파로 관찰 가능**\n- 후자(고정·단단)는 **ENT 의뢰 — 조직검사** 진행\n- 대칭성·압통·표면 양상도 동시 평가",
+      sources: []
+    },
+    protocol: {
+      content: "### 림프절염 (가장 흔한 원인) [CLINICAL — 조건부]\n경부종괴 2/3 이상이 양성 — 림프절염/반응성 림프절병증.\n\n**경과**: 수주~수개월 지속 가능. 감염 소실 후에도 림프절 정상화 1–6개월. 새로운 상기도 감염마다 재발 패턴 흔함.\n\n**치료 원칙**:\n- 증상 없음 → 관찰\n- 압통/커짐/발열 → 항생제 (S. aureus·GAS 타겟)\n- 바이러스성 → 대증치료\n\n⚠ **4–6주 이상 지속 or 치료 반응 없음** → 조직검사 (림프종 오진 가능성)",
+      sources: []
+    },
+    differential: {
+      content: "**Horses**: 림프절염/반응성 림프절병증 ★가장 흔함 / 피지낭종·지방종 / 갑상선 결절\n\n**Zebra**: ⚠ 림프종 (4–6주 지속·B증상·치료 무반응) / ⚠ 전이성 악성종양",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["경부종괴"] = _neck_mass_v2;
+KNOWLEDGE_BUNDLE["neck mass"] = _neck_mass_v2;
+KNOWLEDGE_BUNDLE["neck-mass"] = _neck_mass_v2;
+KNOWLEDGE_BUNDLE["경부림프절"] = _neck_mass_v2;
+KNOWLEDGE_BUNDLE["lymphadenopathy"] = _neck_mass_v2;
+
+/* thyroid-fna-cnb — 갑상선 FNA/CNB 시술 전 항혈전제·합병증 (4-30 ENT bulk). [TIPS] */
+var _thyroid_fna_cnb_v2 = {
+  kind: "topic",
+  keywords: ["갑상선 FNA","갑상선 CNB","fine needle aspiration","core needle biopsy","갑상선 결절","thyroid nodule","hematoma","항혈전제"],
+  primarySources: [],
+  sections: {
+    definition: {
+      content: "갑상선 결절·경부 림프절 평가의 표준 조직 진단 도구.\n- **FNA**: 22–27G 가는 바늘. 출혈 위험 낮음. 세포 진단(Bethesda system).\n- **CNB**: 18–20G 코어 바늘. 조직 진단(architecture 평가). FNA 미진단 또는 atypia 시 사용. **출혈 위험 FNA보다 높음**.",
+      sources: []
+    },
+    protocol: {
+      content: "### 시술 전 평가 — 항혈전제 확인 [TIPS — by ENT 교수]\n**FNA / CNB 하기 전 반드시 먹는 약을 확인한다 (항혈전제)**\n\n| 약제 | FNA | CNB |\n|---|---|---|\n| Aspirin | 보통 지속 가능 | 시술자 판단, 보통 지속 또는 5–7일 중단 |\n| Clopidogrel·prasugrel·ticagrelor | 5–7일 중단 | 7일 중단 |\n| Warfarin | INR <2.0 또는 시술자 판단 | INR <1.5 권고 |\n| DOAC (apixaban·rivaroxaban·dabigatran) | 24–48h 중단 | 48h 중단 |\n\n항혈전제 중단 결정 = **혈전 위험 vs 출혈 위험** (특히 stent 후·기계 판막). 환자별 필수 확인 — 누락 시 합병증 위험.",
+      sources: []
+    },
+    complications: {
+      content: "### CNB 출혈·혈종 [TIPS — by ENT 교수]\n갑상선 CNB 후 합병증으로 **출혈과 혈종**이 있음. 혈종이 심하면 ER로 와서 **응급수술로 목을 열어야 함**.\n\n**환자 교육 (응급실 내원 trigger)**:\n- **숨이 답답해지거나 부어오르면 즉시 ER 내원**\n- 시술 후 24h 이내가 위험 — 환자에게 명시적 안내\n- 압박 지혈을 충분히 (시술 후 10–20분)\n\n**응급 처치 (ER)**: 기도 확보 → 응급 외과적 감압 (drainage / open exploration) → vital·CBC·coagulation panel.\n\n### 기타\n- 일시적 통증 (24–48h)\n- 일시적 음성 변화 (recurrent laryngeal n. 자극)\n- 감염 (드묾)\n- vasovagal 반응",
+      sources: []
+    },
+    referral: {
+      content: "- 갑상선 결절 ATA TI-RADS 4–5 → 갑상선·내분비외과 (FNA/CNB 시행)\n- 시술 후 호흡곤란·심한 부종 → ER 응급\n- 시술 후 음성 변화 지속 → ENT (vocal cord 평가)",
+      sources: []
+    },
+    notes: {
+      content: "가정의학과 1차 진료에서 직접 시술 영역 아님 — 의뢰 후 합병증 인지·환자 교육이 1차 의료 책임. 시술 전 환자 약 복용력 (특히 노인 다약제) 정확 확인 필수 (의뢰 시 약 list 동봉).",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["thyroid-fna-cnb"] = _thyroid_fna_cnb_v2;
+KNOWLEDGE_BUNDLE["갑상선FNA"] = _thyroid_fna_cnb_v2;
+KNOWLEDGE_BUNDLE["갑상선CNB"] = _thyroid_fna_cnb_v2;
+KNOWLEDGE_BUNDLE["thyroid biopsy"] = _thyroid_fna_cnb_v2;
+
+/* salivary-gland-stones — 타석증 (4-30 ENT bulk). [TIPS] */
+var _salivary_stones_v2 = {
+  kind: "disease",
+  keywords: ["타석증","sialolithiasis","salivary gland stones","침샘 돌","설하샘 돌","턱밑샘 돌","submandibular stone","sublingual stone"],
+  primarySources: [],
+  sections: {
+    definition: {
+      content: "침샘관·실질 칼슘 침착(석회화). 타액 분비 폐쇄 → 식사 시 침샘 부음·통증.\n\n| 침샘 | 빈도 | 특징 |\n|---|---|---|\n| **턱밑샘 (Submandibular)** | 80–90% | Wharton's duct, 큰 결석 흔함 |\n| 이하선 (Parotid) | 5–20% | Stensen's duct, 작은 다발 |\n| 설하샘 (Sublingual) | 드묾 | 구강 저면 |",
+      sources: []
+    },
+    exam: {
+      content: "### 임상 양상\n- 식사 시·식후 침샘 부음·통증 (mealtime swelling)\n- 압박 시 통증·악화\n- 탈수·구강건조 시 악화\n- 만성 시 만성 침샘염·농양 합병\n\n### 진찰 — 한쪽 vs 양쪽 [TIPS — by ENT 교수]\n| 부위 | 패턴 | 다음 단계 |\n|---|---|---|\n| **턱밑샘 부음 — 한쪽** | 흔한 타석 양상 | 진단·국소마취 절개 시도 가능 |\n| **턱밑샘 부음 — 양쪽** | 단순 타석 아님 | **CT 꼭 확인** — 다른 원인(Sjögren·IgG4·림프종·림프상피낭종) 의심 |\n\n### 설하샘 돌 [TIPS — by ENT 교수]\n- **눈으로 보이는 표재성 돌** → 국소마취 후 **eye scissor로 미세절개·배석** 가능\n- 시술 후 계속 불편 → **CT 시행** (deep stone·canalicular stenosis 확인)\n\n### 영상\n- 단순 X-ray (occlusal view) — submandibular calcification\n- **초음파** — 1차\n- **CT** — 표준 (소량·작은 결석 검출, 양측성 평가)\n- Sialendoscopy — ENT 영역",
+      sources: []
+    },
+    protocol: {
+      content: "### 보존적 (작은 결석)\n- 충분한 수분 섭취\n- 침샘 마사지 (식전·식후)\n- **Sialagogue** — 신 음식·신 사탕(레몬 사탕)으로 침 분비 자극\n- 항생제 — 급성 감염 동반 시 (amox/clav, clindamycin)\n\n### 시술\n- **Eye scissor 미세절개·배석** — 표재성 설하샘 돌 (1차 진료 가능)\n- **Sialendoscopy** — ENT\n- **외과적 절제** — 큰 결석·재발·만성 sialadenitis (submandibulectomy)",
+      sources: []
+    },
+    referral: {
+      content: "- 미세절개로 안 빠지는 deep stone → ENT (sialendoscopy)\n- **양측성 부음** → CT + ENT (감별진단 광범위)\n- 만성 sialadenitis·반복 감염 → ENT (외과 평가)\n- 농양 형성 → ENT 응급",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["salivary-gland-stones"] = _salivary_stones_v2;
+KNOWLEDGE_BUNDLE["sialolithiasis"] = _salivary_stones_v2;
+KNOWLEDGE_BUNDLE["타석증"] = _salivary_stones_v2;
+KNOWLEDGE_BUNDLE["설하샘 돌"] = _salivary_stones_v2;
+KNOWLEDGE_BUNDLE["턱밑샘 돌"] = _salivary_stones_v2;
+KNOWLEDGE_BUNDLE["침샘염"] = _salivary_stones_v2;
