@@ -5,6 +5,9 @@
 
 ---
 
+2026-05-01 | by-disease/migraine.md | 신규 — 편두통 예방치료 적응증 + 1차(propranolol·metoprolol·topiramate·divalproex·CGRP)·2차(amitriptyline·venlafaxine)·Botox(만성편두통) 처방 체계 + 비약물(CBT·침술·운동) [CLINICAL, REGULATORY] PMID:40378325 (AFP 2025)
+2026-05-01 | by-disease/depression-screening.md | 추가 — PETRUSHKA 결정지원 RCT: 8주 중단율 27%→17% (RR 0.62), 24주 PHQ-9 7.1 vs 9.2, GAD-7 4.6 vs 5.8; 첫 항우울제 증상 맞춤 선택의 중요성 [CLINICAL] PMID:41779422 (JAMA 2026)
+2026-05-01 | by-disease/cervical-cancer-screening.md | 신규 — 자궁경부암 스크리닝: ACS 25세·USPSTF 2024 초안 30세 primary HPV q5y, 21~29세 세포검사 q3y, 65세 종료 기준, ASCCP 2019 위험 기반 관리 [REGULATORY] PMID:41839104 (AFP 2026)
 2026-04-29 | guidelines/asthma-reflux-comorbidity.md | 신규 — 천식+역류 동반이환: 조절불량 천식 + 위·식도/인후두 증상 시 PPI·알긴산 empiric trial. 무증상 일률 처방 미권고 (Chan WW 2011 메타분석 PEF 소폭 외 효과 없음). GINA 2025·AGA 2023(PMID:37061897)·San Diego 2025(PMID:40197644)·Chan 2011(PMID:21482834) 통합. [CLINICAL — 조건부] [TIPS — by ENT교수, Researcher 검증]
 2026-04-29 | knowledge-bundle.js | 백로그 bundle 반영 batch — 누적 미반영 deep-extract 산출물(4-24·4-26·4-27·4-28) + asthma-reflux 신규 = 신규 20개 + 보완 2개 (heart-failure-volume-overload·obesity-pharmacotherapy-grade) v2 alias 패턴. TRIAGE calcCategories 16개 신규 추가.
 2026-04-28 | by-disease/covid-outpatient-antivirals.md | 신규 — COVID-19 외래 항바이러스 4종 비교(Simnotrelvir high CoE –35.8h / Molnupiravir moderate CoE 회복+Long COVID 8.5% vs 11.0% / Paxlovid low CoE / Ensitrelvir 효과 불충분) [CLINICAL] PMID:41662710 (Ann Intern Med 2026)
