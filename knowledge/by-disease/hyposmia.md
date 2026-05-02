@@ -36,6 +36,20 @@ relations: []
   - [출처: Di Stadio et al. Curr Neuropharmacol 2022; Tian et al. Eur Arch ORL 2025]
 - 표준 향 4종: rose, eucalyptus, lemon, clove (Hummel protocol)
   - 임상에서는 "좋아하는 향 3~4가지"로 적용 가능
+- **INS 병용 시 후각연습 효과 증가** [TIPS — by ENT 교수]
+  - 후각연습 시작 전·중에 INS 사용 시 olfactory cleft 점막 부종 감소 → 자극 전달 효율 ↑
+
+### 난치성 CRSwNP에서 Dupilumab [CLINICAL]
+
+> 출처: Bachert C et al. *Lancet* 2019 (SINUS-24/52, PMID:31543428) · Mullol J et al. *JACI in Practice* 2022 (PMID:34628065)
+
+- **적응**: 난치성 CRSwNP (만성 부비동염 with 비용종) — 표준 INS·코세척·OCS·수술 실패
+- **후각 회복 효과**:
+  - UPSIT +10.54 vs placebo (24주, p<0.0001)
+  - **Anosmic 환자 60% 이상이 24주 시점에 후각 회복**
+  - week 1 이내 효과 시작
+- **코막힘(NPS)도 개선**되나 **후각 회복 폭이 임상적으로 더 인상적**
+- 처방: 가정의학과 의뢰 — 알레르기·이비인후 전문의 영역 (생물학적 제제, 보험·적응증 평가 필요)
 
 ### 보조 [TIPS — by ENT교수]
 - 비타민 B · C 보충 (도움이 되기도 함)

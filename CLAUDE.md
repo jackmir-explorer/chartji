@@ -90,3 +90,4 @@ Chartji는 한국 가정의학과 외래 대화 기반 진료 보조 도구다.
 - 패널 역할 계약 → `rules/panel-contracts.md`
 - 절대 금지 목록 → `rules/forbidden.md`
 - 코딩 행동 가이드라인 → `rules/coding-behavior.md`
+- **임상 핵심영역 (2026-04-29 선언, Mir-Tier 1)** → `~/.claude/projects/.../memory/user_clinical_focus.md` + `knowledge/scope.md` Mir-Tier 1 섹션. scout·학습·문헌 추천 우선순위.

@@ -57,6 +57,36 @@ relations: []
 
 > 출처: 대한심부전학회 심부전 진료지침 2022
 
+### Volume Overload 진단 정확도 — BNP + POCUS B-lines [CLINICAL]
+
+호흡곤란 환자에서 심인성 부하과다(volume overload) 감별. JAMA 2026 Rational Clinical Examination — 40개 연구, 11,490명, 유병률 35–69%.
+
+**Rule-in (가장 유용한 순)**
+
+| 검사 | LR | 특이도 |
+|---|---|---|
+| BNP ≥100 ng/mL | **6.9** | 87% |
+| CXR 혈관 충혈 | 5.9 | 91% |
+| JVD (흉골각 위 >3 cm 수직) | 4.1 | 92% |
+| POCUS bilateral B-lines | 4.0 | 77% |
+| IVC collapsibility <50% | 3.9 | 79% |
+| POCUS JVP >8 cm | 2.8 | 71% |
+| 폐 수포음 (crackles) | 2.7 | 81% |
+| 하지 부종 | 2.2 | 80% |
+
+**Rule-out (가장 유용한 순)**
+
+| 검사 | LR | 민감도 |
+|---|---|---|
+| POCUS B-lines 없음 | **0.09** | 93% |
+| BNP <100 ng/mL | 0.14 | 87% |
+| IVC collapsibility ≥50% | 0.22 | 82% |
+| POCUS JVP ≤8 cm | 0.26 | 81% |
+
+임상 포인트: BNP ≥100이면 단독 최강 rule-in, B-lines 없으면 단독 최강 rule-out. 두 검사 조합이 JVD·crackles보다 진단 정확도 우월하며 외래·응급 의사결정을 직접 지원한다.
+
+> 출처: Drum B et al. JAMA 2026;335(13):1159-1168. PMID:41729549. DOI:10.1001/jama.2026.0446
+
 ---
 
 ## 단계별 치료 (protocol)
@@ -218,6 +248,38 @@ relations: []
 
 ---
 
+## HFpEF + 비만 — 체중감량 전략 [CLINICAL]
+
+> 출처: Costa TA et al. Curr Opin Cardiol 2026;41(3):147-156. PMID:41802118. DOI:10.1097/HCO.0000000000001284
+> [초록 기반 — 전문 미확인]
+
+### 핵심 원칙
+
+**비만 동반 HFpEF 환자에서 체중감량은 현재 권고되는 최우선 치료 전략이다.**
+- 내장지방 ↔ HFpEF 악순환: 내장지방↑ → 염증·아디포카인 분비 → 심근 경직·이완 장애 악화
+- 체중감량으로 운동능력·증상·삶의 질 개선이 일관되게 확인됨
+
+### GLP-1 계열 (Semaglutide·Tirzepatide) HFpEF 근거
+
+| 결과 | 근거 |
+|------|------|
+| 운동능력(VO₂ peak·6분 보행) 개선 | RCT 확인 |
+| 증상(NYHA class·KCCQ) 개선 | RCT 확인 |
+| 삶의 질 개선 | RCT 확인 |
+| 임상 이벤트 감소 가능성 | 일부 연구 시사 — 대규모 outcome trial 필요 |
+
+**비만 정도가 클수록 GLP-1 계열 치료 이익이 더 큼** (incretin 기반 치료 + MRA + SGLT2 + ARNI 모두)
+
+### 1차의료 적용
+
+- 비만 + HFpEF 환자 → **GLP-1 계열 처방의 심장 이익을 추가 근거로 제시** 가능
+  - obesity.md의 TOS/OMA/OAC 권고 (HFpEF → GLP-1+ 조건부 권고) 와 정합
+- 체중감량 상담 시: "살을 빼면 심장이 편해진다" — 기전 설명 + 수치 근거 가능
+- HFrEF에서 체중감량 역할은 불확실 (비만 → HFrEF 보호 역설 가능성 있음 — obesity paradox 논의 중)
+- 비만수술: 관찰 연구에서 HF 위험 감소 시사, 무작위 임상 증거 부족
+
+---
+
 ## 비교 (comparison)
 
 ### HFrEF vs HFpEF 약물 차이
@@ -283,6 +345,55 @@ relations: []
    → 약물치료 최적화와 함께, 악화 위험을 줄이기 위한 선제적 접근이 필요하다.
 
 > 출처: 현준호. 심부전, 언제 상급병원에 의뢰해야 할까? 강의 요약 슬라이드 (대한심부전학회 심부전 진료지침 2022 기반)
+
+---
+
+## POCUS DUCS — 급성 심부전 예후 예측 복합 점수 [CLINICAL — 조건부]
+
+> [출처: Scherer HC et al. J Ultrasound Med. 2026. PMID:41863026, DOI:10.1002/jum.70229]
+> 단일 기관, n=109, LVEF<50%, CICU 입원 — [초록 기반 — 전문 미확인]
+
+**DUCS (Dynamic Ultrasound Congestion Score)**: 폐 초음파(B-lines 수정) + VEXUS(정맥 울혈 초음파) 복합 점수.
+
+| DUCS 지표 | 예측 대상 | AUC |
+|---|---|---|
+| ΔDUCS (입원→72시간 변화) | 입원 중 사망 | **0.76** |
+| DUCS (CICU 퇴원 시) | 30일 사망·재입원 | **0.77** |
+
+**임상 포인트:**
+- 폐 초음파 B-lines 단독에서 VEXUS(경정맥·간정맥·신장 정맥 패턴) 통합으로 이뇨제 반응과 볼륨 과부하를 더 정확히 추적 가능
+- 72시간 내 DUCS 개선 여부가 예후 예측에 가장 유용 — 이뇨제 반응 모니터링 도구로 활용
+- 기존 BNP + POCUS B-lines 진단 데이터([[heart-failure|Volume Overload 진단 정확도]] 섹션)에 더해 **치료 모니터링** 용도로 VEXUS 개념 확장
+
+**VEXUS 검사 구성:**
+- IVC 확장(>2 cm + collapsibility↓) + 간정맥 파형(S파 소실·역류) + 문맥 간헐성 + 신장 정맥 간헐성
+
+> POCUS 술기 확장(VEXUS 포함)을 고려하는 임상가를 위한 근거. 일차의료 직접 적용보다는 상급기관·CICU 협진 시 참고.
+
+---
+
+## 심장내과 핵심 업데이트 2025 — 일차의료 적용 [CLINICAL]
+
+> [출처: Atalla M et al. Cardiology: What You May Have Missed in 2025. Ann Intern Med. 2026. PMID:41974015, DOI:10.7326/ANNALS-26-01014]
+> [초록 기반 — 전문 미확인]
+
+### AF 항응고 — 리바록사반 vs 아픽사반 재평가
+
+- 2025년 데이터에서 AF 항응고 약제 선택 근거 업데이트
+- 아픽사반이 리바록사반 대비 일부 결과에서 유리 가능성 — 기존 처방 재평가 검토
+- 상세: [[doac-elderly]] 엔트리 업데이트 참조 필요
+
+### MI 후 베타차단제 — 일률 처방 재고
+
+- LVEF 보존(≥50%) MI 후 환자에서 베타차단제 일률 처방 근거 추가 약화
+- 2025 Ann Intern Med 업데이트에서도 REDUCE-AMI(2024) 이후 방향 재확인
+- 개별 환자별 판단: HFrEF·부정맥 동반 시 유지 / 단순 LVEF보존 MI 후는 재평가
+- 상세: [[post-mi-deprescribing]] 엔트리 참조
+
+### 심부전 업데이트
+
+- HF 치료 전략 변화 지속 — GDMT 4 pillars 기반 유지이나 신약 인식 필요
+- HCM(비후성 심근병증): mavacamten·aficamten 등 신약 확산 → 가정의 인식 강화
 
 ---
 

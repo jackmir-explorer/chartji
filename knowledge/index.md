@@ -81,3 +81,4 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - adult-vaccination-summary.md — 성인 예방접종 전체 요약 + 항암 독감백신 **타이밍 기반** (ANC 폐기, ASCO 2024) + 심부전 환자 고위험 예방접종 링크 + **처방 기반 독감백신 접종률 제고** (Vaccine 2026 PMID:42000148, 처방 루틴 삽입 시 접종률 3배) [CLINICAL] — topic
 - heart-failure-referral.md — 심부전 상급병원 의뢰 기준: 의뢰 6시점 세밀화 + I NEED HELP 약어 + 전원 최적시기 4단계 곡선 [CLINICAL] — topic (parent: heart-failure)
 - afp-top20-poems-2024.md — AFP 2024 TOP 20 POEMs overview: 비만·CV 2차예방·당뇨·IBS·옴·rUTI·담석 외래 적용 요약 [CLINICAL] (AFP 2025 PMID:40736492) — topic (TRIAGE 미등록)
+- asthma-reflux-comorbidity.md — 천식+역류 동반이환: 조절불량 천식 + 위·식도/인후두 증상에서만 PPI·알긴산 empiric trial. 무증상 일률 처방 미권고. GINA 2025·AGA 2023(PMID:37061897)·San Diego 2025(PMID:40197644)·Chan WW 2011(PMID:21482834) 통합 [CLINICAL — 조건부] — topic [TIPS — by ENT교수]

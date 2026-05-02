@@ -10,6 +10,12 @@ relations: []
 
 ## 문진/검사
 
+### 환자 표현 — "목 열감" + 기침 [TIPS — by ENT 교수]
+
+> "목에 열감이 있으면서 기침이 나와요"라고 호소하는 환자에서 **'열감'은 진짜 발열이 아니라 타는 듯한 느낌, 화끈거림의 표현**이다.
+
+→ **LPR / GERD 의심** — 인후 burning sensation은 LPS 핵심 증상.
+
 ### LPS vs LPRD 구분 [CLINICAL]
 > [출처: Yadlapati R et al. Am J Gastroenterol 2025;121(2):322-336. PMID:40197644, DOI:10.14309/ajg.0000000000003482]
 
@@ -56,6 +62,11 @@ relations: []
 - **알긴산(Alginic acid)**: 위 내용물 위에 점성 raft 형성 → 물리적으로 역류 차단. 대표 제품: Gaviscon류
 - **Promac(polaprezinc)**: 아연-카르노신 복합체 — 위점막 보호제. PPI 부작용 있는 환자에게 알긴산과 함께 처방 가능
 - 알긴산 + Promac 병용 가능
+
+### LPR f/u 간격 [TIPS — by ENT 교수]
+
+- LPR 진단 환자는 **30일 간격으로 약을 주면서 증상 호전될 때까지 지켜본다**
+- 첫 3개월은 PPI 표준 BID 유지, 호전 시 단계적 감량 (de-escalation)
 
 ## 감별진단
 

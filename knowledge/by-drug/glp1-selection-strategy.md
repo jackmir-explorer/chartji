@@ -236,6 +236,32 @@ relations: []
 
 ---
 
+## GLP-1 당뇨전단계 T2DM 예방 — RCT 근거 [CLINICAL]
+
+> 출처: Tentolouris A et al. Prim Care Diabetes 2026;20(2):178-184. PMID:41565568. DOI:10.1016/j.pcd.2026.01.003
+> Narrative synthesis — STEP 1·5, SELECT, SURMOUNT-1 RCT 데이터 포함
+
+**적응 환자군:** 비만(과체중 포함) + 당뇨전단계(공복혈당장애 또는 내당능장애)
+
+### 핵심 수치 (RCT 기반)
+
+| 약물 | 효과 | 근거 시험 |
+|------|------|---------|
+| **Semaglutide 2.4mg** | 정상혈당 회복률 최대 **84%** | STEP 1·5 |
+| **Tirzepatide** | T2DM 발생 **90% 감소** (HR **0.07**, p<0.001) — 체중감량이 주 매개 | SURMOUNT-1 |
+| **Semaglutide** | 심혈관 이벤트(CV death·nonfatal MI·stroke) HR **0.80** (95%CI 0.72–0.90) | SELECT |
+
+**SELECT 추가 분석:** 참가자 66.4%가 당뇨전단계 → CV 위험 감소 효과가 HbA1c와 무관하게 확인 (전당뇨에서도 심혈관 보호).
+
+### 1차의료 적용
+
+- **비만 + 당뇨전단계 환자 GLP-1 처방 시:** "살 빼면서 당뇨 예방 + 심혈관도 보호" — 구체 수치 근거 직접 제시 가능
+- Tirzepatide: T2DM 예방 효과 가장 강력 (HR 0.07)
+- Semaglutide: CV 보호 근거 SELECT에서 확립 (전당뇨 포함)
+- 진행 중인 SURMOUNT-MMO: 비당뇨 비만에서 CV 이익 추가 확인 예정
+
+---
+
 ## GLP-1RA — 전당뇨 치료 [INSIGHTS]
 
 > 출처: Panou T et al. Diabetes Ther 2026. PMID:41984373 DOI:10.1007/s13300-026-01865-5
@@ -259,3 +285,37 @@ relations: []
 
 - 전당뇨+비만 환자 GLP-1RA 처방 시: "살 빼면서 혈당도 잡는다" — 수치 근거 제공
 - 약물 중단 후 효과 감소 → 장기 유지 필요성 상담에 활용
+
+---
+
+## GLP-1RA 부작용 신호 — NAION (비동맥성 앞시신경병증) [CLINICAL — 조건부]
+
+> [출처: Escudero C et al. Endocrinology: What You May Have Missed in 2025. Ann Intern Med. 2026. PMID:41974004, DOI:10.7326/ANNALS-26-00925]
+> [초록 기반 — 전문 미확인]
+
+**신호:** GLP-1RA 처방 중 **비동맥성 앞시신경병증(NAION, Nonarteritic Anterior Ischemic Optic Neuropathy)** 발생 위험 신호가 2025년 보고됨.
+
+**임상 포인트:**
+- GLP-1RA 처방 환자에서 **시야 변화·시력 저하 증상 발생 시 즉시 안과 의뢰**
+- 처방 시작 전 시야 이상 여부 확인 및 교육 포함 권장
+- 위험도 크기·절대 위험 수치는 아직 확립 중 — 인과관계 확정 전이나 임상 모니터링 포함
+
+**초진 교육 추가 항목:**
+"드물지만 눈 관련 증상(갑작스러운 시야 이상, 한쪽 눈이 흐릿해짐)이 생기면 즉시 알려주세요."
+
+> 이 신호는 Ann Intern Med 2025 내분비 연례 업데이트에서 주요 안전성 항목으로 포함됨.
+
+---
+
+## GLP-1RA vs SGLT-2i — 비뇨생식기 감염 위험 비교 [CLINICAL]
+
+> [출처: Escudero C et al. Endocrinology: What You May Have Missed in 2025. Ann Intern Med. 2026. PMID:41974004, DOI:10.7326/ANNALS-26-00925]
+> [초록 기반 — 전문 미확인]
+
+**핵심:** T2DM 환자에서 GLP-1RA는 SGLT-2 억제제 대비 비뇨생식기 감염(UTI·생식기 진균감염) 위험이 낮음.
+
+**처방 결정 적용:**
+- 반복성 UTI·생식기 진균감염 기왕력 환자 → SGLT-2i보다 GLP-1RA 선택 우선 고려
+- SGLT-2i 전환 검토 시 비뇨생식기 감염 위험 증가 가능성 상담
+
+> SGLT-2i 비뇨생식기 감염 상세 → [[sglt2-inhibitors]] 참조
