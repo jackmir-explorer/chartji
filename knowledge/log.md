@@ -5,6 +5,16 @@
 
 ---
 
+2026-05-02 | by-disease/pocus-abdominal.md | 신규 — GP 복부 POCUS 적합 3대 영역(담석증·요로결석·AAA/수신증): 1,053건 네덜란드 GP 의뢰 분석, guideline 기반 의뢰 75% 배제 판독·대안진단 <10% [CLINICAL — 조건부] PMID:41528024 (Eur J Gen Pract 2026)
+2026-05-02 | by-disease/ankle-sprain.md | 신규 — 급성 발목 염좌: Ottawa Rules·PEACE&LOVE 프로토콜·외부 지지대 5~10일·신경근 재활 8~12주 [CLINICAL] PMID:41533404 (AFP 2025 Dec)
+2026-05-02 | by-disease/palliative-pain.md | 추가 — 임종기 Deprescribing: 재향군인 37,193명, 73% LBM 복용 중·22%만 중단; 스타틴·혈당강하제·항고혈압제·항혈전제·PPI·항치매제 체크리스트 [CLINICAL] PMID:41925169 (JAGS 2026)
+2026-05-02 | by-disease/CKD.md | 추가 — VA/DoD 2025 CPG 23 GRADE 권고: SGLT-2i 신장보호 1순위 강화·GLP-1RA·피네레논·스타틴 신규/강화, 조영제 AKI 예방 [CLINICAL] PMID:41461086 (Ann Intern Med 2025)
+2026-05-02 | by-disease/opioid-use-disorder.md | 신규 — OUD MOUD 3종(부프레노르핀·메타돈·날트렉손) 비교: 치료율 25.1%·MOUD aHR 0.52·날록손 지역 배포 25~46% 과다복용 감소 [CLINICAL] PMID:41671014 (JAMA 2026 Mar)
+2026-05-02 | by-disease/cardiac-rehabilitation.md | 신규 — 심장재활 적응증·3요소(운동·교육·심리)·가정의 의뢰+이탈방지 역할; MI·HF·PCI·CABG 후 이용률 낮음 문제 [CLINICAL] PMID:40961304 (AFP 2025 Sep)
+2026-05-02 | guidelines/goals-of-care-acp.md | 신규 — GOC 이니셔티브 7대 핵심 요소: 목적정의·환자군식별·이해관계자·대화촉진·EHR문서화·데이터측정·지속성; 8개 미국 의료기관 분석 [INSIGHTS] PMID:41548727 (JPSM 2026 Jan)
+2026-05-02 | by-disease/ischemic-stroke-prevention.md | 신규 — 허혈성 뇌졸중 이차예방: BP 130/80·고강도 스타틴·원인별 항혈전(AF→항응고·비색전→항혈소판)·DAPT 21일·OSA 치료·잠복AF 장기 모니터링 [CLINICAL] PMID:41544282 (AFP 2026 Jan)
+2026-05-02 | by-disease/pocus-lung.md | 신규 — 폐 POCUS 5시간 훈련 PCP 시행: B-lines ≥3 입원 독립예측 RR 1.34; 폐렴 Sn 68.3%·Sp 43.6%; 재택·자원제한 환경 위험분류 도구 [CLINICAL — 조건부] PMID:42031864 (NPJ 2026 Apr) — 과거 누락 복구 (출처 05-01)
+2026-05-02 | by-disease/msk-injection-therapy.md | 신규 — 근골격 주사 재질별 비교(코르티코·HA·프롤로·PRP·줄기세포)·초음파 유도 정확도↑안전성↑전문의 시술 FM 이전 가능 [CLINICAL] PMID:41838996 (FP Essent 2026 Feb) — 과거 누락 복구 (출처 05-01)
 2026-05-01 | by-disease/migraine.md | 신규 — 편두통 예방치료 적응증 + 1차(propranolol·metoprolol·topiramate·divalproex·CGRP)·2차(amitriptyline·venlafaxine)·Botox(만성편두통) 처방 체계 + 비약물(CBT·침술·운동) [CLINICAL, REGULATORY] PMID:40378325 (AFP 2025)
 2026-05-01 | by-disease/depression-screening.md | 추가 — PETRUSHKA 결정지원 RCT: 8주 중단율 27%→17% (RR 0.62), 24주 PHQ-9 7.1 vs 9.2, GAD-7 4.6 vs 5.8; 첫 항우울제 증상 맞춤 선택의 중요성 [CLINICAL] PMID:41779422 (JAMA 2026)
 2026-05-01 | by-disease/cervical-cancer-screening.md | 신규 — 자궁경부암 스크리닝: ACS 25세·USPSTF 2024 초안 30세 primary HPV q5y, 21~29세 세포검사 q3y, 65세 종료 기준, ASCCP 2019 위험 기반 관리 [REGULATORY] PMID:41839104 (AFP 2026)

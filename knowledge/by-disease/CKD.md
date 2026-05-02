@@ -65,6 +65,32 @@ CKD G3 환자 추적 시 **시스타틴C 추가 검사 권장:**
 
 ---
 
+## VA/DoD 2025 CKD 일차의료 진료지침 — 23 GRADE 권고 핵심 [CLINICAL]
+
+> [출처: Schwartz AR et al. 2025 VA/DoD CPG for the Primary Care Management of Chronic Kidney Disease. Ann Intern Med. 2025 Dec 30;179(3):411-424. PMID:41461086, DOI:10.7326/ANNALS-25-03499]
+> [초록 기반 — 전문 미확인]
+
+**2025년 주요 업데이트 (2019년 대비):**
+
+| 약물/전략 | 2025 권고 |
+|---|---|
+| **SGLT-2 억제제** | CKD+T2DM 또는 단백뇨 CKD에서 **신장 보호 1순위** 약물로 강화 |
+| **GLP-1 수용체 작용제** | CKD+T2DM에서 심혈관·신장 보호 효과로 신규 권고 |
+| **피네레논 (Finerenone)** | 비스테로이드성 MRA — T2DM+CKD 단백뇨에서 추가 신장 보호 |
+| **스타틴** | 심혈관 위험 감소 목적 강화 권고 |
+| **ACEi / ARB** | 혈압 조절 및 단백뇨 감소 — 기존 1차 유지 |
+| **조영제 유발 AKI 예방** | 생리식염수 수화 프로토콜 강화 |
+
+**공유 의사 결정:**
+- 투석·이식 vs 보존적 관리(Conservative Management) — 환자 선호·기능 상태 기반 개별화
+- CKD 진행 위험 및 심혈관 위험 함께 설명 후 결정
+
+**팀 기반 관리:**
+- 식이 교육 (영양사 협력), 환자 교육, 혈압·혈당·체중 목표 관리
+- eGFR·UACR 정기 모니터링 간격: CKD 단계별 차등 적용
+
+---
+
 ## 일차의료 의뢰 기준 (referral) [CLINICAL]
 
 - eGFR < 30 (G4) → 신장내과 의뢰
