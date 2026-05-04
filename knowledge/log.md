@@ -142,3 +142,13 @@
 2026-04-17 | by-drug/glp1-selection-strategy.md | 보완 — GLP-1RA 전당뇨 정상혈당 회복률 비교(tirzepatide 93.3%/semaglutide 81%/liraglutide 66%) [INSIGHTS] — Diabetes Ther 2026 PMID:41984373
 2026-04-17 | by-disease/urticaria.md | Protocol Deep Dive — 만성 두드러기 4배 증량 프로토콜 (약물별 표준/4배용량 표, 2~4주 재평가, CBC+CRP/ESR+TSH 동반검사, omalizumab 300mg q4w, UAS7/UCT 모니터링, 임신·수유 Pregnancy Category 표, 일차의료 의뢰 기준) [CLINICAL] — EAACI 2021 PMID:34536239 + PMC9533216 (Ryan 2022 primary care review) + PMC9300824 (Kocatürk 2022 pregnancy)
 2026-04-17 | skills/protocol-deep-dive/SKILL.md | 신규 스킬 — 리뷰 초록 한계 넘는 구체 protocol 추적 방법 명세 (PMC full text → publisher WebFetch → primary guideline 순)
+2026-05-04 | by-disease/pocus-lung.md | 추가 — 현장(병원 전) 폐 POCUS 프로토콜 섹션 (기흉·간질성 증후군 감별, 거버넌스 프레임워크) [CLINICAL] — J Ultrasound Med 2026 PMID:41793408
+2026-05-04 | by-disease/msk-injection-therapy.md | 추가 — 외측상과염 초음파 유도 주사 3군 비교 RCT (코르티코스테로이드=PRP=오존, 6개월 동등) [CLINICAL] — Future Sci OA 2026 PMID:41972873
+2026-05-04 | by-disease/palliative-pain.md | 추가 — 암성 신경병증 통증 코르티코스테로이드 반응 예측 인자 (WBC·KPS·두개내 종양 기원) [CLINICAL] — J Pain Symptom Manage 2026 PMID:41654095
+2026-05-04 | by-disease/palliative-pain.md | 추가 — 임종기 완화의료 증상 관리 AFP 리뷰 (통증·오심·변비·식욕부진·섬망·기분 단계적 처방) [CLINICAL] — Am Fam Physician 2025 PMID:41252832
+2026-05-04 | by-drug/glp1-selection-strategy.md | 추가 — GLP-1RA 암 위험 메타분석 (48 RCT 94,245명, 주요 암 위험 증가 없음, 중등도 근거) [CLINICAL] — Ann Intern Med 2025 PMID:41359966
+2026-05-04 | by-disease/cancer-fatigue.md | 신규 — 저항운동이 암 관련 피로를 유의하게 감소 (AFP POEM 2025) [CLINICAL] — Am Fam Physician 2025 PMID:41252831
+2026-05-04 | by-disease/chronic-pain-integrative.md | 신규 — 태극권·웰니스 RCT: 만성 통증+PTSD+우울 동시 개선, 대면=원격 동등 [CLINICAL] — J Psychiatr Res 2026 PMID:41774973
+2026-05-04 | by-disease/MASH.md | 추가 — MASLD 1차의료 FIB-4 분층 + 레스메티롬 FDA 승인 + 세마글루타이드 신흥 옵션 [CLINICAL] — JAAPA 2025 PMID:41369205
+2026-05-04 | by-disease/frailty.md | 추가 — 허약 ITC 포괄 리뷰 (다계통 예비능 저하, 스크리닝 도구, 역전 가능 중재) [CLINICAL] — Ann Intern Med 2026 PMID:41662715
+2026-05-04 | guidelines/deprescribing.md | 신규 — 캐나다 일차의료 부적절 처방 선별 가이드라인 (≥65세 처방 점검 강력권고, STOPP/START) [CLINICAL, REGULATORY] — Can Fam Physician 2026 PMID:41844291
