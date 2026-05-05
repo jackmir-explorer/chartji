@@ -4359,3 +4359,125 @@ KNOWLEDGE_BUNDLE["부적절처방"] = _deprescribing_v2;
 KNOWLEDGE_BUNDLE["PIP"] = _deprescribing_v2;
 KNOWLEDGE_BUNDLE["STOPP-START"] = _deprescribing_v2;
 KNOWLEDGE_BUNDLE["medication-review"] = _deprescribing_v2;
+
+/* ========== 5-1·5-2 cron Liby ingest (Batch 3 — 신경·정신) ========== */
+
+/* migraine — 편두통 예방 (5-1 cron). [CLINICAL + REGULATORY] */
+var _migraine_v2 = {
+  kind: "disease",
+  keywords: ["편두통","migraine","두통","headache","propranolol","metoprolol","topiramate","valproate","CGRP","erenumab","amitriptyline","botox","botulinumtoxin","만성편두통"],
+  primarySources: [
+    "Moreland P et al. Am Fam Physician 2025;111(5):443-450. PMID:40378325"
+  ],
+  sections: {
+    indication: {
+      content: "### 예방치료 적응증 [REGULATORY]\n다음 중 하나 이상 해당 시 예방치료 고려:\n- **편두통 빈도↑** (월 4회 이상이 일반적 기준)\n- **급성 치료 실패** 또는 금기\n- **급성 치료제 과사용** (오남용 두통 위험)\n- **환자 선호** (예방치료 원하는 경우)\n\n**예방치료 목표**: 두통 중증도·빈도 감소 / 급성 치료 반응 개선 / 장애일수 감소 / 삶의 질 향상 / 환자 주도권 부여",
+      sources: []
+    },
+    protocol: {
+      content: "### 1차 약물\n| 약물 | 특이사항 |\n|---|---|\n| **Propranolol** | 베타차단제; 고혈압 동반 시 유리 |\n| **Metoprolol** | 베타차단제; 천식·COPD 금기 |\n| **Topiramate** | 항경련제; **임신 금기**(기형), 체중 감소 부작용 |\n| **Divalproex / Valproate** | 항경련제; **임신 금기**, 체중 증가 |\n| **CGRP 수용체 길항제** (erenumab 등) | 편두통 특이 예방약; **비용·보험 장벽** 현실적 |\n\n### 2차 약물\n| 약물 | 특이사항 |\n|---|---|\n| **Amitriptyline** | TCA; 부작용(진정·구강건조) 많음 |\n| **Venlafaxine** | SNRI; 근거 수준 상대적 낮음 |\n\n### 만성 편두통 (월 15일 이상)\n- **OnabotulinumtoxinA (Botox)** 만성 편두통 예방 승인, 다른 약물과 동등 효과, 내약성 우수, **중단율 낮음**\n- 보험급여 기준 확인 필요 (국내: 신경과 처방 영역)",
+      sources: []
+    },
+    precaution: {
+      content: "### 흔한 편두통 유발 요인 — 환자 교육·일지 권고\n- 알코올, 불안/스트레스, 탈수, 과도한 카페인\n- 눈 피로, 공복, 수면 부족, 극도 피로",
+      sources: []
+    },
+    notes: {
+      content: "### 비약물 치료\n| 방법 | 근거 수준 |\n|---|---|\n| **인지행동치료(CBT)** | 지지 근거 있음 |\n| **침술(Acupuncture)** | 지지 근거 있음 |\n| **운동** | 지지 근거 있음 |\n| 신경 자극기 | 다양한 근거 |\n| Feverfew, 마그네슘, 멜라토닌 | 효과 있음; 일반적 내약성 양호 |",
+      sources: []
+    },
+    referral: {
+      content: "- **일차의료 처방 가능**: propranolol, metoprolol, topiramate, amitriptyline\n- CGRP 길항제: 비용 장벽 상담 후 처방 여부 결정\n- Botox / 신경자극기: 신경과 의뢰\n- 예방치료 2~3종 실패 시 신경과 의뢰\n- 관련: [[dizziness]] (편두통성 어지럼증·전정 편두통 감별)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["migraine"] = _migraine_v2;
+KNOWLEDGE_BUNDLE["편두통"] = _migraine_v2;
+KNOWLEDGE_BUNDLE["만성편두통"] = _migraine_v2;
+KNOWLEDGE_BUNDLE["CGRP"] = _migraine_v2;
+
+/* ischemic-stroke-prevention — 재발성 허혈성 뇌졸중 이차예방 (5-2 cron). [CLINICAL] */
+var _stroke_prevention_v2 = {
+  kind: "disease",
+  keywords: ["뇌졸중","stroke","TIA","이차예방","항혈소판","항응고제","antiplatelet","anticoagulation","아스피린","클로피도그렐","DAPT","심방세동","NOAC","스타틴","경동맥 협착","CEA","OSA"],
+  primarySources: [
+    "Ford B et al. Am Fam Physician 2026 Jan;113(1):57-69. PMID:41544282"
+  ],
+  sections: {
+    definition: {
+      content: "허혈성 뇌졸중: 전체 뇌졸중의 **87%**. 5년 내 재발률 **12%**. 이차예방 핵심: **원인 파악 + 위험인자 조절 + 적절한 항혈전 요법**.",
+      sources: []
+    },
+    protocol: {
+      content: "### 원인별 항혈전 전략\n| 뇌졸중 원인 | 1차 항혈전 | 비고 |\n|---|---|---|\n| **비색전성** (죽상경화·소혈관) | 항혈소판 | 아스피린 단독 또는 아스피린+클로피도그렐 |\n| **AF 동반** | 항응고제 | NOAC 우선 (와파린 대비 비열등 이상) |\n| **원인 불명 (Cryptogenic)** | 장기 심장 모니터링 후 결정 | 잠복성 AF 발견 시 항응고제 전환 |\n\n### TIA / 경미한 뇌졸중 초기 (21일 이내)\n- **이중 항혈소판 (DAPT)**: 아스피린 + 클로피도그렐 — **단기(21일)** 사용 후 단독 전환\n- **21일 초과 DAPT 금지** — 출혈 위험 증가\n\n### 혈압 조절\n- **목표: 130/80 mmHg 미만**\n- 뇌졸중 후 혈압 조절이 재발 예방 가장 중요한 단일 인자\n- 약물: ACEi 또는 ARB + 이뇨제 조합 일반적 선호\n\n### 스타틴 치료\n- **모든 허혈성 뇌졸중·TIA 환자에게 스타틴 권고 (원인 무관)**\n- 강도: 고강도 (atorvastatin 40~80mg or rosuvastatin 20~40mg)\n- LDL-C 목표: **<70 mg/dL**\n- 출혈성 뇌졸중 병력 시 개별화 필요\n\n### 위험인자 통합 관리\n| 위험인자 | 목표 / 개입 |\n|---|---|\n| 혈압 | <130/80 mmHg |\n| 혈당 | HbA1c 개별화 (고령·인지저하 시 완화) |\n| 지질 | LDL-C <70 mg/dL |\n| 식이 | 지중해식 / DASH |\n| 운동 | 주 150분 중강도 유산소 |\n| 흡연 | 완전 금연 |\n| 음주 | 과도한 음주 중단 |\n| **OSA** | 스크리닝 + CPAP |",
+      sources: []
+    },
+    monitoring: {
+      content: "- **원인 불명 뇌졸중**: 24~48h ECG 외에 **장기 심장 모니터링** (30일+ 홀터 또는 삽입형 루프) — 잠복성 AF 발견 시 항응고제 전환\n- AF 진단 후 항응고제 시작: 출혈 전환 위험 고려해 뇌졸중 후 **4~14일** 후 시작 권고",
+      sources: []
+    },
+    referral: {
+      content: "### 경동맥 협착\n- 경동맥 협착 + TIA·동측 뇌졸중 → 혈관외과/신경외과\n  - **≥70% 협착**: 경동맥 내막절제술(CEA) 우선 고려\n  - 50~69%: 선택적 — 수술 위험 vs 이익 개별화\n- 난원공 개존(PFO) + 원인 불명 뇌졸중 → 신경과·순환기 (폐쇄술 고려)",
+      sources: []
+    },
+    precaution: {
+      content: "- 항혈소판 + 항응고제 병합 → 출혈 위험 크게 증가 — AF 동반 뇌졸중에서 항혈소판 중단하고 항응고제 단독\n- 출혈성 뇌졸중 병력: 스타틴·항혈소판제 신중 재검토\n- 신기능 저하 환자: NOAC 용량 조정\n- 관련: [[sleep-apnea]] (OSA 스크리닝·CPAP)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["ischemic-stroke-prevention"] = _stroke_prevention_v2;
+KNOWLEDGE_BUNDLE["뇌졸중예방"] = _stroke_prevention_v2;
+KNOWLEDGE_BUNDLE["허혈성뇌졸중"] = _stroke_prevention_v2;
+KNOWLEDGE_BUNDLE["TIA"] = _stroke_prevention_v2;
+KNOWLEDGE_BUNDLE["DAPT"] = _stroke_prevention_v2;
+KNOWLEDGE_BUNDLE["secondary-stroke-prevention"] = _stroke_prevention_v2;
+
+/* opioid-use-disorder — OUD·MOUD·금단·과다복용 (5-2 cron). [CLINICAL] */
+var _oud_v2 = {
+  kind: "disease",
+  keywords: ["OUD","오피오이드 사용장애","opioid use disorder","MOUD","부프레노르핀","buprenorphine","메타돈","methadone","날트렉손","naltrexone","날록손","naloxone","과다복용","overdose","금단증상","Suboxone","로페시딘","clonidine"],
+  primarySources: [
+    "Harris MTH et al. JAMA 2026;335(11):986-998. PMID:41671014, DOI:10.1001/jama.2025.26348"
+  ],
+  sections: {
+    definition: {
+      content: "OUD는 강박적 오피오이드 사용으로 직장·학교·가정 기능 장애 및 심각한 고통을 초래하는 질환. 세계 3위 물질사용장애. 미국 2022년 유병률 3.7% (~937만 명).",
+      sources: []
+    },
+    notes: {
+      content: "### 핵심 수치\n- OUD 환자 중 MOUD 치료율: **25.1%** (2022) — 심각한 치료 공백\n- MOUD vs 미사용 — all-cause 사망률: **aHR 0.52** (95% CI 0.42–0.63)\n- 지역사회 날록손 배포 → 과다복용 사망률 **25~46% 감소**",
+      sources: []
+    },
+    comparison: {
+      content: "### MOUD 3종 비교\n| 약물 | 처방 장소 | 사망률 감소 | 특이사항 |\n|---|---|---|---|\n| **부프레노르핀** | 외래 처방 가능, 가정 복용 | ✓ | 부분 작용제; 단독 or 날록손 복합(Suboxone) |\n| **메타돈** | 연방 규정 클리닉 직접 방문만 | ✓ | 완전 작용제; 접근성 제한 |\n| **날트렉손** | 외래 처방 가능, 가정 복용 | 데이터 제한적 | 길항제; 금단 후 7~14일 경과 후 시작 |\n\n**처방 원칙**: 공유 의사 결정으로 선택. 부프레노르핀이 외래 처방 접근성 최고 — 일차의료에서 직접 처방 가능.",
+      sources: []
+    },
+    protocol: {
+      content: "### 오피오이드 금단 관리\n**금단 증상**: 불안·불면·통증·오심·구토·설사\n\n| 약물 | 역할 |\n|---|---|\n| **부프레노르핀 또는 메타돈** | 오피오이드 작용제 — 금단 완화 (동시 MOUD 시작) |\n| **로페시딘 (Lofexidine)** | α2 작용제 — 자율신경 금단 (미국 FDA 승인) |\n| **클로니딘 (Clonidine)** | α2 — 로페시딘 대안 (저혈압 주의) |\n| **이부프로펜** | 통증 |\n| **온단세트론** | 오심·구토 |\n\n⚠ 금단 치료 후 **반드시 MOUD 연결** — 금단만 치료하고 MOUD 없으면 사망률 감소 없음 (aHR 0.52는 MOUD 지속 기반)\n\n### 오피오이드 과다복용 응급\n**날록손 (Naloxone)**:\n| 경로 | 용량 |\n|---|---|\n| 근주 (IM) | 0.4 mg |\n| 비강 (Intranasal) | 2~4 mg |\n\n- **목표**: 정상 호흡수 회복에 필요한 **최소 용량** (과다 투여 시 급성 금단)\n- 작용 시간 30~90분 — 오피오이드 지속 시 반복 투여\n- **지역사회 배포**: OUD 환자·가족에게 날록손 처방 → 사망률 25~46% ↓",
+      sources: []
+    },
+    referral: {
+      content: "- OUD + 공존 정신질환 → 정신건강의학과 협진\n- 메타돈 치료 필요 → 중독 전문 클리닉\n- 복합 물질 사용장애 → 통합 중독 치료 프로그램\n- **한국 내 마약류 처방 규정·MOUD 적용 범위 확인 필수**",
+      sources: []
+    },
+    precaution: {
+      content: "- 날트렉손은 오피오이드 완전 중단 후 **7~14일 후 시작** (그 전 투여 시 급성 금단)\n- 부프레노르핀 유도: 경증 금단 발현 후 시작 (COWS 점수 확인)\n- 메타돈 **QT 연장 위험** — 심전도 모니터링\n- 한국 의료 환경: MOUD 처방 가능 범위·규정 미국과 다름 — 처방 전 규제 확인 필수",
+      sources: []
+    },
+    counseling: {
+      content: "1. **마약성 진통제 장기 처방 환자**: OUD 발생 위험 주기적 스크리닝 (AUDIT-C 변형, DSM-5 기준)\n2. **OUD 진단 시**: 공유의사결정으로 부프레노르핀 외래 처방 시작 고려 (한국 규정 확인)\n3. **날록손 처방 확대**: OUD 환자·고용량 오피오이드 사용자에게 상비 처방 권고\n4. **치료율 25%**: OUD는 만성질환 — '의지 문제' 아님 환자·가족 교육",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["opioid-use-disorder"] = _oud_v2;
+KNOWLEDGE_BUNDLE["OUD"] = _oud_v2;
+KNOWLEDGE_BUNDLE["MOUD"] = _oud_v2;
+KNOWLEDGE_BUNDLE["오피오이드사용장애"] = _oud_v2;
+KNOWLEDGE_BUNDLE["naloxone"] = _oud_v2;
+KNOWLEDGE_BUNDLE["날록손"] = _oud_v2;

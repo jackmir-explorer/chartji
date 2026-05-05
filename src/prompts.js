@@ -120,6 +120,9 @@ JSON만 반환 (다른 텍스트 절대 금지):
   msk-injection-therapy (근골격 주사/코르티코·HA·PRP·prolotherapy/외측상과염 3제 동등 RCT/초음파 유도 정확도·안전성 — 통증 외래 시술 결정 맥락)
   goals-of-care-acp (사전돌봄계획/GOC 7대 핵심 요소/EHR 문서화·대화 트리거/POLST·DNAR 연동 — 중증·만성질환 ACP 대화 맥락)
   deprescribing (부적절 처방·STOPP/START·Beers/노인 다약제 연 1회 재검토/PPI·BZD·항콜린·임종기 LBM 우선 — 처방 최적화 맥락)
+  migraine (편두통 예방치료/월 4회 이상·과사용 두통/propranolol·topiramate·CGRP 길항제·botox/임신 금기 — 예방 약물 결정 맥락)
+  ischemic-stroke-prevention (허혈성 뇌졸중·TIA 이차예방/원인별 항혈전(비색전·AF·cryptogenic)/DAPT 21일 한정/혈압<130-80·LDL<70·고강도 스타틴 — 재발 예방 통합관리 맥락)
+  opioid-use-disorder (OUD/MOUD 부프레노르핀·메타돈·날트렉손/오피오이드 금단·날록손 응급/한국 마약류 규정 별도 — 오피오이드 사용장애 평가·치료 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */
