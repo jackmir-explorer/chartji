@@ -4656,3 +4656,174 @@ var _cardiac_rehab_v2 = {
 KNOWLEDGE_BUNDLE["cardiac-rehabilitation"] = _cardiac_rehab_v2;
 KNOWLEDGE_BUNDLE["심장재활"] = _cardiac_rehab_v2;
 KNOWLEDGE_BUNDLE["cardiac-rehab"] = _cardiac_rehab_v2;
+
+/* ========== 5-2·5-4 cron Liby ingest (Batch 6 — 만성질환 보강 5개) ========== */
+
+/* CKD v2 보강 — VA/DoD 2025 + Finerenone + KDIGO/AKIPS 통합 (5-2 cron) */
+var _ckd_v2_full = {
+  kind: "disease",
+  keywords: ["CKD","만성신장병","만성신부전","eGFR","시스타틴C","cystatin C","크레아티닌","신기능 추적","SGLT-2i","GLP-1","피네레논","finerenone","VA/DoD","KDIGO"],
+  primarySources: [
+    "Scandrett K et al. BMJ 2026;392:e085005. PMID:41856526",
+    "Schwartz AR et al. 2025 VA/DoD CKD CPG. Ann Intern Med 2025 Dec 30;179(3):411-424. PMID:41461086"
+  ],
+  sections: {
+    definition: {
+      content: "만성 신장병(CKD): eGFR <60 또는 신손상 지표 3개월 이상. G3 중등도(eGFR 30-59).",
+      sources: []
+    },
+    monitoring: {
+      content: "### CKD G3 — 이중 바이오마커 방정식 (BMJ 2026)\n| 방정식 | 측정 GFR 일치율 |\n|---|---|\n| CKD-EPI (Cr 단독) | 73.1% — GFR 하락 **과소평가** 위험 |\n| CKD-EPI (Cr + 시스타틴C) | 78.6% — 권고 우선 |\n| EKFC (이중) | **80.2% 최고** |\n\n전체 15.9%에서 3년 내 진행. 진행 감지 민감도 <54%·특이도 >90%.\n\n### 정기 모니터링\n- eGFR: 안정 G3 연 2회 / G3b 진행 중 연 4회\n- UACR: ACR ≥30 시 신손상 표지\n- 전해질 (K⁺), 중탄산염, 혈압, Hb (신성빈혈)\n- **6-12개월 간격 eGFR + 시스타틴C 이중 측정** (진행 추적 정확도)",
+      sources: []
+    },
+    protocol: {
+      content: "### VA/DoD 2025 — 23 GRADE 권고 핵심 update\n| 약물/전략 | 2025 권고 |\n|---|---|\n| **SGLT-2 억제제** | CKD+T2DM 또는 단백뇨 CKD에서 **신장 보호 1순위** 강화 |\n| **GLP-1 수용체 작용제** | CKD+T2DM 심혈관·신장 보호 신규 권고 |\n| **피네레논 (Finerenone)** | 비스테로이드성 MRA — T2DM+CKD 단백뇨 추가 신장 보호 |\n| **스타틴** | 심혈관 위험 감소 강화 권고 |\n| **ACEi / ARB** | 혈압·단백뇨 — 기존 1차 유지 |\n| **조영제 유발 AKI 예방** | 생리식염수 수화 프로토콜 강화 |\n\n### Finerenone 처방 검토 대상\nT2DM + CKD (단백뇨 동반) + SGLT-2i 사용 중에도 진행하는 경우 → 내분비·신장내과 협진 후 피네레논 추가 고려.\n\n### 공유 의사 결정\n- 투석·이식 vs 보존적 관리 — 환자 선호·기능 상태 기반 개별화\n- 진행·심혈관 위험 함께 설명 후 결정",
+      sources: []
+    },
+    referral: {
+      content: "- eGFR <30 (G4) → 신장내과\n- eGFR 30–44 (G3b) + 단백뇨 (ACR >300) → 조기 의뢰\n- eGFR 빠른 감소 (>5 mL/min/1.73m²/year) → 의뢰\n- 원인 불명 CKD·혈뇨 동반·약물 내성 고혈압 → 의뢰\n- 관련: [[diabetes-dyslipidemia]], [[heart-failure]], [[glp1-selection-strategy]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["CKD"] = _ckd_v2_full;
+KNOWLEDGE_BUNDLE["만성콩팥병"] = _ckd_v2_full;
+KNOWLEDGE_BUNDLE["만성신장병"] = _ckd_v2_full;
+KNOWLEDGE_BUNDLE["chronic-kidney-disease"] = _ckd_v2_full;
+KNOWLEDGE_BUNDLE["finerenone"] = _ckd_v2_full;
+
+/* MASH v2 보강 — JAAPA 2025 MASLD 1차의료 가이드 + 레스메티롬 (5-4 cron) */
+var _mash_v2_full = {
+  kind: "disease",
+  keywords: ["MASH","MASLD","비알코올지방간염","NAFLD","NASH","지방간염","FIB-4","GLP-1","semaglutide","resmetirom","Rezdiffra","FibroScan","간섬유화"],
+  primarySources: [
+    "Geary A. JAAPA 2025 Dec 23;39(1):21-25. PMID:41369205, DOI:10.1097/01.JAA.0000000000000296"
+  ],
+  sections: {
+    definition: {
+      content: "MASLD (Metabolic dysfunction-associated steatotic liver disease) = 대사 이상 동반 지방간. 진행 형: MASH (MASL + 염증·간세포 손상). 미국 NAFLD 유병률 ~25%, MASH 1.5-6.5%.",
+      sources: []
+    },
+    exam: {
+      content: "### FIB-4 기반 섬유화 위험 분층 (1차의료 적용)\n| FIB-4 값 | 해석 | 일차의료 행동 |\n|---|---|---|\n| **<1.30** | 고도 섬유화 배제 가능 | 추적 + 생활습관 교육 |\n| **1.30–2.67** | 중간 위험 | **FibroScan 또는 소화기내과 협진** |\n| **≥2.67** | 고도 섬유화 의심 | **간전문의 의뢰** |\n\n*FIB-4 = 나이(세) × AST(IU/L) / [혈소판(×10⁹/L) × √ALT(IU/L)]*",
+      sources: []
+    },
+    protocol: {
+      content: "### 레스메티롬 (Resmetirom, Rezdiffra) — FDA 승인 MASH 약물\n**적응증**: 비간경변 MASH + **중등도~고도 섬유화 (F2–F3)** — **간 생검 불필요** (AASLD 지침 지지)\n- 기전: 간 선택적 갑상선호르몬 수용체 β(THRβ) 작용제 → 간 지방·MASH 조직학 개선\n- 용량: **80mg 또는 100mg 1일 1회** (체중 기준)\n- 약물 상호작용: CYP3A4 기질 다수 — 스타틴·면역억제제 상호작용 확인 필수\n- 안전성 모니터링: ALT/AST, 임신 가능 여성 **피임 필수** (생식독성)\n\n**처방 포인트**:\n- FIB-4 ≥1.30 + 초음파 지방간 → FibroScan F2 이상 확인 후 처방 고려\n- 1차의료 시작 가능하나 **간전문의 협진 권장** (복잡 모니터링)\n\n### 세마글루타이드 (Semaglutide) — MASH 신흥 옵션\n- 비간경변 MASH 조직학적 개선 데이터 축적 중\n- 비만+MASH 환자에서 체중 감량 + 간 개선 이중 효과\n- 2025년 기준 MASH 단독 적응증 FDA 미승인 (비만·당뇨 적응증 내 사용)\n\n### 생활습관 — 여전히 1차\n- 체중 **5~10% 감량** → 간지방·ALT 개선\n- 체중 **10% 이상** → MASH 조직학적 해소 가능\n- 알코올 금주, 당·정제탄수화물 제한, 유산소+저항 운동 병행",
+      sources: []
+    },
+    referral: {
+      content: "- FIB-4 ≥2.67 → 간전문의 의뢰\n- FibroScan F2 이상 + 레스메티롬 처방 고려 → 간전문의 협진\n- 알코올 사용장애 동반 시 (MASH-Alc 중복) → 간내과 + 중독전문\n- 관련: [[wegovy]], [[glp1-selection-strategy]], [[diabetes-dyslipidemia]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["MASH"] = _mash_v2_full;
+KNOWLEDGE_BUNDLE["MASLD"] = _mash_v2_full;
+KNOWLEDGE_BUNDLE["NAFLD"] = _mash_v2_full;
+KNOWLEDGE_BUNDLE["NASH"] = _mash_v2_full;
+KNOWLEDGE_BUNDLE["지방간염"] = _mash_v2_full;
+KNOWLEDGE_BUNDLE["FIB-4"] = _mash_v2_full;
+KNOWLEDGE_BUNDLE["resmetirom"] = _mash_v2_full;
+KNOWLEDGE_BUNDLE["Rezdiffra"] = _mash_v2_full;
+
+/* frailty v2 보강 — Ann Int Med ITC 2026 (5-4 cron) */
+var _frailty_v2_full = {
+  kind: "disease",
+  keywords: ["frailty","허약","노쇠","frailty syndrome","CFS","Clinical Frailty Scale","FRAIL Scale","Fried","CGA","comprehensive geriatric assessment","deprescribing"],
+  primarySources: [
+    "Orkaby AR et al. Frailty. Ann Intern Med 2026 Feb 10;179(2):ITC17-ITC32. PMID:41662715, DOI:10.7326/ANNALS-25-04412"
+  ],
+  sections: {
+    definition: {
+      content: "허약(Frailty): 다계통 생리적 예비능(physiologic reserve) 저하 증후군. 스트레스(감염·수술·약물)에 회복력 저하 → **입원·장애·시설화·사망 위험 증가** + 의인성 합병증(고위험 약물·시술) 피해 가능성 ↑.\n\n**핵심 메시지: 허약은 가역적**. 진단 후 즉각 개입으로 기능 유지·개선 가능. '노화이니 어쩔 수 없다'는 허무주의 탈피.",
+      sources: []
+    },
+    exam: {
+      content: "### 허약 스크리닝 — 진료 환경별 도구 (ITC 2026)\n| 환경 | 권장 도구 | 특징 |\n|---|---|---|\n| **외래** | **FRAIL Scale, CFS** | 빠른 선별 (5문항) |\n| **입원** | CFS, Fried Phenotype | 시술 전 위험 평가 |\n| **지역사회 종합** | CGA (Comprehensive Geriatric Assessment) | 다영역 평가 |\n\n**가이드라인**: 만성질환 관리·입원 중 치료 모두에서 허약 스크리닝 권고. 허약 확인 → 위험 감소 + 환자 목표 정렬 ([[goals-of-care-acp]] 연계).",
+      sources: []
+    },
+    protocol: {
+      content: "### 허약 역전 가능 중재 (ITC 2026)\n- **영양 중재** — 단백질 보충 ≥1.2g/kg/일\n- **저항운동 + 균형 훈련**\n- **다약제 감소 (Deprescribing)** — [[deprescribing]], [[prescribing-cascade]] 참조\n- **만성질환 최적화** — 빈혈·갑상선·우울 교정\n\n### 일차의료 4대 핵심 레버 (Fam Med Community Health 2025 기존 근거)\n| 중재 | 효과 |\n|---|---|\n| **비계획 입원 회피** | 가장 큰 회복 인자 |\n| **다약제 감소** | 의인성 합병증 차단 |\n| **낙상 방지** | 골절 → 기능 저하 cascade 차단 |\n| **예방접종 (인플루엔자·폐렴구균·대상포진)** | 감염 → 비계획 입원 차단 |",
+      sources: []
+    },
+    referral: {
+      content: "- CFS ≥5 + 다중이환 → 노인의학과 CGA\n- 비계획 입원 반복 → 노인의학과·재택의료\n- 영양 중재 필요 → 영양사 협진\n- 관련: [[goals-of-care-acp]], [[deprescribing]], [[prescribing-cascade]], [[home-based-hypertension]]",
+      sources: []
+    },
+    notes: {
+      content: "허약은 가역적임을 환자·보호자에게 명확히 전달. 일차의료에서 다약제 재검토·낙상 예방·예방접종이 허약 회복의 핵심 레버. ITC 2026 표준화: 정의·스크리닝·역전 가능성 모두 일관 메시지.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["frailty"] = _frailty_v2_full;
+KNOWLEDGE_BUNDLE["허약"] = _frailty_v2_full;
+KNOWLEDGE_BUNDLE["노쇠"] = _frailty_v2_full;
+KNOWLEDGE_BUNDLE["CFS"] = _frailty_v2_full;
+KNOWLEDGE_BUNDLE["FRAIL-Scale"] = _frailty_v2_full;
+KNOWLEDGE_BUNDLE["CGA"] = _frailty_v2_full;
+
+/* glp1-selection-strategy v2 보강 — 암 위험 메타분석 (5-4 cron) */
+var _glp1_strategy_v2_full = {
+  kind: "topic",
+  keywords: ["GLP-1","GLP-1RA","semaglutide","tirzepatide","wegovy","ozempic","mounjaro","NAION","비뇨생식기감염","UTI","SGLT-2 비교","cancer-risk","갑상선암","췌장암","유방암"],
+  primarySources: [
+    "Escudero C et al. Endocrinology: What You May Have Missed in 2025. Ann Intern Med 2026. PMID:41974004",
+    "Ko A et al. Risk for Cancer With GLP-1RA: SR + Meta-analysis. Ann Intern Med 2025 Dec 9;179(2):216-229. PMID:41359966"
+  ],
+  sections: {
+    definition: {
+      content: "GLP-1 수용체 작용제(GLP-1RA)·이중작용제 선택 전략. 비만·당뇨·MASH·CKD·심부전 적응증 확장. SGLT-2i와의 비교·암 위험 안전성·동반질환별 우선순위.",
+      sources: []
+    },
+    comparison: {
+      content: "### 동반질환별 GLP-1 vs SGLT-2 우선순위\n- **반복성 UTI 환자**: **GLP-1 우선** (SGLT-2i는 비뇨생식기 감염↑)\n- **HFpEF·HFrEF**: SGLT-2i 1순위 (다파글리플로진·엠파글리플로진), GLP-1은 비만+HF 동반 시 보조\n- **CKD+T2DM 단백뇨**: SGLT-2i 1순위, GLP-1은 추가 신장 보호\n- **MASH**: GLP-1 (특히 세마글루타이드) 우선 — 체중 + 간 동시\n\n### NAION 시야 부작용 신호 (2025)\n- GLP-1 사용 환자 코호트에서 NAION 발생률 ↑ 신호 (인과 미확립)\n- 모니터링 교육 추가: 갑작스런 시야 결손 → 즉시 안과",
+      sources: []
+    },
+    notes: {
+      content: "### GLP-1RA 암 위험 — 메타분석 안전성 (Ko 2025)\n**48 RCT 메타, n=94,245명 위약 대조 무작위 시험.**\n\n**결론: GLP-1RA는 주요 암 위험 증가 없음 (중등도 근거)**\n| 암 종류 | OR (95% CI) | 근거 |\n|---|---|---|\n| 갑상선암 | 1.37 (0.82–2.31) | 중등도 |\n| 췌장암 | 0.84 (0.53–1.35) | 중등도 |\n| 유방암 | 0.95 (0.60–1.49) | 중등도 |\n| 신장암 | 1.12 (0.78–1.60) | 중등도 |\n| 대장·식도·간·담낭·난소·자궁내막·다발골수종·수막종 | 효과 없음 | 낮음 |\n| 위암 | 불확실 | 매우 낮음 |\n\n**서브그룹**: 세마글루타이드·티르제파타이드 단독에서도 일관. 추적·집단·용량·지속시간 하위분석 일관.\n\n### 환자 상담 표준 답변\n- '암 위험 높아지지 않나요?' → **'48개 대규모 임상시험 94,245명 분석에서 주요 암 위험 증가 없습니다'**\n- 처방 동의 안전성 상담 근거\n- 갑상선 수질암(MTC) 주의 — 메타 미포함; FDA 블랙박스 경고 유지\n\n**한계**: 포함 RCT가 암 결과 평가 설계 아님, 추적 기간 단기 — 장기 위험·편익 추가 연구 필요.",
+      sources: []
+    },
+    referral: {
+      content: "- MASH 처방 고려 시 → 간전문의 협진 ([[MASH]])\n- 비뇨생식기 감염 반복 → SGLT-2i 회피, GLP-1 검토\n- NAION 시야 결손 → 안과 즉시\n- 관련: [[obesity]], [[diabetes-dyslipidemia]], [[heart-failure]], [[CKD]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["glp1-selection-strategy"] = _glp1_strategy_v2_full;
+KNOWLEDGE_BUNDLE["GLP-1"] = _glp1_strategy_v2_full;
+KNOWLEDGE_BUNDLE["GLP-1RA"] = _glp1_strategy_v2_full;
+KNOWLEDGE_BUNDLE["GLP-1-cancer-risk"] = _glp1_strategy_v2_full;
+
+/* depression-screening — PETRUSHKA 개인맞춤 항우울제 처방 (5-1 cron). [CLINICAL] */
+var _depression_screening_v2 = {
+  kind: "disease",
+  keywords: ["우울증 스크리닝","depression screening","PHQ-9","GAD-7","항우울제","SSRI","PETRUSHKA","개인맞춤 처방","first-line antidepressant","MDD"],
+  primarySources: [
+    "Cipriani A et al. JAMA 2026;335(14):1219-1231. PMID:41779422, DOI:10.1001/jama.2026.1327"
+  ],
+  sections: {
+    exam: {
+      content: "### 스크리닝 도구\n- **PHQ-9** (우울증 — 9문항)\n- **GAD-7** (불안 — 7문항)\n\n### 동반 평가\n- 자살 사고 (PHQ-9 #9)\n- 양극성 우울 의심 (조증 삽화 과거력)\n- 신체질환·약물 유발 우울 감별",
+      sources: []
+    },
+    protocol: {
+      content: "### 항우울제 개인맞춤 처방 — PETRUSHKA RCT (Cipriani 2026)\n**3개국 47개 기관, n=540, 중등도~고도 MDD**\n\n| 결과 | PETRUSHKA 결정지원 | 일반 처방 | 효과 |\n|---|---|---|---|\n| **8주 중단율 (any cause)** | **17%** | 27% | RR 0.62 (CI 0.44–0.88), p=0.007 |\n| **8주 중단율 (부작용)** | **9%** | 16% | RR 0.59 (CI 0.36–0.97), p=0.04 |\n| **24주 PHQ-9** | **7.1** | 9.2 | 차이 –1.92, p<0.001 |\n| **24주 GAD-7** | **4.6** | 5.8 | 차이 –1.39, p=0.002 |\n\n**핵심 임상 메시지**:\n- 근거 기반 알고리즘으로 첫 항우울제를 **개인 증상 프로파일에 맞게 선택**하면 조기 중단 38% 감소\n- 첫 처방 선택의 정확도가 치료 결과 결정\n- 한계: 비맹검 설계, 탈락률 높음 → 결과 해석 시 주의\n\n### 일차의료 적용\n- 중등도 이상 MDD 항우울제 처음 시작 시 환자의 증상 특이성(불면·불안·체중·성기능 등) 고려한 처방\n- **SSRI 일률 처방보다 증상 맞춤 선택 원칙 강화**",
+      sources: []
+    },
+    referral: {
+      content: "- 자살 사고 양성 → 즉시 정신건강의학과·응급실\n- 항우울제 2-3종 실패 → 정신건강의학과 (TRD 평가)\n- 양극성 의심 → 정신건강의학과\n- 관련: [[anxiety-depression-cbt]], [[chronic-pain-integrative]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["depression-screening"] = _depression_screening_v2;
+KNOWLEDGE_BUNDLE["우울증스크리닝"] = _depression_screening_v2;
+KNOWLEDGE_BUNDLE["PHQ-9"] = _depression_screening_v2;
+KNOWLEDGE_BUNDLE["PETRUSHKA"] = _depression_screening_v2;
