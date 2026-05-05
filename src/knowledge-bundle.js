@@ -4481,3 +4481,101 @@ KNOWLEDGE_BUNDLE["MOUD"] = _oud_v2;
 KNOWLEDGE_BUNDLE["오피오이드사용장애"] = _oud_v2;
 KNOWLEDGE_BUNDLE["naloxone"] = _oud_v2;
 KNOWLEDGE_BUNDLE["날록손"] = _oud_v2;
+
+/* ========== 5-1·5-4 cron Liby ingest (Batch 4 — 예방·암·통증) ========== */
+
+/* cervical-cancer-screening — 자궁경부암 스크리닝 (5-1 cron). [REGULATORY] */
+var _cervical_screening_v2 = {
+  kind: "disease",
+  keywords: ["자궁경부암","cervical cancer","HPV","세포검사","Pap smear","스크리닝","ASCCP","USPSTF","primary HPV","KNHSP","CIN"],
+  primarySources: [
+    "Wiser A et al. Am Fam Physician 2026;113(2):137-144. PMID:41839104"
+  ],
+  sections: {
+    indication: {
+      content: "### 스크리닝 대상\n- **무증상 평균위험군** 자궁경부암 스크리닝\n- 자궁경부암: 전 세계 여성 4번째 흔한 암\n- 미국 내 **과소 스크리닝**이 사회경제적 격차와 연관",
+      sources: []
+    },
+    schedule: {
+      content: "### 시작 연령 및 주기\n| 기관 | 시작 연령 | 방법 | 주기 |\n|---|---|---|---|\n| **ACS** (미국암학회) | 25세 | Primary HPV 선호 | 5년마다 |\n| **USPSTF 2024 초안** | 30세 | Primary HPV 선호 | 5년마다 |\n| USPSTF 2024 (21~29세) | 21세 | 세포검사 단독 | 3년마다 |\n| **국내 KNHSP** | 만 20세 이상 | 세포검사 | **2년마다** |\n\n### 종료 기준\n**65세** 종료 — 단, 아래 조건 **모두** 충족 시:\n1. 최근 25년간 **고등급 CIN 또는 자궁경부암 없음**\n2. **60세 및 65세**에서 적절한 음성 스크리닝 결과",
+      sources: []
+    },
+    protocol: {
+      content: "### 스크리닝 방법\n| 방법 | 설명 |\n|---|---|\n| **세포검사 단독 (Cytology)** | Pap smear; 단독 사용 허용 |\n| **공동검사 (Cotesting)** | 세포검사 + HPV 검사 동시; 허용 |\n| **Primary HPV 검사** | HPV 단독 검사; **현재 선호 방법** |\n\n### 비정상 결과 관리\n- **2019 ASCCP 위험 기반 관리 합의 지침** 준수\n- 결과 이상 시 → 위험도 기반 접근 (즉시 질확대경 / 관찰 / 반복검사 분류)",
+      sources: []
+    },
+    referral: {
+      content: "- 일차의료에서 직접 스크리닝·상담 가능\n- 비정상 결과 (고위험 HPV 양성, ASC-H, HSIL 이상) → 산부인과 (질확대경)\n- 자궁경부암 과거력 / 면역저하자 → 개별화 (조기 시작·짧은 주기)\n- 관련: [[hpv-vaccine]] / [[adult-vaccination-summary]] HPV 예방접종",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["cervical-cancer-screening"] = _cervical_screening_v2;
+KNOWLEDGE_BUNDLE["자궁경부암스크리닝"] = _cervical_screening_v2;
+KNOWLEDGE_BUNDLE["HPV-screening"] = _cervical_screening_v2;
+KNOWLEDGE_BUNDLE["Pap-smear"] = _cervical_screening_v2;
+
+/* cancer-fatigue — 암 관련 피로 + 저항운동 (5-4 cron). [CLINICAL] */
+var _cancer_fatigue_v2 = {
+  kind: "disease",
+  keywords: ["암 관련 피로","cancer-related fatigue","CRF","저항운동","resistance training","운동처방","항암치료","재활"],
+  primarySources: [
+    "Eckert H et al. Am Fam Physician 2025 Nov;112(5):487-488. PMID:41252831"
+  ],
+  sections: {
+    notes: {
+      content: "### 핵심 결론 [출처: Eckert H AFP 2025 Nov POEM]\n**저항운동(Resistance Training)은 암 환자의 암 관련 피로(CRF)를 유의하게 감소시킨다.**\n\n- AFP POEM 형식 — 일차의료 즉시 적용 권고 수준 요약\n- 저항운동이 항암치료 중·후 피로 관리에 근거 기반 중재\n- [초록 미제공 — POEM 포맷, 전문 미확인]",
+      sources: []
+    },
+    protocol: {
+      content: "### 외래 운동 처방 원칙\n- 암 관련 피로 호소 시 **저항운동을 적극적 치료 옵션**으로 제시\n- **항암치료 중 시작 가능** — 중단 말고 유지·시작 권고\n- 운동 강도: 환자 컨디션에 맞게 조절 (저~중강도로 시작)\n\n### 처방 포인트\n- '운동해도 되나요?' → '저항운동이 피로에 도움이 됩니다' — 근거 기반 답변\n- 재활 의뢰 또는 운동 교육 처방전 발급 근거\n- 피로 악화 시 → 운동 중단보다 강도 감소 후 지속",
+      sources: []
+    },
+    precaution: {
+      content: "- 골 전이 부위 충격 운동 금지 — 병적 골절 위험\n- 혈소판 감소증 (항암 기간) → 출혈 위험, 강도 제한\n- 중심정맥관 (Port, PICC) 삽입 환자 → 해당 팔 저항운동 주의",
+      sources: []
+    },
+    referral: {
+      content: "- 심한 피로 + 기저 빈혈·심폐 기능 저하 → 재활의학 (운동 처방 최적화)\n- 암성 통증·골 전이 동반 → 운동 종류·부하 세심 조정 (전문가 협진)\n- 관련: [[palliative-pain]] (암성 통증 완화의료)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["cancer-fatigue"] = _cancer_fatigue_v2;
+KNOWLEDGE_BUNDLE["암관련피로"] = _cancer_fatigue_v2;
+KNOWLEDGE_BUNDLE["CRF"] = _cancer_fatigue_v2;
+KNOWLEDGE_BUNDLE["resistance-training-cancer"] = _cancer_fatigue_v2;
+
+/* chronic-pain-integrative — 만성 통증 통합 중재 (5-4 cron). [CLINICAL — 조건부] */
+var _chronic_pain_integrative_v2 = {
+  kind: "disease",
+  keywords: ["만성 통증","chronic pain","태극권","Tai Chi","웰니스","PTSD","우울","비약물 중재","마음챙김","재향군인","Gulf War Illness"],
+  primarySources: [
+    "Polizzi CP et al. J Psychiatr Res 2026 Feb 25;197:97-106. PMID:41774973, DOI:10.1016/j.jpsychires.2026.02.045"
+  ],
+  sections: {
+    notes: {
+      content: "### 핵심 수치 (n=114 만성 통증+GWI 재향군인, 2 RCT 합산)\n| 결과 지표 | 태극권 | 웰니스 |\n|---|---|---|\n| 건강 증상 | 유의 개선 | 유의 개선 |\n| 통증 간섭 | 유의 개선 | 유의 개선 |\n| 우울 | 유의 개선 | 유의 개선 |\n| 불안 | 유의 개선 | 유의 개선 |\n| 마음챙김 | 유의 개선 | 유의 개선 |\n| 신체 HRQoL | 유의 개선 | 유의 개선 |\n| 정신 HRQoL | 유의 개선 | 유의 개선 |\n| PTSD 증상 | 유의 개선 | 유의 개선 |\n\n**대면 vs 원격 비교**: 효과 차이 없음 — 두 방식 동등.",
+      sources: []
+    },
+    protocol: {
+      content: "### 적용 대상\n- 만성 통증 + 우울·불안·PTSD 동반 환자\n- 다양한 심리·신체 증상 복합 호소 환자\n\n### 중재 옵션\n| 중재 | 특징 | 접근 방식 |\n|---|---|---|\n| **태극권** | 중국 전통 마음-몸 수련 | 그룹 프로그램 (대면/원격) |\n| **웰니스 프로그램** | 건강 생활습관·이완·스트레스 관리 | 그룹 프로그램 (대면/원격) |\n\n### 원격 프로그램 동등 효과 의미\n- 교통·시간 장벽 있는 환자에도 적용 가능\n- 재택 온라인 프로그램 의뢰 가능\n\n### 임상 적용\n- 만성 통증 + 정신건강 동반 환자에게 비약물 통합 중재 RCT 근거 제시 가능\n- '태극권 같은 운동치료가 통증과 우울에 모두 도움이 됩니다' — 환자 교육\n- 두 중재 효과 유사 → **환자 접근 가능한 프로그램 우선 선택**",
+      sources: []
+    },
+    precaution: {
+      content: "- Gulf War Illness 재향군인 대상 — 일반 만성 통증 외삽 시 주의\n- 대조군 없음 (액티브 비교군 설계) — 자연 경과와의 구분 불가\n- 군 특수 증후군(GWI) 복합 증상 — 일반 근골격 만성 통증과 다를 수 있음 [CLINICAL — 조건부]",
+      sources: []
+    },
+    referral: {
+      content: "관련:\n- [[anxiety-depression-cbt]] (우울·불안 CBT 근거)\n- [[palliative-pain]] (암성 통증 동반 정신건강)\n- [[low-back-pain]] (만성 요통 비약물 1차)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["chronic-pain-integrative"] = _chronic_pain_integrative_v2;
+KNOWLEDGE_BUNDLE["만성통증통합중재"] = _chronic_pain_integrative_v2;
+KNOWLEDGE_BUNDLE["태극권"] = _chronic_pain_integrative_v2;
+KNOWLEDGE_BUNDLE["Tai-Chi"] = _chronic_pain_integrative_v2;

@@ -123,6 +123,9 @@ JSON만 반환 (다른 텍스트 절대 금지):
   migraine (편두통 예방치료/월 4회 이상·과사용 두통/propranolol·topiramate·CGRP 길항제·botox/임신 금기 — 예방 약물 결정 맥락)
   ischemic-stroke-prevention (허혈성 뇌졸중·TIA 이차예방/원인별 항혈전(비색전·AF·cryptogenic)/DAPT 21일 한정/혈압<130-80·LDL<70·고강도 스타틴 — 재발 예방 통합관리 맥락)
   opioid-use-disorder (OUD/MOUD 부프레노르핀·메타돈·날트렉손/오피오이드 금단·날록손 응급/한국 마약류 규정 별도 — 오피오이드 사용장애 평가·치료 맥락)
+  cervical-cancer-screening (자궁경부암 스크리닝/Primary HPV·세포검사·공동검사/ACS 25세·USPSTF 30세·국내 KNHSP 20세 2년/65세 종료 기준 — 평균위험 무증상 여성 스크리닝 맥락)
+  cancer-fatigue (암 관련 피로/저항운동 처방/항암치료 중·후 운동 유지/골전이·혈소판감소증 주의 — 암 환자 운동 상담 맥락)
+  chronic-pain-integrative (만성 통증 + 우울·PTSD/태극권·웰니스 동등 효과/대면·원격 동등/Gulf War Illness 재향군인 — 비약물 통합 중재 처방 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */
