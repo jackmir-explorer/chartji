@@ -273,7 +273,7 @@ relations: []
 ### 1차의료 적용
 
 - 비만 + HFpEF 환자 → **GLP-1 계열 처방의 심장 이익을 추가 근거로 제시** 가능
-  - obesity.md의 TOS/OMA/OAC 권고 (HFpEF → GLP-1+ 조건부 권고) 와 정합
+  - [[obesity]]의 TOS/OMA/OAC 권고 (HFpEF → GLP-1+ 조건부 권고) 와 정합
 - 체중감량 상담 시: "살을 빼면 심장이 편해진다" — 기전 설명 + 수치 근거 가능
 - HFrEF에서 체중감량 역할은 불확실 (비만 → HFrEF 보호 역설 가능성 있음 — obesity paradox 논의 중)
 - 비만수술: 관찰 연구에서 HF 위험 감소 시사, 무작위 임상 증거 부족

@@ -22,7 +22,7 @@ B2 스키마에서 knowledge/ 엔트리의 `sections` 딕셔너리가 사용하�
 
 | key | 정의 | 정규화 대상 동의어 (예시) |
 |---|---|---|
-| `definition` | 질환·약물 정의 / 개요 | 정의, 개요 |
+| `definition` | 질환·약물 정의 / 개요 | 정의, 개요, overview, Overview |
 | `classification` | 분류 기준·표현형 | 분류 기준, 분류, 표현형, phenotype |
 | `exam` | 문진·신체진찰 | 문진, 문진/검사, 진찰 |
 | `protocol` | 단계별 치료·처방 프로토콜 | 처방/치료, 처방 프로토콜, 단계별 처방, Dose Escalation 프로토콜 |
@@ -37,7 +37,7 @@ B2 스키마에서 knowledge/ 엔트리의 `sections` 딕셔너리가 사용하�
 | `referral` | 의뢰 기준 | 의뢰 기준, 일차의료 의뢰, 일차의료 의뢰 기준 |
 | `insurance` | 급여·보험 | 급여 기준, 실비보험 활용, 한국 급여, 한국 급여 기준 |
 | `comparison` | 약물·백신 간 비교 | 비교, 종류 비교, 위고비와의 관계, 선택 기준 |
-| `notes` | 환자설명용·기타 특이사항 | 왜 이런 증상이 생기나, 환자설명용, 기타 특이사항, 비고 |
+| `notes` | 환자설명용·기타 특이사항 | 왜 이런 증상이 생기나, 환자설명용, 기타 특이사항, 비고, notes_extra (DEPRECATED 통합) |
 | `draft-append` | Working Draft 하단 literal append 텍스트 | Draft 출력사항, [DRAFT_APPEND] |
 | `draft-template` | 질환·약물 특이 Draft 스켈레톤 | 질환 특이 Template, [TIPS] Template |
 | `prognosis` | 예후·경과 | 예후, 경과, prognosis |
@@ -47,6 +47,10 @@ B2 스키마에서 knowledge/ 엔트리의 `sections` 딕셔너리가 사용하�
 | `follow-up-schedule` | 추적 스케줄 | 추적, 추적 스케줄, follow-up, follow-up schedule |
 
 > 2026-04-24 R3 Wave 1 확장 — 하단 5개(prognosis/lifestyle/complications/counseling/follow-up-schedule) 신설. 미르 결단 2026-04-24: lifestyle·follow-up-schedule은 hint primary (치료 성격), 나머지 3개는 guide primary (설명 성격). `rules/data-flow.md` 매트릭스 동시 개정.
+
+> 2026-05-05 정규화 (Auditor 보고 기반):
+> - `notes_extra` 자유 섹션 (3 entries: home-based-hypertension·prescribing-cascade·post-mi-deprescribing) → 표준 `notes`로 통합. 후속 ingest는 `notes_extra` 키 사용 금지.
+> - `overview` 자유 섹션 (3 entries: vaccination-summary·semaglutide·afp-top20-poems-2024) → 표준 `definition` 동의어. 후속 ingest는 `definition`으로 정규화 저장.
 
 ### 제외·재정의 내역
 

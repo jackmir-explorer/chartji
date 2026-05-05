@@ -18,7 +18,7 @@ keywords: 만성기침, chronic cough, 난치성기침, RCC, refractory chronic 
 
 ### 1단계 — 원인 제거 우선
 - **역류성 질환(GERD/LPR)**: PPI ± alginic acid
-- **알레르기비염·후비루**: 항히스타민, 비강내 스테로이드 (→ allergic-rhinitis.md)
+- **알레르기비염·후비루**: 항히스타민, 비강내 스테로이드 (→ [[allergic-rhinitis]])
 - **천식·기관지경련**: 흡입기 (SABA, ICS)
 - **약물(ACEi)**: 중단 후 4-6주 관찰
 
