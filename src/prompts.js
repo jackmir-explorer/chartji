@@ -118,6 +118,8 @@ JSON만 반환 (다른 텍스트 절대 금지):
   pocus-abdominal (복부 POCUS/RUQ·신장·AAA/담석·수신증·복부대동맥류 GP 직접 시행/방사선 의뢰 절감 — 외래 즉시 초음파 평가 맥락)
   pocus-lung (폐 POCUS/B-lines 12구역 스캔/입원 위험 분류/COVID-19·재택의료/기흉·간질성 증후군 감별 — 호흡기 환자 즉석 평가 맥락)
   msk-injection-therapy (근골격 주사/코르티코·HA·PRP·prolotherapy/외측상과염 3제 동등 RCT/초음파 유도 정확도·안전성 — 통증 외래 시술 결정 맥락)
+  goals-of-care-acp (사전돌봄계획/GOC 7대 핵심 요소/EHR 문서화·대화 트리거/POLST·DNAR 연동 — 중증·만성질환 ACP 대화 맥락)
+  deprescribing (부적절 처방·STOPP/START·Beers/노인 다약제 연 1회 재검토/PPI·BZD·항콜린·임종기 LBM 우선 — 처방 최적화 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */
