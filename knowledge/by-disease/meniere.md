@@ -69,7 +69,7 @@ keywords: 메니에르, 메니에르병, Meniere, Menieres, 내이수종, endoly
 
 ## 비고 (notes)
 
-- **반복되는 급성 저주파 감각신경성 난청(ALHL)은 메니에르로 진행 가능** (`low-freq-hearing-loss.md` 참조)
+- **반복되는 급성 저주파 감각신경성 난청(ALHL)은 메니에르로 진행 가능** ([[low-freq-hearing-loss]] 참조)
 - 진행성 청력 저하 — 보청기 적응 시점 고려
 - 양측성 메니에르(~30%)·자가면역 내이질환 의심 시 ENT/면역 평가
 - 난치성 — 화학적 미로파괴(intratympanic gentamicin)·외과 (endolymphatic sac decompression) ENT 영역

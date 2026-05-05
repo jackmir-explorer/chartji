@@ -95,6 +95,19 @@ study-note의 `## 일차의료 적용 포인트` 섹션은 미르가 매일 직�
 3. 약물 용량 — 논문 명시 없으면 "[가이드라인 default 인용: {출처}]" 명시
 4. Red flag 임계값 — 논문 또는 가이드라인 출처 명시
 
+### 7. 외부 entry 참조 — wikilinks 형식 의무 (2026-05-05 신설)
+
+study-note의 `## 관련 knowledge/ 엔트리` 섹션 + 본문 어디서든 다른 knowledge entry를 참조할 때는 **반드시 옵시디언 wikilinks `[[entry-name]]` 형식**.
+
+**OK**: `[[hyposmia]]`, `관련 [[ibs]]`, `([[functional-dyspepsia]] 참조)`
+**금지**: `` `hyposmia.md` ``, `[hyposmia](path)`, `knowledge/by-disease/X.md`
+
+knowledge md ↔ study-note 양방향 link 시도:
+- study-note 끝 `## 관련 knowledge/ 엔트리`: knowledge md를 wikilinks로 참조
+- knowledge md에 자동 추가 가능 시: `## 출처 학습 노트` 섹션에 study-note wikilinks (옵시디언 그래프뷰 양방향 시각화)
+
+상세 규칙: `skills/knowledge-ingest/SKILL.md` Step 10 참조.
+
 ## 출력 형식
 ```
 ## [논문 제목 축약]
