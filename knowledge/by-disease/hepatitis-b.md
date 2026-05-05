@@ -11,7 +11,7 @@ relations: []
 
 ---
 
-> 예방·스크리닝(HBsAg/Anti-HBs/Anti-HBc triple panel, 백신 스케줄) → `by-drug/hepatitis-ab-vaccine.md`
+> 예방·스크리닝(HBsAg/Anti-HBs/Anti-HBc triple panel, 백신 스케줄) → [[hepatitis-ab-vaccine]]
 
 ---
 
