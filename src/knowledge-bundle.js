@@ -4579,3 +4579,80 @@ KNOWLEDGE_BUNDLE["chronic-pain-integrative"] = _chronic_pain_integrative_v2;
 KNOWLEDGE_BUNDLE["만성통증통합중재"] = _chronic_pain_integrative_v2;
 KNOWLEDGE_BUNDLE["태극권"] = _chronic_pain_integrative_v2;
 KNOWLEDGE_BUNDLE["Tai-Chi"] = _chronic_pain_integrative_v2;
+
+/* ========== 5-2 cron Liby ingest (Batch 5 — 근골격·심회복) ========== */
+
+/* ankle-sprain — 급성 발목 염좌 PEACE&LOVE (5-2 cron). [CLINICAL] */
+var _ankle_sprain_v2 = {
+  kind: "disease",
+  keywords: ["발목 염좌","ankle sprain","Ottawa rules","PEACE LOVE","발목 보조기","brace","신경근 재활","외측 인대","ATFL","CFL","semirigid brace"],
+  primarySources: [
+    "Wu V et al. Am Fam Physician 2025 Dec;112(6):609-617. PMID:41533404"
+  ],
+  sections: {
+    definition: {
+      content: "급성 발목 염좌는 흔한 근골격 손상으로 외측 인대(ATFL, CFL, PTFL) 손상이 가장 흔함. 초기 평가에서 **골절 감별 + 염좌 중증도 평가**가 핵심.",
+      sources: []
+    },
+    exam: {
+      content: "### Ottawa Ankle Rules — X-ray 적응증\n| 소견 | X-ray 필요 |\n|---|---|\n| 비골 원위부 6cm 또는 후방 내과 압통 | 예 |\n| 발 5번 중족골 기저부 압통 | 예 |\n| 주상골(Navicular) 압통 | 예 |\n| 체중 부하 4걸음 불가 | 예 |\n| 위 소견 없음 | X-ray 불필요 |\n\n### 검사 정확도 향상 팁\n- 손상 직후 부종·통증으로 검사 정확도 저하 → **4~7일 후 재평가 시 염좌 중증도 진단 정확도 향상**\n- 여러 발목 특이 검사 조합 (전방 서랍 징후, 내반 스트레스 검사)\n\n### 중증도 분류\n| 등급 | 특징 | 치료 |\n|---|---|---|\n| Grade I | 미세 파열, 기능 유지 | PEACE&LOVE + 조기 복귀 |\n| Grade II | 부분 파열, 불안정성↑ | 외부 지지대 5~10일, 재활 |\n| Grade III | 완전 파열, 불안정 | 보조기 + 8~12주 재활; MRI 검토 |",
+      sources: []
+    },
+    protocol: {
+      content: "### 초급성기 — PEACE & LOVE\n기존 RICE에서 **PEACE&LOVE**로 패러다임 전환:\n\n**PEACE** (급성기 0~3일):\n- **P**rotection — 손상 부위 보호 (체중 부하 제한, 완전 고정 지양)\n- **E**levation — 발목 심장보다 높게 거상\n- **A**void anti-inflammatory modalities — 소염제·냉찜질 과도 사용 회피 (초기 염증은 치유에 필요)\n- **C**ompression — 탄성 붕대 적용\n- **E**ducation — 충분한 설명·기대 교육\n\n**LOVE** (아급성기 3일~):\n- **L**oad — 점진적 체중 부하, 통증 허용 범위 내 조기 활동\n- **O**ptimism — 회복 긍정적 기대 (예후 좋음 교육)\n- **V**ascularization — 조기 유산소 운동 (혈류 개선)\n- **E**xercise — 신경근 재활 프로그램\n\n### 외부 지지대 및 재활\n- **초기 지지대**: 반경성 보조기(Semirigid brace) 또는 air stirrup — **5~10일** 착용\n- **재활 기간**: 표적 신경근 재활 프로그램 **8~12주**\n  - 균형·고유감각 훈련 (한발 서기, 보수 볼)\n  - 근력 강화 (족저 굴근, 비골근)\n  - 기능적 운동 (점프·방향 전환)\n\n### 통증 조절 약물\n- 아세트아미노펜·NSAIDs·오피오이드 — 통증 조절 효과 동등\n- NSAIDs 과도 사용 시 초기 치유 억제 가능성 (PEACE 원칙과 상충) — 단기 최소 용량\n\n### 재발 예방\n- 재활 후 스포츠 복귀 시 **외부 발목 지지대** 유지 → 재발률 감소\n- 기능적 운동 지속 (신경근 조절 유지)",
+      sources: []
+    },
+    referral: {
+      content: "### MRI 권고 상황\n- 기대 회복 경과 미달 (4~6주 이상 지연)\n- 거골 골절(Talar fracture) 의심\n- 비골 건(Peroneal tendon) 손상 의심\n- 3등급 염좌 + 불안정성 지속 → 정형외과",
+      sources: []
+    },
+    precaution: {
+      content: "- 소아: 골단판 손상 가능성 → Ottawa Rules 적용 연령 기준 확인\n- 노인: 골다공증 골절 감별 더욱 중요\n- 반복 발목 염좌: 만성 발목 불안정성(CAI) 진단 및 정형외과 의뢰 고려",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["ankle-sprain"] = _ankle_sprain_v2;
+KNOWLEDGE_BUNDLE["발목염좌"] = _ankle_sprain_v2;
+KNOWLEDGE_BUNDLE["PEACE-LOVE"] = _ankle_sprain_v2;
+KNOWLEDGE_BUNDLE["Ottawa-ankle-rules"] = _ankle_sprain_v2;
+
+/* cardiac-rehabilitation — 심장재활 가정의 역할 (5-2 cron). [CLINICAL] */
+var _cardiac_rehab_v2 = {
+  kind: "disease",
+  keywords: ["심장재활","cardiac rehabilitation","심근경색","심부전","PCI","CABG","운동처방","생활습관","가정의학과","의뢰"],
+  primarySources: [
+    "Boggiano VL et al. Am Fam Physician 2025 Sep;112(3):272-277. PMID:40961304"
+  ],
+  sections: {
+    definition: {
+      content: "심장재활(Cardiac Rehabilitation)은 심혈관질환 환자에게 **운동·교육·심리 지원을 통합 제공**하여 이환율·사망률을 줄이고 삶의 질을 향상시키는 프로그램.",
+      sources: []
+    },
+    indication: {
+      content: "- 심근경색 (Myocardial Infarction)\n- 심부전 (Heart Failure — **안정기**)\n- 경피적 관상동맥 중재술 (PCI / Angioplasty)\n- 관상동맥 우회술 (CABG)\n- 심장 판막 수술 후",
+      sources: []
+    },
+    protocol: {
+      content: "### 핵심 3요소\n| 요소 | 내용 | 실전 |\n|---|---|---|\n| **운동 처방** | 유산소+저항 운동 / 주 3~5회 / 12주 기본 | 심폐 운동 부하 검사 기반 강도 설정 |\n| **교육** | 위험인자 교정 (식이·금연·체중·혈압·지질) | 환자·가족 포함 |\n| **심리 지원** | 우울·불안 스크리닝·개입 | PHQ-9·GAD-7 병행 |\n\n### 가정의 직접 수행 최소 재활 패키지\n1. 운동 처방: 걷기 목표(심박수·주당 시간) 명시\n2. 식이 교정: 지중해식·DASH 처방\n3. 금연: 상담 + 약물 (varenicline 우선)\n4. 혈압·지질·혈당 목표 관리\n5. 우울 스크리닝 + 필요 시 상담/약물",
+      sources: []
+    },
+    notes: {
+      content: "### 효과 근거\n- 심장재활 참여 → 이환율·사망률 감소 명확\n- 미국 내 **프로그램 이용률 낮음** — 의뢰율 부족이 주원인\n- 가정의의 적극 의뢰 + 이탈 방지 지원이 프로그램 실제 효과 결정",
+      sources: []
+    },
+    referral: {
+      content: "### 의뢰 시점\n- **입원 중 또는 퇴원 직후** — 가능하면 입원 중 의뢰 계획 수립\n- 안정기 심부전 진단 직후\n- PCI·CABG 후 추적 외래 방문 시 의뢰 미확인 → 즉시 의뢰\n\n### 의뢰 후 가정의 역할\n- 재활 참여 여부 확인·독려 (매 외래)\n- 생활습관 처방 지속·강화 (프로그램 종료 후 유지 핵심)\n- 위험인자(혈압·지질·혈당·체중) 목표 달성 모니터링\n\n### 의뢰 장벽 극복\n- 교통·시간 장애 → 가정 기반·원격 심장재활 안내\n- 환자 동기 부족 → 사망률 감소 효과 명확 설명\n\n관련: [[heart-failure]], [[smoking-cessation]], [[anxiety-depression-cbt]]",
+      sources: []
+    },
+    precaution: {
+      content: "- 비안정 심부전·불안정 협심증·조절 안 된 심박수 → 재활 시작 전 안정화\n- 심각한 판막 질환·대동맥 협착 → 판막 교정 전 운동 처방 제한\n- 고위험 환자: 초기 감독 하 운동 필요 → 심장재활 프로그램 직접 의뢰",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["cardiac-rehabilitation"] = _cardiac_rehab_v2;
+KNOWLEDGE_BUNDLE["심장재활"] = _cardiac_rehab_v2;
+KNOWLEDGE_BUNDLE["cardiac-rehab"] = _cardiac_rehab_v2;

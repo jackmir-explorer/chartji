@@ -126,6 +126,8 @@ JSON만 반환 (다른 텍스트 절대 금지):
   cervical-cancer-screening (자궁경부암 스크리닝/Primary HPV·세포검사·공동검사/ACS 25세·USPSTF 30세·국내 KNHSP 20세 2년/65세 종료 기준 — 평균위험 무증상 여성 스크리닝 맥락)
   cancer-fatigue (암 관련 피로/저항운동 처방/항암치료 중·후 운동 유지/골전이·혈소판감소증 주의 — 암 환자 운동 상담 맥락)
   chronic-pain-integrative (만성 통증 + 우울·PTSD/태극권·웰니스 동등 효과/대면·원격 동등/Gulf War Illness 재향군인 — 비약물 통합 중재 처방 맥락)
+  ankle-sprain (급성 발목 염좌/Ottawa rules X-ray 적응증/PEACE LOVE 패러다임/반경성 보조기 5-10일·신경근 재활 8-12주 — 외래 초기 평가·관리 맥락)
+  cardiac-rehabilitation (심장재활/MI·HF 안정기·PCI·CABG·판막수술 후/유산소+저항 주 3-5회 12주/입원 중 의뢰 우선 — 심혈관 질환 후 통합 회복 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */
