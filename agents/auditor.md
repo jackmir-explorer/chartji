@@ -26,6 +26,9 @@ Liby와 독립적으로 동작 — 수집자가 자기 수집물을 감사하는
 | **parents 누락 child 후보** (2026-04-21 신설) | Triage 상·하위 구조에서 child 엔트리인데 parents 필드 없음 → ingest 당시 판단 누락 의심, 재검토 제안 |
 | **sections[].sources[] 공백** (2026-04-22 신설 — 3층 방어선 감사층) | v2 엔트리 섹션 중 `sources[]`가 빈 배열이고 Tier 1 `primarySources`만으로는 섹션 주제 포괄이 약한 경우 → curation primarySources fallback 과의존 → 주제 부조화 할루시네이션 리스크. Phase 5b 우선순위 리스트로 추출. TIPS 타입 출처(`[TIPS — 임상 경험 (미르 관찰)]` 등)가 등록된 섹션은 공백이 아니므로 제외. |
 | **bullet↔출처 주제 부조화** (2026-04-22 신설 — 3층 방어선 감사층) | 섹션 content 주요 키워드(2~3개 추출)와 등록된 source 문자열(저자·저널·가이드라인명) 키워드의 공통 단어가 0인 경우 → 검토 권고. **텍스트 키워드 매칭 수준의 휴리스틱**이므로 false positive 허용, 수정은 미르 확인 후. TIPS 라벨 source는 주제 매핑이 아닌 출처 타입 선언이므로 검사 제외. |
+| **link 형식 일관성** (2026-05-05 신설) | 외부 entry 참조가 wikilinks `[[X]]` 형식 아닌 경우 검출 — backtick `` `X.md` ``, markdown link `[X](path)`, plain text `knowledge/by-disease/X.md` 등. 옵시디언 그래프뷰에서 link 미인식 → 시각적 탐색 가치 손실. 수정 권고. |
+| **연관 entry link 누락** (2026-05-05 신설) | 의학적으로 연관 패턴이 본문에 명시(예: "IBS-FD overlap 20-30%", "메니에르로 진행 가능", "동반 시 ___" 등)되어 있으나 해당 entry로의 wikilinks가 없는 경우. 보완 권고 — 의학 연관성 휴리스틱이므로 false positive 허용, 미르 확인 후 추가. |
+| **dangling wikilinks** (2026-05-05 신설) | `[[X]]` 참조가 있으나 X.md 또는 bundle entry로 존재하지 않음. ① 오타 수정, ② 참조 삭제, ③ X entry ingest 중 선택 권고. 미래 entry rename·삭제로 발생 가능. |
 
 ## 절차
 

@@ -115,6 +115,20 @@ JSON만 반환 (다른 텍스트 절대 금지):
   eagle-syndrome (Eagle syndrome/편도 안쪽 통증/tonsillar fossa palpation/elongated styloid >30mm/CT 3D — 만성 정체불명 인후·이부 통증 감별 맥락)
   thyroid-fna-cnb (갑상선 FNA/CNB/항혈전제 사전 확인/CNB 출혈·혈종/응급 호흡곤란→ER — 갑상선 시술 전 평가·합병증 안내 맥락)
   salivary-gland-stones (타석증/턱밑샘 부음 한쪽 vs 양쪽/CT 적응증/eye scissor 미세절개·배석 — 침샘 돌 진단·시술 맥락)
+  pocus-abdominal (복부 POCUS/RUQ·신장·AAA/담석·수신증·복부대동맥류 GP 직접 시행/방사선 의뢰 절감 — 외래 즉시 초음파 평가 맥락)
+  pocus-lung (폐 POCUS/B-lines 12구역 스캔/입원 위험 분류/COVID-19·재택의료/기흉·간질성 증후군 감별 — 호흡기 환자 즉석 평가 맥락)
+  msk-injection-therapy (근골격 주사/코르티코·HA·PRP·prolotherapy/외측상과염 3제 동등 RCT/초음파 유도 정확도·안전성 — 통증 외래 시술 결정 맥락)
+  goals-of-care-acp (사전돌봄계획/GOC 7대 핵심 요소/EHR 문서화·대화 트리거/POLST·DNAR 연동 — 중증·만성질환 ACP 대화 맥락)
+  deprescribing (부적절 처방·STOPP/START·Beers/노인 다약제 연 1회 재검토/PPI·BZD·항콜린·임종기 LBM 우선 — 처방 최적화 맥락)
+  migraine (편두통 예방치료/월 4회 이상·과사용 두통/propranolol·topiramate·CGRP 길항제·botox/임신 금기 — 예방 약물 결정 맥락)
+  ischemic-stroke-prevention (허혈성 뇌졸중·TIA 이차예방/원인별 항혈전(비색전·AF·cryptogenic)/DAPT 21일 한정/혈압<130-80·LDL<70·고강도 스타틴 — 재발 예방 통합관리 맥락)
+  opioid-use-disorder (OUD/MOUD 부프레노르핀·메타돈·날트렉손/오피오이드 금단·날록손 응급/한국 마약류 규정 별도 — 오피오이드 사용장애 평가·치료 맥락)
+  cervical-cancer-screening (자궁경부암 스크리닝/Primary HPV·세포검사·공동검사/ACS 25세·USPSTF 30세·국내 KNHSP 20세 2년/65세 종료 기준 — 평균위험 무증상 여성 스크리닝 맥락)
+  cancer-fatigue (암 관련 피로/저항운동 처방/항암치료 중·후 운동 유지/골전이·혈소판감소증 주의 — 암 환자 운동 상담 맥락)
+  chronic-pain-integrative (만성 통증 + 우울·PTSD/태극권·웰니스 동등 효과/대면·원격 동등/Gulf War Illness 재향군인 — 비약물 통합 중재 처방 맥락)
+  ankle-sprain (급성 발목 염좌/Ottawa rules X-ray 적응증/PEACE LOVE 패러다임/반경성 보조기 5-10일·신경근 재활 8-12주 — 외래 초기 평가·관리 맥락)
+  cardiac-rehabilitation (심장재활/MI·HF 안정기·PCI·CABG·판막수술 후/유산소+저항 주 3-5회 12주/입원 중 의뢰 우선 — 심혈관 질환 후 통합 회복 맥락)
+  depression-screening (PHQ-9·GAD-7/PETRUSHKA RCT 개인맞춤 항우울제/SSRI 일률 처방 회피·증상 프로파일 맞춤/8주 중단율 38% ↓ — 우울증 스크리닝·첫 처방 선택 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */

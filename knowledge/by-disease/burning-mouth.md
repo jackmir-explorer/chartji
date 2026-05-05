@@ -28,7 +28,7 @@ relations: []
 ### 혀 화끈거림 일반 처방 [TIPS — by ENT 교수]
 
 - **뮤테란 가글** (효과 ↑) — 탄툼·헥사메딘은 burning에 효과 제한
-- **Pilocarpine** (살라겐/필로겐) — 구강건조 동반 시 (`dry-mouth.md` 참조)
+- **Pilocarpine** (살라겐/필로겐) — 구강건조 동반 시 ([[dry-mouth]] 참조)
 - **제로바 spray** — 구강 보습·통증 완화
 - 위 조합으로 시작 후 호전 관찰
 
