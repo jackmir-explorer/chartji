@@ -115,6 +115,9 @@ JSON만 반환 (다른 텍스트 절대 금지):
   eagle-syndrome (Eagle syndrome/편도 안쪽 통증/tonsillar fossa palpation/elongated styloid >30mm/CT 3D — 만성 정체불명 인후·이부 통증 감별 맥락)
   thyroid-fna-cnb (갑상선 FNA/CNB/항혈전제 사전 확인/CNB 출혈·혈종/응급 호흡곤란→ER — 갑상선 시술 전 평가·합병증 안내 맥락)
   salivary-gland-stones (타석증/턱밑샘 부음 한쪽 vs 양쪽/CT 적응증/eye scissor 미세절개·배석 — 침샘 돌 진단·시술 맥락)
+  pocus-abdominal (복부 POCUS/RUQ·신장·AAA/담석·수신증·복부대동맥류 GP 직접 시행/방사선 의뢰 절감 — 외래 즉시 초음파 평가 맥락)
+  pocus-lung (폐 POCUS/B-lines 12구역 스캔/입원 위험 분류/COVID-19·재택의료/기흉·간질성 증후군 감별 — 호흡기 환자 즉석 평가 맥락)
+  msk-injection-therapy (근골격 주사/코르티코·HA·PRP·prolotherapy/외측상과염 3제 동등 RCT/초음파 유도 정확도·안전성 — 통증 외래 시술 결정 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */

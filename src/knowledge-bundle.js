@@ -4121,3 +4121,106 @@ KNOWLEDGE_BUNDLE["타석증"] = _salivary_stones_v2;
 KNOWLEDGE_BUNDLE["설하샘 돌"] = _salivary_stones_v2;
 KNOWLEDGE_BUNDLE["턱밑샘 돌"] = _salivary_stones_v2;
 KNOWLEDGE_BUNDLE["침샘염"] = _salivary_stones_v2;
+
+/* ========== 5-1~5-4 cron deep-extract Liby ingest (Mir-T1 #1 POCUS) ========== */
+
+/* pocus-abdominal — GP 직접 복부 POCUS 적합 영역 (5-2 cron). [CLINICAL — 조건부] */
+var _pocus_abdominal_v2 = {
+  kind: "topic",
+  keywords: ["POCUS","복부초음파","abdominal ultrasound","담석증","cholelithiasis","요로결석","urolithiasis","복부대동맥류","AAA","hydronephrosis","수신증","RUQ POCUS","의뢰 절감"],
+  primarySources: [
+    "Geivers J et al. Eur J Gen Pract 2026;32(1):2606572. PMID:41528024, DOI:10.1080/13814788.2025.2606572"
+  ],
+  sections: {
+    definition: {
+      content: "복부 POCUS(Point-of-Care Ultrasound): GP가 외래에서 즉각 시행하는 초음파. 특정 단순 진단 질문에 대해 방사선과 의뢰를 대체하거나 줄일 수 있는 도구. 네덜란드 GP 의뢰서 1,053건 분석에서 75%가 질환 배제 판독, 대안 진단 발견 <10% — 단순 적응증에서 GP 직접 시행 가능성.",
+      sources: []
+    },
+    indication: {
+      content: "### GP 직접 POCUS 적합 4대 영역\n| 영역 | 적합 이유 |\n|---|---|\n| **담석증 (RUQ POCUS)** | 단순 질문(담낭 결석 유무), 심각한 진단 누락 위험 낮음 |\n| **요로결석 (신장 POCUS)** | 수신증(Hydronephrosis) 직접 확인 가능 |\n| **수신증** | 요로폐색 여부 신속 확인 |\n| **복부 대동맥류 (AAA)** | 직경 측정으로 응급 여부 판단 |\n\n### 적합 조건\n1. 단일·명확한 임상 질문 ('담석증 있는가?' / '수신증 있는가?' / 'AAA 배제 가능?')\n2. 이상 소견 없으면 임상 경과관찰로 충분한 환자\n3. 양성 소견 시 즉시 확인·처치 가능한 환경\n\n### 방사선과 의뢰 지속 권고\n- 복부 통증 + 비특이 증상 (여러 감별 필요)\n- 췌장·간 병변 의심 (복잡 해석)\n- 복수·복막 병변 의심",
+      sources: []
+    },
+    precaution: {
+      content: "- 네덜란드 GP 시스템 근거 — 한국 외래 직접 적용 시 맥락 검토\n- GP POCUS는 전문 훈련·프로토콜 기반 시행 필요\n- AAA 스크리닝: 최대 직경 측정 정확도·판독 프로토콜 숙지 필수\n- '의료 질문 없는 의뢰' 16% — POCUS 도입 시 명확한 임상 질문 정의 원칙 필요",
+      sources: []
+    },
+    notes: {
+      content: "단순 담석증·요로결석 의심 환자에서 방사선과 의뢰 전 RUQ 또는 신장 POCUS 직접 시행 → 의뢰 절감·진료 속도 향상. 외래 AAA 스크리닝도 GP POCUS로 정확도 보고됨.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["pocus-abdominal"] = _pocus_abdominal_v2;
+KNOWLEDGE_BUNDLE["복부POCUS"] = _pocus_abdominal_v2;
+KNOWLEDGE_BUNDLE["abdominal-pocus"] = _pocus_abdominal_v2;
+KNOWLEDGE_BUNDLE["RUQ-POCUS"] = _pocus_abdominal_v2;
+
+/* pocus-lung — 폐 POCUS B-lines 위험 분류 + 현장 프로토콜 (5-2·5-4 cron). [CLINICAL — 조건부] */
+var _pocus_lung_v2 = {
+  kind: "topic",
+  keywords: ["폐 POCUS","lung ultrasound","B-lines","폐초음파","폐렴","위험분류","입원 예측","12구역 스캔","기흉","간질성 증후군","prehospital"],
+  primarySources: [
+    "Oliva-Fanlo B et al. NPJ Prim Care Respir Med 2026. PMID:42031864, DOI:10.1038/s41533-026-00515-4",
+    "Purkarthofer D et al. J Ultrasound Med 2026. PMID:41793408, DOI:10.1002/jum.70218"
+  ],
+  sections: {
+    definition: {
+      content: "일차의료 의사가 5시간 표준화 훈련으로 시행 가능한 폐 POCUS. 호흡기 환자 위험 분류·재택의료·자원 제한 환경에서 즉석 의사결정 도구.",
+      sources: []
+    },
+    protocol: {
+      content: "### 12구역 스캔 프로토콜\n전흉부·측흉부·후흉부 양측 — 총 12구역 체계적 스캔, 각 구역에서 B-lines 수 기록.\n\n### POCUS 양성 기준\n| 소견 | 의미 |\n|---|---|\n| **B-lines ≥3개/구역** (1개 이상 구역) | 폐 부종·염증 신호 |\n| 흉막 이상 + 흉막하 경결 | 폐렴 가능성 |\n| 엽성 경결 | 폐렴 고위험 |\n\n### 즉석 의사결정 흐름\n```\n호흡기 증상 환자 → 폐 POCUS 12구역 스캔\n  ↓\nB-lines ≥3/구역 + 흉막 이상?\n  ↓ 예                       ↓ 아니오\n입원 의뢰 강력 고려         SpO₂·활력징후 정상이면\n+ 연령>50·SpO₂<95%·        외래 경과관찰 가능\n  당뇨·고혈압 종합 판단\n```\n\n### 핵심 수치 (n=624 COVID-19 환자, 스페인 일차의료)\n- B-lines 양성 입원 독립 예측: **RR 1.34** (95% CI 1.07–1.67)\n- 폐렴 진단 민감도 68.3% / 특이도 43.6% / PPV 78.7% / NPV 31.1%\n- POCUS 양성 환자 병원 의뢰율 72.4% vs 음성 22.8% (OR 8.83)\n\n### 현장(병원 전) 프로토콜 — 기흉·간질성 증후군 감별 [CLINICAL]\n오스트리아 구급대 표준 프로토콜:\n- 기흉 + 간질성 증후군(B-lines 패턴) 신속 감별\n- 표준 스캔 시퀀스 + 시간 제한 + 표준 문서화 + 훈련/QA\n- 외래·응급 POCUS 입문자 훈련 모델 벤치마킹 가능",
+      sources: ["Oliva-Fanlo 2026 PMID:42031864","Purkarthofer 2026 PMID:41793408"]
+    },
+    precaution: {
+      content: "- 폐 POCUS는 보조 도구 — 임상 판단·SpO₂·병력 우선\n- 음성 POCUS가 폐렴 배제 의미 X (NPV 31.1%)\n- 표준화 훈련·프로토콜 없이 시행 시 판독 오류 위험\n- 비만·흉막 유착·피하기종 등 음창 획득 어려움\n- COVID-19 단일 맥락 연구 — 일반 호흡기 감염 외삽 시 주의",
+      sources: []
+    },
+    notes: {
+      content: "자원 제한 환경(CT·X-ray 즉시 불가)·재택의료·방문 진료 환경에서 즉각 위험 분류 도구로 가치. POCUS 단독으로 폐렴 진단 X — 임상 변수(연령·SpO₂)와 종합 판단.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["pocus-lung"] = _pocus_lung_v2;
+KNOWLEDGE_BUNDLE["폐POCUS"] = _pocus_lung_v2;
+KNOWLEDGE_BUNDLE["lung-ultrasound"] = _pocus_lung_v2;
+KNOWLEDGE_BUNDLE["B-lines"] = _pocus_lung_v2;
+
+/* msk-injection-therapy — 근골격 주사 치료 + 외측상과염 RCT (5-2·5-4 cron). [CLINICAL] */
+var _msk_injection_v2 = {
+  kind: "topic",
+  keywords: ["근골격 주사","MSK injection","코르티코스테로이드","corticosteroid","히알루론산","hyaluronic acid","prolotherapy","PRP","혈소판농축혈장","초음파 유도","ultrasound-guided injection","외측상과염","tennis elbow","lateral epicondylitis"],
+  primarySources: [
+    "Sako B et al. FP Essent 2026 Feb;561:14-22. PMID:41838996",
+    "Raeissadat SA et al. Future Sci OA 2026. PMID:41972873, DOI:10.1080/20565623.2026.2644326"
+  ],
+  sections: {
+    comparison: {
+      content: "### 주사 재질별 비교\n| 재질 | 효과 근거 | 장점 | 단점 |\n|---|---|---|---|\n| **코르티코스테로이드** | 광범위·항염 명확 | 빠른 통증 완화·급여 | 반복 시 연골독성·단기 효과 |\n| **히알루론산 (HA)** | 통증 완화·낮은 위험 | 낮은 부작용 | 비급여·효과 비교 데이터 혼재 |\n| **프롤로 치료 (Prolotherapy)** | 낮은 위험·일부 지지 | 비교적 안전 | 비급여·보험 미적용 |\n| **혈소판 농축 혈장 (PRP)** | 다양한 적응증 혼재된 결과 | 자가 혈액 활용 | 고비용·근거 혼재 |\n| **줄기세포 치료** | 실험적 단계 | — | 미확립·비급여 |\n\n### 외측상과염 — 3제 비교 RCT (n=90, 8주·6개월 추적)\n| 군 | 8주 | 6개월 |\n|---|---|---|\n| Methylprednisolone | 유의 개선 | 유의 개선 |\n| 저백혈구 PRP | 유의 개선 | 유의 개선 |\n| 의료용 오존 | 유의 개선 | 유의 개선 |\n| **군간 비교** | **유의 차이 없음** | **유의 차이 없음** |\n\n→ **6개월 시점 동등 효과** — 약제 선택 기준은 환자 선호·비용·발현 속도. 환자가 'PRP가 더 낫다'고 주장 시 '6개월 결과는 세 가지 모두 통계 동등'으로 상담 가능.",
+      sources: ["Raeissadat 2026 PMID:41972873"]
+    },
+    protocol: {
+      content: "### 코르티코스테로이드 — 실전 처방\n**적응증**: 급성·아급성 활막염 (관절 내) / 점액낭염 (Bursitis) / 건초염 (Tenosynovitis — 이두근·회전근개·방아쇠 수지) / 주관절·고관절 점액낭염\n\n**연골독성 주의 원칙**:\n- 동일 관절 1년 내 **3회 초과 주사 회피**\n- 주사 후 2~3일 활동 제한 (연골 보호)\n- 당뇨 환자: 주사 후 1~3일 혈당 상승 가능 — 사전 교육\n\n**대표 약물**: Triamcinolone acetonide 10~40mg (관절 크기에 따라) / Betamethasone (장기 작용) / Methylprednisolone acetate\n\n### 초음파 유도 주사 (POCUS-Guided)\n**장점**:\n- 정확도: 표적 구조 직접 시각화\n- 안전성: 혈관·신경 회피\n- **이전에 전문과 의뢰가 필요했던 시술을 FM 외래에서 가능**\n\n**적합 시술**: 깊은 부위 관절(고관절·견봉하·腱 주위) / 신경 주변 / 건 파열 위험 부위 / 소관절\n\n**랜드마크 vs 초음파 유도**:\n- 큰 관절(무릎·어깨·팔꿈치)에서는 동등 효과 가능\n- 복잡 해부·비만·반복 주사 시 초음파 유도 우선",
+      sources: ["Sako 2026 PMID:41838996"]
+    },
+    referral: {
+      content: "- 스테로이드 3회 이상 필요 예상 → PRP·초음파 유도 HA 고려 또는 정형외과\n- 인대 손상·건 파열 동반 → MRI + 정형외과\n- 초음파 유도 없이 시행 시 위험한 부위 → 통증의학과·근골격 전문의",
+      sources: []
+    },
+    precaution: {
+      content: "- 주사 부위 감염·피부 취약 → 시행 금지\n- 항응고제 사용 중 → 출혈 위험 평가 후 결정\n- 면역억제 상태 → 감염 위험 신중 판단\n- 당뇨 환자: 코르티코스테로이드 후 혈당 모니터링 교육\n- 스테로이드 주사 무반응: 진단 재검토 (구조 손상·악성)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["msk-injection-therapy"] = _msk_injection_v2;
+KNOWLEDGE_BUNDLE["근골격주사"] = _msk_injection_v2;
+KNOWLEDGE_BUNDLE["MSK-injection"] = _msk_injection_v2;
+KNOWLEDGE_BUNDLE["lateral-epicondylitis"] = _msk_injection_v2;
+KNOWLEDGE_BUNDLE["외측상과염"] = _msk_injection_v2;
+KNOWLEDGE_BUNDLE["테니스엘보"] = _msk_injection_v2;
+KNOWLEDGE_BUNDLE["ultrasound-guided-injection"] = _msk_injection_v2;
