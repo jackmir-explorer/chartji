@@ -3428,7 +3428,7 @@ var _im_2025_v2 = {
       sources: []
     },
     endocrinology: {
-      content: "### 내분비 2025 핵심 변화 (PMID:41974004)\n- **GLP-1 NAION 부작용 신호**: 시야 변화 모니터링 교육 추가 ([[glp1-selection-strategy]])\n- **[[diabetes|SGLT-2]] vs GLP-1 비뇨생식기 감염 비교**: SGLT-2 위험 ↑ → **반복 UTI 환자 GLP-1 우선 고려**\n- **피네레논 (Finerenone)**: T2DM + CKD 신보호 추가 근거. SGLT-2i + 피네레논 병합 전략 가능성\n- **[[MASH|MASH]] + GLP-1**: 적응증 확대 ([[MASH]])",
+      content: "### 내분비 2025 핵심 변화 (PMID:41974004)\n- **GLP-1 NAION 부작용 신호**: 시야 변화 모니터링 교육 추가 ([[glp1-selection-strategy]])\n- **[[sglt2-inhibitors|SGLT-2]] vs GLP-1 비뇨생식기 감염 비교**: SGLT-2 위험 ↑ → **반복 UTI 환자 GLP-1 우선 고려**\n- **피네레논 (Finerenone)**: T2DM + CKD 신보호 추가 근거. SGLT-2i + 피네레논 병합 전략 가능성\n- **[[MASH|MASH]] + GLP-1**: 적응증 확대 ([[MASH]])",
       sources: []
     },
     notes: {
