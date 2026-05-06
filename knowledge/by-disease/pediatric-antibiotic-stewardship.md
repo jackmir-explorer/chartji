@@ -107,4 +107,3 @@ relations: []
 ## 관련 엔트리
 
 - [[adult-vaccination-summary]] — 소아 예방접종 (감염 예방)
-- [[pediatric-fever-management]] — 소아 발열 관리 (있을 경우)
