@@ -521,7 +521,8 @@ var KNOWLEDGE_BUNDLE = {
     "parents": ["obesity"],
     "keywords": ["wegovy","위고비","semaglutide 2.4mg"],
     "primarySources": [
-      "FDA prescribing information — Wegovy (semaglutide 2.4mg)"
+      "FDA prescribing information — Wegovy (semaglutide 2.4mg)",
+      "Srisurapanont M et al. Int J Psychiatry Med 2026;61(3):312-328. PMID:41618880, DOI:10.1177/00912174261422822"
     ],
     "sections": {
       "indication": {
@@ -539,11 +540,15 @@ var KNOWLEDGE_BUNDLE = {
       "insurance": {
         "content": "비급여 약물. 처방 시 비용 전액 환자 부담.",
         "sources": []
+      },
+      "smi": {
+        "content": "### 중증 정신질환(SMI) 환자 적용 [CLINICAL — 조건부]\nRCT 10건 메타분석 (N=665) — exenatide, liraglutide, semaglutide.\n\n**적응 환자군:** 조현병·조현병 스펙트럼·양극성장애 + 과체중/비만 또는 전당뇨\n\n| 결과 | 효과 (vs 위약/일반치료) |\n|------|----------------------|\n| 체중 감소 | **–6.17 kg** (95% CI: –9.10 ~ –3.25) |\n| HbA1c 감소 | **–0.31%** (95% CI: –0.40 ~ –0.22) |\n| 탈락률 (전체) | 위약과 차이 없음 (RR=0.98) |\n| 부작용 탈락률 | 위약과 차이 없음 (RR=0.99) |\n\n**근거 수준:** 효과 — 낮은 확실성 / 수용성 — 중간 확실성\n\n### 1차의료 적용\n- 항정신병약 복용 중 체중 증가 환자 → GLP-1RA 처방 근거\n- 위고비·[[mounjaro|마운자로]] 처방 시 정신과 약과의 병용 내약성 근거\n- 정신건강의학과 협진 후 GLP-1RA 추가 고려 시 데이터 제공\n\n> GLP-1 선택 전략 메타 → [[glp1-selection-strategy]]",
+        "sources": ["Srisurapanont M et al. Int J Psychiatry Med 2026;61(3):312-328. PMID:41618880"]
       }
     },
     "uiHooks": {
       "hint": ["dosing","contraindication"],
-      "guide": ["indication","dosing","contraindication","insurance"],
+      "guide": ["indication","dosing","contraindication","insurance","smi"],
       "draftAppend": null,
       "draftTemplate": null
     }
@@ -566,29 +571,35 @@ var KNOWLEDGE_BUNDLE = {
       "draftTemplate": null
     }
   },
-  /* v2 (B2) drug — Phase 5c Liby ingest. 원본: knowledge/by-drug/mounjaro.md */
+  /* v2 (B2) drug — Phase 5c Liby ingest. 원본: knowledge/by-drug/mounjaro.md (2026-05-06 Tirzepatide 반동 추가) */
   "마운자로": {
     "kind": "drug",
     "parents": ["obesity"],
     "keywords": ["마운자로","mounjaro","zepbound","tirzepatide"],
-    "primarySources": [],
+    "primarySources": [
+      "Huang L et al. J Am Pharm Assoc 2026;103112. PMID:41962807, DOI:10.1016/j.japh.2026.103112"
+    ],
     "sections": {
       "indication": {
         "content": "- T2DM (Mounjaro) — 단독 또는 병용, FDA 2022 승인\n- 비만 (Zepbound) — HTN/이상지질혈증/OSA/CVD 동반 시, FDA 2023.11 승인\n  - CVD: 우월성 미입증, 비열등성 수준 (SURPASS-CVOT)",
         "sources": []
       },
       "dosing": {
-        "content": "### 시작 및 증량\n- 시작: 2.5mg\n- 4주 후: 5mg 증량 후 유지\n- 주사 방법: 웬티카 방식, 위고비보다 간단\n\n### 최대 용량 [CLINICAL — 조건부]\n- 4단계(10mg)까지 효과 뚜렷\n- 5단계(12.5mg) / 6단계(15mg) 추가 이익 크지 않음\n  - SURMOUNT-1: 10mg -21.4% / 15mg -22.5% (+1.1%p 증분)\n  - 12.5mg 단독 비교 RCT는 없음; 임상적 추론",
+        "content": "### 시작 및 증량\n- 시작: 2.5mg\n- 4주 후: 5mg 증량 후 유지\n- 주사 방법: 웬티카 방식, [[wegovy|위고비]]보다 간단\n\n### 최대 용량 [CLINICAL — 조건부]\n- 4단계(10mg)까지 효과 뚜렷\n- 5단계(12.5mg) / 6단계(15mg) 추가 이익 크지 않음\n  - SURMOUNT-1: 10mg -21.4% / 15mg -22.5% (+1.1%p 증분)\n  - 12.5mg 단독 비교 RCT는 없음; 임상적 추론\n\n### 감량 속도 [CLINICAL — 조건부]\n초반 감량 속도가 [[wegovy|위고비]]보다 빠른 편. 이후 감량 폭이 줄어드는 것은 정상 경과.\n> SURMOUNT-5(NEJM 2025): 72주 -20.2% vs 위고비 -13.7% (전체 기간 우월성 확인)",
         "sources": []
       },
       "insurance": {
         "content": "### 실비보험 활용 [TIPS — by 로컬원장님]\n2형 당뇨 환자에게 처방 시 실비보험 적용 가능.\n\n처방 시 철저히 조사·기록해야 할 항목:\n- 동반질환 (HTN, 이상지질혈증, OSA, CVD 등)\n- 가족력\n- 최근 측정 HbA1c\n- 당일 BST\n- 현재 복용 중인 약물\n\n> 보험회사에 제출할 수 있도록 차트에 명확히 기록",
         "sources": []
+      },
+      "rebound": {
+        "content": "### 중단 후 체중 반동 — 대체 약물 전환 전략 [CLINICAL]\n단일 기관 후향 연구 (n=83, 내분비·체중관리 클리닉).\n\n**핵심 수치:**\n- 마운자로 평균 복용 기간: 11개월 → 평균 -6.7% 체중감소 달성\n- **중단 후 12개월 체중 변화: +1.9% (p=0.11 — 통계적 비유의)**\n- 주요 중단 이유: **약값 부담 (80.7%)**\n- 대체 비만약 전환율: **81.9%** (68/83명)\n\n**임상 적용:**\n- 마운자로를 비용 문제로 중단할 경우 → 즉시 대체 비만약([[wegovy|위고비]]·삭센다 등)으로 전환하면 감량 효과 유지 가능\n- \"그냥 끊으면 살 빠진 것이 다시 온다\" → **대체 약물 전환 전략이 핵심**\n- 단순 중단 시 체중 반동 위험 — 전환 계획 없는 중단 상담 시 구체적 전환 약물 함께 논의\n- 전환 대상: 다른 GLP-1/GLP-1-GIP, phentermine-topiramate, naltrexone-bupropion 등\n- **단순 중단 ≠ 전환 전략.** 약사·의사가 다음 약물로의 transition을 적극 지원한 연구 → \"전환\" 자체가 키 중재\n- **한계:** 후향·단일 기관, \"중단 후 방치\"한 군과 직접 비교 없음. 평균치이며 개인차 큼.",
+        "sources": ["Huang L et al. J Am Pharm Assoc 2026;103112. PMID:41962807"]
       }
     },
     "uiHooks": {
       "hint": ["dosing","insurance"],
-      "guide": ["indication","dosing","insurance"],
+      "guide": ["indication","dosing","insurance","rebound"],
       "draftAppend": null,
       "draftTemplate": null
     }
@@ -597,24 +608,30 @@ var KNOWLEDGE_BUNDLE = {
     "kind": "drug",
     "parents": ["obesity"],
     "keywords": ["mounjaro","마운자로","zepbound","tirzepatide"],
-    "primarySources": [],
+    "primarySources": [
+      "Huang L et al. J Am Pharm Assoc 2026;103112. PMID:41962807, DOI:10.1016/j.japh.2026.103112"
+    ],
     "sections": {
       "indication": {
         "content": "- T2DM (Mounjaro) — 단독 또는 병용, FDA 2022 승인\n- 비만 (Zepbound) — HTN/이상지질혈증/OSA/CVD 동반 시, FDA 2023.11 승인\n  - CVD: 우월성 미입증, 비열등성 수준 (SURPASS-CVOT)",
         "sources": []
       },
       "dosing": {
-        "content": "### 시작 및 증량\n- 시작: 2.5mg\n- 4주 후: 5mg 증량 후 유지\n- 주사 방법: 웬티카 방식, 위고비보다 간단\n\n### 최대 용량 [CLINICAL — 조건부]\n- 4단계(10mg)까지 효과 뚜렷\n- 5단계(12.5mg) / 6단계(15mg) 추가 이익 크지 않음\n  - SURMOUNT-1: 10mg -21.4% / 15mg -22.5% (+1.1%p 증분)\n  - 12.5mg 단독 비교 RCT는 없음; 임상적 추론",
+        "content": "### 시작 및 증량\n- 시작: 2.5mg\n- 4주 후: 5mg 증량 후 유지\n- 주사 방법: 웬티카 방식, [[wegovy|위고비]]보다 간단\n\n### 최대 용량 [CLINICAL — 조건부]\n- 4단계(10mg)까지 효과 뚜렷\n- 5단계(12.5mg) / 6단계(15mg) 추가 이익 크지 않음\n  - SURMOUNT-1: 10mg -21.4% / 15mg -22.5% (+1.1%p 증분)\n  - 12.5mg 단독 비교 RCT는 없음; 임상적 추론\n\n### 감량 속도 [CLINICAL — 조건부]\n초반 감량 속도가 [[wegovy|위고비]]보다 빠른 편. 이후 감량 폭이 줄어드는 것은 정상 경과.\n> SURMOUNT-5(NEJM 2025): 72주 -20.2% vs 위고비 -13.7% (전체 기간 우월성 확인)",
         "sources": []
       },
       "insurance": {
         "content": "### 실비보험 활용 [TIPS — by 로컬원장님]\n2형 당뇨 환자에게 처방 시 실비보험 적용 가능.\n\n처방 시 철저히 조사·기록해야 할 항목:\n- 동반질환 (HTN, 이상지질혈증, OSA, CVD 등)\n- 가족력\n- 최근 측정 HbA1c\n- 당일 BST\n- 현재 복용 중인 약물\n\n> 보험회사에 제출할 수 있도록 차트에 명확히 기록",
         "sources": []
+      },
+      "rebound": {
+        "content": "### 중단 후 체중 반동 — 대체 약물 전환 전략 [CLINICAL]\n단일 기관 후향 연구 (n=83, 내분비·체중관리 클리닉).\n\n**핵심 수치:**\n- 마운자로 평균 복용 기간: 11개월 → 평균 -6.7% 체중감소 달성\n- **중단 후 12개월 체중 변화: +1.9% (p=0.11 — 통계적 비유의)**\n- 주요 중단 이유: **약값 부담 (80.7%)**\n- 대체 비만약 전환율: **81.9%** (68/83명)\n\n**임상 적용:**\n- 비용 문제로 중단할 경우 → 즉시 대체 비만약([[wegovy|위고비]]·삭센다 등)으로 전환하면 감량 효과 유지 가능\n- \"그냥 끊으면 살 빠진 것이 다시 온다\" → 대체 약물 전환 전략이 핵심\n- 단순 중단 시 체중 반동 위험 — 전환 계획 없는 중단 상담 시 구체적 전환 약물 함께 논의\n- **한계:** 후향·단일 기관, 평균치이며 개인차 큼.",
+        "sources": ["Huang L et al. J Am Pharm Assoc 2026;103112. PMID:41962807"]
       }
     },
     "uiHooks": {
       "hint": ["dosing","insurance"],
-      "guide": ["indication","dosing","insurance"],
+      "guide": ["indication","dosing","insurance","rebound"],
       "draftAppend": null,
       "draftTemplate": null
     }
@@ -1511,19 +1528,11 @@ var KNOWLEDGE_BUNDLE = {
         "sources": ["대한심부전학회 심부전 진료지침 2022","2022 AHA/ACC/HFSA HF Guideline","2021 Universal Definition (Bozkurt B, JCF 2021)"]
       },
       "exam": {
-        "content": "### 증상·징후\n- 호흡곤란(운동 시 → 안정 시 → 좌위 호흡 순으로 진행)\n- 하지 부종, 체중 증가\n- 피로·운동능력 저하\n- 야간 기침, 발작성 야간 호흡곤란(PND)\n- 경정맥 팽대, 폐 수포음, S3 gallop\n\n### 초기 평가 (일차진료 범위)\n- 병력·신체진찰\n- 심전도 (좌각차단 등 비정상 시 주의)\n- 흉부 X선 (심비대·폐울혈)\n- **NT-proBNP 또는 BNP** — cutoff 환경별 차이 (ESC 2021):\n  - **외래 (비급성) rule-out**: BNP <35 / NT-proBNP <125\n  - **응급실 (급성) rule-out**: NT-proBNP <300 (age-adjusted rule-in: <50세 450 / 50~75세 900 / >75세 1800)\n- 혈액검사: CBC, 전해질, BUN/Cr, LFT, TSH, 철 대사([[anemia|ferritin]]·TSAT), [[diabetes|HbA1c]]\n- 심초음파 (LVEF 확인 — 상급기관 필요 시 의뢰)",
-        "sources": ["대한심부전학회 심부전 진료지침 2022","ESC 2021 HF Guideline (EJHF 2022)"]
+        "content": "### 증상·징후\n- 호흡곤란(운동 시 → 안정 시 → 좌위 호흡 순으로 진행)\n- 하지 부종, 체중 증가\n- 피로·운동능력 저하\n- 야간 기침, 발작성 야간 호흡곤란(PND)\n- 경정맥 팽대, 폐 수포음, S3 gallop\n\n### 초기 평가 (일차진료 범위)\n- 병력·신체진찰\n- 심전도 (좌각차단 등 비정상 시 주의)\n- 흉부 X선 (심비대·폐울혈)\n- **NT-proBNP 또는 BNP** — cutoff 환경별 차이 (ESC 2021):\n  - **외래 (비급성) rule-out**: BNP <35 / NT-proBNP <125 (초과 시 ECHO)\n  - **응급실 (급성) rule-out**: NT-proBNP <300 (age-adjusted rule-in: <50세 450, 50~75세 900, >75세 1800)\n- 혈액검사: CBC, 전해질, BUN/Cr, LFT, TSH, 철 대사([[anemia|ferritin]]·TSAT), [[diabetes|HbA1c]]\n- 심초음파 (LVEF 확인 — 상급기관 필요 시 의뢰)\n\n### Volume Overload 진단 정확도 — BNP + POCUS B-lines [CLINICAL]\n호흡곤란 환자에서 심인성 부하과다(volume overload) 감별. JAMA 2026 Rational Clinical Examination — 40개 연구, 11,490명, 유병률 35–69%.\n\n**Rule-in (가장 유용한 순)**\n| 검사 | LR | 특이도 |\n|---|---|---|\n| BNP ≥100 ng/mL | **6.9** | 87% |\n| CXR 혈관 충혈 | 5.9 | 91% |\n| JVD (흉골각 위 >3 cm 수직) | 4.1 | 92% |\n| POCUS bilateral B-lines | 4.0 | 77% |\n| IVC collapsibility <50% | 3.9 | 79% |\n| POCUS JVP >8 cm | 2.8 | 71% |\n| 폐 수포음 (crackles) | 2.7 | 81% |\n| 하지 부종 | 2.2 | 80% |\n\n**Rule-out (가장 유용한 순)**\n| 검사 | LR | 민감도 |\n|---|---|---|\n| POCUS B-lines 없음 | **0.09** | 93% |\n| BNP <100 ng/mL | 0.14 | 87% |\n| IVC collapsibility ≥50% | 0.22 | 82% |\n| POCUS JVP ≤8 cm | 0.26 | 81% |\n\n임상 포인트: BNP ≥100이면 단독 최강 rule-in, B-lines 없으면 단독 최강 rule-out. 두 검사 조합이 JVD·crackles보다 진단 정확도 우월하며 외래·응급 의사결정을 직접 지원한다.",
+        "sources": ["대한심부전학회 심부전 진료지침 2022","ESC 2021 HF Guideline (EJHF 2022)","Drum B et al. JAMA 2026;335(13):1159-1168. PMID:41729549. DOI:10.1001/jama.2026.0446"]
       },
       "protocol": {
-        "content": "### 1차 표준치료 — GDMT 4 Pillars (HFrEF)\n동시 또는 빠른 순차 titration이 원칙. **용량 titration은 전문의 영역**.\n1. ARNI / ACEi / ARB\n2. Beta-blocker (베타차단제)\n3. MRA (Spironolactone·Eplerenone)\n4. SGLT2 inhibitor\n\n### 2차 추가치료\n- 동율동·안정 시 HR ≥ 70 → 이바브라딘\n- 표준치료에도 악화로 입원 필요 → 베리시구앗\n- 심박수 조절 필요한 심방세동 → 디곡신\n\n### 비약물\n- 좌심실보조장치(LVAD), 심장이식, 완화치료\n- ICD/CRT-D (부정맥 예방)",
-        "sources": ["대한심부전학회 심부전 진료지침 2022"]
-      },
-      "dosing": {
-        "content": "> **전문의 titration 영역 — 일차진료는 모니터링 용도로만 참조**.\n\n### 표 1. ACEi 시작·목표 용량\n| 약제 | 시작 | 목표 |\n|---|---|---|\n| Captopril | 6.25 mg tid | 50 mg tid |\n| Enalapril | 2.5 mg bid | 10–20 mg bid |\n| Fosinopril | 5–10 mg qd | 40 mg qd |\n| Lisinopril | 2.5–5 mg qd | 20–40 mg qd |\n| Perindopril | 2 mg qd | 8–16 mg qd |\n| Ramipril | 2.5 mg qd | 5 mg bid |\n| Trandolapril | 0.5 mg qd | 4 mg qd |\n\n### 표 2. ARB 시작·목표 용량\n| 약제 | 시작 | 목표 |\n|---|---|---|\n| Candesartan | 4–8 mg qd | 32 mg qd |\n| Valsartan | 20–40 mg qd | 160 mg bid |\n| Losartan | 25–50 mg qd | 150 mg qd |\n\n### 표 3. ARNI\n| 약제 | 시작 | 목표 |\n|---|---|---|\n| Sacubitril/Valsartan | 49/51 mg bid | 97/103 mg bid |\n\n### 표 4. Beta-blocker\n| 약제 | 시작 | 목표 |\n|---|---|---|\n| Bisoprolol | 1.25 mg qd | 10 mg qd |\n| Carvedilol | 3.125 mg bid | 25 mg bid |\n| Metoprolol succinate (서방) | 12.5–25 mg qd | 200 mg qd |\n| Nebivolol | 1.25 mg qd | 10 mg qd |\n\n### 표 5. 신장기능별 MRA\n| 약제 | eGFR > 50 시작·유지 | eGFR 30–49 시작·유지 |\n|---|---|---|\n| Spironolactone | 12.5–25 → 25 qd / QOD | 12.5 → 12.5–25 qd |\n| Eplerenone | 25 → 50 qd | 25 QOD → 25 qd |",
-        "sources": ["대한심부전학회 심부전 진료지침 2022"]
-      },
-      "monitoring": {
-        "content": "1. 표준약물 치료 후 LVEF 40% 이상으로 개선된 경우에도 **표준약물 치료 유지 권고** (중단 금지)\n2. **혈압(BP), 심박수(HR) 확인**\n3. **신기능(BUN/Cr), 전해질(ELE) 모니터링**\n\n재진 시 고정 체크 항목 — 일차진료의 역할.",
+        "content": "### 1차 표준치료 — GDMT 4 Pillars (HFrEF)\n동시 또는 빠른 순차 titration이 원칙. **용량 titration은 전문의 영역**.\n1. ARNI / ACEi / ARB\n2. Beta-blocker (베타차단제)\n3. MRA (Spironolactone·Eplerenone)\n4. SGLT2 inhibitor\n\n> GDMT 약물별 시작·목표 용량표 → [[heart-failure-gdmt-dosing]]\n\n### 2차 추가치료\n- 동율동·안정 시 HR ≥ 70 → 이바브라딘\n- 표준치료에도 악화로 입원 필요 → 베리시구앗\n- 심박수 조절 필요한 심방세동 → 디곡신\n\n### 비약물\n- 좌심실보조장치(LVAD), 심장이식, 완화치료\n- ICD/CRT-D (부정맥 예방)",
         "sources": ["대한심부전학회 심부전 진료지침 2022"]
       },
       "contraindication": {
@@ -1549,21 +1558,21 @@ var KNOWLEDGE_BUNDLE = {
         "sources": ["대한심부전학회 심부전 진료지침 2022"]
       },
       "notes": {
-        "content": "### 전원 최적시기 개념 (그림 1)\n심부전 상태는 시간에 따라 중증도가 변동. 전원 시점은 너무 조기도, 너무 늦지도 않은 \"최적기\"가 중요.\n| 단계 | 상태 | 전원 판단 |\n|---|---|---|\n| 심부전 시작·지속 | NYHA I–II / GDMT 충족 / 입원 없음 | 조기 전원 불필요 |\n| **심부전 진행·악화** | NYHA III–IV / GDMT 감량 필요 / 잦은 입원 / ICD shock 반복 / 신장기능 악화 | **전원·의뢰 최적기** |\n| 심장 펌프 부전 | 다발성 장기 부전 / 심각한 영양실조 / 심장 액사 | 의뢰 너무 늦음 (비가역) |\n\n### 동반 고혈압 관리\n- LVEF 관계없이 BP ≥ 140/90 → 고혈압 약물치료 권고\n- HFrEF: ACEi/ARB + BB + 이뇨제 + MRA 사용 권고\n- 목표 미달 시 디하이드로피리딘계 CCB 추가 고려\n- HFpEF: HFrEF와 유사 기준·목표\n- 좌심실비대 동반 시 RAS 차단제 + CCB + 이뇨제 조합, SBP 120–130 mmHg 목표\n\n### 동반 당뇨병 관리\n- CVD 있거나 위험 높은 당뇨 환자: 심부전 없어도 SGLT2 억제제 표준치료 권고 (심혈관 사망·심부전 입원 예방)\n- HFrEF/HFmrEF + 당뇨: empagliflozin 또는 dapagliflozin 표준치료",
+        "content": "> 전원 최적시기 곡선·다학제팀 구성·강의 요약 → [[heart-failure-referral]]\n> 비만 동반 HFpEF 체중감량·GLP-1 전략 → [[heart-failure-hfpef-obesity]]\n\n### 동반 고혈압 관리 (핵심 권고사항)\n- LVEF 무관, BP **≥ 140/90 mmHg**일 때 약물치료 권고.\n- HFrEF: ACEi/ARB·BB·이뇨제·알도스테론길항제 우선. 미달 시 DHP-CCB 추가.\n- HFpEF: HFrEF와 유사 기준·목표.\n- 좌심실비대 동반: RAS 차단제 + CCB + 이뇨제 조합, SBP **120–130 mmHg** 목표.\n\n### 동반 당뇨병 관리 (핵심 권고사항)\n- CV 위험 높은 T2DM (현재 심부전 없어도) → **SGLT2 억제제** 표준.\n- 심부전 + T2DM → **SGLT2 억제제 ([[sglt2-inhibitors|empagliflozin]] / [[sglt2-inhibitors|dapagliflozin]])** 표준.",
         "sources": [
           "대한심부전학회 심부전 진료지침 2022",
           "Dunlay SM et al. JACC Heart Fail 2021;9(10):722-732"
         ]
       },
       "draft-append": {
-        "content": "심부전 환자 재진 시 체크: ① [[예방접종|예방접종]] 상태(독감·[[폐렴구균|폐렴구균]]·RSV·[[대상포진|대상포진]]·COVID·[[Tdap|Tdap]]) ② 의뢰 기준 해당 여부([[I NEED HELP|I NEED HELP]]) ③ BP/HR ④ BUN·Cr·전해질.",
+        "content": "심부전 환자 재진 시 체크: ① [[예방접종|예방접종]] 상태(독감·[[폐렴구균|폐렴구균]]·RSV·[[대상포진|대상포진]]·COVID·[[Tdap|Tdap]]) ② 의뢰 기준 해당 여부([[I NEED HELP|I NEED HELP]]) ③ BP/HR ④ BUN·Cr·전해질.\n\n> 관련 엔트리: [[heart-failure-monitoring]] · [[heart-failure-gdmt-dosing]] · [[heart-failure-pocus-ducs]] · [[heart-failure-hfpef-obesity]] · [[heart-failure-cardiology-2025-update]] · [[heart-failure-volume-overload]] · [[heart-failure-referral]]",
         "sources": []
       }
     },
-    /* Boss D안: dosing·protocol은 guide에서 제외 (전문의 titration 영역). hint는 referral/schedule/monitoring 우선. */
+    /* Boss D안: dosing·monitoring 분리 후 sub-entry로. hint는 referral/schedule 우선. */
     "uiHooks": {
-      "hint":        ["referral","schedule","monitoring"],
-      "guide":       ["definition","classification","exam","schedule","monitoring","contraindication","comparison","referral","notes"],
+      "hint":        ["referral","schedule"],
+      "guide":       ["definition","classification","exam","schedule","contraindication","comparison","referral","notes"],
       "draftAppend": ["draft-append"]
     }
   },
@@ -1591,22 +1600,18 @@ var KNOWLEDGE_BUNDLE = {
           "Roubille F et al. Eur J Prev Cardiol 2025. doi:10.1093/eurjpc/zwaf366"
         ]
       },
-      "monitoring": {
-        "content": "1. 표준약물 치료 후 LVEF ≥ 40%로 개선돼도 표준약물 유지\n2. BP·HR 확인\n3. BUN/Cr·전해질 모니터링",
-        "sources": ["대한심부전학회 심부전 진료지침 2022"]
-      },
       "classification": {
         "content": "HFrEF(LVEF ≤ 40%) / HFmrEF(41–49%) / HFpEF(≥ 50%)",
         "sources": ["대한심부전학회 심부전 진료지침 2022"]
       },
       "draft-append": {
-        "content": "심부전 환자 재진 시 체크: ① [[예방접종|예방접종]] 상태(독감·[[폐렴구균|폐렴구균]]·RSV·[[대상포진|대상포진]]·COVID·[[Tdap|Tdap]]) ② 의뢰 기준 해당 여부([[I NEED HELP|I NEED HELP]]) ③ BP/HR ④ BUN·Cr·전해질.",
+        "content": "심부전 환자 재진 시 체크: ① [[예방접종|예방접종]] 상태(독감·[[폐렴구균|폐렴구균]]·RSV·[[대상포진|대상포진]]·COVID·[[Tdap|Tdap]]) ② 의뢰 기준 해당 여부([[I NEED HELP|I NEED HELP]]) ③ BP/HR ④ BUN·Cr·전해질.\n\n> 모니터링 항목 → [[heart-failure-monitoring]]",
         "sources": []
       }
     },
     "uiHooks": {
-      "hint":        ["referral","schedule","monitoring"],
-      "guide":       ["classification","schedule","monitoring","referral"],
+      "hint":        ["referral","schedule"],
+      "guide":       ["classification","schedule","referral"],
       "draftAppend": ["draft-append"]
     }
   },
@@ -5594,3 +5599,191 @@ var _cxr_template_v2 = {
 KNOWLEDGE_BUNDLE["chest-xray-template"] = _cxr_template_v2;
 KNOWLEDGE_BUNDLE["흉부엑스레이-검진"] = _cxr_template_v2;
 KNOWLEDGE_BUNDLE["기숙사CXR"] = _cxr_template_v2;
+
+/* ═══════════════════════════════════════════════════════════════════
+   2026-05-06 Liby ingest — heart-failure 분할 후속 + alcohol-use-disorder 신규
+   원본 md: knowledge/by-disease/heart-failure-*.md (5건) + alcohol-use-disorder.md
+   heart-failure 본 엔트리에서 dosing·monitoring 분리, POCUS·HFpEF·2025 update는 별도 child entry로 분리.
+═══════════════════════════════════════════════════════════════════ */
+
+/* heart-failure-monitoring — 재진 모니터링 항목 (parent: heart-failure) */
+var _hf_monitoring_v2 = {
+  kind: "disease",
+  parents: ["heart-failure"],
+  keywords: ["heart-failure-monitoring","심부전 모니터링","BP","HR","BUN","Cr","전해질","LVEF 추적"],
+  primarySources: [
+    "대한심부전학회. 심부전 진료지침 2022"
+  ],
+  sections: {
+    monitoring: {
+      content: "1. **표준약물 치료 후 LVEF 40% 이상으로 개선된 경우에도 표준약물 치료 유지 권고** (중단 금지)\n2. **혈압(BP), 심박수(HR) 확인**\n3. **신기능(BUN/Cr), 전해질(ELE) 모니터링**\n\n재진 시 고정 체크 항목 — 일차진료의 역할.\n\n> 관련: [[heart-failure]] (본 엔트리) · [[heart-failure-gdmt-dosing]] (GDMT 약물별 용량표)",
+      sources: ["대한심부전학회 심부전 진료지침 2022"]
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["heart-failure-monitoring"] = _hf_monitoring_v2;
+KNOWLEDGE_BUNDLE["심부전 모니터링"] = _hf_monitoring_v2;
+
+/* heart-failure-gdmt-dosing — GDMT 약물별 시작·목표 용량표 (parent: heart-failure) */
+var _hf_gdmt_dosing_v2 = {
+  kind: "disease",
+  parents: ["heart-failure"],
+  keywords: ["heart-failure-gdmt-dosing","GDMT","ACEi","ARB","ARNI","beta-blocker","MRA","시작 용량","목표 용량"],
+  primarySources: [
+    "대한심부전학회. 심부전 진료지침 2022"
+  ],
+  sections: {
+    dosing: {
+      content: "> **전문의 titration 영역 — 일차진료는 모니터링 용도로만 참조**. 아래 용량표는 참고용이며 titration 결정은 심장내과 주도.\n\n### 표 1. ACEi 시작·목표 용량\n| 안지오텐신전환효소억제제 | 시작 | 목표 |\n|---|---|---|\n| 캅토프릴 (Captopril) | 6.25 mg tid | 50 mg tid |\n| 에날라프릴 (Enalapril) | 2.5 mg bid | 10–20 mg bid |\n| 포시노프릴 (Fosinopril) | 5–10 mg qd | 40 mg qd |\n| 리시노프릴 (Lisinopril) | 2.5–5 mg qd | 20–40 mg qd |\n| 페린도프릴 (Perindopril) | 2 mg qd | 8–16 mg qd |\n| 라미프릴 (Ramipril) | 2.5 mg qd | 5 mg bid |\n| 트란도라프릴 (Trandolapril) | 0.5 mg qd | 4 mg qd |\n\n### 표 2. ARB 시작·목표 용량\n| 안지오텐신수용체차단제 | 시작 | 목표 |\n|---|---|---|\n| 칸데사르탄 (Candesartan) | 4–8 mg qd | 32 mg qd |\n| 발사르탄 (Valsartan) | 20–40 mg qd | 160 mg bid |\n| 로자탄 (Losartan) | 25–50 mg qd | 150 mg qd |\n\n### 표 3. ARNI 시작·목표 용량\n| 성분 | 시작 | 목표 |\n|---|---|---|\n| 사쿠비트릴/발사르탄 | 49/51 mg bid | 97/103 mg bid |\n\n### 표 4. Beta-blocker 시작·목표 용량 (HFrEF 사용 가능)\n| 베타차단제 | 시작 | 목표 |\n|---|---|---|\n| 비소프롤롤 (Bisoprolol) | 1.25 mg qd | 10 mg qd |\n| 카르베딜롤 (Carvedilol) | 3.125 mg bid | 25 mg bid |\n| 메토프롤롤 숙시네이트(서방형) | 12.5–25 mg qd | 200 mg qd |\n| 네비보롤 (Nebivolol) | 1.25 mg qd | 10 mg qd |\n\n### 표 5. 신장기능별 MRA 처방 용량\n| 약제 | eGFR > 50 시작·유지 | eGFR 30–49 시작·유지 |\n|---|---|---|\n| 스피로놀락톤 | 12.5–25 → 25 qd / QOD | 12.5 → 12.5–25 qd |\n| 에플레레논 | 25 → 50 qd | 25 QOD → 25 qd |\n\n> 관련: [[heart-failure]] · [[heart-failure-monitoring]]",
+      sources: ["대한심부전학회 심부전 진료지침 2022"]
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["heart-failure-gdmt-dosing"] = _hf_gdmt_dosing_v2;
+KNOWLEDGE_BUNDLE["GDMT 용량"] = _hf_gdmt_dosing_v2;
+
+/* heart-failure-pocus-ducs — POCUS DUCS 급성 심부전 예후 예측 (parent: heart-failure) */
+var _hf_pocus_ducs_v2 = {
+  kind: "disease",
+  parents: ["heart-failure"],
+  keywords: ["heart-failure-pocus-ducs","DUCS","POCUS","VEXUS","B-lines","급성 심부전","예후 예측"],
+  primarySources: [
+    "Scherer HC et al. J Ultrasound Med 2026. PMID:41863026, DOI:10.1002/jum.70229"
+  ],
+  sections: {
+    exam: {
+      content: "### POCUS DUCS — 급성 심부전 예후 예측 복합 점수 [CLINICAL — 조건부]\n> [초록 기반 — 전문 미확인] 단일 기관, n=109, LVEF<50%, CICU 입원\n\n**DUCS (Dynamic Ultrasound Congestion Score)**: 폐 초음파(B-lines 수정) + VEXUS(정맥 울혈 초음파) 복합 점수.\n\n| DUCS 지표 | 예측 대상 | AUC |\n|---|---|---|\n| ΔDUCS (입원→72시간 변화) | 입원 중 사망 | **0.76** |\n| DUCS (CICU 퇴원 시) | 30일 사망·재입원 | **0.77** |\n\n**임상 포인트:**\n- 폐 초음파 B-lines 단독에서 VEXUS(경정맥·간정맥·신장 정맥 패턴) 통합으로 이뇨제 반응과 볼륨 과부하를 더 정확히 추적 가능\n- 72시간 내 DUCS 개선 여부가 예후 예측에 가장 유용 — 이뇨제 반응 모니터링 도구로 활용\n- 기존 BNP + POCUS B-lines 진단 데이터([[heart-failure|Volume Overload 진단 정확도]] 섹션)에 더해 **치료 모니터링** 용도로 VEXUS 개념 확장\n\n**VEXUS 검사 구성:**\n- IVC 확장(>2 cm + collapsibility↓) + 간정맥 파형(S파 소실·역류) + 문맥 간헐성 + 신장 정맥 간헐성\n\n> POCUS 술기 확장(VEXUS 포함)을 고려하는 임상가를 위한 근거. 일차의료 직접 적용보다는 상급기관·CICU 협진 시 참고.\n\n> 관련: [[heart-failure]] · [[heart-failure-monitoring]] · [[heart-failure-volume-overload]]",
+      sources: ["Scherer HC et al. J Ultrasound Med 2026. PMID:41863026"]
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["heart-failure-pocus-ducs"] = _hf_pocus_ducs_v2;
+KNOWLEDGE_BUNDLE["DUCS"] = _hf_pocus_ducs_v2;
+KNOWLEDGE_BUNDLE["VEXUS"] = _hf_pocus_ducs_v2;
+
+/* heart-failure-hfpef-obesity — HFpEF + 비만 체중감량 전략 (parent: heart-failure) */
+var _hf_hfpef_obesity_v2 = {
+  kind: "disease",
+  parents: ["heart-failure"],
+  keywords: ["heart-failure-hfpef-obesity","HFpEF","비만","체중감량","GLP-1","semaglutide","tirzepatide"],
+  primarySources: [
+    "Costa TA et al. Curr Opin Cardiol 2026;41(3):147-156. PMID:41802118. DOI:10.1097/HCO.0000000000001284"
+  ],
+  sections: {
+    protocol: {
+      content: "### HFpEF + 비만 — 체중감량 전략 [CLINICAL]\n> [초록 기반 — 전문 미확인]\n\n#### 핵심 원칙\n**비만 동반 HFpEF 환자에서 체중감량은 현재 권고되는 최우선 치료 전략이다.**\n- 내장지방 ↔ HFpEF 악순환: 내장지방↑ → 염증·아디포카인 분비 → 심근 경직·이완 장애 악화\n- 체중감량으로 운동능력·증상·삶의 질 개선이 일관되게 확인됨\n\n#### GLP-1 계열 (Semaglutide·Tirzepatide) HFpEF 근거\n| 결과 | 근거 |\n|------|------|\n| 운동능력(VO₂ peak·6분 보행) 개선 | RCT 확인 |\n| 증상(NYHA class·KCCQ) 개선 | RCT 확인 |\n| 삶의 질 개선 | RCT 확인 |\n| 임상 이벤트 감소 가능성 | 일부 연구 시사 — 대규모 outcome trial 필요 |\n\n**비만 정도가 클수록 GLP-1 계열 치료 이익이 더 큼** (incretin 기반 + MRA + SGLT2 + ARNI 모두)",
+      sources: []
+    },
+    notes: {
+      content: "### 1차의료 적용\n- 비만 + HFpEF 환자 → **GLP-1 계열 처방의 심장 이익을 추가 근거로 제시** 가능\n  - [[obesity]]의 TOS/OMA/OAC 권고 (HFpEF → GLP-1+ 조건부 권고)와 정합\n- 체중감량 상담 시: \"살을 빼면 심장이 편해진다\" — 기전 설명 + 수치 근거 가능\n- HFrEF에서 체중감량 역할은 불확실 (비만 → HFrEF 보호 역설 가능성 — obesity paradox 논의 중)\n- 비만수술: 관찰 연구에서 HF 위험 감소 시사, 무작위 임상 증거 부족\n\n> 관련: [[heart-failure]] · [[obesity]] · [[wegovy]] · [[mounjaro]] · [[glp1-selection-strategy]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["heart-failure-hfpef-obesity"] = _hf_hfpef_obesity_v2;
+KNOWLEDGE_BUNDLE["HFpEF 비만"] = _hf_hfpef_obesity_v2;
+
+/* heart-failure-cardiology-2025-update — 심장내과 핵심 업데이트 2025 (parent: heart-failure) */
+var _hf_cardio_2025_v2 = {
+  kind: "disease",
+  parents: ["heart-failure"],
+  keywords: ["heart-failure-cardiology-2025-update","심장내과 업데이트 2025","AF 항응고","MI 후 베타차단제","HCM","mavacamten","aficamten"],
+  primarySources: [
+    "Atalla M et al. Cardiology: What You May Have Missed in 2025. Ann Intern Med 2026. PMID:41974015, DOI:10.7326/ANNALS-26-01014"
+  ],
+  sections: {
+    notes: {
+      content: "### 심장내과 핵심 업데이트 2025 — 일차의료 적용 [CLINICAL]\n> [초록 기반 — 전문 미확인]\n\n#### AF 항응고 — 리바록사반 vs 아픽사반 재평가\n- 2025년 데이터에서 AF 항응고 약제 선택 근거 업데이트\n- 아픽사반이 리바록사반 대비 일부 결과에서 유리 가능성 — 기존 처방 재평가 검토\n- 상세: [[doac-elderly]] 엔트리 업데이트 참조 필요\n\n#### MI 후 베타차단제 — 일률 처방 재고\n- LVEF 보존(≥50%) MI 후 환자에서 베타차단제 일률 처방 근거 추가 약화\n- 2025 Ann Intern Med 업데이트에서도 REDUCE-AMI(2024) 이후 방향 재확인\n- 개별 환자별 판단: HFrEF·부정맥 동반 시 유지 / 단순 LVEF보존 MI 후는 재평가\n- 상세: [[post-mi-deprescribing]] 엔트리 참조\n\n#### 심부전 업데이트\n- HF 치료 전략 변화 지속 — GDMT 4 pillars 기반 유지이나 신약 인식 필요\n- HCM(비후성 심근병증): mavacamten·aficamten 등 신약 확산 → 가정의 인식 강화\n\n> 관련: [[heart-failure]] · [[post-mi-deprescribing]] · [[internal-medicine-2025-update]]",
+      sources: ["Atalla M et al. Ann Intern Med 2026. PMID:41974015"]
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["heart-failure-cardiology-2025-update"] = _hf_cardio_2025_v2;
+KNOWLEDGE_BUNDLE["심장내과 2025 업데이트"] = _hf_cardio_2025_v2;
+
+/* alcohol-use-disorder — 알코올사용장애 (5-6 신규 ingest, GLP-1 AUD 섹션 포함) [CLINICAL] */
+var _aud_v2 = {
+  kind: "disease",
+  keywords: ["alcohol use disorder","AUD","알코올사용장애","알코올중독","naltrexone","날트렉손","acamprosate","아캄프로세이트","disulfiram","디설피람","AUDIT","음주","MAUD"],
+  primarySources: [
+    "McPheeters M et al. Pharmacotherapy for AUD: SR + Meta-analysis. JAMA 2023;330(17):1653-1665. PMID:37934220, DOI:10.1001/jama.2023.19761",
+    "Bernstein EY et al. Outcomes After Initiation of MAUD at Hospital Discharge. JAMA Netw Open 2024;7(3):e243387. PMID:38551564, DOI:10.1001/jamanetworkopen.2024.3387",
+    "Lähteenvuo M et al. Repurposing Semaglutide and Liraglutide for AUD. JAMA Psychiatry 2025;82(1):94-98. PMID:39535805, DOI:10.1001/jamapsychiatry.2024.3599"
+  ],
+  sections: {
+    definition: {
+      content: "알코올사용장애(AUD)는 DSM-5 기준 11개 항목 중 2개 이상을 12개월 내 충족하는 **만성 재발성 질환**. 미국 기준 성인 2,830만 명. AUD에 대한 **FDA 승인 약물(MAUD)은 효과적이나 과소처방** 상태 — 입원 환자 중 2% 미만만 처방 받음(Bernstein 2024). **일차의료에서 정신과 의뢰 전 1차 시도가 안전·효과적**이라는 근거가 확립되었다.",
+      sources: ["McPheeters M et al. JAMA 2023","Bernstein EY et al. JAMA Netw Open 2024"]
+    },
+    classification: {
+      content: "### 중증도 (DSM-5)\n| 경증 (mild) | 중등도 (moderate) | 중증 (severe) |\n|---|---|---|\n| 2-3개 기준 | 4-5개 기준 | 6개 이상 기준 |\n\n### AUDIT 컷오프 — 한국형 두 가지 버전 명시 필요\n> ⚠ 한국 임상에서 AUDIT-K는 두 버전 혼재. 어느 버전 기준인지 명시 필요.\n\n**WHO 일반 AUDIT 기준** (4 zones — Higgins-Biddle & Babor)\n| Zone | 점수 | 처치 |\n|---|---|---|\n| I | 0~7 | 교육 |\n| II | **8~15** | **simple advice** (FRAMES brief intervention) |\n| III | **16~19** | brief intervention + 모니터링 |\n| IV | **≥20** | 전문 평가·치료 의뢰 |\n\n**AUDIT-K 원판** (Lee BO 2000)\n- ≥12: 문제음주 / ≥15: AUD / ≥26: 알코올 의존\n\n**AUDIT-KR 개정판** (김대진 2014, 한국 잔량 보정)\n- 남 ≥10 / 여 ≥8: AUD\n- at-risk drinking 남녀 ≥3\n\n### AUDIT-C 단축 도구 (3문항)\n시간 부족 시 사용. **컷오프 (NIAAA / VA / USPSTF)**: 남 **≥4점**, 여 **≥3점** 위험 음주.",
+      sources: []
+    },
+    exam: {
+      content: "### 스크리닝 도구\n- **AUDIT-K** (10문항) — 외래 1st line\n- **CAGE** (4문항, 민감도 낮음)\n- **SBIRT** 프레임워크: Screening → Brief Intervention → Referral to Treatment\n\n### 초기 평가\n- DSM-5 AUD 11항목 체크 (tolerance, withdrawal, 통제 상실, 사회적 문제, craving 등)\n- 음주 패턴: 주당 표준잔 수, 폭음 빈도, 마지막 음주\n- 동반질환: 우울·불안·수면장애·자살사고\n- 간기능 (ALT, AST, GGT, ALP, bilirubin, albumin, PT/INR)\n- 신기능 (acamprosate 용량 결정)\n- CBC (MCV, thrombocytopenia)\n\n### 음주량 정의 (NIAAA / SAMHSA / WHO)\n**표준 음주 1잔**: 미국 NIAAA 14g 순알코올 / WHO 10g / 한국 임상 통용: **소주 50mL ≈ 7~8g** (소주 1잔)\n\n**Low-risk drinking 한도** (NIAAA)\n- 남 ≤4잔/일·≤14잔/주, 여 ≤3잔/일·≤7잔/주\n- 2020 미국 식이지침 moderate: 남 ≤2잔/일, 여 ≤1잔/일\n\n**폭음 (binge — NIAAA)**: 남 5잔 / 2시간, 여 4잔 / 2시간\n\n**과음 (heavy use — SAMHSA)**: binge episodes ≥5일 / 30일",
+      sources: []
+    },
+    protocol: {
+      content: "### Step 1 — 금단 위험 평가\n- CIWA-Ar 같은 도구 사용\n- 중등도 이상 withdrawal (CIWA >10) → 입원·전문의 의뢰\n- 경증 withdrawal 또는 이미 cessation 상태 → 외래 약물 시작 가능\n\n### Step 2 — 1st line 약물 선택 (McPheeters 2023 메타분석)\n| 약물 | NNT (any drinking 예방) | NNT (heavy drinking 예방) | 근거 등급 |\n|---|---|---|---|\n| **Acamprosate** | 11 (95% CI 1-32) | — | Moderate |\n| **Oral naltrexone 50mg/d** | 18 (95% CI 4-32) | **11 (95% CI 5-41)** | Moderate |\n| Injectable naltrexone | — | 30일 음주일 -5일 | Lower |\n| Disulfiram | (근거 약함) | — | Low |\n\n### Step 3 — 심리사회 중재 동반 필수\n- 단기 브리프 개입 (5-15분 외래 상담), AA 의뢰, 동기강화면담, CBT (가능하면 → [[anxiety-depression-cbt]])\n\n### FRAMES — Brief Intervention 6요소 (Zone II~III)\n> 근거: Miller WR & Sanchez VC 1993/1994, WHO Brief Intervention Manual, SAMHSA TIP 34\n\n| 요소 | 내용 |\n|---|---|\n| **F** Feedback | 음주로 인한 검사소견·객관적 문제점 알려줌 |\n| **R** Responsibility | 음주행동 변화에 대한 환자 책임 강조 |\n| **A** Advice | 적정음주·단주에 대한 직접적 충고 |\n| **M** Menu | 변화 방법 다양하게 제시 후 환자 선택 |\n| **E** Empathy | 공감·이해하는 태도 |\n| **S** Self-efficacy | 변화할 수 있다는 자기효능감 증진 |\n\n**USPSTF 2018 (Grade B)**: 18세 이상 모든 성인 — unhealthy alcohol use 스크리닝 + brief intervention 권고.\n\n### Step 4 — 효과 평가\n- 시작 4주, 12주 시점 재평가\n- 목표: 완전 금주 **or** 위험 음주량 감소 (현실적 목표)\n- 효과 부족 + 순응도 양호 → 다른 약제로 교체 (naltrexone ↔ acamprosate)",
+      sources: ["McPheeters M et al. JAMA 2023"]
+    },
+    dosing: {
+      content: "### 날트렉손 (Naltrexone) — 1st line\n- **경구 50 mg 1일 1회** (국내: 레비아정 50mg 등)\n- 시작: 25mg qd × 1-3일 후 50mg qd (오심 감소 목적)\n- 식사 여부 무관\n- 치료 기간: 최소 3-6개월, 가능하면 12개월 이상\n\n### 아캄프로세이트 (Acamprosate)\n- **333 mg 2정 1일 3회** (하루 총 6정, 1998mg) — 국내: 아캄프롤정 333mg\n- 식사와 함께 복용\n- 신기능별 용량:\n  - CrCl > 50: 표준 용량\n  - CrCl 30-50: **절반 용량 (1정 TID)**\n  - CrCl < 30: **금기**\n- 치료 기간: 6-12개월\n\n### 디설피람 (Disulfiram) — 근거 약함, 3rd line\n- 250-500 mg 1일 1회\n- **환자의 명확한 동기 + 감시** 필요 (본인/가족 감독 하 복용이 효과 전제)\n- 국내 허가사항 확인 (제한적 공급)",
+      sources: []
+    },
+    indication: {
+      content: "- DSM-5 AUD 진단 (중등도~중증)\n- 자발적 금주·절주 의지 있음\n- 심리사회 중재 병행 가능\n- **경증(DSM-5 2-3항목)도 위험 음주 지속 시 약물 고려 가능**\n\n특수 상황:\n- 알코올 관련 입원 이력 → **퇴원 시 MAUD 시작**이 30일 재입원 42% 감소 (Bernstein 2024)\n- 간경변 동반: naltrexone 주의 (간독성), acamprosate 선호 (신기능 확인 후)",
+      sources: ["Bernstein EY et al. JAMA Netw Open 2024. PMID:38551564"]
+    },
+    contraindication: {
+      content: "### 날트렉손 절대 금기\n- **아편계(opioid) 현재 사용 또는 의존** (급성 금단 유발)\n- 수술 후 통증 관리에 아편계 필요 예정\n- 급성 간염, 간부전\n- 알려진 naltrexone 과민반응\n\n### 아캄프로세이트 절대 금기\n- **CrCl < 30** (신부전)\n- 알려진 과민반응\n\n### 디설피람 절대 금기\n- 최근 알코올 섭취 (12시간 이내)\n- 심한 심혈관질환, psychosis\n- 임신",
+      sources: []
+    },
+    precaution: {
+      content: "### 날트렉손\n- **부작용**: 오심 RR 1.73 (1.51-1.98), 구토 RR 1.53 (1.23-1.91) vs placebo\n- 용량 적정은 dose-dependent — 25mg로 시작 고려\n- **간효소 모니터링**: 시작 전, 4주, 3개월 LFT\n- ALT >3x ULN → 중단\n\n### 아캄프로세이트\n- **부작용**: 설사 RR 1.58 (1.27-1.97)\n- 노인에서 신기능 감소 주의 — 정기 CrCl 체크\n- 임신 C, 수유 주의\n\n### 공통\n- **autonomy 존중** — 완전 금주 강요 아닌 harm reduction도 수용",
+      sources: ["McPheeters M et al. JAMA 2023"]
+    },
+    monitoring: {
+      content: "### 정기 체크\n- 음주량·빈도 self-report (매 방문)\n- AUDIT-K 재측정 (3개월 간격)\n- LFT (naltrexone): baseline, 4주, 3개월, 이후 6개월마다\n- CrCl (acamprosate): 6-12개월마다\n- GGT·MCV (간접적 음주 모니터링)\n\n### 순응도 체크\n- 약물 순응도 명시적 질문\n- 비약물 중재 (AA, 상담) 참석 여부\n- 재발 시: \"실패\" 아닌 \"재학습 기회\"로 프레이밍",
+      sources: []
+    },
+    referral: {
+      content: "정신과/중독의학 의뢰:\n- 중증 AUD (DSM-5 ≥6)\n- 약물 2개 trial (각 3개월) 실패\n- 자살사고·우울·다른 중독 동반\n- 중증 withdrawal 위험 (CIWA >15)\n- 간경변·신부전 동반 복합 약물 결정 필요\n\n입원 의뢰:\n- 중등도~중증 withdrawal 과거력 (seizure, DT)\n- 현재 CIWA >15\n- 외래 환경 불안정 (homelessness, 가정 폭력)\n\n관련: [[depression-screening]], [[anxiety-depression-cbt]], [[paresthesia]]",
+      sources: []
+    },
+    counseling: {
+      content: "- \"AUD는 만성질환입니다. 혈압·당뇨처럼 약과 상담으로 관리합니다. 의지 문제가 아닙니다.\"\n- \"약(날트렉손 or 아캄프로세이트)은 **술 마시고 싶은 충동을 줄여** 줍니다. 한 번 마셔도 계속 폭음으로 가지 않게 합니다.\"\n- \"완전히 끊는 것이 어려우면 우선 '폭음 줄이기'도 성공입니다.\"\n- \"4주 정도 써보고 효과·부작용 같이 평가합시다. 안 맞으면 다른 약으로 바꿀 수 있습니다.\"",
+      sources: []
+    },
+    notes: {
+      content: "### 과소처방의 현실\nBernstein 2024: 알코올 관련 입원 6,794명 중 **2.0%만 퇴원 시 MAUD 시작**. 처방군은 30일 재입원 42% 감소 (IRR 0.58, 95% CI 0.45-0.76). 일차의료 처방 활성화 필요.\n\n### 기존 처방 장벽 해체\n- \"정신과 의뢰 먼저\" → McPheeters SR 기반으로 **가정의학과 1차 처방 근거 확보**\n- \"간·신장 나빠서 못 쓴다\" → LFT/CrCl 기준 숙지하면 대부분 가능\n- \"환자가 술 끊을 의지 없어서 못 쓴다\" → harm reduction 목표로도 효과\n\n### 한국 맥락\n- 국내 날트렉손·아캄프로세이트 모두 처방 가능, 급여 적용 (AUD 진단 하)\n- 디설피람은 공급 제한적\n- AA 한국 지부 존재 — 의뢰 가능",
+      sources: ["Bernstein EY et al. JAMA Netw Open 2024. PMID:38551564"]
+    },
+    "glp1-aud": {
+      content: "### GLP-1 RA의 AUD 입원 위험 감소 효과 [CLINICAL — 조건부]\n> 스웨덴 전국 등록자료 within-individual Cox regression, 2006-2023.\n\n**핵심 수치**\n- **대상:** AUD 진단자 227,866명 (남성 63.5%, 평균 40세, 중앙값 추적 8.8년)\n- **Semaglutide** (n=4,321): AUD 입원 위험 **aHR 0.64** (95% CI 0.50-0.83) — **36% 감소**\n- **Liraglutide** (n=2,509): AUD 입원 위험 **aHR 0.72** (95% CI 0.57-0.92) — **28% 감소**\n- **기존 AUD 치료제** (naltrexone/acamprosate/disulfiram) — aHR 0.98 (거의 차이 없음)\n- **추가 효과:** 타 물질사용장애 입원↓, 신체질환 입원↓\n- **무효:** 자살시도 감소 유의 효과 없음\n\n**1차의료 적용**\n- **GLP-1 처방 환자 중 음주 문제 동반 사례에서 추가 이득 기대 가능**\n- [[wegovy|위고비]]/[[ozempic|오젬픽]] 초진 시 **음주력 문진 강화** 근거 (AUD 동반 선별)\n- 비만·T2DM + AUD 환자에서 기존 AUD 치료제보다 GLP-1 우선 고려 근거 형성\n- **한계:** 관찰연구 — RCT 필요. AUD 단독 적응증 아님 (비만·T2DM 병존 상태에서만 검증)\n\n> GLP-1 선택 전략 메타 → [[glp1-selection-strategy]]",
+      sources: ["Lähteenvuo M et al. JAMA Psychiatry 2025;82(1):94-98. PMID:39535805"]
+    },
+    "draft-append": {
+      content: "AUD 의심·진단 환자: ① AUDIT-K 기록 ② DSM-5 중증도 ③ LFT·CrCl 확인 ④ 아편계 사용 여부 (날트렉손 선택 전 필수) ⑤ 1st line 약물(날트렉손 50mg qd or 아캄프로세이트 666mg TID) 제안 + 심리사회 중재 병행 ⑥ 3개월 재평가 예약.",
+      sources: []
+    }
+  },
+  uiHooks: {
+    hint: ["protocol","dosing","referral"],
+    guide: ["definition","classification","exam","protocol","dosing","indication","contraindication","precaution","monitoring","referral","counseling","notes","glp1-aud"],
+    draftAppend: ["draft-append"]
+  }
+};
+KNOWLEDGE_BUNDLE["alcohol-use-disorder"] = _aud_v2;
+KNOWLEDGE_BUNDLE["AUD"] = _aud_v2;
+KNOWLEDGE_BUNDLE["알코올사용장애"] = _aud_v2;
+KNOWLEDGE_BUNDLE["알코올중독"] = _aud_v2;
+KNOWLEDGE_BUNDLE["naltrexone"] = _aud_v2;
+KNOWLEDGE_BUNDLE["날트렉손"] = _aud_v2;
+KNOWLEDGE_BUNDLE["acamprosate"] = _aud_v2;
+KNOWLEDGE_BUNDLE["AUDIT"] = _aud_v2;
