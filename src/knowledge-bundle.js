@@ -235,11 +235,11 @@ var KNOWLEDGE_BUNDLE = {
     ],
     "sections": {
       "indication": {
-        "content": "- **DTaP 완료자**: 매 10년마다 Tdap 또는 Td 1회 (Td 공급 제약으로 **Tdap 우선**)\n- **DTaP 미접종 / 기록 불명 / 1958년 이전 출생**: 3회 접종\n- **임신부**: 매 임신마다 27~36주에 Tdap\n- **영아 밀접접촉자** (의료·보육 종사자, 신생아 부모·조부모): Tdap 미접종 시 접촉 2주 전까지\n- **외상 후 상처**:\n  - 청결 상처: 접종력 없으면 Tdap, 완료자는 마지막 ≥10년 시 booster\n  - 오염 상처(dirty wound): 마지막 접종 ≥5년 경과 시 booster",
+        "content": "- **DTaP 완료자**: 매 10년마다 [[Tdap|Tdap]] 또는 Td 1회 (Td 공급 제약으로 **Tdap 우선**)\n- **DTaP 미접종 / 기록 불명 / 1958년 이전 출생**: 3회 접종\n- **임신부**: 매 임신마다 27~36주에 Tdap\n- **영아 밀접접촉자** (의료·보육 종사자, 신생아 부모·조부모): Tdap 미접종 시 접촉 2주 전까지\n- **외상 후 상처**:\n  - 청결 상처: 접종력 없으면 Tdap, 완료자는 마지막 ≥10년 시 booster\n  - 오염 상처(dirty wound): 마지막 접종 ≥5년 경과 시 booster",
         "sources": []
       },
       "schedule": {
-        "content": "3회 접종자 스케줄: Tdap → Td or Tdap (4-8주 후) → Td or Tdap (6-12개월 후). 3회 중 최소 1회는 Tdap (3회 모두 Tdap 허용)",
+        "content": "3회 접종자 스케줄: [[Tdap|Tdap]] → Td or Tdap (4-8주 후) → Td or Tdap (6-12개월 후). 3회 중 최소 1회는 Tdap (3회 모두 Tdap 허용)",
         "sources": []
       },
       "dosing": {
@@ -260,7 +260,7 @@ var KNOWLEDGE_BUNDLE = {
     ],
     "sections": {
       "comparison": {
-        "content": "| 백신 | 종류 | 접종 | 상태 |\n|---|---|---|---|\n| RZV (Shingrix, 싱그릭스) | 사백신 | 2회 근주 | 1차 권고 |\n| ZVL (Zostavax, 조스타박스) | 생백신 | 1회 피하 | **2020년 미국 단종**, KDCA NIP 미포함 |",
+        "content": "| 백신 | 종류 | 접종 | 상태 |\n|---|---|---|---|\n| RZV (Shingrix, [[싱그릭스|싱그릭스]]) | 사백신 | 2회 근주 | 1차 권고 |\n| ZVL (Zostavax, [[조스타박스|조스타박스]]) | 생백신 | 1회 피하 | **2020년 미국 단종**, KDCA NIP 미포함 |",
         "sources": []
       },
       "indication": {
@@ -276,7 +276,7 @@ var KNOWLEDGE_BUNDLE = {
         "sources": []
       },
       "notes": {
-        "content": "- 조스타박스(ZVL) 접종 이력 → 2개월 후부터 싱그릭스(RZV) 접종 가능\n- 이전 대상포진 이환 이력 → 완전 회복 후 싱그릭스 접종 가능",
+        "content": "- [[조스타박스|조스타박스]](ZVL) 접종 이력 → 2개월 후부터 [[싱그릭스|싱그릭스]](RZV) 접종 가능\n- 이전 대상포진 이환 이력 → 완전 회복 후 싱그릭스 접종 가능",
         "sources": []
       }
     },
@@ -300,7 +300,7 @@ var KNOWLEDGE_BUNDLE = {
         "sources": []
       },
       "notes": {
-        "content": "### 만성질환자 해당 범위\n알코올중독 · 만성 심혈관질환 · 만성 간질환 · 만성 폐질환(COPD·폐기종·천식) · 흡연 · 당뇨병\n\n### 면역저하자 해당 범위\n선천·후천성 무비증 · 낫적혈구병 · 만성 신질환 · 전신성 암 · HIV · 호지킨병 · 면역억제제 · 백혈병 · 림프종 · 다발성 골수종 · 신증후군 · 고형장기이식",
+        "content": "### 만성질환자 해당 범위\n알코올중독 · 만성 심혈관질환 · 만성 간질환 · 만성 폐질환([[COPD|COPD]]·폐기종·천식) · 흡연 · 당뇨병\n\n### 면역저하자 해당 범위\n선천·후천성 무비증 · 낫적혈구병 · 만성 신질환 · 전신성 암 · HIV · 호지킨병 · 면역억제제 · 백혈병 · 림프종 · 다발성 골수종 · 신증후군 · 고형장기이식",
         "sources": []
       }
     },
@@ -493,7 +493,7 @@ var KNOWLEDGE_BUNDLE = {
     ],
     "sections": {
       "indication": {
-        "content": "### 성인\n- BMI ≥ 30 → 단독 처방 가능\n- BMI 27~30 + 동반질환(고혈압/T2DM/이상지질혈증/OSA/심혈관질환) → 처방 가능\n- MASH + 중등도~중증 섬유화(F2-F3) → FDA 2025 승인 (간경변 단계는 효과 미입증, ESSENCE Phase 3, NEJM 2025)\n\n### 소아청소년\n- 12세 이상 + BMI ≥ 95th percentile → FDA 2022.12 승인\n- STEP TEENS: 68주 BMI -16.1% vs placebo +0.6%\n- 한국 식약처 소아 허가 여부는 별도 확인",
+        "content": "### 성인\n- BMI ≥ 30 → 단독 처방 가능\n- BMI 27~30 + 동반질환(고혈압/T2DM/이상지질혈증/OSA/심혈관질환) → 처방 가능\n- [[MASH|MASH]] + 중등도~중증 섬유화(F2-F3) → FDA 2025 승인 (간경변 단계는 효과 미입증, ESSENCE Phase 3, NEJM 2025)\n\n### 소아청소년\n- 12세 이상 + BMI ≥ 95th percentile → FDA 2022.12 승인\n- STEP TEENS: 68주 BMI -16.1% vs placebo +0.6%\n- 한국 식약처 소아 허가 여부는 별도 확인",
         "sources": []
       },
       "dosing": {
@@ -525,7 +525,7 @@ var KNOWLEDGE_BUNDLE = {
     ],
     "sections": {
       "indication": {
-        "content": "### 성인\n- BMI ≥ 30 → 단독 처방 가능\n- BMI 27~30 + 동반질환(고혈압/T2DM/이상지질혈증/OSA/심혈관질환) → 처방 가능\n- MASH + 중등도~중증 섬유화(F2-F3) → FDA 2025 승인 (간경변 단계는 효과 미입증, ESSENCE Phase 3, NEJM 2025)\n\n### 소아청소년\n- 12세 이상 + BMI ≥ 95th percentile → FDA 2022.12 승인\n- STEP TEENS: 68주 BMI -16.1% vs placebo +0.6%\n- 한국 식약처 소아 허가 여부는 별도 확인",
+        "content": "### 성인\n- BMI ≥ 30 → 단독 처방 가능\n- BMI 27~30 + 동반질환(고혈압/T2DM/이상지질혈증/OSA/심혈관질환) → 처방 가능\n- [[MASH|MASH]] + 중등도~중증 섬유화(F2-F3) → FDA 2025 승인 (간경변 단계는 효과 미입증, ESSENCE Phase 3, NEJM 2025)\n\n### 소아청소년\n- 12세 이상 + BMI ≥ 95th percentile → FDA 2022.12 승인\n- STEP TEENS: 68주 BMI -16.1% vs placebo +0.6%\n- 한국 식약처 소아 허가 여부는 별도 확인",
         "sources": []
       },
       "dosing": {
@@ -681,7 +681,7 @@ var KNOWLEDGE_BUNDLE = {
     ],
     "sections": {
       "indication": {
-        "content": "오젬픽 = 위고비의 **보험급여 버전** (성분 동일: semaglutide, 용량 다름)\n- 오젬픽: T2DM 적응증, 보험급여 가능\n- 위고비: 비만 적응증, 비급여",
+        "content": "오젬픽 = 위고비의 **보험급여 버전** (성분 동일: [[semaglutide|semaglutide]], 용량 다름)\n- 오젬픽: T2DM 적응증, 보험급여 가능\n- 위고비: 비만 적응증, 비급여",
         "sources": []
       },
       "insurance": {
@@ -709,7 +709,7 @@ var KNOWLEDGE_BUNDLE = {
     ],
     "sections": {
       "indication": {
-        "content": "오젬픽 = 위고비의 **보험급여 버전** (성분 동일: semaglutide, 용량 다름)\n- 오젬픽: T2DM 적응증, 보험급여 가능\n- 위고비: 비만 적응증, 비급여",
+        "content": "오젬픽 = 위고비의 **보험급여 버전** (성분 동일: [[semaglutide|semaglutide]], 용량 다름)\n- 오젬픽: T2DM 적응증, 보험급여 가능\n- 위고비: 비만 적응증, 비급여",
         "sources": []
       },
       "insurance": {
@@ -909,11 +909,11 @@ var KNOWLEDGE_BUNDLE = {
     ],
     "sections": {
       "notes": {
-        "content": "ZVL(Zostavax, 조스타박스): **2020년 미국 단종**, KDCA NIP 미포함.\n이전 ZVL 접종 이력 → 2개월 후부터 RZV(싱그릭스) 접종 권고",
+        "content": "ZVL(Zostavax, 조스타박스): **2020년 미국 단종**, KDCA NIP 미포함.\n이전 ZVL 접종 이력 → 2개월 후부터 RZV([[싱그릭스|싱그릭스]]) 접종 권고",
         "sources": []
       },
       "contraindication": {
-        "content": "면역저하자: 생백신 ZVL **금기** → RZV(싱그릭스)만 사용",
+        "content": "면역저하자: 생백신 ZVL **금기** → RZV([[싱그릭스|싱그릭스]])만 사용",
         "sources": []
       }
     },
@@ -1625,7 +1625,7 @@ var KNOWLEDGE_BUNDLE = {
         "sources": ["대한심부전학회 심부전 진료지침 2022"]
       },
       "notes": {
-        "content": "### I NEED HELP — Stage D HF 9개 단서\n| 약어 | 의미 | 일차진료 관찰 포인트 |\n|---|---|---|\n| **I**notropes need | 강심제 필요 | 타기관 입원력·주사제 기록 |\n| **N**YHA Fc IV | 안정 시에도 증상 | 일상생활 수행력 |\n| **E**nd-organ dysfunction | 말단장기기능 이상 | Cr·AST/ALT 상승, 저산소증 |\n| **E**F < 20% | 박출률 심한 감소 | 최근 심초음파 |\n| **D**efibrillator shock for VAs | 심실 부정맥 ICD shock | ICD 기록 |\n| **H**F hospitalization (recurrent) | 반복 입원 | 1년 이내 2회 이상 |\n| **E**scalating diuretics dose | 이뇨제 용량 증가 | furosemide 추이 |\n| **L**ow BP | 저혈압 | SBP < 90 반복 |\n| **P**rogressive GDMT intolerance | 표준치료 점진적 내약성 저하 | 신장·혈압·칼륨으로 GDMT 감량·중단 |\n\n특히 GDMT 내약성 저하(P)는 일차진료에서 가장 먼저 관찰되는 신호.\n\n### 전원 최적시기 4단계 곡선\n| 단계 | 축상 위치 | 상태 | 전원 판단 |\n|---|---|---|---|\n| 심부전 시작·지속 | 중증도 낮음 | NYHA I–II / GDMT 충족 / 입원 없음 | 조기 전원 불필요 |\n| **심부전 진행·악화** | 중증도 상승 | NYHA III–IV / GDMT 감량 필요 / 잦은 입원 / ICD shock / 신장 악화 | **전원·의뢰 최적기** |\n| 심장 펌프 부전 | 중증도 매우 높음 | 다발성 장기 부전 / 심각한 영양실조 / 심장 액사 | 의뢰 너무 늦음 (비가역 진입) |\n| 사망 | — | — | — |\n\n**상급 심부전센터 다학제팀**: 말기완화치료 / 정신건강의학과 / 약사 / 심장내과 / 심장혈관외과 / 간호사 / 의료보조사 / 사회사업팀.",
+        "content": "### [[I NEED HELP|I NEED HELP]] — Stage D HF 9개 단서\n| 약어 | 의미 | 일차진료 관찰 포인트 |\n|---|---|---|\n| **I**notropes need | 강심제 필요 | 타기관 입원력·주사제 기록 |\n| **N**YHA Fc IV | 안정 시에도 증상 | 일상생활 수행력 |\n| **E**nd-organ dysfunction | 말단장기기능 이상 | Cr·AST/ALT 상승, 저산소증 |\n| **E**F < 20% | 박출률 심한 감소 | 최근 심초음파 |\n| **D**efibrillator shock for VAs | 심실 부정맥 ICD shock | ICD 기록 |\n| **H**F hospitalization (recurrent) | 반복 입원 | 1년 이내 2회 이상 |\n| **E**scalating diuretics dose | 이뇨제 용량 증가 | furosemide 추이 |\n| **L**ow BP | 저혈압 | SBP < 90 반복 |\n| **P**rogressive [[GDMT intolerance|GDMT intolerance]] | 표준치료 점진적 내약성 저하 | 신장·혈압·칼륨으로 GDMT 감량·중단 |\n\n특히 GDMT 내약성 저하(P)는 일차진료에서 가장 먼저 관찰되는 신호.\n\n### 전원 최적시기 4단계 곡선\n| 단계 | 축상 위치 | 상태 | 전원 판단 |\n|---|---|---|---|\n| 심부전 시작·지속 | 중증도 낮음 | NYHA I–II / GDMT 충족 / 입원 없음 | 조기 전원 불필요 |\n| **심부전 진행·악화** | 중증도 상승 | NYHA III–IV / GDMT 감량 필요 / 잦은 입원 / ICD shock / 신장 악화 | **전원·의뢰 최적기** |\n| 심장 펌프 부전 | 중증도 매우 높음 | 다발성 장기 부전 / 심각한 영양실조 / 심장 액사 | 의뢰 너무 늦음 (비가역 진입) |\n| 사망 | — | — | — |\n\n**상급 심부전센터 다학제팀**: 말기완화치료 / 정신건강의학과 / 약사 / 심장내과 / 심장혈관외과 / 간호사 / 의료보조사 / 사회사업팀.",
         "sources": [
           "Dunlay SM et al. JACC Heart Fail 2021;9(10):722-732",
           "대한심부전학회 심부전 진료지침 2022"
@@ -1989,7 +1989,7 @@ var _mucomyst_v2 = {
       sources: ["[TIPS — by ENT교수]"]
     },
     indication: {
-      content: "### Burning Mouth Syndrome (구강작열감증후군) [CLINICAL]\n- 액상 NAC 구강세정(oral rinse) 형태로 효과 확인\n- 2025 다기관 전향 임상: NAC 단독 및 clonazepam 병용군 모두 VAS + 삶의 질(OHIP-14K) 유의 개선\n- Clonazepam 병용 시 효과 증가 (반응률 NAC 단독 60.3% vs 병용 80.0%)\n\n### 구강건조증 — 방사선 유발 [CLINICAL]\n- 10% NAC rinse (swish-and-spit) 5회/일: 주간 xerostomia 유의 개선 (P=.02)\n- Mayo Clinic Pilot RCT: Phase 3 추가 연구 필요\n- 청구 농도(10%) = RCT 농도 일치\n\n### 구강건조증 — 일반 (약물 유발 등) [INSIGHTS — by ENT교수]\n- 방사선 유발 외 일반 구강건조증에 대한 직접 gargle 근거 없음\n- 임상 경험 기반 사용\n\n### LPR (인후두역류 / 후두염) [INSIGHTS — by ENT교수]\n- RCT 존재하나 경구 전신 투여 (gargle 직접 근거 아님)\n- Omeprazole 병용 시에만 RSI(주관적 증상) 유의 개선; NAC 단독 경구는 비유의\n- Gargle 경로 효과는 임상 보고 수준, 직접 RCT 없음",
+      content: "### Burning Mouth Syndrome (구강작열감증후군) [CLINICAL]\n- 액상 NAC 구강세정(oral rinse) 형태로 효과 확인\n- 2025 다기관 전향 임상: NAC 단독 및 clonazepam 병용군 모두 VAS + 삶의 질(OHIP-14K) 유의 개선\n- Clonazepam 병용 시 효과 증가 (반응률 NAC 단독 60.3% vs 병용 80.0%)\n\n### [[구강건조증|구강건조증]] — 방사선 유발 [CLINICAL]\n- 10% NAC rinse (swish-and-spit) 5회/일: 주간 xerostomia 유의 개선 (P=.02)\n- Mayo Clinic Pilot RCT: Phase 3 추가 연구 필요\n- 청구 농도(10%) = RCT 농도 일치\n\n### 구강건조증 — 일반 (약물 유발 등) [INSIGHTS — by ENT교수]\n- 방사선 유발 외 일반 구강건조증에 대한 직접 gargle 근거 없음\n- 임상 경험 기반 사용\n\n### [[LPR|LPR]] (인후두역류 / 후두염) [INSIGHTS — by ENT교수]\n- RCT 존재하나 경구 전신 투여 (gargle 직접 근거 아님)\n- Omeprazole 병용 시에만 RSI(주관적 증상) 유의 개선; NAC 단독 경구는 비유의\n- Gargle 경로 효과는 임상 보고 수준, 직접 RCT 없음",
       sources: [
         "Kim JW et al. Sci Rep 2025 (BMS)",
         "Sio TT et al. Mayo Clin Proc 2019 (방사선 xerostomia)",
@@ -2016,7 +2016,7 @@ var _pilocarpine_v2 = {
   ],
   sections: {
     indication: {
-      content: "- 두경부암 방사선 치료 후 구강건조증 (xerostomia)\n- 쇼그렌증후군(Sjögren's syndrome) 구강건조증·안구건조증",
+      content: "- 두경부암 방사선 치료 후 [[구강건조증|구강건조증]] (xerostomia)\n- 쇼그렌증후군(Sjögren's syndrome) 구강건조증·안구건조증",
       sources: []
     },
     dosing: {
@@ -2111,11 +2111,11 @@ var _smoking_cessation_v2 = {
   ],
   sections: {
     definition: {
-      content: "외래 금연 상담 시 약물·비약물 중재 선택지 정리. 2026 AFP POEM은 전자담배(vaping)가 니코틴 대체요법 껌(NRT gum)보다 금연 성공률이 높다고 요약.",
+      content: "외래 금연 상담 시 약물·비약물 중재 선택지 정리. 2026 [[afp-top20-poems-2024|AFP]] POEM은 전자담배(vaping)가 니코틴 대체요법 껌(NRT gum)보다 금연 성공률이 높다고 요약.",
       sources: []
     },
     comparison: {
-      content: "### 전자담배(vaping) vs NRT 껌 — AFP 2026 POEM [CLINICAL — 조건부]\n> [초록 기반 — 전문 미확인]\n\n- **결론:** RCT 근거상 전자담배(vaping)가 NRT 껌보다 금연 성공률 높음\n- **함의:** 기존 NRT 우선 접근을 재고 가능. 금연 시도 상담 시 전자담배를 NRT 대안으로 제시하는 근거 형성.\n\n### 주의\n- 1차 선택으로 전환 금지. POEM 한 편 요약 — 전문 확인 + 지속적 폐·심혈관 위해 평가 필요.\n- 국내 규제·급여 상황 미반영. 성인 금연 시도 환자 맞춤 상담 시 옵션으로 소개하되 장기 안전성 unknowns 고지.\n- 기존 varenicline·NRT 패치/껌/로젠지·bupropion 옵션 병존. 전자담배 단독 추천 아님.",
+      content: "### 전자담배(vaping) vs NRT 껌 — [[afp-top20-poems-2024|AFP]] 2026 POEM [CLINICAL — 조건부]\n> [초록 기반 — 전문 미확인]\n\n- **결론:** RCT 근거상 전자담배(vaping)가 NRT 껌보다 금연 성공률 높음\n- **함의:** 기존 NRT 우선 접근을 재고 가능. 금연 시도 상담 시 전자담배를 NRT 대안으로 제시하는 근거 형성.\n\n### 주의\n- 1차 선택으로 전환 금지. POEM 한 편 요약 — 전문 확인 + 지속적 폐·심혈관 위해 평가 필요.\n- 국내 규제·급여 상황 미반영. 성인 금연 시도 환자 맞춤 상담 시 옵션으로 소개하되 장기 안전성 unknowns 고지.\n- 기존 varenicline·NRT 패치/껌/로젠지·bupropion 옵션 병존. 전자담배 단독 추천 아님.",
       sources: []
     },
     protocol: {
@@ -2216,7 +2216,7 @@ var _asthma_reflux_v2 = {
       sources: ["[TIPS — by ENT교수]"]
     },
     protocol: {
-      content: "### A. 증상성 GERD 동반 (속쓰림·역류감 명확)\n- PPI 1일 1회 → 반응 부족 시 2회/일 trial × 8-12주 (AGA 2023, PMID:37061897)\n- 알긴산(Gaviscon류) 병용 가능 — 증상 추가 개선\n- 동시에 표준 천식 치료 (ICS/LABA) 최적화 유지\n\n### B. LPS(인후두역류 의심) 동반\n- 식도 증상 동반 시 → PPI BID × 3개월 + 알긴산 4회/일 (San Diego Consensus 2025)\n- 식도 증상 없는 고립 LPS → PPI 경험적 처방 미권고. 내시경/24h pH-impedance 우선 (LPR-consensus 엔트리 참조)\n\n### C. 무증상 GERD (천식 단독 조절 불량)\n- PPI/알긴산 추가 효과 근거 약함 (Chan WW 2011, n=2524 메타분석: morning PEF 통계적 소폭 차이뿐, 증상·QoL·FEV1 개선 없음)\n- 일률 처방 미권고 — 환자별 증상 평가 후 결정",
+      content: "### A. 증상성 GERD 동반 (속쓰림·역류감 명확)\n- PPI 1일 1회 → 반응 부족 시 2회/일 trial × 8-12주 (AGA 2023, PMID:37061897)\n- 알긴산(Gaviscon류) 병용 가능 — 증상 추가 개선\n- 동시에 표준 천식 치료 (ICS/LABA) 최적화 유지\n\n### B. [[LPR-consensus|LPS]](인후두역류 의심) 동반\n- 식도 증상 동반 시 → PPI BID × 3개월 + 알긴산 4회/일 (San Diego Consensus 2025)\n- 식도 증상 없는 고립 LPS → PPI 경험적 처방 미권고. 내시경/24h pH-impedance 우선 ([[LPR|LPR]]-consensus 엔트리 참조)\n\n### C. 무증상 GERD (천식 단독 조절 불량)\n- PPI/알긴산 추가 효과 근거 약함 (Chan WW 2011, n=2524 메타분석: morning PEF 통계적 소폭 차이뿐, 증상·QoL·FEV1 개선 없음)\n- 일률 처방 미권고 — 환자별 증상 평가 후 결정",
       sources: []
     },
     precaution: {
@@ -2255,7 +2255,7 @@ var _cardiomyopathy_v2 = {
       sources: []
     },
     protocol: {
-      content: "**공통:**\n- 심부전 동반 시 → GDMT 4 pillars (heart-failure 엔트리 참조)\n- 부정맥 → rate or rhythm control\n- 혈전위험 → 항응고\n\n**HCM 특이:**\n- 모든 환자 ICD 위험도 평가 (AHA/ACC 권고)\n- 유출로 폐색(LVOTO) → disopyramide, beta-blocker, 수술적 격벽절제, 알코올 격벽절제술\n- 운동 제한: 고강도 경쟁 스포츠 주의\n\n**DCM:**\n- HFrEF 기준 GDMT\n- 원인 교정 (음주·독성)\n\n**중증/진행:** 심장이식 고려",
+      content: "**공통:**\n- 심부전 동반 시 → [[heart-failure|GDMT]] 4 pillars (heart-failure 엔트리 참조)\n- 부정맥 → rate or rhythm control\n- 혈전위험 → 항응고\n\n**HCM 특이:**\n- 모든 환자 ICD 위험도 평가 (AHA/ACC 권고)\n- 유출로 폐색(LVOTO) → disopyramide, beta-blocker, 수술적 격벽절제, 알코올 격벽절제술\n- 운동 제한: 고강도 경쟁 스포츠 주의\n\n**DCM:**\n- HFrEF 기준 GDMT\n- 원인 교정 (음주·독성)\n\n**중증/진행:** 심장이식 고려",
       sources: []
     },
     referral: {
@@ -2287,7 +2287,7 @@ var _chronic_cough_v2 = {
       sources: []
     },
     protocol: {
-      content: "### 1단계 — 원인 제거 우선\n- **GERD/LPR**: PPI ± alginic acid (asthma-reflux-comorbidity 참조)\n- **알레르기비염·후비루**: 항히스타민, INCS\n- **천식·기관지경련**: SABA, ICS\n- **약물(ACEi)**: 중단 후 4-6주 관찰\n\n### 2단계 — 난치성(RCC) 확인 후 신경조절 요법\n\n**Duloxetine (RCC에서 1b 수준 근거)**\n\n| 항목 | 내용 |\n|---|---|\n| 대상 | 표준치료 실패 RCC, 기분장애 없는 환자 |\n| 기전 | 5-HT + NE 재흡수 억제 → 기침 감각신경 과반응성 감소 |\n| 효과 | 기침 횟수/시간 83.96→33.12 (위약 87.67→80.36), p<0.001 |\n| 삶의질 | LCQ 12.75→14.88 (위약 12.17→12.81), p<0.001 |\n| 치료기간 | 8주 (RCT 기준) |\n\n**비교 옵션:** Gabapentin (신경병증 기침), Morphine low-dose (영국 가이드, 부작용↑), Speech pathology 기침 억제 훈련.",
+      content: "### 1단계 — 원인 제거 우선\n- **GERD/LPR**: PPI ± alginic acid ([[asthma-reflux-comorbidity|asthma-reflux-comorbidity]] 참조)\n- **알레르기비염·후비루**: 항히스타민, [[allergic-rhinitis|INCS]]\n- **천식·기관지경련**: SABA, ICS\n- **약물(ACEi)**: 중단 후 4-6주 관찰\n\n### 2단계 — 난치성(RCC) 확인 후 신경조절 요법\n\n**Duloxetine (RCC에서 1b 수준 근거)**\n\n| 항목 | 내용 |\n|---|---|\n| 대상 | 표준치료 실패 RCC, 기분장애 없는 환자 |\n| 기전 | 5-HT + NE 재흡수 억제 → 기침 감각신경 과반응성 감소 |\n| 효과 | 기침 횟수/시간 83.96→33.12 (위약 87.67→80.36), p<0.001 |\n| 삶의질 | LCQ 12.75→14.88 (위약 12.17→12.81), p<0.001 |\n| 치료기간 | 8주 (RCT 기준) |\n\n**비교 옵션:** Gabapentin (신경병증 기침), Morphine low-dose (영국 가이드, 부작용↑), Speech pathology 기침 억제 훈련.",
       sources: []
     },
     precaution: {
@@ -2368,7 +2368,7 @@ var _meningitis_v2 = {
   ],
   sections: {
     definition: {
-      content: "수막염: 뇌·척수를 둘러싼 수막의 염증. 자기제한적부터 사망·장애까지 다양.\n\n| 유형 | 주요 원인균 | 경과 |\n|---|---|---|\n| **세균성** | S. pneumoniae(폐렴구균), N. meningitidis(수막구균), H. influenzae type B, GBS | 응급 — 미치료 시 사망 |\n| **무균성(바이러스성)** | Enterovirus (가장 흔함), HSV, HIV | 대부분 자기제한적 (2주 이내) |",
+      content: "수막염: 뇌·척수를 둘러싼 수막의 염증. 자기제한적부터 사망·장애까지 다양.\n\n| 유형 | 주요 원인균 | 경과 |\n|---|---|---|\n| **세균성** | S. pneumoniae([[폐렴구균|폐렴구균]]), N. meningitidis(수막구균), H. influenzae type B, GBS | 응급 — 미치료 시 사망 |\n| **무균성(바이러스성)** | Enterovirus (가장 흔함), HSV, HIV | 대부분 자기제한적 (2주 이내) |",
       sources: []
     },
     exam: {
@@ -2546,7 +2546,7 @@ var _cbt_meta_v2 = {
       sources: []
     },
     dosing: {
-      content: "### 우울증 1차 SSRI (APA / AAFP 2023)\n| 약물 | 시작 | 유지 | 특징 |\n|---|---|---|---|\n| **Escitalopram** | 5mg qd | 10~20mg qd | 가장 안전·약물 상호작용 적음 |\n| Sertraline | 25mg qd | 50~200mg qd | 불안·강박, 위장 부작용 |\n| Fluoxetine | 10mg qd | 20~60mg qd | 폭식증·활력 (오전) |\n\n### Follow-up\n- 1주 f/u, 4주 평가 (PHQ-9·GAD-7), 효과는 4주 후부터\n- 유지 6~12mo, 점진적 감량\n- 1~2주 불안 악화 가능 (BDZ 단기 병용)\n- 위장·성기능, **고령 hyponatremia (SIADH)**\n\n### 동반증상별\n| 동반 | 우선 |\n|---|---|\n| 활력·각성 ↑ | Fluoxetine, Bupropion (오전) |\n| 성기능 문제 | Bupropion, Mirtazapine |\n| 다약제 | Escitalopram, Sertraline |\n| **+만성통증·섬유근통** | **Duloxetine 30→60mg** (FDA 섬유근통). Venlafaxine 37.5→225mg (HTN 주의) |\n| **+수면·체중감소** | **Mirtazapine 15mg HS→15~45mg** |\n| +무기력·금연 | **Bupropion 150mg SR→150~300mg** |\n\n⚠ Duloxetine 60mg 이상 추가 효과 근거 부족.\n\n### 불안 (NICE CG113)\n- GAD·공황: SSRI (escitalopram·sertraline)\n- OCD: **Fluvoxamine 50→100~300mg**\n- 무대 불안: Propranolol 10~40mg (공연 1~2h 전)\n- 급성 불안 단기 PRN (2~4주): Alprazolam 0.25~0.5mg PRN, Lorazepam 0.5~1mg PRN\n\n⚠ **BZD는 NICE GAD routine X** — PRN/최단기간. **고령 회피 (Beers 2023 강한 권고)**.\n\n### 불면 (AASM 2017 / Beers)\n**개시장애**:\n- Ramelteon 8mg HS-1h (의존·금단 거의 X)\n- 멜라토닌 (⚠ AASM 1차 권고 X)\n- **Zolpidem** 5~10mg (고령 회피 — Beers)\n- Triazolam 0.125~0.25mg (고령 회피)\n\n**유지장애**:\n- **Doxepin 3~6mg** (의존성 적음 — AASM 권고)\n- Mirtazapine 15mg HS\n- Trazodone 25~100mg (⚠ AASM 2017 1차 사용 말 것)\n\n**개시+유지**: Zolpidem CR 6.25~12.5mg (고령 회피)",
+      content: "### 우울증 1차 [[depression-screening|SSRI]] (APA / AAFP 2023)\n| 약물 | 시작 | 유지 | 특징 |\n|---|---|---|---|\n| **Escitalopram** | 5mg qd | 10~20mg qd | 가장 안전·약물 상호작용 적음 |\n| Sertraline | 25mg qd | 50~200mg qd | 불안·강박, 위장 부작용 |\n| Fluoxetine | 10mg qd | 20~60mg qd | 폭식증·활력 (오전) |\n\n### Follow-up\n- 1주 f/u, 4주 평가 (PHQ-9·GAD-7), 효과는 4주 후부터\n- 유지 6~12mo, 점진적 감량\n- 1~2주 불안 악화 가능 (BDZ 단기 병용)\n- 위장·성기능, **고령 hyponatremia (SIADH)**\n\n### 동반증상별\n| 동반 | 우선 |\n|---|---|\n| 활력·각성 ↑ | Fluoxetine, Bupropion (오전) |\n| 성기능 문제 | Bupropion, Mirtazapine |\n| 다약제 | Escitalopram, Sertraline |\n| **+만성통증·섬유근통** | **Duloxetine 30→60mg** (FDA 섬유근통). Venlafaxine 37.5→225mg (HTN 주의) |\n| **+수면·체중감소** | **Mirtazapine 15mg HS→15~45mg** |\n| +무기력·금연 | **Bupropion 150mg SR→150~300mg** |\n\n⚠ Duloxetine 60mg 이상 추가 효과 근거 부족.\n\n### 불안 (NICE CG113)\n- GAD·공황: SSRI (escitalopram·sertraline)\n- OCD: **Fluvoxamine 50→100~300mg**\n- 무대 불안: Propranolol 10~40mg (공연 1~2h 전)\n- 급성 불안 단기 PRN (2~4주): Alprazolam 0.25~0.5mg PRN, Lorazepam 0.5~1mg PRN\n\n⚠ **BZD는 NICE GAD routine X** — PRN/최단기간. **고령 회피 (Beers 2023 강한 권고)**.\n\n### 불면 (AASM 2017 / Beers)\n**개시장애**:\n- Ramelteon 8mg HS-1h (의존·금단 거의 X)\n- 멜라토닌 (⚠ AASM 1차 권고 X)\n- **Zolpidem** 5~10mg (고령 회피 — Beers)\n- Triazolam 0.125~0.25mg (고령 회피)\n\n**유지장애**:\n- **Doxepin 3~6mg** (의존성 적음 — AASM 권고)\n- Mirtazapine 15mg HS\n- Trazodone 25~100mg (⚠ AASM 2017 1차 사용 말 것)\n\n**개시+유지**: Zolpidem CR 6.25~12.5mg (고령 회피)",
       sources: ["APA Practice Guideline for MDD (2010)","AAFP 2023 Pharmacologic Treatment of Depression","NICE NG222 / CG113","AASM 2017 Chronic Insomnia CPG","AGS Beers Criteria 2023","FDA labels"]
     }
   },
@@ -2785,7 +2785,7 @@ var _copd_v2 = {
       sources: []
     },
     protocol: {
-      content: "### 흡입기 단계\n```\n초기:\n  A군 → LABA 또는 LAMA 단독\n  B/E군 → LABA + LAMA (이중 기관지확장제)\n\n증상/악화 지속:\n  E군 + 호산구 ≥300 → LABA + LAMA + ICS (삼중)\n  E군 + 호산구 <100 → ICS 회피 (효과↓ + 폐렴↑)\n```\n\n### 혈중 호산구 기반 ICS 결정\n| 호산구 | ICS 권고 |\n|---|---|\n| **≥300 cells/μL** | ICS 강력 고려 |\n| 100–299 | 효과 불확실 — 개별 판단 |\n| **<100 cells/μL** | ICS **회피** (폐렴 위험↑, 효과↓) |\n\nGOLD 2025 핵심: 혈중 호산구를 ICS 사용·제거 의사결정에 공식 바이오마커로 통합.\n\n### 비약물\n- **금연** — 가장 중요한 예후 개선\n- 폐재활 (운동능력·QoL 개선)\n- 예방접종: 독감(매년), 폐렴구균, COVID-19, Tdap",
+      content: "### 흡입기 단계\n```\n초기:\n  A군 → LABA 또는 LAMA 단독\n  B/E군 → LABA + LAMA (이중 기관지확장제)\n\n증상/악화 지속:\n  E군 + 호산구 ≥300 → LABA + LAMA + ICS (삼중)\n  E군 + 호산구 <100 → ICS 회피 (효과↓ + 폐렴↑)\n```\n\n### 혈중 호산구 기반 ICS 결정\n| 호산구 | ICS 권고 |\n|---|---|\n| **≥300 cells/μL** | ICS 강력 고려 |\n| 100–299 | 효과 불확실 — 개별 판단 |\n| **<100 cells/μL** | ICS **회피** (폐렴 위험↑, 효과↓) |\n\nGOLD 2025 핵심: 혈중 호산구를 ICS 사용·제거 의사결정에 공식 바이오마커로 통합.\n\n### 비약물\n- **금연** — 가장 중요한 예후 개선\n- 폐재활 (운동능력·QoL 개선)\n- [[예방접종|예방접종]]: 독감(매년), [[폐렴구균|폐렴구균]], COVID-19, [[Tdap|Tdap]]",
       sources: []
     },
     monitoring: {
@@ -2854,7 +2854,7 @@ var _dm_dyslipidemia_v2 = {
       sources: []
     },
     protocol: {
-      content: "### 단계별 강화 전략\n```\n1단계 — Statin (고강도 우선)\n  ↓ LDL-C 미달 또는 최대용량 불충분\n2단계 — Ezetimibe 추가\n  ↓ 여전히 미달\n3단계 — Bempedoic acid 또는 PCSK9 억제제\n  - Bempedoic acid: statin 불내성 시 대안, LDL-C 20–25% 추가 감소\n  - PCSK9 억제제 (에볼로쿠맙/알리로쿠맙): LDL-C 50–60% 추가 감소\n```\n\n### 중성지방 관리 (TG ≥500 — 췌장염 예방)\n- 고순도 오메가-3 (EPA): REDUCE-IT MACE 감소 근거\n- 피브린산계 (fenofibrate): TG↓↓ 강함, but **CV outcome 개선 불확실**, statin 병용 시 근병증 주의",
+      content: "### 단계별 강화 전략\n```\n1단계 — Statin (고강도 우선)\n  ↓ LDL-C 미달 또는 최대용량 불충분\n2단계 — Ezetimibe 추가\n  ↓ 여전히 미달\n3단계 — Bempedoic acid 또는 PCSK9 억제제\n  - Bempedoic acid: statin 불내성 시 대안, LDL-C 20–25% 추가 감소\n  - PCSK9 억제제 (에볼로쿠맙/알리로쿠맙): LDL-C 50–60% 추가 감소\n```\n\n### 중성지방 관리 (TG ≥500 — 췌장염 예방)\n- 고순도 오메가-3 (EPA): REDUCE-IT MACE 감소 근거\n- 피브린산계 (feno[[dyslipidemia|fibrate]]): TG↓↓ 강함, but **CV outcome 개선 불확실**, statin 병용 시 근병증 주의",
       sources: []
     },
     monitoring: {
@@ -3137,7 +3137,7 @@ var _frailty_v2 = {
       sources: []
     },
     protocol: {
-      content: "### 회복 가능성을 높이는 중재 우선순위\n| 중재 | 근거 | 실전 |\n|---|---|---|\n| **비계획 입원 회피** | 가장 큰 인자 | 폐렴·낙상·약물부작용 예방 |\n| **다약제 감소** | 독립 보호 인자 | ≥5종 재검토; 불필요 약물 중단 |\n| **낙상 방지** | 직접 연결 | 기립성 저혈압 교정·환경 개선 |\n| 빈혈 교정 | e-SIF 구성 | Hb 모니터링·철 결핍 교정 |\n| 시력 손상 교정 | e-SIF 구성 | 안과 의뢰 (백내장·굴절) |\n\n### 일차의료 중재\n1. **Deprescribing** — Beers·STOPP/START; 항콜린제·BZD·수면제 우선 검토 ([[prescribing-cascade]])\n2. **낙상 예방** — 집 환경 평가·기립성 저혈압 약물 조정\n3. **영양** — 단백질 ≥1.2 g/kg/일·비타민 D\n4. **운동** — 저항 운동 + 균형 훈련 (주 2~3회)·물리치료\n5. **예방접종** — 독감·폐렴구균·대상포진·COVID",
+      content: "### 회복 가능성을 높이는 중재 우선순위\n| 중재 | 근거 | 실전 |\n|---|---|---|\n| **비계획 입원 회피** | 가장 큰 인자 | 폐렴·낙상·약물부작용 예방 |\n| **다약제 감소** | 독립 보호 인자 | ≥5종 재검토; 불필요 약물 중단 |\n| **낙상 방지** | 직접 연결 | 기립성 저혈압 교정·환경 개선 |\n| 빈혈 교정 | e-SIF 구성 | Hb 모니터링·철 결핍 교정 |\n| 시력 손상 교정 | e-SIF 구성 | 안과 의뢰 (백내장·굴절) |\n\n### 일차의료 중재\n1. **Deprescribing** — Beers·STOPP/START; 항콜린제·BZD·수면제 우선 검토 ([[prescribing-cascade]])\n2. **낙상 예방** — 집 환경 평가·기립성 저혈압 약물 조정\n3. **영양** — 단백질 ≥1.2 g/kg/일·비타민 D\n4. **운동** — 저항 운동 + 균형 훈련 (주 2~3회)·물리치료\n5. **[[예방접종|예방접종]]** — 독감·[[폐렴구균|폐렴구균]]·[[대상포진|대상포진]]·COVID",
       sources: []
     },
     precaution: {
@@ -3149,7 +3149,7 @@ var _frailty_v2 = {
       sources: []
     },
     notes: {
-      content: "허약은 **가역적**임을 환자·보호자에게 명확히 — \"노화이니 어쩔 수 없다\"는 허무주의 탈피. 일차의료에서 다약제 재검토·낙상 예방·예방접종이 회복 핵심 레버.",
+      content: "허약은 **가역적**임을 환자·보호자에게 명확히 — \"노화이니 어쩔 수 없다\"는 허무주의 탈피. 일차의료에서 다약제 재검토·낙상 예방·[[예방접종|예방접종]]이 회복 핵심 레버.",
       sources: []
     }
   },
@@ -3355,7 +3355,7 @@ var _post_mi_dep_v2 = {
       sources: []
     },
     indication: {
-      content: "BB **유지** 적응증:\n- LVEF ≤ 40% (HFrEF) — HF 엔트리 GDMT 경로 ([[heart-failure]])\n- 지속/발작성 AF + RVR\n- 운동 유발 협심증 (CCS II 이상)\n- 다른 약제로 조절 안 되는 HTN\n- 유전성 QT 연장·특정 cardiomyopathy",
+      content: "BB **유지** 적응증:\n- LVEF ≤ 40% (HFrEF) — HF 엔트리 GDMT 경로 ([[heart-failure]])\n- 지속/발작성 AF + RVR\n- 운동 유발 협심증 (CCS II 이상)\n- 다른 약제로 조절 안 되는 HTN\n- 유전성 QT 연장·특정 [[cardiomyopathy|cardiomyopathy]]",
       sources: []
     },
     contraindication: {
@@ -3367,7 +3367,7 @@ var _post_mi_dep_v2 = {
       sources: []
     },
     referral: {
-      content: "- LVEF 41-49% 개별 판단 어려운 경우\n- 중단 후 증상 재발 (협심증·부정맥)\n- 복합 심질환 (판막·cardiomyopathy 공존)",
+      content: "- LVEF 41-49% 개별 판단 어려운 경우\n- 중단 후 증상 재발 (협심증·부정맥)\n- 복합 심질환 (판막·[[cardiomyopathy|cardiomyopathy]] 공존)",
       sources: []
     },
     notes_extra: {
@@ -3403,7 +3403,7 @@ var _hf_ducs_v2 = {
       sources: []
     },
     notes: {
-      content: "기존 heart-failure-volume-overload(BNP+POCUS B-lines 단독) 보강 — VEXUS 추가로 우심부전 동반 평가까지 확장. ADHF 외래·응급 환경에서 POCUS 보유 시 적용 가능 (Mir-T1 #1 POCUS·초음파 중재 영역).",
+      content: "기존 [[heart-failure-volume-overload|heart-failure-volume-overload]](BNP+POCUS B-lines 단독) 보강 — VEXUS 추가로 우심부전 동반 평가까지 확장. ADHF 외래·응급 환경에서 POCUS 보유 시 적용 가능 (Mir-T1 #1 POCUS·초음파 중재 영역).",
       sources: []
     }
   },
@@ -3557,7 +3557,7 @@ var _tinnitus_v2 = {
       sources: []
     },
     notes: {
-      content: "### 음역대와 이명 [CLINICAL]\n- 인간 가청 범위: 20–20,000 Hz\n- 회화 영역(speech frequencies): 250–4,000 Hz\n- **이명은 고주파 영역(특히 2–8 kHz, EHF >8 kHz) 청력 저하와 강하게 연관**: tinnitus 환자 ~70%에서 EHF hearing loss (대조군 ~40%)\n- 표준 audiogram이 정상이어도 EHF 검사·hidden hearing loss(synaptopathy) 가능\n- **기전**: 고주파 deafferentation → 중추 central gain 보상성 상승 → tinnitus 인식\n- **임상 함의**: 이명 호소 환자 표준 PTA만으로 부족, EHF audiometry(>8 kHz) 의뢰 고려\n\n[researcher 4-30 수정: 미르 raw '음역대 500-2000Hz'는 회화 영역과 가청 범위 혼동. 정확화]\n\n### 내이수종 이명 [TIPS — by ENT 교수]\n매미·우웅 등 다양한 소리, 비행기/물에 들어간 듯한 먹먹함 동반 — 메니에르·저주파 난청 spectrum (low-freq-hearing-loss 참조). U-turn(Betahistine 계열) 고려.",
+      content: "### 음역대와 이명 [CLINICAL]\n- 인간 가청 범위: 20–20,000 Hz\n- 회화 영역(speech frequencies): 250–4,000 Hz\n- **이명은 고주파 영역(특히 2–8 kHz, EHF >8 kHz) 청력 저하와 강하게 연관**: tinnitus 환자 ~70%에서 EHF [[hearing-loss|hearing loss]] (대조군 ~40%)\n- 표준 audiogram이 정상이어도 EHF 검사·hidden hearing loss(synaptopathy) 가능\n- **기전**: 고주파 deafferentation → 중추 central gain 보상성 상승 → tinnitus 인식\n- **임상 함의**: 이명 호소 환자 표준 PTA만으로 부족, EHF audiometry(>8 kHz) 의뢰 고려\n\n[researcher 4-30 수정: 미르 raw '음역대 500-2000Hz'는 회화 영역과 가청 범위 혼동. 정확화]\n\n### 내이수종 이명 [TIPS — by ENT 교수]\n매미·우웅 등 다양한 소리, 비행기/물에 들어간 듯한 먹먹함 동반 — 메니에르·저주파 난청 spectrum (low-freq-hearing-loss 참조). U-turn(Betahistine 계열) 고려.",
       sources: []
     }
   },
@@ -3592,7 +3592,7 @@ var _hearing_loss_v2 = {
       sources: []
     },
     notes: {
-      content: "### 음역대 청력 저하 패턴\n- **Presbycusis**: 고주파 우세 (4-8 kHz) → 자음 변별 곤란 ('말소리는 들리는데 무슨 말인지 모르겠다')\n- **소음성 난청**: 4 kHz notch\n- **메니에르**: 저주파 변동성\n\n가청 범위 20-20,000 Hz, 회화 영역 250-4,000 Hz. 이명 동반 흔함 (`tinnitus` 참조). ARIA·AR 심한 환자에서 만성 중이염 동반 가능 → 전음성 난청 감별.",
+      content: "### 음역대 청력 저하 패턴\n- **Presbycusis**: 고주파 우세 (4-8 kHz) → 자음 변별 곤란 ('말소리는 들리는데 무슨 말인지 모르겠다')\n- **소음성 난청**: 4 kHz notch\n- **메니에르**: 저주파 변동성\n\n가청 범위 20-20,000 Hz, 회화 영역 250-4,000 Hz. 이명 동반 흔함 (`[[tinnitus|tinnitus]]` 참조). [[allergic-rhinitis|AR]]IA·AR 심한 환자에서 만성 중이염 동반 가능 → 전음성 난청 감별.",
       sources: []
     }
   },
@@ -3789,7 +3789,7 @@ var _vestibular_neuritis_v2 = {
       sources: []
     },
     referral: {
-      content: "- HINTS 음성·중추성 의심 → **즉시 뇌영상·신경과**\n- 청력 저하·이명 동반 → 미로염 의심 → ENT\n- 1주 이상 호전 없음 → ENT\n- 반복 발작 → 메니에르 또는 vestibular migraine 감별 → 신경이과",
+      content: "- HINTS 음성·중추성 의심 → **즉시 뇌영상·신경과**\n- 청력 저하·이명 동반 → 미로염 의심 → ENT\n- 1주 이상 호전 없음 → ENT\n- 반복 발작 → 메니에르 또는 vestibular [[migraine|migraine]] 감별 → 신경이과",
       sources: []
     }
   },
@@ -3883,7 +3883,7 @@ var _laryngitis_v2 = {
       sources: []
     },
     exam: {
-      content: "- 쉰 목소리·인후통·기침\n- 발열 동반 여부 (감염성)\n- 음성 남용력 (말 많이·노래·소리 지름)\n- 흡연·음주\n- 위식도 역류 동반 ([[LPR]] 참조)\n\n### Red flag\n- **목소리 변화 + 호흡곤란** → 응급 (epiglottitis·상기도 폐쇄)\n- **3주 이상 지속되는 쉰목소리** → ENT (성대 polyp·종양·vocal palsy 배제)",
+      content: "- 쉰 목소리·인후통·기침\n- 발열 동반 여부 (감염성)\n- 음성 남용력 (말 많이·노래·소리 지름)\n- 흡연·음주\n- 위식도 역류 동반 ([[LPR]] 참조)\n\n### Red flag\n- **목소리 변화 + 호흡곤란** → 응급 (epiglottitis·상기도 폐쇄)\n- **3주 이상 지속되는 쉰목소리** → ENT (성대 polyp·종양·[[dysphonia|vocal palsy]] 배제)",
       sources: []
     },
     protocol: {
@@ -4321,7 +4321,7 @@ var _goc_acp_v2 = {
       sources: []
     },
     protocol: {
-      content: "### 효과적 GOC 이니셔티브 7대 핵심 요소 (미국 8개 의료기관 비교)\n| # | 핵심 요소 | 실전 내용 |\n|---|---|---|\n| 1 | **이니셔티브 목적 정의** | GOC 대화 목표를 기관·팀 차원에서 명확화 |\n| 2 | **대상 환자군 식별** | 진단 코드·AI 알고리즘·입원 기간 등으로 자동 식별 |\n| 3 | **핵심 이해관계자 참여** | 환자·보호자·일선 의료진·리더십 모두 |\n| 4 | **대화 촉진** | 의료진 교육 + EHR 프롬프트·알림 |\n| 5 | **EHR 문서화** | 대화 내용·결정 사항 EHR 공식 기록 |\n| 6 | **데이터 측정** | 완료율·시기 추적 |\n| 7 | **지속성·확장성** | 리더십 지원·재정으로 시스템 내재화 |\n\n### 일차의료 외래 적용\n**GOC 시작 트리거 (고위험 환자)**:\n- 말기 만성질환 (CKD G4-5, 중증 심부전, COPD GOLD III-IV, 전이암)\n- 최근 입원·악화\n- 연령 ≥75세 + 다중 이환\n- 허약 점수 (CFS ≥5)\n\n**대화 구조 7요소 → 외래 적용**:\n1. **목적**: '오늘은 앞으로의 치료 방향에 대해 함께 이야기하고 싶습니다'\n2. **대상**: EHR 자동 알림 또는 진단 기반 선별\n3. **이해관계자**: 가능하면 가족·주 돌봄자 동석\n4. **대화 유도**: '가장 두려우신 것은 무엇인가요?' '어떤 상태가 되면 집에서 지내고 싶으신가요?'\n5. **EHR 기록**: 진료 기록 요약 + POLST/DNAR 연동\n6. **측정**: 다음 방문 재확인 추적\n7. **지속**: 정기 재검토 (상태 변화 시 update)",
+      content: "### 효과적 GOC 이니셔티브 7대 핵심 요소 (미국 8개 의료기관 비교)\n| # | 핵심 요소 | 실전 내용 |\n|---|---|---|\n| 1 | **이니셔티브 목적 정의** | GOC 대화 목표를 기관·팀 차원에서 명확화 |\n| 2 | **대상 환자군 식별** | 진단 코드·AI 알고리즘·입원 기간 등으로 자동 식별 |\n| 3 | **핵심 이해관계자 참여** | 환자·보호자·일선 의료진·리더십 모두 |\n| 4 | **대화 촉진** | 의료진 교육 + EHR 프롬프트·알림 |\n| 5 | **EHR 문서화** | 대화 내용·결정 사항 EHR 공식 기록 |\n| 6 | **데이터 측정** | 완료율·시기 추적 |\n| 7 | **지속성·확장성** | 리더십 지원·재정으로 시스템 내재화 |\n\n### 일차의료 외래 적용\n**GOC 시작 트리거 (고위험 환자)**:\n- 말기 만성질환 (CKD G4-5, 중증 심부전, [[COPD|COPD]] GOLD III-IV, 전이암)\n- 최근 입원·악화\n- 연령 ≥75세 + 다중 이환\n- 허약 점수 (CFS ≥5)\n\n**대화 구조 7요소 → 외래 적용**:\n1. **목적**: '오늘은 앞으로의 치료 방향에 대해 함께 이야기하고 싶습니다'\n2. **대상**: EHR 자동 알림 또는 진단 기반 선별\n3. **이해관계자**: 가능하면 가족·주 돌봄자 동석\n4. **대화 유도**: '가장 두려우신 것은 무엇인가요?' '어떤 상태가 되면 집에서 지내고 싶으신가요?'\n5. **EHR 기록**: 진료 기록 요약 + POLST/DNAR 연동\n6. **측정**: 다음 방문 재확인 추적\n7. **지속**: 정기 재검토 (상태 변화 시 update)",
       sources: []
     },
     notes: {
@@ -4389,7 +4389,7 @@ var _migraine_v2 = {
       sources: []
     },
     protocol: {
-      content: "### 1차 약물\n| 약물 | 특이사항 |\n|---|---|\n| **Propranolol** | 베타차단제; 고혈압 동반 시 유리 |\n| **Metoprolol** | 베타차단제; 천식·COPD 금기 |\n| **Topiramate** | 항경련제; **임신 금기**(기형), 체중 감소 부작용 |\n| **Divalproex / Valproate** | 항경련제; **임신 금기**, 체중 증가 |\n| **CGRP 수용체 길항제** (erenumab 등) | 편두통 특이 예방약; **비용·보험 장벽** 현실적 |\n\n### 2차 약물\n| 약물 | 특이사항 |\n|---|---|\n| **Amitriptyline** | TCA; 부작용(진정·구강건조) 많음 |\n| **Venlafaxine** | SNRI; 근거 수준 상대적 낮음 |\n\n### 만성 편두통 (월 15일 이상)\n- **OnabotulinumtoxinA (Botox)** 만성 편두통 예방 승인, 다른 약물과 동등 효과, 내약성 우수, **중단율 낮음**\n- 보험급여 기준 확인 필요 (국내: 신경과 처방 영역)",
+      content: "### 1차 약물\n| 약물 | 특이사항 |\n|---|---|\n| **Propranolol** | 베타차단제; 고혈압 동반 시 유리 |\n| **Metoprolol** | 베타차단제; 천식·[[COPD|COPD]] 금기 |\n| **Topiramate** | 항경련제; **임신 금기**(기형), 체중 감소 부작용 |\n| **Divalproex / Valproate** | 항경련제; **임신 금기**, 체중 증가 |\n| **CGRP 수용체 길항제** (erenumab 등) | 편두통 특이 예방약; **비용·보험 장벽** 현실적 |\n\n### 2차 약물\n| 약물 | 특이사항 |\n|---|---|\n| **Amitriptyline** | TCA; 부작용(진정·구강건조) 많음 |\n| **Venlafaxine** | SNRI; 근거 수준 상대적 낮음 |\n\n### 만성 편두통 (월 15일 이상)\n- **OnabotulinumtoxinA (Botox)** 만성 편두통 예방 승인, 다른 약물과 동등 효과, 내약성 우수, **중단율 낮음**\n- 보험급여 기준 확인 필요 (국내: 신경과 처방 영역)",
       sources: []
     },
     precaution: {
@@ -4507,11 +4507,11 @@ var _cervical_screening_v2 = {
   ],
   sections: {
     indication: {
-      content: "### 스크리닝 대상\n- **무증상 평균위험군** 자궁경부암 스크리닝\n- 자궁경부암: 전 세계 여성 4번째 흔한 암\n- 미국 내 **과소 스크리닝**이 사회경제적 격차와 연관",
+      content: "### 스크리닝 대상\n- **무증상 평균위험군** [[자궁경부암|자궁경부암]] 스크리닝\n- 자궁경부암: 전 세계 여성 4번째 흔한 암\n- 미국 내 **과소 스크리닝**이 사회경제적 격차와 연관",
       sources: []
     },
     schedule: {
-      content: "### 시작 연령 및 주기\n| 기관 | 시작 연령 | 방법 | 주기 |\n|---|---|---|---|\n| **ACS** (미국암학회) | 25세 | Primary HPV 선호 | 5년마다 |\n| **USPSTF 2024 초안** | 30세 | Primary HPV 선호 | 5년마다 |\n| USPSTF 2024 (21~29세) | 21세 | 세포검사 단독 | 3년마다 |\n| **국내 KNHSP** | 만 20세 이상 | 세포검사 | **2년마다** |\n\n### 종료 기준\n**65세** 종료 — 단, 아래 조건 **모두** 충족 시:\n1. 최근 25년간 **고등급 CIN 또는 자궁경부암 없음**\n2. **60세 및 65세**에서 적절한 음성 스크리닝 결과",
+      content: "### 시작 연령 및 주기\n| 기관 | 시작 연령 | 방법 | 주기 |\n|---|---|---|---|\n| **ACS** (미국암학회) | 25세 | Primary HPV 선호 | 5년마다 |\n| **USPSTF 2024 초안** | 30세 | Primary HPV 선호 | 5년마다 |\n| USPSTF 2024 (21~29세) | 21세 | 세포검사 단독 | 3년마다 |\n| **국내 KNHSP** | 만 20세 이상 | 세포검사 | **2년마다** |\n\n### 종료 기준\n**65세** 종료 — 단, 아래 조건 **모두** 충족 시:\n1. 최근 25년간 **고등급 CIN 또는 [[자궁경부암|자궁경부암]] 없음**\n2. **60세 및 65세**에서 적절한 음성 스크리닝 결과",
       sources: []
     },
     protocol: {
@@ -4519,7 +4519,7 @@ var _cervical_screening_v2 = {
       sources: []
     },
     referral: {
-      content: "- 일차의료에서 직접 스크리닝·상담 가능\n- 비정상 결과 (고위험 HPV 양성, ASC-H, HSIL 이상) → 산부인과 (질확대경)\n- 자궁경부암 과거력 / 면역저하자 → 개별화 (조기 시작·짧은 주기)\n- 관련: [[hpv-vaccine]] / [[adult-vaccination-summary]] HPV 예방접종",
+      content: "- 일차의료에서 직접 스크리닝·상담 가능\n- 비정상 결과 (고위험 HPV 양성, ASC-H, HSIL 이상) → 산부인과 (질확대경)\n- [[자궁경부암|자궁경부암]] 과거력 / 면역저하자 → 개별화 (조기 시작·짧은 주기)\n- 관련: [[hpv-vaccine]] / [[adult-vaccination-summary]] HPV [[예방접종|예방접종]]",
       sources: []
     }
   },
@@ -4539,7 +4539,7 @@ var _cancer_fatigue_v2 = {
   ],
   sections: {
     notes: {
-      content: "### 핵심 결론 [출처: Eckert H AFP 2025 Nov POEM]\n**저항운동(Resistance Training)은 암 환자의 암 관련 피로(CRF)를 유의하게 감소시킨다.**\n\n- AFP POEM 형식 — 일차의료 즉시 적용 권고 수준 요약\n- 저항운동이 항암치료 중·후 피로 관리에 근거 기반 중재\n- [초록 미제공 — POEM 포맷, 전문 미확인]",
+      content: "### 핵심 결론 [출처: Eckert H [[afp-top20-poems-2024|AFP]] 2025 Nov POEM]\n**저항운동(Resistance Training)은 암 환자의 암 관련 피로(CRF)를 유의하게 감소시킨다.**\n\n- AFP POEM 형식 — 일차의료 즉시 적용 권고 수준 요약\n- 저항운동이 항암치료 중·후 피로 관리에 근거 기반 중재\n- [초록 미제공 — POEM 포맷, 전문 미확인]",
       sources: []
     },
     protocol: {
@@ -4649,7 +4649,7 @@ var _cardiac_rehab_v2 = {
       sources: []
     },
     protocol: {
-      content: "### 핵심 3요소\n| 요소 | 내용 | 실전 |\n|---|---|---|\n| **운동 처방** | 유산소+저항 운동 / 주 3~5회 / 12주 기본 | 심폐 운동 부하 검사 기반 강도 설정 |\n| **교육** | 위험인자 교정 (식이·금연·체중·혈압·지질) | 환자·가족 포함 |\n| **심리 지원** | 우울·불안 스크리닝·개입 | PHQ-9·GAD-7 병행 |\n\n### 가정의 직접 수행 최소 재활 패키지\n1. 운동 처방: 걷기 목표(심박수·주당 시간) 명시\n2. 식이 교정: 지중해식·DASH 처방\n3. 금연: 상담 + 약물 (varenicline 우선)\n4. 혈압·지질·혈당 목표 관리\n5. 우울 스크리닝 + 필요 시 상담/약물",
+      content: "### 핵심 3요소\n| 요소 | 내용 | 실전 |\n|---|---|---|\n| **운동 처방** | 유산소+저항 운동 / 주 3~5회 / 12주 기본 | 심폐 운동 부하 검사 기반 강도 설정 |\n| **교육** | 위험인자 교정 (식이·금연·체중·혈압·지질) | 환자·가족 포함 |\n| **심리 지원** | 우울·불안 스크리닝·개입 | PHQ-9·[[depression-screening|GAD-7]] 병행 |\n\n### 가정의 직접 수행 최소 재활 패키지\n1. 운동 처방: 걷기 목표(심박수·주당 시간) 명시\n2. 식이 교정: 지중해식·DASH 처방\n3. 금연: 상담 + 약물 (varenicline 우선)\n4. 혈압·지질·혈당 목표 관리\n5. 우울 스크리닝 + 필요 시 상담/약물",
       sources: []
     },
     notes: {
@@ -5315,7 +5315,7 @@ var _menopause_v2 = {
       sources: []
     },
     monitoring: {
-      content: "(KMS 2024 / NAMS 2022)\n- **DXA 골밀도** (T≤-2.5 진단)\n- 공복혈당, HbA1c\n- 지질 (TC/LDL/HDL/TG)\n- BP·체중·BMI\n- 골다공증 약물 → [[osteoporosis]]",
+      content: "(KMS 2024 / NAMS 2022)\n- **DXA 골밀도** (T≤-2.5 진단)\n- [[diabetes|공복혈당]], HbA1c\n- 지질 (TC/LDL/HDL/TG)\n- BP·체중·BMI\n- 골다공증 약물 → [[osteoporosis]]",
       sources: []
     },
     referral: {
@@ -5347,11 +5347,11 @@ var _preconception_v2 = {
   ],
   sections: {
     indication: {
-      content: "### 기본 세트 (KSOG / CDC / ACOG)\n| 검사 | 목적 |\n|---|---|\n| **Rubella IgG** | 선천성 풍진 증후군 예방 |\n| **HBsAg ± HBsAb** | 수직감염 예방 + 신생아 예방접종 계획 |\n| **VZV IgG** | 임신 중 수두 감염 예방 |\n\n### 추가 권장 (모든 임산부)\n- **매독 (VDRL/RPR)**, **HIV Ab/Ag**, **HCV Ab**\n- USPSTF: Syphilis A, HIV A, HBV A, HCV B\n\n### 특수 (위험군 한정, universal X)\n- **Toxoplasma IgG/IgM** — 고양이·날고기 노출\n- **CMV** — 의료인·보육교사\n- MMR 재접종 — 접종력 불확실 시 ACIP 표준",
+      content: "### 기본 세트 (KSOG / CDC / ACOG)\n| 검사 | 목적 |\n|---|---|\n| **Rubella IgG** | 선천성 풍진 증후군 예방 |\n| **HBsAg ± HBsAb** | 수직감염 예방 + 신생아 [[예방접종|예방접종]] 계획 |\n| **VZV IgG** | 임신 중 수두 감염 예방 |\n\n### 추가 권장 (모든 임산부)\n- **매독 (VDRL/RPR)**, **HIV Ab/Ag**, **HCV Ab**\n- USPSTF: Syphilis A, HIV A, HBV A, HCV B\n\n### 특수 (위험군 한정, universal X)\n- **Toxoplasma IgG/IgM** — 고양이·날고기 노출\n- **CMV** — 의료인·보육교사\n- MMR 재접종 — 접종력 불확실 시 ACIP 표준",
       sources: []
     },
     protocol: {
-      content: "### 항체 결과별 조치\n\n**Rubella IgG 음성** (ACIP / CDC / KDCA)\n- 임신 전 MMR 접종\n- 접종 후 **최소 4주(28일) 임신 회피** (\"1개월 전 완료\")\n- 임신 중 접종 금기 (생백신)\n\n**Varicella IgG 음성** (CDC / ACIP / ASRM 2024)\n- 임신 전 varicella 접종\n- **2회 접종 권장 → 계획 임신 약 2개월 전 시작**이 이상적\n- 접종 후 최소 28일 임신 회피, 임신 중 금기\n\n**HBsAg 양성** (CDC / ACIP)\n- 신생아: **출생 12시간 내 HepB 백신 + HBIG 동시 투여** (94% 예방)\n- 산모 **HBV DNA 검사** → 임신 중 **항바이러스 (TDF)** 적응증 평가\n- 만성 B형간염 → [[hepatitis-b]] 관리\n\n**HBsAb 음성** (가임 여성)\n- B형간염 백신 권고 (ACIP 19~59세 universal)\n\n**매독·HIV·HCV(+)**: 해당 분과 의뢰",
+      content: "### 항체 결과별 조치\n\n**Rubella IgG 음성** (ACIP / CDC / KDCA)\n- 임신 전 MMR 접종\n- 접종 후 **최소 4주(28일) 임신 회피** (\"1개월 전 완료\")\n- 임신 중 접종 금기 (생백신)\n\n**Varicella IgG 음성** (CDC / ACIP / ASRM 2024)\n- 임신 전 [[varicella|varicella]] 접종\n- **2회 접종 권장 → 계획 임신 약 2개월 전 시작**이 이상적\n- 접종 후 최소 28일 임신 회피, 임신 중 금기\n\n**HBsAg 양성** (CDC / ACIP)\n- 신생아: **출생 12시간 내 HepB 백신 + HBIG 동시 투여** (94% 예방)\n- 산모 **HBV DNA 검사** → 임신 중 **항바이러스 (TDF)** 적응증 평가\n- 만성 [[B형간염|B형간염]] → [[hepatitis-b]] 관리\n\n**HBsAb 음성** (가임 여성)\n- B형간염 백신 권고 (ACIP 19~59세 universal)\n\n**매독·HIV·HCV(+)**: 해당 분과 의뢰",
       sources: []
     },
     referral: {
@@ -5472,7 +5472,7 @@ var _brain_meta_v2 = {
       sources: []
     },
     insurance: {
-      content: "### 일반 원칙\n1. **경구 뇌대사 개선제 1종만 급여**\n2. 뇌대사 개선제는 MMSE 없이 투여 가능 (choline alfoscerate 포함)\n   - **치매치료제 병용 시 MMSE/CDR/GDS 요건 별도 적용**\n3. 치매치료제 1종 + 뇌대사 개선제 1종 병용 가능\n4. **Ginkgo + 치매치료제 병용 시**: 1일 약가 저렴한 1종 전액본인부담\n5. 효능·효과 맞는 상병 기록 필수\n\n### Choline alfoscerate (글리아티린) — 2025.9.21 변경 [중요]\n- **치매 진단 (F00/F01/F023 등)**: 정상 급여\n- **치매 외 (MCI 등 G319 포함)**: **80% 본인부담 선별급여**\n→ 처방 시 진단코드 확인 필수\n\n### Acetyl L-carnitine (니세틸) — 시장 퇴출 수순\n- **2019.7월 \"일차적 퇴행성 질환\" 적응증 삭제** (식약처 임상재평가, **허가사항 변경**)\n- 이후 **\"이차적 퇴행성\" 적응증도 삭제** — 사실상 시장 퇴출\n- 경도인지장애·비혈관성 치매 인정 X\n\n### 사미온 (Nicergoline)\n| 용량 | 인정 |\n|---|---|\n| **5mg, 10mg** | **뇌경색후유증, 뇌출혈후유증, 말초순환장애 (폐색성동맥·레이노)** — 그 외 (당뇨성·동맥경화성 두통·고혈압 보조요법) 전액본인부담 |\n| **30mg** | 별도 기준 X. 허가사항 — 퇴행성 혈관 치매·복합성 치매 |\n\n### 소마지나 (Citicoline)\n- **급성 허혈성 뇌졸중 24시간 이내 복용 시 6주까지** 급여 (식약처 허가사항 기반)\n- 다른 경우 전액본인부담\n\n### 케타스 (Ibudilast)\n- 효능: **뇌경색후유증 후 만성 뇌순환장애에 의한 어지러움(현훈) 개선**\n- ⚠ 단순 어지럼증·고혈압 단독 상병 → 삭감 위험\n- 정확한 상병 코드 (뇌경색 후유증 + 어지러움) 필수\n\n### 인정기준 외 처리\n- 뇌대사 개선제는 **비급여 처방 X** — 인정기준 외에는 **약값 전액 본인부담**",
+      content: "### 일반 원칙\n1. **경구 뇌대사 개선제 1종만 급여**\n2. 뇌대사 개선제는 MMSE 없이 투여 가능 (choline alfoscerate 포함)\n   - **치매치료제 병용 시 MMSE/CDR/GDS 요건 별도 적용**\n3. 치매치료제 1종 + 뇌대사 개선제 1종 병용 가능\n4. **Ginkgo + 치매치료제 병용 시**: 1일 약가 저렴한 1종 전액본인부담\n5. 효능·효과 맞는 상병 기록 필수\n\n### Choline alfoscerate (글리아티린) — 2025.9.21 변경 [중요]\n- **치매 진단 (F00/F01/F023 등)**: 정상 급여\n- **치매 외 (MCI 등 G319 포함)**: **80% 본인부담 선별급여**\n→ 처방 시 진단코드 확인 필수\n\n### Acetyl L-carnitine (니세틸) — 시장 퇴출 수순\n- **2019.7월 \"일차적 퇴행성 질환\" 적응증 삭제** (식약처 임상재평가, **허가사항 변경**)\n- 이후 **\"이차적 퇴행성\" 적응증도 삭제** — 사실상 시장 퇴출\n- 경도인지장애·비혈관성 치매 인정 X\n\n### 사미온 (Nicergoline)\n| 용량 | 인정 |\n|---|---|\n| **5mg, 10mg** | **뇌경색후유증, 뇌출혈후유증, 말초순환장애 (폐색성동맥·레이노)** — 그 외 (당뇨성·동맥경화성 두통·고혈압 보조요법) 전액본인부담 |\n| **30mg** | 별도 기준 X. 허가사항 — 퇴행성 혈관 치매·복합성 치매 |\n\n### 소마지나 (Citicoline)\n- **급성 허혈성 뇌졸중 24시간 이내 복용 시 6주까지** 급여 (식약처 허가사항 기반)\n- 다른 경우 전액본인부담\n\n### 케타스 (Ibudilast)\n- 효능: **뇌경색후유증 후 만성 뇌순환장애에 의한 [[dizziness|어지러움]](현훈) 개선**\n- ⚠ 단순 어지럼증·고혈압 단독 상병 → 삭감 위험\n- 정확한 상병 코드 (뇌경색 후유증 + 어지러움) 필수\n\n### 인정기준 외 처리\n- 뇌대사 개선제는 **비급여 처방 X** — 인정기준 외에는 **약값 전액 본인부담**",
       sources: []
     },
     referral: {
