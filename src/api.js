@@ -84,14 +84,6 @@ async function generateDraftReview(raw,apiKey,customPrompt,knowledgeCtx){
     apiKey,600);
 }
 
-/* Knowledge Curation — 임상 가이드 탭 온디맨드 */
-async function generateKnowledgeCuration(raw,apiKey,knowledgeCtx){
-  return callClaude(
-    KNOWLEDGE_CURATION_PROMPT,
-    "다음 transcript를 분석하고, 제공된 지식 자료에서 환자 상황에 맞는 bullet을 추출하라.\n\n[Transcript]\n"+raw+"\n\n[지식 자료]\n"+knowledgeCtx,
-    apiKey,600);
-}
-
 /* Working Draft */
 async function generateWorkingDraft(raw,apiKey,ctx,knowledgeCtx,draftTemplate){
   var knowledgeLine=knowledgeCtx?"\n\n==임상 경험 컨텍스트 (API 일반 지식보다 우선 적용)==\n"+knowledgeCtx:"";

@@ -185,3 +185,30 @@ keywords: 두드러기, urticaria, 혈관부종, ...
 - 파일 경계: `rules/file-ownership.md`
 - Architect agent: `agents/architect.md`
 - Librarian agent: `agents/librarian.md`
+
+---
+
+## 6. 수동 검색 채널 — 매트릭스 외 raw 열람 (2026-05-06 신설)
+
+### 정의
+Knowledge Search surface는 §1 매트릭스의 **primary 라우팅과 무관**한 별도 채널이다.
+의사 능동 검색에 의해 KNOWLEDGE_BUNDLE 전체를 raw로 열람한다.
+
+### 매트릭스와의 관계
+- §1 매트릭스 primary 셀 **무손상**. guide 컬럼은 historical 의도 표식으로 유지(현재 UI surface 없음 — 검색이 흡수).
+- 검색은 모든 섹션을 raw로 노출 가능 — 이는 primary 라우팅이 아님.
+- 새 섹션 도입 시에도 검색 자동 노출(인덱스 추가 작업 불필요).
+
+### RedFlag 격리 (§2 재확인)
+- knowledge/에 RedFlag 컨텐츠는 없음 → 검색 결과 자동 제외.
+- 향후 RedFlag 키워드 컨텐츠 도입 금지 (§2 RULE LEVEL 유지).
+- 코드 수준 명시 가드는 도입하지 않음 (데이터 부재로 불필요 — 도입 시점에 재논의).
+
+### myth 격리 (forbidden.md Liby §)
+- 검색 인덱스 빌드 시 `kind:"myth"` 엔트리 자동 제외.
+- knowledge/myth-log/ 의사 본인 공부 자원 — 진료 surface 노출 금지 원칙 유지.
+
+### Guideline Assist 흡수 (2026-05-06)
+- 기존 Guideline Assist surface 폐기.
+- 매트릭스 guide 컬럼 ✓ 행은 모두 검색에서 raw 열람 가능.
+- 부수 효과: `KNOWLEDGE_CURATION_PROMPT` · `generateKnowledgeCuration` · `GuideTab` · `hasGuidableContent` · `buildCurationCtx` · `handleCuration` 제거.

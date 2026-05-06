@@ -2,7 +2,6 @@
    SECTIONS — app.js에서 추출한 탭 콘텐츠 컴포넌트
    CalcTabHeaders : 계산기 탭 헤더 + 추가 메뉴
    DraftTab       : Working Draft 표시 + 판단 검토
-   GuideTab       : 임상 가이드 — KNOWLEDGE_BUNDLE 기반 AI 큐레이션 (온디맨드)
    CalcTabContent : 계산기 폼 + 결과 + 참조표
 ══════════════════════════════════════════════════════════ */
 
@@ -203,80 +202,6 @@ function DraftTab(props){
               </div>
             )}
           </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
-function GuideTab(props){
-  var curationText=props.curationText, curationLoading=props.curationLoading,
-      onCurate=props.onCurate, apiKey=props.apiKey, detectedKeys=props.detectedKeys||[];
-  var canRun=!curationLoading&&apiKey&&detectedKeys.length;
-  return (
-    <div style={{background:"#0d1018",border:"1px solid rgba(167,139,250,.22)",borderRadius:8,
-      padding:"12px 14px",minHeight:240,overflowY:"auto"}}>
-      <div style={{fontSize:9,fontWeight:700,color:"#a78bfa",
-        textTransform:"uppercase",letterSpacing:".07em",marginBottom:4,
-        fontFamily:"'JetBrains Mono',monospace"}}>
-        📖 임상 가이드 — Liby ingest 기반 AI 큐레이션
-      </div>
-      <div style={{fontSize:10,color:"#2e374f",marginBottom:12,
-        borderBottom:"1px solid #1e2538",paddingBottom:6}}>
-        감지된 질환·약물 지식을 이 환자 상황에 맞춰 추출. 의사 판단 필수.
-      </div>
-
-      {/* 감지된 지식 목록 */}
-      <div style={{fontSize:11,color:"#6b5c8a",marginBottom:10,lineHeight:1.8}}>
-        <span style={{fontSize:9,color:"#4a3f6b",fontWeight:700,
-          textTransform:"uppercase",letterSpacing:".07em",marginRight:6}}>감지된 지식</span>
-        {detectedKeys.length
-          ? detectedKeys.join(" · ")
-          : <span style={{color:"#2e374f",fontStyle:"italic"}}>없음</span>}
-      </div>
-
-      {/* 큐레이션 생성 버튼 */}
-      <button onClick={canRun?onCurate:undefined}
-        disabled={!canRun}
-        style={{fontSize:11,fontWeight:700,padding:"7px 14px",borderRadius:6,
-          cursor:canRun?"pointer":"not-allowed",
-          color:canRun?"#a78bfa":"#4a3f6b",
-          background:canRun?"rgba(167,139,250,.08)":"transparent",
-          border:"1px solid "+(canRun?"rgba(167,139,250,.35)":"#1e2538"),
-          opacity:canRun?1:.6,
-          display:"inline-flex",alignItems:"center",gap:6,marginBottom:12}}>
-        {curationLoading&&(
-          <span style={{width:8,height:8,border:"1.5px solid #252d42",
-            borderTopColor:"#a78bfa",borderRadius:"50%",display:"inline-block",
-            animation:"spin .65s linear infinite"}}/>
-        )}
-        🎯 {curationText?"큐레이션 재생성":"큐레이션 생성"}
-      </button>
-
-      {/* AI 큐레이션 결과 */}
-      {curationLoading&&!curationText&&(
-        <div style={{fontSize:11,color:"#4a3f6b",fontStyle:"italic"}}>
-          환자 상황에 맞는 지식을 추출 중...
-        </div>
-      )}
-      {curationText&&(
-        <div style={{marginTop:4,paddingTop:10,borderTop:"1px solid rgba(167,139,250,.15)"}}>
-          <div style={{fontSize:9,fontWeight:700,color:"#4a3f6b",
-            textTransform:"uppercase",letterSpacing:".07em",marginBottom:8,
-            fontFamily:"'JetBrains Mono',monospace"}}>
-            AI 큐레이션
-          </div>
-          <div style={{fontSize:12,color:"#94a3b8",lineHeight:1.9,
-            whiteSpace:"pre-wrap",padding:"8px 10px",
-            background:"rgba(167,139,250,.04)",
-            border:"1px solid rgba(167,139,250,.12)",borderRadius:6}}>
-            {curationText}
-          </div>
-        </div>
-      )}
-      {!curationLoading&&!curationText&&(
-        <div style={{fontSize:11,color:"#2e374f",fontStyle:"italic",marginTop:4}}>
-          버튼을 누르면 transcript 맥락에 맞는 3~8개 bullet이 추출됩니다.
         </div>
       )}
     </div>
