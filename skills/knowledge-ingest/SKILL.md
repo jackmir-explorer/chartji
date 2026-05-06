@@ -226,6 +226,22 @@ ingest 시 본문 중 **기존 엔트리 keywords와 완전 일치하는 토큰*
 
 목적: Obsidian 그래프 뷰에서 엔트리 간 연결 가시화 — 미르 공부 자원.
 
+#### 5-D.1 token-target 우선순위 (2026-05-06 보강 — Wave 1 cross-keyword 오변환 학습)
+
+같은 토큰이 여러 target entry의 keywords에 등장할 때 **target priority** 적용:
+
+1. 토큰 == target.key (정확 일치) — **최우선**
+2. 토큰 == target.keywords[0] (canonical synonym) — **차순위**
+3. 토큰 == target.keywords[1+] (보조 별칭·관련 개념) — **단독 매칭일 때만** 적용
+
+**충돌 해소**: 같은 토큰이 후보 A(우선순위 1·2) + 후보 B(우선순위 3) 동시 매칭 시 → 후보 A로만 변환, 후보 B는 **skip + `ambiguous-token` 로그**.
+
+**예시 — Wave 1에서 학습된 오변환**:
+- `MASH` entry keywords에 "GLP-1" 포함 (보조 개념) vs `glp1` entry keywords[0] == "GLP-1" → 토큰 "GLP-1"은 `[[glp1|GLP-1]]`로만 변환, `[[MASH|GLP-1]]` 차단
+- `zepbound` entry keywords에 "마운자로" 포함 (cross-brand) vs `마운자로` entry key == "마운자로" → 토큰 "마운자로"는 `[[마운자로|마운자로]]`로만 변환, `[[zepbound|마운자로]]` 차단
+
+**섹션당 토큰 1회 강화**: 같은 섹션 내 동일 토큰은 wikilinks 1개만 허용 (target 다르더라도). 5-D 본 규칙의 "섹션당 첫 등장 1회만"을 (섹션, 토큰) 단위로 엄격 해석 — Wave 1에서 (섹션, target) 단위로 느슨하게 해석되어 동일 토큰이 여러 target으로 분산 변환된 사례 차단.
+
 ### 5-A. 긴 문서 축약 규칙
 
 적용 조건: 원문이 600토큰(≈400자) 초과하는 가이드라인·심평원 자료·진단기준

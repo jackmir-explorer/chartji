@@ -1461,7 +1461,7 @@ var KNOWLEDGE_BUNDLE = {
         ]
       },
       "prediabetes": {
-        "content": "### [[MASH|GLP-1]]RA — 전[[diabetes|당뇨]] 치료 [INSIGHTS]\n리뷰 논문 — 향후 대규모 RCT 필요\n\n적응 환자군: 전당뇨(공복혈당장애 또는 내당능장애) + 과체중/비만\n\n정상혈당 회복률:\n| 약물 | 정상혈당 회복 |\n|---|---|\n| Tirzepatide | 최대 93.3% |\n| Semaglutide | 최대 81% |\n| Liraglutide | 최대 66% |\n\n추가 효과: T2DM 진행 지연 / 체중↓ / 지방량↓ / 인슐린 감수성↑ / ASCVD·심부전 위험↓ (특히 [[glp1-selection-strategy|tirzepatide]]) / MASLD 개선 가능성\n주의: 약물 중단 후 효과 부분적 소실 → 장기 유지 필요성 환자 교육 필수\n\n1차의료 적용:\n- 전당뇨+비만 환자 GLP-1RA 처방 시 '살 빼면서 혈당도 잡는다' 수치 근거\n- 약물 중단 후 효과 감소 → 장기 유지 필요성 상담 활용",
+        "content": "### [[glp1|GLP-1]]RA — 전[[diabetes|당뇨]] 치료 [INSIGHTS]\n리뷰 논문 — 향후 대규모 RCT 필요\n\n적응 환자군: 전당뇨(공복혈당장애 또는 내당능장애) + 과체중/비만\n\n정상혈당 회복률:\n| 약물 | 정상혈당 회복 |\n|---|---|\n| Tirzepatide | 최대 93.3% |\n| Semaglutide | 최대 81% |\n| Liraglutide | 최대 66% |\n\n추가 효과: T2DM 진행 지연 / 체중↓ / 지방량↓ / 인슐린 감수성↑ / ASCVD·심부전 위험↓ (특히 [[glp1-selection-strategy|tirzepatide]]) / MASLD 개선 가능성\n주의: 약물 중단 후 효과 부분적 소실 → 장기 유지 필요성 환자 교육 필수\n\n1차의료 적용:\n- 전당뇨+비만 환자 GLP-1RA 처방 시 '살 빼면서 혈당도 잡는다' 수치 근거\n- 약물 중단 후 효과 감소 → 장기 유지 필요성 상담 활용",
         "sources": [
           "Panou T et al. Diabetes Ther 2026. PMID:41984373, DOI:10.1007/s13300-026-01865-5"
         ]
@@ -3002,11 +3002,11 @@ var _obesity_grade_v2 = {
   ],
   sections: {
     indication: {
-      content: "### 강력 권고 (Strong recommendation)\n- **Semaglutide 2.4mg** (위고비)\n- **Tirzepatide** ([[zepbound|마운자로]]/[[마운자로|zepbound]])\n- **Bupropion-naltrexone** (Contrave)\n- **Setmelanotide** (특정 유전성 비만)\n→ 위 약물들은 일반 비만(BMI ≥30, 또는 ≥27 + 동반질환)에서 강력 권고.\n\n### 체중 유지 중 약물 지속 — **강력 권고**\n약물 중단 시 체중 회복이 일반적 → 장기 유지 필요성을 환자 교육 필수.",
+      content: "### 강력 권고 (Strong recommendation)\n- **Semaglutide 2.4mg** (위고비)\n- **Tirzepatide** ([[마운자로|마운자로]]/[[zepbound|zepbound]])\n- **Bupropion-naltrexone** (Contrave)\n- **Setmelanotide** (특정 유전성 비만)\n→ 위 약물들은 일반 비만(BMI ≥30, 또는 ≥27 + 동반질환)에서 강력 권고.\n\n### 체중 유지 중 약물 지속 — **강력 권고**\n약물 중단 시 체중 회복이 일반적 → 장기 유지 필요성을 환자 교육 필수.",
       sources: []
     },
     comparison: {
-      content: "### 동반질환별 [[MASH|GLP-1]] 우선 — 조건부 권고\n다음 동반 비만에서 [[diabetes|GLP-1]] 계열 우선 권고:\n| 동반질환 | 권고 강도 | 근거 |\n|---|---|---|\n| **HFpEF** | 조건부 | STEP-HFpEF, SUMMIT — 운동능력·QoL 개선 |\n| **[[sleep-apnea|OSA]]** (수면무호흡) | 조건부 | Tirzepatide SURMOUNT-OSA — AHI 개선 |\n| **MASH** | 조건부 | Semaglutide FDA 적응증 (F2-F3) |\n| **골관절염** (knee OA) | 조건부 | STEP-OA — 통증·기능 개선 |\n| **기존 ASCVD** | 조건부 | SELECT — Semaglutide CV HR 0.80 |\n| **T2DM** | 조건부 | 당뇨·체중 동시 관리 |",
+      content: "### 동반질환별 [[glp1|GLP-1]] 우선 — 조건부 권고\n다음 동반 비만에서 GLP-1 계열 우선 권고:\n| 동반질환 | 권고 강도 | 근거 |\n|---|---|---|\n| **HFpEF** | 조건부 | STEP-HFpEF, SUMMIT — 운동능력·QoL 개선 |\n| **[[sleep-apnea|OSA]]** (수면무호흡) | 조건부 | Tirzepatide SURMOUNT-OSA — AHI 개선 |\n| **MASH** | 조건부 | Semaglutide FDA 적응증 (F2-F3) |\n| **골관절염** (knee OA) | 조건부 | STEP-OA — 통증·기능 개선 |\n| **기존 ASCVD** | 조건부 | SELECT — Semaglutide CV HR 0.80 |\n| **T2DM** | 조건부 | 당뇨·체중 동시 관리 |",
       sources: []
     },
     protocol: {
