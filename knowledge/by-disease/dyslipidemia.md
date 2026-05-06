@@ -48,6 +48,31 @@ relations: []
 4. 부작용(근육통/CK↑/LFT↑) 시 → 강도 감량·교체·격일 복용 시도
 5. 생활요법(운동·DASH·금연·체중)은 **항상 병행**
 
+---
+
+## ASCVD 이차 예방 — LDL<55 목표의 근거 [CLINICAL]
+
+> 근거: Lee YJ et al. (Ez-PAVE trial) Intensive LDL Cholesterol Targeting in Atherosclerotic Cardiovascular Disease. N Engl J Med. 2026;394(14):1365-1375. PMID:41910315. DOI:10.1056/NEJMoa2600283
+
+**연구 설계**: 한국 ASCVD 환자 3,048명 — LDL<55 (intensive) vs LDL<70 (conventional) 무작위 배정; 3년 추적
+
+**달성 LDL**: 56 mg/dL (intensive) vs 66 mg/dL (conventional)
+
+**주요 결과 (복합 심혈관 사건: 심혈관사망·MI·뇌졸중·혈관재건·불안정협심증 입원)**
+
+| 군 | 3년 누적 발생률 | HR (95% CI) | p값 |
+|---|---|---|---|
+| LDL<55 (intensive) | 6.6% | **0.67 (0.52–0.86)** | 0.002 |
+| LDL<70 (conventional) | 9.7% | 기준 | — |
+
+- 33% 상대적 위험 감소 (NNT ≈ 32명/3년)
+- 안전성: 두 군 유사; 단 creatinine 상승은 intensive 군에서 낮음
+
+**임상 적용:**
+- 한국인 ASCVD 데이터 — KSoLA 지침 LDL<55 초고위험군 목표 근거 강화
+- Ezetimibe 추가로 LDL<55 달성 전략: statin 고강도 + ezetimibe 10mg 병용
+- 공유의사결정 시: "스타틴에 에제티미브를 추가하면 심혈관 사건 33% 더 줄일 수 있습니다"
+
 > ACC/AHA 2018, ESC/EAS 2019 모두 *the lower the better* 원칙. LDL이 낮아도(예: 30대) 부작용 없으면 statin 유지 가능.
 
 ---

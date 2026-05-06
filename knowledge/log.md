@@ -32,6 +32,16 @@
 2026-05-06 | by-disease/heart-failure.md | 보강 — ACC/AHA 2022 Stage A/B/C/D 분류 추가(Stage B에 BNP/NT-proBNP 지속 상승 포함), BNP cutoff 외래(35/125) vs 응급실 age-adjusted 분리, 유발 약물(NSAIDs·non-DHP CCB·BB 시점) [CLINICAL]
 2026-05-06 | guidelines/chest-xray-template.md | 신규 — 기숙사 입소·검진 SOAP template (Z115), 변형 4종 (취업·학교·흉부 검진), URI 동반 시 별도 SOAP [TIPS — by 미르]
 2026-05-06 | knowledge-bundle.js / prompts.js | Phase 3: 신규 paresthesia + chest-xray-template entry, thyroid-fna-cnb·anxiety-depression-cbt·heart-failure section 보강, 478 keys. TRIAGE calcCategories 2개 신규
+2026-05-06 | by-disease/nocturia.md | 신규 — 야간뇨 외래 관리: 4대 기전(야간다뇨·방광저장·불완전배뇨·수면장애) 분류, 빈도-용량 일지, 생활습관 1차·기전별 약물(desmopressin·미라베그론·알파차단제·국소에스트로겐)·불응성 시술 [CLINICAL] PMID:40531150 (AFP 2025) — 과거 누락 복구 (출처 05-01)
+2026-05-06 | by-disease/delayed-diagnosis.md | 신규 — 외래 진단 지연 시스템 원인: 문서 단편화·종단적 정보 연속성 실패가 주요 원인 (PRISMA 13연구), 개별 방문 적절 평가에도 패턴 인식 실패 [INSIGHTS] PMID:41657870 (Cureus 2026) — 과거 누락 복구 (출처 05-01)
+2026-05-06 | guidelines/afp-poems-2025-dec.md | 신규 — AFP 2025 Dec POEMs 요약: 보행심전도·출혈질환·황달·SSRI·소아관절염·아나필락시스 핵심; 아나필락시스 외래 처치 원칙 포함 [CLINICAL — 조건부, 초록 기반] PMID:41533401 (AFP 2025) — 과거 누락 복구 (출처 05-01)
+2026-05-06 | by-disease/pocus-primary-care-efsumb.md | 신규 — EFSUMB 일차의료 POCUS 핵심 커리큘럼: Delphi 합의 Level 1 권고, 4대 모듈(심장·폐·복부·MSK), 훈련 최소 요건, 외래 즉시 적용 시나리오 [CLINICAL] PMID:41386291 (Ultraschall Med 2026) — 과거 누락 복구 (출처 05-03)
+2026-05-06 | by-disease/low-back-pain.md | 추가 — 급성 요통 섹션 신규: Red Flag 체크, 비특이적 비약물 1차(활동유지·온열·dry needling·TENS), NSAID 1차·루틴 금지 약물(BZD·gabapentin·opioid·APAP), 대부분 4~6주 회복 [CLINICAL] PMID:41252835 (AFP 2025) — 과거 누락 복구 (출처 05-03)
+2026-05-06 | by-disease/geriatric-assessment-4ms.md | 신규 — 4Ms 노인 평가 프레임워크: What Matters·Medication(Beers/STOPP)·Mentation(Mini-Cog·PHQ-2·섬망)·Mobility(STEADI 3문항·TUG≥12초 고위험) [CLINICAL] PMID:41544278 (AFP 2026) — 과거 누락 복구 (출처 05-03)
+2026-05-06 | by-disease/continuity-of-care.md | 신규 — 주치의 연속성·노인 건강: 알던 주치의 진료 시 약물 관련 입원 18%↓(sHR 0.82)·골절 입원 28%↓(sHR 0.72); 예방적 진료 집중 응급 입원 15%↓·욕창 36%↓ (n=120,522) [CLINICAL — 조건부] PMID:42050887 (JAGS 2026) — 과거 누락 복구 (출처 05-03)
+2026-05-06 | by-disease/hyponatremia.md | 신규 — 저나트륨혈증 외래 관리: 급성(고장식염수 즉시)·만성(≤6~8 mEq/L/24h ODS 예방), SIADH 수분제한 1차, 노인 thiazide+SSRI 조합 주의, 경한 만성도 인지저하·낙상 연관 [CLINICAL] PMID:41359965 (Ann Intern Med 2025) — 과거 누락 복구 (출처 05-03)
+2026-05-06 | by-disease/dyslipidemia.md | 추가 — ASCVD 이차 예방 LDL<55 목표 근거: Ez-PAVE 한국 RCT 3,048명 — LDL<55 vs <70 복합 CV사건 HR 0.67(p=0.002), NNT≈32/3년, ezetimibe 추가로 달성 [CLINICAL] PMID:41910315 (NEJM 2026) — 과거 누락 복구 (출처 05-03)
+2026-05-06 | by-disease/prescribing-cascade.md | 추가 — NSAID·항고혈압제→프로클로르페라진 처방 연쇄: aSR 1.27~1.81(이뇨제·알파차단제), 베타차단제(남성) aSR 1.94; 어지럼·구역 호소 노인 원인 약물 재검토 우선 [CLINICAL] PMID:41865214 (Drugs Aging 2026) — 과거 누락 복구 (출처 05-03)
 2026-05-02 | by-disease/pocus-abdominal.md | 신규 — GP 복부 POCUS 적합 3대 영역(담석증·요로결석·AAA/수신증): 1,053건 네덜란드 GP 의뢰 분석, guideline 기반 의뢰 75% 배제 판독·대안진단 <10% [CLINICAL — 조건부] PMID:41528024 (Eur J Gen Pract 2026)
 2026-05-02 | by-disease/ankle-sprain.md | 신규 — 급성 발목 염좌: Ottawa Rules·PEACE&LOVE 프로토콜·외부 지지대 5~10일·신경근 재활 8~12주 [CLINICAL] PMID:41533404 (AFP 2025 Dec)
 2026-05-02 | by-disease/palliative-pain.md | 추가 — 임종기 Deprescribing: 재향군인 37,193명, 73% LBM 복용 중·22%만 중단; 스타틴·혈당강하제·항고혈압제·항혈전제·PPI·항치매제 체크리스트 [CLINICAL] PMID:41925169 (JAGS 2026)
