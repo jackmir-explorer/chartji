@@ -69,5 +69,5 @@ keywords: 난청, hearing loss, presbycusis, 노인성 난청, 감각신경성 �
   - 소음성 난청: 4 kHz notch
   - 메니에르: 저주파 변동성
 - 가청 범위 20-20,000 Hz, 회화 영역 250-4,000 Hz
-- 이명 동반 흔함 (`tinnitus.md` 참조)
+- 이명 동반 흔함 ([[tinnitus]] 참조)
 - ARIA·AR 심한 환자에서 만성 중이염 동반 가능 → 전음성 난청 감별

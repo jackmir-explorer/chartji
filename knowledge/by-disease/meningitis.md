@@ -83,7 +83,7 @@ relations: []
 
 - **수막구균(meningococcal)**: 11-12세 MenACWY 기본, 16세 추가; MenB 권고
 - **Hib**: 소아 접종 완료 확인
-- **폐렴구균**: PCV20/PPSV23 성인 대상 (→ `by-drug/pneumococcal-vaccine.md`)
+- **폐렴구균**: PCV20/PPSV23 성인 대상 (→ [[pneumococcal-vaccine]])
 
 ### 화학예방 (Chemoprophylaxis) — 밀접접촉자 대상
 

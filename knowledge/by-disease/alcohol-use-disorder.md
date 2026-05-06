@@ -31,11 +31,33 @@ relations: []
 |---|---|---|
 | 2-3개 기준 | 4-5개 기준 | 6개 이상 기준 |
 
-### AUDIT-K 스크리닝 (국내)
-- 0-7점: 정상
-- 8-15점: 위험 음주 → 브리프 개입
-- 16-19점: 해로운 음주 → 약물치료 고려
-- 20점 이상: 알코올 의존 의심 → 약물 + 전문의 연계
+### AUDIT 컷오프 — 한국형 두 가지 버전 명시 필요
+
+> ⚠ 한국 임상에서 AUDIT-K는 두 버전 혼재. 어느 버전 기준인지 명시 필요.
+
+**WHO 일반 AUDIT 기준** (4 zones — Higgins-Biddle & Babor)
+| Zone | 점수 | 처치 |
+|---|---|---|
+| I | 0~7 | 교육 |
+| II | **8~15** | **simple advice** (FRAMES brief intervention) |
+| III | **16~19** | brief intervention + 모니터링 |
+| IV | **≥20** | 전문 평가·치료 의뢰 |
+
+**AUDIT-K 원판** (Lee BO 2000)
+- ≥12: 문제음주
+- ≥15: AUD
+- ≥26: 알코올 의존
+
+**AUDIT-KR 개정판** (김대진 2014, 한국 잔량 보정)
+- 남 ≥10 / 여 ≥8: AUD
+- at-risk drinking 남녀 ≥3
+
+### AUDIT-C 단축 도구 (3문항)
+시간 부족 시 사용. 문항 1·2 = 평균 음주 양상 (hazardous use), 문항 3 = 폭음 빈도(≥6잔/회).
+
+**컷오프 (NIAAA / VA / USPSTF)**
+- 남: **≥4점** 위험 음주
+- 여: **≥3점** 위험 음주
 
 ---
 
@@ -53,6 +75,23 @@ relations: []
 - 간기능 (ALT, AST, GGT, ALP, bilirubin, albumin, PT/INR)
 - 신기능 (acamprosate 용량 결정)
 - CBC (MCV, thrombocytopenia)
+
+### 음주량 정의 (NIAAA / SAMHSA / WHO)
+
+**표준 음주 1잔 (소비량 기준)**
+- 미국 NIAAA: 14g 순알코올
+- WHO 국제 표준: 10g
+- 한국 임상 통용: **소주 50mL ≈ 7~8g** (소주 1잔)
+
+**Low-risk drinking 한도**
+- NIAAA daily limit: 남 ≤4잔/일·≤14잔/주, 여 ≤3잔/일·≤7잔/주
+- 2020 미국 식이지침 moderate: 남 ≤2잔/일, 여 ≤1잔/일
+
+**폭음 (binge — NIAAA 정의)**
+- **남 5잔 / 2시간**
+- **여 4잔 / 2시간** (raw "여 3잔"은 청소년·소형 체격 기준 — 정정)
+
+**과음 (heavy use — SAMHSA)**: binge episodes **≥5일 / 30일**
 
 ---
 
@@ -77,7 +116,22 @@ McPheeters 2023 메타분석 결과 (vs placebo):
 - 단기 브리프 개입 (5-15분 외래 상담)
 - AA (Alcoholics Anonymous) 의뢰
 - 동기강화면담(Motivational Interviewing)
-- 인지행동치료(CBT) — 가능하면
+- 인지행동치료(CBT) — 가능하면 → [[anxiety-depression-cbt]]
+
+### FRAMES — Brief Intervention 6요소 (Zone II~III에 적용)
+
+> 근거: Miller WR & Sanchez VC 1993/1994, WHO Brief Intervention Manual, SAMHSA TIP 34
+
+| 요소 | 내용 |
+|---|---|
+| **F** Feedback | 음주로 인한 검사소견·객관적 문제점 알려줌 |
+| **R** Responsibility | 음주행동 변화에 대한 환자 책임 강조 |
+| **A** Advice | 적정음주·단주에 대한 직접적 충고 |
+| **M** Menu | 변화 방법 다양하게 제시 후 환자 선택 |
+| **E** Empathy | 공감·이해하는 태도 |
+| **S** Self-efficacy | 변화할 수 있다는 자기효능감 증진 |
+
+**USPSTF 2018 (Grade B)**: 18세 이상 모든 성인 (임산부 포함) — unhealthy alcohol use 스크리닝 + brief intervention 권고.
 
 ### Step 4 — 효과 평가
 - 시작 4주, 12주 시점 재평가

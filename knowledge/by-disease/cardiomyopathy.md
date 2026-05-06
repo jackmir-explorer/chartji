@@ -51,7 +51,7 @@ keywords: 심근증, cardiomyopathy, 비대성심근증, HCM, 확장성심근증
 ### 원칙 (유형별)
 
 **공통:**
-- 심부전 동반 시 → **GDMT 4 pillars** 적용 (heart-failure.md 참조)
+- 심부전 동반 시 → **GDMT 4 pillars** 적용 ([[heart-failure]] 참조)
 - 부정맥 → 박동수/리듬 조절 (rate or rhythm control)
 - 혈전위험 → 항응고
 

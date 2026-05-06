@@ -21,16 +21,16 @@ AFP(American Family Physician) 2024 POEM(Patient-Oriented Evidence that Matters)
 
 ### 비만·체중 감량
 - **Phentermine-topiramate와 GLP-1 RA가 가장 효과적인 체중감량 약물**
-- 관련 knowledge: `by-disease/obesity.md`, `by-drug/glp1-selection-strategy.md`
+- 관련 knowledge: [[obesity]], [[glp1-selection-strategy]]
 
 ### 심혈관 2차 예방
 - **세마글루타이드(Semaglutide)는 비당뇨 [[obesity|비만]] 환자의 심혈관 2차 예방에 효과적**
 - 외래 적용: 기존 CV 병력 있는 비만 환자 GLP-1 선택 근거 (SELECT trial 맥락)
-- 관련 knowledge: `by-drug/wegovy.md`
+- 관련 knowledge: [[wegovy]]
 
 ### 당뇨 치료
 - **SGLT-2 억제제와 GLP-1 RA가 기존 약물보다 환자중심 아웃컴 우월**
-- 관련 knowledge: `by-drug/sglt2-inhibitors.md`, `by-drug/glp1-selection-strategy.md`
+- 관련 knowledge: [[sglt2-inhibitors]], [[glp1-selection-strategy]]
 
 ### 과민성대장증후군 (IBS)
 - **저용량 amitriptyline, IBS 2차 치료로 효과적**
@@ -51,8 +51,8 @@ AFP(American Family Physician) 2024 POEM(Patient-Oriented Evidence that Matters)
 ### 기타 (논문 언급)
 - 항생제·항바이러스제 사용
 - RSV 예방
-- [[smoking-cessation|금연]] (전자담배 포함 — `by-disease/smoking-cessation.md` 참조)
-- 알코올사용장애 (GLP-1 맥락 — `by-drug/glp1-selection-strategy.md` 참조)
+- [[smoking-cessation|금연]] (전자담배 포함)
+- 알코올사용장애 (GLP-1 맥락 — [[glp1-selection-strategy]] 참조)
 - Long COVID
 - 알츠하이머 치료
 

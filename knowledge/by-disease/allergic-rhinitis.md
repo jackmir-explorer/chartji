@@ -128,4 +128,4 @@ INAH+INCS 복합 > INCS 단독 > INAH 단독
 - 비용종(nasal polyp) 동반 → 이비인후과 의뢰
 - 동반 천식 (AR-asthma overlap) → 천식 병행 관리
 - 후각 저하 동반 → CRS·비용종 평가 위해 ENT
-- 난치성 후각 저하 (CRSwNP) → **Dupixent** 적응 가능 (`hyposmia.md` 참조)
+- 난치성 후각 저하 (CRSwNP) → **Dupixent** 적응 가능 ([[hyposmia]] 참조)

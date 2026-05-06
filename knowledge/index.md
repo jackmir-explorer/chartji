@@ -56,6 +56,25 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - ckd-monitoring.md — 중등도 CKD(G3) 모니터링: 크레아티닌+시스타틴C 이중 방정식 > 크레아티닌 단독 [CLINICAL] (BMJ 2026 PMID:41856526) — topic
 - sex-hormone-vte-risk.md — 성호르몬 요법 VTE·심혈관 위험: HRT/COC/GAHT 제형·혈전성향증·과거력 4축 평가, 경피 우선 [CLINICAL] (NEJM 2026 PMID:41985134) — topic
 - smoking-cessation.md — 금연: 전자담배 vs NRT 껌 AFP 2026 POEM, 장기 안전성 unknowns [CLINICAL — 조건부, 초록 기반] (PMID:41839085) — topic
+- dyslipidemia.md — 이상지질혈증 외래 본체: KSoLA 2022 위험도 LDL 목표 + ACC/AHA 2018 statin 강도 (Pitava 1mg=중등도) + 심평원 보험기준 + CAC≥100 강력권고 [CLINICAL, REGULATORY]
+- diabetes.md — T2DM 외래 본체: KDA 2023/ADA 2025 진단·HbA1c<6.5%, Metformin 단계+eGFR 45~30 감량(KDA-KSN), DPP-4 HF 주의, SGLT-2i 심·신 보호 eGFR≥20+ [CLINICAL]
+- hypertension.md — 일반 고혈압 외래 본체: KSH 2022 target BP·표적장기손상·약물 선택, BB는 DM에서 주의(정정), MacMahon 메타 강압효과 [CLINICAL]
+- osteoporosis.md — 골다공증 외래 본체: KSBMR 2024 T-score, BP 신기능 약제별 차이(Aln/Zol CrCl<35, Ris CrCl<30), 데노수맙 2024.5/12 고시 호전 시 추가 2년/4회, CTX/P1NP [CLINICAL, REGULATORY]
+- anemia.md — 빈혈 외래 본체: AAFP 2018/2021 단계적 검사, IDA ferritin <15 매우특이/<45 권고 cutoff, 경구철 4~8주·교정 후 3개월~6개월, 메트포르민·PPI 12mo+ B12 결핍 [CLINICAL]
+- headache.md — 두통 외래 본체: SNNOOP10 red flag, 편두통 트립탄 1차+ergotamine 회피(IHS 2024), 예방 propranolol·topiramate 1차/amitriptyline Level B, TTH 단독 진통제 [CLINICAL]
+- thyroid-disorder.md — 갑상선 외래 본체: ATA 2016 항진증 MMI 12~18mo·무과립구증 모니터링, ATA 2014 저하증 LT4 1.6μg/kg·TSH>10·식전 30~60분, target 0.4~4.6 [CLINICAL]
+- unintentional-weight-loss.md — 의도하지 않은 체중감소 외래 본체: AAFP 2021 5%/6~12mo, 외래 노인 암>비악성GI>우울(요양시설 한정 우울 1순위), 9 평가영역, tumor marker 1차 X, GDS·MMSE [CLINICAL]
+- hematuria.md — 혈뇨 외래 본체: AUA 2020 미세현미경 ≥3 RBC/HPF 1회 진단, risk-stratified (Low/Int/High) cystoscopy+CTU/sono, 사구체 vs 비사구체 분기 [CLINICAL]
+- proteinuria.md — 단백뇨 외래 본체: KDIGO 2024 A1/A2/A3 + 신증후군 ACR≥2200, A3 신장내과 의뢰, 일과성 배제 새벽뇨 재검, heatmap 연 1~4회 [CLINICAL]
+- fatigue.md — 일반 피로 외래 본체: AAFP 2023 검사로 진단 5%, Red flag·1차 표적 검사, NICE NG206 ME/CFS GET 금기·CBT 보조, NICE 3mo / IOM 6mo 기준 병기 [CLINICAL] (cancer-fatigue와 별도)
+- menopause.md — 폐경기 외래 본체: NAMS 2022 HT 60세-10년 timing/자궁 유무 ET·EPT, NAMS 2023 nonhormone fezolinetant Level I·paroxetine 7.5mg FDA 유일, clonidine·pregabalin 권고 안 함 [CLINICAL]
+- preconception-screening.md — 임신 전 항체검사: KSOG/CDC 기본 Rubella·HBsAg·VZV, USPSTF 매독·HIV·HBV·HCV, MMR/varicella 1~2mo 전, HBsAg(+) 12h HepB+HBIG [CLINICAL]
+- parotitis-differential.md — 귀밑 부종/염증 감별: 5감별(화농성·mumps·림프절·턱밑·치성), 1차 amoxi/clav, "cefazolin+metro" 표준 X 정정, 초음파 routine X [CLINICAL]
+- paresthesia.md — 일반 손발저림: AAFP 2020 대칭 vs 비대칭 분류(갑상선저하증 대칭 분류), SPEP/IFE 1차 패널, AAN 2022 painful DPN 4계열 동등, ASCO 2020 CIPN duloxetine 유일 적정 근거, INH B6 결핍 [CLINICAL]
+- thyroid-fna-cnb.md — **K-TIRADS 분류 5단계 보강** (K2 <2%, K3 2~10%·>1.5cm, K4 10~40%·≥1cm, K5 >60%·≥1cm) — 기존 항혈전제·CNB 합병증 + 분류표 [CLINICAL/TIPS]
+- anxiety-depression-cbt.md — **정신과 약물 plan 보강**: 1차 SSRI·동반증상별 선택·follow-up·불안 NICE CG113·불면 AASM 2017 (trazodone/멜라토닌 1차 X, 고령 BZD/Z-drug Beers 회피) — 기존 CBT 효과크기 + 약물 처방 [CLINICAL]
+- alcohol-use-disorder.md — **AUDIT/FRAMES/음주량 정의 보강**: AUDIT-K 두 버전(원판/KR), AUDIT-C 컷오프, 음주량 정의(폭음 여 4잔 정정), FRAMES 6요소, USPSTF 2018 — 기존 naltrexone·acamprosate + brief intervention [CLINICAL]
+- heart-failure.md — **ACC/AHA Stage A/B/C/D 분류 보강** (Stage B에 BNP/NT-proBNP 포함), BNP cutoff 외래 vs 응급실 분리, 유발 약물 — 기존 GDMT 4 pillars + Stage 매핑 [CLINICAL]
 
 ### by-drug/
 - vaccine-interval.md — 백신 접종 간격 원칙 (생+사/생+생/사+사) [CLINICAL] — topic
@@ -82,3 +101,8 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - heart-failure-referral.md — 심부전 상급병원 의뢰 기준: 의뢰 6시점 세밀화 + I NEED HELP 약어 + 전원 최적시기 4단계 곡선 [CLINICAL] — topic (parent: heart-failure)
 - afp-top20-poems-2024.md — AFP 2024 TOP 20 POEMs overview: 비만·CV 2차예방·당뇨·IBS·옴·rUTI·담석 외래 적용 요약 [CLINICAL] (AFP 2025 PMID:40736492) — topic (TRIAGE 미등록)
 - asthma-reflux-comorbidity.md — 천식+역류 동반이환: 조절불량 천식 + 위·식도/인후두 증상에서만 PPI·알긴산 empiric trial. 무증상 일률 처방 미권고. GINA 2025·AGA 2023(PMID:37061897)·San Diego 2025(PMID:40197644)·Chan WW 2011(PMID:21482834) 통합 [CLINICAL — 조건부] — topic [TIPS — by ENT교수]
+- bmd-coverage.md — BMD 골밀도검사 급여기준: 심평원 7대상·고위험 3요소·추적 일반/스테로이드/임신골절·4주 예외 [REGULATORY] — topic
+- breast-us-coverage.md — 유방·액와부 초음파 급여: 심평원 나942가·나940, 진단/경과관찰/수술 후 비교 1회·초과 80%, 단순초음파 초회부터 80%, 산정특례 우선 [REGULATORY] — topic
+- brain-metabolism-enhancers.md — 뇌대사 개선제 급여: 7약제 1종만, **콜린알포 2025.9.21 치매 외 80% 선별급여 전환**, 사미온 5/10mg 적응증, 소마지나 24h 6주, 케타스 어지러움, 니세틸 시장 퇴출 [REGULATORY] — topic
+- travel-vaccination.md — 해외여행 예방접종: CDC Yellow Book 2024 지역별 매트릭스, 황열 ICVP 2016 평생 유효, 일본뇌염 ≥1mo+위험요인, 말라리아 화학예방, 사우디 ACWY 의무 [CLINICAL] — topic
+- chest-xray-template.md — 기숙사 입소·검진 SOAP template (Z115), 변형 4종 (취업·학교·흉부 검진) [TIPS — by 미르] — topic
