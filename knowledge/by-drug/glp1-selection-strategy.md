@@ -9,11 +9,9 @@ freshness.primarySourceYear: (미정)
 applicability: (미정)
 relations: []
 
-## 관련 엔트리
-
-- [[obesity]] — 비만 진료 전반 (표현형·문진·단백질 ABC·요요 기전)
-- [[wegovy]] · [[mounjaro]] · [[ozempic]] — 각 제품별 적응·용량·급여
-- [[sglt2-inhibitors]] — 당뇨·심부전 동반 시 병용 고려
+> 관련 엔트리: [[obesity]] · [[wegovy]] · [[mounjaro]] · [[ozempic]] · [[sglt2-inhibitors]] · [[alcohol-use-disorder]] (GLP-1 RA의 AUD 입원 위험 감소)
+>
+> **약물 entry 이전됨**: SMI 적용(Srisurapanont 2026, PMID:41618880) → [[wegovy]] / Tirzepatide 중단 후 반동(Huang 2026, PMID:41962807) → [[mounjaro]] / AUD 입원 위험 감소(Lähteenvuo 2025, PMID:39535805) → [[alcohol-use-disorder]]
 
 ---
 
@@ -129,117 +127,10 @@ relations: []
 
 ---
 
-## GLP-1RA — 중증 정신질환(SMI) 환자 적용 [CLINICAL — 조건부]
+## GLP-1 당뇨전단계·T2DM 예방 [CLINICAL / INSIGHTS]
 
-> 출처: Srisurapanont M et al. Int J Psychiatry Med 2026;61(3):312-328. PMID:41618880 DOI:10.1177/00912174261422822
-> RCT 10건 메타분석 (N=665) — exenatide, liraglutide, semaglutide
-
-**적응 환자군:** 조현병·조현병 스펙트럼·양극성장애 + 과체중/비만 또는 전당뇨
-
-### 핵심 수치
-
-| 결과 | 효과 (vs 위약/일반치료) |
-|------|----------------------|
-| 체중 감소 | **–6.17 kg** (95% CI: –9.10 ~ –3.25) |
-| HbA1c 감소 | **–0.31%** (95% CI: –0.40 ~ –0.22) |
-| 탈락률 (전체) | 위약과 차이 없음 (RR=0.98) |
-| 부작용 탈락률 | 위약과 차이 없음 (RR=0.99) |
-
-**근거 수준:** 효과 — 낮은 확실성 / 수용성 — 중간 확실성
-
-### 1차의료 적용
-
-- 항정신병약 복용 중 체중 증가 환자 → GLP-1RA 처방 근거
-- 위고비·마운자로 처방 시 정신과 약과의 병용 내약성 근거
-- 정신건강의학과 협진 후 GLP-1RA 추가 고려 시 데이터 제공
-
----
-
-## Tirzepatide 중단 후 체중 반동 — 대체 비만약 전환 전략 [CLINICAL — 조건부]
-
-> 출처: Huang L et al. J Am Pharm Assoc 2026;8:103112. PMID:41962807, DOI:10.1016/j.japh.2026.103112
-> 후향 코호트 n=83, 미국 UNC Health (임상약사 지원 외래).
-
-### 핵심 수치
-
-| 지표 | 값 |
-|---|---|
-| Tirzepatide 중단 전 평균 사용기간 | 11개월 |
-| 중단 전 평균 체중 감소 | **-6.7%** |
-| 중단 후 12개월 체중 변화 | **+1.9% (P=0.11, 비유의)** |
-| 대체 비만약으로 전환한 환자 비율 | **81.9% (n=68)** |
-| 중단 주된 이유 (약값·접근성 문제) | **80.7%** |
-
-### 임상 적용 (외래 상담 메시지)
-
-- **비용 부담으로 tirzepatide 중단 상담 시:** "다른 비만약으로 전환하면 평균 체중 반동이 통계적으로 유의하지 않습니다 (12개월 +1.9%)" — 근거 제시 가능
-- **단순 중단 ≠ 전환 전략.** 약사·의사가 다음 약물로의 transition을 적극 지원한 연구 → "전환" 자체가 키 중재
-- 전환 대상 약물: OMs (anti-obesity medications) 전반 — 다른 GLP-1/GLP-1-GIP, phentermine-topiramate, naltrexone-bupropion 등
-- **한계:** 후향·단일 기관. "중단 후 방치"한 군과 직접 비교 없음. 평균치이며 개인차 큼.
-
----
-
-## GLP-1 RA 종합 리뷰 — NEJM 2026 [CLINICAL]
-
-> 출처: Rosen CJ, Ingelfinger JR. GLP-1 Receptor Agonists. N Engl J Med 2026;394(13):1313-1324. PMID:41931049, DOI:10.1056/NEJMra2500106
-
-### 기전 (환자설명용 — notes)
-
-- **인크레틴 유사체:** 포도당 의존적 인슐린 분비 촉진
-- **위 배출 지연** (포만감 지속, 초기 GI 부작용 원인)
-- **글루카곤 분비 억제** (간 포도당 신생 감소)
-- **장내미생물 beneficial 변화**
-- **시상하부 직접 작용 → 포만감 증강** (음식 갈망 감소의 중추 기전)
-
-### 치료 효과 — 확립된 근거
-
-- 혈당·체중 개선 외
-- **심혈관 위험 감소 (고위험군·T2DM)** — 대규모 RCT 확인
-- **신기능 악화 지연 (신부전 진행 저하)**
-
-### 부작용·미해결 이슈
-
-- **위장관 증상** (대부분) — 메스꺼움·변비·소화불량
-- **근육·골량 손실** — 환자 교육 필수 (단백질 1.2g/kg + 근력운동 병행)
-- **장기 순응도** 미확인
-- **중단 후 체중 회복** — 개인차 큼
-- **근·골 손실의 기능적 영향** 장기 데이터 부족
-
-### 1차의료 적용
-
-- GLP-1 처방 환자 **상담 스크립트 근거 자료** — 기전·부작용·장기 이슈 설명
-- [[obesity]] GLP-1 중간 점검 문진(단백질 1.2g/kg, 운동 체크)이 이 리뷰의 근·골 손실 경고와 정합
-- 특히 **고령·저근육량 환자**에서 aggressive 감량 시 근·골 손실 위험 고지 필수
-
----
-
-## GLP-1 RA와 알코올사용장애(AUD) — 입원 위험 감소 [CLINICAL — 조건부]
-
-> 출처: Lähteenvuo M et al. Repurposing Semaglutide and Liraglutide for Alcohol Use Disorder. JAMA Psychiatry 2025;82(1):94-98. PMID:39535805, DOI:10.1001/jamapsychiatry.2024.3599
-> 스웨덴 전국 등록자료 within-individual Cox regression, 2006-2023.
-
-### 핵심 수치
-
-- **대상:** AUD 진단자 227,866명 (남성 63.5%, 평균 40세, 중앙값 추적 8.8년)
-- **Semaglutide** (n=4,321): AUD 입원 위험 **aHR 0.64** (95% CI 0.50-0.83) — **36% 감소**
-- **Liraglutide** (n=2,509): AUD 입원 위험 **aHR 0.72** (95% CI 0.57-0.92) — **28% 감소**
-- **기존 AUD 치료제** (naltrexone/acamprosate/disulfiram) — aHR 0.98 (거의 차이 없음)
-- **추가 효과:** 타 물질사용장애 입원↓, 신체질환 입원↓
-- **무효:** 자살시도 감소 유의 효과 없음
-
-### 1차의료 적용
-
-- **GLP-1 처방 환자 중 음주 문제 동반 사례에서 추가 이득 기대 가능**
-- 위고비/오젬픽 초진 시 **음주력 문진 강화** 근거 (AUD 동반 선별)
-- 비만·T2DM + AUD 환자에서 기존 AUD 치료제보다 GLP-1 우선 고려 근거 형성
-- **한계:** 관찰연구 — RCT 필요. AUD 단독 적응증 아님 (비만·T2DM 병존 상태에서만 검증)
-
----
-
-## GLP-1 당뇨전단계 T2DM 예방 — RCT 근거 [CLINICAL]
-
-> 출처: Tentolouris A et al. Prim Care Diabetes 2026;20(2):178-184. PMID:41565568. DOI:10.1016/j.pcd.2026.01.003
-> Narrative synthesis — STEP 1·5, SELECT, SURMOUNT-1 RCT 데이터 포함
+> 출처: Tentolouris A et al. Prim Care Diabetes 2026;20(2):178-184. PMID:41565568. DOI:10.1016/j.pcd.2026.01.003 (RCT narrative synthesis)
+> 출처: Panou T et al. Diabetes Ther 2026. PMID:41984373 DOI:10.1007/s13300-026-01865-5 (review)
 
 **적응 환자군:** 비만(과체중 포함) + 당뇨전단계(공복혈당장애 또는 내당능장애)
 
@@ -247,11 +138,16 @@ relations: []
 
 | 약물 | 효과 | 근거 시험 |
 |------|------|---------|
-| **Semaglutide 2.4mg** | 정상혈당 회복률 최대 **84%** | STEP 1·5 |
-| **Tirzepatide** | T2DM 발생 **90% 감소** (HR **0.07**, p<0.001) — 체중감량이 주 매개 | SURMOUNT-1 |
+| **Semaglutide 2.4mg** | 정상혈당 회복률 최대 **84%** (Panou 리뷰: 최대 **81%**) | STEP 1·5 |
+| **Tirzepatide** | T2DM 발생 **90% 감소** (HR **0.07**, p<0.001) — 체중감량이 주 매개. 정상혈당 회복 최대 **93.3%** | SURMOUNT-1 |
 | **Semaglutide** | 심혈관 이벤트(CV death·nonfatal MI·stroke) HR **0.80** (95%CI 0.72–0.90) | SELECT |
+| **Liraglutide** | 정상혈당 회복 최대 **66%** | Panou 리뷰 |
 
 **SELECT 추가 분석:** 참가자 66.4%가 당뇨전단계 → CV 위험 감소 효과가 HbA1c와 무관하게 확인 (전당뇨에서도 심혈관 보호).
+
+**추가 효과 (Panou):** T2DM 진행 지연 / 체중↓ / 지방량↓ / 인슐린 감수성↑ / ASCVD·심부전 위험↓(특히 tirzepatide) / MASLD 개선 가능성
+
+**주의:** 약물 중단 후 효과 부분적 소실 → 장기 유지 필요성 환자 교육 필수
 
 ### 1차의료 적용
 
@@ -262,75 +158,43 @@ relations: []
 
 ---
 
-## GLP-1RA — 전당뇨 치료 [INSIGHTS]
+## GLP-1 RA 종합 리뷰 — NEJM 2026 [CLINICAL]
 
-> 출처: Panou T et al. Diabetes Ther 2026. PMID:41984373 DOI:10.1007/s13300-026-01865-5
-> 리뷰 논문 — 향후 대규모 RCT 필요
+> 출처: Rosen CJ, Ingelfinger JR. GLP-1 Receptor Agonists. N Engl J Med 2026;394(13):1313-1324. PMID:41931049, DOI:10.1056/NEJMra2500106
 
-**적응 환자군:** 전당뇨(공복혈당장애 또는 내당능장애) + 과체중/비만
+**기전 (환자설명용):** 인크레틴 유사체로 포도당 의존적 인슐린 분비 촉진 / 위 배출 지연(포만감 지속, 초기 GI 부작용 원인) / 글루카곤 분비 억제(간 포도당 신생↓) / 장내미생물 beneficial 변화 / 시상하부 직접 작용 → 포만감 증강(음식 갈망 감소).
 
-### 정상혈당 회복률 비교
+**확립된 효과:** 혈당·체중 외 **심혈관 위험 감소(고위험군·T2DM)** + **신기능 악화 지연**.
 
-| 약물 | 정상혈당 회복 |
-|------|-------------|
-| Tirzepatide | 최대 **93.3%** |
-| Semaglutide | 최대 **81%** |
-| Liraglutide | 최대 **66%** |
+**부작용·미해결 이슈:** 위장관 증상(메스꺼움·변비·소화불량) / **근육·골량 손실** (단백질 1.2g/kg + 근력운동 환자교육 필수) / 장기 순응도 미확인 / 중단 후 체중 회복 개인차 / 근·골 손실 기능적 영향 장기 데이터 부족.
 
-**추가 효과:** T2DM 진행 지연 / 체중↓ / 지방량↓ / 인슐린 감수성↑ / ASCVD·심부전 위험↓(특히 tirzepatide) / MASLD 개선 가능성
-
-**주의:** 약물 중단 후 효과 부분적 소실 → 장기 유지 필요성 환자 교육 필수
-
-### 1차의료 적용
-
-- 전당뇨+비만 환자 GLP-1RA 처방 시: "살 빼면서 혈당도 잡는다" — 수치 근거 제공
-- 약물 중단 후 효과 감소 → 장기 유지 필요성 상담에 활용
+**1차의료 적용:** 상담 스크립트 근거 자료. [[obesity]] GLP-1 중간 점검 문진(단백질 1.2g/kg, 운동)이 이 리뷰의 근·골 손실 경고와 정합. 고령·저근육량 환자에서 aggressive 감량 시 근·골 손실 위험 고지 필수.
 
 ---
 
-## GLP-1RA 부작용 신호 — NAION (비동맥성 앞시신경병증) [CLINICAL — 조건부]
+## GLP-1RA 안전성 — NAION·비뇨생식기 감염·암 [CLINICAL]
 
-> [출처: Escudero C et al. Endocrinology: What You May Have Missed in 2025. Ann Intern Med. 2026. PMID:41974004, DOI:10.7326/ANNALS-26-00925]
-> [초록 기반 — 전문 미확인]
+### NAION (비동맥성 앞시신경병증) [CLINICAL — 조건부]
 
-**신호:** GLP-1RA 처방 중 **비동맥성 앞시신경병증(NAION, Nonarteritic Anterior Ischemic Optic Neuropathy)** 발생 위험 신호가 2025년 보고됨.
+> [출처: Escudero C et al. Endocrinology: What You May Have Missed in 2025. Ann Intern Med. 2026. PMID:41974004, DOI:10.7326/ANNALS-26-00925] [초록 기반]
 
-**임상 포인트:**
-- GLP-1RA 처방 환자에서 **시야 변화·시력 저하 증상 발생 시 즉시 안과 의뢰**
-- 처방 시작 전 시야 이상 여부 확인 및 교육 포함 권장
-- 위험도 크기·절대 위험 수치는 아직 확립 중 — 인과관계 확정 전이나 임상 모니터링 포함
+GLP-1RA 처방 중 NAION 발생 위험 신호 2025년 보고. 시야 변화·시력 저하 시 **즉시 안과 의뢰**. 처방 시작 전 시야 이상 여부 확인·교육. 위험도 크기는 확립 중, 인과관계 확정 전이나 임상 모니터링 포함.
 
-**초진 교육 추가 항목:**
-"드물지만 눈 관련 증상(갑작스러운 시야 이상, 한쪽 눈이 흐릿해짐)이 생기면 즉시 알려주세요."
+초진 교육 추가: "드물지만 눈 관련 증상(갑작스러운 시야 이상, 한쪽 눈이 흐릿해짐)이 생기면 즉시 알려주세요."
 
-> 이 신호는 Ann Intern Med 2025 내분비 연례 업데이트에서 주요 안전성 항목으로 포함됨.
+### GLP-1RA vs SGLT-2i — 비뇨생식기 감염 [CLINICAL]
 
----
+> [출처: Escudero C et al. Ann Intern Med. 2026. PMID:41974004]
 
-## GLP-1RA vs SGLT-2i — 비뇨생식기 감염 위험 비교 [CLINICAL]
+T2DM 환자에서 GLP-1RA는 SGLT-2i 대비 UTI·생식기 진균감염 위험이 낮음. 반복성 UTI·진균감염 기왕력 → SGLT-2i보다 GLP-1RA 우선 고려. SGLT-2i 전환 검토 시 위험 증가 상담. SGLT-2i 비뇨생식기 감염 상세 → [[sglt2-inhibitors]].
 
-> [출처: Escudero C et al. Endocrinology: What You May Have Missed in 2025. Ann Intern Med. 2026. PMID:41974004, DOI:10.7326/ANNALS-26-00925]
-> [초록 기반 — 전문 미확인]
+### GLP-1RA 암 위험 — 메타분석 [CLINICAL]
 
-**핵심:** T2DM 환자에서 GLP-1RA는 SGLT-2 억제제 대비 비뇨생식기 감염(UTI·생식기 진균감염) 위험이 낮음.
+> [출처: Ko A et al. Ann Intern Med. 2025 Dec 9;179(2):216-229. PMID:41359966, DOI:10.7326/ANNALS-25-02237] (48 RCT, N=94,245)
 
-**처방 결정 적용:**
-- 반복성 UTI·생식기 진균감염 기왕력 환자 → SGLT-2i보다 GLP-1RA 선택 우선 고려
-- SGLT-2i 전환 검토 시 비뇨생식기 감염 위험 증가 가능성 상담
+**결론: 주요 암 종류별 위험도 증가 없음 (중등도 근거).**
 
-> SGLT-2i 비뇨생식기 감염 상세 → [[sglt2-inhibitors]] 참조
-
-
----
-
-## GLP-1RA 암 위험 — 메타분석 안전성 데이터 [CLINICAL]
-
-> [출처: Ko A et al. Risk for Cancer With Glucagon-Like Peptide-1 Receptor Agonists and Dual Agonists: A Systematic Review and Meta-analysis. Ann Intern Med. 2025 Dec 9;179(2):216-229. PMID:41359966, DOI:10.7326/ANNALS-25-02237]
-> 체계적 고찰 + 메타분석, 48 RCT, N=94,245명 (위약 대조 무작위 시험)
-
-**결론: GLP-1RA는 주요 암 종류별 위험도 증가 없음 (중등도 근거)**
-
-| 암 종류 | OR (95% CI) | 근거 수준 |
+| 암 | OR (95% CI) | 근거 |
 |---|---|---|
 | 갑상선암 | 1.37 (0.82–2.31) | 중등도 |
 | 췌장암 | 0.84 (0.53–1.35) | 중등도 |
@@ -339,11 +203,5 @@ relations: []
 | 대장·식도·간·담낭·난소·자궁내막암, 다발골수종, 수막종 | 효과 없음 | 낮음 |
 | 위암 | 불확실 | 매우 낮음 |
 
-**서브그룹:** 세마글루타이드·티르제파타이드 단독 분석에서도 일관된 결과. 추적 기간·대상 집단·용량·지속시간 하위분석에서 일관적.
+서브그룹: semaglutide·tirzepatide 단독 분석에서도 일관. 환자 상담 답변: **"48개 대규모 임상시험 94,245명 분석에서 주요 암 위험 증가 없습니다"**. **MTC(갑상선 수질암) 주의** — 이 메타분석 미포함; 동물 연구 기반 경고 유지(FDA 블랙박스). **한계**: 추적 기간 단기, 암 평가 설계 아님 — 장기 추가 연구 필요.
 
-**임상 적용:**
-- "GLP-1 맞으면 암 위험 높아지지 않나요?" → **"48개 대규모 임상시험 94,245명 분석에서 주요 암 위험 증가 없습니다"**로 명확 답변 가능
-- 처방 동의 시 안전성 상담 근거로 사용
-- 갑상선 수질암(MTC) 주의 — 이 메타분석 포함 데이터 아님; 기존 동물 연구 기반 경고 유지 (FDA 블랙박스)
-
-**한계:** 포함 RCT가 암 결과 평가 설계가 아니었고 추적 기간 단기 — 장기 위험·편익 추가 연구 필요

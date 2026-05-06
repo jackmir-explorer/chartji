@@ -278,6 +278,31 @@ Bernstein 2024: 알코올 관련 입원 6,794명 중 **2.0%만 퇴원 시 MAUD �
 
 ---
 
+## GLP-1 RA의 AUD 입원 위험 감소 효과 [CLINICAL — 조건부]
+
+> 출처: Lähteenvuo M et al. Repurposing Semaglutide and Liraglutide for Alcohol Use Disorder. JAMA Psychiatry 2025;82(1):94-98. PMID:39535805, DOI:10.1001/jamapsychiatry.2024.3599
+> 스웨덴 전국 등록자료 within-individual Cox regression, 2006-2023.
+
+### 핵심 수치
+
+- **대상:** AUD 진단자 227,866명 (남성 63.5%, 평균 40세, 중앙값 추적 8.8년)
+- **Semaglutide** (n=4,321): AUD 입원 위험 **aHR 0.64** (95% CI 0.50-0.83) — **36% 감소**
+- **Liraglutide** (n=2,509): AUD 입원 위험 **aHR 0.72** (95% CI 0.57-0.92) — **28% 감소**
+- **기존 AUD 치료제** (naltrexone/acamprosate/disulfiram) — aHR 0.98 (거의 차이 없음)
+- **추가 효과:** 타 물질사용장애 입원↓, 신체질환 입원↓
+- **무효:** 자살시도 감소 유의 효과 없음
+
+### 1차의료 적용
+
+- **GLP-1 처방 환자 중 음주 문제 동반 사례에서 추가 이득 기대 가능**
+- [[wegovy|위고비]]/[[ozempic|오젬픽]] 초진 시 **음주력 문진 강화** 근거 (AUD 동반 선별)
+- 비만·T2DM + AUD 환자에서 기존 AUD 치료제보다 GLP-1 우선 고려 근거 형성
+- **한계:** 관찰연구 — RCT 필요. AUD 단독 적응증 아님 (비만·T2DM 병존 상태에서만 검증)
+
+> GLP-1 선택 전략 메타 → [[glp1-selection-strategy]]
+
+---
+
 ## Draft 출력사항 (draft-append)
 
 AUD 의심·진단 환자: ① AUDIT-K 기록 ② DSM-5 중증도 ③ LFT·CrCl 확인 ④ 아편계 사용 여부 (날트렉손 선택 전 필수) ⑤ 1st line 약물(날트렉손 50mg qd or 아캄프로세이트 666mg TID) 제안 + 심리사회 중재 병행 ⑥ 3개월 재평가 예약.
