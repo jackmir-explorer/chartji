@@ -17,16 +17,60 @@ function extractWikilinks(text){
   return out;
 }
 
+/* canonical 키 우선순위 — 같은 entry가 alias 키들로 다중 등록될 때 대표 1개 선택.
+   1. e.keywords[0] === key (작성자 의도 1순위 키)
+   2. ASCII slug (한글 미포함) — knowledge/by-disease/{slug}.md 파일명 컨벤션 일치
+   3. 첫 등장 (Object.keys 순서) */
+function pickCanonical(candidates,bundle){
+  for(var i=0;i<candidates.length;i++){
+    var k=candidates[i]; var e=bundle[k];
+    if(e&&e.keywords&&e.keywords[0]===k) return k;
+  }
+  for(var j=0;j<candidates.length;j++){
+    if(/^[\x00-\x7f]+$/.test(candidates[j])) return candidates[j];
+  }
+  return candidates[0];
+}
+
+/* entry signature — keywords (sorted) + sections 키 (sorted) + v1 첫 50자.
+   같은 signature = alias 관계로 간주, dedup 대상. */
+function entrySignature(e){
+  var kw=(e.keywords||[]).slice().sort().join("|");
+  var sk=Object.keys(e.sections||{}).sort().join(",");
+  var v1=[e.exam,e.treatment,e.differential,e.draftAppend].filter(Boolean).join("::").slice(0,50);
+  return kw+"::"+sk+"::"+v1;
+}
+
 /* 인덱스 빌드 — 런타임 1회. 반환: {entries, aliasToTarget, backlinks}
-   myth 엔트리 제외 (forbidden.md Liby §). */
+   myth 엔트리 제외 (forbidden.md Liby §).
+   alias 키 dedup: reference + signature 2단계 (478 → 약 146 canonical). */
 function buildSearchIndex(bundle){
   var entries=[]; var aliasToTarget={}; var backlinks={};
   if(!bundle) return {entries:entries,aliasToTarget:aliasToTarget,backlinks:backlinks};
+
+  /* 1. 그룹핑 — signature별로 candidate 키 모음 */
+  var groups={};
   Object.keys(bundle).forEach(function(key){
     var e=bundle[key]; if(!e) return;
     if(e.kind==="myth") return;
-    var titleTokens=[key];
-    if(e.keywords&&e.keywords.length) titleTokens=titleTokens.concat(e.keywords);
+    var sig=entrySignature(e);
+    if(!groups[sig]) groups[sig]={candidates:[],entry:e};
+    groups[sig].candidates.push(key);
+  });
+
+  /* 2. canonical 결정 + entry 1개만 push, alias 키들은 별도 보존 */
+  Object.keys(groups).forEach(function(sig){
+    var g=groups[sig];
+    var canonical=pickCanonical(g.candidates,bundle);
+    var e=g.entry;
+    var aliasKeys=g.candidates.filter(function(k){return k!==canonical;});
+
+    var titleTokens=[canonical].concat(aliasKeys);
+    if(e.keywords&&e.keywords.length){
+      e.keywords.forEach(function(kw){
+        if(titleTokens.indexOf(kw)===-1) titleTokens.push(kw);
+      });
+    }
     var sectionBlocks=[];
     if(e.sections){
       Object.keys(e.sections).forEach(function(sk){
@@ -42,11 +86,12 @@ function buildSearchIndex(bundle){
       extractWikilinks(b.content).forEach(function(L){
         if(L.alias) aliasToTarget[L.alias.toLowerCase()]=L.target;
         if(!backlinks[L.target]) backlinks[L.target]=[];
-        if(backlinks[L.target].indexOf(key)===-1) backlinks[L.target].push(key);
+        if(backlinks[L.target].indexOf(canonical)===-1) backlinks[L.target].push(canonical);
       });
     });
     entries.push({
-      key:key, kind:e.kind||"unknown",
+      key:canonical, kind:e.kind||"unknown",
+      aliasKeys:aliasKeys,
       titleTokens:titleTokens,
       sectionBlocks:sectionBlocks,
       primarySources:e.primarySources||[]
@@ -230,6 +275,10 @@ function SearchScreen(){
                   </span>
                   <span style={{fontSize:14,color:"#e2e4ec",fontWeight:600}}
                     dangerouslySetInnerHTML={{__html:highlightSearch(r.entry.key,tokens)}}/>
+                  {r.entry.aliasKeys&&r.entry.aliasKeys.length>0&&(
+                    <span style={{fontSize:11,color:"#4a5268",fontStyle:"italic"}}
+                      dangerouslySetInnerHTML={{__html:"("+highlightSearch(r.entry.aliasKeys.join(" · "),tokens)+")"}}/>
+                  )}
                   <span style={{marginLeft:"auto",fontSize:9,color:"#2e374f",
                     fontFamily:"'JetBrains Mono',monospace"}}>score {r.score}</span>
                 </div>
