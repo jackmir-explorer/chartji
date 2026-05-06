@@ -79,19 +79,19 @@ var KNOWLEDGE_BUNDLE = {
     ],
     "sections": {
       "exam": {
-        "content": "### 예방접종 전 일반 확인\n- 발열(38도↑ → 연기 고려)\n- 이전 접종 이상반응(아나필락시스 이력)\n- 임신 여부 (생백신 금기: MMR·수두·BCG·황열)\n- 면역저하 여부 (생백신 주의 — 전문의 상담)",
+        "content": "### [[예방접종|예방접종]] 전 일반 확인\n- 발열(38도↑ → 연기 고려)\n- 이전 접종 이상반응(아나필락시스 이력)\n- 임신 여부 (생백신 금기: MMR·수두·BCG·황열)\n- 면역저하 여부 (생백신 주의 — 전문의 상담)",
         "sources": []
       },
       "schedule": {
-        "content": "세부 스케줄은 개별 엔트리 참조:\n- Tdap / 대상포진 / 폐렴구균 / HPV / A·B형간염 / 일본뇌염 / 광견병 / 수두 / MMR / 폴리오\n- 접종 간격 원칙 → `vaccine-interval` 엔트리\n- 성인 전체 권장 요약 → `vaccination-summary` 엔트리",
+        "content": "세부 스케줄은 개별 엔트리 참조:\n- [[Tdap|Tdap]] / [[대상포진|대상포진]] / [[폐렴구균|폐렴구균]] / HPV / A·[[B형간염|B형간염]] / [[일본뇌염|일본뇌염]] / 광견병 / 수두 / MMR / 폴리오\n- [[vaccine-interval|접종 간격]] 원칙 → `vaccine-interval` 엔트리\n- 성인 전체 권장 요약 → `[[vaccination-summary|vaccination-summary]]` 엔트리",
         "sources": []
       },
       "draft-template": {
-        "content": "CC: 예방접종\nfever (-) uri sx (-) drug adverse effect (-) allergy (-)\n\n기존 접종력:\n기저 질환:\n\nVital Sign:\n\n접종: [백신명] [n차]\n추후 접종 계획: [백신명] [n개월 뒤] [n차]",
+        "content": "CC: [[예방접종|예방접종]]\nfever (-) uri sx (-) drug adverse effect (-) allergy (-)\n\n기존 접종력:\n기저 질환:\n\nVital Sign:\n\n접종: [백신명] [n차]\n추후 접종 계획: [백신명] [n개월 뒤] [n차]",
         "sources": []
       },
       "draft-append": {
-        "content": "예방접종 후 원내 30분 안정 취한 후 귀가 권고함.",
+        "content": "[[예방접종|예방접종]] 후 원내 30분 안정 취한 후 귀가 권고함.",
         "sources": []
       }
     },
@@ -110,7 +110,7 @@ var KNOWLEDGE_BUNDLE = {
         "sources": []
       },
       "schedule": {
-        "content": "세부 스케줄은 개별 엔트리 참조:\n- Tdap / 대상포진 / 폐렴구균 / HPV / A·B형간염 / 일본뇌염 / 광견병 / 수두 / MMR / 폴리오\n- 접종 간격 원칙 → `vaccine-interval` 엔트리\n- 성인 전체 권장 요약 → `vaccination-summary` 엔트리",
+        "content": "세부 스케줄은 개별 엔트리 참조:\n- [[Tdap|Tdap]] / [[대상포진|대상포진]] / [[폐렴구균|폐렴구균]] / HPV / A·[[B형간염|B형간염]] / [[일본뇌염|일본뇌염]] / 광견병 / 수두 / MMR / 폴리오\n- [[vaccine-interval|접종 간격]] 원칙 → `vaccine-interval` 엔트리\n- 성인 전체 권장 요약 → `[[vaccination-summary|vaccination-summary]]` 엔트리",
         "sources": []
       },
       "draft-template": {
@@ -133,19 +133,19 @@ var KNOWLEDGE_BUNDLE = {
     ],
     "sections": {
       "exam": {
-        "content": "### 예방접종 전 일반 확인\n- 발열(38도↑ → 연기 고려)\n- 이전 접종 이상반응(아나필락시스 이력)\n- 임신 여부 (생백신 금기: MMR·수두·BCG·황열)\n- 면역저하 여부 (생백신 주의 — 전문의 상담)",
+        "content": "### [[예방접종|예방접종]] 전 일반 확인\n- 발열(38도↑ → 연기 고려)\n- 이전 접종 이상반응(아나필락시스 이력)\n- 임신 여부 (생백신 금기: MMR·수두·BCG·황열)\n- 면역저하 여부 (생백신 주의 — 전문의 상담)",
         "sources": []
       },
       "schedule": {
-        "content": "세부 스케줄은 개별 엔트리 참조:\n- Tdap / 대상포진 / 폐렴구균 / HPV / A·B형간염 / 일본뇌염 / 광견병 / 수두 / MMR / 폴리오\n- 접종 간격 원칙 → `vaccine-interval` 엔트리\n- 성인 전체 권장 요약 → `vaccination-summary` 엔트리",
+        "content": "세부 스케줄은 개별 엔트리 참조:\n- [[Tdap|Tdap]] / [[대상포진|대상포진]] / [[폐렴구균|폐렴구균]] / HPV / A·[[B형간염|B형간염]] / [[일본뇌염|일본뇌염]] / 광견병 / 수두 / MMR / 폴리오\n- [[vaccine-interval|접종 간격]] 원칙 → `vaccine-interval` 엔트리\n- 성인 전체 권장 요약 → `[[vaccination-summary|vaccination-summary]]` 엔트리",
         "sources": []
       },
       "draft-template": {
-        "content": "CC: 예방접종\nfever (-) uri sx (-) drug adverse effect (-) allergy (-)\n\n기존 접종력:\n기저 질환:\n\nVital Sign:\n\n접종: [백신명] [n차]\n추후 접종 계획: [백신명] [n개월 뒤] [n차]",
+        "content": "CC: [[예방접종|예방접종]]\nfever (-) uri sx (-) drug adverse effect (-) allergy (-)\n\n기존 접종력:\n기저 질환:\n\nVital Sign:\n\n접종: [백신명] [n차]\n추후 접종 계획: [백신명] [n개월 뒤] [n차]",
         "sources": []
       },
       "draft-append": {
-        "content": "예방접종 후 원내 30분 안정 취한 후 귀가 권고함.",
+        "content": "[[예방접종|예방접종]] 후 원내 30분 안정 취한 후 귀가 권고함.",
         "sources": []
       }
     },
@@ -177,11 +177,11 @@ var KNOWLEDGE_BUNDLE = {
     ],
     "sections": {
       "overview": {
-        "content": "### 일반 성인 기본 권장\n| 백신 | 주기 / 대상 |\n|---|---|\n| 파상풍(Td/Tdap) | 10년마다 |\n| 인플루엔자 | 매년 (특히 ≥65세·만성질환자·의료종사자) |\n| MMR | 1968년 이후 출생, 항체 불확실 시 (KDCA 기준) |",
+        "content": "### 일반 성인 기본 권장\n| 백신 | 주기 / 대상 |\n|---|---|\n| 파상풍(Td/[[Tdap|Tdap]]) | 10년마다 |\n| 인플루엔자 | 매년 (특히 ≥65세·만성질환자·의료종사자) |\n| MMR | 1968년 이후 출생, 항체 불확실 시 (KDCA 기준) |",
         "sources": []
       },
       "high-risk": {
-        "content": "### 고위험군별 추가 권장\n| 백신 | 대상 |\n|---|---|\n| 폐렴구균 | ≥65세 PPSV23 (KDCA) / ≥50세 PCV15/20/21 (ACIP) / 만성질환·면역저하자 PCV13 |\n| B형간염 | ACIP 19-59세 universal / KDCA 의료인·고위험군 |\n| A형간염 | 40세 미만 항체 없이, 40세 이상 항체검사 후, 의료인·해외여행자 |\n| 대상포진 | ≥50세 RZV (ACIP) / ≥60세 RZV (KDCA) |\n| HPV | 9-26세 routine (성별 무관), 27-45세 SCDM |\n| 수두·수막구균 | 집단생활·군인·해외유학 |\n| 광견병·일본뇌염·황열 | 해외여행·봉사 (지역별 맞춤) |",
+        "content": "### 고위험군별 추가 권장\n| 백신 | 대상 |\n|---|---|\n| [[폐렴구균|폐렴구균]] | ≥65세 PPSV23 (KDCA) / ≥50세 PCV15/20/21 (ACIP) / 만성질환·면역저하자 PCV13 |\n| [[B형간염|B형간염]] | ACIP 19-59세 universal / KDCA 의료인·고위험군 |\n| [[A형간염|A형간염]] | 40세 미만 항체 없이, 40세 이상 항체검사 후, 의료인·해외여행자 |\n| [[대상포진|대상포진]] | ≥50세 RZV (ACIP) / ≥60세 RZV (KDCA) |\n| HPV | 9-26세 routine (성별 무관), 27-45세 SCDM |\n| 수두·수막구균 | 집단생활·군인·해외유학 |\n| 광견병·[[일본뇌염|일본뇌염]]·황열 | 해외여행·봉사 (지역별 맞춤) |",
         "sources": []
       },
       "chemotherapy-influenza": {
@@ -189,7 +189,7 @@ var KNOWLEDGE_BUNDLE = {
         "sources": []
       },
       "heart-failure-link": {
-        "content": "### 심부전 환자 고위험 예방접종\n심부전 환자: 감염은 심혈관 합병증(급성 심근염·부정맥·혈전·사망) 위험 계기 → 독감·폐렴구균·대상포진·RSV·COVID·Tdap 권고. 세부 권고·기전은 `heart-failure.schedule` 참조.",
+        "content": "### 심부전 환자 고위험 [[예방접종|예방접종]]\n심부전 환자: 감염은 심혈관 합병증(급성 심근염·부정맥·혈전·사망) 위험 계기 → 독감·[[폐렴구균|폐렴구균]]·[[대상포진|대상포진]]·RSV·COVID·[[Tdap|Tdap]] 권고. 세부 권고·기전은 `[[heart-failure|heart-failure]].schedule` 참조.",
         "sources": [
           "대한심부전학회 심부전 생활백서 2025",
           "Roubille F et al. Eur J Prev Cardiol 2025. doi:10.1093/eurjpc/zwaf366"
@@ -367,14 +367,14 @@ var KNOWLEDGE_BUNDLE = {
         "sources": []
       },
       "exam": {
-        "content": "### 환자 기대 청취 (첫 문진)\n- 목표 체중 몇 kg인가\n- 목표 기간 언제까지인가\n→ 환자와 함께 계획 세워야 순응도 ↑\n\n### GLP-1 초진 Flow (8단계)\n1. 비만/대사 설문지 작성\n2. 인바디 검사\n3. BP, pulse, 심전도(prn)\n4. 인바디 + 설문지 바탕 상담\n5. 필요 시 Lab: HbA1c·Lipid·LFT·Cr·HOMA-IR(prn)·TSH(prn)\n6. 위고비/오젬픽 vs 마운자로 결정\n7. 사용법 교육 + 1회 주사\n8. 주의사항·다음 내원일·전화 문의 안내\n\n### 설문지 활용 포인트\n- \"몸무게에 대한 스트레스를 받고 있다\" 문항 체크 여부 중요\n- BMI 정상 범위에서도 GLP-1 처방 사유가 됨 (법적 보호: 스트레스 문항 체크 기록이 처방 근거)\n\n### GLP-1 Follow-up 4파트 체크\nA. 보상회로/갈망 — Food Noise(1-10), 단맛/짠맛 선호 변화, 술·간식 갈망(1-10)\nB. 대사/활력 — Brain Fog(1-10), 기력 저하, 단백질 섭취 (체중×1.2g/kg 충족)\nC. 위장관 적응 — 포만감 시점, 메스꺼움·변비·소화불량\nD. 운동 — 종류·빈도(주 N회)·시간(N분)\n\n### 단백질 섭취 교육 — ABC 식사 순서\n- A (Amino acid) 고기·생선·두부·달걀·유제품 먼저 (전체의 1/3)\n- B (Blocking) 채소로 당 흡수 차단\n- C (Carbohydrate) 탄수화물 가장 마지막 소량\n\n체중 1kg당 1.2~1.5g 단백질, 매끼 나눠 섭취. 단백질이 GLP-1 분비 촉진·혈당 스파이크 억제·식이 열발생(TEF) 최대화.",
+        "content": "### 환자 기대 청취 (첫 문진)\n- 목표 체중 몇 kg인가\n- 목표 기간 언제까지인가\n→ 환자와 함께 계획 세워야 순응도 ↑\n\n### GLP-1 초진 Flow (8단계)\n1. 비만/대사 설문지 작성\n2. 인바디 검사\n3. BP, pulse, 심전도(prn)\n4. 인바디 + 설문지 바탕 상담\n5. 필요 시 Lab: HbA1c·Lipid·LFT·Cr·HOMA-IR(prn)·TSH(prn)\n6. 위고비/오젬픽 vs [[마운자로|마운자로]] 결정\n7. 사용법 교육 + 1회 주사\n8. 주의사항·다음 내원일·전화 문의 안내\n\n### 설문지 활용 포인트\n- \"몸무게에 대한 스트레스를 받고 있다\" 문항 체크 여부 중요\n- BMI 정상 범위에서도 GLP-1 처방 사유가 됨 (법적 보호: 스트레스 문항 체크 기록이 처방 근거)\n\n### GLP-1 Follow-up 4파트 체크\nA. 보상회로/갈망 — Food Noise(1-10), 단맛/짠맛 선호 변화, 술·간식 갈망(1-10)\nB. 대사/활력 — Brain Fog(1-10), 기력 저하, 단백질 섭취 (체중×1.2g/kg 충족)\nC. 위장관 적응 — 포만감 시점, 메스꺼움·변비·소화불량\nD. 운동 — 종류·빈도(주 N회)·시간(N분)\n\n### 단백질 섭취 교육 — ABC 식사 순서\n- A (Amino acid) 고기·생선·두부·달걀·유제품 먼저 (전체의 1/3)\n- B (Blocking) 채소로 당 흡수 차단\n- C (Carbohydrate) 탄수화물 가장 마지막 소량\n\n체중 1kg당 1.2~1.5g 단백질, 매끼 나눠 섭취. 단백질이 GLP-1 분비 촉진·혈당 스파이크 억제·식이 열발생(TEF) 최대화.",
         "sources": [
           "Sun L et al. Clin Nutr 2019;38(2):638-645. PMID:31053510 (V-M-R 순서 혈당·GLP-1 최대)",
           "Noronha JC et al. Obes Pillars 2025;17:100234. PMID:41322078 (단백질 >1.2g/kg/day 국제 전문가 합의)"
         ]
       },
       "protocol": {
-        "content": "### 위고비(Semaglutide) 처방 기준\n- BMI ≥ 30 → 단독 처방 가능\n- BMI 27~30 + 동반질환(고혈압/T2DM/이상지질혈증/OSA/심혈관질환) → 처방 가능\n- 비급여, 전액 환자 부담\n\n### 금기·주의\n- 절대 금기: MTC 개인력/가족력, MEN2, semaglutide 과민반응, 임신(계획 시 2개월 전 중단)\n- 상대적 주의: 췌장염 과거력, 수유 중, 당뇨망막병증(혈당 급격 개선 시 악화), 담석증",
+        "content": "### 위고비(Semaglutide) 처방 기준\n- BMI ≥ 30 → 단독 처방 가능\n- BMI 27~30 + 동반질환(고혈압/T2DM/이상지질혈증/OSA/심혈관질환) → 처방 가능\n- 비급여, 전액 환자 부담\n\n### 금기·주의\n- 절대 금기: MTC 개인력/가족력, MEN2, [[semaglutide|semaglutide]] 과민반응, 임신(계획 시 2개월 전 중단)\n- 상대적 주의: 췌장염 과거력, 수유 중, 당뇨망막병증(혈당 급격 개선 시 악화), 담석증",
         "sources": []
       },
       "indication": {
@@ -407,14 +407,14 @@ var KNOWLEDGE_BUNDLE = {
         "sources": []
       },
       "exam": {
-        "content": "### 환자 기대 청취 (첫 문진)\n- 목표 체중 몇 kg인가\n- 목표 기간 언제까지인가\n→ 환자와 함께 계획 세워야 순응도 ↑\n\n### GLP-1 초진 Flow (8단계)\n1. 비만/대사 설문지 작성\n2. 인바디 검사\n3. BP, pulse, 심전도(prn)\n4. 인바디 + 설문지 바탕 상담\n5. 필요 시 Lab: HbA1c·Lipid·LFT·Cr·HOMA-IR(prn)·TSH(prn)\n6. 위고비/오젬픽 vs 마운자로 결정\n7. 사용법 교육 + 1회 주사\n8. 주의사항·다음 내원일·전화 문의 안내\n\n### 설문지 활용 포인트\n- \"몸무게에 대한 스트레스를 받고 있다\" 문항 체크 여부 중요\n- BMI 정상 범위에서도 GLP-1 처방 사유가 됨 (법적 보호: 스트레스 문항 체크 기록이 처방 근거)\n\n### GLP-1 Follow-up 4파트 체크\nA. 보상회로/갈망 — Food Noise(1-10), 단맛/짠맛 선호 변화, 술·간식 갈망(1-10)\nB. 대사/활력 — Brain Fog(1-10), 기력 저하, 단백질 섭취 (체중×1.2g/kg 충족)\nC. 위장관 적응 — 포만감 시점, 메스꺼움·변비·소화불량\nD. 운동 — 종류·빈도(주 N회)·시간(N분)\n\n### 단백질 섭취 교육 — ABC 식사 순서\n- A (Amino acid) 고기·생선·두부·달걀·유제품 먼저 (전체의 1/3)\n- B (Blocking) 채소로 당 흡수 차단\n- C (Carbohydrate) 탄수화물 가장 마지막 소량\n\n체중 1kg당 1.2~1.5g 단백질, 매끼 나눠 섭취. 단백질이 GLP-1 분비 촉진·혈당 스파이크 억제·식이 열발생(TEF) 최대화.",
+        "content": "### 환자 기대 청취 (첫 문진)\n- 목표 체중 몇 kg인가\n- 목표 기간 언제까지인가\n→ 환자와 함께 계획 세워야 순응도 ↑\n\n### GLP-1 초진 Flow (8단계)\n1. 비만/대사 설문지 작성\n2. 인바디 검사\n3. BP, pulse, 심전도(prn)\n4. 인바디 + 설문지 바탕 상담\n5. 필요 시 Lab: HbA1c·Lipid·LFT·Cr·HOMA-IR(prn)·TSH(prn)\n6. 위고비/오젬픽 vs [[마운자로|마운자로]] 결정\n7. 사용법 교육 + 1회 주사\n8. 주의사항·다음 내원일·전화 문의 안내\n\n### 설문지 활용 포인트\n- \"몸무게에 대한 스트레스를 받고 있다\" 문항 체크 여부 중요\n- BMI 정상 범위에서도 GLP-1 처방 사유가 됨 (법적 보호: 스트레스 문항 체크 기록이 처방 근거)\n\n### GLP-1 Follow-up 4파트 체크\nA. 보상회로/갈망 — Food Noise(1-10), 단맛/짠맛 선호 변화, 술·간식 갈망(1-10)\nB. 대사/활력 — Brain Fog(1-10), 기력 저하, 단백질 섭취 (체중×1.2g/kg 충족)\nC. 위장관 적응 — 포만감 시점, 메스꺼움·변비·소화불량\nD. 운동 — 종류·빈도(주 N회)·시간(N분)\n\n### 단백질 섭취 교육 — ABC 식사 순서\n- A (Amino acid) 고기·생선·두부·달걀·유제품 먼저 (전체의 1/3)\n- B (Blocking) 채소로 당 흡수 차단\n- C (Carbohydrate) 탄수화물 가장 마지막 소량\n\n체중 1kg당 1.2~1.5g 단백질, 매끼 나눠 섭취. 단백질이 GLP-1 분비 촉진·혈당 스파이크 억제·식이 열발생(TEF) 최대화.",
         "sources": [
           "Sun L et al. Clin Nutr 2019;38(2):638-645. PMID:31053510 (V-M-R 순서 혈당·GLP-1 최대)",
           "Noronha JC et al. Obes Pillars 2025;17:100234. PMID:41322078 (단백질 >1.2g/kg/day 국제 전문가 합의)"
         ]
       },
       "protocol": {
-        "content": "### 위고비(Semaglutide) 처방 기준\n- BMI ≥ 30 → 단독 처방 가능\n- BMI 27~30 + 동반질환(고혈압/T2DM/이상지질혈증/OSA/심혈관질환) → 처방 가능\n- 비급여, 전액 환자 부담\n\n### 금기·주의\n- 절대 금기: MTC 개인력/가족력, MEN2, semaglutide 과민반응, 임신(계획 시 2개월 전 중단)\n- 상대적 주의: 췌장염 과거력, 수유 중, 당뇨망막병증(혈당 급격 개선 시 악화), 담석증",
+        "content": "### 위고비(Semaglutide) 처방 기준\n- BMI ≥ 30 → 단독 처방 가능\n- BMI 27~30 + 동반질환(고혈압/T2DM/이상지질혈증/OSA/심혈관질환) → 처방 가능\n- 비급여, 전액 환자 부담\n\n### 금기·주의\n- 절대 금기: MTC 개인력/가족력, MEN2, [[semaglutide|semaglutide]] 과민반응, 임신(계획 시 2개월 전 중단)\n- 상대적 주의: 췌장염 과거력, 수유 중, 당뇨망막병증(혈당 급격 개선 시 악화), 담석증",
         "sources": []
       },
       "indication": {
@@ -1931,7 +1931,7 @@ var _dizziness_v2 = {
       sources: ["[TIPS — 교수님 외래 참관]"]
     },
     differential: {
-      content: "### Horses — 흔한 원인 (빈도순)\n1. **BPPV** — 자세 변화 시 수초~1분 내 소실. 가장 흔함(말초성 현훈의 절반 이상)\n2. **전정신경염** — 바이러스 후 급성 지속성 현훈. 청력저하 없음. 오심·보행장애 동반\n3. **편두통성 어지럼증 (Vestibular migraine)** — 편두통 과거력 + 반복성. 두통 없이도 어지럼만 올 수 있음\n4. **기립성 저혈압** — 기립 시 어지럼. 노인·탈수·강압제 복용자\n5. **메니에르병** — 반복성 현훈 + 이명 + 편측 청력저하 + 이충만감 동반\n\n### Zebra — 드물지만 절대 놓치면 안 됨\n- ⚠ **소뇌경색 / TIA** — 갑작스러운 발병. 보행장애, 두통, 복시·안면마비·구음장애 동반 시 즉시 의심. RedFlag 영역.",
+      content: "### Horses — 흔한 원인 (빈도순)\n1. **[[BPPV|BPPV]]** — 자세 변화 시 수초~1분 내 소실. 가장 흔함(말초성 현훈의 절반 이상)\n2. **전정신경염** — 바이러스 후 급성 지속성 현훈. 청력저하 없음. 오심·보행장애 동반\n3. **편두통성 어지럼증 (Vestibular [[migraine|migraine]])** — 편두통 과거력 + 반복성. 두통 없이도 어지럼만 올 수 있음\n4. **기립성 저혈압** — 기립 시 어지럼. 노인·탈수·강압제 복용자\n5. **메니에르병** — 반복성 현훈 + 이명 + 편측 청력저하 + 이충만감 동반\n\n### Zebra — 드물지만 절대 놓치면 안 됨\n- ⚠ **소뇌경색 / TIA** — 갑작스러운 발병. 보행장애, 두통, 복시·안면마비·구음장애 동반 시 즉시 의심. RedFlag 영역.",
       sources: ["AAFP Am Fam Physician 2017","NCBI StatPearls"]
     },
     referral: {
@@ -2937,7 +2937,7 @@ var _glp1_strategy_v2 = {
   ],
   sections: {
     comparison: {
-      content: "### 위고비 vs 마운자로 선택 기준\n| 기준 | 위고비 | 마운자로 |\n|---|---|---|\n| 목표 감량 | 15% 미만 | 15% 이상 |\n| 2형 당뇨 동반 | 오젬픽(보험) 고려 | 마운자로 실비 가능 |\n| 주사 편의성 | — | 웬티카, 더 편리 |\n| 소화기 부작용 민감 | 상대적 유리 | 상대적으로 많음 |\n| 근감소 우려 (고령·저근육) | 저용량 전략 | aggressive 감량 주의 |\n| 장기 유지 비용 | 저렴 | — |\n| 장기 유지 편의 | — | 1회용 펜 |\n\n### 시작 용량 비교\n| 항목 | 위고비 | 마운자로 |\n|---|---|---|\n| 시작 용량 | 0.25mg | 2.5mg |\n| 유지 단계 | 0.25→0.5→1.0→1.7→2.4mg | 4주 후 5mg으로 |\n| 초반 감량 속도 | 느림 | 빠름 |\n| 최대 효과 | — | 10mg(4단계)까지 효과 뚜렷 |\n\n> SURMOUNT-5(NEJM 2025): 마운자로 -20.2% vs 위고비 -13.7% 전체 우월성.\n> 마운자로 10mg→15mg 증분 +1.1%p로 급격히 감소.",
+      content: "### 위고비 vs [[마운자로|마운자로]] 선택 기준\n| 기준 | 위고비 | 마운자로 |\n|---|---|---|\n| 목표 감량 | 15% 미만 | 15% 이상 |\n| 2형 당뇨 동반 | 오젬픽(보험) 고려 | 마운자로 실비 가능 |\n| 주사 편의성 | — | 웬티카, 더 편리 |\n| 소화기 부작용 민감 | 상대적 유리 | 상대적으로 많음 |\n| 근감소 우려 (고령·저근육) | 저용량 전략 | aggressive 감량 주의 |\n| 장기 유지 비용 | 저렴 | — |\n| 장기 유지 편의 | — | 1회용 펜 |\n\n### 시작 용량 비교\n| 항목 | 위고비 | 마운자로 |\n|---|---|---|\n| 시작 용량 | 0.25mg | 2.5mg |\n| 유지 단계 | 0.25→0.5→1.0→1.7→2.4mg | 4주 후 5mg으로 |\n| 초반 감량 속도 | 느림 | 빠름 |\n| 최대 효과 | — | 10mg(4단계)까지 효과 뚜렷 |\n\n> SURMOUNT-5(NEJM 2025): 마운자로 -20.2% vs 위고비 -13.7% 전체 우월성.\n> 마운자로 10mg→15mg 증분 +1.1%p로 급격히 감소.",
       sources: ["[TIPS — by 로컬원장님]"]
     },
     protocol: {
@@ -2945,7 +2945,7 @@ var _glp1_strategy_v2 = {
       sources: ["[TIPS — by 로컬원장님]"]
     },
     indication: {
-      content: "### Tirzepatide 중단 후 전환 (PMID:41962807, n=83 후향)\n- 중단 전 평균 사용기간 11개월, 평균 체중 감소 -6.7%\n- **중단 후 12개월 체중 변화: +1.9% (P=0.11, 비유의)**\n- 81.9%가 다른 비만약으로 전환 (약사·의사 지원)\n- 중단 주된 이유 80.7%: 약값·접근성\n→ \"단순 중단 ≠ 전환 전략\". 비용 부담으로 마운자로 중단 상담 시 \"다른 비만약으로 전환하면 12개월 +1.9% (비유의)\" 근거 제시.\n\n### 당뇨전단계 + 비만 — T2DM 예방·CV 보호 (PMID:41565568)\n| 약물 | 효과 | 근거 |\n|---|---|---|\n| **Semaglutide 2.4mg** | 정상혈당 회복률 최대 84% | STEP 1·5 |\n| **Tirzepatide** | T2DM 발생 90% 감소 (HR 0.07) | SURMOUNT-1 |\n| **Semaglutide** | CV 이벤트 HR 0.80 (전당뇨 포함) | SELECT |\n→ 비만+당뇨전단계 환자 GLP-1 처방 시 \"살 빼면서 당뇨 예방 + 심혈관 보호\" 직접 제시.\n\n### 중증 정신질환(SMI) + 비만 (PMID:41618880, RCT 10건 메타, N=665)\n- 체중 감소 -6.17 kg (95% CI: -9.10 ~ -3.25)\n- HbA1c 감소 -0.31%\n- 부작용 탈락률 위약과 차이 없음\n→ 항정신병약 복용 중 체중 증가 환자에 GLP-1RA 처방 근거.\n\n### 알코올사용장애(AUD) + 비만/T2DM (PMID:39535805, 스웨덴 22.7만명)\n- Semaglutide AUD 입원 위험 36% 감소 (aHR 0.64)\n- Liraglutide 28% 감소 (aHR 0.72)\n- 기존 AUD 치료제 (naltrexone/acamprosate) aHR 0.98 (거의 차이 없음)\n→ 위고비/오젬픽 초진 시 음주력 문진 강화 근거.",
+      content: "### Tirzepatide 중단 후 전환 (PMID:41962807, n=83 후향)\n- 중단 전 평균 사용기간 11개월, 평균 체중 감소 -6.7%\n- **중단 후 12개월 체중 변화: +1.9% (P=0.11, 비유의)**\n- 81.9%가 다른 비만약으로 전환 (약사·의사 지원)\n- 중단 주된 이유 80.7%: 약값·접근성\n→ \"단순 중단 ≠ 전환 전략\". 비용 부담으로 [[마운자로|마운자로]] 중단 상담 시 \"다른 비만약으로 전환하면 12개월 +1.9% (비유의)\" 근거 제시.\n\n### 당뇨전단계 + 비만 — T2DM 예방·CV 보호 (PMID:41565568)\n| 약물 | 효과 | 근거 |\n|---|---|---|\n| **Semaglutide 2.4mg** | 정상혈당 회복률 최대 84% | STEP 1·5 |\n| **Tirzepatide** | T2DM 발생 90% 감소 (HR 0.07) | SURMOUNT-1 |\n| **Semaglutide** | CV 이벤트 HR 0.80 (전당뇨 포함) | SELECT |\n→ 비만+당뇨전단계 환자 GLP-1 처방 시 \"살 빼면서 당뇨 예방 + 심혈관 보호\" 직접 제시.\n\n### 중증 정신질환(SMI) + 비만 (PMID:41618880, RCT 10건 메타, N=665)\n- 체중 감소 -6.17 kg (95% CI: -9.10 ~ -3.25)\n- HbA1c 감소 -0.31%\n- 부작용 탈락률 위약과 차이 없음\n→ 항정신병약 복용 중 체중 증가 환자에 GLP-1RA 처방 근거.\n\n### 알코올사용장애(AUD) + 비만/T2DM (PMID:39535805, 스웨덴 22.7만명)\n- Semaglutide AUD 입원 위험 36% 감소 (aHR 0.64)\n- Liraglutide 28% 감소 (aHR 0.72)\n- 기존 AUD 치료제 (naltrexone/acamprosate) aHR 0.98 (거의 차이 없음)\n→ 위고비/오젬픽 초진 시 음주력 문진 강화 근거.",
       sources: []
     },
     notes: {
@@ -2978,7 +2978,7 @@ var _hf_volume_v2 = {
       sources: []
     },
     protocol: {
-      content: "### HFpEF + 비만 — 체중감량이 최우선 치료 전략 (PMID:41802118)\n비만 ↔ HFpEF 악순환 기전:\n- 비만 → 심외막 지방·전신 염증 → 좌심실 강성·확장기 기능장애 → 운동내약↓\n- HFpEF → 운동제한 → 체중↑ → 비만 악화\n\n### GLP-1 RCT 근거 (HFpEF + 비만)\n| 약물 | 효과 |\n|---|---|\n| **Semaglutide** (STEP-HFpEF) | 운동능력·증상·QoL 개선 |\n| **Tirzepatide** (SUMMIT) | 운동능력·증상·QoL 개선, 비만 클수록 이익 큼 |\n\n→ HFpEF에서 체중감량=현재 최우선 치료 전략.\n→ HFrEF에서는 obesity paradox로 불확실 (현재 GDMT 4 pillars + 신중 체중관리).\n\n### 외래 적용\n- BMI ≥30 + HFpEF → GLP-1 (semaglutide/tirzepatide) 적극 고려\n- 체중 5~10% 감량 목표 → 운동내약·증상 개선 가시화\n- 동반 OSA·MASH·당뇨 → GLP-1 종합 이익",
+      content: "### HFpEF + 비만 — 체중감량이 최우선 치료 전략 (PMID:41802118)\n비만 ↔ HFpEF 악순환 기전:\n- 비만 → 심외막 지방·전신 염증 → 좌심실 강성·확장기 기능장애 → 운동내약↓\n- HFpEF → 운동제한 → 체중↑ → 비만 악화\n\n### GLP-1 RCT 근거 (HFpEF + 비만)\n| 약물 | 효과 |\n|---|---|\n| **Semaglutide** (STEP-HFpEF) | 운동능력·증상·QoL 개선 |\n| **Tirzepatide** (SUMMIT) | 운동능력·증상·QoL 개선, 비만 클수록 이익 큼 |\n\n→ HFpEF에서 체중감량=현재 최우선 치료 전략.\n→ HFrEF에서는 [[obesity|obesity]] paradox로 불확실 (현재 GDMT 4 pillars + 신중 체중관리).\n\n### 외래 적용\n- BMI ≥30 + HFpEF → GLP-1 ([[semaglutide|semaglutide]]/[[tirzepatide|tirzepatide]]) 적극 고려\n- 체중 5~10% 감량 목표 → 운동내약·증상 개선 가시화\n- 동반 OSA·[[MASH|MASH]]·당뇨 → GLP-1 종합 이익",
       sources: []
     },
     notes: {
@@ -3428,11 +3428,11 @@ var _im_2025_v2 = {
       sources: []
     },
     endocrinology: {
-      content: "### 내분비 2025 핵심 변화 (PMID:41974004)\n- **GLP-1 NAION 부작용 신호**: 시야 변화 모니터링 교육 추가 ([[glp1-selection-strategy]])\n- **SGLT-2 vs GLP-1 비뇨생식기 감염 비교**: SGLT-2 위험 ↑ → **반복 UTI 환자 GLP-1 우선 고려**\n- **피네레논 (Finerenone)**: T2DM + CKD 신보호 추가 근거. SGLT-2i + 피네레논 병합 전략 가능성\n- **MASH + GLP-1**: 적응증 확대 ([[MASH]])",
+      content: "### 내분비 2025 핵심 변화 (PMID:41974004)\n- **GLP-1 NAION 부작용 신호**: 시야 변화 모니터링 교육 추가 ([[glp1-selection-strategy]])\n- **[[diabetes|SGLT-2]] vs GLP-1 비뇨생식기 감염 비교**: SGLT-2 위험 ↑ → **반복 UTI 환자 GLP-1 우선 고려**\n- **피네레논 (Finerenone)**: T2DM + CKD 신보호 추가 근거. SGLT-2i + 피네레논 병합 전략 가능성\n- **[[MASH|MASH]] + GLP-1**: 적응증 확대 ([[MASH]])",
       sources: []
     },
     notes: {
-      content: "본 엔트리는 두 Ann Intern Med 2026 update 논문 합본. 개별 영역의 상세는 관련 엔트리(post-mi-deprescribing·glp1-selection-strategy·sglt2-inhibitors·CKD·MASH) 본문 참조. 본 엔트리는 **2025년 내과 변화 한눈에 보기** 목적.",
+      content: "본 엔트리는 두 Ann Intern Med 2026 update 논문 합본. 개별 영역의 상세는 관련 엔트리(post-mi-[[deprescribing|deprescribing]]·[[glp1-selection-strategy|glp1-selection-strategy]]·[[sglt2-inhibitors|sglt2-inhibitors]]·CKD·[[MASH|MASH]]) 본문 참조. 본 엔트리는 **2025년 내과 변화 한눈에 보기** 목적.",
       sources: []
     }
   },
@@ -5503,11 +5503,11 @@ var _travel_vacc_v2 = {
   ],
   sections: {
     indication: {
-      content: "### 지역별 권장 (CDC Yellow Book 2024)\n| 지역 | 권장 |\n|---|---|\n| 동남아·중국·인도·네팔·방글라데시·북아프리카 | A형간염, 장티푸스 +/- 광견병 |\n| **사하라 이남·남미** | **황열**, A형간염, 장티푸스 |\n| 중동·동유럽·러시아 | A형간염 +/- B형간염 (위험행동 시) |\n| 서유럽·영미권 | 기본 (MMR, Tdap, 독감) |\n| 중동(Hajj/Umrah)·사하라 meningitis belt | 수막구균 |\n| 아시아 농촌 | 일본뇌염 |\n\n⚠ **광견병**은 동남아·인도뿐 아니라 **장기체류·동물접촉 위험 시 전 지역 고려**.\n⚠ 중동 등 **B형간염은 universal 권고 X** — 의료노출·성접촉·문신 등 위험행동 시.",
+      content: "### 지역별 권장 (CDC Yellow Book 2024)\n| 지역 | 권장 |\n|---|---|\n| 동남아·중국·인도·네팔·방글라데시·북아프리카 | [[A형간염|A형간염]], 장티푸스 +/- 광견병 |\n| **사하라 이남·남미** | **황열**, A형간염, 장티푸스 |\n| 중동·동유럽·러시아 | A형간염 +/- [[B형간염|B형간염]] (위험행동 시) |\n| 서유럽·영미권 | 기본 (MMR, [[Tdap|Tdap]], 독감) |\n| 중동(Hajj/Umrah)·사하라 [[meningitis|meningitis]] belt | 수막구균 |\n| 아시아 농촌 | [[일본뇌염|일본뇌염]] |\n\n⚠ **광견병**은 동남아·인도뿐 아니라 **장기체류·동물접촉 위험 시 전 지역 고려**.\n⚠ 중동 등 **B형간염은 universal 권고 X** — 의료노출·성접촉·문신 등 위험행동 시.",
       sources: []
     },
     schedule: {
-      content: "### 황열 (Yellow Fever)\n- 사하라 이남·남미 일부 입국 의무\n- **ICVP**: 접종 후 **10일째부터 유효**, **2016 IHR 개정 이후 평생 유효** (재접종 요구 X)\n- 생백신 — 임신·면역저하·계란 알레르기 주의\n\n### 일본뇌염 (ACIP / MMWR 2019)\n- **≥1개월 체류** 권고\n- **<1개월도 위험요인 시** 권고: 농촌·우기·야외활동·비차단 숙소 (논 인접)\n- IXIARO 사백신 표준 → [[japanese-encephalitis-vaccine]]\n\n### 수막구균 ACWY\n- **사우디 Hajj/Umrah 비자 (≥1세) 필수** — 도착 10일 전~3년/5년 이내\n- 사하라 meningitis belt 건기 (12월~6월) 권고\n\n### 기본 접종 점검\nMMR (1968 이후 1회만 받음 시), Tdap, 독감, A형간염",
+      content: "### 황열 (Yellow Fever)\n- 사하라 이남·남미 일부 입국 의무\n- **ICVP**: 접종 후 **10일째부터 유효**, **2016 IHR 개정 이후 평생 유효** (재접종 요구 X)\n- 생백신 — 임신·면역저하·계란 알레르기 주의\n\n### [[일본뇌염|일본뇌염]] (ACIP / MMWR 2019)\n- **≥1개월 체류** 권고\n- **<1개월도 위험요인 시** 권고: 농촌·우기·야외활동·비차단 숙소 (논 인접)\n- IXIARO 사백신 표준 → [[japanese-encephalitis-vaccine]]\n\n### 수막구균 ACWY\n- **사우디 Hajj/Umrah 비자 (≥1세) 필수** — 도착 10일 전~3년/5년 이내\n- 사하라 [[meningitis|meningitis]] belt 건기 (12월~6월) 권고\n\n### 기본 접종 점검\nMMR (1968 이후 1회만 받음 시), [[Tdap|Tdap]], 독감, [[A형간염|A형간염]]",
       sources: []
     },
     precaution: {
@@ -5515,7 +5515,7 @@ var _travel_vacc_v2 = {
       sources: []
     },
     protocol: {
-      content: "### 상담 워크플로우\n1. 여행지 / 기간 / 활동 / 숙소 확인\n2. 위 매트릭스로 권장 백신 선별\n3. 황열 ICVP 의무 국가 → 출발 10일 전\n4. 광견병·일본뇌염 — 동물접촉·농촌 체류 평가\n5. 말라리아 — 약물예방 처방 + 모기 회피 교육\n6. 기본 접종 갱신 ([[adult-vaccination-summary]])",
+      content: "### 상담 워크플로우\n1. 여행지 / 기간 / 활동 / 숙소 확인\n2. 위 매트릭스로 권장 백신 선별\n3. 황열 ICVP 의무 국가 → 출발 10일 전\n4. 광견병·[[일본뇌염|일본뇌염]] — 동물접촉·농촌 체류 평가\n5. 말라리아 — 약물예방 처방 + 모기 회피 교육\n6. 기본 접종 갱신 ([[adult-vaccination-summary]])",
       sources: []
     },
     referral: {
