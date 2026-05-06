@@ -70,6 +70,11 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - menopause.md — 폐경기 외래 본체: NAMS 2022 HT 60세-10년 timing/자궁 유무 ET·EPT, NAMS 2023 nonhormone fezolinetant Level I·paroxetine 7.5mg FDA 유일, clonidine·pregabalin 권고 안 함 [CLINICAL]
 - preconception-screening.md — 임신 전 항체검사: KSOG/CDC 기본 Rubella·HBsAg·VZV, USPSTF 매독·HIV·HBV·HCV, MMR/varicella 1~2mo 전, HBsAg(+) 12h HepB+HBIG [CLINICAL]
 - parotitis-differential.md — 귀밑 부종/염증 감별: 5감별(화농성·mumps·림프절·턱밑·치성), 1차 amoxi/clav, "cefazolin+metro" 표준 X 정정, 초음파 routine X [CLINICAL]
+- paresthesia.md — 일반 손발저림: AAFP 2020 대칭 vs 비대칭 분류(갑상선저하증 대칭 분류), SPEP/IFE 1차 패널, AAN 2022 painful DPN 4계열 동등, ASCO 2020 CIPN duloxetine 유일 적정 근거, INH B6 결핍 [CLINICAL]
+- thyroid-fna-cnb.md — **K-TIRADS 분류 5단계 보강** (K2 <2%, K3 2~10%·>1.5cm, K4 10~40%·≥1cm, K5 >60%·≥1cm) — 기존 항혈전제·CNB 합병증 + 분류표 [CLINICAL/TIPS]
+- anxiety-depression-cbt.md — **정신과 약물 plan 보강**: 1차 SSRI·동반증상별 선택·follow-up·불안 NICE CG113·불면 AASM 2017 (trazodone/멜라토닌 1차 X, 고령 BZD/Z-drug Beers 회피) — 기존 CBT 효과크기 + 약물 처방 [CLINICAL]
+- alcohol-use-disorder.md — **AUDIT/FRAMES/음주량 정의 보강**: AUDIT-K 두 버전(원판/KR), AUDIT-C 컷오프, 음주량 정의(폭음 여 4잔 정정), FRAMES 6요소, USPSTF 2018 — 기존 naltrexone·acamprosate + brief intervention [CLINICAL]
+- heart-failure.md — **ACC/AHA Stage A/B/C/D 분류 보강** (Stage B에 BNP/NT-proBNP 포함), BNP cutoff 외래 vs 응급실 분리, 유발 약물 — 기존 GDMT 4 pillars + Stage 매핑 [CLINICAL]
 
 ### by-drug/
 - vaccine-interval.md — 백신 접종 간격 원칙 (생+사/생+생/사+사) [CLINICAL] — topic
@@ -100,3 +105,4 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - breast-us-coverage.md — 유방·액와부 초음파 급여: 심평원 나942가·나940, 진단/경과관찰/수술 후 비교 1회·초과 80%, 단순초음파 초회부터 80%, 산정특례 우선 [REGULATORY] — topic
 - brain-metabolism-enhancers.md — 뇌대사 개선제 급여: 7약제 1종만, **콜린알포 2025.9.21 치매 외 80% 선별급여 전환**, 사미온 5/10mg 적응증, 소마지나 24h 6주, 케타스 어지러움, 니세틸 시장 퇴출 [REGULATORY] — topic
 - travel-vaccination.md — 해외여행 예방접종: CDC Yellow Book 2024 지역별 매트릭스, 황열 ICVP 2016 평생 유효, 일본뇌염 ≥1mo+위험요인, 말라리아 화학예방, 사우디 ACWY 의무 [CLINICAL] — topic
+- chest-xray-template.md — 기숙사 입소·검진 SOAP template (Z115), 변형 4종 (취업·학교·흉부 검진) [TIPS — by 미르] — topic

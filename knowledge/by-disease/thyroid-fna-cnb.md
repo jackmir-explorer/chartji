@@ -12,6 +12,31 @@ keywords: 갑상선 FNA, 갑상선 CNB, fine needle aspiration, core needle biop
 
 ---
 
+## K-TIRADS 분류 — 결절 위험도 및 FNA 적응 (2021)
+
+> 근거: 대한갑상선영상의학회(KSThR) 2021 K-TIRADS Consensus (KJR 2021;22(12):2094)
+
+| 등급 | 분류 | 악성 위험 | FNA/CNB 적응 |
+|---|---|---|---|
+| **K-TIRADS 1** | 무결절 | — | — |
+| **K-TIRADS 2** | 양성 | **<2%** | 일반적으로 X |
+| **K-TIRADS 3** | 낮은 의심 | **2~10%** | **>1.5cm 이상** |
+| **K-TIRADS 4** | 중간 의심 | 10~40% | **≥1cm** (또는 ≥1.5cm 절충) |
+| **K-TIRADS 5** | 높은 의심 | >60% (실측 70~80%) | **≥1cm** |
+
+> ⚠ raw 정정사항:
+> - K-TIRADS 2 risk **<2%** (raw "<3%")
+> - K-TIRADS 3 risk **2~10%** (raw "3~10%"), FNA cutoff **>1.5cm** (raw ">2cm"는 보수적 적용)
+
+**판독 보고서 표기**: 심평원 갑상선초음파 급여기준은 K-TIRADS 분류 기재를 필수로 요구.
+
+**ATA·ACR-TIRADS와의 차이**:
+- ATA 2015: pattern-based (크기+패턴)
+- ACR-TIRADS 2017: point-based (특징별 가중치 합산), specificity·biopsy 감소 우선
+- K-TIRADS 2021: pattern-based, 한국 PTC 유병률 반영 sensitivity 우선 (~96%)
+
+---
+
 ## 시술 전 평가 (pre-procedure)
 
 ### 항혈전제 확인 — 필수 [TIPS — by ENT 교수]

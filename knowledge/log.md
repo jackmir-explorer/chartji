@@ -25,6 +25,13 @@
 2026-05-06 | guidelines/brain-metabolism-enhancers.md | 신규 — 7약제, 1종만 급여, **콜린알포 2025.9.21 치매 외 80% 선별급여 전환**, 사미온 5/10mg 뇌경색후유증·말초순환장애, 소마지나 24h 6주, 케타스 어지러움 효능, 니세틸 식약처 임상재평가 시장 퇴출 [REGULATORY] (inbox phase 2)
 2026-05-06 | guidelines/travel-vaccination.md | 신규 — CDC Yellow Book 2024 지역별 매트릭스, 황열 ICVP 2016 IHR 평생 유효, 일본뇌염 ≥1mo+위험요인, 말라리아 화학예방, 사우디 ACWY 의무 [CLINICAL] (inbox phase 2)
 2026-05-06 | knowledge-bundle.js / prompts.js | Phase 2 10 v2 B2 엔트리 등록 (6 disease + 4 topic, 463 keys). TRIAGE calcCategories 10개 신규
+2026-05-06 | by-disease/paresthesia.md | 신규 — 일반 말초신경병증: AAFP 2020 분류(대칭 vs 비대칭, 갑상선저하증 대칭 분류 정정), 1차 패널에 SPEP/IFE 추가, AAN 2022 painful DPN 4계열 동등(TCA·SNRI·gabapentinoid·Na channel), ASCO 2020 CIPN duloxetine 유일 적정 근거, INH B6 결핍 [CLINICAL] (inbox phase 3 — Researcher 검증)
+2026-05-06 | by-disease/thyroid-fna-cnb.md | 보강 — K-TIRADS 분류 5단계(1~5) 추가: K2 risk <2%, K3 2~10%·>1.5cm, K4 10~40%·≥1cm, K5 >60%·≥1cm (raw "<3%·3~10%·>2cm" 정정). 심평원 판독 필수 [CLINICAL]
+2026-05-06 | by-disease/anxiety-depression-cbt.md | 보강 — 정신과 약물 처방 plan 섹션 추가: 우울증 1차 SSRI(escitalopram·sertraline·fluoxetine), follow-up, 동반증상별(duloxetine 만성통증/mirtazapine 수면·체중↓/bupropion 무기력·금연), 불안 NICE CG113, 불면 AASM 2017 (trazodone·멜라토닌 1차 X·고령 BZD/Z-drug Beers 회피) [CLINICAL]
+2026-05-06 | by-disease/alcohol-use-disorder.md | 보강 — AUDIT 컷오프 한국형 두 버전 명시(원판 ≥12/15/26·KR ≥10/8), AUDIT-C 3문항·NIAAA 컷오프, 음주량 정의(표준 1잔 미국 14g/WHO 10g/한국 7~8g, 폭음 여 4잔/2시간 raw 3잔 정정), FRAMES 6요소, USPSTF 2018 Grade B [CLINICAL]
+2026-05-06 | by-disease/heart-failure.md | 보강 — ACC/AHA 2022 Stage A/B/C/D 분류 추가(Stage B에 BNP/NT-proBNP 지속 상승 포함), BNP cutoff 외래(35/125) vs 응급실 age-adjusted 분리, 유발 약물(NSAIDs·non-DHP CCB·BB 시점) [CLINICAL]
+2026-05-06 | guidelines/chest-xray-template.md | 신규 — 기숙사 입소·검진 SOAP template (Z115), 변형 4종 (취업·학교·흉부 검진), URI 동반 시 별도 SOAP [TIPS — by 미르]
+2026-05-06 | knowledge-bundle.js / prompts.js | Phase 3: 신규 paresthesia + chest-xray-template entry, thyroid-fna-cnb·anxiety-depression-cbt·heart-failure section 보강, 478 keys. TRIAGE calcCategories 2개 신규
 2026-05-02 | by-disease/pocus-abdominal.md | 신규 — GP 복부 POCUS 적합 3대 영역(담석증·요로결석·AAA/수신증): 1,053건 네덜란드 GP 의뢰 분석, guideline 기반 의뢰 75% 배제 판독·대안진단 <10% [CLINICAL — 조건부] PMID:41528024 (Eur J Gen Pract 2026)
 2026-05-02 | by-disease/ankle-sprain.md | 신규 — 급성 발목 염좌: Ottawa Rules·PEACE&LOVE 프로토콜·외부 지지대 5~10일·신경근 재활 8~12주 [CLINICAL] PMID:41533404 (AFP 2025 Dec)
 2026-05-02 | by-disease/palliative-pain.md | 추가 — 임종기 Deprescribing: 재향군인 37,193명, 73% LBM 복용 중·22%만 중단; 스타틴·혈당강하제·항고혈압제·항혈전제·PPI·항치매제 체크리스트 [CLINICAL] PMID:41925169 (JAGS 2026)

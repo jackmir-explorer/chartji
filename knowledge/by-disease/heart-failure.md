@@ -26,7 +26,7 @@ relations: []
 
 ## 분류 (classification)
 
-좌심실 박출률(LVEF) 기반 3분류:
+### LVEF 기반 (2021 Universal Definition)
 
 | 구분 | LVEF | 특징 |
 |---|---|---|
@@ -34,7 +34,28 @@ relations: []
 | HFmrEF (mildly reduced EF) | 41 – 49% | 중간 범주. HFrEF 치료 일부 준용 |
 | HFpEF (preserved EF) | ≥ 50% | 이완기능 장애 중심 |
 
-> 출처: 대한심부전학회 심부전 진료지침 2022
+HFmrEF·HFpEF는 BNP↑ 또는 구조이상/충만압 상승 근거 추가 필요.
+
+### ACC/AHA Stage A/B/C/D (2022)
+
+> 근거: 2022 AHA/ACC/HFSA HF Guideline (Circulation)
+
+| Stage | 정의 | 약물 |
+|---|---|---|
+| **A** "At Risk" | 고위험군 (HTN·DM·비만·대사증후군·가족력·심독성 항암제) | 위험인자 조절 (ACEi/ARB·statin) |
+| **B** "Pre-HF" | 구조적 이상 (MI·심비대·EF↓·판막) **또는 BNP/NT-proBNP 지속 상승** + **무증상** | ACEi/ARB 우선, BB 추가, 시술/수술 |
+| **C** | 구조적 이상 + **유증상** | **GDMT 4 pillars (HFrEF)** ↓ + 이뇨제 (울혈), Digoxin (보조) |
+| **D** | **불응성·반복 입원** (advanced HF) | LVAD·심장이식·완화치료 |
+
+> ⚠ Stage B 정의에 **BNP/NT-proBNP 지속 상승**도 포함됨 (2022 ACC/AHA 갱신).
+
+### Stage 유발 약물 — 회피 또는 주의
+
+- **NSAIDs** — 모든 stage 회피
+- **Verapamil / Diltiazem (non-DHP CCB)** — HFrEF 회피
+- **BB** — 안정 HFrEF의 핵심 치료, **급성 비대상성에선 주의** (잘못된 시점 X)
+
+> 출처: 2022 AHA/ACC/HFSA HF Guideline / 2021 Universal Definition (Bozkurt B, JCF 2021) / 대한심부전학회 2022
 
 ---
 
@@ -51,7 +72,9 @@ relations: []
 - 병력·신체진찰
 - 심전도 (좌각차단 등 비정상 시 주의)
 - 흉부 X선 (심비대·폐울혈)
-- NT-proBNP 또는 BNP
+- **NT-proBNP 또는 BNP** — cutoff 환경별 차이 (ESC 2021):
+  - **외래 (비급성) rule-out**: BNP <35 / NT-proBNP <125 (초과 시 ECHO)
+  - **응급실 (급성) rule-out**: NT-proBNP <300 (age-adjusted rule-in: <50세 450, 50~75세 900, >75세 1800)
 - 혈액검사: CBC, 전해질, BUN/Cr, LFT, TSH, 철 대사(ferritin, TSAT), HbA1c
 - 심초음파 (LVEF 확인 — 상급기관 필요 시 의뢰)
 

@@ -144,6 +144,8 @@ JSON만 반환 (다른 텍스트 절대 금지):
   breast-us-coverage (유방·액와부 초음파 급여/나942가·나940/진단·경과관찰·수술 후 비교 1회/초과 본인부담 80%/microcalcification mammo f/u — 유방 초음파 보험 결정 맥락)
   brain-metabolism-enhancers (뇌대사 개선제 보험/콜린알포 2025.9.21 치매 외 80% 선별/사미온 5/10mg 뇌경색후유증·말초순환장애/소마지나 24h 6주/케타스 어지러움/니세틸 시장 퇴출 — 뇌대사 개선제 처방·진단코드 맥락)
   travel-vaccination (해외여행 예방접종/CDC Yellow Book/지역별 매트릭스/황열 ICVP 평생 유효 2016/일본뇌염 ≥1mo·위험요인/말라리아 화학예방·모기회피/사우디 ACWY 의무 — 여행 클리닉 상담 맥락)
+  paresthesia (손발저림/대칭 vs 비대칭/AAFP 2020·AAN 2022 painful DPN 4계열 동등/SPEP/IFE 1차 패널/INH B6 결핍/CIPN duloxetine ASCO 2020 — 일반 말초신경병증 평가·약물 선택 맥락. DPN·수근관·CKD·B12·갑상선저하증 모두 별도 키와 보완)
+  chest-xray-template (기숙사 입소·검진 CXR SOAP template/Z115 General medical examination/URI Sx (-) — 무증상 검진 결과지 작성 맥락. by 미르)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */

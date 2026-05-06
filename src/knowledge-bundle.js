@@ -1507,12 +1507,12 @@ var KNOWLEDGE_BUNDLE = {
         "sources": ["대한심부전학회 심부전 진료지침 2022"]
       },
       "classification": {
-        "content": "### LVEF 기반 3분류\n| 구분 | LVEF | 특징 |\n|---|---|---|\n| HFrEF | ≤ 40% | 수축기능 저하. GDMT 4 pillars 대상 |\n| HFmrEF | 41–49% | 중간 범주. HFrEF 치료 일부 준용 |\n| HFpEF | ≥ 50% | 이완기능 장애 중심 |",
-        "sources": ["대한심부전학회 심부전 진료지침 2022"]
+        "content": "### LVEF 기반 3분류 (2021 Universal Definition)\n| 구분 | LVEF | 특징 |\n|---|---|---|\n| HFrEF | ≤ 40% | 수축기능 저하. GDMT 4 pillars 대상 |\n| HFmrEF | 41–49% | 중간 범주. HFrEF 치료 일부 준용 |\n| HFpEF | ≥ 50% | 이완기능 장애 중심 |\n\nHFmrEF·HFpEF는 BNP↑ 또는 구조이상/충만압 상승 근거 추가 필요.\n\n### ACC/AHA Stage A/B/C/D (2022)\n| Stage | 정의 | 약물 |\n|---|---|---|\n| **A** \"At Risk\" | 고위험군 (HTN·DM·비만·대사증후군·가족력·심독성 항암제) | 위험인자 조절 (ACEi/ARB·statin) |\n| **B** \"Pre-HF\" | 구조적 이상 (MI·심비대·EF↓·판막) **또는 BNP/NT-proBNP 지속 상승** + **무증상** | ACEi/ARB 우선, BB 추가, 시술/수술 |\n| **C** | 구조적 이상 + **유증상** | **GDMT 4 pillars (HFrEF)** + 이뇨제(울혈), Digoxin(보조) |\n| **D** | **불응성·반복 입원** (advanced HF) | LVAD·심장이식·완화치료 |\n\n⚠ Stage B 정의에 BNP/NT-proBNP 지속 상승 포함 (2022 ACC/AHA 갱신).\n\n### 유발 약물\n- NSAIDs (모든 stage 회피)\n- Verapamil/Diltiazem (HFrEF 회피)\n- BB는 안정 HFrEF 핵심, 급성 비대상성에선 주의",
+        "sources": ["대한심부전학회 심부전 진료지침 2022","2022 AHA/ACC/HFSA HF Guideline","2021 Universal Definition (Bozkurt B, JCF 2021)"]
       },
       "exam": {
-        "content": "### 증상·징후\n- 호흡곤란(운동 시 → 안정 시 → 좌위 호흡 순으로 진행)\n- 하지 부종, 체중 증가\n- 피로·운동능력 저하\n- 야간 기침, 발작성 야간 호흡곤란(PND)\n- 경정맥 팽대, 폐 수포음, S3 gallop\n\n### 초기 평가 (일차진료 범위)\n- 병력·신체진찰\n- 심전도 (좌각차단 등 비정상 시 주의)\n- 흉부 X선 (심비대·폐울혈)\n- NT-proBNP 또는 BNP\n- 혈액검사: CBC, 전해질, BUN/Cr, LFT, TSH, 철 대사(ferritin·TSAT), HbA1c\n- 심초음파 (LVEF 확인 — 상급기관 필요 시 의뢰)",
-        "sources": ["대한심부전학회 심부전 진료지침 2022"]
+        "content": "### 증상·징후\n- 호흡곤란(운동 시 → 안정 시 → 좌위 호흡 순으로 진행)\n- 하지 부종, 체중 증가\n- 피로·운동능력 저하\n- 야간 기침, 발작성 야간 호흡곤란(PND)\n- 경정맥 팽대, 폐 수포음, S3 gallop\n\n### 초기 평가 (일차진료 범위)\n- 병력·신체진찰\n- 심전도 (좌각차단 등 비정상 시 주의)\n- 흉부 X선 (심비대·폐울혈)\n- **NT-proBNP 또는 BNP** — cutoff 환경별 차이 (ESC 2021):\n  - **외래 (비급성) rule-out**: BNP <35 / NT-proBNP <125\n  - **응급실 (급성) rule-out**: NT-proBNP <300 (age-adjusted rule-in: <50세 450 / 50~75세 900 / >75세 1800)\n- 혈액검사: CBC, 전해질, BUN/Cr, LFT, TSH, 철 대사(ferritin·TSAT), HbA1c\n- 심초음파 (LVEF 확인 — 상급기관 필요 시 의뢰)",
+        "sources": ["대한심부전학회 심부전 진료지침 2022","ESC 2021 HF Guideline (EJHF 2022)"]
       },
       "protocol": {
         "content": "### 1차 표준치료 — GDMT 4 Pillars (HFrEF)\n동시 또는 빠른 순차 titration이 원칙. **용량 titration은 전문의 영역**.\n1. ARNI / ACEi / ARB\n2. Beta-blocker (베타차단제)\n3. MRA (Spironolactone·Eplerenone)\n4. SGLT2 inhibitor\n\n### 2차 추가치료\n- 동율동·안정 시 HR ≥ 70 → 이바브라딘\n- 표준치료에도 악화로 입원 필요 → 베리시구앗\n- 심박수 조절 필요한 심방세동 → 디곡신\n\n### 비약물\n- 좌심실보조장치(LVAD), 심장이식, 완화치료\n- ICD/CRT-D (부정맥 예방)",
@@ -2544,6 +2544,10 @@ var _cbt_meta_v2 = {
     precaution: {
       content: "- 중증 정신증·양극성장애: CBT 단독 불충분 — 약물 우선, CBT 보조\n- 자살 위험: CBT 의뢰 전 안전 계획 수립\n- 효과 크기는 대조군 종류에 크게 의존 (waitlist vs TAU)\n- 한국: CBT 보험 급여 제한 → 접근성 제약 현실 고려\n- 대부분 RCT 서양 인구 → 문화적 적응 효과 차이 가능",
       sources: []
+    },
+    dosing: {
+      content: "### 우울증 1차 SSRI (APA / AAFP 2023)\n| 약물 | 시작 | 유지 | 특징 |\n|---|---|---|---|\n| **Escitalopram** | 5mg qd | 10~20mg qd | 가장 안전·약물 상호작용 적음 |\n| Sertraline | 25mg qd | 50~200mg qd | 불안·강박, 위장 부작용 |\n| Fluoxetine | 10mg qd | 20~60mg qd | 폭식증·활력 (오전) |\n\n### Follow-up\n- 1주 f/u, 4주 평가 (PHQ-9·GAD-7), 효과는 4주 후부터\n- 유지 6~12mo, 점진적 감량\n- 1~2주 불안 악화 가능 (BDZ 단기 병용)\n- 위장·성기능, **고령 hyponatremia (SIADH)**\n\n### 동반증상별\n| 동반 | 우선 |\n|---|---|\n| 활력·각성 ↑ | Fluoxetine, Bupropion (오전) |\n| 성기능 문제 | Bupropion, Mirtazapine |\n| 다약제 | Escitalopram, Sertraline |\n| **+만성통증·섬유근통** | **Duloxetine 30→60mg** (FDA 섬유근통). Venlafaxine 37.5→225mg (HTN 주의) |\n| **+수면·체중감소** | **Mirtazapine 15mg HS→15~45mg** |\n| +무기력·금연 | **Bupropion 150mg SR→150~300mg** |\n\n⚠ Duloxetine 60mg 이상 추가 효과 근거 부족.\n\n### 불안 (NICE CG113)\n- GAD·공황: SSRI (escitalopram·sertraline)\n- OCD: **Fluvoxamine 50→100~300mg**\n- 무대 불안: Propranolol 10~40mg (공연 1~2h 전)\n- 급성 불안 단기 PRN (2~4주): Alprazolam 0.25~0.5mg PRN, Lorazepam 0.5~1mg PRN\n\n⚠ **BZD는 NICE GAD routine X** — PRN/최단기간. **고령 회피 (Beers 2023 강한 권고)**.\n\n### 불면 (AASM 2017 / Beers)\n**개시장애**:\n- Ramelteon 8mg HS-1h (의존·금단 거의 X)\n- 멜라토닌 (⚠ AASM 1차 권고 X)\n- **Zolpidem** 5~10mg (고령 회피 — Beers)\n- Triazolam 0.125~0.25mg (고령 회피)\n\n**유지장애**:\n- **Doxepin 3~6mg** (의존성 적음 — AASM 권고)\n- Mirtazapine 15mg HS\n- Trazodone 25~100mg (⚠ AASM 2017 1차 사용 말 것)\n\n**개시+유지**: Zolpidem CR 6.25~12.5mg (고령 회피)",
+      sources: ["APA Practice Guideline for MDD (2010)","AAFP 2023 Pharmacologic Treatment of Depression","NICE NG222 / CG113","AASM 2017 Chronic Insomnia CPG","AGS Beers Criteria 2023","FDA labels"]
     }
   },
   uiHooks: null
@@ -2551,6 +2555,10 @@ var _cbt_meta_v2 = {
 KNOWLEDGE_BUNDLE["anxiety-depression-cbt"] = _cbt_meta_v2;
 KNOWLEDGE_BUNDLE["CBT"] = _cbt_meta_v2;
 KNOWLEDGE_BUNDLE["인지행동치료"] = _cbt_meta_v2;
+KNOWLEDGE_BUNDLE["psychiatric-pharmacology"] = _cbt_meta_v2;
+KNOWLEDGE_BUNDLE["정신과약물"] = _cbt_meta_v2;
+KNOWLEDGE_BUNDLE["불면"] = _cbt_meta_v2;
+KNOWLEDGE_BUNDLE["insomnia"] = _cbt_meta_v2;
 
 /* hepatitis-b-management — B형간염 진단·치료·HCC 감시 (4-26 deep-extract).
    기존 v1 "B형간염"·"hepatitis B" 키 본문 보존(예방 vs 진단/치료 분리), 진단·치료 protocol은 별도 topic으로 격리. */
@@ -4081,6 +4089,10 @@ var _thyroid_fna_cnb_v2 = {
     notes: {
       content: "가정의학과 1차 진료에서 직접 시술 영역 아님 — 의뢰 후 합병증 인지·환자 교육이 1차 의료 책임. 시술 전 환자 약 복용력 (특히 노인 다약제) 정확 확인 필수 (의뢰 시 약 list 동봉).",
       sources: []
+    },
+    classification: {
+      content: "### K-TIRADS 분류 — 결절 위험도·FNA 적응 (KSThR 2021)\n| 등급 | 분류 | 악성 위험 | FNA/CNB 적응 |\n|---|---|---|---|\n| **K-TIRADS 1** | 무결절 | — | — |\n| **K-TIRADS 2** | 양성 | **<2%** | 일반 X |\n| **K-TIRADS 3** | 낮은 의심 | **2~10%** | **>1.5cm 이상** |\n| **K-TIRADS 4** | 중간 의심 | 10~40% | **≥1cm** |\n| **K-TIRADS 5** | 높은 의심 | >60% (실측 70~80%) | **≥1cm** |\n\n⚠ raw 정정: K-TIRADS 2 risk **<2%** (raw \"<3%\"), K-TIRADS 3 risk **2~10%** (raw \"3~10%\"), K-TIRADS 3 cutoff **>1.5cm** (raw \">2cm\"는 보수적).\n\n**판독 보고서 표기**: 심평원 갑상선초음파 급여기준은 K-TIRADS 분류 기재를 필수로 요구.\n\n**ATA / ACR-TIRADS / K-TIRADS 차이**:\n- ATA 2015: pattern-based\n- ACR-TIRADS 2017: point-based (specificity·biopsy 감소 우선)\n- K-TIRADS 2021: pattern-based, 한국 PTC 유병률 반영 sensitivity 우선 (~96%)",
+      sources: ["대한갑상선영상의학회(KSThR) 2021 K-TIRADS Consensus (KJR 2021;22(12):2094)"]
     }
   },
   uiHooks: null
@@ -4089,6 +4101,8 @@ KNOWLEDGE_BUNDLE["thyroid-fna-cnb"] = _thyroid_fna_cnb_v2;
 KNOWLEDGE_BUNDLE["갑상선FNA"] = _thyroid_fna_cnb_v2;
 KNOWLEDGE_BUNDLE["갑상선CNB"] = _thyroid_fna_cnb_v2;
 KNOWLEDGE_BUNDLE["thyroid biopsy"] = _thyroid_fna_cnb_v2;
+KNOWLEDGE_BUNDLE["K-TIRADS"] = _thyroid_fna_cnb_v2;
+KNOWLEDGE_BUNDLE["KTIRADS"] = _thyroid_fna_cnb_v2;
 
 /* salivary-gland-stones — 타석증 (4-30 ENT bulk). [TIPS] */
 var _salivary_stones_v2 = {
@@ -5516,3 +5530,67 @@ KNOWLEDGE_BUNDLE["해외여행백신"] = _travel_vacc_v2;
 KNOWLEDGE_BUNDLE["yellow-fever"] = _travel_vacc_v2;
 KNOWLEDGE_BUNDLE["황열"] = _travel_vacc_v2;
 KNOWLEDGE_BUNDLE["malaria-prophylaxis"] = _travel_vacc_v2;
+
+/* paresthesia v2 — AAFP 2020 / AAN 2022 / ASCO 2020 (5-6 inbox phase 3). [CLINICAL] */
+var _paresthesia_v2 = {
+  kind: "disease",
+  keywords: ["손발저림","paresthesia","peripheral-neuropathy","polyneuropathy","glove-and-stocking","gabapentin","pregabalin","duloxetine","mecobalamin","B12","B6","INH","CIPN"],
+  primarySources: [
+    "AAFP 2020 Peripheral Neuropathy Evaluation",
+    "AAN 2022 Painful Diabetic Neuropathy Guideline (Neurology, doi 10.1212/WNL.0000000000013038)",
+    "ASCO 2020 CIPN Guideline (JCO.20.01399)",
+    "대한가정의학회 일차의료 가이드라인 — 신경병증성 통증 (2022)"
+  ],
+  sections: {
+    definition: {
+      content: "손발저림은 **대칭성 (당뇨·약물·영양) vs 비대칭성 (포착·신경근)** 구분이 진단 첫걸음. 1차 의료에서 가장 흔한 원인은 [[diabetic-peripheral-neuropathy|당뇨병성 신경병증]]·[[carpal-tunnel-syndrome|수근관 증후군]].",
+      sources: []
+    },
+    classification: {
+      content: "### 대칭성 (Glove and stocking)\n- 당뇨병성 → [[diabetic-peripheral-neuropathy]]\n- 알코올성 → [[alcohol-use-disorder]]\n- 항암제·약물 (CIPN, INH 등)\n- 비타민 B12 결핍 → [[anemia]]\n- 요독증 (CKD) → [[CKD]]\n- **갑상선저하증** → [[thyroid-disorder]] (대칭 polyneuropathy)\n- 단클론감마글로불린병증 ([[multiple-myeloma]] 관련)\n\n### 비대칭성 / 국소\n- **포착성**: 수근관(1~3지) → [[carpal-tunnel-syndrome]], 척골신경(4~5지)\n- **신경근**: 경추/요추 디스크·협착 — 피부분절 방사통\n- 다발 단신경염 (혈관염)\n- 신경총병증 (외상·종양·방사선)\n- 과호흡 — 입 주변 저림",
+      sources: []
+    },
+    exam: {
+      content: "### Red flags (AAFP 2020)\n| 항목 | 의심 |\n|---|---|\n| 급격 진행 (수일) 위약감 | **GBS** — 응급 |\n| 중추소견 (복시·구음·편측마비·보행 실조) | 뇌·척수 |\n| **대소변 장애** | **말총·척수 압박** — 응급 |\n| 전신 (체중감소·발열) | 악성·혈관염 |\n\n### 1차 검사 (AAFP 2020)\n**기본 패널 (모든 환자)**: CBC, CMP, FBG/HbA1c, **TSH**, **B12**, **SPEP/IFE** (단클론 스크리닝)\n**추가**: Folate·Vit D, ESR/CRP·ANA·RF, HIV/HCV\n**영상·생리**: EMG/NCS (비정상·국소 의심), MRI/CT (척추), **비권장**: 명확한 국소 증상 없는 brain MRI·비특이 tumor marker",
+      sources: []
+    },
+    protocol: {
+      content: "### 신경병증성 통증 — 4계열 동등 (AAN 2022)\n| 계열 | 대표 약물 |\n|---|---|\n| **TCA** | Amitriptyline 10mg HS (고령·부정맥·BPH 주의) |\n| **SNRI** | Duloxetine 30→60mg, Venlafaxine 37.5→75mg (HTN 주의) |\n| **Gabapentinoid** | Gabapentin 300mg qd~tid → 1,200~3,600mg/일, Pregabalin 75mg bid → 300~600mg |\n| **Sodium channel blocker** | Oxcarbazepine, Lamotrigine, Lacosamide |\n\n**4계열 동등 — 단일 1차 X**. 환자 동반질환·비용·부작용 기반 선택.\n\n### 원인별\n- B12 결핍 → mecobalamin (위축성 위염 시 IM)\n- 당뇨 조절 → [[diabetes]]\n- 유발 약물 (INH 등) 중단·조정\n- 수근관 → 부목·생활습관 → [[carpal-tunnel-syndrome]]",
+      sources: []
+    },
+    precaution: {
+      content: "### 고령·CKD — Gabapentinoid 감량 필수\n- Gabapentin: CrCl <30 → ≤700mg/day\n- Pregabalin: CrCl <30 → ≤150mg/day\n\n### INH (결핵약) 복용력\n- **Pyridoxine (B6) 결핍** 신경병증\n- **B6 50~100mg/day 보충 우선** (예방 25~50mg)\n\n### 항암치료력 (CIPN — ASCO 2020)\n- **Duloxetine 30→60mg** — established painful CIPN에 대한 **유일하게 적정 근거 약물** (조건부 권고, benefit modest)\n- **Coasting 효과**: oxaliplatin·cisplatin·vincristine 종료 후 수주~수개월 악화 가능\n- 예방·완화에 다른 약물(gabapentinoid·TCA 등)은 ASCO routine 권고 X\n\n### 임산부\n- 비약물 우선 (수근관 부목, 체위·운동)\n- 신경병증 약물 대부분 권고 부족",
+      sources: []
+    },
+    referral: {
+      content: "- **신경과**: EMG/NCS 필요, 보행 장애·감각 소실 뚜렷, 비전형·비대칭·급속 진행, 운동 우세\n- **정형외과/신경외과**: 수술적 처치 필요한 포착성·중증 척추협착·디스크\n- **응급실**: 급성 위약감(GBS), 대소변 장애(말총·척수), Red flag\n- 관련: [[diabetic-peripheral-neuropathy]], [[carpal-tunnel-syndrome]], [[diabetes]], [[anemia]], [[thyroid-disorder]], [[alcohol-use-disorder]], [[CKD]], [[low-back-pain]], [[multiple-myeloma]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["paresthesia"] = _paresthesia_v2;
+KNOWLEDGE_BUNDLE["손발저림"] = _paresthesia_v2;
+KNOWLEDGE_BUNDLE["peripheral-neuropathy"] = _paresthesia_v2;
+KNOWLEDGE_BUNDLE["polyneuropathy"] = _paresthesia_v2;
+KNOWLEDGE_BUNDLE["CIPN"] = _paresthesia_v2;
+KNOWLEDGE_BUNDLE["신경병증성통증"] = _paresthesia_v2;
+
+/* chest-xray-template — 기숙사 입소·검진 SOAP template (5-6 phase 3). [TIPS — by 미르] */
+var _cxr_template_v2 = {
+  kind: "topic",
+  keywords: ["흉부엑스레이","chest-xray","CXR","기숙사-입소","검진","Z115","general-medical-examination"],
+  primarySources: [
+    "[TIPS — by 미르] 외래 routine SOAP 양식"
+  ],
+  sections: {
+    notes: {
+      content: "### 사용 맥락\n- 기숙사 입소·취업·학교 입학·일반 검진용 CXR 결과지\n- 무증상 검진 명시 (URI Sx -)\n- 상병코드 **Z115** (General medical examination)\n\n### SOAP Template\n```\nCC: 기숙사 입소 검사\nS:  URI Sx (-)\nO:  V/S check\nA:  General medical examination (Z115)\nP:  Chest PA\n```\n\n### 변형\n| 검진 목적 | CC 변형 |\n|---|---|\n| 기숙사 입소 | 기숙사 입소 검사 |\n| 취업 검진 | 취업 검진 |\n| 학교 입학 | 학교 입학 검사 |\n| 흉부 검진 (URI 사후 등) | 흉부 검진 |\n\n### 비고\n- 환자가 호흡기 증상 동반 시 별도 SOAP (CC = \"기침·가래·호흡곤란\") — 본 template 부적합\n- 발열·체중감소 등 system 증상이 있으면 결핵·악성 감별 필요",
+      sources: ["[TIPS — by 미르]"]
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["chest-xray-template"] = _cxr_template_v2;
+KNOWLEDGE_BUNDLE["흉부엑스레이-검진"] = _cxr_template_v2;
+KNOWLEDGE_BUNDLE["기숙사CXR"] = _cxr_template_v2;
