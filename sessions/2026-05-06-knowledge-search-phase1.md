@@ -123,6 +123,6 @@
 3. **Guideline 제거 응집도**: handleCuration·buildCurationCtx·hasGuidableContent·useEffect·탭 버튼·탭 콘텐츠·state·prompt·api 함수까지 9개 위치 산재. 단일 surface가 9개 코드 지점에 의존하는 구조였음 — 단순화 이득이 예상보다 컸음.
 
 ### 다음 세션 반영
-- Liby ingest skill에 wikilink 보존 옵션 검토 필요 (Phase 2 선결 과제)
+- ~~Liby ingest skill에 wikilink 보존 옵션 검토 필요~~ → **정정 (2026-05-06 후속 진단)**: stripping 없음. 5-D(2026-04-24 신설) 미적용 이전 엔트리(약 80개)에 wikilink 빈약. 그러나 `keywords` 배열(98% 엔트리, 평균 9.5개)이 동의어 사전 역할로 검색 품질 보완 중 → 실질 검색 영향 작음. Phase 2 별도 작업 불필요. 다음 auditor 호출 시 "5-D 미적용 엔트리 보강" 항목으로 후보 발굴 (agents/auditor.md 2026-05-06 추가).
 - `sections.differential` 등 v2 미사용 섹션이 검색에 raw 노출됨 — myth 외 추가 제외 필터 필요한지 미르 결단 필요
 - 미르 실사용 후 "검색이 자주 안 되는 키워드" 로그 수집 → 동의어/검색 가중치 튜닝 입력

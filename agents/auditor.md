@@ -29,6 +29,7 @@ Liby와 독립적으로 동작 — 수집자가 자기 수집물을 감사하는
 | **link 형식 일관성** (2026-05-05 신설) | 외부 entry 참조가 wikilinks `[[X]]` 형식 아닌 경우 검출 — backtick `` `X.md` ``, markdown link `[X](path)`, plain text `knowledge/by-disease/X.md` 등. 옵시디언 그래프뷰에서 link 미인식 → 시각적 탐색 가치 손실. 수정 권고. |
 | **연관 entry link 누락** (2026-05-05 신설) | 의학적으로 연관 패턴이 본문에 명시(예: "IBS-FD overlap 20-30%", "메니에르로 진행 가능", "동반 시 ___" 등)되어 있으나 해당 entry로의 wikilinks가 없는 경우. 보완 권고 — 의학 연관성 휴리스틱이므로 false positive 허용, 미르 확인 후 추가. |
 | **dangling wikilinks** (2026-05-05 신설) | `[[X]]` 참조가 있으나 X.md 또는 bundle entry로 존재하지 않음. ① 오타 수정, ② 참조 삭제, ③ X entry ingest 중 선택 권고. 미래 entry rename·삭제로 발생 가능. |
+| **5-D 미적용 엔트리 보강** (2026-05-06 신설) | bundle 엔트리의 sections.content 안에 다른 엔트리의 key/keyword가 등장하지만 `[[X]]` wikilink로 변환되지 않은 경우 → 5-D(SKILL.md §5-D auto-wikilinks) 후행 적용 권고. 특히 5-D 신설(2026-04-24) 이전 ingest된 약 80개 엔트리 우선. knowledge/ MD 240 wikilink → bundle 150 wikilink (62.5% 보존), alias 39 → 3 (7.7%) 격차 해소. 검색 backlink·옵시디언 그래프 뷰 가치 보강. **자동 수정 금지 — 후보 목록 제시 후 미르 승인 ingest로 일괄 처리**. (배경: sessions/2026-05-06-knowledge-search-phase1.md 회고) |
 
 ## 절차
 
