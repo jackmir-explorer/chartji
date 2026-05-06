@@ -40,9 +40,18 @@ ingest 직전 체크: `sections` key 전부가 vocabulary 18개 또는 slugify(k
 - 환자 식별 정보(이름·나이·날짜·기관명 등)가 포함된 내용 ingest 금지
 - TIPS/INSIGHTS 항목을 출처(by ㅇㅇㅇ) 없이 저장 금지 — 출처 불명 시 반드시 미르에게 확인
 - **거대 파일 분할 금지** (2026-05-06 R2): Liby ingest로 비대해진 md를 Liby가 다시 자르는 건 이해충돌. 분할은 Auditor 영역 (`agents/auditor.md` "거대 파일 분할 후보" 항목). Liby는 분할 후 bundle 재컴파일·동기화만 담당.
+- **기존 entry에 이질 주제 추가 금지** (2026-05-06 신설 — heart-failure-volume-overload 사건 후속): Liby가 후속 ingest로 "보완"을 추가할 때 **기존 entry의 핵심 주제와 다른 주제이면 새 entry로 만들 것**. 같은 entry에 합치면 검색·LLM inject 시 주제 부조화 발생. 판단 기준: 새 컨텐츠의 PMID·키워드·임상 적용이 기존 entry의 primarySources·keywords·임상 흐름과 명백히 다른 도메인이면 → 새 entry. 의심 시 미르에게 확인.
 
 ## Ingest 트리거
 미르가 raw 내용을 제공하고 Librarian을 호출할 때만 실행.
+
+### 신규 ingest 시 주제 정합성 체크 (2026-05-06 신설 — heart-failure-volume-overload 사건 후속)
+기존 entry에 추가하기 전:
+1. 기존 entry의 주석·primarySources·keywords·핵심 sections 확인
+2. 새 컨텐츠의 주제·PMID·키워드와 비교
+3. **명백히 다른 도메인 → 새 entry 생성** (parents 필드로 관계 표현)
+4. 같은 도메인의 보강·심화 → 기존 entry sections에 추가 OK
+5. 애매하면 미르에게 확인
 
 ### 이미지·PDF 입력 감지
 미르가 Liby 호출 시 이미지 또는 PDF를 첨부한 경우:
