@@ -4827,3 +4827,334 @@ KNOWLEDGE_BUNDLE["depression-screening"] = _depression_screening_v2;
 KNOWLEDGE_BUNDLE["우울증스크리닝"] = _depression_screening_v2;
 KNOWLEDGE_BUNDLE["PHQ-9"] = _depression_screening_v2;
 KNOWLEDGE_BUNDLE["PETRUSHKA"] = _depression_screening_v2;
+
+/* dyslipidemia v2 — KSoLA 2022 / ACC-AHA 2018 (5-6 inbox ingest). [CLINICAL, REGULATORY] */
+var _dyslipidemia_v2 = {
+  kind: "disease",
+  keywords: ["이상지질혈증","dyslipidemia","고지혈증","statin","ezetimibe","fibrate","LDL","CAC","심혈관위험","지질강하"],
+  primarySources: [
+    "한국지질·동맥경화학회(KSoLA) 이상지질혈증 진료지침 5판 2022",
+    "ACC/AHA 2018 Cholesterol Guideline (Circulation 2019)",
+    "ESC/EAS 2019 Dyslipidaemia Guidelines",
+    "심평원 약제 보험인정기준"
+  ],
+  sections: {
+    classification: {
+      content: "### 위험도·LDL 목표 (KSoLA 2022)\n| 위험군 | 정의 | LDL 목표 |\n|---|---|---|\n| **초고위험** | **관상동맥질환 (MI 포함)** | **<55** |\n| **고위험** | 뇌혈관·말초동맥·복부대동맥류, DM 10년+ 또는 표적장기손상 | <70 |\n| **중등도** | 위험인자 ≥2 또는 DM <10년·표적장기손상 무 | <100 |\n| **저위험** | 위험인자 0~1 | <160 |\n\n**위험인자**: 남≥45/여≥55(폐경), HTN, 조기 심뇌혈관 가족력(남<55/여<65), 흡연, HDL<40. **HDL>60 시 위험인자 1개 차감**.",
+      sources: []
+    },
+    comparison: {
+      content: "### Statin 강도 (LDL 감소율, ACC/AHA 2018)\n| 강도 | 감소 | 약물·용량 |\n|---|---|---|\n| 저강도 | <30% | Simva 10, Prava 10~20, Lova 20, Fluva 20~40 |\n| 중등도 | 30~50% | Atorva 10~20, **Rosuva 5~10, Pitava 1~4**, Simva 20~40 |\n| 고강도 | ≥50% | Atorva 40~80, Rosuva 20~40 |\n\n⚠ Pitava 1mg은 **중등도** (저강도 X — 자주 혼동).",
+      sources: []
+    },
+    protocol: {
+      content: "1. 고위험·초고위험 → 처음부터 **고강도 statin**\n2. LDL 미달 → **ezetimibe 10mg/day 추가**\n3. 그래도 미달 → PCSK9 검토 (전문의)\n4. 부작용 → 강도 감량·교체·격일 시도\n5. **생활요법(운동·DASH·금연·체중)은 항상 병행**\n\nLDL이 30대로 떨어져도 부작용 없으면 statin 유지 가능 (the lower the better).",
+      sources: []
+    },
+    insurance: {
+      content: "### 한국 보험 인정 (심평원)\n| 약제 | 기준 |\n|---|---|\n| **Statin** | 위험인자 0~1: LDL>160 / 위험인자 ≥2: LDL>130 / CVD·DM: LDL>100 |\n| **Fibrate** | TG≥500(즉시) / 위험인자·DM에서 TG>200(statin 우선) |\n| **Ezetimibe** | Statin 단독 후 LDL 미달 또는 statin 불내성/증량 불가 시 추가·단독 |\n\n⚠ Ezetimibe 1차 statin 병용은 보험 일반 인정 아님.",
+      sources: []
+    },
+    monitoring: {
+      content: "- 초치료: **1개월 후 LFT + CK** (AST/ALT·CK 3배+ 시 중단 검토)\n- **3개월 후 LDL** 평가\n- 이후 **6개월 간격**\n- CAC ≥100 또는 ≥75 percentile → statin 강력 권고 (ACC/AHA 2018). 이미 statin 시작했으면 추가검사 적응증 거의 없음.",
+      sources: []
+    },
+    referral: {
+      content: "- 가족성 고콜레스테롤혈증 의심 (LDL≥190, 가족력) → 내분비/심장\n- 고강도 statin + ezetimibe 후도 미달 → PCSK9 검토\n- 관련: [[diabetes-dyslipidemia]], [[home-based-hypertension]], [[obesity]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["dyslipidemia"] = _dyslipidemia_v2;
+KNOWLEDGE_BUNDLE["이상지질혈증"] = _dyslipidemia_v2;
+KNOWLEDGE_BUNDLE["고지혈증"] = _dyslipidemia_v2;
+KNOWLEDGE_BUNDLE["statin"] = _dyslipidemia_v2;
+KNOWLEDGE_BUNDLE["ezetimibe"] = _dyslipidemia_v2;
+KNOWLEDGE_BUNDLE["LDL"] = _dyslipidemia_v2;
+
+/* diabetes v2 — KDA 2023 / ADA 2025 (5-6 inbox ingest). [CLINICAL] */
+var _diabetes_v2 = {
+  kind: "disease",
+  keywords: ["당뇨","diabetes","T2DM","HbA1c","metformin","DPP-4","SGLT-2","GLP-1","당화혈색소","공복혈당"],
+  primarySources: [
+    "KDA 2023 당뇨병 진료지침",
+    "ADA 2025 Standards of Care",
+    "KDIGO 2024 Diabetes in CKD",
+    "KDA-KSN Metformin/CKD 합의문",
+    "FDA Drug Safety Communication 2016 (DPP-4·HF)"
+  ],
+  sections: {
+    definition: {
+      content: "### 진단 (KDA 2023 / ADA 2025) — 1개 이상\n1. **HbA1c ≥6.5%**\n2. **공복혈장혈당 ≥126** (8h 금식)\n3. **OGTT 2h ≥200** (75g)\n4. 다뇨·다음·체중감소 + **무작위 혈장혈당 ≥200**\n\n증상 없으면 다른 날 재검 필요.",
+      sources: []
+    },
+    exam: {
+      content: "**문진**: BMI, 운동, 식사, 합병증 — 숨참·어지럼증, 소변 거품·빈뇨, 시야 흐림, 체중감소·식욕, 손발저림 ([[diabetic-peripheral-neuropathy]])\n\n**기본 랩**: HbA1c **3개월마다, 적어도 연 2회**, 공복혈당, 지질, eGFR, UA(미세알부민뇨/Cr ratio), LFT, TSH, 안과 검진, 발 검진",
+      sources: []
+    },
+    indication: {
+      content: "**혈당 조절 목표 (KDA 2023)**\n- 일반 성인 **HbA1c <6.5%** (ADA는 <7%)\n- 고령·합병증·저혈당 위험군: 7~8%까지 완화 가능\n- 임신 중: <6%",
+      sources: []
+    },
+    protocol: {
+      content: "### 1단계 — Metformin\n- XR 500mg bid 시작 → 750~1000mg bid → 최대 2000~2500mg/day\n- 위장관 부작용 시 천천히 증량\n\n**신기능 (KDA-KSN 합의)**\n| eGFR | 권고 |\n|---|---|\n| ≥45 | 정상 사용 |\n| **45~30** | **신규 금지, 기존 ≤1000mg/day 감량** |\n| **<30** | **금기** |\n\n### 2단계 — 병용 선택\n**DPP-4 inhibitor**: 식후혈당, 저혈당 낮음, 체중 중립. ⚠ Saxa·Alogliptin은 **HF 입원 위험 (FDA 2016)** — HF에서 회피.\n\n**SGLT-2i** (비만·HF·CKD·단백뇨): empa/cana(CV), dapa/cana(신장).\neGFR 기준:\n- **심·신장 보호 시작: eGFR≥20** (투석 전까지)\n- 혈당강하 시작: dapa<45 / empa·cana<30\n- ⚠ \"<30 금기\"는 구버전 — 심·신 보호는 **≥20부터**\n- 부작용: UTI/생식기 감염, DKA, 탈수 → 반복 UTI는 [[glp1-selection-strategy|GLP-1 우선]]\n\n**GLP-1 RA**: 비만·CV 동반 우선 — [[wegovy]], [[mounjaro]], [[ozempic]]",
+      sources: []
+    },
+    monitoring: {
+      content: "- HbA1c: 미달성·치료변경 시 3개월마다, 안정 시 연 2회\n- 지질·신기능·UA: 연 1회 이상\n- 안저·발: 연 1회",
+      sources: []
+    },
+    referral: {
+      content: "- DKA/HHS → 응급실\n- 단백뇨 진행, eGFR<30 → [[CKD]] 신장내과\n- 망막증 → 안과\n- 1형 의심·임신·다중약제 후 조절 불량 → 내분비\n- 관련: [[diabetes-dyslipidemia]], [[CKD]], [[obesity]], [[glp1-selection-strategy]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["diabetes"] = _diabetes_v2;
+KNOWLEDGE_BUNDLE["당뇨"] = _diabetes_v2;
+KNOWLEDGE_BUNDLE["T2DM"] = _diabetes_v2;
+KNOWLEDGE_BUNDLE["HbA1c"] = _diabetes_v2;
+KNOWLEDGE_BUNDLE["당화혈색소"] = _diabetes_v2;
+KNOWLEDGE_BUNDLE["metformin"] = _diabetes_v2;
+
+/* hypertension v2 — KSH 2022 (5-6 inbox ingest). [CLINICAL] */
+var _hypertension_v2 = {
+  kind: "disease",
+  keywords: ["고혈압","hypertension","HTN","가정혈압","ARB","ACEi","BB","CCB","이뇨제","이차성고혈압","표적장기손상"],
+  primarySources: [
+    "한국고혈압학회(KSH) 2022 진료지침 (focused update)",
+    "대한가정의학회 이차성 고혈압 종설",
+    "심평원 고혈압 약제 인정기준",
+    "MacMahon S et al. 강압-stroke 메타분석"
+  ],
+  sections: {
+    exam: {
+      content: "**S**: BMI, 가정혈압, 식사·운동, 증상\n- 뇌: 두통·시야장애·신경이상·어지러움\n- 심장: 흉통·호흡곤란·두근거림\n- 신장: 부종·혈뇨·단백뇨\n- 임신 여부\n\n**O**: V/S, 초진 시 기본 lab + TFT, ECG·CXR·UA(연 1회). 기저질환·약물(NSAIDs·스테로이드·피임약) 확인.",
+      sources: []
+    },
+    classification: {
+      content: "### 위험인자 (ESC/ESH 통용 cutoff)\n1. 나이: 남≥45, 여≥55 (**65세 이상은 위험인자 2개 카운트**)\n2. 조기 심뇌혈관 가족력: 남<55, 여<65\n3. 흡연 / 4. BMI>25 / 5. 이상지질혈증 / 6. 당뇨전단계 / 7. 당뇨병\n\n### 무증상 표적장기손상 (KSH 2022)\n뇌졸중·TIA·MI·IHD·HF, 미세알부민뇨(≥30), 단백뇨(≥300), eGFR<60, ABI<0.9, IMT≥1mm, PWV>10m/s, 고혈압망막증\n\n⚠ 위험인자 cutoff는 ESC/ESH 기반 — KSH 2022 본문 명시 X.",
+      sources: []
+    },
+    indication: {
+      content: "### Target BP (KSH 2022)\n| 환자군 | 목표 |\n|---|---|\n| 일반/65세 이상 | **<140/90** |\n| 표적장기손상/CKD/CVD/고위험 DM | **<130/80** |\n\n⚠ 관찰연구상 SBP<110~120/DBP<70 미만 사망률 증가 (J-curve, KSH 권고문 외 참고).",
+      sources: []
+    },
+    protocol: {
+      content: "### 약제 시작\n- SBP≥140 또는 DBP≥90 → 1제\n- **SBP≥160 또는 DBP≥100 → 처음부터 2제 병용** (보험 인정)\n- 처방 후 가정혈압·24시간 ABPM\n\n### 약물 선택 (KSH 2022)\n| 약물 | 우선 적응증 |\n|---|---|\n| **ACEi/ARB** | 광범위 1차 (HF·CKD·단백뇨·DM·post-MI·LVH) |\n| **CCB** | 노인 ISH, 안정형 협심증, 경동맥경화·LVH |\n| **이뇨제** | 노인 ISH, HF, stroke 후 (PROGRESS) |\n| **BB** | 협심증, post-MI, HFrEF, 빈맥성 부정맥 |\n\n⚠ **BB는 DM·대사증후군에서 주의** — 우선 적응증 아님.\n\n부작용: ARB(K+·신기능), BB(서맥). 변경 시 1개월 f/u — 가정혈압 지참. SBP<110 또는 어지러움 → 0.5T 또는 격일.",
+      sources: []
+    },
+    lifestyle: {
+      content: "저염식(<6g/day), 체중감량(BMI<25), 절주(2잔 이하), 운동(주 5회 30분 유산소), DASH diet.\n- 모두 시행 시 **SBP 약 20 / DBP 약 10 mmHg 감소**\n- **SBP 10~20 감소만으로 stroke 30~40%, IHD 15~20% 감소** (MacMahon 메타)",
+      sources: []
+    },
+    referral: {
+      content: "### 이차성 고혈압 의뢰\n- <30세(가족력 없는 청년) 또는 **≥55~60세 새로 발생**\n- 약물 저항성 → [[resistant-hypertension]]\n- 처음부터 ≥180/120 또는 심한 합병증\n- 임신 중 → 산부인과\n- 관련: [[resistant-hypertension]], [[home-based-hypertension]], [[CKD]], [[diabetes]], [[heart-failure]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["hypertension"] = _hypertension_v2;
+KNOWLEDGE_BUNDLE["고혈압"] = _hypertension_v2;
+KNOWLEDGE_BUNDLE["HTN"] = _hypertension_v2;
+KNOWLEDGE_BUNDLE["가정혈압"] = _hypertension_v2;
+
+/* osteoporosis v2 — KSBMR 2024 / 심평원 (5-6 inbox ingest). [CLINICAL, REGULATORY] */
+var _osteoporosis_v2 = {
+  kind: "disease",
+  keywords: ["골다공증","osteoporosis","BMD","T-score","비스포스포네이트","bisphosphonate","denosumab","데노수맙","SERM","raloxifene","CTX","P1NP"],
+  primarySources: [
+    "KSBMR 골다공증 진료지침 2024",
+    "심평원 보험인정기준 (2024.5.1, 2024.12)",
+    "ASBMR/AACE/Endocrine/ECTS/NOF Joint Guidance",
+    "ECTS 2020 Denosumab Discontinuation"
+  ],
+  sections: {
+    classification: {
+      content: "### T-score (WHO/ISCD/KSBMR 2024)\n| T-score | 분류 |\n|---|---|\n| ≥-1.0 | 정상 |\n| -1.0 < T < -2.5 | osteopenia |\n| ≤-2.5 | osteoporosis |\n| ≤-2.5 + 골절 | severe |\n\nL spine·Femoral neck·Total hip 중 **가장 낮은 값** 사용. L spine은 인접 차이 1 이상 X, 내려갈수록 절대값 커져야 정상.\n\n### 골다공증성 골절 인정 부위 (심평원)\n**척추, 대퇴골, 요골 원위부, 상완골 근위부, 골반골**. ⚠ 천골·발목은 명시 안 됨 — 최신 고시 재확인.",
+      sources: []
+    },
+    protocol: {
+      content: "### 비스포스포네이트 (1차)\n| 약물 | 용법 |\n|---|---|\n| Alendronate | 70mg 경구 1주 1회 |\n| Risedronate | 35mg 1주 1회 또는 150mg 월 1회 |\n| Ibandronate | 150mg 월 1회 또는 IV 3개월 1회 |\n| Zoledronate | 5mg IV **연 1회** |\n\n**신기능 (약제별 차이)**\n- Alendronate·Zoledronate: **CrCl<35 금기**\n- Risedronate·Ibandronate: **CrCl<30 금기**\n- ⚠ \"GFR<30 일률 금기\"는 부정확\n\n**Drug holiday**: 경구 5년/IV 3년 후 재평가. 4년+ 복용 또는 위험요인 동반 시 발치·임플란트 전 **2~3개월 휴약**.\n\n부작용: 식도점막 자극, 저칼슘혈증, 신기능장애, 비정형골절, ONJ.\n\n### 데노수맙 (RANKL inhibitor, 60mg SQ q6mo)\n폐경후·남성 골다공증 고위험군. **중단 시 rebound — 즉시 BP 전환**:\n- 마지막 데노수맙 후 **6개월 시점 (다음 예정일)**, 늦어도 7개월 이내\n- Alendronate 70mg 1주 1회 또는 Risedronate 35mg 1주 1회 — **최소 1~2년**\n- Zoledronate 사용 시: 마지막 데노수맙 후 6~9개월 시점\n\n### SERM (Raloxifene 60mg/day, Bazedoxifene 20mg/day)\n척추골절 예방, 신기능 저하 사용 가능, 침윤성 유방암 위험 감소(라록시펜). ⚠ VTE·치명적 stroke 위험.",
+      sources: []
+    },
+    insurance: {
+      content: "### 비스포스포네이트 (심평원)\n| 조건 | 인정 |\n|---|---|\n| (1) DXA 중심골 T≤-2.5 | **1년** |\n| (2) 말초골 T≤-3.0 | 6개월 |\n| (3) 골다공증 골절 | **3년** |\n\n추적 T≤-2.5 지속 시 연장. T -2.5 초과 ~ -2.0 호전 시도 1년 추가.\n\n### 데노수맙 (2024.5.1 / 2024.12)\n| 조건 | 초기 |\n|---|---|\n| 중심골 T≤-2.5 | **1년/2회** |\n| 골다공증 골절 | **3년/6회** |\n\n추적 T≤-2.5 지속 시 **추가 2년/4회**. T -2.5 초과 ~ -2.0 호전 시도 **추가 2년/4회** (라록시펜·바제독시펜·BP 교체 가능). BMD 추적 **1년(365일) 간격** 필수.\n\n⚠ 데노수맙 호전 시 추가는 **2년/4회** (인터넷 자료 \"1년/2회\"는 오기 — 2024 고시 정정).",
+      sources: []
+    },
+    monitoring: {
+      content: "**BMD**: 일반 1년 1회 (정상 시 2년). 스테로이드 ≥3개월/PHPT: 정상골밀도 첫 1년 1회→2년 1회 / T≤-3 6개월 1회→1년 1회. 임신 관련 골절 의심: 6개월 간격 2회. 다른 약제→데노수맙 변경: **마지막 데노수맙+6개월 후** 측정.\n\n**Vit D**: 연 1회.\n\n**CTX/P1NP** (IOF/ECTS·KSBMR 2024): Baseline → 3개월(항흡수제) 또는 3~6개월(동화제) → 이후 1년 간격. LSC 비교로 약제 순응도/반응 평가.",
+      sources: []
+    },
+    referral: {
+      content: "- 비전형 대퇴골 골절·ONJ 의심 → 정형/구강악안면\n- 부갑상선기능항진증·악성 동반 → 내분비\n- 데노수맙 5년+ ONJ 위험요인 → 골다공증 전문\n- 관련: [[CKD]], [[home-based-hypertension]], [[frailty]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["osteoporosis"] = _osteoporosis_v2;
+KNOWLEDGE_BUNDLE["골다공증"] = _osteoporosis_v2;
+KNOWLEDGE_BUNDLE["BMD"] = _osteoporosis_v2;
+KNOWLEDGE_BUNDLE["T-score"] = _osteoporosis_v2;
+KNOWLEDGE_BUNDLE["denosumab"] = _osteoporosis_v2;
+KNOWLEDGE_BUNDLE["데노수맙"] = _osteoporosis_v2;
+KNOWLEDGE_BUNDLE["비스포스포네이트"] = _osteoporosis_v2;
+
+/* anemia v2 — AAFP 2018/2021 (5-6 inbox ingest). [CLINICAL] */
+var _anemia_v2 = {
+  kind: "disease",
+  keywords: ["빈혈","anemia","IDA","철결핍","ferritin","TIBC","ACD","B12","folate","reticulocyte"],
+  primarySources: [
+    "AAFP 2018 Anemia in Older Adults",
+    "AAFP 2021 IDA (AGA Guidelines)",
+    "AAFP 2013 IDA Evaluation",
+    "AAFP 2017 Vitamin B12 Deficiency",
+    "KDIGO 2026 Anemia in CKD"
+  ],
+  sections: {
+    exam: {
+      content: "**문진**: 피로·어지럼증·창백·호흡곤란·두근거림. 출혈(월경과다·흑변/혈변·코피·잦은 멍). 영양(채식·편식). 만성질환(신장·간·류마티스·갑상선). 가족력. 약물(NSAIDs·항응고제·**메트포르민 4개월+** B12 결핍·**PPI/H2RA 12개월+**). 전신 증상(체중감소·발열·야간발한).\n\n**신체**: 결막·피부 창백, 빈맥/심잡음, 비장·간 비대, 신경(B12), 설염·구각염(IDA), 황달(용혈).\n\n### 단계적 검사\n**필수 1차**: CBC + RBC indices, 말초도말, 망상적혈구\n**MCV·1차 결과 기반 2차**:\n- MCV↓: Ferritin·Iron·TIBC·TSAT\n- MCV↑: B12·Folate\n- MCV 정상 + Reticulocyte: 신기능·CRP / 고시: LDH·Bili·도말\n- 모두: BUN/Cr, LFT, CRP/ESR",
+      sources: []
+    },
+    classification: {
+      content: "### 감별 패턴 (AAFP 2021)\n| 지표 | **IDA** | **ACD** | **B12/엽산** | **용혈성** | **신성** |\n|---|---|---|---|---|---|\n| Iron | ↓ | ↓ | 정상/↑ | ↑ | ↓ |\n| **Ferritin** | **↓ (<15 매우 특이 / <45 권고 cutoff)** | 정상/↑ | 정상/↑ | ↑ | 정상/↑ |\n| TIBC | ↑ | ↓ | 정상/↓ | ↓ | ↓ |\n| TSAT | <15% | <20% | — | — | — |\n| 추가 | — | CRP↑ | MCV↑ | LDH↑·Bili↑ | eGFR↓ |\n\n⚠ AAFP 2021 IDA cutoff **<45 ng/mL** 권고 (감도 85%, 특이도 92%). <15는 매우 특이적이지만 감도 낮음.\n\n**B12 결핍 위험군 (AAFP 2017)**: 메트포르민 4개월+, 위/소장 절제, IBD, PPI/H2RA 12개월+, 위축성 위염, 엄격 채식, 75세+",
+      sources: []
+    },
+    protocol: {
+      content: "### 경구 철분제 (IDA 1차, AAFP 2013)\n- **하루 elemental iron 150~200mg** 분복 (~10% 흡수)\n- **Hb 4~8주 내 정상화** 기대\n- 빈혈 교정 후 저장철 회복 위해 **추가 3개월** (흡수 불량/지속 출혈 시 6개월까지)\n- 부작용: 위장장애 → 식사 직후·격일 시도\n\n### 원인별\n- B12 결핍: cobalamin/mecobalamin 보충\n- 신성: EPO ([[CKD]]/[[ckd-monitoring]])\n- 만성질환: 기저질환 치료\n- 용혈성: 원인 감별 후 전문의",
+      sources: []
+    },
+    monitoring: {
+      content: "(BC/Alberta CPG; AAFP 명시 스케줄 없음)\n- 시작 4주: Hb 재검 (반응 확인)\n- 정상화 후 3~6개월: ferritin·CBC 재검\n- 안정 시 6~12개월 간격",
+      sources: []
+    },
+    referral: {
+      content: "- 골수 부전 의심 (pancytopenia·blast) → 혈액내과\n- 용혈성 원인 감별 → 혈액내과\n- 만성 GI 출혈 의심 (>50 IDA) → 내시경/소화기\n- 신성 빈혈 → [[CKD]]\n- 관련: [[CKD]], [[diabetes]], [[multiple-myeloma]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["anemia"] = _anemia_v2;
+KNOWLEDGE_BUNDLE["빈혈"] = _anemia_v2;
+KNOWLEDGE_BUNDLE["IDA"] = _anemia_v2;
+KNOWLEDGE_BUNDLE["철결핍"] = _anemia_v2;
+KNOWLEDGE_BUNDLE["ferritin"] = _anemia_v2;
+
+/* headache v2 — IHS 2024 / SNNOOP10 / EFNS 2010 (5-6 inbox ingest). [CLINICAL] */
+var _headache_v2 = {
+  kind: "disease",
+  keywords: ["두통","headache","편두통","migraine","긴장성두통","tension-type","TTH","triptan","트립탄","amitriptyline","propranolol","topiramate","SNNOOP10"],
+  primarySources: [
+    "SNNOOP10 (Do TT et al. Neurology 2019, PMC6340385)",
+    "AAFP 2022 Acute Headache in Adults",
+    "IHS 2024 Acute Migraine Global Practice Recommendations",
+    "AAN/AHS 2012 Episodic Migraine Prevention (Silberstein)",
+    "EFNS 2010 Tension-type Headache Guideline (Bendtsen)",
+    "대한두통학회 2019/2021 지침"
+  ],
+  sections: {
+    exam: {
+      content: "**문진**: 언제·어떻게·어디·한쪽? 점점 악화? 동반증상? Aggravating/relieving (수면·스트레스·음식·환경). First episode? 진통제 사용 빈도(MOH).\n\n### Red flags — SNNOOP10\n| 항목 | 의미 |\n|---|---|\n| **S** Systemic | 발열·체중감소·면역저하 |\n| **N** Neurologic | 의식변화·국소결손·papilledema |\n| **N** New onset | 50세+ 새 두통 |\n| **O** Onset | **Thunderclap** (수초 내 최고조) |\n| **O** Older | 65세+ 새 두통 |\n| **P** Pattern change | 패턴 변화·진행 악화 |\n| **P** Pregnancy | 임신/산후 |\n| **P** Painful eye | 자율신경 동반 안통 |\n| **P** Posttraumatic | 외상 후 |\n| **P** Pathology | 진통제 남용·기저질환 |\n\n→ 양성 시 영상(CT/MRI), 응급평가.",
+      sources: []
+    },
+    protocol: {
+      content: "### 편두통 — 급성기 (IHS 2024)\n- **트립탄 1차 특이치료** (sumatriptan, rizatriptan) — 중등도~중증\n- 경증: NSAIDs 또는 acetaminophen\n- 항구토제 병용 (metoclopramide)\n\n⚠ **Ergotamine·DHE는 IHS 2024 \"should be avoided at all times\"** — 1차 제외.\n\n### 편두통 — 예방 (AAN/AHS 2012)\n| 등급 | 약물 |\n|---|---|\n| **Level A (1차)** | **Propranolol, Metoprolol, Topiramate, Divalproex** |\n| Level B (2차) | Amitriptyline, Venlafaxine — 동반 우울·불면·TTH 공존 시 우선 |\n\n⚠ Amitriptyline 단독 1차 제시는 부정확.\n\n### 긴장성두통 (TTH) — 급성기 (EFNS 2010)\n- **Acetaminophen 1000mg 또는 Ibuprofen 400mg 단독** (필요 시 순차 시도)\n- 심한 발작: **Ketorolac 30~60mg IM 단회**\n\n⚠ 타이레놀+NSAIDs 일률 병용은 1차 권고 X.\n\n### TTH — 예방 (EFNS 2010)\nAmitriptyline 시작 10~25mg/HS, 매주 10~25mg 증량, 유지 30~75mg, 효과 1주째부터, 4주 무효 시 다른 약물로 전환. 6개월 이상 후 점진적 감량 시도(전문가 의견).",
+      sources: []
+    },
+    referral: {
+      content: "- Red flag (SNNOOP10) → 응급실/신경과\n- 표준 예방약 2~3종 실패 → 신경과\n- MOH 진단 → 신경과 동반관리\n- 관련: [[dizziness]], [[anxiety-depression-cbt]], [[migraine]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["headache"] = _headache_v2;
+KNOWLEDGE_BUNDLE["두통"] = _headache_v2;
+KNOWLEDGE_BUNDLE["편두통"] = _headache_v2;
+KNOWLEDGE_BUNDLE["긴장성두통"] = _headache_v2;
+KNOWLEDGE_BUNDLE["tension-type-headache"] = _headache_v2;
+KNOWLEDGE_BUNDLE["TTH"] = _headache_v2;
+KNOWLEDGE_BUNDLE["SNNOOP10"] = _headache_v2;
+
+/* thyroid-disorder v2 — ATA 2014/2016 (5-6 inbox ingest). [CLINICAL] */
+var _thyroid_disorder_v2 = {
+  kind: "disease",
+  keywords: ["갑상선","thyroid","갑상선항진증","hyperthyroidism","갑상선저하증","hypothyroidism","methimazole","메티마졸","levothyroxine","LT4","TSH","Graves"],
+  primarySources: [
+    "ATA 2016 Hyperthyroidism Guidelines (PMID 27521067)",
+    "ATA 2014 Hypothyroidism Treatment Guidelines (PMC4267409)",
+    "대한갑상선학회(KTA) 진료지침"
+  ],
+  sections: {
+    exam: {
+      content: "**증상**: BP·HR·BT·BWT, 부종·배변이상·손떨림·피로, 결절·압통\n\n**1차 검사**: TSH·fT4 (필요 시 fT3·anti-TPO/Tg·TRAb). 결절 동반 시 초음파 → K-TIRADS ([[thyroid-fna-cnb]])",
+      sources: []
+    },
+    protocol: {
+      content: "### 갑상선 항진증 (ATA 2016) — Methimazole\n| 단계 | 용량 |\n|---|---|\n| 초기 (FT4 중증도 따라) | **10~30mg/day** |\n| 유지 | **5~10mg/day** |\n| 기간 | **12~18개월** 후 TSH 정상 + TRAb 음전 시 중단 (서서히 감량) |\n\n증상 조절: Beta blocker (propranolol, atenolol).\n\n**부작용 모니터링**:\n- 무과립구증: 열·인후염 시 **즉시 CBC with diff**\n- 간손상: baseline LFT + 증상 시 재검\n- 가려움/발진: minor\n\n재발 시: RAI 또는 갑상선 절제술 → 내분비.\n\n### 갑상선 저하증 (ATA 2014) — Levothyroxine\n**치료 시작**: TSH >10 mIU/L (CHF·CV mortality↑). TSH 정상~10은 개별 평가.\n\n| 환자군 | 시작 |\n|---|---|\n| 일반 성인 | **1.6 μg/kg/일** (~50~100μg/day) |\n| 50~60세+ 또는 허혈심장병 | **25~50μg/day** 서서히 증량 |\n\n**복용**: 아침 식전 30~60분 또는 취침 전 마지막 식사 후 ≥3시간 (흡수율 60~80%).",
+      sources: []
+    },
+    monitoring: {
+      content: "### 항진증 추적\n- 초치료 후 4주\n- 용량 조절 중 4~8주\n- 안정 시 2~3개월\n\n### 저하증 — TSH target & 추적\n- Target **0.4~4.6** (≈0.5~4.0). 고령(70~80세): 4~6 상향 고려.\n- 용량 변경 후 **4~6주 후 재검**, 안정 시 **6~12개월 간격**\n\n임상 통상 (가이드라인 명문 X):\n- TSH<5: 12.5 또는 25μg 증감\n- TSH<0.35: 25μg 감량 → 1달 f/u\n- 정상: 6개월 f/u",
+      sources: []
+    },
+    referral: {
+      content: "- Graves 안병증·중증 항진증 → 내분비\n- RAI/수술 검토 → 내분비\n- 임신 중 갑상선 이상 → 내분비\n- 결절 + 기능 이상 → [[thyroid-fna-cnb]]\n- 관련: [[thyroid-fna-cnb]], [[depression-screening]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["thyroid-disorder"] = _thyroid_disorder_v2;
+KNOWLEDGE_BUNDLE["갑상선"] = _thyroid_disorder_v2;
+KNOWLEDGE_BUNDLE["갑상선항진증"] = _thyroid_disorder_v2;
+KNOWLEDGE_BUNDLE["hyperthyroidism"] = _thyroid_disorder_v2;
+KNOWLEDGE_BUNDLE["갑상선저하증"] = _thyroid_disorder_v2;
+KNOWLEDGE_BUNDLE["hypothyroidism"] = _thyroid_disorder_v2;
+KNOWLEDGE_BUNDLE["methimazole"] = _thyroid_disorder_v2;
+KNOWLEDGE_BUNDLE["levothyroxine"] = _thyroid_disorder_v2;
+KNOWLEDGE_BUNDLE["LT4"] = _thyroid_disorder_v2;
+
+/* unintentional-weight-loss v2 — AAFP 2021 (5-6 inbox ingest). [CLINICAL] */
+var _weight_loss_v2 = {
+  kind: "disease",
+  keywords: ["체중감소","weight-loss","unintentional-weight-loss","의도하지않은체중감소","악액질","GDS","MMSE","GI-cancer","빈혈3종"],
+  primarySources: [
+    "Wong CJ. Unintentional Weight Loss in Older Adults. Am Fam Physician 2021;104:34-40",
+    "Mayo Clinic Proc — Rational Approach",
+    "BMJ Best Practice (Topic 548)",
+    "USPSTF 2023 Depression and Suicide Risk Screening"
+  ],
+  sections: {
+    definition: {
+      content: "**6~12개월 내 usual body weight의 5% 이상 감소** = 임상적으로 의미있는 체중감소 (AAFP 2021). 사망률·이환율 증가와 연관.",
+      sources: []
+    },
+    differential: {
+      content: "### 외래 노인 코호트 빈도 (AAFP 2021)\n| 순위 | 원인 | 빈도 |\n|---|---|---|\n| 1 | **악성종양** (GI암·폐·림프종) | 19~36% |\n| 2 | **비악성 GI질환** | 9~45% |\n| 3 | 정신사회적 (우울·알코올·고립) | 9~24% |\n\n⚠ \"노인에서 우울증이 2번째 흔함\"은 **요양시설 거주자에 한해** 1순위(최대 58%) — 외래는 비악성 GI > 우울증.\n\n### 9 평가 영역\n1. 악성종양 / 2. 소화기 / 3. 내분비/대사 / 4. 정신과 / 5. 만성 감염/염증 / 6. 혈액질환(감염과 분리) / 7. 심폐 / 8. 신경 / 9. **약물·사회적**(polypharmacy·구강건강·고립·빈곤·식사 접근성)",
+      sources: []
+    },
+    exam: {
+      content: "### 표준 1차 패널\n- **CBC, BMP, LFT**\n- **TSH**, 혈당/HbA1c\n- CRP/ESR, LDH, ferritin, 단백전기영동\n- **UA, FOBT, CXR**\n- **연령별 표준 암검진**\n\n### 단서 기반 선택 검사 (1차 일률 X)\n- **종양표지자 (AFP/PSA/CA19-9/CEA)**: isolated weight loss 1차 비권고 — 단서 시만\n- 내시경/CT/MR: 임상 단서 시\n- 갑상선 항체·부신: 단서 시\n\n⚠ Tumor marker 일괄 패널은 1차 권고 아님 (잘못된 통념).\n\n**신체검사**: 구강 건강, 황달, 갑상샘, 결막창백, 림프절, 복부 종괴",
+      sources: []
+    },
+    monitoring: {
+      content: "### 노인 추가 스크리닝\n| 도구 | 대상 |\n|---|---|\n| **GDS (특히 GDS-15)** | 우울증 — USPSTF 2023 노인 포함 모든 성인 권고 (B) |\n| **MMSE/MoCA** | 인지저하 — **체중감소 임상 단서** 있을 때 |\n\n⚠ 치매 일반 무증상 노인 인지선별은 USPSTF I statement(근거 불충분). 단, 체중감소 평가 맥락은 임상 권고.",
+      sources: []
+    },
+    referral: {
+      content: "- 영상·검사상 악성 의심 → 해당 분과\n- 6개월간 워크업 음성 + 지속 → 노인의학/내과 종합평가\n- 우울 양성 + 자살사고 → 정신건강의학과\n- 관련: [[depression-screening]], [[anxiety-depression-cbt]], [[frailty]], [[anemia]], [[diabetes]], [[obesity]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["unintentional-weight-loss"] = _weight_loss_v2;
+KNOWLEDGE_BUNDLE["체중감소"] = _weight_loss_v2;
+KNOWLEDGE_BUNDLE["weight-loss"] = _weight_loss_v2;
+KNOWLEDGE_BUNDLE["악액질"] = _weight_loss_v2;

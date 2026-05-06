@@ -129,6 +129,11 @@ JSON만 반환 (다른 텍스트 절대 금지):
   ankle-sprain (급성 발목 염좌/Ottawa rules X-ray 적응증/PEACE LOVE 패러다임/반경성 보조기 5-10일·신경근 재활 8-12주 — 외래 초기 평가·관리 맥락)
   cardiac-rehabilitation (심장재활/MI·HF 안정기·PCI·CABG·판막수술 후/유산소+저항 주 3-5회 12주/입원 중 의뢰 우선 — 심혈관 질환 후 통합 회복 맥락)
   depression-screening (PHQ-9·GAD-7/PETRUSHKA RCT 개인맞춤 항우울제/SSRI 일률 처방 회피·증상 프로파일 맞춤/8주 중단율 38% ↓ — 우울증 스크리닝·첫 처방 선택 맥락)
+  hypertension (일반 고혈압 외래 초진·문진/위험인자 평가/표적장기손상/약물 선택·target BP/이차성 의심 — 일반 HTN 진단·처방 맥락. 저항성·재택 HTN은 별도 키)
+  anemia (빈혈/IDA·ACD·B12 결핍·신성·용혈성 감별/Ferritin·TIBC·TSAT/경구철 4~8주 정상화·교정 후 3개월 — 일반 빈혈 평가·처방 맥락)
+  headache (두통/SNNOOP10 red flag/편두통 트립탄·예방 propranolol·topiramate/긴장성두통 acetaminophen·amitriptyline 예방/ergotamine 회피 — 일반 두통 평가·처방 맥락. migraine 키와 보완)
+  thyroid-disorder (갑상선 항진증·저하증/Methimazole 12~18개월·무과립구증/LT4 1.6μg/kg·TSH>10 시작·공복 복용/TSH target 0.4~4.6 — 갑상선 기능 이상 외래 진단·처방 맥락)
+  unintentional-weight-loss (의도하지 않은 체중감소/6~12mo 5%+/노인 외래 암>비악성GI>우울/9 평가영역/tumor marker 1차 X·단서 기반/GDS·MMSE — 체중감소 워크업·정신·인지 스크리닝 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */
