@@ -56,6 +56,58 @@ knowledge/ 파일 형식으로 초안 작성:
 - 1차의료 적용 여부 불명확: 명시 후 미르 판단 요청
 - 출처 검증이 부분 지지(PARTIALLY SUPPORTED) 또는 미확인 시: `sourcing-rules.md` Attribution 원칙 따름 — `[CLINICAL — 조건부]` / `[출처 미확인]` 태그 사용, Researcher 검증 큐 등록
 
+### 6. study-note "일차의료 적용 포인트" 섹션 작성 가이드 (2026-05-05 신설)
+
+study-note의 `## 일차의료 적용 포인트` 섹션은 미르가 매일 직접 읽는 main 학습 채널이다. 이 섹션은 **연구 본래 narrative를 평준화하지 않고**, 논문이 자연스럽게 제공하는 영역에서만 sub-bullet으로 작성한다.
+
+**원칙**:
+- **강제 frame 금지** — 모든 논문에 같은 sub-bullet 구조를 채우지 않음. 시스템 연구는 "약물 디테일" sub-bullet 자체를 안 만듬 (강제 N/A 표기 X)
+- **할루시네이션 방어** — 한국 brand·보험·구체 분기 임계값은 논문에 없으면 `[출처 미확인 — researcher 검증 권장]` 또는 `[가이드라인 default 인용: {출처}]` 명시
+- **연구 main message 보존** — 임상 적용 sub-bullet도 논문 강조점에서 도출. 강제로 frame에 짜맞추기 X
+
+**sub-bullet 구성 — 자연스러운 영역만**:
+
+| sub-bullet | 작성 가능 조건 |
+|---|---|
+| `### 진단·평가` | 논문이 진단 기준·검사 적응증·alarm feature를 명시 |
+| `### 약물·처방 디테일` | 논문이 약물 가이드 또는 처방 권고를 포함 (시스템·정책 연구는 작성 X) |
+| `### 외래 결정 분기` | 논문 메시지에서 외래 결정 흐름 도출 가능 (RCT는 "어떤 환자에 적용", 메타는 "효능 기반 단계", 가이드라인은 "단계별 분기") |
+| `### 환자 교육` | 논문 메시지를 한국어 외래 톤 1-2문장으로 자연스럽게 변환 가능할 때만 |
+| `### 한국 외래 변환 시 확인` | 한국 brand·보험·가용성·임상 외삽 위험 영역 |
+
+**논문 type별 sub-bullet 구성 가이드**:
+
+- **임상 가이드형** (Annals In the Clinic / NEJM Clinical Practice / AFP) → 진단·약물·결정·교육·한국 변환 모두 자연스러움
+- **RCT 효능** (NEJM RCT 등) → "어떤 환자에 적용 / 미적용 case", 환자 교육은 효능 메시지 변환, 약물 디테일은 가이드라인 default 인용
+- **메타·체계적 고찰** → 효능 합성을 임상 결정에 어떻게, 약물 디테일은 가이드라인 default
+- **관찰 연구** (처방 패턴·실제 사용) → "임상 시사점" 위주, 표준 약물 디테일은 별 entry 인용 (예: "[[gabapentin]] 가이드라인 표준 용량 참조")
+- **시스템·정책 연구** → 약물 sub-bullet 자체 작성 X. "어떤 환자 type 적용 / 미적용 / 한국 적용 시 핵심 (의료법·자가측정 교육)" 위주
+
+**환자 교육 한국어 standard 작성 시**:
+- 외래에서 1-2분 안에 말할 수 있는 자연스러운 톤
+- 진단 메시지 + 치료 메시지 + 다시 와야 할 trigger 구조 권장
+- 강제 X — 논문 type상 부자연스러우면 작성 안 함 (예: 처방 패턴 분석 논문)
+- LLM 자체 작성 가능한 영역 (할루시네이션 위험 낮음 — 한국어 자연 문장)
+
+**할루시네이션 방어 강제 항목**:
+1. 한국 brand명 — 논문에 없으면 추정 금지, [출처 미확인] 태그
+2. 한국 보험·급여 — 논문에 없으면 추정 금지, [출처 미확인 — researcher 검증 권장] 태그
+3. 약물 용량 — 논문 명시 없으면 "[가이드라인 default 인용: {출처}]" 명시
+4. Red flag 임계값 — 논문 또는 가이드라인 출처 명시
+
+### 7. 외부 entry 참조 — wikilinks 형식 의무 (2026-05-05 신설)
+
+study-note의 `## 관련 knowledge/ 엔트리` 섹션 + 본문 어디서든 다른 knowledge entry를 참조할 때는 **반드시 옵시디언 wikilinks `[[entry-name]]` 형식**.
+
+**OK**: `[[hyposmia]]`, `관련 [[ibs]]`, `([[functional-dyspepsia]] 참조)`
+**금지**: `` `hyposmia.md` ``, `[hyposmia](path)`, `knowledge/by-disease/X.md`
+
+knowledge md ↔ study-note 양방향 link 시도:
+- study-note 끝 `## 관련 knowledge/ 엔트리`: knowledge md를 wikilinks로 참조
+- knowledge md에 자동 추가 가능 시: `## 출처 학습 노트` 섹션에 study-note wikilinks (옵시디언 그래프뷰 양방향 시각화)
+
+상세 규칙: `skills/knowledge-ingest/SKILL.md` Step 10 참조.
+
 ## 출력 형식
 ```
 ## [논문 제목 축약]

@@ -5,6 +5,15 @@
 
 ---
 
+2026-05-06 | by-disease/dyslipidemia.md | 신규 — 이상지질혈증 외래 본체: KSoLA 2022 위험도·LDL목표(초고위험<55/고위험<70/중등도<100/저위험<160), ACC/AHA 2018 statin 강도 (Pitava 1mg=중등도 정정), 심평원 보험기준, CAC≥100 강력권고 [CLINICAL, REGULATORY] (inbox 가정의학과insight 1/8 — Researcher 검증 완료)
+2026-05-06 | by-disease/diabetes.md | 신규 — T2DM 외래 본체: KDA 2023/ADA 2025 진단·HbA1c<6.5% 목표, Metformin 단계 + eGFR 45~30 감량(KDA-KSN), DPP-4 HF 주의(FDA 2016), SGLT-2i 심·신 보호 eGFR≥20부터 가능(2024 갱신) [CLINICAL] (inbox 2/8 — Researcher 검증 완료)
+2026-05-06 | by-disease/hypertension.md | 신규 — 일반 고혈압 외래 본체: KSH 2022 target BP·표적장기손상·약물 선택, ESC/ESH 위험인자 cutoff 명시, BB는 DM에서 주의 정정, MacMahon 메타 강압효과, J-curve 관찰 명시 [CLINICAL] (inbox 3/8 — Researcher 검증 완료)
+2026-05-06 | by-disease/osteoporosis.md | 신규 — 골다공증 외래 본체: KSBMR 2024 T-score, BP 신기능 약제별 차이(Aln/Zol CrCl<35, Ris/Iban CrCl<30), 데노수맙 2024.5/2024.12 고시 (호전 시 추가 2년/4회 정정), CTX/P1NP 추적 [CLINICAL, REGULATORY] (inbox 4/8 — Researcher 검증 완료)
+2026-05-06 | by-disease/anemia.md | 신규 — 빈혈 외래 본체: AAFP 2018/2021 단계적 검사(필수 1차→MCV 기반 2차), IDA ferritin <15 매우 특이/<45 권고 cutoff, 경구철 4~8주·교정 후 3개월(통상)~6개월(흡수불량), 메트포르민·PPI 12개월+ B12 결핍 [CLINICAL] (inbox 5/8 — Researcher 검증 완료)
+2026-05-06 | by-disease/headache.md | 신규 — 두통 외래 본체: SNNOOP10 red flag, 편두통 트립탄 1차+ergotamine 회피(IHS 2024), 예방 propranolol·topiramate 1차/amitriptyline Level B, TTH 단독 진통제(병용 1차 X), Ketorolac 30~60mg [CLINICAL] (inbox 6/8 — Researcher 검증 완료)
+2026-05-06 | by-disease/thyroid-disorder.md | 신규 — 갑상선 기능 이상 외래 본체: ATA 2016 항진증 MMI 12~18개월, 무과립구증·간손상 모니터링, ATA 2014 저하증 LT4 1.6μg/kg·TSH>10 시작·식전 30~60분, target 0.4~4.6 [CLINICAL] (inbox 7/8 — Researcher 검증 완료)
+2026-05-06 | by-disease/unintentional-weight-loss.md | 신규 — 의도하지 않은 체중감소 외래 본체: AAFP 2021 5%/6~12mo, 외래 노인 코호트 암>비악성GI>우울(요양시설 한정 우울 1순위), 9 평가영역(약물·사회적 추가), tumor marker 1차 X, GDS·MMSE 임상 단서 시 [CLINICAL] (inbox 8/8 — Researcher 검증 완료)
+2026-05-06 | knowledge-bundle.js / prompts.js | 위 8건 v2 B2 엔트리 등록 + TRIAGE calcCategories 5개 신규 추가 (hypertension·anemia·headache·thyroid-disorder·unintentional-weight-loss). dyslipidemia·osteoporosis·diabetes는 기존 카테고리 → 엔트리 충원
 2026-05-02 | by-disease/pocus-abdominal.md | 신규 — GP 복부 POCUS 적합 3대 영역(담석증·요로결석·AAA/수신증): 1,053건 네덜란드 GP 의뢰 분석, guideline 기반 의뢰 75% 배제 판독·대안진단 <10% [CLINICAL — 조건부] PMID:41528024 (Eur J Gen Pract 2026)
 2026-05-02 | by-disease/ankle-sprain.md | 신규 — 급성 발목 염좌: Ottawa Rules·PEACE&LOVE 프로토콜·외부 지지대 5~10일·신경근 재활 8~12주 [CLINICAL] PMID:41533404 (AFP 2025 Dec)
 2026-05-02 | by-disease/palliative-pain.md | 추가 — 임종기 Deprescribing: 재향군인 37,193명, 73% LBM 복용 중·22%만 중단; 스타틴·혈당강하제·항고혈압제·항혈전제·PPI·항치매제 체크리스트 [CLINICAL] PMID:41925169 (JAGS 2026)
@@ -142,3 +151,13 @@
 2026-04-17 | by-drug/glp1-selection-strategy.md | 보완 — GLP-1RA 전당뇨 정상혈당 회복률 비교(tirzepatide 93.3%/semaglutide 81%/liraglutide 66%) [INSIGHTS] — Diabetes Ther 2026 PMID:41984373
 2026-04-17 | by-disease/urticaria.md | Protocol Deep Dive — 만성 두드러기 4배 증량 프로토콜 (약물별 표준/4배용량 표, 2~4주 재평가, CBC+CRP/ESR+TSH 동반검사, omalizumab 300mg q4w, UAS7/UCT 모니터링, 임신·수유 Pregnancy Category 표, 일차의료 의뢰 기준) [CLINICAL] — EAACI 2021 PMID:34536239 + PMC9533216 (Ryan 2022 primary care review) + PMC9300824 (Kocatürk 2022 pregnancy)
 2026-04-17 | skills/protocol-deep-dive/SKILL.md | 신규 스킬 — 리뷰 초록 한계 넘는 구체 protocol 추적 방법 명세 (PMC full text → publisher WebFetch → primary guideline 순)
+2026-05-04 | by-disease/pocus-lung.md | 추가 — 현장(병원 전) 폐 POCUS 프로토콜 섹션 (기흉·간질성 증후군 감별, 거버넌스 프레임워크) [CLINICAL] — J Ultrasound Med 2026 PMID:41793408
+2026-05-04 | by-disease/msk-injection-therapy.md | 추가 — 외측상과염 초음파 유도 주사 3군 비교 RCT (코르티코스테로이드=PRP=오존, 6개월 동등) [CLINICAL] — Future Sci OA 2026 PMID:41972873
+2026-05-04 | by-disease/palliative-pain.md | 추가 — 암성 신경병증 통증 코르티코스테로이드 반응 예측 인자 (WBC·KPS·두개내 종양 기원) [CLINICAL] — J Pain Symptom Manage 2026 PMID:41654095
+2026-05-04 | by-disease/palliative-pain.md | 추가 — 임종기 완화의료 증상 관리 AFP 리뷰 (통증·오심·변비·식욕부진·섬망·기분 단계적 처방) [CLINICAL] — Am Fam Physician 2025 PMID:41252832
+2026-05-04 | by-drug/glp1-selection-strategy.md | 추가 — GLP-1RA 암 위험 메타분석 (48 RCT 94,245명, 주요 암 위험 증가 없음, 중등도 근거) [CLINICAL] — Ann Intern Med 2025 PMID:41359966
+2026-05-04 | by-disease/cancer-fatigue.md | 신규 — 저항운동이 암 관련 피로를 유의하게 감소 (AFP POEM 2025) [CLINICAL] — Am Fam Physician 2025 PMID:41252831
+2026-05-04 | by-disease/chronic-pain-integrative.md | 신규 — 태극권·웰니스 RCT: 만성 통증+PTSD+우울 동시 개선, 대면=원격 동등 [CLINICAL] — J Psychiatr Res 2026 PMID:41774973
+2026-05-04 | by-disease/MASH.md | 추가 — MASLD 1차의료 FIB-4 분층 + 레스메티롬 FDA 승인 + 세마글루타이드 신흥 옵션 [CLINICAL] — JAAPA 2025 PMID:41369205
+2026-05-04 | by-disease/frailty.md | 추가 — 허약 ITC 포괄 리뷰 (다계통 예비능 저하, 스크리닝 도구, 역전 가능 중재) [CLINICAL] — Ann Intern Med 2026 PMID:41662715
+2026-05-04 | guidelines/deprescribing.md | 신규 — 캐나다 일차의료 부적절 처방 선별 가이드라인 (≥65세 처방 점검 강력권고, STOPP/START) [CLINICAL, REGULATORY] — Can Fam Physician 2026 PMID:41844291

@@ -77,7 +77,7 @@ keywords: 이명, tinnitus, ringing in ears, 귀울림, 일과성 귀잡음, myo
 ### 내이수종 이명 [TIPS — by ENT 교수]
 
 - 매미·우웅 등 다양한 소리, 비행기 탄 듯·물에 들어간 듯한 먹먹함 동반
-- 메니에르·저주파 난청 spectrum (`low-freq-hearing-loss.md` 참조)
+- 메니에르·저주파 난청 spectrum ([[low-freq-hearing-loss]] 참조)
 - **U-turn(Betahistine 계열)** 고려
 
 ---

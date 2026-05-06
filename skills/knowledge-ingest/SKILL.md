@@ -406,6 +406,33 @@ ingest 완료 후 반드시 확인:
 - log.md: `YYYY-MM-DD | 파일명 | 내용 한 줄 요약`
 - index.md: 파일 목록 갱신
 
+### 10. 외부 entry 참조 — wikilinks 형식 의무 (2026-05-05 신설)
+
+knowledge md에서 다른 entry를 참조할 때는 **반드시 옵시디언 wikilinks `[[entry-name]]` 형식**을 사용한다. 이는 옵시디언 그래프뷰에서 entry간 연결을 시각화·탐색하기 위한 필수 규칙.
+
+**OK 형식**:
+- `[[hyposmia]]` — 옵시디언이 자동으로 `knowledge/by-disease/hyposmia.md`로 link
+- `([[ibs]] 참조)` — 괄호·문장에 자연 삽입
+- `관련 [[meniere]]` — 추론·연관 표시
+
+**금지 형식**:
+- ❌ `` `hyposmia.md` `` — backtick 코드 형식. 옵시디언 link 인식 X
+- ❌ `[hyposmia](by-disease/hyposmia.md)` — markdown link. 옵시디언이 인식하나 wikilinks가 더 자연·일관
+- ❌ `knowledge/by-disease/hyposmia.md 참조` — plain text path. link X
+
+**적용 영역**:
+- `## 의뢰 기준` 섹션의 cross-reference
+- `## 비고` / `## notes` 섹션의 관련 entry 언급
+- 본문 inline 어디든 (예: "동반 시 [[functional-dyspepsia]] 참조")
+- knowledge/by-drug/·guidelines/ 파일도 동일 적용
+
+**확인 절차**:
+- 신규 entry ingest 시 외부 참조 모두 `[[X]]` 형식인지 자가 검증
+- 기존 entry 보강 시 새 참조도 동일 적용
+- Auditor가 정기 감사로 누락·잘못된 형식 검출 (`agents/auditor.md` link 감사 기준 참조)
+
+> 미래 entry rename·삭제 시 dangling wikilinks가 발생할 수 있음. Auditor가 detect → 보완.
+
 ---
 
 ## 참조

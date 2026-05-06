@@ -56,6 +56,14 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - ckd-monitoring.md — 중등도 CKD(G3) 모니터링: 크레아티닌+시스타틴C 이중 방정식 > 크레아티닌 단독 [CLINICAL] (BMJ 2026 PMID:41856526) — topic
 - sex-hormone-vte-risk.md — 성호르몬 요법 VTE·심혈관 위험: HRT/COC/GAHT 제형·혈전성향증·과거력 4축 평가, 경피 우선 [CLINICAL] (NEJM 2026 PMID:41985134) — topic
 - smoking-cessation.md — 금연: 전자담배 vs NRT 껌 AFP 2026 POEM, 장기 안전성 unknowns [CLINICAL — 조건부, 초록 기반] (PMID:41839085) — topic
+- dyslipidemia.md — 이상지질혈증 외래 본체: KSoLA 2022 위험도 LDL 목표 + ACC/AHA 2018 statin 강도 (Pitava 1mg=중등도) + 심평원 보험기준 + CAC≥100 강력권고 [CLINICAL, REGULATORY]
+- diabetes.md — T2DM 외래 본체: KDA 2023/ADA 2025 진단·HbA1c<6.5%, Metformin 단계+eGFR 45~30 감량(KDA-KSN), DPP-4 HF 주의, SGLT-2i 심·신 보호 eGFR≥20+ [CLINICAL]
+- hypertension.md — 일반 고혈압 외래 본체: KSH 2022 target BP·표적장기손상·약물 선택, BB는 DM에서 주의(정정), MacMahon 메타 강압효과 [CLINICAL]
+- osteoporosis.md — 골다공증 외래 본체: KSBMR 2024 T-score, BP 신기능 약제별 차이(Aln/Zol CrCl<35, Ris CrCl<30), 데노수맙 2024.5/12 고시 호전 시 추가 2년/4회, CTX/P1NP [CLINICAL, REGULATORY]
+- anemia.md — 빈혈 외래 본체: AAFP 2018/2021 단계적 검사, IDA ferritin <15 매우특이/<45 권고 cutoff, 경구철 4~8주·교정 후 3개월~6개월, 메트포르민·PPI 12mo+ B12 결핍 [CLINICAL]
+- headache.md — 두통 외래 본체: SNNOOP10 red flag, 편두통 트립탄 1차+ergotamine 회피(IHS 2024), 예방 propranolol·topiramate 1차/amitriptyline Level B, TTH 단독 진통제 [CLINICAL]
+- thyroid-disorder.md — 갑상선 외래 본체: ATA 2016 항진증 MMI 12~18mo·무과립구증 모니터링, ATA 2014 저하증 LT4 1.6μg/kg·TSH>10·식전 30~60분, target 0.4~4.6 [CLINICAL]
+- unintentional-weight-loss.md — 의도하지 않은 체중감소 외래 본체: AAFP 2021 5%/6~12mo, 외래 노인 암>비악성GI>우울(요양시설 한정 우울 1순위), 9 평가영역, tumor marker 1차 X, GDS·MMSE [CLINICAL]
 
 ### by-drug/
 - vaccine-interval.md — 백신 접종 간격 원칙 (생+사/생+생/사+사) [CLINICAL] — topic
