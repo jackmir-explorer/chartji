@@ -2968,26 +2968,21 @@ KNOWLEDGE_BUNDLE["glp1-selection-strategy"] = _glp1_strategy_v2;
 KNOWLEDGE_BUNDLE["GLP1전략"] = _glp1_strategy_v2;
 KNOWLEDGE_BUNDLE["비만GLP-1"] = _glp1_strategy_v2;
 
-/* heart-failure-volume-overload — Volume Overload 평가 (4-27 BNP+POCUS) + HFpEF+비만 체중감량 전략 (4-28).
-   기존 v1 "heart-failure"·"심부전" 본문 보존, 보완 누적분은 별도 topic 키로 격리. */
+/* heart-failure-volume-overload — Volume Overload 평가 (BNP+POCUS, JAMA 2026 RCE).
+   HFpEF+비만 체중감량 전략은 별도 entry [[heart-failure-hfpef-obesity]]로 분리됨 (2026-05-06). */
 var _hf_volume_v2 = {
   kind: "topic",
-  keywords: ["heart-failure-volume-overload","volume overload","BNP","POCUS","B-lines","HFpEF","비만 심부전","심부전 체중감량"],
+  keywords: ["heart-failure-volume-overload","volume overload","BNP","POCUS","B-lines"],
   primarySources: [
-    "Cohen MT et al. Volume Overload Rational Clinical Examination. JAMA 2026. PMID:41729549",
-    "Borlaug BA et al. HFpEF + Obesity Weight-Loss Strategy. PMID:41802118"
+    "Cohen MT et al. Volume Overload Rational Clinical Examination. JAMA 2026. PMID:41729549"
   ],
   sections: {
     exam: {
       content: "### Volume Overload — BNP + POCUS B-lines (JAMA 2026 RCE)\n호흡곤란 환자의 volume overload 평가.\n\n| 검사 | 단독 강도 | LR |\n|---|---|---|\n| **BNP ≥100 ng/mL** | 최강 rule-in | LR 6.9 |\n| **POCUS B-lines 없음** | 최강 rule-out | LR 0.09 |\n| JVD·crackles·하지 부종 | 전통 진찰 | 정확도 BNP+POCUS보다 열등 |\n\n→ 외래·응급에서 호흡곤란 → BNP + POCUS B-lines 조합이 임상 검진보다 우월.\n\n> 출처: Cohen MT et al. JAMA 2026 RCE. PMID:41729549",
       sources: []
     },
-    protocol: {
-      content: "### HFpEF + 비만 — 체중감량이 최우선 치료 전략 (PMID:41802118)\n비만 ↔ HFpEF 악순환 기전:\n- 비만 → 심외막 지방·전신 염증 → 좌심실 강성·확장기 기능장애 → 운동내약↓\n- HFpEF → 운동제한 → 체중↑ → 비만 악화\n\n### GLP-1 RCT 근거 (HFpEF + 비만)\n| 약물 | 효과 |\n|---|---|\n| **Semaglutide** (STEP-HFpEF) | 운동능력·증상·QoL 개선 |\n| **Tirzepatide** (SUMMIT) | 운동능력·증상·QoL 개선, 비만 클수록 이익 큼 |\n\n→ HFpEF에서 체중감량=현재 최우선 치료 전략.\n→ HFrEF에서는 [[obesity|obesity]] paradox로 불확실 (현재 GDMT 4 pillars + 신중 체중관리).\n\n### 외래 적용\n- BMI ≥30 + HFpEF → GLP-1 ([[semaglutide|semaglutide]]/[[tirzepatide|tirzepatide]]) 적극 고려\n- 체중 5~10% 감량 목표 → 운동내약·증상 개선 가시화\n- 동반 OSA·[[MASH|MASH]]·당뇨 → GLP-1 종합 이익",
-      sources: []
-    },
     notes: {
-      content: "### 임상 적용 (volume overload 평가)\n- 호흡곤란 환자 외래 → BNP + POCUS B-lines 우선 (POCUS 가능 시)\n- BNP <100 + B-lines 없음 → 심부전 가능성 매우 낮음\n- BNP ≥100 단독 → rule-in 강력. 하지만 신부전·고령에서 위양성 주의 (NT-proBNP age-adjusted cutoff 고려)\n\n### 한계\n- POCUS B-lines: 검사자 의존성, 폐렴·간질성 폐질환에서 위양성\n- HFpEF + 비만 RCT 대부분 비당뇨 비만 — 실세계 다질환 환자 외삽 시 주의",
+      content: "### 임상 적용 (volume overload 평가)\n- 호흡곤란 환자 외래 → BNP + POCUS B-lines 우선 (POCUS 가능 시)\n- BNP <100 + B-lines 없음 → 심부전 가능성 매우 낮음\n- BNP ≥100 단독 → rule-in 강력. 하지만 신부전·고령에서 위양성 주의 (NT-proBNP age-adjusted cutoff 고려)\n\n### 한계\n- POCUS B-lines: 검사자 의존성, 폐렴·간질성 폐질환에서 위양성\n\n> HFpEF + 비만 체중감량 전략은 별도 entry: [[heart-failure-hfpef-obesity]]",
       sources: []
     }
   },
@@ -2995,7 +2990,6 @@ var _hf_volume_v2 = {
 };
 KNOWLEDGE_BUNDLE["heart-failure-volume-overload"] = _hf_volume_v2;
 KNOWLEDGE_BUNDLE["BNP-POCUS"] = _hf_volume_v2;
-KNOWLEDGE_BUNDLE["HFpEF-비만"] = _hf_volume_v2;
 
 /* obesity-pharmacotherapy-grade — TOS/OMA/OAC 비만 약물치료 GRADE 권고 (4-27 deep-extract).
    기존 v1 "obesity"·"비만" 본문 보존, GRADE 권고 누적은 별도 topic 키로 격리. */
@@ -5686,6 +5680,7 @@ var _hf_hfpef_obesity_v2 = {
 };
 KNOWLEDGE_BUNDLE["heart-failure-hfpef-obesity"] = _hf_hfpef_obesity_v2;
 KNOWLEDGE_BUNDLE["HFpEF 비만"] = _hf_hfpef_obesity_v2;
+KNOWLEDGE_BUNDLE["HFpEF-비만"] = _hf_hfpef_obesity_v2;
 
 /* heart-failure-cardiology-2025-update — 심장내과 핵심 업데이트 2025 (parent: heart-failure) */
 var _hf_cardio_2025_v2 = {
