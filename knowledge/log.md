@@ -14,6 +14,17 @@
 2026-05-06 | by-disease/thyroid-disorder.md | 신규 — 갑상선 기능 이상 외래 본체: ATA 2016 항진증 MMI 12~18개월, 무과립구증·간손상 모니터링, ATA 2014 저하증 LT4 1.6μg/kg·TSH>10 시작·식전 30~60분, target 0.4~4.6 [CLINICAL] (inbox 7/8 — Researcher 검증 완료)
 2026-05-06 | by-disease/unintentional-weight-loss.md | 신규 — 의도하지 않은 체중감소 외래 본체: AAFP 2021 5%/6~12mo, 외래 노인 코호트 암>비악성GI>우울(요양시설 한정 우울 1순위), 9 평가영역(약물·사회적 추가), tumor marker 1차 X, GDS·MMSE 임상 단서 시 [CLINICAL] (inbox 8/8 — Researcher 검증 완료)
 2026-05-06 | knowledge-bundle.js / prompts.js | 위 8건 v2 B2 엔트리 등록 + TRIAGE calcCategories 5개 신규 추가 (hypertension·anemia·headache·thyroid-disorder·unintentional-weight-loss). dyslipidemia·osteoporosis·diabetes는 기존 카테고리 → 엔트리 충원
+2026-05-06 | by-disease/hematuria.md | 신규 — AUA 2020 microhematuria: 미세현미경 ≥3 RBC/HPF 1회 진단(2회 이상 표준 X), risk-stratified (Low/Int/High) cystoscopy + CTU/sono, 사구체(RBC cast/dysmorphic/단백뇨) vs 비사구체 분기 [CLINICAL] (inbox phase 2 — Researcher 검증)
+2026-05-06 | by-disease/proteinuria.md | 신규 — KDIGO 2024 A1<30/A2 30~300/A3>300 + 신증후군 ACR≥2200, ACR>300 신장내과, 일과성 배제 새벽뇨 재검(AAFP Choosing Wisely), heatmap 연 1~4회 [CLINICAL] (inbox phase 2)
+2026-05-06 | by-disease/fatigue.md | 신규 — AAFP 2023 일반 피로(검사로 진단 5%), Red flag/1차 표적 검사, NICE NG206 ME/CFS GET 금기·CBT 보조, NICE 3mo / IOM 6mo 기준 병기 [CLINICAL] (inbox phase 2)
+2026-05-06 | by-disease/menopause.md | 신규 — NAMS 2022 HT timing 60세-10년/자궁 유무 ET·EPT, NAMS 2023 nonhormone fezolinetant Level I/paroxetine 7.5mg FDA 유일, clonidine·pregabalin 권고 안 함, KMS 2024 [CLINICAL] (inbox phase 2)
+2026-05-06 | by-disease/preconception-screening.md | 신규 — KSOG/CDC 기본 세트 Rubella·HBsAg·VZV, USPSTF 매독A·HIV A·HBV A·HCV B, MMR/varicella 1~2mo 전, HBsAg(+) 신생아 12h HepB+HBIG·HBV DNA→TDF [CLINICAL] (inbox phase 2)
+2026-05-06 | by-disease/parotitis-differential.md | 신규 — 5감별(화농성·mumps·림프절·턱밑·치성), 1차 amoxi/clav, "cefazolin+metronidazole" 표준 X 정정, 초음파 routine X (모호·농양·결석 시) [CLINICAL] (inbox phase 2)
+2026-05-06 | guidelines/bmd-coverage.md | 신규 — 심평원 BMD 급여 7대상·고위험 3요소·추적 간격(일반/스테로이드/임신 골절/4주 예외) [REGULATORY] (inbox phase 2)
+2026-05-06 | guidelines/breast-us-coverage.md | 신규 — 심평원 나942가·나940 유방·액와부 초음파, 진단/경과관찰/수술 후 비교 1회·초과 80% 본인부담, 단순초음파 초회부터 80%, 산정특례 우선 [REGULATORY] (inbox phase 2)
+2026-05-06 | guidelines/brain-metabolism-enhancers.md | 신규 — 7약제, 1종만 급여, **콜린알포 2025.9.21 치매 외 80% 선별급여 전환**, 사미온 5/10mg 뇌경색후유증·말초순환장애, 소마지나 24h 6주, 케타스 어지러움 효능, 니세틸 식약처 임상재평가 시장 퇴출 [REGULATORY] (inbox phase 2)
+2026-05-06 | guidelines/travel-vaccination.md | 신규 — CDC Yellow Book 2024 지역별 매트릭스, 황열 ICVP 2016 IHR 평생 유효, 일본뇌염 ≥1mo+위험요인, 말라리아 화학예방, 사우디 ACWY 의무 [CLINICAL] (inbox phase 2)
+2026-05-06 | knowledge-bundle.js / prompts.js | Phase 2 10 v2 B2 엔트리 등록 (6 disease + 4 topic, 463 keys). TRIAGE calcCategories 10개 신규
 2026-05-02 | by-disease/pocus-abdominal.md | 신규 — GP 복부 POCUS 적합 3대 영역(담석증·요로결석·AAA/수신증): 1,053건 네덜란드 GP 의뢰 분석, guideline 기반 의뢰 75% 배제 판독·대안진단 <10% [CLINICAL — 조건부] PMID:41528024 (Eur J Gen Pract 2026)
 2026-05-02 | by-disease/ankle-sprain.md | 신규 — 급성 발목 염좌: Ottawa Rules·PEACE&LOVE 프로토콜·외부 지지대 5~10일·신경근 재활 8~12주 [CLINICAL] PMID:41533404 (AFP 2025 Dec)
 2026-05-02 | by-disease/palliative-pain.md | 추가 — 임종기 Deprescribing: 재향군인 37,193명, 73% LBM 복용 중·22%만 중단; 스타틴·혈당강하제·항고혈압제·항혈전제·PPI·항치매제 체크리스트 [CLINICAL] PMID:41925169 (JAGS 2026)

@@ -134,6 +134,16 @@ JSON만 반환 (다른 텍스트 절대 금지):
   headache (두통/SNNOOP10 red flag/편두통 트립탄·예방 propranolol·topiramate/긴장성두통 acetaminophen·amitriptyline 예방/ergotamine 회피 — 일반 두통 평가·처방 맥락. migraine 키와 보완)
   thyroid-disorder (갑상선 항진증·저하증/Methimazole 12~18개월·무과립구증/LT4 1.6μg/kg·TSH>10 시작·공복 복용/TSH target 0.4~4.6 — 갑상선 기능 이상 외래 진단·처방 맥락)
   unintentional-weight-loss (의도하지 않은 체중감소/6~12mo 5%+/노인 외래 암>비악성GI>우울/9 평가영역/tumor marker 1차 X·단서 기반/GDS·MMSE — 체중감소 워크업·정신·인지 스크리닝 맥락)
+  hematuria (혈뇨/microhematuria/dipstick 양성/dysmorphic RBC·RBC cast/AUA 2020 risk-stratified — 사구체 vs 비사구체 감별·요로 영상 결정 맥락)
+  proteinuria (단백뇨/ACR/KDIGO A1·A2·A3/신증후군 ACR≥2200/일과성 단백뇨 배제·새벽뇨 재검 — 사구체질환·CKD 진행 평가 맥락)
+  fatigue (일반 피로/만성피로/검사로 진단 바뀌는 5%/Red flag·1차 검사·NICE NG206 GET 금기·ME-CFS NICE 3mo·IOM 6mo — 비특이적 피로 평가·정신 스크리닝 맥락. cancer-fatigue와 별도)
+  menopause (폐경/perimenopause/VMS·GSM/HT timing 60세-10년 룰/NAMS 2022·2023/fezolinetant·paroxetine·SSRI/clonidine·pregabalin 격하/POI — 폐경 호르몬·비호르몬 처방 맥락)
+  preconception-screening (임신 전 항체·감염 스크리닝/Rubella·HBsAg·VZV 기본 세트/매독·HIV·HCV/Toxo·CMV 위험군/MMR·varicella 임신 전 1~2mo/HBsAg(+) 신생아 12h HBV+HBIG — 임신 계획 상담 맥락)
+  parotitis-differential (귀밑 부종·이하선염/화농성 vs mumps vs 림프절 vs 턱밑침샘 vs 치성/Amoxi-clav 1차·Cefazolin+metro 표준 X/초음파 routine X — 침샘·경부 종창 감별 맥락)
+  bmd-coverage (BMD 골밀도검사 급여기준/65세+ 여성·70세+ 남성·고위험요소·비외상골절·스테로이드 3mo+/추적 1년-2년·스테로이드 시 별도/임신 골절 6mo 2회 — BMD 보험 인정 결정 맥락)
+  breast-us-coverage (유방·액와부 초음파 급여/나942가·나940/진단·경과관찰·수술 후 비교 1회/초과 본인부담 80%/microcalcification mammo f/u — 유방 초음파 보험 결정 맥락)
+  brain-metabolism-enhancers (뇌대사 개선제 보험/콜린알포 2025.9.21 치매 외 80% 선별/사미온 5/10mg 뇌경색후유증·말초순환장애/소마지나 24h 6주/케타스 어지러움/니세틸 시장 퇴출 — 뇌대사 개선제 처방·진단코드 맥락)
+  travel-vaccination (해외여행 예방접종/CDC Yellow Book/지역별 매트릭스/황열 ICVP 평생 유효 2016/일본뇌염 ≥1mo·위험요인/말라리아 화학예방·모기회피/사우디 ACWY 의무 — 여행 클리닉 상담 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */

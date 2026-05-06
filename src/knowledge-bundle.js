@@ -5158,3 +5158,361 @@ KNOWLEDGE_BUNDLE["unintentional-weight-loss"] = _weight_loss_v2;
 KNOWLEDGE_BUNDLE["체중감소"] = _weight_loss_v2;
 KNOWLEDGE_BUNDLE["weight-loss"] = _weight_loss_v2;
 KNOWLEDGE_BUNDLE["악액질"] = _weight_loss_v2;
+
+/* hematuria v2 — AUA 2020 / AAFP 2021 (5-6 inbox phase 2). [CLINICAL] */
+var _hematuria_v2 = {
+  kind: "disease",
+  keywords: ["혈뇨","hematuria","microhematuria","gross-hematuria","microscopic-hematuria","dysmorphic-RBC","RBC-cast","AUA"],
+  primarySources: [
+    "AUA/SUFU 2020 Microhematuria Guideline (J Urol 2020;204:778)",
+    "AUA 2025 Amendment (PMID 40013563)",
+    "AAFP 2021 Microscopic Hematuria in Adults",
+    "AJKD 2022 Glomerular Hematuria Review"
+  ],
+  sections: {
+    classification: {
+      content: "- **Gross hematuria** (육안)\n- **Microscopic hematuria (MH)** — AUA 2020: **현미경 ≥3 RBC/HPF 1회 확인** (이전 \"2회 이상\" 표준 X)",
+      sources: []
+    },
+    exam: {
+      content: "**문진**: 통증·육안혈뇨, 항응고제·항생제·NSAIDs, 항암·RT 병력, 운동·생리·LUTS, 약물·음식·한약(위양성 dipstick).\n\n### Step 1 — 진짜 혈뇨 확인\n- Dipstick(+) → 미세현미경 1회 ≥3 RBC/HPF\n- 단백뇨 동반 검사, dysmorphic RBC, RBC cast 확인\n\n⚠ Routine 혈액검사(CBC/PT/aPTT/Uric acid/Ca/P)는 AUA 표준 권고 X — 임상 의심 시만.",
+      sources: []
+    },
+    differential: {
+      content: "### 사구체 vs 비사구체\n| 패턴 | 소견 | 다음 단계 |\n|---|---|---|\n| **사구체혈뇨** | RBC cast(+), Dysmorphic RBC >40%, 단백뇨 | **신장내과** |\n| **비사구체혈뇨** | 종양·결석·외상·염증 | 상부+하부요로 평가 |",
+      sources: []
+    },
+    protocol: {
+      content: "### 비사구체 위험도 분류 (AUA 2020)\n| 위험군 | 평가 |\n|---|---|\n| **Low** | 공유의사결정 — 6개월 내 UA 재검 또는 cystoscopy + renal US |\n| **Intermediate** | **cystoscopy + renal US** |\n| **High** | **cystoscopy + CT urography** |\n\n위험요인: 연령(≥60), 남성, 흡연력, RBC/HPF 정도, 지속성, 과거 육안혈뇨. CT urography가 sono보다 상부요로 악성 검출 우월.",
+      sources: []
+    },
+    referral: {
+      content: "- **사구체혈뇨** → 신장내과\n- **비사구체 Intermediate~High** → 비뇨기과 (cystoscopy)\n- 육안혈뇨 + 통증·발열 → 응급 (감염·결석)\n- 관련: [[proteinuria]], [[CKD]], [[recurrent-uti]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["hematuria"] = _hematuria_v2;
+KNOWLEDGE_BUNDLE["혈뇨"] = _hematuria_v2;
+KNOWLEDGE_BUNDLE["microhematuria"] = _hematuria_v2;
+
+/* proteinuria v2 — KDIGO 2024 (5-6 inbox phase 2). [CLINICAL] */
+var _proteinuria_v2 = {
+  kind: "disease",
+  keywords: ["단백뇨","proteinuria","ACR","albumin-creatinine-ratio","사구체신염","신증후군","KDIGO"],
+  primarySources: [
+    "KDIGO 2024 CKD Guideline",
+    "AAFP Proteinuria in Adults: A Diagnostic Approach",
+    "AAFP Choosing Wisely (repeat dipstick before workup)"
+  ],
+  sections: {
+    exam: {
+      content: "**의심 시 (dipstick + 등)**\n- 신체진찰: 안면·사지부종\n- 검사: BC, UA, **spot ACR (first morning sample)**\n- 혈뇨 동반 시 [[hematuria]] 검사 추가\n\n**일과성 단백뇨 배제** (AAFP Choosing Wisely): 첫 dipstick 양성 시 본격 워크업 전 **새벽뇨 재검**.\n일과성 원인: 운동·발열·기립성·스트레스·한랭",
+      sources: []
+    },
+    classification: {
+      content: "### ACR 분류 (KDIGO 2024)\n| 단계 | ACR (mg/g) | 임상 의미 |\n|---|---|---|\n| **A1** | <30 | 정상~경증 |\n| **A2** | 30~300 | 중등도 — 당뇨초기·본태고혈압·사구체신염 초기·일과성 단백뇨 |\n| **A3** | **>300** | 중증 — 진행 당뇨신증·사구체질환 |\n| 신증후군 범위 | **ACR ≥2,200** (PCR ≥3,500) | 사구체 누출 심각 |\n\n⚠ \"300~3500 / 3500이상\" 4단계 분류는 KDIGO 표준 X.",
+      sources: []
+    },
+    referral: {
+      content: "(KDIGO 2012/2024)\n- **ACR >300 (A3) 지속** → 신장내과\n- 단백뇨 + 혈뇨 동반 → 사구체질환 의심, 조기 의뢰\n- **신증후군 범위 ACR ≥2,200** → 즉시\n- eGFR 급격 감소 → [[CKD]]",
+      sources: []
+    },
+    monitoring: {
+      content: "- A3 첫 발견 → **3개월 이내 반복 측정**으로 만성 확정\n- 이후 KDIGO **risk heatmap (eGFR×ACR)** 기반 **연 1~4회**\n- 관련: [[CKD]], [[hematuria]], [[diabetes]], [[hypertension]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["proteinuria"] = _proteinuria_v2;
+KNOWLEDGE_BUNDLE["단백뇨"] = _proteinuria_v2;
+KNOWLEDGE_BUNDLE["ACR"] = _proteinuria_v2;
+
+/* fatigue v2 — AAFP 2023 / NICE NG206 (5-6 inbox phase 2). [CLINICAL] */
+var _fatigue_v2 = {
+  kind: "disease",
+  keywords: ["피로","fatigue","만성피로","ME-CFS","NICE-NG206","GET","CBT"],
+  primarySources: [
+    "AAFP 2023 Fatigue in Adults (Latimer SR et al, PMID 37440739)",
+    "대한가정의학회 임상진료지침 — 피로 (2021)",
+    "NICE NG206 ME/CFS (2021)",
+    "IOM 2015 SEID Diagnostic Criteria"
+  ],
+  sections: {
+    definition: {
+      content: "피로의 대다수는 비특이적·심리사회적이며, 검사로 진단이 바뀌는 경우는 **약 5%** (AAFP 2023). 기질적 질환 배제 + 우울·스트레스 평가가 핵심.",
+      sources: []
+    },
+    classification: {
+      content: "### 기간 분류\n| 기간 | 분류 |\n|---|---|\n| <1개월 | recent (transient) |\n| 1~6개월 | prolonged |\n| **>6개월** | chronic |",
+      sources: []
+    },
+    exam: {
+      content: "### Red flags (AAFP 2023)\n- 의도하지 않은 체중감소·발열·야간발한·림프절종대\n- 노력성 호흡곤란·흉통\n- 국소 신경학적 결손·갑작스런 보행 장애\n- (우울 동반) 자살 사고\n\n### 1차 검사 (병력·진찰 후 표적)\n**권장 빈도 높음**: CBC, Chemistry(L/RFT·혈당·전해질), TSH, UA\n**선택**: ESR/CRP, Ferritin(여성), HbA1c, Vit D\n**비권장**: 비특이적 tumor marker, 광범위 호르몬, 초기 복부 CT/MRI",
+      sources: []
+    },
+    differential: {
+      content: "- 생리적: 수면 부족·과로 (휴식 시 호전)\n- **심리적 (가장 흔함)**: 우울증·불안 (아침 심함)\n- 기질적: 갑상선·빈혈·당뇨·간/신·OSA (활동 시 악화)",
+      sources: []
+    },
+    protocol: {
+      content: "### 비약물 (핵심)\n- 수면 위생\n- 단계적 운동 (graded exercise) — 일반 피로·우울 동반 시\n- CBT\n\n⚠ **NICE NG206 (2021): ME/CFS에서 GET 금기 (should not be offered)**. 비-ME/CFS 일반 피로에는 단계적 운동·CBT 여전히 권고.\n\n### 약물\n- 원인 질환 치료가 원칙 (빈혈·갑상선 등)\n- 원인 불명: 비타민 B군 등 대증요법은 근거 부족\n\n### ME/CFS 진단 검토\n1차 검사 정상 + 지속:\n- **NICE 2021: 의심 6주(성인) / 확진 3개월 이상**\n- **IOM 2015 SEID: 6개월 이상**\n→ 두 기준 병기. **GET 금기, CBT는 보조 지지**.",
+      sources: []
+    },
+    referral: {
+      content: "- 명확한 기질적 원인 → 해당 분과\n- 중증 우울·자살사고 → [[depression-screening]]\n- 원인 불명 체중감소·발열 지속 → [[unintentional-weight-loss]]\n- ME/CFS 의심 → 만성피로 전문\n- 관련: [[depression-screening]], [[cancer-fatigue]], [[unintentional-weight-loss]], [[anemia]], [[thyroid-disorder]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["fatigue"] = _fatigue_v2;
+KNOWLEDGE_BUNDLE["피로"] = _fatigue_v2;
+KNOWLEDGE_BUNDLE["만성피로"] = _fatigue_v2;
+KNOWLEDGE_BUNDLE["ME-CFS"] = _fatigue_v2;
+
+/* menopause v2 — NAMS 2022/2023 / KMS 2024 (5-6 inbox phase 2). [CLINICAL] */
+var _menopause_v2 = {
+  kind: "disease",
+  keywords: ["폐경","menopause","perimenopause","VMS","hot-flash","GSM","HRT","HT","fezolinetant","paroxetine","POI"],
+  primarySources: [
+    "NAMS 2022 Hormone Therapy Position Statement (PMID 35797481)",
+    "NAMS 2023 Nonhormone Therapy Position Statement (PMID 37252752)",
+    "대한폐경학회(KMS) 폐경호르몬요법 치료지침 2024",
+    "FDA Brisdelle Label"
+  ],
+  sections: {
+    exam: {
+      content: "### 증상\n| 영역 | 주요 증상 |\n|---|---|\n| **VMS** | Hot flash·야간발한 (평균 7~10년) |\n| **GSM** | 질건조·성교통·빈뇨·요실금 |\n| 신경정신 | 불면·우울·불안·기억력 |\n| 근골격·대사 | 골밀도↓·복부비만·인슐린저항성 |\n\n### 진단 (NAMS 2022 / KMS)\n| 상황 | 접근 |\n|---|---|\n| **45세+ + 12개월 무월경** | **임상 진단** (검사 X) |\n| 40~45 + 증상 + <12mo | FSH 추가 |\n| **<40세 + 증상** | **POI** 감별 |\n\n호르몬 검사 (선택): **FSH ≥25~40 mIU/mL**, **E2 ≤30 pg/mL** (110 pmol/L), AMH 낮음. ⚠ 전이기엔 호르몬 변동성으로 단독 진단 근거 약함.",
+      sources: []
+    },
+    indication: {
+      content: "### HT Timing (NAMS 2022)\n**60세 미만 또는 폐경 후 10년 이내** 시작 — benefit-risk 우호적.\n\n### 적응증\n- 중등도~중증 VMS\n- GSM (질위축·성교통)\n- 골소실 예방\n- 조기 폐경 / POI",
+      sources: []
+    },
+    protocol: {
+      content: "### HT 옵션 (자궁 유무)\n**자궁 적출 — ET (estrogen 단독)**\n| 약물 | 용량 |\n|---|---|\n| CEE | 0.3~0.625 mg/day |\n| Micronized 17β-Estradiol | 1~2 mg/day |\n| Transdermal patch | 0.025~0.1 mg/day (1~2회/주) |\n\n> Transdermal estrogen은 경구 대비 VTE·뇌졸중·담석 위험 낮아 위험군에서 선호.\n\n**자궁 보존 — EPT (estrogen + progestin)**\n자궁내막암 예방 위해 progestin 필수. CEE+MPA, 17β-E2+Norethindrone, 17β-E2+Drospirenone, Micronized progesterone 100~200mg.\n\n**국소 질 ET (GSM)**: Estradiol cream/tablet/ring, Ospemifene 60mg/day, Prasterone 6.5mg/day.\n\n### 비호르몬 VMS (NAMS 2023)\n**Level I**:\n- **Paroxetine 7.5~10mg/day** (Brisdelle — FDA 승인 유일)\n- SSRI/SNRI: escitalopram, citalopram, venlafaxine 37.5~75mg, desvenlafaxine\n- Gabapentin 300~900mg/day\n- Oxybutynin\n- **Fezolinetant (Veozah) 45mg/day** — 2023 FDA 승인 NK3\n- CBT, 임상 최면\n\n⚠ **Clonidine·Pregabalin은 NAMS 2023 권고 안 함** (raw 권장 정정).\n(2024~2025 elinzanetant — NK1/3 dual — 추가 가능성 모니터)",
+      sources: []
+    },
+    contraindication: {
+      content: "### HT 절대 금기 (NAMS 2022)\n- 원인불명 질출혈\n- 진단된/의심되는 유방암·estrogen 의존 종양 (자궁내막암 포함)\n- 활성·기왕력 VTE (DVT/PE)\n- 활성 동맥혈전성 (CVA, MI)\n- 활성 간질환\n- 임신\n- TEAS 알레르기",
+      sources: []
+    },
+    monitoring: {
+      content: "(KMS 2024 / NAMS 2022)\n- **DXA 골밀도** (T≤-2.5 진단)\n- 공복혈당, HbA1c\n- 지질 (TC/LDL/HDL/TG)\n- BP·체중·BMI\n- 골다공증 약물 → [[osteoporosis]]",
+      sources: []
+    },
+    referral: {
+      content: "- HT 시작 전 VTE 병력·가족력·혈전성향 의심 → [[vte-hormone-therapy]]\n- 유방·자궁 종양 의심 → 산부인과/유방외과\n- POI (<40세) → 산부인과/내분비\n- 관련: [[vte-hormone-therapy]], [[osteoporosis]], [[depression-screening]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["menopause"] = _menopause_v2;
+KNOWLEDGE_BUNDLE["폐경"] = _menopause_v2;
+KNOWLEDGE_BUNDLE["폐경기"] = _menopause_v2;
+KNOWLEDGE_BUNDLE["갱년기"] = _menopause_v2;
+KNOWLEDGE_BUNDLE["VMS"] = _menopause_v2;
+KNOWLEDGE_BUNDLE["GSM"] = _menopause_v2;
+KNOWLEDGE_BUNDLE["fezolinetant"] = _menopause_v2;
+
+/* preconception-screening v2 — CDC/ACOG/KSOG (5-6 inbox phase 2). [CLINICAL] */
+var _preconception_v2 = {
+  kind: "disease",
+  keywords: ["임신전검사","preconception","산전감염","rubella","varicella","HBsAg","HBsAb","syphilis","HIV","MMR"],
+  primarySources: [
+    "대한산부인과학회(KSOG) 임신관리",
+    "ACOG Committee Opinion 762: Prepregnancy Counseling",
+    "CDC Vaccines Before/During/After Pregnancy",
+    "CDC Perinatal Hepatitis B",
+    "USPSTF (Syphilis/HIV/HBV/HCV in Pregnancy)",
+    "ASRM 2024 Vaccines for Patients Planning Pregnancy"
+  ],
+  sections: {
+    indication: {
+      content: "### 기본 세트 (KSOG / CDC / ACOG)\n| 검사 | 목적 |\n|---|---|\n| **Rubella IgG** | 선천성 풍진 증후군 예방 |\n| **HBsAg ± HBsAb** | 수직감염 예방 + 신생아 예방접종 계획 |\n| **VZV IgG** | 임신 중 수두 감염 예방 |\n\n### 추가 권장 (모든 임산부)\n- **매독 (VDRL/RPR)**, **HIV Ab/Ag**, **HCV Ab**\n- USPSTF: Syphilis A, HIV A, HBV A, HCV B\n\n### 특수 (위험군 한정, universal X)\n- **Toxoplasma IgG/IgM** — 고양이·날고기 노출\n- **CMV** — 의료인·보육교사\n- MMR 재접종 — 접종력 불확실 시 ACIP 표준",
+      sources: []
+    },
+    protocol: {
+      content: "### 항체 결과별 조치\n\n**Rubella IgG 음성** (ACIP / CDC / KDCA)\n- 임신 전 MMR 접종\n- 접종 후 **최소 4주(28일) 임신 회피** (\"1개월 전 완료\")\n- 임신 중 접종 금기 (생백신)\n\n**Varicella IgG 음성** (CDC / ACIP / ASRM 2024)\n- 임신 전 varicella 접종\n- **2회 접종 권장 → 계획 임신 약 2개월 전 시작**이 이상적\n- 접종 후 최소 28일 임신 회피, 임신 중 금기\n\n**HBsAg 양성** (CDC / ACIP)\n- 신생아: **출생 12시간 내 HepB 백신 + HBIG 동시 투여** (94% 예방)\n- 산모 **HBV DNA 검사** → 임신 중 **항바이러스 (TDF)** 적응증 평가\n- 만성 B형간염 → [[hepatitis-b]] 관리\n\n**HBsAb 음성** (가임 여성)\n- B형간염 백신 권고 (ACIP 19~59세 universal)\n\n**매독·HIV·HCV(+)**: 해당 분과 의뢰",
+      sources: []
+    },
+    referral: {
+      content: "- HBsAg(+) 산모 → 산부인과 + 감염내과\n- HIV/HCV(+) → 감염내과\n- 매독(+) → 감염내과/피부과 (penicillin 치료)\n- POI 동반 임신 계획 → 산부인과/내분비\n- 관련: [[hepatitis-b]], [[hepatitis-ab-vaccine]], [[varicella-mmr-polio-vaccine]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["preconception-screening"] = _preconception_v2;
+KNOWLEDGE_BUNDLE["임신전검사"] = _preconception_v2;
+KNOWLEDGE_BUNDLE["preconception"] = _preconception_v2;
+
+/* parotitis-differential v2 — AAFP 2014 / UpToDate / Hopkins ABX (5-6 inbox phase 2). [CLINICAL] */
+var _parotitis_v2 = {
+  kind: "disease",
+  keywords: ["이하선염","parotitis","침샘염","sialadenitis","경부림프절염","mumps","턱밑침샘염","suppurative-parotitis"],
+  primarySources: [
+    "AAFP 2014 Salivary Gland Disorders",
+    "StatPearls Parotitis (NBK560735)",
+    "UpToDate Suppurative Parotitis in Adults",
+    "Johns Hopkins ABX Guide — Parotitis",
+    "Merck Manual — Sialadenitis"
+  ],
+  sections: {
+    differential: {
+      content: "### 5가지 감별\n| 감별 | 특징 |\n|---|---|\n| **급성 화농성 이하선염** | 단측·통증·발열·발적·압통, 면역저하·탈수 호발 |\n| **바이러스성 이하선염 (mumps)** | 양측·발열·고환염·췌장염, IgM(+) |\n| **경부림프절염** | 경계 명확·압통, URI·치과감염 선행 |\n| **턱밑침샘염** | 식사 시 통증·부종 (sialolithiasis) |\n| **치성감염** | 치통, 치근단·치주 염증 |\n\n(추가: 종양·Sjögren·sarcoidosis는 만성·양측·무통)",
+      sources: []
+    },
+    exam: {
+      content: "### 문진\n- Onset/course, 통증 양상, 발열·오한\n- 치과 치료·구강질환·URI 병력\n- **First event 여부** (재발성 / sialolithiasis 감별)\n- **면역저하**: DM·결핵·B형·C형·HIV\n- 탈수·구강건조 위험요인 (노인·입원·약물)\n\n### 신체진찰\n통증·부종·발적·열감·압통, 농양(변동성 함요), 입안 — Stensen's duct(이하선) / Wharton's duct(턱밑) 농 배출, 치아·치주.\n\n### 검사\n- **CBC, CRP**\n- **Amylase** (salivary fraction)\n- **Mumps IgM/IgG** (양측·접종력 불확실)\n- **초음파** — 침샘염 vs 림프절염 vs 농양·결석 감별\n\n⚠ 초음파는 routine 첫 검사 X — **임상 모호 또는 농양/결석 의심 시**.",
+      sources: []
+    },
+    protocol: {
+      content: "### 보존 (전체)\n- 수분 섭취·**sialagogue (사탕·레몬)**\n- 구강 위생\n- NSAIDs / acetaminophen\n\n### 항생제 (급성 세균성)\n| 환경 | 1차 |\n|---|---|\n| **외래 (경증)** | **Amoxicillin/clavulanate** |\n| 입원 (중증) | Ampicillin/sulbactam |\n| MRSA 위험 (입원·요양원·기왕력) | + Vancomycin |\n\n⚠ raw의 **\"Cefazolin + metronidazole\"은 표준 1차 권고 X** — Cefazolin은 H.influenzae·구강 그람음성 커버 약함. **Amoxi/clav가 표준** (S.aureus·strep·구강 anaerobe 커버).",
+      sources: []
+    },
+    referral: {
+      content: "- 농양 형성·항생제 무반응·기도 위협 → ENT\n- 재발성 이하선염·침샘 결석 → ENT (sialendoscopy)\n- mumps IgM(+) → 신고 (지정 감염병)\n- 만성 양측 종창 → ENT/류마티스 (Sjögren·sarcoidosis)\n- 관련: [[salivary-gland-stones]], [[neck-mass]], [[sinusitis]], [[oral-lesion]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["parotitis-differential"] = _parotitis_v2;
+KNOWLEDGE_BUNDLE["이하선염"] = _parotitis_v2;
+KNOWLEDGE_BUNDLE["parotitis"] = _parotitis_v2;
+KNOWLEDGE_BUNDLE["침샘염"] = _parotitis_v2;
+KNOWLEDGE_BUNDLE["sialadenitis"] = _parotitis_v2;
+
+/* bmd-coverage v2 — 심평원 BMD 2019.2.15 (5-6 inbox phase 2). [REGULATORY] */
+var _bmd_coverage_v2 = {
+  kind: "topic",
+  keywords: ["BMD","골밀도검사","DXA","골다공증보험","심평원-BMD","BMD-급여","BMD-추적간격"],
+  primarySources: [
+    "심평원 골밀도검사 급여기준 고시 (2019.2.15 시행)",
+    "수원시의사회 보험안내, 경기도의사회 게시판"
+  ],
+  sections: {
+    insurance: {
+      content: "### 급여 대상 (만 18세+)\n1. **65세 이상 여성, 70세 이상 남성**\n2. **고위험요소 1개+ 65세 미만 폐경후 여성**\n3. **1년 이상 무월경** 폐경 전 여성\n4. **비외상성 골절**\n5. 골다공증 유발 질환\n6. **골다공증 유발 약물 복용 또는 3개월 이상 투여 계획**\n7. 기타 검사 필수\n\n### 고위험요소 (65세 미만 폐경후)\n1. **저체중 BMI<18.5**\n2. 비외상성 골절 과거력 또는 가족력\n3. **외과적 폐경 또는 40세 이전 자연 폐경**\n\n### 급여 횟수 — 진단\n- **1회 인정**. 말단골 결과 추가 필요 시 1회 한 중심골 추가.\n\n### 추적검사 간격\n| 상황 | 간격 |\n|---|---|\n| 일반 추적 | **1년 이상** |\n| 정상 골밀도 | **2년** |\n| 치료효과 판정 | **중심골(spine·hip)에서만** 인정 |\n\n### 스테로이드 ≥3개월 또는 부갑상선기능항진증 (모두 중심골)\n| BMD | 추적 |\n|---|---|\n| 정상 (T≥-1) | 첫 1년 1회 → 2년 1회 |\n| **T≤-3** | 첫 1년 6개월 1회 → 1년 1회 |\n\n### 임신 관련 골다공증성 골절 의심\n- **6개월 간격 2회**\n\n### 불가피한 사유 시\n- **4주 범위 내 인정**",
+      sources: []
+    },
+    notes: {
+      content: "- T-score 분류·약물 보험기준 → [[osteoporosis]]\n- 다른 약제 → 데노수맙 변경 시: **마지막 데노수맙 투여일 + 6개월 후** 측정",
+      sources: []
+    },
+    referral: {
+      content: "- BMD 급여기준 미충족 + 처방 필요 시: 비급여 또는 골다공증 전문 협진\n- 관련: [[osteoporosis]], [[CKD]], [[home-based-hypertension]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["bmd-coverage"] = _bmd_coverage_v2;
+KNOWLEDGE_BUNDLE["BMD-급여"] = _bmd_coverage_v2;
+KNOWLEDGE_BUNDLE["골밀도-급여"] = _bmd_coverage_v2;
+
+/* breast-us-coverage v2 — 심평원 (5-6 inbox phase 2). [REGULATORY] */
+var _breast_us_coverage_v2 = {
+  kind: "topic",
+  keywords: ["유방초음파","breast-US","액와부-초음파","mammography","국가암검진","단순초음파","산정특례","BI-RADS","유방초음파-급여"],
+  primarySources: [
+    "심평원 초음파 검사의 급여기준 (나942가, 나940)",
+    "보건복지부 고시 (선별급여 지정 및 실시 등에 관한 기준)",
+    "본인일부부담금 산정특례에 관한 기준 (보건복지부 행정규칙)",
+    "국가암검진사업 (보건복지부·국립암센터)"
+  ],
+  sections: {
+    insurance: {
+      content: "### Mammography (참고)\n- 만 40세+ 여성, **2년에 1회** 무료 (대상자) — 국가암검진\n- 단순 치밀유방 소견 (다른 의심 X) → 초음파 비급여\n- **microcalcification은 BI-RADS 기준 mammography 추적이 표준** (초음파 1차 X)\n\n### 유방·액와부 초음파 (나942가(1),(3))\n| 적응 | 인정 |\n|---|---|\n| 유방·액와부 질환 의심 → 진단 | 1회 |\n| 유방양성종양 경과관찰 | 1회 |\n| 수술/시술 후 비교 | 1회 (제한적 초음파) |\n\n초과 시 **선별급여 — 본인부담률 80%**.\n\n### 단순초음파 (나940)\n- 일부 부위 확인·장기 크기 측정\n- **초회부터 본인부담 80% 선별급여**\n- 동일 날·동일 목적 다회 시행도 1회만 산정\n\n### 인접 부위 동시\n- 주된 100% + 제2 50%, **최대 150%**\n\n### 산정특례 우선\n- 암·심·뇌·희귀·중증난치·결핵·신생아중환자\n- 산정특례 우선 → 별도 정함 없으면 일반 급여기준 적용\n\n### 비급여 동의\n- 위 1.(질환의심·경과관찰·수술 후 비교) 외 의학적 필요 불명확 시 → 충분 설명 + 동의서 서명 후 비급여",
+      sources: []
+    },
+    notes: {
+      content: "- 건강검진 차원의 무증상 초음파는 비급여\n- BI-RADS 3 미세석회화는 6개월 mammography 추적\n- microcalcification 단독은 초음파 routine 추적 적응증 X",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["breast-us-coverage"] = _breast_us_coverage_v2;
+KNOWLEDGE_BUNDLE["유방초음파-급여"] = _breast_us_coverage_v2;
+KNOWLEDGE_BUNDLE["유방-액와부초음파"] = _breast_us_coverage_v2;
+
+/* brain-metabolism-enhancers v2 — 심평원 / 식약처 (5-6 inbox phase 2). [REGULATORY] */
+var _brain_meta_v2 = {
+  kind: "topic",
+  keywords: ["뇌대사개선제","choline-alfoscerate","콜린알포세레이트","글리아티린","사미온","nicergoline","케타스","ibudilast","소마지나","citicoline","뉴로메드","페로딜","니세틸","acetyl-L-carnitine"],
+  primarySources: [
+    "심평원 약제 급여기준 일반원칙",
+    "심평원 콜린알포세레이트 선별급여 고시 (2025.9.21 시행)",
+    "식약처 임상재평가 결과 (Acetyl L-carnitine 적응증 변경)",
+    "사미온·소마지나 급여기준 고시"
+  ],
+  sections: {
+    indication: {
+      content: "### 대상 약제\n| 성분 | 상품 |\n|---|---|\n| Acetyl L-carnitine HCL | 니세틸 |\n| Choline alfoscerate | 글리아티린 |\n| Nicergoline | 사미온 |\n| Ibudilast | 케타스 |\n| Oxiracetam | 뉴로메드 |\n| Citicoline | 소마지나 |\n| Ifenprodil tartrate | 페로딜 |",
+      sources: []
+    },
+    insurance: {
+      content: "### 일반 원칙\n1. **경구 뇌대사 개선제 1종만 급여**\n2. 뇌대사 개선제는 MMSE 없이 투여 가능 (choline alfoscerate 포함)\n   - **치매치료제 병용 시 MMSE/CDR/GDS 요건 별도 적용**\n3. 치매치료제 1종 + 뇌대사 개선제 1종 병용 가능\n4. **Ginkgo + 치매치료제 병용 시**: 1일 약가 저렴한 1종 전액본인부담\n5. 효능·효과 맞는 상병 기록 필수\n\n### Choline alfoscerate (글리아티린) — 2025.9.21 변경 [중요]\n- **치매 진단 (F00/F01/F023 등)**: 정상 급여\n- **치매 외 (MCI 등 G319 포함)**: **80% 본인부담 선별급여**\n→ 처방 시 진단코드 확인 필수\n\n### Acetyl L-carnitine (니세틸) — 시장 퇴출 수순\n- **2019.7월 \"일차적 퇴행성 질환\" 적응증 삭제** (식약처 임상재평가, **허가사항 변경**)\n- 이후 **\"이차적 퇴행성\" 적응증도 삭제** — 사실상 시장 퇴출\n- 경도인지장애·비혈관성 치매 인정 X\n\n### 사미온 (Nicergoline)\n| 용량 | 인정 |\n|---|---|\n| **5mg, 10mg** | **뇌경색후유증, 뇌출혈후유증, 말초순환장애 (폐색성동맥·레이노)** — 그 외 (당뇨성·동맥경화성 두통·고혈압 보조요법) 전액본인부담 |\n| **30mg** | 별도 기준 X. 허가사항 — 퇴행성 혈관 치매·복합성 치매 |\n\n### 소마지나 (Citicoline)\n- **급성 허혈성 뇌졸중 24시간 이내 복용 시 6주까지** 급여 (식약처 허가사항 기반)\n- 다른 경우 전액본인부담\n\n### 케타스 (Ibudilast)\n- 효능: **뇌경색후유증 후 만성 뇌순환장애에 의한 어지러움(현훈) 개선**\n- ⚠ 단순 어지럼증·고혈압 단독 상병 → 삭감 위험\n- 정확한 상병 코드 (뇌경색 후유증 + 어지러움) 필수\n\n### 인정기준 외 처리\n- 뇌대사 개선제는 **비급여 처방 X** — 인정기준 외에는 **약값 전액 본인부담**",
+      sources: []
+    },
+    referral: {
+      content: "- 인지장애 정밀 평가 → 신경과/정신건강의학과 (MMSE·CDR·GDS, MRI)\n- 치매치료제(ChEI/메만틴) 시작 → 신경과/정신건강의학과\n- 관련: [[anti-amyloid-mab]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["brain-metabolism-enhancers"] = _brain_meta_v2;
+KNOWLEDGE_BUNDLE["뇌대사개선제"] = _brain_meta_v2;
+KNOWLEDGE_BUNDLE["글리아티린"] = _brain_meta_v2;
+KNOWLEDGE_BUNDLE["choline-alfoscerate"] = _brain_meta_v2;
+KNOWLEDGE_BUNDLE["사미온"] = _brain_meta_v2;
+KNOWLEDGE_BUNDLE["케타스"] = _brain_meta_v2;
+KNOWLEDGE_BUNDLE["소마지나"] = _brain_meta_v2;
+
+/* travel-vaccination v2 — CDC Yellow Book 2024 / WHO ITH (5-6 inbox phase 2). [CLINICAL] */
+var _travel_vacc_v2 = {
+  kind: "topic",
+  keywords: ["해외여행백신","travel-vaccination","황열","yellow-fever","A형간염","장티푸스","일본뇌염","광견병","수막구균","말라리아","ICVP"],
+  primarySources: [
+    "CDC Yellow Book 2024 (Travelers' Health)",
+    "WHO International Travel and Health (ITH)",
+    "WHO IHR Annex 7 amendment 2016 (Yellow Fever lifetime validity)",
+    "CDC ACIP Japanese Encephalitis (Hills SL et al, MMWR 2019)",
+    "KCDC 해외여행 예방접종 안내"
+  ],
+  sections: {
+    indication: {
+      content: "### 지역별 권장 (CDC Yellow Book 2024)\n| 지역 | 권장 |\n|---|---|\n| 동남아·중국·인도·네팔·방글라데시·북아프리카 | A형간염, 장티푸스 +/- 광견병 |\n| **사하라 이남·남미** | **황열**, A형간염, 장티푸스 |\n| 중동·동유럽·러시아 | A형간염 +/- B형간염 (위험행동 시) |\n| 서유럽·영미권 | 기본 (MMR, Tdap, 독감) |\n| 중동(Hajj/Umrah)·사하라 meningitis belt | 수막구균 |\n| 아시아 농촌 | 일본뇌염 |\n\n⚠ **광견병**은 동남아·인도뿐 아니라 **장기체류·동물접촉 위험 시 전 지역 고려**.\n⚠ 중동 등 **B형간염은 universal 권고 X** — 의료노출·성접촉·문신 등 위험행동 시.",
+      sources: []
+    },
+    schedule: {
+      content: "### 황열 (Yellow Fever)\n- 사하라 이남·남미 일부 입국 의무\n- **ICVP**: 접종 후 **10일째부터 유효**, **2016 IHR 개정 이후 평생 유효** (재접종 요구 X)\n- 생백신 — 임신·면역저하·계란 알레르기 주의\n\n### 일본뇌염 (ACIP / MMWR 2019)\n- **≥1개월 체류** 권고\n- **<1개월도 위험요인 시** 권고: 농촌·우기·야외활동·비차단 숙소 (논 인접)\n- IXIARO 사백신 표준 → [[japanese-encephalitis-vaccine]]\n\n### 수막구균 ACWY\n- **사우디 Hajj/Umrah 비자 (≥1세) 필수** — 도착 10일 전~3년/5년 이내\n- 사하라 meningitis belt 건기 (12월~6월) 권고\n\n### 기본 접종 점검\nMMR (1968 이후 1회만 받음 시), Tdap, 독감, A형간염",
+      sources: []
+    },
+    precaution: {
+      content: "### 말라리아 위험지역 — 백신 X\n| 지역 | 위험 |\n|---|---|\n| 사하라 이남 아프리카 | 대부분 |\n| 동남아 일부 | 미얀마·캄보디아·라오스·베트남 일부·인니 동부 |\n| 남아시아 | 인도·파키스탄·방글라데시 |\n| 남미·태평양 | 아마존, PNG |\n\n→ 일반 여행자 백신 부재. **화학예방 + 모기 회피**.",
+      sources: []
+    },
+    protocol: {
+      content: "### 상담 워크플로우\n1. 여행지 / 기간 / 활동 / 숙소 확인\n2. 위 매트릭스로 권장 백신 선별\n3. 황열 ICVP 의무 국가 → 출발 10일 전\n4. 광견병·일본뇌염 — 동물접촉·농촌 체류 평가\n5. 말라리아 — 약물예방 처방 + 모기 회피 교육\n6. 기본 접종 갱신 ([[adult-vaccination-summary]])",
+      sources: []
+    },
+    referral: {
+      content: "- 임신·면역저하 + 황열 의무 국가 → 면제증명서 검토 (감염내과)\n- 복잡 만성질환 + 다중 백신 → 여행클리닉\n- 관련: [[adult-vaccination-summary]], [[hepatitis-ab-vaccine]], [[japanese-encephalitis-vaccine]], [[rabies-vaccine]], [[varicella-mmr-polio-vaccine]], [[tdap]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["travel-vaccination"] = _travel_vacc_v2;
+KNOWLEDGE_BUNDLE["해외여행백신"] = _travel_vacc_v2;
+KNOWLEDGE_BUNDLE["yellow-fever"] = _travel_vacc_v2;
+KNOWLEDGE_BUNDLE["황열"] = _travel_vacc_v2;
+KNOWLEDGE_BUNDLE["malaria-prophylaxis"] = _travel_vacc_v2;
