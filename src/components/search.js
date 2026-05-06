@@ -89,7 +89,7 @@ function searchEntries(query,index){
   return results;
 }
 
-/* 하이라이트 — 토큰을 <mark> 감싸기. HTML escape 후 적용. */
+/* 하이라이트 — 토큰을 <mark> 감싸기. HTML escape 후 적용. (snippet plain text용) */
 function highlightSearch(text,tokens){
   if(!text) return "";
   var safe=String(text).replace(/[&<>]/g,function(c){
@@ -102,6 +102,42 @@ function highlightSearch(text,tokens){
     safe=safe.replace(re,'<mark style="background:rgba(245,166,35,.4);color:#f5a623;padding:0 2px;border-radius:2px">$1</mark>');
   });
   return safe;
+}
+
+/* Markdown 렌더링 + 토큰 하이라이트. marked 미로드 시 plain highlight fallback.
+   marked.parse() HTML을 임시 div에 넣고 TreeWalker로 텍스트 노드만 순회 →
+   토큰 <mark> 감쌈. HTML attribute 안에 토큰 매칭 깨짐 방지. */
+function renderMarkdownWithHighlight(content,tokens){
+  if(!content) return "";
+  if(typeof marked==="undefined"||typeof document==="undefined"){
+    return highlightSearch(content,tokens);
+  }
+  var html=marked.parse(String(content),{breaks:true,gfm:true});
+  if(!tokens||!tokens.length) return html;
+  var div=document.createElement("div");
+  div.innerHTML=html;
+  var walker=document.createTreeWalker(div,NodeFilter.SHOW_TEXT,null,false);
+  var nodes=[]; var n;
+  while((n=walker.nextNode())) nodes.push(n);
+  nodes.forEach(function(node){
+    var orig=node.nodeValue; if(!orig) return;
+    var lower=orig.toLowerCase();
+    var any=tokens.some(function(t){return t&&lower.indexOf(t)!==-1;});
+    if(!any) return;
+    var safe=orig.replace(/[&<>]/g,function(c){
+      return c==="&"?"&amp;":c==="<"?"&lt;":"&gt;";
+    });
+    tokens.forEach(function(t){
+      if(!t) return;
+      var esc=t.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+      var re=new RegExp("("+esc+")","gi");
+      safe=safe.replace(re,'<mark style="background:rgba(245,166,35,.4);color:#f5a623;padding:0 2px;border-radius:2px">$1</mark>');
+    });
+    var span=document.createElement("span");
+    span.innerHTML=safe;
+    node.parentNode.replaceChild(span,node);
+  });
+  return div.innerHTML;
 }
 
 function SearchScreen(){
@@ -216,8 +252,8 @@ function SearchScreen(){
                           <div style={{fontSize:10,color:"#a78bfa",fontWeight:700,
                             textTransform:"uppercase",letterSpacing:".07em",marginBottom:3,
                             fontFamily:"'JetBrains Mono',monospace"}}>{b.key}</div>
-                          <div style={{fontSize:12,color:"#94a3b8",lineHeight:1.8,whiteSpace:"pre-wrap"}}
-                            dangerouslySetInnerHTML={{__html:highlightSearch(b.content,tokens)}}/>
+                          <div className="search-md"
+                            dangerouslySetInnerHTML={{__html:renderMarkdownWithHighlight(b.content,tokens)}}/>
                         </div>
                       );
                     })}
