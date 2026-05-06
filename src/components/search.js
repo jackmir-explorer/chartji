@@ -185,6 +185,104 @@ function renderMarkdownWithHighlight(content,tokens){
   return div.innerHTML;
 }
 
+/* 결과 상세 — 섹션별 접기/펼치기.
+   매칭 섹션은 자동 펼침, 나머지는 접힘 (사용자 토글 자유). */
+function ResultDetail(props){
+  var entry=props.entry, tokens=props.tokens||[],
+      backlinks=props.backlinks||[], onJumpKey=props.onJumpKey;
+
+  var [openSections,setOpenSections]=React.useState(function(){
+    var init={};
+    var hasTokens=tokens.length>0;
+    entry.sectionBlocks.forEach(function(b){
+      var lower=String(b.content||"").toLowerCase();
+      var match=hasTokens?tokens.some(function(t){return t&&lower.indexOf(t)!==-1;}):true;
+      init[b.key]=match;
+    });
+    return init;
+  });
+
+  function toggleAll(open){
+    var next={};
+    entry.sectionBlocks.forEach(function(b){next[b.key]=open;});
+    setOpenSections(next);
+  }
+  function toggle(sk){
+    setOpenSections(function(prev){
+      var next=Object.assign({},prev);
+      next[sk]=!next[sk];
+      return next;
+    });
+  }
+
+  var totalSec=entry.sectionBlocks.length;
+  var openCount=entry.sectionBlocks.filter(function(b){return openSections[b.key];}).length;
+  var allOpen=openCount===totalSec;
+
+  return (
+    <div style={{marginTop:10,padding:"10px 12px",background:"#0d1018",
+      border:"1px solid #1e2538",borderRadius:6}}
+      onClick={function(e){e.stopPropagation();}}>
+      {entry.primarySources&&entry.primarySources.length>0&&(
+        <div style={{fontSize:10,color:"#4a5268",marginBottom:8,lineHeight:1.6}}>
+          📚 {entry.primarySources.join(" · ")}
+        </div>
+      )}
+      {totalSec>1&&(
+        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",
+          marginBottom:8,paddingBottom:6,borderBottom:"1px solid #1e2538"}}>
+          <div style={{fontSize:10,color:"#4a5268",
+            fontFamily:"'JetBrains Mono',monospace",letterSpacing:".05em"}}>
+            {openCount}/{totalSec} 섹션 펼침
+          </div>
+          <button onClick={function(){toggleAll(!allOpen);}}
+            style={{fontSize:10,color:"#60a5fa",background:"none",
+              border:"1px solid rgba(96,165,250,.3)",borderRadius:4,padding:"2px 8px",
+              cursor:"pointer",fontFamily:"'JetBrains Mono',monospace"}}>
+            {allOpen?"전체 접기":"전체 펼치기"}
+          </button>
+        </div>
+      )}
+      {entry.sectionBlocks.map(function(b){
+        var sectionOpen=!!openSections[b.key];
+        return (
+          <div key={b.key} style={{marginBottom:sectionOpen?10:2}}>
+            <div onClick={function(){toggle(b.key);}}
+              style={{fontSize:10,color:sectionOpen?"#a78bfa":"#6b5c8a",fontWeight:700,
+                textTransform:"uppercase",letterSpacing:".07em",
+                marginBottom:sectionOpen?3:0,padding:"3px 0",cursor:"pointer",
+                fontFamily:"'JetBrains Mono',monospace",
+                display:"flex",alignItems:"center",gap:6,userSelect:"none"}}>
+              <span style={{fontSize:8,opacity:.6}}>{sectionOpen?"▼":"▶"}</span>
+              {b.key}
+            </div>
+            {sectionOpen&&(
+              <div className="search-md"
+                dangerouslySetInnerHTML={{__html:renderMarkdownWithHighlight(b.content,tokens)}}/>
+            )}
+          </div>
+        );
+      })}
+      {backlinks.length>0&&(
+        <div style={{marginTop:8,paddingTop:8,borderTop:"1px solid #1e2538"}}>
+          <div style={{fontSize:10,color:"#4a5268",marginBottom:4,
+            fontFamily:"'JetBrains Mono',monospace",letterSpacing:".07em"}}>🔗 backlink</div>
+          <div style={{fontSize:11,lineHeight:1.8}}>
+            {backlinks.map(function(bk){
+              return (
+                <span key={bk}
+                  onClick={function(ev){ev.stopPropagation(); onJumpKey(bk);}}
+                  style={{marginRight:10,cursor:"pointer",color:"#60a5fa",
+                    textDecoration:"underline"}}>{bk}</span>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function SearchScreen(){
   var bundle=(typeof KNOWLEDGE_BUNDLE!=="undefined")?KNOWLEDGE_BUNDLE:null;
   var index=React.useMemo(function(){return buildSearchIndex(bundle);},[bundle]);
@@ -287,46 +385,9 @@ function SearchScreen(){
                     dangerouslySetInnerHTML={{__html:"… "+highlightSearch(r.snippets[0].snippet,tokens)+" …"}}/>
                 )}
                 {open&&(
-                  <div style={{marginTop:10,padding:"10px 12px",background:"#0d1018",
-                    border:"1px solid #1e2538",borderRadius:6}}
-                    onClick={function(e){e.stopPropagation();}}>
-                    {r.entry.primarySources.length>0&&(
-                      <div style={{fontSize:10,color:"#4a5268",marginBottom:8,lineHeight:1.6}}>
-                        📚 {r.entry.primarySources.join(" · ")}
-                      </div>
-                    )}
-                    {r.entry.sectionBlocks.map(function(b){
-                      return (
-                        <div key={b.key} style={{marginBottom:10}}>
-                          <div style={{fontSize:10,color:"#a78bfa",fontWeight:700,
-                            textTransform:"uppercase",letterSpacing:".07em",marginBottom:3,
-                            fontFamily:"'JetBrains Mono',monospace"}}>{b.key}</div>
-                          <div className="search-md"
-                            dangerouslySetInnerHTML={{__html:renderMarkdownWithHighlight(b.content,tokens)}}/>
-                        </div>
-                      );
-                    })}
-                    {(function(){
-                      var bl=index.backlinks[r.entry.key]||[];
-                      if(!bl.length) return null;
-                      return (
-                        <div style={{marginTop:8,paddingTop:8,borderTop:"1px solid #1e2538"}}>
-                          <div style={{fontSize:10,color:"#4a5268",marginBottom:4,
-                            fontFamily:"'JetBrains Mono',monospace",letterSpacing:".07em"}}>🔗 backlink</div>
-                          <div style={{fontSize:11,lineHeight:1.8}}>
-                            {bl.map(function(b){
-                              return (
-                                <span key={b}
-                                  onClick={function(ev){ev.stopPropagation(); jumpToKey(b);}}
-                                  style={{marginRight:10,cursor:"pointer",color:"#60a5fa",
-                                    textDecoration:"underline"}}>{b}</span>
-                              );
-                            })}
-                          </div>
-                        </div>
-                      );
-                    })()}
-                  </div>
+                  <ResultDetail entry={r.entry} tokens={tokens}
+                    backlinks={index.backlinks[r.entry.key]||[]}
+                    onJumpKey={jumpToKey}/>
                 )}
               </div>
             );
