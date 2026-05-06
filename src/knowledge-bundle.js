@@ -4780,17 +4780,18 @@ KNOWLEDGE_BUNDLE["CFS"] = _frailty_v2_full;
 KNOWLEDGE_BUNDLE["FRAIL-Scale"] = _frailty_v2_full;
 KNOWLEDGE_BUNDLE["CGA"] = _frailty_v2_full;
 
-/* glp1-selection-strategy v2 보강 — 암 위험 메타분석 (5-4 cron) */
-var _glp1_strategy_v2_full = {
+/* glp1-safety-comparison — GLP-1RA 안전성·SGLT-2 비교 (cancer meta + NAION + UTI 비교).
+   2026-05-06: 원래 _glp1_strategy_v2_full로 잘못 "glp1-selection-strategy" 키에 할당되어 본연 selection-strategy entry를 덮어쓰던 dirty data → 분리·정화 (heart-failure-volume-overload 사건 동일 패턴). */
+var _glp1_safety_v2 = {
   kind: "topic",
-  keywords: ["GLP-1","GLP-1RA","semaglutide","tirzepatide","wegovy","ozempic","mounjaro","NAION","비뇨생식기감염","UTI","SGLT-2 비교","cancer-risk","갑상선암","췌장암","유방암"],
+  keywords: ["glp1-safety-comparison","GLP-1 안전성","GLP-1RA 암 위험","NAION","비뇨생식기감염","UTI","SGLT-2 비교","cancer-risk","갑상선암","췌장암","유방암"],
   primarySources: [
     "Escudero C et al. Endocrinology: What You May Have Missed in 2025. Ann Intern Med 2026. PMID:41974004",
     "Ko A et al. Risk for Cancer With GLP-1RA: SR + Meta-analysis. Ann Intern Med 2025 Dec 9;179(2):216-229. PMID:41359966"
   ],
   sections: {
     definition: {
-      content: "GLP-1 수용체 작용제(GLP-1RA)·이중작용제 선택 전략. 비만·당뇨·MASH·CKD·심부전 적응증 확장. SGLT-2i와의 비교·암 위험 안전성·동반질환별 우선순위.",
+      content: "GLP-1RA 안전성·비교 정보 보충 entry. 암 위험 메타분석·NAION 시야 부작용 신호·SGLT-2i 비교(비뇨생식기 감염, 동반질환별 우선순위). 본연 GLP-1 처방 hub는 [[glp1]], 선택 전략은 [[glp1-selection-strategy]].",
       sources: []
     },
     comparison: {
@@ -4808,10 +4809,12 @@ var _glp1_strategy_v2_full = {
   },
   uiHooks: null
 };
-KNOWLEDGE_BUNDLE["glp1-selection-strategy"] = _glp1_strategy_v2_full;
-KNOWLEDGE_BUNDLE["GLP-1"] = _glp1_strategy_v2_full;
-KNOWLEDGE_BUNDLE["GLP-1RA"] = _glp1_strategy_v2_full;
-KNOWLEDGE_BUNDLE["GLP-1-cancer-risk"] = _glp1_strategy_v2_full;
+KNOWLEDGE_BUNDLE["glp1-safety-comparison"] = _glp1_safety_v2;
+KNOWLEDGE_BUNDLE["GLP-1-cancer-risk"] = _glp1_safety_v2;
+KNOWLEDGE_BUNDLE["GLP-1 안전성"] = _glp1_safety_v2;
+/* generic GLP-1 / GLP-1RA alias는 glp1 hub entry로 라우팅 (cancer/safety가 아님) */
+KNOWLEDGE_BUNDLE["GLP-1"] = KNOWLEDGE_BUNDLE["glp1"];
+KNOWLEDGE_BUNDLE["GLP-1RA"] = KNOWLEDGE_BUNDLE["glp1"];
 
 /* depression-screening — PETRUSHKA 개인맞춤 항우울제 처방 (5-1 cron). [CLINICAL] */
 var _depression_screening_v2 = {
