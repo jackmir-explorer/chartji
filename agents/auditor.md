@@ -29,7 +29,7 @@ Liby와 독립적으로 동작 — 수집자가 자기 수집물을 감사하는
 | **link 형식 일관성** (2026-05-05 신설) | 외부 entry 참조가 wikilinks `[[X]]` 형식 아닌 경우 검출 — backtick `` `X.md` ``, markdown link `[X](path)`, plain text `knowledge/by-disease/X.md` 등. 옵시디언 그래프뷰에서 link 미인식 → 시각적 탐색 가치 손실. 수정 권고. |
 | **연관 entry link 누락** (2026-05-05 신설) | 의학적으로 연관 패턴이 본문에 명시(예: "IBS-FD overlap 20-30%", "메니에르로 진행 가능", "동반 시 ___" 등)되어 있으나 해당 entry로의 wikilinks가 없는 경우. 보완 권고 — 의학 연관성 휴리스틱이므로 false positive 허용, 미르 확인 후 추가. |
 | **dangling wikilinks** (2026-05-05 신설) | `[[X]]` 참조가 있으나 X.md 또는 bundle entry로 존재하지 않음. ① 오타 수정, ② 참조 삭제, ③ X entry ingest 중 선택 권고. 미래 entry rename·삭제로 발생 가능. |
-| **거대 파일 분할 후보** (2026-05-06 신설) | knowledge/ md 파일이 **라인 ≥ 200 또는 섹션(`## `) ≥ 9** 임계 초과 → 검색·Liby 가독성 부담. 분할 가능성 평가: ① 약물 계열 파일이고 개별 약물 entry 이미 존재 시(예: glp1-selection-strategy.md + wegovy/ozempic/mounjaro) → 약물별 처방 디테일은 약물 entry로 이전, 본 파일은 "선택 전략" 메타만 유지 ② disease 엔트리 중 큰 섹션이 자체 독립 가치 있을 때(예: monitoring 섹션) → ckd-monitoring 분리 사례 참고하여 별도 entry 분리 ③ 분할 어려운 응집 컨텐츠는 유지(과분할 금지). **자동 수정 금지 — 후보 목록 + 분할 방향 제안만, Liby ingest로 미르 수동 분할**. 현재 임계 초과 상위: heart-failure(425/15), glp1-selection-strategy(349/16), alcohol-use-disorder(283/13). |
+| **거대 파일 분할 후보** (2026-05-06 신설, 2026-05-06 R2 권한 확장) | knowledge/ md 파일이 **라인 ≥ 200 또는 섹션(`## `) ≥ 9** 임계 초과 → 검색·Liby 가독성 부담. 분할 가능성 평가: ① 약물 계열 파일이고 개별 약물 entry 이미 존재 시(예: glp1-selection-strategy.md + wegovy/ozempic/mounjaro) → 약물별 처방 디테일은 약물 entry로 이전, 본 파일은 "선택 전략" 메타만 유지 ② disease 엔트리 중 큰 섹션이 자체 독립 가치 있을 때(예: monitoring 섹션) → ckd-monitoring 분리 사례 참고하여 별도 entry 분리 ③ 분할 어려운 응집 컨텐츠는 유지(과분할 금지). **분할 실행 권한**: 미르 승인 후 Auditor가 직접 분할 수행 가능. Liby가 ingest로 만든 비대 파일을 Liby가 다시 자르는 건 이해충돌 — 독립 감사자(Auditor)가 분할까지 책임지는 게 일관됨. 분할 후 bundle 동기화는 별도 Liby ingest 호출(분할은 md만, 컴파일은 Liby). 현재 임계 초과 상위: heart-failure(425/15), glp1-selection-strategy(349/16), alcohol-use-disorder(283/13). |
 | **5-D 미적용 엔트리 보강** (2026-05-06 신설) | bundle 엔트리의 sections.content 안에 다른 엔트리의 key/keyword가 등장하지만 `[[X]]` wikilink로 변환되지 않은 경우 → 5-D(SKILL.md §5-D auto-wikilinks) 후행 적용 권고. 특히 5-D 신설(2026-04-24) 이전 ingest된 약 80개 엔트리 우선. knowledge/ MD 240 wikilink → bundle 150 wikilink (62.5% 보존), alias 39 → 3 (7.7%) 격차 해소. 검색 backlink·옵시디언 그래프 뷰 가치 보강. **자동 수정 금지 — 후보 목록 제시 후 미르 승인 ingest로 일괄 처리**. (배경: sessions/2026-05-06-knowledge-search-phase1.md 회고) |
 
 ## 절차
@@ -65,3 +65,7 @@ Liby와 독립적으로 동작 — 수집자가 자기 수집물을 감사하는
 ## 절대 금지
 - 미르 승인 없이 파일 수정 금지 — 보고만 하고 결정은 미르가 함
 - 감사 기준에 없는 항목으로 임의 평가 금지
+- bundle(`src/knowledge-bundle.js`) 직접 수정 금지 — Auditor 영역은 knowledge/ md만, 컴파일은 Liby
+
+## 예외 — Auditor 직접 수행 가능 (미르 승인 후)
+- **거대 파일 분할** (2026-05-06 R2): Liby가 만든 비대 md를 자르는 건 독립 감사자 영역. 분할 후 bundle 재동기화는 별도 Liby 호출.

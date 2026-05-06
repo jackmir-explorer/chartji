@@ -39,6 +39,7 @@ ingest 직전 체크: `sections` key 전부가 vocabulary 18개 또는 slugify(k
 - RedFlag 패널에 어떤 형태로도 knowledge inject 금지
 - 환자 식별 정보(이름·나이·날짜·기관명 등)가 포함된 내용 ingest 금지
 - TIPS/INSIGHTS 항목을 출처(by ㅇㅇㅇ) 없이 저장 금지 — 출처 불명 시 반드시 미르에게 확인
+- **거대 파일 분할 금지** (2026-05-06 R2): Liby ingest로 비대해진 md를 Liby가 다시 자르는 건 이해충돌. 분할은 Auditor 영역 (`agents/auditor.md` "거대 파일 분할 후보" 항목). Liby는 분할 후 bundle 재컴파일·동기화만 담당.
 
 ## Ingest 트리거
 미르가 raw 내용을 제공하고 Librarian을 호출할 때만 실행.
