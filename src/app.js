@@ -32,58 +32,6 @@ function expandWithParents(detected){
   });
   return Array.from(new Set(out));
 }
-/* Guide tab 노출 조건 — 엔트리가 실제 큐레이션 가능한 섹션을 가질 때만 true.
-   기본값 상속 후 교집합이 공집합이면 탭 자체 숨김 (panel-contracts.md Guideline Assist 강화). */
-function hasGuidableContent(e){
-  if(!e) return false;
-  if(e.sections){
-    var keys=getUiHooks(e).guide||[];
-    if(keys.indexOf("*")!==-1) return Object.keys(e.sections).length>0;
-    return keys.some(function(k){return e.sections[k]&&e.sections[k].content;});
-  }
-  return !!(e.exam||e.draftAppend||e.treatment||e.differential);
-}
-
-/* Curation ctx 빌드 헬퍼 — handleCuration 실제 로직 단일 출처.
-   L3 Smoke #1 (부팅 KB 무결성 체크)과 handleCuration이 동일 헬퍼 호출 (DRY).
-   반환: {ctx: string, debug: {reason, emittedKeys}}
-   - v2 엔트리: uiHooks.guide 키 순회, primarySources 포함, 임시 라벨만 있는 섹션 skip (L2-patch).
-   - v1 엔트리: e.exam / e.draftAppend 만 반영 (handleCuration 실제 로직과 일치).
-   Smoke #1의 broken 판정 기준도 여기서 도출 → false positive 없음. */
-function buildCurationCtx(entry,key){
-  if(!entry) return {ctx:"",debug:{reason:"no-entry",emittedKeys:[]}};
-  var ctx="";
-  var emitted=[];
-  if(entry.sections){
-    var hooks=getUiHooks(entry);
-    var keys=hooks.guide||[];
-    if(keys.indexOf("*")!==-1) keys=Object.keys(entry.sections);
-    if(entry.primarySources&&entry.primarySources.length){
-      ctx+="["+key+".primarySources]\n"+entry.primarySources.join("\n")+"\n\n";
-      emitted.push("primarySources");
-    }
-    keys.forEach(function(k){
-      var s=entry.sections[k]; if(!(s&&s.content)) return;
-      /* L2-patch: sources[]가 모두 `[TIPS — 임시` 라벨이면 해당 섹션 skip. */
-      if(s.sources&&s.sources.length){
-        var allTemp=s.sources.every(function(src){
-          return typeof src==="string"&&src.indexOf("[TIPS — 임시")===0;
-        });
-        if(allTemp) return;
-      }
-      ctx+="["+key+"."+k+"]\n"+s.content;
-      if(s.sources&&s.sources.length) ctx+="\n[sources]\n"+s.sources.join("\n");
-      ctx+="\n\n";
-      emitted.push(k);
-    });
-    return {ctx:ctx,debug:{reason:emitted.length?"v2-ok":"v2-empty",emittedKeys:emitted}};
-  }
-  /* v1 fallback — handleCuration 실제 로직과 일치 (exam/draftAppend만). */
-  if(entry.exam){ ctx+="["+key+".exam]\n"+entry.exam+"\n\n"; emitted.push("exam"); }
-  if(entry.draftAppend){ ctx+="["+key+".draftAppend]\n"+entry.draftAppend+"\n\n"; emitted.push("draftAppend"); }
-  return {ctx:ctx,debug:{reason:emitted.length?"v1-ok":"v1-empty",emittedKeys:emitted}};
-}
-
 /* ══════════════════════════════════════════════════════════
    APP
 ══════════════════════════════════════════════════════════ */
@@ -101,9 +49,8 @@ function App(){
   var [draftLoading, setDraftLoading] = useState(false);
   var [reviewText,   setReviewText]   = useState("");
   var [reviewLoading,setReviewLoading]= useState(false);
-  var [curationText,   setCurationText]   = useState("");
-  var [curationLoading,setCurationLoading]= useState(false);
-  var [leftTab,      setLeftTab]      = useState("raw"); /* "raw" | "draft" | "guide" | "calc-xxx" */
+  var [leftTab,      setLeftTab]      = useState("raw"); /* "raw" | "draft" | "calc-xxx" */
+  var [mode,         setMode]         = useState("clinic"); /* "clinic" | "search" — 2026-05-06 */
 
   /* ── 계산기 탭 ── */
   var [detectedCalcs, setDetectedCalcs] = useState([]);
@@ -182,32 +129,25 @@ function App(){
     return list.length?list:null;
   },[detectedCalcs]);
 
-  /* ── L3 Smoke #1 + #3: KB 부팅 무결성 체크 (dev 한정) ──
-     #1: 모든 KB 키를 buildCurationCtx로 시뮬레이션 → 빈 ctx 반환 key 수집
-     #3: v2 엔트리(e.sections)인데 primarySources 누락 key 수집
-     경고만 표시, 앱 동작 영향 0. 프로덕션 사용자엔 노출 안 됨 (hostname 조건). */
+  /* ── L3 Smoke #3: KB 부팅 무결성 체크 (dev 한정) ──
+     v2 엔트리(e.sections)인데 primarySources 누락 key 수집.
+     경고만 표시, 앱 동작 영향 0. 프로덕션 사용자엔 노출 안 됨 (hostname 조건).
+     Guide ctx 공백 체크는 2026-05-06 Guideline Assist 폐기로 제거. */
   useEffect(function(){
     if(typeof KNOWLEDGE_BUNDLE==="undefined") return;
     var host=(typeof location!=="undefined"&&location.hostname)||"";
     if(host!=="localhost"&&host!=="127.0.0.1") return;
-    var broken=[];
     var noSource=[];
     Object.keys(KNOWLEDGE_BUNDLE).forEach(function(k){
       var e=KNOWLEDGE_BUNDLE[k]; if(!e) return;
-      var r=buildCurationCtx(e,k);
-      if(!r.ctx) broken.push(k);
       if(e.sections&&(!e.primarySources||!e.primarySources.length)){
         noSource.push(k);
       }
     });
-    if(broken.length){
-      console.warn("[KB-SMOKE] Guide ctx 공백 엔트리:",broken);
-    }
     if(noSource.length){
       console.warn("[KB-SMOKE] primarySources 누락 v2 엔트리:",noSource);
-    }
-    if(!broken.length&&!noSource.length){
-      console.log("[KB-SMOKE] 통과 — 공백 엔트리 0, primarySources 누락 0");
+    } else {
+      console.log("[KB-SMOKE] 통과 — primarySources 누락 0");
     }
   },[]);
 
@@ -222,39 +162,6 @@ function App(){
       return next;
     });
   },[detectedCalcs,raw]);
-
-  /* ── 임상 가이드 큐레이션 핸들러 (버튼·탭진입 양쪽에서 호출) ──
-     ctx 빌드 로직은 buildCurationCtx 헬퍼로 일원화 (L3 Smoke #1과 DRY). */
-  async function handleCuration(){
-    if(!apiKey||curationLoading) return;
-    var knowledgeCtx="";
-    if(typeof KNOWLEDGE_BUNDLE!=="undefined"){
-      var expandedCalcs=expandWithParents(detectedCalcs);
-      expandedCalcs.forEach(function(c){
-        var e=KNOWLEDGE_BUNDLE[c]; if(!e) return;
-        knowledgeCtx+=buildCurationCtx(e,c).ctx;
-      });
-    }
-    if(!knowledgeCtx) return;  /* C: Guide tab 노출 조건 강화로 도달 불가 — 안전 guard만 유지 */
-    setCurationLoading(true); setCurationText("");
-    try{
-      var r=await generateKnowledgeCuration(raw,apiKey,knowledgeCtx);
-      setCurationText(r);
-    }catch(e){setCurationText("[오류: "+e.message+"]");}
-    finally{setCurationLoading(false);}
-  }
-
-  /* ── 임상 가이드 탭 진입 시 자동 큐레이션 (한 번만) ── */
-  useEffect(function(){
-    if(leftTab!=="guide") return;
-    if(curationText||curationLoading) return;
-    if(!apiKey) return;
-    var expandedCalcs=expandWithParents(detectedCalcs);
-    var hasKnowledge=typeof KNOWLEDGE_BUNDLE!=="undefined"
-      &&expandedCalcs.some(function(c){return !!KNOWLEDGE_BUNDLE[c];});
-    if(!hasKnowledge) return;
-    handleCuration();
-  },[leftTab]);
 
   /* ─────────────────────────────────────────────────────────────
      Working Draft
@@ -425,8 +332,24 @@ function App(){
         </div>
       )}
 
+      {/* ── 모드 토글 (상단 고정, 2026-05-06) ── */}
+      <div style={{padding:"8px 12px",borderBottom:"1px solid #1e2538",
+        background:"#0d1018",display:"flex",alignItems:"center",gap:12}}>
+        <div className="mode-toggle">
+          <button className={mode==="clinic"?"on":""} onClick={function(){setMode("clinic");}}>🩺 진료</button>
+          <button className={mode==="search"?"on":""} onClick={function(){setMode("search");}}>🔍 검색</button>
+        </div>
+      </div>
+
+      {/* ── 검색 모드 ── */}
+      {mode==="search"&&(
+        <div style={{flex:1,overflowY:"auto"}}>
+          <SearchScreen/>
+        </div>
+      )}
+
       {/* ── 2-column: transcript (left) | 4-panel dashboard (right) ── */}
-      <div style={{flex:1,padding:12,overflowY:"auto"}}>
+      {mode==="clinic"&&<div style={{flex:1,padding:12,overflowY:"auto"}}>
 
         {/* ── 컨트롤 바 ── */}
         {!compactMode&&<div style={{background:"#131924",
@@ -543,32 +466,6 @@ function App(){
                       </button>
                     );
                   })}
-                  {/* 📖 임상 가이드 탭 — 실제 큐레이션 가능한 섹션이 있을 때만 노출 (C 개선).
-                       uiHooks.guide ∩ sections 교집합이 공집합이면 탭 자체 숨김. */}
-                  {typeof KNOWLEDGE_BUNDLE!=="undefined"&&expandWithParents(detectedCalcs).some(function(c){return hasGuidableContent(KNOWLEDGE_BUNDLE[c]);})&&(function(){
-                    var on=leftTab==="guide";
-                    return (
-                      <button key="guide"
-                        onClick={function(){setLeftTab("guide");}}
-                        style={{fontSize:10,fontWeight:700,padding:"3px 10px",borderRadius:5,
-                          color:on?"#a78bfa":"#2e374f",
-                          background:on?"#0d1018":"transparent",
-                          border:"1px solid "+(on?"rgba(167,139,250,.35)":"transparent"),
-                          cursor:"pointer",letterSpacing:".05em",
-                          fontFamily:"'JetBrains Mono',monospace",
-                          display:"flex",alignItems:"center",gap:4}}>
-                        📖 임상 가이드
-                        {curationLoading&&(
-                          <span style={{width:6,height:6,border:"1px solid #252d42",
-                            borderTopColor:"#a78bfa",borderRadius:"50%",display:"inline-block",
-                            animation:"spin .65s linear infinite"}}/>
-                        )}
-                        {!curationLoading&&curationText&&(
-                          <span style={{fontSize:8,color:"rgba(167,139,250,.6)"}}>✓</span>
-                        )}
-                      </button>
-                    );
-                  })()}
                   <CalcTabHeaders activeCalcs={activeCalcs} leftTab={leftTab}
                     setLeftTab={setLeftTab} setActiveCalcs={setActiveCalcs}/>
                   {leftTab==="raw"&&isRecording&&(
@@ -626,17 +523,6 @@ function App(){
                     }catch(e){setReviewText("[오류: "+e.message+"]");}
                     finally{setReviewLoading(false);}
                   }}/>
-              )}
-
-              {/* 📖 임상 가이드 탭 콘텐츠 */}
-              {leftTab==="guide"&&(
-                <GuideTab
-                  curationText={curationText} curationLoading={curationLoading}
-                  apiKey={apiKey}
-                  detectedKeys={typeof KNOWLEDGE_BUNDLE!=="undefined"
-                    ? expandWithParents(detectedCalcs).filter(function(c){return !!KNOWLEDGE_BUNDLE[c];})
-                    : []}
-                  onCurate={handleCuration}/>
               )}
 
               {/* 계산기 탭 콘텐츠 */}
@@ -716,7 +602,7 @@ function App(){
           </div>
 
         </div>
-      </div>
+      </div>}
     </div>
   );
 }

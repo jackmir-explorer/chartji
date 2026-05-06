@@ -32,11 +32,16 @@
 출력: HPI / Key negatives / Findings / Assessment / Plan
 금지: PE 필드 AI 추론, 의사 미발화 Plan, ROS 자동 완성
 
-## Guideline Assist (온디맨드)
-역할: 의사가 버튼을 눌렀을 때만 가이드라인 제공 — **처방 이전 배경** (분류·비교·장기추적·exam·differential·notes)
-출력: cue 한 줄 → 본문은 클릭 후 열림
-금지: 자동 표시, 지시형 톤
-제외 섹션 (2026-04-24 결단, Liby 힌트로 이전): contraindication · precaution · pregnancy — 처방 결정 시점 push가 본질이므로 Liby hint 전담
+## Knowledge Search (수동, 2026-05-06 신설)
+역할: 의사 능동 검색으로 knowledge/ 자산 raw 열람 — 진료 외 깊이 읽기 1순위, 진료 중 빠른 참조 2순위(Phase 2)
+출력: ranked 결과 목록(파일명·매칭 snippet·하이라이트) + 클릭 시 인라인 본문 펼침 + wikilink alias 동의어 + backlink
+금지: AI 추론 생성, 자동 진단 추천, top-1 단일 강조(항상 ranked list), RedFlag 컨텐츠 노출, myth 엔트리 포함
+원칙: 클라이언트 only(LLM 호출 0), Obsidian Quick Switcher 수준 검색 품질
+진입: 상단 모드 토글 "🩺 진료 / 🔍 검색"
+참조: rules/data-flow.md §6 (수동 검색 채널)
+
+## Guideline Assist — 폐기 (2026-05-06)
+Knowledge Search가 흡수. `KNOWLEDGE_CURATION_PROMPT`·`generateKnowledgeCuration`·`GuideTab`·`hasGuidableContent`·`buildCurationCtx`·`handleCuration` 제거.
 
 ## Liby 힌트 (push)
 역할: 처방 결정 시점 선제 감지 — indication/dosing/schedule/protocol/referral/contraindication/precaution/pregnancy

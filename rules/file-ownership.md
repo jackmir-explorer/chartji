@@ -40,6 +40,20 @@
       CalcTabContent (계산기 폼 + 결과 + 참조표 + 면책)
 금지: 공유 상태 직접 참조 (props로만 수신), API 호출
 
+## src/components/search.js (2026-05-06 신설)
+책임: Knowledge Search 모드 — 검색 UI + 검색 인덱스 빌드 + 결과 렌더
+포함: SearchScreen (전체 화면 검색 컴포넌트),
+      buildSearchIndex() (KNOWLEDGE_BUNDLE → 검색 인덱스, 런타임 1회 메모이즈),
+      extractWikilinks() (`[[t]]`/`[[t|alias]]` 추출 + alias→target 동의어 매핑 + backlink),
+      searchEntries() (다중 토큰 AND, 가중치 title 5/sectionKey 3/content 1, snippet ±40자),
+      highlight() (매칭 토큰 <mark> 감싸기)
+금지: API 호출(클라이언트 only, LLM 호출 0), KNOWLEDGE_BUNDLE 직접 편집,
+      RedFlag 키워드 컨텐츠 노출(rules/data-flow.md §2),
+      myth 엔트리 인덱스 포함(forbidden.md Liby §),
+      진료 패널 state 직접 참조
+원칙: 검색 0.5초 이내 응답, AI 추론 없음 (raw 열람)
+참조: rules/data-flow.md §6, rules/panel-contracts.md Knowledge Search
+
 ## src/templates.js
 책임: 질환별 계산 도구 정의 상수
 포함: CALCULATORS 객체 (질환 키 → {label, description, fields[], calculate()?, referenceTable?, externalLink?})
