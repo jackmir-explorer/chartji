@@ -3412,34 +3412,47 @@ KNOWLEDGE_BUNDLE["heart-failure-pocus-ducs"] = _hf_ducs_v2;
 KNOWLEDGE_BUNDLE["DUCS"] = _hf_ducs_v2;
 KNOWLEDGE_BUNDLE["VEXUS"] = _hf_ducs_v2;
 
-/* internal-medicine-2025-update — Cardiology + Endocrinology 2025 보완 합본 (4-30 deep-extract).
-   기존 키 본문 보존, 보완은 별도 topic으로 격리. [CLINICAL] */
-var _im_2025_v2 = {
+/* 2026-05-07 Auditor Tier 1 split: internal-medicine-2025-update (Cardiology + Endocrinology 합본) → 두 도메인 분리.
+   - cardiology-2025-update: Atalla 2026 PMID:41974015
+   - endocrinology-2025-update: Endocrinology 2026 PMID:41974004
+   - 기존 internal-medicine-2025-update 키는 cardiology-2025-update로 alias (검색 backward 호환; 합본 의도 deprecate). */
+
+/* cardiology-2025-update — Cardiology 2025 핵심 변화 (Atalla 2026, 4-30 deep-extract). [CLINICAL] */
+var _cardiology_2025_update_v2 = {
   kind: "topic",
-  keywords: ["internal-medicine-2025-update","cardiology-2025","endocrinology-2025","AF anticoagulation","mavacamten","aficamten","finerenone","피네레논","GLP-1 NAION","SGLT-2 UTI 비교"],
+  keywords: ["cardiology-2025","cardiology 2025 update","심장내과 2025","AF anticoagulation","mavacamten","aficamten","HCM","apixaban","rivaroxaban","post-MI BB"],
   primarySources: [
-    "Atalla M et al. Cardiology 2025 update. Ann Intern Med 2026. PMID:41974015, DOI:10.7326/ANNALS-26-01014 [초록 기반]",
-    "Endocrinology 2025 update. Ann Intern Med 2026. PMID:41974004, DOI:10.7326/ANNALS-26-01015 [초록 기반]"
+    "Atalla M et al. Update in Cardiology 2025. Ann Intern Med 2026. PMID:41974015, DOI:10.7326/ANNALS-26-01014 [초록 기반]"
   ],
   sections: {
-    cardiology: {
-      content: "### 심장내과 2025 핵심 변화 (PMID:41974015)\n- **AF 항응고**: 아픽사반 vs 리바록사반 재평가\n- **MI 후 BB**: LVEF≥50% 일률 처방 재고 방향 재확인 ([[post-mi-deprescribing]])\n- **HCM 신약**: mavacamten·aficamten 인식 확대\n- **AF + 커피**: 예상보다 안전 (실용 메시지)",
-      sources: []
-    },
-    endocrinology: {
-      content: "### 내분비 2025 핵심 변화 (PMID:41974004)\n- **GLP-1 NAION 부작용 신호**: 시야 변화 모니터링 교육 추가 ([[glp1-selection-strategy]])\n- **[[sglt2-inhibitors|SGLT-2]] vs GLP-1 비뇨생식기 감염 비교**: SGLT-2 위험 ↑ → **반복 UTI 환자 GLP-1 우선 고려**\n- **피네레논 (Finerenone)**: T2DM + CKD 신보호 추가 근거. SGLT-2i + 피네레논 병합 전략 가능성\n- **[[MASH|MASH]] + GLP-1**: 적응증 확대 ([[MASH]])",
-      sources: []
-    },
     notes: {
-      content: "본 엔트리는 두 Ann Intern Med 2026 update 논문 합본. 개별 영역의 상세는 관련 엔트리(post-mi-[[deprescribing|deprescribing]]·[[glp1-selection-strategy|glp1-selection-strategy]]·[[sglt2-inhibitors|sglt2-inhibitors]]·CKD·[[MASH|MASH]]) 본문 참조. 본 엔트리는 **2025년 내과 변화 한눈에 보기** 목적.",
+      content: "### 심장내과 2025 핵심 변화 (Atalla 2026 PMID:41974015)\n- **AF 항응고**: 아픽사반 vs 리바록사반 재평가\n- **MI 후 BB**: LVEF≥50% 일률 처방 재고 방향 재확인 ([[post-mi-deprescribing]])\n- **HCM 신약**: mavacamten·aficamten 인식 확대\n- **AF + 커피**: 예상보다 안전 (실용 메시지)",
       sources: []
     }
   },
   uiHooks: null
 };
-KNOWLEDGE_BUNDLE["internal-medicine-2025-update"] = _im_2025_v2;
-KNOWLEDGE_BUNDLE["cardiology-2025"] = _im_2025_v2;
-KNOWLEDGE_BUNDLE["endocrinology-2025"] = _im_2025_v2;
+KNOWLEDGE_BUNDLE["cardiology-2025-update"] = _cardiology_2025_update_v2;
+KNOWLEDGE_BUNDLE["cardiology-2025"] = _cardiology_2025_update_v2;
+KNOWLEDGE_BUNDLE["internal-medicine-2025-update"] = _cardiology_2025_update_v2; /* deprecated alias — backward compat (합본 의도 분할됨, endocrinology는 endocrinology-2025-update 키로 분리) */
+
+/* endocrinology-2025-update — Endocrinology 2025 핵심 변화 (Endocrinology 2026, 4-30 deep-extract). [CLINICAL] */
+var _endocrinology_2025_update_v2 = {
+  kind: "topic",
+  keywords: ["endocrinology-2025","endocrinology 2025 update","내분비 2025","GLP-1 NAION","SGLT-2 UTI 비교","finerenone","피네레논","MASH GLP-1"],
+  primarySources: [
+    "Update in Endocrinology 2025. Ann Intern Med 2026. PMID:41974004, DOI:10.7326/ANNALS-26-01015 [초록 기반]"
+  ],
+  sections: {
+    notes: {
+      content: "### 내분비 2025 핵심 변화 (PMID:41974004)\n- **GLP-1 NAION 부작용 신호**: 시야 변화 모니터링 교육 추가 ([[glp1-selection-strategy]])\n- **[[sglt2-inhibitors|SGLT-2]] vs GLP-1 비뇨생식기 감염 비교**: SGLT-2 위험 ↑ → **반복 UTI 환자 GLP-1 우선 고려**\n- **피네레논 (Finerenone)**: T2DM + CKD 신보호 추가 근거. SGLT-2i + 피네레논 병합 전략 가능성\n- **[[MASH|MASH]] + GLP-1**: 적응증 확대 ([[MASH]])",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["endocrinology-2025-update"] = _endocrinology_2025_update_v2;
+KNOWLEDGE_BUNDLE["endocrinology-2025"] = _endocrinology_2025_update_v2;
 
 /* ========== 4-30 ENT bulk ingest (Batch 4 — 비강·축농증) ========== */
 
@@ -4239,52 +4252,95 @@ KNOWLEDGE_BUNDLE["테니스엘보"] = _msk_injection_v2;
 KNOWLEDGE_BUNDLE["ultrasound-guided-injection"] = _msk_injection_v2;
 
 /* ========== 5-1~5-4 cron Liby ingest (Batch 2 — 완화·EOL·deprescribing) ========== */
+/* 2026-05-07 Auditor Tier 1 split: palliative-pain v2_full 4 도메인 분리.
+   - palliative-pain → 부프레노르핀 본연 (line 3201 _palliative_pain_v2 유지, 키 덮어쓰기 해소)
+   - 신규 eol-deprescribing → Thorpe 2026 LBM 중단
+   - 신규 cancer-neuropathic-pain-steroid → Koike 2026 스테로이드 반응 예측
+   - 신규 afp-eol-symptom-management → McGregor AFP 2025 EOL 증상 관리 + counseling INSIGHTS */
 
-/* palliative-pain v2 보강 — 임종기 deprescribing·암성 신경병증·AFP EOL (5-2·5-4 cron) */
-var _palliative_pain_v2_full = {
-  kind: "disease",
-  keywords: ["완화의료","palliative care","buprenorphine","부프레노르핀","오피오이드","암성통증","경피패치","transdermal","호스피스","EOL","end of life","deprescribing","LBM","steroid","corticosteroid","neuropathic pain"],
+/* eol-deprescribing — 임종기 비필수 약물 중단 (Thorpe 2026, 5-2 cron). [CLINICAL] */
+var _eol_deprescribing_v2 = {
+  kind: "topic",
+  keywords: ["EOL","임종기","end of life","deprescribing","LBM","limited benefit medication","이익제한약물","완화의료","palliative care","호스피스"],
   primarySources: [
-    "Jose V et al. J Pain Symptom Manage 2025;71(5):e525-e539. PMID:41475688",
-    "Thorpe JM et al. J Am Geriatr Soc 2026 Apr 2. PMID:41925169",
-    "Koike R et al. J Pain Symptom Manage 2026 Feb 5;71(5):668-675.e1. PMID:41654095",
-    "McGregor TL et al. Am Fam Physician 2025 Nov;112(5):493-503. PMID:41252832"
+    "Thorpe JM et al. Discontinuation of Medications With Limited Benefit at End of Life in Community-Dwelling Older Veterans. J Am Geriatr Soc 2026 Apr 2. PMID:41925169, DOI:10.1111/jgs.70381"
   ],
   sections: {
     definition: {
-      content: "부프레노르핀(Buprenorphine)은 부분 오피오이드 작용제(μ 부분 작용, κ/δ 길항)로, 완화의료에서 모르핀·펜타닐 등 완전 작용제와 동등한 진통 효과를 보이는 대안 오피오이드. 경피 패치 형태가 연하 곤란·장 기능 저하 환자에 특히 유리. 완화의료 영역은 부프레노르핀 외에도 임종기 deprescribing·암성 신경병증·AFP 가정의학과 EOL 관리 통합.",
+      content: "임종기 deprescribing은 기대 여명이 제한된 환자에서 장기 예방 효과를 목적으로 한 **이익이 제한적인 약물(LBM, Limited-Benefit Medication)**을 중단·감량하는 처방 행위. 외래 [[palliative-pain|완화의료]] 통증 조절과 별개의 독립 영역.",
       sources: []
     },
     notes: {
-      content: "### 부프레노르핀 효능 핵심 수치 (Jose 2025)\n| 비교 | 결과 |\n|---|---|\n| 단기 부프레노르핀 vs 모르핀·트라마돌·펜타닐 | 동등 진통 (6/6 RCT) |\n| 장기 부프레노르핀 vs 장기 펜타닐·모르핀·옥시코돈 | 동등 또는 우월 (4/5 RCT) |\n| 경피 부프레노르핀 vs 위약 | 유의 진통 (전 연구) |\n| 부작용 프로파일 | 완전 작용제와 통계 차이 없음 |",
+      content: "### 핵심 수치 (Thorpe 2026 PMID:41925169)\n후향 코호트 n=37,193 재향군인 임종자 (≥65세 지역사회 거주, 2016–2017).\n\n- 임종 전 마지막 1년 시작 시점 **73%**가 LBM 복용\n- LBM 중단 경험: **22.0%** → 78%가 임종까지 LBM 지속\n- 전문 완화의료 연계 환자: LBM 중단률 **유의하게 ↑**",
       sources: []
     },
     protocol: {
-      content: "### 부프레노르핀 형태별 적응\n| 제형 | 특징 | 적합 환자 |\n|---|---|---|\n| **경피 패치** | 72시간 또는 7일 교체; 연하 불필요 | 연하곤란·오심·장 기능 저하 말기 |\n| 설하정 | 빠른 흡수; 구강 점막 흡수 | 경구 불가하나 구강 점막 가능 |\n| 정맥/근주 | 빠른 작용 | 입원·CICU |\n\n### 모르핀 환산\n- 경피 부프레노르핀 35 μg/h ≈ 경구 모르핀 60–80mg/일 (대략적 — 모니터링 필수)\n- 오피오이드 전환 시 전문의/호스피스 협력 권고",
+      content: "### LBM(이익 제한 약물) 예시\n| 약물군 | 임종기 재검토 이유 |\n|---|---|\n| 스타틴 | 장기 심혈관 이익 — 임종 수개월 내 편익 없음 |\n| 경구 혈당강하제 | 저혈당 위험 + 삶의 질 이익 없음 |\n| 항고혈압제 | 낙상·기립성 저혈압 위험 |\n| 항혈전제 | 출혈 vs 이익 재검토 |\n| 위산 억제제 (PPI) | 무증상 예방 사용 중단 |\n| 항치매제 (ChEI·메만틴) | 기능 보존 불가 단계 중단 고려 |\n\n### 시작 기준\n- 기대 여명 < 6개월 (또는 hospice 전환 시점)\n- 환자·가족과 '편안함 중심 치료' 목표 합의\n- 완화의료 팀 협진 → 중단률 유의 ↑",
       sources: []
     },
-    precaution: {
-      content: "- 완전 작용제 → 부프레노르핀 전환 시 **오피오이드 금단 주의** — 마지막 완전 작용제 후 12~24시간 경과 후 시작 (또는 전문가 지도)\n- 천장 효과(ceiling): 호흡 억제는 천장(안전성 장점), 진통은 선형 유지\n- 신기능 저하: 간(CYP3A4) 대사 — 신부전 상대적 안전 (모르핀의 M6G 축적 문제 없음)",
-      sources: []
-    },
-    comparison: {
-      content: "| 특성 | 부프레노르핀 | 모르핀 | 펜타닐 |\n|---|---|---|---|\n| 진통 효과 | 동등 | 표준 | 동등 |\n| 투여 경로 | 경피/설하/IV | 경구/IV/SC | 경피/IV |\n| 신부전 시 | 안전 | 주의 (M6G 축적) | 안전 |\n| 오피오이드 의존 우려 | 낮음 | 높음 | 높음 |\n| 연하곤란 시 | 경피 패치 유리 | 경구 불가 | 경피 가능 |\n| 부작용 | 모르핀과 유사 | 표준 | 변비 적음 |",
-      sources: []
-    },
-    "eol-deprescribing": {
-      content: "### 임종기 비필수 약물 중단 (Thorpe 2026 PMID:41925169)\n후향 코호트 n=37,193 재향군인 임종자 (≥65세 지역사회).\n\n**핵심 수치**:\n- 임종 전 마지막 1년 시작 시점 **73%**가 LBM(이익 제한 약물) 복용\n- LBM 중단 경험: **22.0%** → 78%가 임종까지 LBM 지속\n- 전문 완화의료 연계 환자: LBM 중단률 **유의 ↑**\n\n### LBM 예시\n| 약물군 | 임종기 재검토 이유 |\n|---|---|\n| 스타틴 | 장기 심혈관 이익 — 임종 수개월 내 편익 없음 |\n| 경구 혈당강하제 | 저혈당 위험 + 삶의 질 이익 없음 |\n| 항고혈압제 | 낙상·기립성 저혈압 위험 |\n| 항혈전제 | 출혈 vs 이익 재검토 |\n| 위산 억제제 (PPI) | 무증상 예방 사용 중단 |\n| 항치매제 (ChEI·메만틴) | 기능 보존 불가 단계 중단 고려 |\n\n### 시작 기준\n- 기대 여명 < 6개월 (또는 hospice 전환 시점)\n- 환자·가족과 '편안함 중심 치료' 목표 합의\n- 완화의료 팀 협진 → 중단률 유의 ↑\n\n### 환자/가족 대화 예시\n> '지금 복용하시는 약 중에 앞으로 도움이 되지 않는 것들이 있습니다. 줄여서 드시기 편하게 해드리는 게 어떨까요?'",
-      sources: []
-    },
-    "cancer-neuropathic-pain": {
-      content: "### 암성 신경병증 통증 — 코르티코스테로이드 반응 예측 (Koike 2026 PMID:41654095)\n전향 다기관 관찰 코호트 n=97 (일본 17개 완화의료, 무작위 X) [CLINICAL — 조건부]\n\n**다변수 로지스틱 회귀 결과 (반응 예측 인자)**:\n| 예측 인자 | 통계 | 임상 의미 |\n|---|---|---|\n| **정상 WBC (≤8,500/μL)** | p=.005 | 염증 과부하 없는 환자 → 스테로이드 반응 기대 |\n| **낮은 KPS (≤40)** | p=.008 | 전신상태 저하에서 역설적 반응↑ |\n| **두개내 종양 기원** | p=.082 (경계) | 뇌부종·압박 기전 → 스테로이드 반응 기대 |\n\n결과 분포: 97명 중 50명(52%) 통증 완화, 47명 무반응.\n\n**임상 적용**:\n- 암성 신경병증 통증 스테로이드 처방 전 WBC·KPS·종양 위치 확인\n- WBC ≤8,500 + KPS ≤40 + 두개내 기원 → 스테로이드 시도 타당\n- 반대 조건 → 효과 기대 낮음, 대안 고려",
-      sources: []
-    },
-    "afp-eol-management": {
-      content: "### 임종기 완화의료 — 가정의학과 역할 (McGregor AFP 2025 PMID:41252832)\n[초록 기반 — 전문 미확인]\n\n### 증상별 처방 원칙\n| 증상 | 1차 접근 | 추가 |\n|---|---|---|\n| **통증·호흡곤란** | 오피오이드 우선 | 자세·냉각·마사지 |\n| **오심** | 원인 수용체 타깃 | 촉진 인자 제거 |\n| **변비** | 삼투성+자극성 하제 동시 예방 | 중증 오피오이드 변비 → 직장관장·μ-길항제 |\n| **식욕부진** | 대부분 특별 치료 불필요 | 자극제: 연하·오심·변비 해결 후 |\n| **섬망** | 조기 인식·원인 약물 감량·지남력 교정 | 향정신약 최소화 |\n| **기분장애** | 슬픔·인지저하와 구별 | 예후·치료 발현 시간 고려 |\n\n### 임종기 오피오이드 원칙\n- 통증 + 호흡곤란 → 오피오이드 핵심 치료\n- 보조 약물·비약물 중재로 필요량 지연·감소 가능\n- **오피오이드 사용 = 삶 단축 X (이중효과 원칙)**\n\n### 가정의학과 단독 처치 범위\n- 경구 오피오이드 조절·하제·항구역제\n- 섬망 원인 약물 감량·가족 교육\n- 전문 완화의료 의뢰 전 증상 조절 유지 가능",
+    counseling: {
+      content: "### 환자/가족 대화 예시\n> '지금 복용하시는 약 중에 앞으로 도움이 되지 않는 것들이 있습니다. 줄여서 드시기 편하게 해드리는 게 어떨까요?'",
       sources: []
     },
     referral: {
-      content: "- 완화의료 통증 조절 시작 시 — 호스피스·완화의학 팀 초기 협력\n- 오피오이드 rotation 필요 → 완화의학·통증의학과\n- 말기 환자 — 가정 호스피스 팀 연계\n- 임종기 deprescribing — 완화의료 팀 협진 권고",
+      content: "- 임종기 deprescribing — 완화의료 팀 협진 권고\n- 일반 외래 다약제 검토는 [[deprescribing]] 일반 가이드라인 참조",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["eol-deprescribing"] = _eol_deprescribing_v2;
+KNOWLEDGE_BUNDLE["EOL-deprescribing"] = _eol_deprescribing_v2;
+KNOWLEDGE_BUNDLE["임종기"] = _eol_deprescribing_v2;
+
+/* cancer-neuropathic-pain-steroid — 암성 신경병증 통증 코르티코스테로이드 반응 예측 (Koike 2026, 5-2 cron). [CLINICAL — 조건부] */
+var _cancer_neuropathic_pain_steroid_v2 = {
+  kind: "topic",
+  keywords: ["cancer pain","암성통증","neuropathic pain","신경병증통증","corticosteroid","steroid","스테로이드","KPS","WBC","뇌종양","brain metastasis","palliative care"],
+  primarySources: [
+    "Koike R et al. Factors Indicating Cancer-Related Neuropathic Pain Relief by Corticosteroids Administration. J Pain Symptom Manage 2026 Feb 5;71(5):668-675.e1. PMID:41654095, DOI:10.1016/j.jpainsymman.2026.01.024"
+  ],
+  sections: {
+    definition: {
+      content: "암성 신경병증 통증에 대한 코르티코스테로이드는 자주 사용되나 효과 근거 제한적 — 반응 예측 인자 규명 연구. [[palliative-pain|완화의료 통증]]에서 부프레노르핀과 별도 도메인.",
+      sources: []
+    },
+    notes: {
+      content: "### 다변수 로지스틱 회귀 결과 — 반응 예측 인자 (Koike 2026 PMID:41654095)\n전향 다기관 관찰 코호트 n=97 (일본 17개 완화의료, 무작위 X).\n\n| 예측 인자 | 통계 | 임상 의미 |\n|---|---|---|\n| **정상 WBC (≤8,500/μL)** | p=.005 | 염증 과부하 없는 환자 → 스테로이드 반응 기대 |\n| **낮은 KPS (≤40)** | p=.008 | 전신상태 저하에서 역설적 반응↑ |\n| **두개내 종양 기원** | p=.082 (경계) | 뇌부종·압박 기전 → 스테로이드 반응 기대 |\n\n결과 분포: 97명 중 50명(52%) 통증 완화, 47명 무반응.",
+      sources: []
+    },
+    protocol: {
+      content: "### 임상 적용\n- 암성 신경병증 통증 스테로이드 처방 전 **WBC·KPS·종양 위치 확인**\n- WBC ≤8,500 + KPS ≤40 + 두개내 기원 → 스테로이드 시도 타당\n- 반대 조건(WBC ↑·KPS 양호·비두개내 기원) → 효과 기대 낮음, 대안 고려",
+      sources: []
+    },
+    precaution: {
+      content: "**한계** [CLINICAL — 조건부]: 무작위 배정 없음, 비교 대조군 없음, 일본 완화의료 단일 환경 — 외삽 주의. 결정은 임상 판단·환자 가치 통합 후.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["cancer-neuropathic-pain-steroid"] = _cancer_neuropathic_pain_steroid_v2;
+KNOWLEDGE_BUNDLE["cancer-pain-steroid"] = _cancer_neuropathic_pain_steroid_v2;
+
+/* afp-eol-symptom-management — 임종기 증상 관리 가정의학과 역할 + 환자 의사소통 INSIGHTS (5-2·5-4 cron). [CLINICAL + INSIGHTS] */
+var _afp_eol_symptom_management_v2 = {
+  kind: "topic",
+  keywords: ["EOL","end of life","임종기","palliative care","completion of life","가정의학과 EOL","symptom management","증상관리","오심","변비","섬망","식욕부진","호흡곤란","counseling","의사소통"],
+  primarySources: [
+    "McGregor TL et al. End-of-Life Palliative Care: Role of the Family Physician. Am Fam Physician 2025 Nov;112(5):493-503. PMID:41252832 [초록 기반]"
+  ],
+  sections: {
+    definition: {
+      content: "임종기 완화의료에서 가정의학과(외래 일차의료) 의사가 단독·전문 의뢰 전까지 책임지는 증상별 처방 원칙. [[palliative-pain|부프레노르핀 통증 조절]]과 별개로 오심·변비·섬망·식욕부진·호흡곤란 등 비통증 증상 다도메인 관리.",
+      sources: []
+    },
+    protocol: {
+      content: "### 증상별 처방 원칙 (McGregor AFP 2025 PMID:41252832)\n| 증상 | 1차 접근 | 추가 고려 |\n|---|---|---|\n| **통증·호흡곤란** | 오피오이드 우선 | 자세·냉각·마사지 |\n| **오심** | 원인 수용체 타깃 약제 | 촉진 인자 제거 우선 |\n| **변비** | 삼투성+자극성 하제 동시 예방 | 중증 오피오이드 변비 → 직장관장·μ-오피오이드 길항제 |\n| **식욕부진** | 대부분 특별 치료 불필요 | 식욕 자극제: 연하·오심·변비 해결 후 |\n| **섬망** | 조기 인식·원인 약물 감량·지남력 교정 | 향정신약 최소화 |\n| **기분장애** | 슬픔·인지저하와 구별 | 예후·치료 발현 시간 고려 |\n\n### 임종기 오피오이드 원칙\n- 통증 + 호흡곤란 → 오피오이드 핵심 치료\n- 보조 약물·비약물 중재로 필요량 지연·감소 가능\n- **오피오이드 사용 = 삶 단축 X (이중효과 원칙)**",
+      sources: []
+    },
+    referral: {
+      content: "### 가정의학과 단독 처치 범위\n- 경구 오피오이드 조절·하제·항구역제\n- 섬망 원인 약물 감량·가족 교육\n- 전문 완화의료 의뢰 전 증상 조절 유지 가능\n- 통증 조절 상세는 [[palliative-pain]] / 약물 중단은 [[eol-deprescribing]] 참조",
       sources: []
     },
     counseling: {
@@ -4292,20 +4348,9 @@ var _palliative_pain_v2_full = {
       sources: []
     }
   },
-  uiHooks: {
-    hint: ["protocol","eol-deprescribing","cancer-neuropathic-pain","afp-eol-management","counseling","referral","contraindication","precaution","pregnancy"],
-    guide: ["*"],
-    triage: ["differential"],
-    draftAppend: ["draft-append"]
-  }
+  uiHooks: null
 };
-KNOWLEDGE_BUNDLE["palliative-pain"] = _palliative_pain_v2_full;
-KNOWLEDGE_BUNDLE["완화의료"] = _palliative_pain_v2_full;
-KNOWLEDGE_BUNDLE["buprenorphine"] = _palliative_pain_v2_full;
-KNOWLEDGE_BUNDLE["부프레노르핀"] = _palliative_pain_v2_full;
-KNOWLEDGE_BUNDLE["EOL-deprescribing"] = _palliative_pain_v2_full;
-KNOWLEDGE_BUNDLE["임종기"] = _palliative_pain_v2_full;
-KNOWLEDGE_BUNDLE["cancer-pain-steroid"] = _palliative_pain_v2_full;
+KNOWLEDGE_BUNDLE["afp-eol-symptom-management"] = _afp_eol_symptom_management_v2;
 
 /* goals-of-care-acp — ACP·GOC 7대 핵심 요소 + 외래 적용 (5-2 cron). [INSIGHTS] */
 var _goc_acp_v2 = {
