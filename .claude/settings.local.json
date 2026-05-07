@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git pull *)",
+      "Bash(git stash *)",
+      "mcp__a193225c-a204-4503-94d6-56c3fef73f33__search_articles",
+      "mcp__a193225c-a204-4503-94d6-56c3fef73f33__get_article_metadata",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
+    ]
+  }
+}

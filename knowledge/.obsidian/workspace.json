@@ -1,0 +1,203 @@
+{
+  "main": {
+    "id": "6c9981ae6c5ba346",
+    "type": "split",
+    "children": [
+      {
+        "id": "f7ed2e772d3e6e8b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ed125654748b9957",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "새 탭"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7511674128242baa",
+    "type": "split",
+    "children": [
+      {
+        "id": "342929e24da53a52",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9d79401cf512f696",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
+            }
+          },
+          {
+            "id": "d7b3bdd3d70e7441",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "검색"
+            }
+          },
+          {
+            "id": "fb98342eebcfa922",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "북마크"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d2523c622459571d",
+    "type": "split",
+    "children": [
+      {
+        "id": "2b5f4a698a3490b0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4b806848697e128c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "백링크"
+            }
+          },
+          {
+            "id": "95344d00b9b2c5cb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "나가는 링크"
+            }
+          },
+          {
+            "id": "945eb7a79f5f409e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "태그"
+            }
+          },
+          {
+            "id": "64ce0b3de5d2f8d6",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "모든 속성"
+            }
+          },
+          {
+            "id": "c0365472b4b02e22",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "개요"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:빠른 전환기 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 일일 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "bases:새 베이스 생성하기": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "ed125654748b9957",
+  "lastOpenFiles": [
+    "by-disease/opioid-use-disorder.md",
+    "by-drug/cgm-t2dm.md",
+    "by-disease/sudden-hearing-loss.md",
+    "by-disease/cardiac-rehabilitation.md",
+    "by-disease/heart-failure-pocus-ducs.md",
+    "by-disease/heart-failure-monitoring.md",
+    "by-disease/heart-failure-hfpef-obesity.md",
+    "by-disease/heart-failure-gdmt-dosing.md",
+    "by-disease/heart-failure-cardiology-2025-update.md",
+    "by-disease/vestibular-neuritis.md",
+    "by-drug/wegovy.md",
+    "by-drug/mounjaro.md",
+    "by-disease/sleep-apnea.md",
+    "by-disease/diabetic-peripheral-neuropathy.md",
+    "by-disease/paresthesia.md",
+    "by-disease/CKD.md",
+    "by-disease/heart-failure.md",
+    "pediatric-fever-management.md",
+    "by-disease/pediatric-antibiotic-stewardship.md",
+    "scope.md"
+  ]
+}

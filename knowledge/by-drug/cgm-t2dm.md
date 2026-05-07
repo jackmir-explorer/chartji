@@ -19,7 +19,7 @@ uiHooks: { "guide": ["*"] }
 
 ## 정의 (definition)
 
-연속혈당측정(CGM)은 피부 하 interstitial glucose를 실시간(Dexcom G7 등) 또는 intermittent scan 방식(FreeStyle Libre 등)으로 측정하는 device. **인슐린 치료 T2DM·T1DM에서는 효과가 확립**되어 있으나, **비인슐린 치료 T2DM 환자에서는 HbA1c 감소 효과가 임상적으로 의미 없고, 오히려 해(harm)를 끼칠 가능성**이 AFP 2024 POEM에 선정되었다. 본 엔트리는 **비인슐린 T2DM 환자의 CGM 요청에 대한 일차의료 상담 근거**를 제공한다.
+연속혈당측정(CGM)은 피부 하 interstitial glucose를 실시간(Dexcom G7 등) 또는 intermittent scan 방식(FreeStyle Libre 등)으로 측정하는 device. **인슐린 치료 T2DM·T1DM에서는 효과가 확립**되어 있으나, **비인슐린 치료 Type 2 [[diabetes]] 환자에서는 HbA1c 감소 효과가 임상적으로 의미 없고, 오히려 해(harm)를 끼칠 가능성**이 AFP 2024 POEM에 선정되었다. 본 엔트리는 **비인슐린 T2DM 환자의 CGM 요청에 대한 일차의료 상담 근거**를 제공한다.
 
 > 출처: AFP Top 20 POEMs 2024 — Grad R, Ebell MH. Am Fam Physician 2025
 

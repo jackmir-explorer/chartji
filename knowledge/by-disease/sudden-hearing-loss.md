@@ -14,9 +14,9 @@ keywords: 돌발성난청, sudden hearing loss, SSNHL, sudden sensorineural hear
 
 ### 증상
 
-- **갑작스러운 편측 청력 저하** (보통 아침에 일어나니 안 들림)
-- 이명·이충만감 동반 흔함
-- 어지럼증 동반 시 예후 불량
+- **갑작스러운 편측 청력 저하** (보통 아침에 일어나니 안 들림) [[hearing-loss]]
+- 이명·이충만감 동반 흔함 [[tinnitus]]
+- 어지럼증 동반 시 예후 불량 [[dizziness]]
 
 ### 진단
 
@@ -26,7 +26,7 @@ keywords: 돌발성난청, sudden hearing loss, SSNHL, sudden sensorineural hear
 
 ### 동반 평가 [TIPS — by ENT 교수]
 
-- **당뇨 확인 — 스테로이드 처방 전 필수**
+- **당뇨 확인 — 스테로이드 처방 전 필수** 
 - 고혈압·심혈관 위험 평가
 
 ---
