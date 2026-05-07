@@ -14,9 +14,9 @@ keywords: 전정신경염, vestibular neuritis, 전정장애, 급성 전정장�
 
 ### 임상 양상
 
-- **갑작스러운 회전성 현훈** — 수일 지속
+- **갑작스러운 회전성 현훈** — 수일 지속 ([[dizziness]])
 - 오심·구토·보행 장애
-- **청력 저하·이명 없음** (있으면 미로염·메니에르·SSNHL 감별)
+- **청력 저하·이명 없음** (있으면 미로염·[[meniere]]·SSNHL 감별)
 - 자발 안진 — horizontal/torsional, 빠른 상은 정상 측
 
 ### 진단 검사
@@ -63,4 +63,4 @@ keywords: 전정신경염, vestibular neuritis, 전정장애, 급성 전정장�
 - HINTS 음성·중추성 의심 → **즉시 뇌영상·신경과**
 - 청력 저하·이명 동반 → 미로염 의심 → ENT
 - 1주 이상 호전 없음 → ENT
-- 반복 발작 → 메니에르 또는 vestibular migraine 감별 → 신경이과
+- 반복 발작 → 메니에르 또는 vestibular migraine 감별 → ENT

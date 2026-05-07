@@ -14,7 +14,7 @@ relations: []
 ## 적응증 [CLINICAL]
 
 - **T2DM** — 단독 또는 병용 (Mounjaro, FDA 2022)
-- **비만** — HTN / Dyslipidemia / OSA / CVD 동반 시 (Zepbound, FDA 2023.11)
+- **비만** — [[hypertension]] / [[dyslipidemia]] / [[sleep-apnea]] / CVD 동반 시 (Zepbound, FDA 2023.11)
   - CVD: 우월성 미입증, 비열등성 수준 (SURPASS-CVOT)
 
 ---

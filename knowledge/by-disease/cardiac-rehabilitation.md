@@ -26,7 +26,7 @@ relations: []
 > [출처: Boggiano VL et al. Am Fam Physician 2025 Sep;112(3):272-277. PMID:40961304]
 
 - 심근경색 (Myocardial Infarction)
-- 심부전 (Heart Failure — 안정기)
+- 심부전 ([[heart-failure]] — 안정기)
 - 경피적 관상동맥 중재술 (PCI / Angioplasty)
 - 관상동맥 우회술 (CABG)
 - 심장 판막 수술 후
