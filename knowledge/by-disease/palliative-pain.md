@@ -193,3 +193,25 @@ relations: []
 - **공통점: 사람은 '설명되지 않은 고통'을 견디기 매우 어려워함** → 의사가 의미 부여(meaning-making) 역할
 
 [Related: Communication & Counseling 횡단 모듈 (memory user_clinical_focus.md 부속 B)]
+
+---
+
+## 부프레노르핀 패치 조기 효력 소실 (End-of-Dosage Failure) (precaution) [CLINICAL — 조건부]
+
+> [출처: Weerasiri SD et al. A Case Report of End-of-Dosage Failure With Buprenorphine Patch. J Pain Symptom Manage. 2026 Jan 28;71(5):e606-e609. PMID:41617142, DOI:10.1016/j.jpainsymman.2026.01.018]
+> [증례 보고 — 문헌 첫 번째 사례; 일반화 주의]
+
+**증례 요약:**
+- 72세 전이성 선암 남성 — tramadol 50mg PRN에서 buprenorphine 패치 5 mcg/h로 전환
+- 7일 교환 일정인데 **5일째부터 효과 소진** (wearing-off effect)
+- 5일 교환 간격으로 전환 → 복통 해소, 수면 개선
+
+**임상 함의:**
+- 부프레노르핀 패치 처방 후 "패치가 2~3일 전에 효과 없어진다" 호소 시 → 7일→5일 교환 단축 고려
+- 7일 패치가 **모든 환자에서 7일 효력 보장하지 않음** — 환자별 약동학 변이
+- 스크리닝 질문 추가: "패치 마지막 1~2일에 통증이 다시 심해지나요?"
+
+**처방 조정 시:**
+- 교환 주기 단축(7→5일) 또는 기저 용량 증량 검토
+- 신기능 저하(AKI 동반 시) — 약물 대사 변화 추가 고려
+- [출처 미확인 — researcher 검증 권장]: 한국 부프레노르핀 패치 급여 기준·교환 주기 변경 시 보험 적용

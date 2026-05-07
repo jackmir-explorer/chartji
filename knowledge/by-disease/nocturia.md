@@ -1,7 +1,7 @@
 # 야간뇨 (Nocturia) [CLINICAL]
 
 tags: [CLINICAL]
-keywords: nocturia, 야간뇨, 야간다뇨, nocturnal polyuria, OAB, BPH, GSM, 낙상, 수면, 생활습관, 이뇨제, desmopressin, 미라베그론
+keywords: nocturia, 야간뇨, 야간다뇨, nocturnal polyuria, OAB, BPH, GSM, 낙상, 수면, 생활습관, 이뇨제, desmopressin, 미라베그론, mirabegron, overactive bladder, 허약노인, frailty
 
 version: (미정)
 supersedes: (미정)
@@ -85,3 +85,31 @@ relations: []
 - 생활습관 + 적절한 약물 치료에도 불응 → **비뇨기과** 의뢰 (botulinum·neuromodulation)
 - BPH 수술 적응증 판단 → 비뇨기과
 - OSA 확인 필요 → 수면다원검사(PSG) 또는 수면의학과 의뢰
+
+---
+
+## 허약 노인 OAB — 미라베그론 (mirabegron) 우선 전략 (protocol) [CLINICAL]
+
+> [출처: Shaw C, Wagg A. Efficacy and Safety of Mirabegron in Frail Older Adults with Overactive Bladder. Drugs Aging. 2026 May 3. PMID:42070202, DOI:10.1007/s40266-026-01300-1]
+> 리뷰 근거 종합; 전향 연구 제한적 (허약 노인 특정 RCT 부족)
+
+**핵심 메시지:**
+- 허약 노인 OAB에서 **미라베그론(β3 작용제)**이 항무스카린제 대비 **인지기능 저하·낙상 부작용 없이** 효과적
+
+**항무스카린제 vs 미라베그론 비교:**
+
+| 특성 | 항무스카린제 (oxybutynin 등) | 미라베그론 |
+|---|---|---|
+| OAB 증상 개선 | 있음 | 있음 (동등) |
+| 인지기능 부작용 | **있음 (ACB 3점)** | 없음 |
+| 낙상 위험 | **증가** | 없음 |
+| 구강건조 | **심함** | 경미 |
+| 고령 내약성 | 불량 | **양호** |
+
+**외래 처방 전환 기준:**
+- 허약 노인 / 인지저하 동반 OAB → **항무스카린제 대신 미라베그론 1차 선택** 근거
+- 기존 oxybutynin·solifenacin 복약 중 인지 저하·낙상 우려 → 미라베그론으로 교체 논의
+- ACB 부담 감소 목적에서도 교체 이점 ([[anticholinergic-burden]] 참조)
+
+> 용량: mirabegron 25–50 mg 1일 1회 [가이드라인 default 인용: 제품 허가사항 기준]
+> 한국 보험: [출처 미확인 — researcher 검증 권장]

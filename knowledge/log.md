@@ -5,6 +5,17 @@
 
 ---
 
+2026-05-07 | by-disease/anticholinergic-burden.md | 신규 — 항콜린 부담 노인 처방 점검: ACB 1–2 저부하도 구강건조 OR 2.06 (ACB=0 대비), ACB≥3 OR 2.25 — 역치 하향 근거; 외래 처방 점검 루틴·교체 우선 약물 목록 (oxybutynin→mirabegron 등) [CLINICAL] PMID:41824280 — 과거 누락 복구 (출처 05-03)
+2026-05-07 | by-disease/neonatal-fever-pecarn.md | 신규 — 신생아 발열(≤28일) PECARN 예측 룰: 저위험 3기준(UA음성+PCT≤0.5+ANC≤4000) — 민감도 94.2%·NPV 99.4%·저위험군 세균성 수막염 0건; LP 선별 적용 공유의사결정 근거 [CLINICAL] PMID:41359314 — 과거 누락 복구 (출처 05-03)
+2026-05-07 | by-disease/asthma.md | 신규 — 경증 조절불량 천식 PRN ICS+SABA 전략: 부데소나이드+알부테롤 PRN이 알부테롤 단독보다 악화 감소 우월; 매일 ICS 순응도 불량 환자 대안 [CLINICAL] PMID:41839117 — 과거 누락 복구 (출처 05-03)
+2026-05-07 | by-disease/chronic-pain-integrative.md | 추가 — 만성 비암성 통증 비오피오이드 약물: 골관절염→NSAIDs우선/만성요통→NSAIDs·SNRIs 단기/신경병증→duloxetine·gabapentin·pregabalin·8%캡사이신/섬유근통→pregabalin 최우선 [CLINICAL] PMID:40834375 (AFP 2025)
+2026-05-07 | by-disease/palliative-pain.md | 추가 — 부프레노르핀 패치 조기 효력 소실: 7일→5일 교환 전환으로 해소; 문헌 첫 사례; 패치 마지막 1–2일 통증 악화 스크리닝 권장 [CLINICAL — 조건부] PMID:41617142 (JPSM 2026)
+2026-05-07 | by-disease/nocturia.md | 추가 — 허약 노인 OAB 미라베그론 우선 전략: 항무스카린제 대비 인지저하·낙상 부작용 없이 동등 효과; 허약 노인 OAB 1차 약제 근거 리뷰 [CLINICAL] PMID:42070202 (Drugs Aging 2026)
+2026-05-07 | by-disease/ckd-monitoring.md | 추가 — UACR vs UPCR 신부전 예측력: UACR HR 2.55 > UPCR 2.40 (p<0.001); 당뇨·고UACR·사구체질환 하위군 차이 더 뚜렷; CKD 추적 UACR 우선 근거 (n=148,994) [CLINICAL] PMID:41183334 (Ann Intern Med 2025)
+2026-05-07 | guidelines/deprescribing.md | 추가 — 감약 거부 예측인자: 지역사회 노인 24.6% 거부; 수면장애(OR 0.51)·요실금(OR 0.58) → 거부↑; 약물 부담 인지(OR 1.82) → 수용↑; 외래 면담 전략 포함 [CLINICAL — 조건부] PMID:42068533 (Drugs Aging 2026)
+2026-05-07 | by-disease/low-back-pain.md | 추가 — 요통 환자 신체 활동 안전 근거: JAMA 2026 확인; 안정 처방 대신 활동 유지 권장; 외래 환자 교육 근거 [CLINICAL] PMID:41511791 (JAMA 2026)
+2026-05-07 | guidelines/goals-of-care-acp.md | 추가 — 치매 ACP 처방설정형 vs 목표도출형: 4속성(이해·신뢰·준비·모멘텀) 프레임; 경증→목표도출형 시작·진행 시→처방설정형 전환 알고리즘 [CLINICAL — 조건부] PMID:42069237 (JPSM 2026)
+
 2026-05-06 | by-disease/dyslipidemia.md | 신규 — 이상지질혈증 외래 본체: KSoLA 2022 위험도·LDL목표(초고위험<55/고위험<70/중등도<100/저위험<160), ACC/AHA 2018 statin 강도 (Pitava 1mg=중등도 정정), 심평원 보험기준, CAC≥100 강력권고 [CLINICAL, REGULATORY] (inbox 가정의학과insight 1/8 — Researcher 검증 완료)
 2026-05-06 | by-disease/diabetes.md | 신규 — T2DM 외래 본체: KDA 2023/ADA 2025 진단·HbA1c<6.5% 목표, Metformin 단계 + eGFR 45~30 감량(KDA-KSN), DPP-4 HF 주의(FDA 2016), SGLT-2i 심·신 보호 eGFR≥20부터 가능(2024 갱신) [CLINICAL] (inbox 2/8 — Researcher 검증 완료)
 2026-05-06 | by-disease/hypertension.md | 신규 — 일반 고혈압 외래 본체: KSH 2022 target BP·표적장기손상·약물 선택, ESC/ESH 위험인자 cutoff 명시, BB는 DM에서 주의 정정, MacMahon 메타 강압효과, J-curve 관찰 명시 [CLINICAL] (inbox 3/8 — Researcher 검증 완료)
