@@ -640,24 +640,30 @@ var KNOWLEDGE_BUNDLE = {
     "kind": "drug",
     "parents": ["obesity"],
     "keywords": ["tirzepatide","티어제파타이드","마운자로","zepbound"],
-    "primarySources": [],
+    "primarySources": [
+      "Huang L et al. J Am Pharm Assoc 2026;103112. PMID:41962807, DOI:10.1016/j.japh.2026.103112"
+    ],
     "sections": {
       "indication": {
         "content": "- T2DM (Mounjaro) — 단독 또는 병용, FDA 2022 승인\n- 비만 (Zepbound) — HTN/이상지질혈증/OSA/CVD 동반 시, FDA 2023.11 승인\n  - CVD: 우월성 미입증, 비열등성 수준 (SURPASS-CVOT)",
         "sources": []
       },
       "dosing": {
-        "content": "### 시작 및 증량\n- 시작: 2.5mg\n- 4주 후: 5mg 증량 후 유지\n- 주사 방법: 웬티카 방식, 위고비보다 간단\n\n### 최대 용량 [CLINICAL — 조건부]\n- 4단계(10mg)까지 효과 뚜렷\n- 5단계(12.5mg) / 6단계(15mg) 추가 이익 크지 않음\n  - SURMOUNT-1: 10mg -21.4% / 15mg -22.5% (+1.1%p 증분)\n  - 12.5mg 단독 비교 RCT는 없음; 임상적 추론",
+        "content": "### 시작 및 증량\n- 시작: 2.5mg\n- 4주 후: 5mg 증량 후 유지\n- 주사 방법: 웬티카 방식, [[wegovy|위고비]]보다 간단\n\n### 최대 용량 [CLINICAL — 조건부]\n- 4단계(10mg)까지 효과 뚜렷\n- 5단계(12.5mg) / 6단계(15mg) 추가 이익 크지 않음\n  - SURMOUNT-1: 10mg -21.4% / 15mg -22.5% (+1.1%p 증분)\n  - 12.5mg 단독 비교 RCT는 없음; 임상적 추론",
         "sources": []
       },
       "insurance": {
         "content": "### 실비보험 활용 [TIPS — by 로컬원장님]\n2형 당뇨 환자에게 처방 시 실비보험 적용 가능.\n\n처방 시 철저히 조사·기록해야 할 항목:\n- 동반질환 (HTN, 이상지질혈증, OSA, CVD 등)\n- 가족력\n- 최근 측정 HbA1c\n- 당일 BST\n- 현재 복용 중인 약물\n\n> 보험회사에 제출할 수 있도록 차트에 명확히 기록",
         "sources": []
+      },
+      "rebound": {
+        "content": "### 중단 후 체중 반동 — 대체 약물 전환 전략 [CLINICAL]\n단일 기관 후향 연구 (n=83, 내분비·체중관리 클리닉). tirzepatide 분자 — [[마운자로|마운자로]]/[[zepbound|zepbound]] brand 무관하게 동일.\n\n**핵심 수치:**\n- 마운자로 평균 복용 기간: 11개월 → 평균 -6.7% 체중감소 달성\n- **중단 후 12개월 체중 변화: +1.9% (p=0.11 — 통계적 비유의)**\n- 주요 중단 이유: **약값 부담 (80.7%)**\n- 대체 비만약 전환율: **81.9%** (68/83명)\n\n**임상 적용:**\n- 비용 문제로 중단할 경우 → 즉시 대체 비만약([[wegovy|위고비]]·삭센다 등)으로 전환하면 감량 효과 유지 가능\n- \"그냥 끊으면 살 빠진 것이 다시 온다\" → 대체 약물 전환 전략이 핵심\n- 단순 중단 시 체중 반동 위험 — 전환 계획 없는 중단 상담 시 구체적 전환 약물 함께 논의\n- **한계:** 후향·단일 기관, 평균치이며 개인차 큼.",
+        "sources": ["Huang L et al. J Am Pharm Assoc 2026;103112. PMID:41962807"]
       }
     },
     "uiHooks": {
       "hint": ["dosing","insurance"],
-      "guide": ["indication","dosing","insurance"],
+      "guide": ["indication","dosing","insurance","rebound"],
       "draftAppend": null,
       "draftTemplate": null
     }
@@ -666,24 +672,30 @@ var KNOWLEDGE_BUNDLE = {
     "kind": "drug",
     "parents": ["obesity"],
     "keywords": ["zepbound","마운자로","mounjaro","tirzepatide"],
-    "primarySources": [],
+    "primarySources": [
+      "Huang L et al. J Am Pharm Assoc 2026;103112. PMID:41962807, DOI:10.1016/j.japh.2026.103112"
+    ],
     "sections": {
       "indication": {
         "content": "- T2DM (Mounjaro) — 단독 또는 병용, FDA 2022 승인\n- 비만 (Zepbound) — HTN/이상지질혈증/OSA/CVD 동반 시, FDA 2023.11 승인\n  - CVD: 우월성 미입증, 비열등성 수준 (SURPASS-CVOT)",
         "sources": []
       },
       "dosing": {
-        "content": "### 시작 및 증량\n- 시작: 2.5mg\n- 4주 후: 5mg 증량 후 유지\n- 주사 방법: 웬티카 방식, 위고비보다 간단\n\n### 최대 용량 [CLINICAL — 조건부]\n- 4단계(10mg)까지 효과 뚜렷\n- 5단계(12.5mg) / 6단계(15mg) 추가 이익 크지 않음\n  - SURMOUNT-1: 10mg -21.4% / 15mg -22.5% (+1.1%p 증분)\n  - 12.5mg 단독 비교 RCT는 없음; 임상적 추론",
+        "content": "### 시작 및 증량\n- 시작: 2.5mg\n- 4주 후: 5mg 증량 후 유지\n- 주사 방법: 웬티카 방식, [[wegovy|위고비]]보다 간단\n\n### 최대 용량 [CLINICAL — 조건부]\n- 4단계(10mg)까지 효과 뚜렷\n- 5단계(12.5mg) / 6단계(15mg) 추가 이익 크지 않음\n  - SURMOUNT-1: 10mg -21.4% / 15mg -22.5% (+1.1%p 증분)\n  - 12.5mg 단독 비교 RCT는 없음; 임상적 추론",
         "sources": []
       },
       "insurance": {
         "content": "### 실비보험 활용 [TIPS — by 로컬원장님]\n2형 당뇨 환자에게 처방 시 실비보험 적용 가능.\n\n처방 시 철저히 조사·기록해야 할 항목:\n- 동반질환 (HTN, 이상지질혈증, OSA, CVD 등)\n- 가족력\n- 최근 측정 HbA1c\n- 당일 BST\n- 현재 복용 중인 약물\n\n> 보험회사에 제출할 수 있도록 차트에 명확히 기록",
         "sources": []
+      },
+      "rebound": {
+        "content": "### 중단 후 체중 반동 — 대체 약물 전환 전략 [CLINICAL]\n단일 기관 후향 연구 (n=83, 내분비·체중관리 클리닉). tirzepatide 분자 — [[마운자로|마운자로]]/[[tirzepatide|tirzepatide]] brand 무관하게 동일.\n\n**핵심 수치:**\n- 마운자로 평균 복용 기간: 11개월 → 평균 -6.7% 체중감소 달성\n- **중단 후 12개월 체중 변화: +1.9% (p=0.11 — 통계적 비유의)**\n- 주요 중단 이유: **약값 부담 (80.7%)**\n- 대체 비만약 전환율: **81.9%** (68/83명)\n\n**임상 적용:**\n- 비용 문제로 중단할 경우 → 즉시 대체 비만약([[wegovy|위고비]]·삭센다 등)으로 전환하면 감량 효과 유지 가능\n- \"그냥 끊으면 살 빠진 것이 다시 온다\" → 대체 약물 전환 전략이 핵심\n- 단순 중단 시 체중 반동 위험 — 전환 계획 없는 중단 상담 시 구체적 전환 약물 함께 논의\n- **한계:** 후향·단일 기관, 평균치이며 개인차 큼.",
+        "sources": ["Huang L et al. J Am Pharm Assoc 2026;103112. PMID:41962807"]
       }
     },
     "uiHooks": {
       "hint": ["dosing","insurance"],
-      "guide": ["indication","dosing","insurance"],
+      "guide": ["indication","dosing","insurance","rebound"],
       "draftAppend": null,
       "draftTemplate": null
     }
@@ -2043,9 +2055,10 @@ KNOWLEDGE_BUNDLE["필로겐"] = _pilocarpine_v2;
 /* CKD 모니터링 G3 — 신규. kind=topic (parents 금지). */
 var _ckd_monitoring_v2 = {
   kind: "topic",
-  keywords: ["CKD","만성콩팥병","ckd-monitoring","eGFR","크레아티닌","시스타틴C","cystatin C","creatinine","CKD-EPI","EKFC"],
+  keywords: ["CKD","만성콩팥병","ckd-monitoring","eGFR","크레아티닌","시스타틴C","cystatin C","creatinine","CKD-EPI","EKFC","UACR","UPCR","albuminuria","proteinuria"],
   primarySources: [
-    "Lamb EJ et al. Performance of creatinine and cystatin C based GFR estimating equations in moderate CKD. BMJ 2026;392:e085005. PMID:41856526, DOI:10.1136/bmj-2025-085005"
+    "Lamb EJ et al. Performance of creatinine and cystatin C based GFR estimating equations in moderate CKD. BMJ 2026;392:e085005. PMID:41856526, DOI:10.1136/bmj-2025-085005",
+    "Heerspink HJL et al. Proteinuria or Albuminuria as Markers of Kidney and Cardiovascular Disease Risk. Ann Intern Med. 2025 Nov 4;179(1):32-41. PMID:41183334, DOI:10.7326/ANNALS-25-02117"
   ],
   sections: {
     definition: {
@@ -2053,8 +2066,8 @@ var _ckd_monitoring_v2 = {
       sources: []
     },
     monitoring: {
-      content: "### 크레아티닌+시스타틴C 이중 방정식 > 크레아티닌 단독 [CLINICAL]\n영국 6센터 다기관 연구, 중등도 CKD 환자 875명 3년 추적.\n\nGFR 변화 일치도 (measured GFR 대비):\n| 방정식 | 일치도 |\n|---|---|\n| CKD-EPI (크레아티닌 단독) | 73.1% |\n| CKD-EPI (크레아티닌+시스타틴C) | **78.6%** |\n| CKD-EPI 2021 (크레아티닌+시스타틴C) | 78.1% |\n| EKFC (크레아티닌+시스타틴C) | **80.2%** |\n\n→ 이중 바이오마커 방정식이 단일 크레아티닌보다 유의하게 정확 (모두 P<0.001).\n\n### 임상 적용\n- 중등도 CKD 환자 추적 시 시스타틴C 추가 검사 권장\n- 크레아티닌 단독은 근육량·식이·약물 영향 커 GFR 감소를 과소평가 → 진행 조기 포착 실패 위험\n- 시스타틴C는 근육량 독립적이어서 sarcopenic·고령·절단·vegan 환자에서 특히 유용\n- 단독이 아닌 크레아티닌+시스타틴C 통합 방정식 사용이 핵심 (시스타틴C 단독 사용 아님)",
-      sources: []
+      content: "### 크레아티닌+시스타틴C 이중 방정식 > 크레아티닌 단독 [CLINICAL]\n영국 6센터 다기관 연구, 중등도 CKD 환자 875명 3년 추적.\n\nGFR 변화 일치도 (measured GFR 대비):\n| 방정식 | 일치도 |\n|---|---|\n| CKD-EPI (크레아티닌 단독) | 73.1% |\n| CKD-EPI (크레아티닌+시스타틴C) | **78.6%** |\n| CKD-EPI 2021 (크레아티닌+시스타틴C) | 78.1% |\n| EKFC (크레아티닌+시스타틴C) | **80.2%** |\n\n→ 이중 바이오마커 방정식이 단일 크레아티닌보다 유의하게 정확 (모두 P<0.001).\n\n### 임상 적용\n- 중등도 CKD 환자 추적 시 시스타틴C 추가 검사 권장\n- 크레아티닌 단독은 근육량·식이·약물 영향 커 GFR 감소를 과소평가 → 진행 조기 포착 실패 위험\n- 시스타틴C는 근육량 독립적이어서 sarcopenic·고령·절단·vegan 환자에서 특히 유용\n- 단독이 아닌 크레아티닌+시스타틴C 통합 방정식 사용이 핵심 (시스타틴C 단독 사용 아님)\n\n---\n\n### UACR vs UPCR — 신부전·심혈관 예측력 비교 [CLINICAL]\n> [출처: Heerspink HJL et al. Ann Intern Med 2025;179(1):32-41. PMID:41183334]\n> 개인환자 메타분석, n=148,994명, 38개 연구·임상 코호트, 중앙값 추적 3.8년.\n\n**신부전 예측력 (Cox 회귀, SD 단위 증가당)**\n| 검사 | 신부전 HR (95% CI) | 비고 |\n|---|---|---|\n| **UACR** | **2.55 (2.36–2.74)** | 우월 |\n| **UPCR** | 2.40 (2.28–2.53) | 비교군 |\n| 비교 | p<0.001 | UACR 유의하게 우월 |\n\n**UACR 우위가 더 뚜렷한 하위군**: UACR >30 mg/g, 2형 당뇨병 동반, eGFR <60 mL/min/1.73 m², 사구체 질환.\n\n**임상 적용**:\n- CKD 추적 검사 선택 시 **UPCR 대신 UACR 우선** — 특히 당뇨병성 CKD·사구체질환\n- 현재 UPCR만 추적 중인 환자 → UACR로 전환 검토\n- 위험 분층 정확도 향상 → SGLT-2i 등 신보호 약물 선택에 도움\n- 한국 급여: UACR 검사 급여 기준 [출처 미확인 — researcher 검증 권장]",
+      sources: ["Heerspink HJL et al. Ann Intern Med 2025;179(1):32-41. PMID:41183334"]
     },
     referral: {
       content: "(파일 대표 근거 밖 — 기존 임상 통용 기준 유지)\n- eGFR <30 (G4 이상), 급격 감소(3개월 내 >25%), 단백뇨 동반, 저항성 고혈압 — 신장내과 의뢰",
@@ -2070,6 +2083,8 @@ var _ckd_monitoring_v2 = {
 KNOWLEDGE_BUNDLE["ckd-monitoring"] = _ckd_monitoring_v2;
 KNOWLEDGE_BUNDLE["CKD"] = _ckd_monitoring_v2;
 KNOWLEDGE_BUNDLE["만성콩팥병"] = _ckd_monitoring_v2;
+KNOWLEDGE_BUNDLE["UACR"] = _ckd_monitoring_v2;
+KNOWLEDGE_BUNDLE["UPCR"] = _ckd_monitoring_v2;
 
 /* 성호르몬 요법 VTE·심혈관 위험 — 신규. kind=topic (parents 금지). */
 var _sex_hormone_vte_v2 = {
@@ -2639,9 +2654,10 @@ KNOWLEDGE_BUNDLE["소아뇌진탕"] = _concussion_v2;
 /* low-back-pain — 만성 요통 PT vs CBT SMART RCT (4-27 deep-extract). [CLINICAL] */
 var _low_back_pain_v2 = {
   kind: "disease",
-  keywords: ["low back pain","요통","만성요통","chronic LBP","physical therapy","cognitive behavioral therapy","PT","CBT","물리치료"],
+  keywords: ["low back pain","요통","만성요통","chronic LBP","physical therapy","cognitive behavioral therapy","PT","CBT","물리치료","급성요통","acute LBP"],
   primarySources: [
-    "Fritz JM et al. Effectiveness of Nonpharmacologic Treatments for Chronic Low Back Pain: SMART RCT. Ann Intern Med 2026. PMID:42008809, DOI:10.7326/ANNALS-25-04645"
+    "Fritz JM et al. Effectiveness of Nonpharmacologic Treatments for Chronic Low Back Pain: SMART RCT. Ann Intern Med 2026. PMID:42008809, DOI:10.7326/ANNALS-25-04645",
+    "Pant S. Physical Activity Safe in People With Low Back Pain. JAMA. 2026 Feb 3;335(5):391. PMID:41511791, DOI:10.1001/jama.2025.23014"
   ],
   sections: {
     definition: {
@@ -2663,6 +2679,10 @@ var _low_back_pain_v2 = {
     notes: {
       content: "- PT가 CBT보다 기능 회복 우월하나 통증 강도 차이 없음 → 기능 중심 목표 환자에게 PT 근거 제시\n- 비반응자에서 치료 전환 vs 마음챙김 동등 → 환자 선호도·비용·접근성 중심 결정\n- CBT 참여율이 PT보다 낮았음 (연구 제한) → 실제 임상에서 CBT 접근성 고려",
       sources: []
+    },
+    lifestyle: {
+      content: "### 요통 환자에서 신체 활동 — 안전 근거 [CLINICAL]\n> [출처: Pant S. JAMA 2026;335(5):391. PMID:41511791]\n> [초록 기반 — JAMA 뉴스 요약]\n\n**핵심 메시지**:\n- 요통 환자에서 신체 활동은 **안전함** — JAMA 2026 근거 확인\n- \"허리 아프니까 움직이지 말고 쉬세요\" → **근거 없는 지침**\n- 활동 유지가 통증 자연 경과에서 더 유리\n\n**외래 적용**:\n- 급성·만성 요통 모두 → 점진적 활동 유지 권장\n- 안정 처방(bed rest) 대신 **가능한 범위에서 움직임 유지**\n- 운동 처방 또는 물리치료 의뢰 시 환자 동기 부여 근거로 직접 활용\n\n**환자 교육**:\n> \"허리가 아프다고 무조건 쉬면 오히려 더 나빠질 수 있습니다. 통증이 심하지 않은 범위에서 걷기나 가벼운 활동을 유지하는 것이 회복에 도움이 됩니다.\"",
+      sources: ["Pant S. JAMA 2026;335(5):391. PMID:41511791"]
     }
   },
   uiHooks: null
@@ -3202,7 +3222,8 @@ var _palliative_pain_v2 = {
   kind: "topic",
   keywords: ["완화의료","palliative care","buprenorphine","부프레노르핀","오피오이드","암성통증","경피패치","transdermal","호스피스"],
   primarySources: [
-    "Jose V et al. The Effectiveness and Safety of Buprenorphine in Palliative Care: Systematic Review. J Pain Symptom Manage 2025;71(5):e525-e539. PMID:41475688, DOI:10.1016/j.jpainsymman.2025.12.009"
+    "Jose V et al. The Effectiveness and Safety of Buprenorphine in Palliative Care: Systematic Review. J Pain Symptom Manage 2025;71(5):e525-e539. PMID:41475688, DOI:10.1016/j.jpainsymman.2025.12.009",
+    "Weerasiri SD et al. A Case Report of End-of-Dosage Failure With Buprenorphine Patch. J Pain Symptom Manage. 2026 Jan 28;71(5):e606-e609. PMID:41617142, DOI:10.1016/j.jpainsymman.2026.01.018"
   ],
   sections: {
     definition: {
@@ -3218,8 +3239,8 @@ var _palliative_pain_v2 = {
       sources: []
     },
     precaution: {
-      content: "- 완전 오피오이드 → 부프레노르핀 전환 시 **금단 증상 주의** — 마지막 완전 작용제 후 12~24시간 경과 후 시작 (또는 전문가 지도)\n- 천장 효과: 호흡 억제 ceiling은 안전성 장점, 진통 효과는 고용량에서도 선형 유지\n- 신부전: 간(CYP3A4) 대사 → **신부전 환자에서 안전** (모르핀 M6G 축적 문제 회피)",
-      sources: []
+      content: "- 완전 오피오이드 → 부프레노르핀 전환 시 **금단 증상 주의** — 마지막 완전 작용제 후 12~24시간 경과 후 시작 (또는 전문가 지도)\n- 천장 효과: 호흡 억제 ceiling은 안전성 장점, 진통 효과는 고용량에서도 선형 유지\n- 신부전: 간(CYP3A4) 대사 → **신부전 환자에서 안전** (모르핀 M6G 축적 문제 회피)\n\n---\n\n### 부프레노르핀 패치 조기 효력 소실 (End-of-Dosage Failure) [CLINICAL — 조건부]\n> [출처: Weerasiri SD et al. J Pain Symptom Manage 2026;71(5):e606-e609. PMID:41617142]\n> [증례 보고 — 문헌 첫 번째 사례; 일반화 주의]\n\n**증례 요약**:\n- 72세 전이성 선암 남성 — tramadol 50mg PRN에서 buprenorphine 패치 5 mcg/h로 전환\n- 7일 교환 일정인데 **5일째부터 효과 소진** (wearing-off effect)\n- 5일 교환 간격으로 전환 → 복통 해소, 수면 개선\n\n**임상 함의**:\n- 부프레노르핀 패치 처방 후 \"패치가 2~3일 전에 효과 없어진다\" 호소 시 → 7일→5일 교환 단축 고려\n- 7일 패치가 **모든 환자에서 7일 효력 보장하지 않음** — 환자별 약동학 변이\n- 스크리닝 질문 추가: \"패치 마지막 1~2일에 통증이 다시 심해지나요?\"\n\n**처방 조정 시**:\n- 교환 주기 단축(7→5일) 또는 기저 용량 증량 검토\n- 신기능 저하(AKI 동반 시) — 약물 대사 변화 추가 고려\n- [출처 미확인 — researcher 검증 권장]: 한국 부프레노르핀 패치 급여 기준·교환 주기 변경 시 보험 적용",
+      sources: ["Weerasiri SD et al. J Pain Symptom Manage 2026;71(5):e606-e609. PMID:41617142"]
     },
     comparison: {
       content: "| 특성 | 부프레노르핀 | 모르핀 | 펜타닐 |\n|---|---|---|---|\n| 진통 효과 | 동등 | 표준 | 동등 |\n| 투여 경로 | 경피/설하/IV | 경구/IV/SC | 경피/IV |\n| 신부전 | 안전 | 주의 (M6G) | 안전 |\n| 의존 우려 | 낮음 | 높음 | 높음 |\n| 연하곤란 | 경피 유리 | 경구 불가 | 경피 가능 |\n| 부작용 | 모르핀과 유사 | 표준 | 변비 적음 |",
@@ -4355,9 +4376,10 @@ KNOWLEDGE_BUNDLE["afp-eol-symptom-management"] = _afp_eol_symptom_management_v2;
 /* goals-of-care-acp — ACP·GOC 7대 핵심 요소 + 외래 적용 (5-2 cron). [INSIGHTS] */
 var _goc_acp_v2 = {
   kind: "topic",
-  keywords: ["ACP","사전돌봄계획","goals of care","GOC","완화의료","임종기","advance care planning","의사소통","EHR","구조화 대화","POLST","DNAR"],
+  keywords: ["ACP","사전돌봄계획","goals of care","GOC","완화의료","임종기","advance care planning","의사소통","EHR","구조화 대화","POLST","DNAR","치매ACP"],
   primarySources: [
-    "Ma JE et al. J Pain Symptom Manage 2026;71(5):e579-e590. PMID:41548727, DOI:10.1016/j.jpainsymman.2026.01.006"
+    "Ma JE et al. J Pain Symptom Manage 2026;71(5):e579-e590. PMID:41548727, DOI:10.1016/j.jpainsymman.2026.01.006",
+    "van der Steen JT et al. Optimizing Approaches in Advance Care Planning in Dementia as Perceived by General Practitioners. J Pain Symptom Manage. 2026 Apr 30. PMID:42069237, DOI:10.1016/j.jpainsymman.2026.04.618"
   ],
   sections: {
     definition: {
@@ -4369,8 +4391,8 @@ var _goc_acp_v2 = {
       sources: []
     },
     notes: {
-      content: "### ACP 핵심 질문 예시\n- '지금 가장 중요하게 생각하시는 것이 무엇인가요?'\n- '치료가 어렵거나 힘들어지는 상황에서 어떻게 하기를 원하시나요?'\n- '가족에게 돌봄 결정을 맡기신다면, 어떤 방향을 원하시는지 알고 계신가요?'\n- '집에서 편안하게 지내는 것과 병원에서 적극 치료하는 것 중 어느 쪽이 더 중요하신가요?'",
-      sources: []
+      content: "### ACP 핵심 질문 예시\n- '지금 가장 중요하게 생각하시는 것이 무엇인가요?'\n- '치료가 어렵거나 힘들어지는 상황에서 어떻게 하기를 원하시나요?'\n- '가족에게 돌봄 결정을 맡기신다면, 어떤 방향을 원하시는지 알고 계신가요?'\n- '집에서 편안하게 지내는 것과 병원에서 적극 치료하는 것 중 어느 쪽이 더 중요하신가요?'\n\n---\n\n### 치매 환자 ACP — 처방설정형 vs 목표도출형 접근법 [CLINICAL — 조건부]\n> [출처: van der Steen JT et al. J Pain Symptom Manage 2026 Apr 30. PMID:42069237]\n> 질적 연구, 네덜란드 GP 13명 인터뷰 + 비디오 비네트 12명; 삼각검증 적용.\n\n**두 접근법 비교**\n| 속성 | 처방설정형 (Order-setting) | 목표도출형 (Goal-eliciting) |\n|---|---|---|\n| **목표** | 특정 치료 한계·DNAR 등 결정 | 가치·목표·원하는 삶 파악 |\n| **선제 조건** | 이해+신뢰+준비+모멘텀 모두 필요 | 첫 대화부터 시작 가능 |\n| **모멘텀(timing)** | 임박한 임상 결정(입원·CPR) 때 자연 발생 | 주도적으로 만들어야 함 |\n| **결과** | 구체적 의료지시(POLST·DNAR) | 신뢰·준비도·이해 구축 |\n\n**4가지 속성 (이해·신뢰·준비·모멘텀)**: 이해는 환자·보호자 병 진행 이해, 신뢰는 의사 신뢰관계, 준비는 심리·정서적 준비, 모멘텀은 시작 적절 시점.\n\n**치매 외래 ACP 알고리즘**:\n```\n경증 치매 진단 초기\n      ↓\n목표도출형 접근 시작 (이해·신뢰·준비 구축)\n\"어떻게 살고 싶으세요?\" / \"무엇이 중요하신가요?\"\n      ↓\n중등도 진행 / 임박한 임상 결정\n      ↓\n처방설정형으로 전환 (입원·CPR·호스피스 구체 결정)\n\"이런 상황에서 어떻게 하기를 원하셨는지 기억하시나요?\"\n      ↓\nPOLST/DNAR 문서화 + 보호자 공유\n```\n\n**핵심 실전 포인트**:\n- 치매 초기부터 ACP 시작 → 자율성 최대화 (경증에서 직접 선호 표현 가능)\n- 준비되지 않은 환자·가족 → 목표도출형으로 신뢰 먼저 쌓기\n- 긴박한 결정 없이는 처방설정형 대화가 어색 → 모멘텀 부재 시 무리하지 말 것",
+      sources: ["van der Steen JT et al. J Pain Symptom Manage 2026. PMID:42069237"]
     },
     referral: {
       content: "- 복잡한 GOC 결정 → 완화의료 팀 협진\n- 가족 갈등·의사결정 대리인 불명확 → 사회복지사·의료윤리팀\n- 호스피스 전환 상담 → 완화의학과",
@@ -4390,7 +4412,8 @@ var _deprescribing_v2 = {
   kind: "topic",
   keywords: ["deprescribing","부적절 처방","PIP","STOPP","START","Beers","노인 다약제","polypharmacy","medication review","처방 최적화","STOPP-Frail"],
   primarySources: [
-    "McDonald EG et al. Can Fam Physician 2026 Mar;72(3):173-178. PMID:41844291, DOI:10.46747/cfp.7203173"
+    "McDonald EG et al. Can Fam Physician 2026 Mar;72(3):173-178. PMID:41844291, DOI:10.46747/cfp.7203173",
+    "Marcellaud E et al. Attitudes Toward Deprescribing Among Community-Dwelling Adults. Drugs Aging. 2026 May 2. PMID:42068533, DOI:10.1007/s40266-026-01298-6"
   ],
   sections: {
     protocol: {
@@ -4398,8 +4421,8 @@ var _deprescribing_v2 = {
       sources: []
     },
     notes: {
-      content: "### 우선 재검토 약물군\n| 약물군 | 재검토 이유 |\n|---|---|\n| PPI | 장기 무증상 예방 사용 → 중단 시도 |\n| 수면진정제 (BZD·Z-drug) | 낙상·인지저하·의존 |\n| 항콜린 약물 | ACB 1도 낮은 부하도 영향 |\n| 스타틴 (임종기) | 단기 환자 이익 없음 |\n| 경구 혈당강하제 (임종기) | 저혈당 위험 vs 이익 |\n| 항고혈압제 (임종기·낙상) | 낙상 위험 vs 이익 |",
-      sources: []
+      content: "### 우선 재검토 약물군\n| 약물군 | 재검토 이유 |\n|---|---|\n| PPI | 장기 무증상 예방 사용 → 중단 시도 |\n| 수면진정제 (BZD·Z-drug) | 낙상·인지저하·의존 |\n| 항콜린 약물 | ACB 1도 낮은 부하도 영향 ([[anticholinergic-burden|항콜린 부담]] 참조) |\n| 스타틴 (임종기) | 단기 환자 이익 없음 |\n| 경구 혈당강하제 (임종기) | 저혈당 위험 vs 이익 |\n| 항고혈압제 (임종기·낙상) | 낙상 위험 vs 이익 |\n\n---\n\n### 지역사회 환자의 감약 거부 — 예측 인자·면담 전략 [CLINICAL — 조건부]\n> [출처: Marcellaud E et al. Drugs Aging 2026 May 2. PMID:42068533]\n> 단면 조사, n=505명(≥55세, 다약제 ≥5종, 지역약국), 프랑스.\n\n**핵심 수치**: 감약 거부율 **24.6%** (1/4 환자). 주요 사유: 치료 효과 확신 56.5% / 증상 재발 두려움 35.5%.\n\n**거부와 유의 연관 임상 조건**\n| 조건 | OR (95% CI) | 의미 |\n|---|---|---|\n| 수면장애 | 0.51 (0.33–0.78) | 감약 거부 가능성 2배 ↑ |\n| 요실금 | 0.58 (0.34–0.96) | 감약 거부 가능성 1.7배 ↑ |\n\n**감약 수용과 연관 요인**\n| 요인 | OR | 의미 |\n|---|---|---|\n| 약물 부담 과다 인지 | 1.82 (1.12–2.95) | 수용 가능성 1.8배 ↑ |\n| 일상 제약 부담 | 1.76 (1.07–2.89) | 수용 가능성 1.8배 ↑ |\n\n**외래 감약 면담 전략**:\n1. **수면제 감약 제안** → 효과 확신 강함 → 선제 공감 + 비약물 수면치료 대안 제시 먼저\n2. **요실금 약물 감약** → 공감 → 대체 전략(골반저운동·미라베그론 등) 먼저 제시 ([[nocturia|nocturia]] 참조)\n3. **감약 수용도 높은 환자 식별** → \"드시는 약이 너무 많아 불편하지 않으신가요?\" 질문으로 열기\n4. \"덜 먹는 게 더 건강할 수 있다\" 메시지 + 효과 있는 약은 유지함을 명확히 설명",
+      sources: ["Marcellaud E et al. Drugs Aging 2026. PMID:42068533"]
     },
     precaution: {
       content: "- 처방 중단 시 **점진 감량** — 급격 중단은 금단·반동 위험 (BZD·오피오이드·스테로이드·베타차단제)\n- 중단 후 증상 재발 시 재처방 가능 — 중단이 '실패'가 아님\n- 환자/가족 설명: '덜 먹는 게 더 건강할 수 있습니다' 메시지",
@@ -4611,7 +4634,8 @@ var _chronic_pain_integrative_v2 = {
   kind: "disease",
   keywords: ["만성 통증","chronic pain","태극권","Tai Chi","웰니스","PTSD","우울","비약물 중재","마음챙김","재향군인","Gulf War Illness"],
   primarySources: [
-    "Polizzi CP et al. J Psychiatr Res 2026 Feb 25;197:97-106. PMID:41774973, DOI:10.1016/j.jpsychires.2026.02.045"
+    "Polizzi CP et al. J Psychiatr Res 2026 Feb 25;197:97-106. PMID:41774973, DOI:10.1016/j.jpsychires.2026.02.045",
+    "Sokol R et al. Nonopioid Pharmacologic Management of Chronic Noncancer Pain. Am Fam Physician. 2025 Aug;112(2):187-196. PMID:40834375"
   ],
   sections: {
     notes: {
@@ -4619,8 +4643,8 @@ var _chronic_pain_integrative_v2 = {
       sources: []
     },
     protocol: {
-      content: "### 적용 대상\n- 만성 통증 + 우울·불안·PTSD 동반 환자\n- 다양한 심리·신체 증상 복합 호소 환자\n\n### 중재 옵션\n| 중재 | 특징 | 접근 방식 |\n|---|---|---|\n| **태극권** | 중국 전통 마음-몸 수련 | 그룹 프로그램 (대면/원격) |\n| **웰니스 프로그램** | 건강 생활습관·이완·스트레스 관리 | 그룹 프로그램 (대면/원격) |\n\n### 원격 프로그램 동등 효과 의미\n- 교통·시간 장벽 있는 환자에도 적용 가능\n- 재택 온라인 프로그램 의뢰 가능\n\n### 임상 적용\n- 만성 통증 + 정신건강 동반 환자에게 비약물 통합 중재 RCT 근거 제시 가능\n- '태극권 같은 운동치료가 통증과 우울에 모두 도움이 됩니다' — 환자 교육\n- 두 중재 효과 유사 → **환자 접근 가능한 프로그램 우선 선택**",
-      sources: []
+      content: "### 적용 대상\n- 만성 통증 + 우울·불안·PTSD 동반 환자\n- 다양한 심리·신체 증상 복합 호소 환자\n\n### 중재 옵션\n| 중재 | 특징 | 접근 방식 |\n|---|---|---|\n| **태극권** | 중국 전통 마음-몸 수련 | 그룹 프로그램 (대면/원격) |\n| **웰니스 프로그램** | 건강 생활습관·이완·스트레스 관리 | 그룹 프로그램 (대면/원격) |\n\n### 원격 프로그램 동등 효과 의미\n- 교통·시간 장벽 있는 환자에도 적용 가능\n- 재택 온라인 프로그램 의뢰 가능\n\n### 임상 적용\n- 만성 통증 + 정신건강 동반 환자에게 비약물 통합 중재 RCT 근거 제시 가능\n- '태극권 같은 운동치료가 통증과 우울에 모두 도움이 됩니다' — 환자 교육\n- 두 중재 효과 유사 → **환자 접근 가능한 프로그램 우선 선택**\n\n---\n\n### 만성 비암성 통증 — 비오피오이드 약물치료 유형별 가이드 (AFP 2025) [CLINICAL]\n> [출처: Sokol R et al. Am Fam Physician 2025;112(2):187-196. PMID:40834375]\n\n**통증 유형별 1차 약물 선택**\n| 통증 유형 | 1차 선택 | 2차 선택 | 비고 |\n|---|---|---|---|\n| **골관절염** | 국소·경구 NSAIDs | SNRIs, 가바펜틴류 | 국소 NSAIDs 전신 부작용 적음 |\n| **만성 [[low-back-pain|요통]]** | NSAIDs (단기), SNRIs | — | 유의한 장기 이득 없음 — 기대치 조정 필요 |\n| **신경병증성 통증** | duloxetine, gabapentin, pregabalin, 8% capsaicin | — | 4가지 중등도 효과 동등 |\n| **섬유근통** | **pregabalin** (최우선) | duloxetine, milnacipran | pregabalin 근거 최강 |\n\n**오피오이드**: 모든 비오피오이드 전략 실패 + 위험-이익 재평가 후 최후 수단. 초기 처방 전 ORT 등 위험 평가 권장.\n\n**환자 상담 핵심**: 만성 비암성 통증은 \"완전 제거\"가 아닌 **기능 향상·삶의 질 개선** 목표. 자가관리(운동·수면·심리) + 약물 병행 (biopsychosocial). 만성 요통은 어떤 약도 유의한 기능 개선 없음 → 과도한 약물 기대 차단.",
+      sources: ["Sokol R et al. Am Fam Physician 2025;112(2):187-196. PMID:40834375"]
     },
     precaution: {
       content: "- Gulf War Illness 재향군인 대상 — 일반 만성 통증 외삽 시 주의\n- 대조군 없음 (액티브 비교군 설계) — 자연 경과와의 구분 불가\n- 군 특수 증후군(GWI) 복합 증상 — 일반 근골격 만성 통증과 다를 수 있음 [CLINICAL — 조건부]",
@@ -5830,3 +5854,526 @@ KNOWLEDGE_BUNDLE["naltrexone"] = _aud_v2;
 KNOWLEDGE_BUNDLE["날트렉손"] = _aud_v2;
 KNOWLEDGE_BUNDLE["acamprosate"] = _aud_v2;
 KNOWLEDGE_BUNDLE["AUDIT"] = _aud_v2;
+
+/* ========== 2026-05-07 Liby cleanup — Task 3 신규 + Task 2 미ingest 10건 ========== */
+
+/* anticholinergic-burden — ACB 1-2 구강건조 (5-7 deep-extract). [CLINICAL] */
+var _anticholinergic_burden_v2 = {
+  kind: "topic",
+  keywords: ["anticholinergic","항콜린","ACB","항콜린 부담","구강건조","xerostomia","노인 다약제","polypharmacy","STOPP","oxybutynin","diphenhydramine"],
+  parents: [],
+  primarySources: [
+    "Ringstad IB et al. Association Between Anticholinergic Burden and Dry Mouth Severity in Acutely Ill Older Adults. Drugs Aging. 2026 Mar;43(4):361-371. PMID:41824280, DOI:10.1007/s40266-026-01286-w"
+  ],
+  sections: {
+    monitoring: {
+      content: "### 핵심 근거 — ACB 1–2에서도 구강건조 위험 [CLINICAL]\n> [출처: Ringstad IB et al. Drugs Aging 2026;43(4):361-371. PMID:41824280]\n> n=256명(평균 84±7세, 여성 70%), 오슬로 급성기 입원 노인 코호트.\n\n**항콜린 부담별 구강건조 중증도 OR (기준: ACB=0)**\n| ACB 수준 | OR (95% CI) | 해석 |\n|---|---|---|\n| ACB = 1–2 (저부하) | **2.06 (1.07–3.97)** | 저부하도 유의한 위험 |\n| ACB ≥ 3 (고부하) | **2.25 (1.09–4.63)** | 고부하와 큰 차이 없음 |\n\n**분포**: ACB=0 18%, ACB=1–2 50%, ACB≥3 32%. 구강건조 중증도(DMSP 0점) 29% / 1점 36% / 2점 23% / ≥3점 12%. 여성에서 ACB 점수와 구강건조 중증도 모두 유의하게 높음.\n\n**임상 의미**: 기존 ACB≥3 역치 기준은 **과소평가** 위험 — ACB 1 약물도 노인에서 구강건조 유발 가능.",
+      sources: []
+    },
+    classification: {
+      content: "### ACB 점수표 (가이드라인 default 인용 — ACB calculator)\n| ACB 점수 | 대표 약물 | 외래 처방 빈도 |\n|---|---|---|\n| 1점 (약한 항콜린) | furosemide, digoxin, ranitidine, prednisolone, nifedipine | 높음 |\n| 2점 (중간) | carbamazepine, amantadine, loxapine | 중간 |\n| 3점 (강한 항콜린) | amitriptyline, oxybutynin, diphenhydramine, hydroxyzine, 1세대 항히스타민제 | 흔함 |\n\n**고위험 외래 약물 (ACB 3점 + 대체 가능)**\n- **oxybutynin** → mirabegron으로 교체 고려 ([[nocturia|OAB]])\n- **diphenhydramine·1세대 항히스타민** → 2~3세대 항히스타민·비약물 대체\n- **amitriptyline (고용량)** → 통증·우울 대안 검토 (duloxetine 등)",
+      sources: []
+    },
+    protocol: {
+      content: "### 외래 처방 점검 루틴\n1. ≥65세(특히 ≥70세) 다약제 환자 → **ACB 계산기** 사용 (www.acbcalc.com)\n2. ACB ≥1 약물 목록 확인 → **필요성 재평가**\n3. ACB ≥3 약물부터 우선 교체·중단 논의\n4. ACB 1–2도 병용 시 누적 부담 계산 → 합산 ACB 관리\n5. 구강건조·인지 변화·낙상 호소 → 즉시 ACB 점검\n\n**점검 활성화 트리거**: 구강건조·삼킴 장애 호소 / 인지기능 저하·섬망 / 낙상·기립성 저혈압 / OAB 약물 새로 처방 검토 시.",
+      sources: []
+    },
+    precaution: {
+      content: "- ACB 계산기는 도구마다 약물 목록 다름 → STOPP 기준과 병용 권장\n- 중단 시 점진적 감량 필요 (특히 amitriptyline — 급성 중단 시 반동 증상)\n- 여성에서 항콜린 부담이 더 높게 집중 → 여성 노인 외래 시 특별 주의",
+      sources: []
+    },
+    referral: {
+      content: "- [[deprescribing|deprescribing]] — 부적절 처방 선별·중단 전략\n- [[nocturia|nocturia]] — OAB 약물 선택 (mirabegron 대안)\n- 4Ms — Medication M — Beers/STOPP 기반 점검 ([[geriatric-assessment-4ms|4Ms]] 참조)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["anticholinergic-burden"] = _anticholinergic_burden_v2;
+KNOWLEDGE_BUNDLE["항콜린부담"] = _anticholinergic_burden_v2;
+KNOWLEDGE_BUNDLE["ACB"] = _anticholinergic_burden_v2;
+KNOWLEDGE_BUNDLE["anticholinergic"] = _anticholinergic_burden_v2;
+
+/* asthma — 천식 외래 관리 (5-7 deep-extract). [CLINICAL] */
+var _asthma_v2 = {
+  kind: "disease",
+  keywords: ["asthma","천식","ICS","SABA","budesonide","albuterol","경증천식","SMART","PRN","흡입스테로이드","기관지확장제","조절불량"],
+  parents: [],
+  primarySources: [
+    "Ebell MH. As-Needed Budesonide Plus Albuterol Is Superior to Albuterol Alone for Poorly Controlled Mild Asthma. Am Fam Physician. 2026 Feb;113(2):193. PMID:41839117 [POEM]"
+  ],
+  sections: {
+    definition: {
+      content: "천식은 가역적 기도 폐쇄·기도 과민 반응을 특징으로 하는 만성 기도 염증 질환. 본 entry는 외래 일차의료 관리 — 특히 **경증 조절불량 천식의 PRN ICS+SABA 전략**을 다룸. 중증·소아 등은 GINA 가이드라인 직접 참조.",
+      sources: []
+    },
+    protocol: {
+      content: "### PRN ICS+SABA — 경증 조절불량 천식 [CLINICAL]\n> [출처: Ebell MH. Am Fam Physician 2026;113(2):193. PMID:41839117]\n> [초록 기반 — AFP POEM 형식]\n\n**핵심 결과**: 증상 있을 때만(PRN) **부데소나이드+알부테롤** 조합이 **알부테롤 단독**보다 경증 조절불량 천식에서 악화(exacerbation) 감소에 우월.\n\n**임상 적용 대상**:\n- 매일 ICS 복약 순응도가 낮은 경증 천식 환자\n- \"증상 없으면 약 안 쓴다\"는 환자에서 순응도 장벽 해소 대안\n\n### 처방 전략\n| 전략 | 내용 |\n|---|---|\n| **약제** | 부데소나이드/포르모테롤 복합흡입기 또는 부데소나이드+알부테롤 별도 사용 |\n| **사용 시점** | 증상 발생 시에만 (PRN) — 매일 정기 투여 아님 |\n| **대상** | 매일 ICS 순응도 어려운 경증 조절불량 천식 |\n| **근거** | 악화 감소 우월 vs 알부테롤 단독 |\n\n> 구체적 용량·흡입 횟수는 GINA 2025 가이드라인 기준 [가이드라인 default 인용].\n\n### 매일 ICS 정기 투여 (standard)\n| 단계 | 치료 |\n|---|---|\n| Step 1 (경증 간헐) | PRN SABA 단독 |\n| Step 2 (경증 지속) | 저용량 ICS 매일 + PRN SABA **or** PRN ICS+SABA (순응도 저하 시) |\n| Step 3 (중등도) | 저~중용량 ICS + LABA |\n\n> [가이드라인 default 인용: GINA 2025 / NAEPP]",
+      sources: []
+    },
+    counseling: {
+      content: "> \"천식 약은 증상 없어도 매일 쓰는 게 원칙이지만, 어려우시면 숨이 차거나 쌕쌕 소리 날 때 흡입제 두 종류를 같이 쓰는 방법도 있습니다. 그냥 기관지 확장제만 쓰는 것보다 발작을 덜 하게 도와줍니다.\"\n\n### 외래 결정 분기\n경증 조절불량 천식(증상 잦음, 매일 ICS 미복약 패턴) → 매일 ICS 순응도 확인 → 양호: 매일 ICS 유지 + 용량 적정 / 불량: PRN ICS+SABA 전략 전환 고려.",
+      sources: []
+    },
+    precaution: {
+      content: "- PRN ICS+SABA 전략은 매일 ICS보다 총 ICS 흡입량이 적을 수 있음 — **중증 천식에는 적용 제외**\n- 천식 중증도 재평가: 악화 잦거나 야간 증상·폐기능 저하 시 단계 상향 필요\n- 한국 보험: 복합흡입제 급여 기준 [출처 미확인 — researcher 검증 권장]",
+      sources: []
+    },
+    referral: {
+      content: "관련:\n- [[COPD|COPD]] — 흡입기 기반 치료 비교\n- [[asthma-reflux-comorbidity|asthma-reflux-comorbidity]] — 천식+역류 동반이환",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["asthma"] = _asthma_v2;
+KNOWLEDGE_BUNDLE["천식"] = _asthma_v2;
+KNOWLEDGE_BUNDLE["경증천식"] = _asthma_v2;
+
+/* neonatal-fever-pecarn — 신생아 발열 PECARN (5-7 deep-extract). [CLINICAL] */
+var _neonatal_fever_pecarn_v2 = {
+  kind: "disease",
+  keywords: ["신생아","neonatal fever","발열","PECARN","요추천자","lumbar puncture","bacteremia","bacterial meningitis","procalcitonin","ANC","세균수막염","침습세균감염"],
+  parents: [],
+  primarySources: [
+    "Burstein B et al. Prediction of Bacteremia and Bacterial Meningitis Among Febrile Infants Aged 28 Days or Younger. JAMA. 2026 Feb 3;335(5):425-433. PMID:41359314, DOI:10.1001/jama.2025.21454"
+  ],
+  sections: {
+    exam: {
+      content: "### PECARN 저위험 3기준 (모두 충족 시 저위험)\n> [출처: Burstein B et al. JAMA 2026;335(5):425-433. PMID:41359314]\n> 4개 전향 코호트 풀드 분석, n=1,537명(생후 ≤28일), 6개국.\n\n| 검사 | 저위험 컷오프 |\n|---|---|\n| 소변검사/딥스틱 | **음성** |\n| 혈청 프로칼시토닌 | **≤0.5 ng/mL** |\n| 혈액 절대 호중구 수 (ANC) | **≤4,000/mm³** |\n\n### 진단 정확도\n| 지표 | 수치 (95% CI) |\n|---|---|\n| **민감도** | **94.2%** (85.6–97.8%) |\n| **특이도** | 41.6% (36.7–46.7%) |\n| **양성예측도** | 6.9% (4.8–9.9%) |\n| **음성예측도** | **99.4%** (98.1–99.8%) |\n\n- 저위험 판정 환자 비율: 41.1% (n=632/1,537)\n- **세균성 수막염은 저위험 판정 환자에서 단 1건도 없음**\n- 전체 침습세균감염(bacteremia+뇌수막염) 유병률: 4.5% (n=69)",
+      sources: []
+    },
+    differential: {
+      content: "### 외래 결정 분기 [CLINICAL]\n```\n발열 신생아 (≤28일, ≥38.0°C, 정상 출현, 만삭)\n      ↓\nPECARN 3기준 평가 (소변검사 / PCT / ANC)\n      ↓\n┌─────────┬──────────────────────────────────────┐\n│ 저위험   │ 3기준 모두 충족                       │\n│         │ → LP 선별적 적용 고려 (공유의사결정)  │\n│         │ → 입원·주의 관찰 지속 필요            │\n├─────────┼──────────────────────────────────────┤\n│ 고위험   │ 1개 이상 비충족                       │\n│         │ → 루틴 LP + 균혈증 패혈증 workup      │\n│         │ → 입원·경험적 항생제                  │\n└─────────┴──────────────────────────────────────┘\n```\n\n**일차의료·응급실 적용**:\n- 저위험 분류 시 LP를 **모든 환자 루틴 시행 대신 선별 적용** 가능 — 공유의사결정 기반\n- 저위험에서도 **세균성 수막염 미검출 가능성 5.8%** (민감도 94.2%) — 완전 배제 아님\n- 이상 출현(ill-appearing), 미숙아, 기저질환 → 적용 제외",
+      sources: []
+    },
+    precaution: {
+      content: "- 이 연구 대상: 건강했던(previously healthy)·정상 출현·만삭 신생아 — ill-appearing·미숙아 제외\n- PCT 검사 가용성 확인 필요 (국내 응급 검사 가능 여부 [출처 미확인 — researcher 검증 권장])\n- LP 선별 적용 시 보호자와 **공유의사결정** 필수 (잠재 위험 설명 포함)\n- 저위험 판정 후에도 **증상 악화 시 재내원 지침** 필수",
+      sources: []
+    },
+    referral: {
+      content: "- 발열 신생아(≤28일) → 응급실/소아과 의뢰 표준\n- 저위험 분류라도 입원 관찰 권장 — 일차의료에서 외래 추적 부적합",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["neonatal-fever-pecarn"] = _neonatal_fever_pecarn_v2;
+KNOWLEDGE_BUNDLE["신생아발열"] = _neonatal_fever_pecarn_v2;
+KNOWLEDGE_BUNDLE["PECARN"] = _neonatal_fever_pecarn_v2;
+KNOWLEDGE_BUNDLE["neonatal-fever"] = _neonatal_fever_pecarn_v2;
+
+/* anti-amyloid-mab — 항아밀로이드 mAb (5-3 누락분 ingest). [CLINICAL] */
+var _anti_amyloid_mab_v2 = {
+  kind: "drug",
+  keywords: ["lecanemab","레카네맙","레켐비","donanemab","도나네맙","aducanumab","Alzheimer","anti-amyloid","ARIA","CLARITY AD","TRAILBLAZER-ALZ","항아밀로이드"],
+  parents: [],
+  primarySources: [
+    "van Dyck CH et al. Lecanemab in Early Alzheimer's Disease. N Engl J Med 2023;388(1):9-21. PMID:36449413, DOI:10.1056/NEJMoa2212948 (CLARITY AD)",
+    "Sims JR et al. Donanemab in Early Symptomatic Alzheimer Disease: TRAILBLAZER-ALZ 2 RCT. JAMA 2023;330(6):512-527. PMID:37459141, DOI:10.1001/jama.2023.13239"
+  ],
+  sections: {
+    definition: {
+      content: "레카네맙(레켐비)·도나네맙(Kisunla)은 뇌 아밀로이드 플라크를 제거하는 IgG1 단일클론항체로, 조기 증상성 알츠하이머병(MCI–경증 치매) 치료에 2023년 FDA 승인. **임상 효과 MCID 미달, ARIA(뇌부종·미세출혈) 부작용 실재, 비용 극단적** — AFP 2024 POEM \"low-value care\" 분류. 일차의료는 **처방자가 아닌 환자·가족 상담자 역할**.",
+      sources: []
+    },
+    indication: {
+      content: "### 허가사항\n- 조기 증상성 AD (MCI 또는 mild dementia)\n- Amyloid 병리 확인 (PET 또는 CSF)\n- Tau 병리: 도나네맙은 low/medium tau에서 더 큰 효과\n\n### 한국 허가 (2026 기준)\n- **레카네맙: 식약처 허가 (2025)**, 제품명 \"레켐비\". 급여 미적용\n- **도나네맙: 국내 허가 없음**\n\n### 제외 대상\n- Moderate-severe dementia\n- Amyloid PET 음성\n- APOE ε4 homozygote — ARIA 위험 현저히 높음 (FDA box warning)\n- 뇌 MRI ≥4 microhemorrhage, superficial siderosis, 최근 뇌출혈",
+      sources: []
+    },
+    dosing: {
+      content: "### 레카네맙\n- **10 mg/kg IV 주입, 2주 간격** — 무기한 지속\n- 주입 시간 약 1시간\n\n### 도나네맙\n- **700 mg IV × 첫 3회 (4주 간격)** → 이후 1400 mg q4w\n- 아밀로이드 PET clearance 도달 시 **중단 가능**\n- 평균 치료 기간 12-18개월\n\n### MRI 모니터링\n- Baseline MRI\n- 레카네맙: 5, 7, 14주차 + 필요 시\n- 도나네맙: 12, 24, 52, 76주차\n- ARIA 의심 증상 시 즉시 MRI",
+      sources: []
+    },
+    contraindication: {
+      content: "### 절대 금기\n- **APOE ε4 homozygote + 환자·가족 인식 부족**\n- 항응고제(warfarin, DOAC) 사용 중 — ARIA-H 위험 증폭\n- 최근 뇌출혈 기왕력\n- 기저 MRI ≥4 microhemorrhage / superficial siderosis\n- 뇌 혈관 아밀로이드병증(CAA) 의심 강함\n\n### 상대 금기\n- 조절 불량 고혈압\n- 혈소판 감소·출혈 경향\n- 반복 낙상력",
+      sources: []
+    },
+    precaution: {
+      content: "### ARIA — 핵심 부작용\n| 부작용 | 레카네맙 (CLARITY AD) | 도나네맙 (TRAILBLAZER-ALZ 2) |\n|---|---|---|\n| ARIA-E (부종) | **12.6%** (증상성 2.8%) | **24.0%** (증상성 6.1%) |\n| ARIA-H (미세출혈) | 17.3% | 31.4% |\n| 증상성 ARIA | 2.8% | 6.1% |\n| 치료 관련 사망 | 드묾 | 3건 vs 위약 1건 |\n| Infusion reaction | 26.4% | 8.7% |\n\n### ARIA 증상 (환자·가족 교육 필수)\n- 두통, 혼란, 시각 이상, 어지럼\n- 경련(seizure), 의식 변화\n- 즉시 MRI + 치료 중단 결정\n\n### APOE ε4 genotype 고지\n- Homozygote(ε4/ε4): ARIA 위험 약 2-3배\n- 투여 전 genotype 검사 + 위험 상담 기록 권장",
+      sources: []
+    },
+    comparison: {
+      content: "| 항목 | 레카네맙 | 도나네맙 | Aducanumab (참고) |\n|---|---|---|---|\n| 승인 | FDA 2023, 한국 2025 | FDA 2024, 한국 미허가 | FDA 2021 (시장 철수 2024) |\n| 주입 빈도 | q2w | q4w | q4w |\n| 중단 기준 | 지속 | Amyloid clearance 후 중단 | 지속 |\n| 효과 (primary EP) | CDR-SB Δ -0.45 (18mo) | iADRS Δ +3.25 (76wk, low/med tau) | CDR-SB Δ -0.39 |\n| MCID 도달 | **미달** | **미달** | 미달 |\n| ARIA-E 빈도 | 12.6% | 24.0% | 35.2% |\n| 비용 (미국) | 연 $26,500 | 연 $32,000 | $28,200 (단종) |\n\n**효과의 \"18개월 동안 5개월 지연\" 해석**: 통계적 유의성 O, **임상적 유의성 ?** (환자·가족 체감 어려움). 비용-효과비가 극단적으로 불리.",
+      sources: []
+    },
+    insurance: {
+      content: "### 한국 (2026 기준)\n- **레카네맙 급여 미적용** — 전액 환자 부담. 예상 연 비용: 약물 + MRI + amyloid PET + 주입 인프라 = 수천만 원\n- 제품 공급 제한적, 대학병원 일부에서 투여\n\n### 미국\n- Medicare Part B coverage (2023-) — 조건부 (CMS registry 등록 필수)\n- 연 환자 부담 약 $5,000-$10,000\n\n### 건강보험 전망\n- 영국 NICE는 **비용효과 불충분**으로 거부 (2024)",
+      sources: []
+    },
+    counseling: {
+      content: "### 환자·가족 상담 핵심\n- \"이 약은 뇌 아밀로이드를 줄여주긴 하지만, 기억력·일상생활에서 **체감할 만한 개선은 적습니다**. 18개월 동안 약 5개월치 지연 수준입니다.\"\n- \"뇌 MRI에서 부종이나 미세출혈이 **10-25% 환자**에게 생기고, 증상이 동반될 경우 치료 중단이 필요합니다.\"\n- \"사망 관련 사례도 있었습니다(매우 드물지만 실재).\"\n- \"**기대와 위험, 비용을 종합적으로 검토**하시고 가족과 상의하신 후 결정하셔도 늦지 않습니다.\"\n\n### 자주 듣는 질문 대응\n- Q: \"한국에서 맞을 수 있나요?\" → \"레카네맙은 2025년 허가되었고 일부 대학병원에서 투여 가능합니다. 전액 본인 부담입니다.\"\n- Q: \"부작용 무섭지 않나요?\" → \"네, 뇌 부종·출혈이 10-25%에서 발생합니다. 정기 MRI로 감시합니다.\"",
+      sources: []
+    },
+    notes: {
+      content: "### 일차의료 역할\n- **처방자 아님** — 전액 본인 부담 고가 약물, 대학병원 신경과·정신건강의학과 영역\n- **상담자·교육자**: 환자·가족이 \"신약 나왔다는데 맞아야 하나?\" 문의 시 balanced 설명\n- **의뢰 판단**: 조기 AD 의심 환자의 선별·PET 의뢰 게이트키핑\n\n### 역사적 맥락\n- Aducanumab(2021)은 효과 근거 논란·ARIA·비용으로 2024년 시장 철수 — 레카네맙·도나네맙 향후 전망에 경고 신호\n- AFP POEM은 이들을 \"low-value care\" 분류\n\n> 출처: AFP Top 20 POEMs 2024 — Grad R, Ebell MH. Am Fam Physician 2025;112(1):34-41. PMID:40736492",
+      sources: ["Grad R, Ebell MH. Am Fam Physician 2025;112(1):34-41. PMID:40736492"]
+    },
+    "draft-append": {
+      content: "조기 AD 환자/가족이 레카네맙·도나네맙 문의 시: ① 효과 MCID 미달 설명(18mo에 5mo 지연 수준) ② ARIA 10-25% + 증상성 3-6% 고지 ③ 비용(국내 비급여, 연 수천만 원) 고지 ④ APOE ε4 homozygote 확인 필요성 ⑤ 신경과·정신건강의학과 의뢰 (일차의료 처방 범위 밖).",
+      sources: []
+    }
+  },
+  uiHooks: { guide: ["*"] }
+};
+KNOWLEDGE_BUNDLE["anti-amyloid-mab"] = _anti_amyloid_mab_v2;
+KNOWLEDGE_BUNDLE["lecanemab"] = _anti_amyloid_mab_v2;
+KNOWLEDGE_BUNDLE["레카네맙"] = _anti_amyloid_mab_v2;
+KNOWLEDGE_BUNDLE["레켐비"] = _anti_amyloid_mab_v2;
+KNOWLEDGE_BUNDLE["donanemab"] = _anti_amyloid_mab_v2;
+KNOWLEDGE_BUNDLE["도나네맙"] = _anti_amyloid_mab_v2;
+
+/* gallstones — 담석증 C-GALL (5-3 누락분 ingest). [CLINICAL] */
+var _gallstones_v2 = {
+  kind: "disease",
+  keywords: ["gallstones","담석","담석증","담낭결석","cholelithiasis","biliary colic","담도산통","C-GALL","watchful waiting","conservative management"],
+  parents: [],
+  primarySources: [
+    "Ahmed I et al. Conservative vs laparoscopic cholecystectomy for uncomplicated symptomatic gallstones (C-GALL): pragmatic RCT. BMJ 2023;383:e075383. PMID:38084426, DOI:10.1136/bmj-2023-075383",
+    "Innes K et al. C-GALL RCT. Health Technol Assess 2024;28(26):1-151. PMID:38943314, DOI:10.3310/MNBY3104"
+  ],
+  sections: {
+    definition: {
+      content: "담석증은 담낭 또는 담도에 결석이 형성된 상태. 성인 **10-15%** 가 담석을 가지며 **약 80%는 평생 무증상**. 본 entry는 **무증상 + 단순 경증 증상** 담석에서 수술 의뢰 vs 보존 관리 결정 근거 (C-GALL trial 2023 기반).",
+      sources: []
+    },
+    classification: {
+      content: "| 구분 | 임상 양상 | 관리 원칙 |\n|---|---|---|\n| 무증상 담석 | 영상 우연 발견, 증상 없음 | **관찰** (수술 불필요) |\n| 단순 경증 증상 | biliary colic 에피소드, 합병증 없음 | **보존 vs 수술 — 공동 의사결정** (C-GALL) |\n| 합병증성 담석 | 담낭염·담관염·담석 췌장염·Mirizzi | **즉시 수술 의뢰** |",
+      sources: []
+    },
+    exam: {
+      content: "### 전형적 biliary colic\n- 상복부 또는 RUQ 통증, 30분 이상 지속, 최대 6시간\n- 식후(특히 지방식) 유발\n- 어깨·등 방사 가능\n- 오심·구토 동반 가능\n- 지속성·fever·황달 동반 → 합병증 의심\n\n### 이학적 소견\n- Murphy sign (급성 담낭염)\n- RUQ 압통 (염증 시)\n\n### 초기 검사\n- **복부 초음파** (1st line, 민감도 90%+) ([[pocus-abdominal|abdominal POCUS]] 활용 가능)\n- LFT, CBC, amylase/lipase\n- 담관 확장·황달·열 → MRCP 또는 ERCP 의뢰",
+      sources: []
+    },
+    protocol: {
+      content: "### Step 1 — 합병증 배제\nFever, jaundice, 지속성 통증, Murphy sign, WBC↑, LFT/bilirubin↑, amylase/lipase↑ → **즉시 외과/내과 의뢰**.\n\n### Step 2 — 단순 경증 담석 공동 의사결정 (C-GALL 기반)\n18개월 RCT 결과 **보존 관리와 수술은 일반 삶의 질에서 동등**:\n- Primary outcome (SF-36 bodily pain AUC 18mo): MD 0.0, P=1.00\n- 보존군 25% (18mo) / 29.5% (24mo)가 결국 수술 = **70% 이상 수술 회피**\n- 비용: 보존이 환자당 £1,033 저렴 (NHS)\n- **단, 24개월 condition-specific QoL (Otago)**: 수술군 +9.0점 우세\n\n### Step 3 — 환자 성향별 추천\n| 환자 프로파일 | 권장 |\n|---|---|\n| 통증 에피소드 드묾, 수술 공포, 고령·기저질환 | **보존 관리** |\n| 반복 통증, 업무 방해 큼, 젊고 건강 | **선택적 수술** |\n| 고령 + 다발 기저질환 | 보존 (수술 위험 > 이득) |\n| 당뇨병 + 증상 담석 | 수술 선호 (감염 합병증 위험↑) |\n\n### Step 4 — 보존 관리 처방\n- 지방식 제한 상담\n- biliary colic 발생 시 NSAIDs (diclofenac IM or PO)\n- 합병증 경고 증상 교육 → 재방문 지시",
+      sources: []
+    },
+    indication: {
+      content: "**즉시 수술 의뢰**: 급성 담낭염, 담관염, 담석 췌장염, Mirizzi syndrome, 담낭 용종 >1cm, 담낭벽 석회화 (porcelain gallbladder), 총담관결석.\n\n**선택적 수술 상의**: 반복 biliary colic (월 1회 이상), 환자 명확한 선호, 당뇨병 동반.",
+      sources: []
+    },
+    complications: {
+      content: "보존 관리 중 감시:\n- **급성 담낭염**: 지속 통증 + 발열 + Murphy sign\n- **담관염**: Charcot 3징 (RUQ 통증 + 발열 + 황달)\n- **담석 췌장염**: 상복부 심한 통증 + amylase/lipase >3x\n- **담낭 천공**: 복막염 양상\n→ 즉시 응급실.",
+      sources: []
+    },
+    referral: {
+      content: "**외과 의뢰**: 합병증 의심, 선택적 수술 선호 환자, 담낭 용종 >1cm, 담석 + 담관 확장 또는 LFT 이상.\n**내과·영상의학과 의뢰**: 진단 불확실 (MRCP 필요), 총담관결석 의심 → ERCP.",
+      sources: []
+    },
+    counseling: {
+      content: "- \"담석 10명 중 8명은 평생 증상이 없고, 증상이 있어도 경미하면 70% 이상은 수술 없이 관리 가능합니다.\"\n- \"수술을 미룬다고 나중에 더 위험해지는 것은 아닙니다 (단순 경증 담석의 경우).\"\n- \"이런 증상이 생기면 바로 오세요: 24시간 이상 지속되는 통증, 발열, 황달, 점점 심해지는 상복부 통증.\"\n- \"기름진 음식 후 불편하면 당분간 지방 섭취를 줄여보세요.\"",
+      sources: []
+    },
+    notes: {
+      content: "### C-GALL trial 한계\n- 18-24개월 추적 — 장기(>24개월) 데이터 부재\n- 양군 모두 시간 지나며 수술·합병증 발생 누적 — 평생 비용효과는 재평가 필요\n- 영국 NHS 환경 — 수술 대기 길이가 보존군 선호에 영향 가능\n\n### 한국 맥락\n- 국내 담낭절제술은 비교적 저렴·접근성 좋음(급여) → 환자가 수술 선호 가능\n- 무증상 담석 관찰 관리는 이미 한국 표준\n- C-GALL은 **단순 경증 증상 담석까지** 관찰 옵션 확장 근거",
+      sources: []
+    },
+    "draft-append": {
+      content: "담석 환자 평가: ① 합병증 경고 증상(열·황달·지속통증) 배제 ② 증상 빈도/심도 평가 ③ 단순 경증이면 C-GALL 근거로 보존 vs 수술 공동 의사결정 ④ 보존 선택 시 경고 증상 교육 + NSAIDs 처방 + 재방문 안내.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["gallstones"] = _gallstones_v2;
+KNOWLEDGE_BUNDLE["담석증"] = _gallstones_v2;
+KNOWLEDGE_BUNDLE["담석"] = _gallstones_v2;
+KNOWLEDGE_BUNDLE["cholelithiasis"] = _gallstones_v2;
+
+/* cgm-t2dm — 비인슐린 T2DM CGM (5-3 누락분 ingest). [CLINICAL] */
+var _cgm_t2dm_v2 = {
+  kind: "drug",
+  keywords: ["CGM","연속혈당측정","continuous glucose monitoring","FreeStyle Libre","Dexcom","T2DM","비인슐린","SMBG","자가혈당측정"],
+  parents: [],
+  primarySources: [
+    "Grad R, Ebell MH. AFP Top 20 POEMs 2024. Am Fam Physician 2025;112(1):34-41. PMID:40736492"
+  ],
+  sections: {
+    definition: {
+      content: "연속혈당측정(CGM)은 피부 하 interstitial glucose를 실시간(Dexcom G7) 또는 intermittent scan(FreeStyle Libre)으로 측정하는 device. 인슐린 치료 T2DM·T1DM에서는 효과 확립. **비인슐린 치료 T2DM에서는 HbA1c 감소 효과 임상적 의미 없고, 오히려 해(harm) 가능성** — AFP 2024 POEM 선정. 본 entry는 **비인슐린 T2DM의 CGM 요청에 대한 일차의료 상담 근거**.",
+      sources: []
+    },
+    indication: {
+      content: "### CGM 근거 있는 대상 (본 entry 범위 밖 — 참고만)\n- T1DM 전체\n- 인슐린 치료 T2DM (MDI 또는 펌프)\n- 임신성 당뇨 (일부 증례)\n- 저혈당 무인지 환자\n- Sulfonylurea 고용량 + 반복 저혈당\n\n### CGM 근거 제한·해 가능 대상 (본 entry 핵심)\n- **비인슐린 치료 T2DM** (metformin ± DPP-4i ± SGLT2i ± GLP-1 RA 등)\n- 안정 HbA1c <8.0% + 저혈당 무증상 환자\n- 환자 요청만으로 \"비용 감수해도 쓰고 싶다\" 수준",
+      sources: []
+    },
+    contraindication: {
+      content: "### 1. HbA1c 감소 효과 제한적\n- 비인슐린 T2DM 메타분석: HbA1c 감소 약 0.3% 이내, 6개월 이후 소실\n- 임상적 10년 합병증 감소 근거 부재\n- HbA1c + SMBG로 충분한 모니터링\n\n### 2. 해(harm) 가능성\n- 과도한 데이터 노출 → 환자 불안·강박적 측정\n- 식후 혈당 스파이크 과민 반응 → 불필요한 약물 증량 요구\n- 저혈당 위험 낮은 환자(metformin only)에서 저혈당 공포 유발\n- 데이터 해석 misinterpretation → 식이 제한 과도\n\n### 3. 비용·행정 부담\n- 국내 비급여 시 월 10-20만 원대 (센서 7-14일)\n- 데이터 해석 진료 시간 추가 → 외래 효율 저하",
+      sources: []
+    },
+    precaution: {
+      content: "### 예외적 고려 가능 상황\n- **단기 교육 목적** (2주 간헐 착용) — 식이·운동 피드백 [출처 미확인 — 국내 임상 관행]\n- Sulfonylurea + 노인 → 저혈당 빈도 평가 후 감량 판단\n- 운동선수 등 특수 상황\n- **장기 routine 착용은 여전히 비권고**\n\n### 환자 요청 대응\n- \"CGM 써보고 싶다\" → 위 예외 해당 여부 평가\n- \"인슐린 안 맞는데 꼭 필요한가?\" → \"HbA1c로 충분, 합병증 예방 이득 근거 부족\" 설명",
+      sources: []
+    },
+    comparison: {
+      content: "| 도구 | 비인슐린 T2DM 근거 | 비용 | 정확도 | 한국 급여 |\n|---|---|---|---|---|\n| **HbA1c (3개월)** | ★★★ 합병증 예방 근거 확립 | 저 | 간접 평균 | 급여 |\n| **SMBG** | ★★★ 교육·급성 조정 도구 | 저~중 | 직접 time point | 급여 (제한) |\n| **CGM** | ★ 비인슐린에서 추가 이득 미미 | **고** | 연속·interstitial | **비급여** |\n\n### CGM vs SMBG 실용 비교\n- SMBG: 하루 1-4회 손가락 채혈, 특정 시점\n- CGM: 24시간 연속, trend 파악 — but 인슐린 없는 환자에게 trend 활용처 제한",
+      sources: []
+    },
+    insurance: {
+      content: "### 한국 (2026 기준)\n- T1DM: 연속혈당측정용 전극(센서) 급여\n- **T2DM 인슐린 다회 주사**: 일부 급여 (조건부)\n- **T2DM 비인슐린**: **비급여** (전액 본인 부담)\n- 자비 구매 월 10-20만 원 수준\n\n### 미국\n- Medicare Part B: T2DM 인슐린 사용 환자 급여\n- 비인슐린 T2DM: 상업보험 일부 제한적 급여",
+      sources: []
+    },
+    counseling: {
+      content: "### 환자가 CGM 요청 시 표준 응답\n- \"CGM은 인슐린 맞는 당뇨에서는 효과가 확실합니다. 하지만 **인슐린을 쓰지 않는 2형 당뇨**에서는 최근 연구에서 **혈당 조절 효과가 거의 없고**, **오히려 해가 될 수 있다**는 결과가 나왔어요.\"\n- \"HbA1c를 3개월마다 측정하고, 필요 시 간헐적으로 손가락 채혈(SMBG)하는 것이 충분합니다.\"\n- \"CGM을 2주 정도 짧게 써서 식이 교육 목적으로 활용하는 것은 가능합니다. 하지만 **계속 차고 다니는 것은 권하지 않습니다**.\"\n- \"가격도 월 10-20만 원 수준으로 부담이 큽니다.\"\n\n### \"해(harm)\" 설명\n- \"혈당이 식후 올라가는 것을 계속 보면 **불안감**이 생겨서 식사를 너무 제한하거나, 약을 더 올리고 싶어질 수 있어요.\"\n- \"2형 당뇨에서 CGM을 계속 쓴다고 합병증이 덜 생기거나 오래 사는 결과는 확인되지 않았어요.\"",
+      sources: []
+    },
+    notes: {
+      content: "### POEM 원문\nAFP Top 20 POEMs 2024: \"CGM has minimal effect on glycemic control in type 2 diabetes and may even cause harm\".\n\n### 한국 의료 환경\n- 국내 CGM 시장 급성장 (2020-) — 환자 자발 요청 증가\n- 일부 클리닉에서 비인슐린 T2DM에 CGM 프로모션 — **근거 없는 관행 제동 필요**",
+      sources: []
+    },
+    "draft-append": {
+      content: "비인슐린 T2DM 환자 CGM 문의 시: ① 인슐린 사용 여부 확인 (안 쓰면 비권고 근거 있음) ② HbA1c + SMBG로 충분함 설명 ③ \"효과 제한적 + 과민 반응 유발 + 월 10-20만 원 비급여\" triad 설명 ④ 예외(단기 교육·SU 노인 저혈당 평가)는 case-by-case ⑤ 환자 최종 선택 존중하되 근거 기록.",
+      sources: []
+    }
+  },
+  uiHooks: { guide: ["*"] }
+};
+KNOWLEDGE_BUNDLE["cgm-t2dm"] = _cgm_t2dm_v2;
+KNOWLEDGE_BUNDLE["CGM"] = _cgm_t2dm_v2;
+KNOWLEDGE_BUNDLE["연속혈당측정"] = _cgm_t2dm_v2;
+
+/* nocturia — 야간뇨 평가 (5-3 누락분 ingest, 5-7 mirabegron frail OAB 포함). [CLINICAL] */
+var _nocturia_v2 = {
+  kind: "disease",
+  keywords: ["nocturia","야간뇨","야간다뇨","nocturnal polyuria","OAB","BPH","GSM","desmopressin","mirabegron","미라베그론","overactive bladder","허약노인"],
+  parents: [],
+  primarySources: [
+    "Getaneh FW, Sussman RD, Iglesia CB. Nocturia: Evaluation and Management. Am Fam Physician. 2025;111(6):515-523B. PMID:40531150",
+    "Shaw C, Wagg A. Efficacy and Safety of Mirabegron in Frail Older Adults with Overactive Bladder. Drugs Aging. 2026 May 3. PMID:42070202, DOI:10.1007/s40266-026-01300-1"
+  ],
+  sections: {
+    definition: {
+      content: "야간뇨: **야간에 1회 이상 배뇨를 위해 깨어나는 것**. 고령에서 유병률 증가. 낙상·골절·인지저하·우울 위험과 연관. 스크리닝 자체는 권고되지 않으나, 증상 불편 시 평가·치료 대상.",
+      sources: []
+    },
+    differential: {
+      content: "### 4대 기전 분류\n| 기전 | 세부 원인 |\n|---|---|\n| **야간 다뇨 (nocturnal polyuria)** | CHF, CKD, 정맥부전, 야간 과도 수분·알코올 |\n| **방광 저장 용량 감소** | OAB, BPH 출구 폐쇄, 방광 섬유화 |\n| **불완전 배뇨** | BPH, 방광수축력 저하, 신경인성 방광 |\n| **일차성 수면 장애** | 수면무호흡(OSA), 불면증, 하지불안증후군 |",
+      sources: []
+    },
+    exam: {
+      content: "### 초진 기본 평가\n- 배뇨 증상·수분 섭취 패턴·동반 질환 확인\n- **빈도-용량 일지(bladder diary)**: 기전 감별 핵심\n- 설문지 활용 (ICIQ-N 등)\n- **소변 검사**: 모든 환자 시행\n\n### 핵심 확인 사항\n- 심부전·CKD 여부\n- 이뇨제 복용 시간 → 저녁 복용 시 야간뇨 악화\n- 수면무호흡 증상 (코골이·주간 졸림·목격된 무호흡)\n- 여성: GSM(폐경 후 생식기비뇨기증후군)",
+      sources: []
+    },
+    protocol: {
+      content: "### 1차 — 생활습관 수정 (모든 환자)\n- **야간 수분 제한**: 취침 2~3시간 전부터 최소화\n- **이뇨제 복용 시간 조정**: 오전 또는 오후 4~6시 이전\n- **수면 위생**: 규칙적 취침·기상, OSA 진단 시 CPAP\n- 다리 부종: 낮 동안 다리 거상 + 압박스타킹\n\n### 2차 — 기전별 약물\n| 기전 | 약물 |\n|---|---|\n| 야간 다뇨 | Desmopressin (DDAVP) — **저나트륨혈증 위험 주의** |\n| OAB | **미라베그론(β3) 우선**; 항무스카린제는 [[anticholinergic-burden|항콜린 부담]]↑ |\n| BPH | 알파차단제(tamsulosin) ± 5-ARi |\n| GSM(여성) | 국소 에스트로겐 |\n\n### 3차 — 불응성\n- onabotulinumtoxinA 방광 주사\n- 천추 신경조절(sacral neuromodulation)\n- BPH 수술(TURP 등)\n\n---\n\n### 허약 노인 OAB — 미라베그론(mirabegron) 우선 전략 [CLINICAL]\n> [출처: Shaw C, Wagg A. Drugs Aging 2026 May 3. PMID:42070202]\n> 리뷰 근거 종합; 전향 연구 제한적.\n\n**핵심 메시지**: 허약 노인 OAB에서 **미라베그론(β3 작용제)**이 항무스카린제 대비 **인지기능 저하·낙상 부작용 없이** 효과적.\n\n**항무스카린제 vs 미라베그론**\n| 특성 | 항무스카린제 (oxybutynin 등) | 미라베그론 |\n|---|---|---|\n| OAB 증상 개선 | 있음 | 있음 (동등) |\n| 인지기능 부작용 | **있음 (ACB 3점)** | 없음 |\n| 낙상 위험 | **증가** | 없음 |\n| 구강건조 | **심함** | 경미 |\n| 고령 내약성 | 불량 | **양호** |\n\n**외래 처방 전환 기준**:\n- 허약 노인 / 인지저하 동반 OAB → **항무스카린제 대신 미라베그론 1차 선택**\n- 기존 oxybutynin·solifenacin 복약 중 인지 저하·낙상 우려 → 미라베그론 교체\n- ACB 부담 감소 목적에서도 교체 이점 ([[anticholinergic-burden|ACB]] 참조)\n\n> 용량: mirabegron 25–50 mg 1일 1회 [가이드라인 default 인용: 제품 허가사항]\n> 한국 보험: [출처 미확인 — researcher 검증 권장]",
+      sources: ["Shaw C, Wagg A. Drugs Aging 2026. PMID:42070202"]
+    },
+    precaution: {
+      content: "- **Desmopressin**: 고령(≥65세)·기저 저나트륨혈증 시 [[hyponatremia|저나트륨혈증]] 위험 — 시작 전 혈청 Na 확인, 1주 재측정 권고 [가이드라인 default 인용: FDA labeling]\n- **항무스카린제**: 고령에서 인지저하·낙상·변비·요폐 위험 → 미라베그론 우선\n- **알파차단제**: 기립성 저혈압·낙상 위험 — 고령 초회 복용 주의",
+      sources: []
+    },
+    referral: {
+      content: "- 생활습관 + 적절한 약물 치료에도 불응 → **비뇨기과** (botulinum·neuromodulation)\n- BPH 수술 적응증 판단 → 비뇨기과\n- OSA 확인 필요 → 수면다원검사(PSG) 또는 수면의학과",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["nocturia"] = _nocturia_v2;
+KNOWLEDGE_BUNDLE["야간뇨"] = _nocturia_v2;
+KNOWLEDGE_BUNDLE["mirabegron"] = _nocturia_v2;
+KNOWLEDGE_BUNDLE["미라베그론"] = _nocturia_v2;
+
+/* geriatric-assessment-4ms — 4Ms 노인 평가 (5-3 누락분 ingest). [CLINICAL] */
+var _geriatric_4ms_v2 = {
+  kind: "topic",
+  keywords: ["4Ms","geriatric assessment","노인 평가","what matters","medication","mentation","mobility","Mini-Cog","STEADI","낙상","치매","frailty","age-friendly"],
+  parents: [],
+  primarySources: [
+    "Rubenstein C, Blinkhorn L, Weiss BD. The Age-Friendly Geriatric Assessment. Am Fam Physician. 2026;113(1):24-33. PMID:41544278"
+  ],
+  sections: {
+    definition: {
+      content: "**4Ms 프레임워크**: 노인 진료에서 반드시 다뤄야 할 4개 핵심 영역의 구조화된 평가 도구. Age-Friendly Health Systems 운동의 핵심 요소.",
+      sources: []
+    },
+    protocol: {
+      content: "### ① What Matters (무엇이 중요한가)\n- 환자·가족이 일상과 의료에서 **가장 중요하게 여기는 것** 확인\n- 목표 중심 진료(goal-oriented care)의 출발점\n- 외래 질문 예: \"오늘 가장 걱정되시는 것이 무엇인가요? 건강에서 가장 중요하게 유지하고 싶은 것은?\"\n\n### ② Medication (약물)\n핵심 과제: 부적절 약물 확인 및 중단 + 필요 약물 누락 점검\n- **부적절 약물**: Beers Criteria / STOPP\n  - 항콜린제 — 고령 인지저하·낙상 ([[anticholinergic-burden|ACB]] 참조)\n  - 장기 BZD / Z-drug — 낙상·인지저하\n  - NSAIDs — GI·신기능·심혈관 위험\n- **필요 약물 누락**: 당뇨·고혈압·심부전 핵심 약물 확인\n- 다약제(≥5종): 매 방문 약물 목록 전체 검토\n> 연관: [[deprescribing|deprescribing]]\n\n### ③ Mentation (인지·기분)\n**인지 평가**\n- **Mini-Cog (3단계)**: 인지기능 우려 시 즉시 적용\n  1. 3가지 단어 기억\n  2. 시계 그리기(CDT)\n  3. 3가지 단어 회상\n- 이상 시: 가역적 원인 탐색 (갑상선저하·B12·약물·우울) → MCI·치매 평가\n\n**기분·섬망 평가**\n- 우울 스크리닝: GDS-5 또는 PHQ-2\n- 섬망 위험인자: 인지저하·탈수·다약제·수면 방해·부동화\n\n### ④ Mobility (이동능력·낙상)\n**STEADI 도구** — 낙상 위험 3 핵심 질문:\n1. 지난 1년간 낙상한 적 있나요?\n2. 걸을 때나 균형을 잡을 때 불안정하다고 느끼나요?\n3. 낙상이 걱정되어 활동을 줄인 적 있나요?\n\n**하나라도 양성** → 전면 낙상 위험 평가:\n- 기립성 저혈압 측정\n- 약물 검토 (항고혈압제·수면제·항콜린제)\n- Timed Up and Go (TUG) test ≥12초 → 고위험\n- 운동 중재 개시: 균형·근력 운동, 물리치료 의뢰",
+      sources: []
+    },
+    exam: {
+      content: "### 4Ms 외래 통합 루틴 (≥65세 정기 방문)\n| 항목 | 도구 / 방법 |\n|---|---|\n| What Matters | 개방형 질문 |\n| Medication | 약물 목록 전체 검토; Beers/STOPP |\n| Mentation | Mini-Cog (인지 우려 시); PHQ-2 (우울) |\n| Mobility | STEADI 3문항; TUG test |",
+      sources: []
+    },
+    referral: {
+      content: "- Mini-Cog 이상 + 가역적 원인 배제 → 신경과·신경심리검사\n- 반복 낙상·TUG ≥12초 → 물리치료 의뢰\n- 복잡한 다약제 → 임상약사 협진",
+      sources: []
+    },
+    notes: {
+      content: "- 4Ms는 **단일 방문에 모두 완료하지 않아도 됨** — 여러 방문에 분산 적용 가능\n- 가족·보호자를 4Ms 평가에 파트너로 참여시키면 실효성↑",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["geriatric-assessment-4ms"] = _geriatric_4ms_v2;
+KNOWLEDGE_BUNDLE["4Ms"] = _geriatric_4ms_v2;
+KNOWLEDGE_BUNDLE["노인평가"] = _geriatric_4ms_v2;
+
+/* hyponatremia — 저나트륨혈증 (5-3 누락분 ingest). [CLINICAL] */
+var _hyponatremia_v2 = {
+  kind: "disease",
+  keywords: ["hyponatremia","저나트륨혈증","SIADH","hypertonic saline","고장식염수","Tolvaptan"],
+  parents: [],
+  primarySources: [
+    "Henry DA. Hyponatremia. Ann Intern Med. 2025;178(12):ITC177-ITC192. PMID:41359965, DOI:10.7326/ANNALS-25-04219"
+  ],
+  sections: {
+    definition: {
+      content: "저나트륨혈증: 혈청 Na⁺ < 135 mEq/L. **입원 환자 중 가장 흔한 전해질 이상**.\n- **급성**: 발생 < 48시간\n- **만성**: 발생 > 48시간 (뇌가 세포 용적을 용질 소실로 정상화 → 교정 시 주의)",
+      sources: []
+    },
+    differential: {
+      content: "### 원인 별 접근\n| 분류 | 주요 원인 |\n|---|---|\n| 저혈량성 | 구토·설사·발한, 이뇨제 과다 |\n| 정상혈량성 | **SIADH** (가장 흔한 원인), 갑상선저하, 부신부전 |\n| 고혈량성 | 심부전, 간경화, 신증후군 |\n\n### 외래 노인에서 흔한 원인\n- 이뇨제(thiazide) + SSRI 병용 → SIADH 위험↑\n- 갑상선저하증 (TSH 확인 필수)\n- 의심 약물: carbamazepine, oxcarbazepine, amiodarone, NSAIDs, PPI",
+      sources: []
+    },
+    notes: {
+      content: "### 임상 중요성\n경한 만성 저나트륨혈증도 임상 결과에 영향:\n- 인지기능 저하\n- 골다공증 (뼈 Na⁺ 소실)\n- 낙상·골절 위험↑\n- 입원 기간 연장·재입원·사망률 증가\n→ 외래에서 \"경미한\" 저나트륨혈증도 교정·원인 관리 필요",
+      sources: []
+    },
+    protocol: {
+      content: "### 급성 저나트륨혈증 (<48시간, 증상 동반)\n- **고장식염수(3% hypertonic saline) 즉시** — 뇌부종 예방\n- 목표: Na⁺ 1~2 mEq/L/hr 교정\n- 신경과·집중치료 의뢰\n\n### 만성 저나트륨혈증 (>48시간)\n**교정 속도 제한 — 삼투성 탈수초화(ODS) 예방**\n- **≤6~8 mEq/L/24시간 (최대)** [가이드라인 default 인용: EASD/ESE 2014]\n- 빠른 교정 = ODS 위험 (중심성 교세포 용해, 비가역)\n\n### SIADH (정상혈량성)\n1. **1차**: 수분 제한 (800~1000 mL/일)\n2. **2차**: 원인 약물 중단 (이뇨제·SSRI 등 재검토)\n3. **저염식 + 루프이뇨제 저용량 병합** (일부)\n4. **Tolvaptan**: 단기 — 간독성 주의 [출처 미확인 — 한국 보험 적용 researcher 검증 권장]",
+      sources: []
+    },
+    precaution: {
+      content: "### 외래 노인 처방 체크리스트\n| 위험 약물 조합 | 권고 |\n|---|---|\n| Thiazide + SSRI | 노인 저나트륨혈증 위험 급증 → 시작 후 1개월 Na⁺ 확인 |\n| Thiazide 단독 | 고령·저체중 여성에서 특히 주의 |\n| Carbamazepine | 만성 복용 시 정기 Na⁺ 모니터링 |\n\n**이뇨제 시작 또는 용량 증량 후**: 1~2주 내 전해질 재확인.",
+      sources: []
+    },
+    monitoring: {
+      content: "- 교정 중 (입원): **매 4~6시간 혈청 Na⁺**\n- 외래 만성 저나트륨혈증: 교정 목표 도달 후 1~3개월 간격 추적\n- 원인 치료 후: 재발 여부 추적 (특히 이뇨제 재개 시)",
+      sources: []
+    },
+    referral: {
+      content: "- 급성·증상성 → **즉시 응급실 또는 입원**\n- 원인 불명확 → 내분비내과 (SIADH 2차 원인 탐색)\n- Na⁺ < 120 mEq/L → 신장내과 또는 내분비내과",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["hyponatremia"] = _hyponatremia_v2;
+KNOWLEDGE_BUNDLE["저나트륨혈증"] = _hyponatremia_v2;
+KNOWLEDGE_BUNDLE["SIADH"] = _hyponatremia_v2;
+
+/* pocus-primary-care-efsumb — EFSUMB 일차의료 POCUS 커리큘럼 (5-3 누락분 ingest). [CLINICAL] */
+var _pocus_efsumb_v2 = {
+  kind: "topic",
+  keywords: ["POCUS","일차의료","primary care","EFSUMB","curriculum","커리큘럼","competence level 1","훈련","ultrasound","초음파","Delphi"],
+  parents: [],
+  primarySources: [
+    "Andersen CA, Jenssen C, Poppleton A, et al. Point-of-care ultrasound in primary care — EFSUMB core curriculum and training recommendations. Ultraschall Med. 2026. PMID:41386291, DOI:10.1055/a-2771-2848"
+  ],
+  sections: {
+    notes: {
+      content: "EFSUMB(유럽초음파의학·생물학연맹) Delphi 합의 기반 **일차의료 의사를 위한 POCUS 핵심 커리큘럼** 공식 발표:\n- 대상: 일차의료 frontline 의사 (GP·FM·가정의)\n- 수준: **EFSUMB Competence Level 1** (기초 진단 초음파)\n- 목표: 유럽 전역 일차의료 POCUS 표준화",
+      sources: []
+    },
+    protocol: {
+      content: "### EFSUMB Level 1 — 일차의료 POCUS 4대 모듈 [초록 기반 — 전문 미확인]\n| 모듈 | 주요 적용 |\n|---|---|\n| **심장 (Cardiac)** | LV 기능 대략 평가, 심낭삼출 |\n| **폐 (Lung)** | B-lines (간질성 증후군), 기흉, 흉수 |\n| **복부 (Abdominal)** | 담석, 수신증, AAA, 복수 |\n| **근골격 (MSK)** | 관절삼출, 힘줄 손상, 유도 주사 |\n\n### 훈련 권고\n- 최소 훈련 시간 및 지도의(supervisor) 요건 제시\n- 각 국가별 임상 환경·환자군에 맞는 조정 허용\n- Delphi 프로세스: 국제 전문가 합의\n\n### 외래 POCUS 실용 적용 — 한국 가정의학과 연계\n| 영역 | 외래 즉시 활용 시나리오 |\n|---|---|\n| 심장 | 부종·호흡곤란 — LV 기능 대략 평가, 심낭삼출 배제 |\n| 폐 | 폐렴·폐부종 감별; B-lines ≥3 → 입원 고려 ([[pocus-lung|pocus-lung]] 참조) |\n| 복부 | 담낭 통증 — 담석 확인; 요통 — 수신증 배제; 복부 대동맥 ([[pocus-abdominal|pocus-abdominal]] 참조) |\n| MSK | 관절삼출 확인, 코르티코스테로이드 유도 주사 정확도↑ |",
+      sources: []
+    },
+    precaution: {
+      content: "- 본 권고는 **유럽(EFSUMB) 기준** — 한국 의료법·초음파 급여 기준과 직접 일치하지 않을 수 있음 [출처 미확인 — researcher 검증 권장]\n- Level 1 역량 습득 후에도 판독 한계 인식 필수 — 불명확 소견 시 영상의학과 협진",
+      sources: []
+    },
+    referral: {
+      content: "- POCUS Level 1 한계 초과 소견 → 영상의학과·해당 전문과 의뢰\n- 심각한 소견(심낭압전, 대동맥류 파열 의심) → 즉시 응급 의뢰",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["pocus-primary-care-efsumb"] = _pocus_efsumb_v2;
+KNOWLEDGE_BUNDLE["EFSUMB"] = _pocus_efsumb_v2;
+KNOWLEDGE_BUNDLE["POCUS-curriculum"] = _pocus_efsumb_v2;
+
+/* vte-hormone-therapy — 성호르몬 요법과 VTE (5-3 누락분 ingest). [CLINICAL] */
+var _vte_hormone_v2 = {
+  kind: "topic",
+  keywords: ["혈전","VTE","정맥혈전색전증","경구피임약","HRT","성확인호르몬","호르몬대체요법","혈전성향증","thrombophilia","성호르몬"],
+  parents: [],
+  primarySources: [
+    "Skeith L, Bates SM. Sex Hormones and Venous Thromboembolism. N Engl J Med. 2026 Apr 16;394(15):1514-1528. PMID:41985134, DOI:10.1056/NEJMra2202438"
+  ],
+  sections: {
+    definition: {
+      content: "성호르몬 요법(피임약·HRT·성확인 호르몬·항암 호르몬·보조생식)은 혈전증의 공인 위험인자. 호르몬 제형·투여 경로·혈전 기왕력·혈전성향증 유무에 따라 VTE 위험 크게 달라짐.",
+      sources: []
+    },
+    comparison: {
+      content: "### 제형별 VTE 위험 비교 [CLINICAL]\n| 호르몬 요법 | 상대 위험도 상승 | 핵심 원칙 |\n|---|---|---|\n| 복합 경구피임약 (COC) | 3~4배 ↑ | 에스트로겐 용량·프로게스틴 종류에 따라 차이 |\n| 경피(패치·겔) 에스트로겐 | COC보다 낮음 | 간 초회 통과 회피 → 응고인자 영향 적음 |\n| 프로게스틴 단독 | VTE 위험 최소 | 에스트로겐 없으면 혈전 위험 ↑ 미미 |\n| 폐경 후 HRT (경구) | 2~3배 ↑ | 경피 제형이 경구보다 위험 낮음 |\n| 폐경 후 HRT (경피) | 위험 ↑ 최소 | 일차의료 선택 시 선호 제형 |\n| 성확인 호르몬 (MTF — 에스트라디올) | 2~4배 ↑ | 제형·용량·혈전성향증 여부 중요 |\n| 성확인 호르몬 (FTM — 테스토스테론) | 소폭 위험 ↑ | 적혈구 증다증 → 혈액점도 ↑ |\n\n> [초록 기반 — 전문 미확인]",
+      sources: []
+    },
+    protocol: {
+      content: "### 혈전성향증 보유 환자 처방 원칙\n- Factor V Leiden · 프로트롬빈 유전자 변이 · 항인지질항체 보유: COC 금기 → 대안 피임법\n- 기존 VTE 기왕력: 추가 호르몬 요법 시 항응고제 병용 또는 경피 제형으로 대체\n- 혈전성향증 미선별 스크리닝 권고 없음 — 가족력·기왕력 기반 선택적 검사\n\n### 수술 전후 관리\n- COC / HRT 복용 환자 선택적 수술 시: 수술 4주 전 중단 권고\n- 응급 수술은 중단 불가 — 술기적 VTE 예방(조기 보행·압박 스타킹·예방적 항응고) 강화\n- 수술 후 재개: 이동 가능 + 지혈 안정 확인 후\n\n### VTE 발생 시 치료\n- 호르몬 요법 관련 VTE → 즉시 항응고 (DOAC 또는 LMWH/VKA)\n- 호르몬 중단 필수 — 대체 피임법 즉시 논의\n- 치료 기간: 유발 VTE 3개월, 재발·비유발 → 개별 판단",
+      sources: []
+    },
+    referral: {
+      content: "- 처방 전 항상 혈전 기왕력 + 1촌 이내 가족력 확인\n- 혈전성향증 의심 시 → 혈전내과·혈액내과\n- COC/HRT 시작 후 종아리 통증·호흡곤란 → 즉시 DVT/PE 배제",
+      sources: []
+    },
+    pregnancy: {
+      content: "- COC: 임신 시 금기 (기형 위험보다 VTE 위험이 주 이슈)\n- 임신 자체 VTE 위험 5배 ↑, **산후 6주가 최고 위험기**\n- 수유 중 에스트로겐 포함 피임 → 첫 6개월 권장 안 함 (산후 혈전 + 수유 억제)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["vte-hormone-therapy"] = _vte_hormone_v2;
+KNOWLEDGE_BUNDLE["호르몬VTE"] = _vte_hormone_v2;
+KNOWLEDGE_BUNDLE["성호르몬혈전"] = _vte_hormone_v2;
+
+/* continuity-of-care — 주치의 연속성 (5-3 누락분 ingest). [CLINICAL — 조건부] */
+var _continuity_of_care_v2 = {
+  kind: "topic",
+  keywords: ["continuity of care","주치의 연속성","지속의료","재입원","낙상","골절","약물 관련 입원","home care","재택의료","예방적 진료"],
+  parents: [],
+  primarySources: [
+    "Caughey GE et al. Primary Health Care Services and Continuity of Care Are Associated With Better Health Outcomes in the Older Population. J Am Geriatr Soc. 2026. PMID:42050887, DOI:10.1111/jgs.70465"
+  ],
+  sections: {
+    notes: {
+      content: "### 주치의 연속성(알던 주치의 진료)의 효과 — 호주 코호트 120,522명, ≥65세\n[출처: Caughey GE et al. JAGS 2026. PMID:42050887]\n\n| 결과 지표 | 연속 진료군 (vs 신규 의사) | sHR (95% CI) |\n|---|---|---|\n| 약물 관련 입원 | **18% 감소** | 0.82 (0.74–0.91) |\n| 골절 입원 | **28% 감소** | 0.72 (0.66–0.78) |\n\n### 예방적 진료 집중 패턴 vs 전체적 진료 집중 패턴\n| 결과 | 예방적 진료 집중군 효과 |\n|---|---|\n| 응급실 방문 입원 | **15% 감소** (sHR 0.85, 0.80–0.92) |\n| 욕창 관련 입원 | **36% 감소** (sHR 0.64, 0.52–0.80) |\n\n알던 주치의가 진료하면 **약물 관련 입원 18%, 골절 입원 28% 감소** — 한국 주치의제도 논의 및 환자 설명에 활용 가능.",
+      sources: []
+    },
+    protocol: {
+      content: "### 주치의 연속성 진료의 임상적 의의\n1. **약물 오류 예방**: 알던 의사가 전체 약물 맥락 파악 → 처방 연쇄·중복·부작용 감지 용이\n2. **낙상·골절 예방**: 환자 개별 이동능력·낙상 위험 지속 추적\n3. **신뢰 관계 기반 예방 진료**: 정기 방문에서 예방접종·스크리닝·생활습관 중재 달성률↑\n\n### 한국 주치의제 논의 맥락\n- 이 근거는 한국 주치의제(일차의료 주치의 시범사업) 정책 논의에서 **연속성의 임상 가치** 논거로 활용 가능\n- 관찰 연구(성향 점수 분석) — 연속성 진료를 선호하는 환자 특성 편향 가능성 [초록 기반]",
+      sources: []
+    },
+    precaution: {
+      content: "- 호주 지역사회 노인 장기 요양(home-based care) 대상 코호트 — 한국 일차의료 환경에 직접 외삽 시 주의\n- 연속성의 효과는 의사-환자 신뢰 관계·정보 연속성 복합 인자 — 단순 '같은 의사 만남'만이 아닌 임상 정보 통합이 핵심\n- 인과 관계 아닌 연관성 연구 [CLINICAL — 조건부]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["continuity-of-care"] = _continuity_of_care_v2;
+KNOWLEDGE_BUNDLE["주치의연속성"] = _continuity_of_care_v2;
+
+/* delayed-diagnosis — 외래 진단 지연·문서 단편화 (5-3 누락분 ingest). [INSIGHTS] */
+var _delayed_diagnosis_v2 = {
+  kind: "topic",
+  keywords: ["delayed diagnosis","진단 지연","diagnostic error","문서 단편화","documentation fragmentation","외래","종단적 정보","longitudinal care"],
+  parents: [],
+  primarySources: [
+    "Jumhour H. Delayed Diagnosis in Outpatient Care: A Systematic Review of Documentation Fragmentation as a Hidden Driver of Diagnostic Error. Cureus. 2026;18(2):e102990. PMID:41657870, DOI:10.7759/cureus.102990"
+  ],
+  sections: {
+    notes: {
+      content: "### 핵심 발견 [INSIGHTS]\n외래 진단 지연의 주원인은 **개별 의사 오류보다 시스템 차원의 문서 단편화**:\n- PRISMA 체계적 고찰 — 13개 연구 통합 분석\n- 반복 외래에서 진화하는 임상 패턴이 문서 단편화로 인해 가려짐\n- **개별 방문마다 적절히 평가됐음에도** 종단적 정보 연속성 실패가 지연 진단 초래\n- 주요 기전: 문서 단편화 · 불완전한 종단적 정보 통합 · 진단 follow-up 실패\n\n> [출처: Jumhour H. Cureus 2026;18(2):e102990. PMID:41657870]",
+      sources: []
+    },
+    protocol: {
+      content: "### 진단 연속성 확보를 위한 실천 원칙\n1. **이전 방문 기록 검토 루틴화**: 반복 외래 시 지난 3~6개월 증상 추적\n2. **진단 follow-up 명시**: \"이 증상 다음 방문에 재확인\" 메모 또는 의뢰\n3. **진화하는 패턴 인식**: 개별 방문마다 정상이어도 반복·악화 패턴에 경계\n4. **문서 통합**: 여러 기관 진료 기록 취합 — 타원 기록 적극 요청\n\n### 고위험 상황 인식\n- 여러 방문에 걸쳐 반복되는 비특이적 증상 (피로·통증·체중감소)\n- 다기관 진료 환자 — 각 기관별 부분 정보만 존재\n- EHR 간 정보 연계 미흡한 환경\n\n### Premature Closure vs Documentation Gap 구분\n| 상황 | 오류 유형 | 대응 |\n|---|---|---|\n| 한 번의 방문에서 진단 확정 | Anchoring bias | Pattern disruption 질문 추가 |\n| 반복 방문에도 패턴 인식 실패 | Documentation gap | 종단 기록 검토 루틴화 |\n| 타원 기록 미확인 | 정보 단편화 | 외부 기록 취합 요청 |",
+      sources: []
+    },
+    precaution: {
+      content: "- 이 연구는 관찰 연구(체계적 고찰) — 개별 진료 행동 변화의 근거로 활용 가능하나, 특정 개입의 효과를 직접 증명하지는 않음\n- 한국 일차의료 EHR 환경에의 직접 외삽에는 주의 [출처 미확인 — researcher 검증 권장]\n- 관련: [[continuity-of-care|continuity-of-care]] (주치의 연속성)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["delayed-diagnosis"] = _delayed_diagnosis_v2;
+KNOWLEDGE_BUNDLE["진단지연"] = _delayed_diagnosis_v2;
+KNOWLEDGE_BUNDLE["documentation-fragmentation"] = _delayed_diagnosis_v2;
