@@ -200,3 +200,14 @@
 2026-05-04 | by-disease/MASH.md | 추가 — MASLD 1차의료 FIB-4 분층 + 레스메티롬 FDA 승인 + 세마글루타이드 신흥 옵션 [CLINICAL] — JAAPA 2025 PMID:41369205
 2026-05-04 | by-disease/frailty.md | 추가 — 허약 ITC 포괄 리뷰 (다계통 예비능 저하, 스크리닝 도구, 역전 가능 중재) [CLINICAL] — Ann Intern Med 2026 PMID:41662715
 2026-05-04 | guidelines/deprescribing.md | 신규 — 캐나다 일차의료 부적절 처방 선별 가이드라인 (≥65세 처방 점검 강력권고, STOPP/START) [CLINICAL, REGULATORY] — Can Fam Physician 2026 PMID:41844291
+
+2026-05-08 | by-disease/pocus-focus-cardiac.md | 신규 — AI 강화 FoCUS 집중심장초음파: 비심장전문의 시행 29% 신규 심장 소견, 7% 치료 수정; LV기능·판막질환 고감도, 우심계 감도 낮음 [CLINICAL — 조건부] PMID:42094314 (Mayo Clin Proc Digit Health 2026)
+2026-05-08 | by-disease/persistent-physical-symptoms.md | 신규 — 지속 신체증상(PPS) 일차의료 회복 접근: 뇌 기반 위협 반응 이론, 증상 타당화+기전 설명+개별화 관리, 포스트코비드·만성피로·섬유근통 포함 [INSIGHTS] PMID:41823400 (Scand J Prim Health Care 2026)
+2026-05-08 | by-disease/palliative-pain.md | 추가 — OUD 장기 주사 부프레노르핀 환자 암성통증: OUD 치료 유지 최우선, 수용체 점유·반감기 고려 완전 작용제 추가, 다중모달+다학제 [CLINICAL — 조건부] PMID:42092642 (JPSM 2026)
+2026-05-08 | by-disease/palliative-pain.md | 추가 — 오피오이드 내성 암성통증 부프레노르핀 전환 실제 경험: 71% 성공, NRS 6.3→4.9, 금단증상 8%, 30일 유지율 77% [CLINICAL — 조건부] PMID:42009265 (JPSM 2026)
+2026-05-08 | by-disease/vaccination.md | 추가 — CKD 고령 환자 고용량 독감 백신 입원 감소: Ann Int Med JC — CKD+65세 이상에서 표준용량 대비 독감·폐렴 입원 유의 감소 [CLINICAL] PMID:41771129 (Ann Intern Med 2026)
+2026-05-08 | guidelines/deprescribing.md | 추가 — 노인 Z-수면제 간략 개입 감약: 68.9%→27.8% (OR 0.16), 6개월 수면·인지·통증 악화 없음 [CLINICAL — 조건부] PMID:42031000 (Scand J Prim Health Care 2026)
+2026-05-08 | by-disease/cancer-fatigue.md | 추가 — 운동+행동지원 대장암 전체 생존율 향상: AFP POEM — 구조화 운동+행동지원 병합이 전체 생존율 유의 증가 [CLINICAL] PMID:41544293 (AFP 2026)
+2026-05-08 | guidelines/goals-of-care-acp.md | 추가 — 치매 동반 노인 임종 질 저하 전국 연구: 치매+암 = 자율성 aOR 0.29, 소통 0.47, 장소 선호 실현 0.67; 연하곤란↑ 통증·불면↓; ACP 조기 시작 근거 [CLINICAL] PMID:41856050 (Arch Gerontol Geriatr 2026)
+2026-05-08 | by-disease/low-back-pain.md | 추가 — 만성 경추·요추 통증 주사·고주파 금지 AFP 진료 지침: epidural·facet·trigger point 주사 및 RFA 모두 근거 없음 [CLINICAL] PMID:41252845 (AFP 2025)
+2026-05-08 | by-disease/heel-pain.md | 신규 — 발뒤꿈치 통증 진단·관리 AFP 리뷰: 족저근막염(기상통증·종골압통), POCUS >4mm, 야간부목·스트레칭·ESWT·주사, Sever disease 소아, 대부분 보존치료 [CLINICAL] PMID:41533410 (AFP 2025)

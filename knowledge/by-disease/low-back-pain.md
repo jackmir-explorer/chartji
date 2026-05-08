@@ -130,6 +130,28 @@ relations: []
 
 ---
 
+## 만성 경추·요추 통증 주사·고주파 치료 금지 — AFP 진료 지침 (precaution) [CLINICAL]
+
+> [출처: Shaughnessy AF. Practice Guideline: Do Not Use Injections or Radiofrequency to Treat Chronic Cervical Spine or Low Back Pain. Am Fam Physician. 2025 Nov;112(5):569-570. PMID:41252845]
+> AFP Practice Guideline POEM — 원 가이드라인 요약 [초록 미제공 — AFP POEM 포맷]
+
+**핵심 권고:**
+- 만성 경추 통증 또는 요추 통증에 아래 시술 **금지** (근거 없음):
+  - 경막외 주사 (epidural injections)
+  - 관절돌기 주사 (facet joint injections)
+  - 유발점 주사 (trigger point injections)
+  - 고주파 박리술 (radiofrequency ablation/neurotomy)
+
+**외래 적용:**
+- "주사 맞으면 낫나요?" → AFP POEM 근거: 만성화 이후에는 주사·시술이 근거 없음
+- 전문과 시술 의뢰 전 → 보존적 치료(PT·CBT·운동) 강화 먼저
+- 불필요한 시술 의뢰 줄이는 deprescribing 연장선 실천
+
+**환자 교육:**
+> "허리가 오래 아프다고 해서 주사 치료가 도움이 된다는 증거가 없습니다. 오히려 물리치료와 꾸준한 운동이 훨씬 효과적입니다."
+
+---
+
 ## 요통 환자에서 신체 활동 — 안전 근거 (protocol) [CLINICAL]
 
 > [출처: Pant S. Physical Activity Safe in People With Low Back Pain. JAMA. 2026 Feb 3;335(5):391. PMID:41511791, DOI:10.1001/jama.2025.23014]

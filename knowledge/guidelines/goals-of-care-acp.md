@@ -74,6 +74,38 @@ Goals of Care(GOC) 대화는 중증 질환 환자의 삶의 질 향상·환자·
 
 ---
 
+## 치매 동반 노인 임종 질 저하 — 전국 사망 추적 근거 (notes) [CLINICAL]
+
+> [출처: Nakazawa Y et al. Quality of death among older adults with and without comorbid dementia: A nationwide mortality follow-back study. Arch Gerontol Geriatr. 2026 Mar;145:106218. PMID:41856050, DOI:10.1016/j.archger.2026.106218]
+> 전국 사망 추적 조사, n=45,509명 (≥65세), 일본. 유족 조사 기반.
+
+**핵심 수치 (암 + 치매 동반 vs 암 단독):**
+
+| 임종 질 영역 | aOR | 의미 |
+|---|---|---|
+| 자신 상황 인지 (자율성) | **0.29** (0.27–0.32) | 71% 낮음 |
+| 가족과 소통 | **0.47** (0.44–0.50) | 53% 낮음 |
+| 삶의 의미감 | **0.55** (0.53–0.61) | 45% 낮음 |
+| 선호 돌봄 장소 실현 | **0.67** (0.63–0.72) | 33% 낮음 |
+| 신체적 고통 없음 (반대로) | **1.34** (1.26–1.43) | 신체 고통 오히려 더 낮음 |
+
+심장병 + 치매에서도 유사 패턴 (자율성 aOR 0.31, 소통 aOR 0.44)
+
+**증상 패턴 (치매 동반):**
+- 연하곤란(Dysphagia) 더 흔함
+- 통증·불면 더 드묾
+
+**임상 함의:**
+
+1. **치매 조기 진단 직후 ACP 시작** — "치매가 진행될수록 EOL 논의가 더 어려워진다"는 OR 수치로 설득 가능
+2. **경증 치매 = 자율적 ACP 가능한 마지막 창문** — 인지 저하 전 선호·가치 문서화 필수
+3. 치매 환자 돌봄 계획 조정 포인트:
+   - 연하 곤란 대비: 식이 조정·영양팀 의뢰 계획 사전 수립
+   - 통증·불면보다 **소통 단절·자율성 상실**이 더 큰 문제 — ACP 대화 내용 구체화
+4. 보호자 조기 ACP 파트너 참여 — 중증 전환 전
+
+---
+
 ## 치매 환자 ACP — 처방설정형 vs 목표도출형 접근법 (notes) [CLINICAL — 조건부]
 
 > [출처: van der Steen JT et al. Optimizing Approaches in Advance Care Planning in Dementia as Perceived by General Practitioners. J Pain Symptom Manage. 2026 Apr 30. PMID:42069237, DOI:10.1016/j.jpainsymman.2026.04.618]

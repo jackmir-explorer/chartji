@@ -87,6 +87,43 @@ relations: []
 
 ---
 
+## 노인 Z-수면제 간략 개입으로 부적절 사용 감소 (protocol) [CLINICAL — 조건부]
+
+> [출처: Siddiqui TG et al. Brief intervention for inappropriate z-hypnotics use in older adults: a before and after intervention study in primary care. Scand J Prim Health Care. 2026;44(1):2660168. PMID:42031000, DOI:10.1080/02813432.2026.2660168]
+> 전후 비교 연구, n=45명 (평균 69.4세, 여성 31명), GP 21명, 노르웨이. ClinicalTrials.gov NCT06032715
+
+**핵심 수치:**
+
+| 지표 | 전(기저) | 후(치료) | 효과 크기 |
+|---|---|---|---|
+| 부적절 Z-수면제 사용 비율 | **68.9%** | **27.8%** | OR 0.16 (95% CI 0.04–0.65) |
+| 수면 점수 (GSAQ-insomnia) | 상승 | **유의 악화 없음** | 유지 |
+| 6개월 시점 불면증 | — | **0명** | — |
+| 불안·우울 (HADS) | 10.1 | 7.3 | Cohen's d -0.44 |
+| 인지기능 (MOCA) | 기저 | 유의 변화 없음 | — |
+| 통증 (VAS) | 기저 | 유의 변화 없음 | — |
+
+**부적절 Z-수면제 기준:** ≥4주 사용 + ≥주 3회 (STOPP 기준)
+
+**간략 개입(BI) 구성 — GP 직접 시행:**
+1. 현재 수면제 사용 패턴·이유 탐색
+2. 장기 Z-수면제 위험 설명 (낙상·인지저하·의존성)
+3. 점진적 감량 계획 수립 (환자와 함께)
+4. 비약물 수면 전략 안내 (수면위생·인지행동치료)
+5. 6주·6개월·12개월 추적 평가
+
+**임상 함의:**
+- GP 직접 BI로 수면·인지·통증 악화 없이 Z-수면제 감약 달성 가능
+- 환자 설득 근거: "수면이 나빠지지 않는다"는 데이터 직접 제시 가능
+- STOPP 기준 수면제 항목 실행 도구로 바로 적용
+- 소규모(n=45) 단일국가 연구 — 외삽 시 주의 [CLINICAL — 조건부]
+
+**한국 외래 변환 시 확인:**
+- 한국 졸피뎀 처방 급여 제한(2주 이상 원칙적 제한) [출처 미확인 — researcher 검증 권장]
+- 에스조피클론(루네스타) 한국 급여 기준 [출처 미확인]
+
+---
+
 ## 지역사회 환자의 감약 거부 — 예측 인자·면담 전략 (notes) [CLINICAL — 조건부]
 
 > [출처: Marcellaud E et al. Attitudes Toward Deprescribing Among Community-Dwelling Adults. Drugs Aging. 2026 May 2. PMID:42068533, DOI:10.1007/s40266-026-01298-6]

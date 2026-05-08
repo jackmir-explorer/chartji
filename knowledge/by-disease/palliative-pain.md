@@ -95,6 +95,62 @@ relations: [[[eol-deprescribing]], [[cancer-neuropathic-pain-steroid]], [[afp-eo
 
 ---
 
+## OUD 장기 주사 부프레노르핀 환자의 암성 통증 관리 (notes) [CLINICAL — 조건부]
+
+> [출처: Lam AP et al. Managing Cancer-Related Pain in Patients Receiving Long-Acting Buprenorphine for Opioid Use Disorder. J Pain Symptom Manage. 2026 May;PMID:42092642, DOI:10.1016/j.jpainsymman.2026.04.617]
+> 증례 기반 임상 리뷰 — 62세 남성, 중증 OUD 장기 주사 부프레노르핀 유지 중 암 진단 [초록 기반 — 전문 미확인]
+
+**OUD + 암성 통증 공존 시 핵심 원칙:**
+
+1. **OUD 치료 유지 최우선** — 장기 주사 부프레노르핀 중단 금지
+2. **수용체 점유 고려**: 장기 주사 부프레노르핀은 μ 수용체를 높은 친화도로 점유 → 완전 오피오이드 작용제 추가 시 수용체 가용성 확인 필요
+3. **반감기 고려**: 지속형 부프레노르핀은 반감기 매우 길음 → 추가 오피오이드 titration 속도 조절
+4. **다중모달 진통(Multimodal analgesia)**: 오피오이드 단일 전략 대신 NSAIDs·스테로이드·항경련제·인터벤션 병용
+5. **다학제 접근**: 완화의료·중독의학·통증의학 협력
+
+**외래 결정 분기:**
+```
+OUD 유지 부프레노르핀 환자 + 암 진단·통증
+      ↓
+1. 부프레노르핀 중단 고려? → 금지 (OUD 재발 위험)
+      ↓
+2. 완전 오피오이드 작용제 추가 필요 시:
+   - 수용체 점유 고려 → 고용량 완전 작용제 필요 가능
+   - 완화의료·중독의학 협진 필수
+      ↓
+3. 다중모달 진통 병행
+4. 정기 평가: OUD 안정성 + 통증 조절 균형
+```
+
+**가정의학과 역할:** 완화의료 협력 시점 조기 결정 — OUD+암 통증 복잡 케이스 단독 관리 금지
+
+---
+
+## 오피오이드 내성 암성통증 부프레노르핀 전환 — 실제 임상 경험 (notes) [CLINICAL — 조건부]
+
+> [출처: Idom O et al. Real-World Experience with Initiating Buprenorphine in Opioid Tolerant Patients with Cancer Pain. J Pain Symptom Manage. 2026 Apr;PMID:42009265, DOI:10.1016/j.jpainsymman.2026.04.605]
+> 후향적 단일기관, n=48명 (활동성 또는 기왕력 악성종양), Vanderbilt 2023-2024. 경피 또는 협측 부프레노르핀.
+
+**핵심 수치:**
+
+| 지표 | 결과 |
+|---|---|
+| 30일 성공적 전환율 | **71% (34/48)** |
+| 통증 NRS 기저 → 30일 | 6.3 → **4.9** |
+| 금단 증상 발생 | **8%** |
+| 30일 부프레노르핀 유지율 | **77%** |
+| 초기 용량 그대로 유지 | 65% |
+
+**전환 성공 정의:** 30일 부프레노르핀 지속 + 금단 증상 없음 + 통증 안정 또는 개선
+
+**임상 함의:**
+- 완전 오피오이드 조절 불량 암성통증 환자에서 부프레노르핀 전환은 **실현 가능한 전략**
+- 금단 증상 발생률 낮음 (8%) — 전환 프로토콜 준수 시 안전
+- 전환 실패 시 완전 오피오이드 작용제로 복귀 가능 (2명 복귀)
+- 추가 전향적 연구 필요 — [CLINICAL — 조건부] 등급
+
+---
+
 ## 부프레노르핀 패치 조기 효력 소실 (End-of-Dosage Failure) (precaution) [CLINICAL — 조건부]
 
 > [출처: Weerasiri SD et al. A Case Report of End-of-Dosage Failure With Buprenorphine Patch. J Pain Symptom Manage. 2026 Jan 28;71(5):e606-e609. PMID:41617142, DOI:10.1016/j.jpainsymman.2026.01.018]
