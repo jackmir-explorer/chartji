@@ -176,9 +176,11 @@ function preprocessWikilinks(text){
    토큰 <mark> 감쌈. HTML attribute 안에 토큰 매칭 깨짐 방지. */
 function renderMarkdownWithHighlight(content,tokens){
   if(!content) return "";
+  // 1단계: marked 미로드 fallback에도 wikilinks 정상 처리
   if(typeof marked==="undefined"||typeof document==="undefined"){
-    return highlightSearch(content,tokens);
+    return highlightSearch(stripWikilinks(content),tokens);
   }
+  // 2단계: wikilinks 선처리 → marked.parse — 테이블 셀 안 [[X|Y]]의 `|` 충돌 차단
   var pre=preprocessWikilinks(content);
   var html=marked.parse(pre,{breaks:true,gfm:true});
   if(!tokens||!tokens.length) return html;
