@@ -75,3 +75,28 @@ relations: []
 
 - [[anxiety-depression-cbt]] — 우울·불안 CBT 근거
 - [[palliative-pain]] — 암성 통증 동반 정신건강
+
+---
+
+## 만성 비암성 통증 — 비오피오이드 약물치료 유형별 가이드 (protocol) [CLINICAL]
+
+> [출처: Sokol R et al. Nonopioid Pharmacologic Management of Chronic Noncancer Pain. Am Fam Physician. 2025 Aug;112(2):187-196. PMID:40834375]
+> [초록 기반 — 전문 미확인]
+
+**통증 유형별 1차 약물 선택:**
+
+| 통증 유형 | 1차 선택 | 2차 선택 | 비고 |
+|---|---|---|---|
+| **골관절염** | 국소·경구 NSAIDs | SNRIs, 가바펜틴류 | 국소 NSAIDs 전신 부작용 적음 |
+| **만성 요통** | NSAIDs (단기), SNRIs | — | 유의한 장기 이득 없음 — 기대치 조정 필요 |
+| **신경병증성 통증** | duloxetine, gabapentin, pregabalin, 8% capsaicin | — | 4가지 중등도 효과 동등 |
+| **섬유근통** | **pregabalin** (최우선) | duloxetine, milnacipran | pregabalin 근거 최강 |
+
+**오피오이드:**
+- 모든 비오피오이드 전략 실패 + 위험-이익 재평가 후 최후 수단
+- 초기 처방 전 ORT(Opioid Risk Tool) 등 위험 평가 권장
+
+**환자 상담 핵심:**
+- 만성 비암성 통증은 "완전 제거"가 목표가 아닌 **기능 향상·삶의 질 개선** 목표 설정
+- 자가관리 전략(운동·수면·심리) + 약물 병행 (biopsychosocial 접근)
+- 만성 요통: 어떤 약도 유의한 기능 개선 없음 → 과도한 약물 기대 차단

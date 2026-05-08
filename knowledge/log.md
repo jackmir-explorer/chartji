@@ -5,6 +5,17 @@
 
 ---
 
+2026-05-07 | by-disease/anticholinergic-burden.md | 신규 — 항콜린 부담 노인 처방 점검: ACB 1–2 저부하도 구강건조 OR 2.06 (ACB=0 대비), ACB≥3 OR 2.25 — 역치 하향 근거; 외래 처방 점검 루틴·교체 우선 약물 목록 (oxybutynin→mirabegron 등) [CLINICAL] PMID:41824280 — 과거 누락 복구 (출처 05-03)
+2026-05-07 | by-disease/neonatal-fever-pecarn.md | 신규 — 신생아 발열(≤28일) PECARN 예측 룰: 저위험 3기준(UA음성+PCT≤0.5+ANC≤4000) — 민감도 94.2%·NPV 99.4%·저위험군 세균성 수막염 0건; LP 선별 적용 공유의사결정 근거 [CLINICAL] PMID:41359314 — 과거 누락 복구 (출처 05-03)
+2026-05-07 | by-disease/asthma.md | 신규 — 경증 조절불량 천식 PRN ICS+SABA 전략: 부데소나이드+알부테롤 PRN이 알부테롤 단독보다 악화 감소 우월; 매일 ICS 순응도 불량 환자 대안 [CLINICAL] PMID:41839117 — 과거 누락 복구 (출처 05-03)
+2026-05-07 | by-disease/chronic-pain-integrative.md | 추가 — 만성 비암성 통증 비오피오이드 약물: 골관절염→NSAIDs우선/만성요통→NSAIDs·SNRIs 단기/신경병증→duloxetine·gabapentin·pregabalin·8%캡사이신/섬유근통→pregabalin 최우선 [CLINICAL] PMID:40834375 (AFP 2025)
+2026-05-07 | by-disease/palliative-pain.md | 추가 — 부프레노르핀 패치 조기 효력 소실: 7일→5일 교환 전환으로 해소; 문헌 첫 사례; 패치 마지막 1–2일 통증 악화 스크리닝 권장 [CLINICAL — 조건부] PMID:41617142 (JPSM 2026)
+2026-05-07 | by-disease/nocturia.md | 추가 — 허약 노인 OAB 미라베그론 우선 전략: 항무스카린제 대비 인지저하·낙상 부작용 없이 동등 효과; 허약 노인 OAB 1차 약제 근거 리뷰 [CLINICAL] PMID:42070202 (Drugs Aging 2026)
+2026-05-07 | by-disease/ckd-monitoring.md | 추가 — UACR vs UPCR 신부전 예측력: UACR HR 2.55 > UPCR 2.40 (p<0.001); 당뇨·고UACR·사구체질환 하위군 차이 더 뚜렷; CKD 추적 UACR 우선 근거 (n=148,994) [CLINICAL] PMID:41183334 (Ann Intern Med 2025)
+2026-05-07 | guidelines/deprescribing.md | 추가 — 감약 거부 예측인자: 지역사회 노인 24.6% 거부; 수면장애(OR 0.51)·요실금(OR 0.58) → 거부↑; 약물 부담 인지(OR 1.82) → 수용↑; 외래 면담 전략 포함 [CLINICAL — 조건부] PMID:42068533 (Drugs Aging 2026)
+2026-05-07 | by-disease/low-back-pain.md | 추가 — 요통 환자 신체 활동 안전 근거: JAMA 2026 확인; 안정 처방 대신 활동 유지 권장; 외래 환자 교육 근거 [CLINICAL] PMID:41511791 (JAMA 2026)
+2026-05-07 | guidelines/goals-of-care-acp.md | 추가 — 치매 ACP 처방설정형 vs 목표도출형: 4속성(이해·신뢰·준비·모멘텀) 프레임; 경증→목표도출형 시작·진행 시→처방설정형 전환 알고리즘 [CLINICAL — 조건부] PMID:42069237 (JPSM 2026)
+
 2026-05-06 | by-disease/dyslipidemia.md | 신규 — 이상지질혈증 외래 본체: KSoLA 2022 위험도·LDL목표(초고위험<55/고위험<70/중등도<100/저위험<160), ACC/AHA 2018 statin 강도 (Pitava 1mg=중등도 정정), 심평원 보험기준, CAC≥100 강력권고 [CLINICAL, REGULATORY] (inbox 가정의학과insight 1/8 — Researcher 검증 완료)
 2026-05-06 | by-disease/diabetes.md | 신규 — T2DM 외래 본체: KDA 2023/ADA 2025 진단·HbA1c<6.5% 목표, Metformin 단계 + eGFR 45~30 감량(KDA-KSN), DPP-4 HF 주의(FDA 2016), SGLT-2i 심·신 보호 eGFR≥20부터 가능(2024 갱신) [CLINICAL] (inbox 2/8 — Researcher 검증 완료)
 2026-05-06 | by-disease/hypertension.md | 신규 — 일반 고혈압 외래 본체: KSH 2022 target BP·표적장기손상·약물 선택, ESC/ESH 위험인자 cutoff 명시, BB는 DM에서 주의 정정, MacMahon 메타 강압효과, J-curve 관찰 명시 [CLINICAL] (inbox 3/8 — Researcher 검증 완료)
@@ -189,3 +200,14 @@
 2026-05-04 | by-disease/MASH.md | 추가 — MASLD 1차의료 FIB-4 분층 + 레스메티롬 FDA 승인 + 세마글루타이드 신흥 옵션 [CLINICAL] — JAAPA 2025 PMID:41369205
 2026-05-04 | by-disease/frailty.md | 추가 — 허약 ITC 포괄 리뷰 (다계통 예비능 저하, 스크리닝 도구, 역전 가능 중재) [CLINICAL] — Ann Intern Med 2026 PMID:41662715
 2026-05-04 | guidelines/deprescribing.md | 신규 — 캐나다 일차의료 부적절 처방 선별 가이드라인 (≥65세 처방 점검 강력권고, STOPP/START) [CLINICAL, REGULATORY] — Can Fam Physician 2026 PMID:41844291
+
+2026-05-08 | by-disease/pocus-focus-cardiac.md | 신규 — AI 강화 FoCUS 집중심장초음파: 비심장전문의 시행 29% 신규 심장 소견, 7% 치료 수정; LV기능·판막질환 고감도, 우심계 감도 낮음 [CLINICAL — 조건부] PMID:42094314 (Mayo Clin Proc Digit Health 2026)
+2026-05-08 | by-disease/persistent-physical-symptoms.md | 신규 — 지속 신체증상(PPS) 일차의료 회복 접근: 뇌 기반 위협 반응 이론, 증상 타당화+기전 설명+개별화 관리, 포스트코비드·만성피로·섬유근통 포함 [INSIGHTS] PMID:41823400 (Scand J Prim Health Care 2026)
+2026-05-08 | by-disease/palliative-pain.md | 추가 — OUD 장기 주사 부프레노르핀 환자 암성통증: OUD 치료 유지 최우선, 수용체 점유·반감기 고려 완전 작용제 추가, 다중모달+다학제 [CLINICAL — 조건부] PMID:42092642 (JPSM 2026)
+2026-05-08 | by-disease/palliative-pain.md | 추가 — 오피오이드 내성 암성통증 부프레노르핀 전환 실제 경험: 71% 성공, NRS 6.3→4.9, 금단증상 8%, 30일 유지율 77% [CLINICAL — 조건부] PMID:42009265 (JPSM 2026)
+2026-05-08 | by-disease/vaccination.md | 추가 — CKD 고령 환자 고용량 독감 백신 입원 감소: Ann Int Med JC — CKD+65세 이상에서 표준용량 대비 독감·폐렴 입원 유의 감소 [CLINICAL] PMID:41771129 (Ann Intern Med 2026)
+2026-05-08 | guidelines/deprescribing.md | 추가 — 노인 Z-수면제 간략 개입 감약: 68.9%→27.8% (OR 0.16), 6개월 수면·인지·통증 악화 없음 [CLINICAL — 조건부] PMID:42031000 (Scand J Prim Health Care 2026)
+2026-05-08 | by-disease/cancer-fatigue.md | 추가 — 운동+행동지원 대장암 전체 생존율 향상: AFP POEM — 구조화 운동+행동지원 병합이 전체 생존율 유의 증가 [CLINICAL] PMID:41544293 (AFP 2026)
+2026-05-08 | guidelines/goals-of-care-acp.md | 추가 — 치매 동반 노인 임종 질 저하 전국 연구: 치매+암 = 자율성 aOR 0.29, 소통 0.47, 장소 선호 실현 0.67; 연하곤란↑ 통증·불면↓; ACP 조기 시작 근거 [CLINICAL] PMID:41856050 (Arch Gerontol Geriatr 2026)
+2026-05-08 | by-disease/low-back-pain.md | 추가 — 만성 경추·요추 통증 주사·고주파 금지 AFP 진료 지침: epidural·facet·trigger point 주사 및 RFA 모두 근거 없음 [CLINICAL] PMID:41252845 (AFP 2025)
+2026-05-08 | by-disease/heel-pain.md | 신규 — 발뒤꿈치 통증 진단·관리 AFP 리뷰: 족저근막염(기상통증·종골압통), POCUS >4mm, 야간부목·스트레칭·ESWT·주사, Sever disease 소아, 대부분 보존치료 [CLINICAL] PMID:41533410 (AFP 2025)

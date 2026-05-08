@@ -127,3 +127,45 @@ relations: []
 - PT가 CBT보다 기능 회복에 우월하나, 통증 강도 차이는 없음 → 기능 중심 목표 환자에게 PT 근거 제시 가능
 - 비반응자에서 치료 전환 vs 마음챙김 동등 → 환자 선호도·비용·접근성 중심 결정
 - CBT 참여율이 PT보다 낮았음 (연구 제한점) → 실제 임상에서 CBT 접근성 고려 필요
+
+---
+
+## 만성 경추·요추 통증 주사·고주파 치료 금지 — AFP 진료 지침 (precaution) [CLINICAL]
+
+> [출처: Shaughnessy AF. Practice Guideline: Do Not Use Injections or Radiofrequency to Treat Chronic Cervical Spine or Low Back Pain. Am Fam Physician. 2025 Nov;112(5):569-570. PMID:41252845]
+> AFP Practice Guideline POEM — 원 가이드라인 요약 [초록 미제공 — AFP POEM 포맷]
+
+**핵심 권고:**
+- 만성 경추 통증 또는 요추 통증에 아래 시술 **금지** (근거 없음):
+  - 경막외 주사 (epidural injections)
+  - 관절돌기 주사 (facet joint injections)
+  - 유발점 주사 (trigger point injections)
+  - 고주파 박리술 (radiofrequency ablation/neurotomy)
+
+**외래 적용:**
+- "주사 맞으면 낫나요?" → AFP POEM 근거: 만성화 이후에는 주사·시술이 근거 없음
+- 전문과 시술 의뢰 전 → 보존적 치료(PT·CBT·운동) 강화 먼저
+- 불필요한 시술 의뢰 줄이는 deprescribing 연장선 실천
+
+**환자 교육:**
+> "허리가 오래 아프다고 해서 주사 치료가 도움이 된다는 증거가 없습니다. 오히려 물리치료와 꾸준한 운동이 훨씬 효과적입니다."
+
+---
+
+## 요통 환자에서 신체 활동 — 안전 근거 (protocol) [CLINICAL]
+
+> [출처: Pant S. Physical Activity Safe in People With Low Back Pain. JAMA. 2026 Feb 3;335(5):391. PMID:41511791, DOI:10.1001/jama.2025.23014]
+> [초록 기반 — 전문 미확인 / JAMA 뉴스 요약 형식]
+
+**핵심 메시지:**
+- 요통 환자에서 신체 활동은 **안전함** — JAMA 2026 근거 확인
+- "허리 아프니까 움직이지 말고 쉬세요" → **근거 없는 지침**
+- 활동 유지가 통증 자연 경과에서 더 유리
+
+**외래 적용:**
+- 급성·만성 요통 모두 → 점진적 활동 유지 권장
+- 안정 처방(bed rest) 대신 **가능한 범위에서 움직임 유지**
+- 운동 처방 또는 물리치료 의뢰 시 환자 동기 부여 근거로 직접 활용
+
+**환자 교육:**
+> "허리가 아프다고 무조건 쉬면 오히려 더 나빠질 수 있습니다. 통증이 심하지 않은 범위에서 걷기나 가벼운 활동을 유지하는 것이 회복에 도움이 됩니다."

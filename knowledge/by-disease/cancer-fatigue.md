@@ -59,3 +59,24 @@ relations: []
 ## 관련 엔트리
 
 - [[palliative-pain]] — 암성 통증 완화의료
+
+---
+
+## 운동 + 행동지원이 대장암 전체 생존율 향상 (notes) [CLINICAL]
+
+> [출처: Shaughnessy AF. Exercise Plus Behavioral Support Significantly Increases Overall Survival in Patients With Colorectal Cancer. Am Fam Physician. 2026 Jan;113(1):96. PMID:41544293]
+> AFP POEM 형식 — 원 RCT 요약 [초록 미제공 — AFP POEM 포맷, 전문 미확인]
+
+**핵심 메시지:**
+- 대장암 환자에서 **구조화 운동 + 행동 지원 병합**이 전체 생존율을 유의하게 증가시킴
+- AFP POEM 채택 수준 — 일차의료 즉시 적용 권고 근거
+
+**임상 함의:**
+- "항암 치료 끝난 대장암 생존자, 앞으로 어떻게 할까요?" → **운동 + 행동지원 처방 병합의 생존 이익 근거**
+- 기존 저항운동(CRF 감소)에 더해 대장암에서 **생존율 향상**이라는 더 강력한 근거 추가
+- 암 생존자 생활습관 처방 정당화에 직접 활용
+
+**외래 처방 포인트:**
+- 대장암 생존자 외래 추적 시 운동 처방 + 행동 지원 병합 권고
+- 행동 지원: 목표 설정·자기모니터링·동기 강화 포함 구조화 접근
+- 한국 암 재활 프로그램 가용성 [출처 미확인 — researcher 검증 권장]

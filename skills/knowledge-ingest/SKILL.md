@@ -277,6 +277,17 @@ ingest 시 본문 중 **기존 엔트리 keywords와 완전 일치하는 토큰*
 
 > **v1 레거시 포맷**. 기존 79 엔트리 호환 유지용. **v2 B2 포맷은 Step 7-B 참조** — 단, v2 엔트리 컴파일 경로는 **Phase 3 runtime 지원(`src/knowledge-bundle.js` v1/v2 공존) 후 활성화**된다.
 
+#### ⚠ ingest 직전 키 중복 hard-check (2026-05-07 신설 — 20건 데이터 손실 사건 후속)
+
+신규 키를 bundle에 추가하기 전 반드시 grep 체크:
+```bash
+grep 'KNOWLEDGE_BUNDLE\["<신규키>"\]\s*=' src/knowledge-bundle.js
+```
+- **0건이어야 진행**.
+- **1건 이상이면 충돌** — 신규 키로 변경하거나 기존 entry 보강(sections/keywords/primarySources에 직접 추가)으로 전환. 절대 두 번째 할당으로 덮어쓰지 말 것 (`librarian.md` 절대 금지 "동일 키 재할당 금지" 참조).
+
+각 keyword·alias마다 반복. 동일 entity의 보완 ingest 시에도 별도 var 신설 후 같은 키 재할당은 금지.
+
 내용 변경 후 반드시 src/knowledge-bundle.js 재생성.
 
 형식:
