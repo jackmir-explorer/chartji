@@ -49,4 +49,9 @@ input::placeholder{color:#2e374f;font-family:'JetBrains Mono',monospace}
   margin:6px 0;color:#6b5c8a;font-style:italic}
 .search-md hr{border:0;border-top:1px solid #1e2538;margin:8px 0}
 .search-md a{color:#60a5fa;text-decoration:underline}
+.search-md a.wikilink{color:#a78bfa;background:rgba(167,139,250,.08);
+  padding:0 4px;border-radius:3px;text-decoration:none;cursor:pointer;
+  border-bottom:1px dotted rgba(167,139,250,.4);transition:all .12s}
+.search-md a.wikilink:hover{background:rgba(167,139,250,.18);color:#c4b5fd;
+  border-bottom-color:#c4b5fd}
 .search-md mark{background:rgba(245,166,35,.4);color:#f5a623;padding:0 2px;border-radius:2px}

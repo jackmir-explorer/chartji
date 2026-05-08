@@ -149,6 +149,19 @@ function highlightSearch(text,tokens){
   return safe;
 }
 
+/* wikilinks `[[target]]` / `[[target|alias]]`를 클릭 가능한 <a class="wikilink"> 로 변환.
+   marked.parse() 전에 호출해야 함. attribute 안전하게 escape. */
+function preprocessWikilinks(text){
+  if(!text) return "";
+  return String(text).replace(/\[\[([^\]|\n]+?)(?:\|([^\]\n]+?))?\]\]/g,function(_m,target,alias){
+    var t=String(target).trim();
+    var a=String(alias||target).trim();
+    var attr=t.replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    var disp=a.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    return '<a class="wikilink" data-wikitarget="'+attr+'" href="#'+attr+'">'+disp+'</a>';
+  });
+}
+
 /* Markdown 렌더링 + 토큰 하이라이트. marked 미로드 시 plain highlight fallback.
    marked.parse() HTML을 임시 div에 넣고 TreeWalker로 텍스트 노드만 순회 →
    토큰 <mark> 감쌈. HTML attribute 안에 토큰 매칭 깨짐 방지. */
@@ -157,7 +170,8 @@ function renderMarkdownWithHighlight(content,tokens){
   if(typeof marked==="undefined"||typeof document==="undefined"){
     return highlightSearch(content,tokens);
   }
-  var html=marked.parse(String(content),{breaks:true,gfm:true});
+  var pre=preprocessWikilinks(content);
+  var html=marked.parse(pre,{breaks:true,gfm:true});
   if(!tokens||!tokens.length) return html;
   var div=document.createElement("div");
   div.innerHTML=html;
@@ -222,7 +236,16 @@ function ResultDetail(props){
   return (
     <div style={{marginTop:10,padding:"10px 12px",background:"#0d1018",
       border:"1px solid #1e2538",borderRadius:6}}
-      onClick={function(e){e.stopPropagation();}}>
+      onClick={function(e){
+        var a=e.target.closest&&e.target.closest("a.wikilink");
+        if(a){
+          e.preventDefault(); e.stopPropagation();
+          var t=a.getAttribute("data-wikitarget");
+          if(t&&onJumpKey) onJumpKey(t);
+          return;
+        }
+        e.stopPropagation();
+      }}>
       {entry.primarySources&&entry.primarySources.length>0&&(
         <div style={{fontSize:10,color:"#4a5268",marginBottom:8,lineHeight:1.6}}>
           📚 {entry.primarySources.join(" · ")}
@@ -320,8 +343,18 @@ function SearchScreen(){
   }
 
   function jumpToKey(k){
-    setQuery(k); setActiveIdx(0); setOpenKey(null);
+    var lower=String(k||"").toLowerCase();
+    var canonical=null;
+    for(var i=0;i<index.entries.length;i++){
+      var e=index.entries[i];
+      if(e.key.toLowerCase()===lower){canonical=e.key; break;}
+      if(e.aliasKeys&&e.aliasKeys.some(function(a){return a.toLowerCase()===lower;})){
+        canonical=e.key; break;
+      }
+    }
+    setQuery(k); setActiveIdx(0); setOpenKey(canonical);
     if(inputRef.current) inputRef.current.focus();
+    if(typeof window!=="undefined") window.scrollTo({top:0,behavior:"smooth"});
   }
 
   return (
