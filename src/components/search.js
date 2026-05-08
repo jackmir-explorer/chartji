@@ -134,6 +134,15 @@ function searchEntries(query,index){
   return results;
 }
 
+/* wikilinks `[[target]]` / `[[target|alias]]`를 평문(alias 또는 target)으로 환원.
+   snippet preview·결과 헤더 등 마크다운 렌더 안 거치는 위치용. */
+function stripWikilinks(text){
+  if(!text) return "";
+  return String(text).replace(/\[\[([^\]|\n]+?)(?:\|([^\]\n]+?))?\]\]/g,function(_m,target,alias){
+    return String(alias||target).trim();
+  });
+}
+
 /* 하이라이트 — 토큰을 <mark> 감싸기. HTML escape 후 적용. (snippet plain text용) */
 function highlightSearch(text,tokens){
   if(!text) return "";
@@ -415,7 +424,7 @@ function SearchScreen(){
                 </div>
                 {r.snippets.length>0&&!open&&(
                   <div style={{marginTop:4,fontSize:11,color:"#94a3b8",lineHeight:1.6}}
-                    dangerouslySetInnerHTML={{__html:"… "+highlightSearch(r.snippets[0].snippet,tokens)+" …"}}/>
+                    dangerouslySetInnerHTML={{__html:"… "+highlightSearch(stripWikilinks(r.snippets[0].snippet),tokens)+" …"}}/>
                 )}
                 {open&&(
                   <ResultDetail entry={r.entry} tokens={tokens}
