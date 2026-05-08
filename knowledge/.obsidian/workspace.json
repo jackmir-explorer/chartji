@@ -11,10 +11,10 @@
             "id": "ed125654748b9957",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "새 탭"
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
             }
           }
         ]
