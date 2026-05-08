@@ -1874,51 +1874,13 @@ KNOWLEDGE_BUNDLE["LPR"] = _LPR_v2;
 KNOWLEDGE_BUNDLE["인후두역류"] = _LPR_v2;
 KNOWLEDGE_BUNDLE["역류성후두염"] = _LPR_v2;
 
-/* v2 승격 — 2026-04-22 L1 B1 — 원본: knowledge/by-disease/dry-mouth.md
-   원본 md 라벨:
-     - Pilocarpine 섹션: [출처: NEJM 1993 Leveque et al., Salagen SPC] (Tier 1).
-                         임상패턴 BID는 원본이 [출처 미확인] 태그 → 섹션 본문에 그대로 보존.
-     - 뮤코미스트 가글 섹션: [출처: Sio TT et al. Mayo Clin Proc 2019] (Tier 1).
-                             일반 xerostomia 직접 gargle은 [출처 미확인] — 본문 내 인라인 보존.
-   2026-04-23 통합: protocol + protocol-gargle 두 섹션을 단일 protocol로 통합 (자유 섹션 제거).
-   가글 치료도 치료 프로토콜의 일부 — 별도 자유 섹션으로 분리할 필요 없음. sources[] 배열로 두 Tier 1 출처 모두 보존. */
-var _xerostomia_v2 = {
-  kind: "disease",
-  keywords: ["구강건조증","구강건조","dry mouth","xerostomia"],
-  primarySources: [],
-  sections: {
-    protocol: {
-      content: "① Pilocarpine(살라겐/필로겐) po\n  - 두경부암 방사선 후 구강건조증: 5mg TID (가이드라인)\n  - 쇼그렌증후군: 5mg QID (가이드라인)\n  - 임상 패턴: BID 가능 (부작용 경감 목적) [출처 미확인]\n  - 급여: 두경부암 방사선 후 or 쇼그렌증후군 진단 시\n  - 비급여: 그 외 원인 (당뇨·약물 유발 등)\n\n② 뮤코미스트 10% 1 ampule + 물 100cc → TID 가글\n  - 방사선 유발 xerostomia: 10% NAC rinse 주간 유의 개선 (Mayo Clinic Pilot RCT, 2019)\n  - 일반 구강건조증: 직접 gargle 근거 없음, 임상 경험 기반 [출처 미확인]",
-      sources: ["Leveque FG et al. NEJM 1993 (Pilocarpine)","Salagen SPC","Sio TT et al. Mayo Clin Proc 2019"]
-    }
-  },
-  uiHooks: null
-};
-KNOWLEDGE_BUNDLE["구강건조증"] = _xerostomia_v2;
-KNOWLEDGE_BUNDLE["구강건조"] = _xerostomia_v2;
-KNOWLEDGE_BUNDLE["dry mouth"] = _xerostomia_v2;
-KNOWLEDGE_BUNDLE["xerostomia"] = _xerostomia_v2;
+/* xerostomia v2 — 2026-04-22 ingest는 2026-05-07 overwrite-fix에서 v2_full(line 4039)로 통합 폐기.
+   본 entry는 v2_full의 protocol 섹션과 완전 중복 — primarySources·sections 모두 v2_full이 상위집합.
+   alias(구강건조증·구강건조·dry mouth·xerostomia)는 v2_full에 단일 할당. (Auditor 2026-05-07 결단 c) */
 
-/* v2 승격 — 2026-04-22 L1 B1 — 원본: knowledge/by-disease/burning-mouth.md
-   원본 md 라벨: [CLINICAL] + [출처: Kim JW et al. Sci Rep 2025] (Tier 1).
-   2026-04-22 L1 B1-patch: treatment → protocol (vocabulary 정합) */
-var _BMS_v2 = {
-  kind: "disease",
-  keywords: ["burning mouth","구강작열감","구강작열감증후군","BMS"],
-  primarySources: [
-    "Kim JW et al. Sci Rep 2025"
-  ],
-  sections: {
-    protocol: {
-      content: "뮤코미스트 가글 — 10% 1 ampule + 물 100cc → TID 가글\n- 2025 다기관 임상에서 VAS 통증 + 삶의 질(OHIP-14K) 유의 개선\n- Clonazepam 0.5mg/d 병용 시 반응률 증가 (단독 60% → 병용 80%)",
-      sources: ["Kim JW et al. Sci Rep 2025"]
-    }
-  },
-  uiHooks: null
-};
-KNOWLEDGE_BUNDLE["burning mouth"] = _BMS_v2;
-KNOWLEDGE_BUNDLE["구강작열감"] = _BMS_v2;
-KNOWLEDGE_BUNDLE["BMS"] = _BMS_v2;
+/* BMS v2 — 2026-04-22 ingest는 2026-05-07 overwrite-fix에서 v2_full(line 4013)로 통합 폐기.
+   v2_full이 동일 PMID(Kim 2025) + 추가 시진 표준·뮤테란/Pilocarpine/제로바·미르 routine 보유 → 상위집합.
+   alias(burning mouth·구강작열감·BMS)는 v2_full에 단일 할당. (Auditor 2026-05-07 결단 c) */
 
 /* ═══════════════════════════════════════════════════════════════════
    2026-04-23 Liby ingest batch — 11건 (A 7신규 + B 4보강)
@@ -2052,10 +2014,12 @@ KNOWLEDGE_BUNDLE["필로카르핀"] = _pilocarpine_v2;
 KNOWLEDGE_BUNDLE["살라겐"] = _pilocarpine_v2;
 KNOWLEDGE_BUNDLE["필로겐"] = _pilocarpine_v2;
 
-/* CKD 모니터링 G3 — 신규. kind=topic (parents 금지). */
+/* CKD 모니터링 G3 — 신규. kind=topic (parents 금지).
+   2026-05-07 overwrite-fix: 본 entry는 ckd-monitoring·UACR·UPCR 토픽 한정.
+   "CKD"·"만성콩팥병" alias는 disease entry _ckd_v2_full(line 4745)로 분리 라우팅. (Auditor 결단 b) */
 var _ckd_monitoring_v2 = {
   kind: "topic",
-  keywords: ["CKD","만성콩팥병","ckd-monitoring","eGFR","크레아티닌","시스타틴C","cystatin C","creatinine","CKD-EPI","EKFC","UACR","UPCR","albuminuria","proteinuria"],
+  keywords: ["ckd-monitoring","eGFR","크레아티닌","시스타틴C","cystatin C","creatinine","CKD-EPI","EKFC","UACR","UPCR","albuminuria","proteinuria"],
   primarySources: [
     "Lamb EJ et al. Performance of creatinine and cystatin C based GFR estimating equations in moderate CKD. BMJ 2026;392:e085005. PMID:41856526, DOI:10.1136/bmj-2025-085005",
     "Heerspink HJL et al. Proteinuria or Albuminuria as Markers of Kidney and Cardiovascular Disease Risk. Ann Intern Med. 2025 Nov 4;179(1):32-41. PMID:41183334, DOI:10.7326/ANNALS-25-02117"
@@ -2081,10 +2045,9 @@ var _ckd_monitoring_v2 = {
   uiHooks: null
 };
 KNOWLEDGE_BUNDLE["ckd-monitoring"] = _ckd_monitoring_v2;
-KNOWLEDGE_BUNDLE["CKD"] = _ckd_monitoring_v2;
-KNOWLEDGE_BUNDLE["만성콩팥병"] = _ckd_monitoring_v2;
 KNOWLEDGE_BUNDLE["UACR"] = _ckd_monitoring_v2;
 KNOWLEDGE_BUNDLE["UPCR"] = _ckd_monitoring_v2;
+/* CKD·만성콩팥병 alias는 disease entry _ckd_v2_full로 라우팅 (2026-05-07 overwrite-fix) */
 
 /* 성호르몬 요법 VTE·심혈관 위험 — 신규. kind=topic (parents 금지). */
 var _sex_hormone_vte_v2 = {
@@ -2757,40 +2720,9 @@ KNOWLEDGE_BUNDLE["covid-outpatient-antivirals"] = _covid_antiviral_v2;
 KNOWLEDGE_BUNDLE["COVID-19"] = _covid_antiviral_v2;
 KNOWLEDGE_BUNDLE["코로나항바이러스"] = _covid_antiviral_v2;
 
-/* MASH — MASLD/MASH GLP-1 네트워크 메타분석 (4-28 deep-extract). [CLINICAL] */
-var _mash_v2 = {
-  kind: "disease",
-  keywords: ["MASH","MASLD","지방간","지방간염","NASH","NAFLD","비알코올성지방간"],
-  primarySources: [
-    "Monami M et al. GLP-1 RA in MASH: Network Meta-Analysis. Diabetes Obes Metab 2026;28(5):4253-4260. PMID:41804193, DOI:10.1111/dom.70617"
-  ],
-  sections: {
-    definition: {
-      content: "- **MASLD** (Metabolic dysfunction-Associated Steatotic Liver Disease): 과거 NAFLD\n- **MASH** (Metabolic dysfunction-Associated SteatoHepatitis): 과거 NASH. 염증+손상 동반 — 간섬유화·간경변 진행 위험\n\n명명 변경 (2023): NAFLD/NASH → MASLD/MASH (국제 합의)",
-      sources: []
-    },
-    exam: {
-      content: "### 적응 환자군 선별\n- 비만(BMI ≥27) + 인슐린저항성(당뇨전단계·T2DM) → MASLD 가능성 높음\n- 대부분 무증상; 일부 우상복부 불편감\n- 비침습 평가: ALT↑ + 지방간 에코 (복부초음파)\n\n### 비침습 섬유화 지표\n- **FIB-4 지수** (나이×AST / [혈소판×√ALT])\n  - <1.30: 고도 섬유화 배제 가능\n  - ≥2.67: 고도 섬유화 의심 → 간전문의 의뢰\n- 간초음파 + FibroScan (탄성초음파)",
-      sources: []
-    },
-    protocol: {
-      content: "### 핵심: 체중 감량 = 조직학적 개선의 핵심 매개변수\n\n6개 RCT 네트워크 메타분석 (n=1379, biopsy-confirmed MASH):\n| 중재 | MASH 해소 |\n|---|---|\n| **Tirzepatide** | 위약 대비 유의 우월 |\n| **Semaglutide** | 위약 대비 유의 우월 |\n| 슬리브 위절제술 | 우월 |\n| 루와이 위우회술(RYGB) | 우월 |\n\n**핵심 발견:** TBWL%(총 체중 감량%)가 MASH 해소율·섬유화 개선의 주요 매개변수.\n\n주의: 네트워크 연결 약하고 위약군 중심 → 간접 비교 추정치 불정확. 약물 간 직접 비교 RCT 부재. **탐색적(exploratory)** 결과.\n\n### FDA 허가\n- **Semaglutide 2.4mg (위고비)**: FDA 2024 MASH F2-F3 섬유화 적응증 추가 (BMI ≥30, 또는 ≥27 + 동반질환)\n\n### 생활습관\n- 체중 5~10% 감량 → 간지방·ALT 개선\n- 체중 10% 이상 감량 → MASH 해소 가능 (조직학적 개선 기대)\n- 알코올 금주, 당 제한, 규칙적 운동",
-      sources: []
-    },
-    notes: {
-      content: "비만 → 인슐린저항성 → 간 지방 축적 → 산화스트레스·염증 → MASH → 간성상세포 활성화 → 섬유화 → 간경변·HCC\n\nGLP-1 효과 경로:\n1. 체중 감량 → 내장지방↓ → 인슐린저항성↓\n2. 직접 간 효과 (체중독립은 불확실)",
-      sources: []
-    },
-    referral: {
-      content: "- FIB-4 ≥1.30 (중간) → FibroScan 또는 소화기내과 협진\n- FIB-4 ≥2.67 → 간전문의 (진행성 섬유화 가능성)\n- 간경변 의심 (복수·황달·혈소판↓) → 즉시 의뢰\n- 비만수술 고려 → 외과",
-      sources: []
-    }
-  },
-  uiHooks: null
-};
-KNOWLEDGE_BUNDLE["MASH"] = _mash_v2;
-KNOWLEDGE_BUNDLE["MASLD"] = _mash_v2;
-KNOWLEDGE_BUNDLE["지방간염"] = _mash_v2;
+/* MASH v2 (4-28 deep-extract) — 2026-05-07 overwrite-fix: v2_full(line 4779)로 통합 폐기.
+   GLP-1 네트워크 메타분석(Monami 2026 PMID:41804193)·Tirzepatide·생활습관 컨텐츠는 v2_full로 이전 보존.
+   alias(MASH·MASLD·지방간염)는 v2_full에 단일 할당. (Auditor 2026-05-07 결단 a — 통합) */
 
 /* COPD — GOLD 2025 ABE + 호산구 (4-28 deep-extract). [CLINICAL, REGULATORY] */
 var _copd_v2 = {
@@ -3139,44 +3071,9 @@ KNOWLEDGE_BUNDLE["functional-dyspepsia"] = _fd_v2;
 KNOWLEDGE_BUNDLE["기능성소화불량"] = _fd_v2;
 KNOWLEDGE_BUNDLE["FD"] = _fd_v2;
 
-/* frailty — 허약 가역성 (4-30 deep-extract, Mir-T1 #4 재택의료·노인의학). [CLINICAL] */
-var _frailty_v2 = {
-  kind: "topic",
-  keywords: ["frailty","허약","노쇠","근감소증","sarcopenia","다약제","polypharmacy","낙상","비계획입원","허약회복","Beers","STOPP","START","CGA"],
-  primarySources: [
-    "Serra-Prat M et al. Frailty reversal and its main determinants. Fam Med Community Health 2025;13(2). PMID:40295111, DOI:10.1136/fmch-2024-003250"
-  ],
-  sections: {
-    definition: {
-      content: "허약(Frailty)은 노화·질병·다약제로 생리적 예비능 저하 → 스트레스 취약 상태. **가역적** — 연간 자연 회복률 7.1% (Catalonia 2019 코호트 n=1,465,312명). 전허약(prefrailty)은 4.6%.\n\n| 상태 | 연간 회복률 |\n|---|---|\n| 허약 | **7.1%** |\n| 전허약 | 4.6% |\n\n회복: 남성 > 여성, 나이 들수록 ↓. 다중이환·다약제·기능적 의존성 시 회복 가능성 ↓.",
-      sources: []
-    },
-    exam: {
-      content: "### 스크리닝 도구\n| 도구 | 항목 | 특징 |\n|---|---|---|\n| **FRAIL Scale** | 5문항 (피로·저항력·보행·질환·체중감소) | 1차 선별 |\n| **Fried Phenotype** | 체중감소·피로·저활동·보행속도·악력 | 표준 |\n| **CFS** | 1–9점 관찰 척도 | 빠른 임상 판단 |\n\n### 평가\n- 보행 속도 (<0.8 m/s = 위험)\n- 악력 (성별·체중 기준 하위 사분위)\n- 기립성 저혈압\n- 약물 목록 검토 (≥5종 = 다약제)",
-      sources: []
-    },
-    protocol: {
-      content: "### 회복 가능성을 높이는 중재 우선순위\n| 중재 | 근거 | 실전 |\n|---|---|---|\n| **비계획 입원 회피** | 가장 큰 인자 | 폐렴·낙상·약물부작용 예방 |\n| **다약제 감소** | 독립 보호 인자 | ≥5종 재검토; 불필요 약물 중단 |\n| **낙상 방지** | 직접 연결 | 기립성 저혈압 교정·환경 개선 |\n| 빈혈 교정 | e-SIF 구성 | Hb 모니터링·철 결핍 교정 |\n| 시력 손상 교정 | e-SIF 구성 | 안과 의뢰 (백내장·굴절) |\n\n### 일차의료 중재\n1. **Deprescribing** — Beers·STOPP/START; 항콜린제·BZD·수면제 우선 검토 ([[prescribing-cascade]])\n2. **낙상 예방** — 집 환경 평가·기립성 저혈압 약물 조정\n3. **영양** — 단백질 ≥1.2 g/kg/일·비타민 D\n4. **운동** — 저항 운동 + 균형 훈련 (주 2~3회)·물리치료\n5. **[[예방접종|예방접종]]** — 독감·[[폐렴구균|폐렴구균]]·[[대상포진|대상포진]]·COVID",
-      sources: []
-    },
-    precaution: {
-      content: "- 다중이환(≥2개) + 기능 의존성 → 회복 ↓ — 완화의료 논의 병행\n- 근감소성 비만(sarcopenic obesity): BMI 정상이어도 근육량 저하 가능\n- 단기 입원(계획 수술 포함)도 허약 악화 계기",
-      sources: []
-    },
-    referral: {
-      content: "- 허약 + 보행 장애 → 재활의학·노인의학 (운동 처방)\n- 허약 + 다약제 복잡 → 노인의학 (CGA: 포괄적 노인 평가)\n- 허약 + 영양 불량 → 영양사",
-      sources: []
-    },
-    notes: {
-      content: "허약은 **가역적**임을 환자·보호자에게 명확히 — \"노화이니 어쩔 수 없다\"는 허무주의 탈피. 일차의료에서 다약제 재검토·낙상 예방·[[예방접종|예방접종]]이 회복 핵심 레버.",
-      sources: []
-    }
-  },
-  uiHooks: null
-};
-KNOWLEDGE_BUNDLE["frailty"] = _frailty_v2;
-KNOWLEDGE_BUNDLE["허약"] = _frailty_v2;
-KNOWLEDGE_BUNDLE["노쇠"] = _frailty_v2;
+/* frailty v2 (4-30 deep-extract, Mir-T1 #4 재택의료·노인의학) — 2026-05-07 overwrite-fix: v2_full(line 4815)로 통합 폐기.
+   Serra-Prat 2025 PMID:40295111 (허약 가역성 코호트)·연간 회복률 수치·Beers/STOPP/START·근감소증·낙상 e-SIF는 v2_full로 이전 보존.
+   alias(frailty·허약·노쇠)는 v2_full에 단일 할당. (Auditor 2026-05-07 결단 a — 통합) */
 
 /* diabetic-peripheral-neuropathy — DPN 통증 (4-30 deep-extract, Mir-T1 #2 비암성 만성통증). [CLINICAL+INSIGHTS] */
 var _dpn_v2 = {
@@ -3401,37 +3298,9 @@ KNOWLEDGE_BUNDLE["post-mi-deprescribing"] = _post_mi_dep_v2;
 KNOWLEDGE_BUNDLE["MI후-BB중단"] = _post_mi_dep_v2;
 KNOWLEDGE_BUNDLE["REDUCE-AMI"] = _post_mi_dep_v2;
 
-/* heart-failure-pocus-ducs — POCUS DUCS 심부전 예후 (4-30 deep-extract, Mir-T1 #1 POCUS).
-   기존 heart-failure·heart-failure-volume-overload 본문 보존, POCUS DUCS는 별도 topic. [CLINICAL — 조건부] */
-var _hf_ducs_v2 = {
-  kind: "topic",
-  keywords: ["heart-failure-pocus-ducs","DUCS","lung ultrasound","B-lines","VEXUS","POCUS HF","ADHF prognosis","ΔDUCS"],
-  primarySources: [
-    "Garg S et al. POCUS Dual Ultrasound Congestion Score (DUCS) in ADHF. J Ultrasound Med 2026. PMID:41863026, DOI:10.1002/jum.16XXX [초록 기반]"
-  ],
-  sections: {
-    definition: {
-      content: "DUCS(Dual Ultrasound Congestion Score) = **폐초음파(B-lines) + VEXUS** 복합 점수. ADHF(급성 비대상 심부전) 환자의 입원 사망·재입원 예측에 유용.",
-      sources: []
-    },
-    exam: {
-      content: "### 핵심 수치\n| 지표 | AUC | 의미 |\n|---|---|---|\n| **ΔDUCS (입원→퇴원)** | **0.76** | 입원 사망 예측 |\n| **퇴원 시 DUCS** | **0.77** | 30일 사망·재입원 예측 |\n\n→ 폐초음파만 단독 사용보다 VEXUS 결합이 정보량 ↑. 이뇨제 치료 반응 모니터링 도구로 POCUS 확장 개념.",
-      sources: []
-    },
-    protocol: {
-      content: "### POCUS DUCS 임상 적용\n1. 입원 시 DUCS 측정 (baseline)\n2. 이뇨제 치료 후 ΔDUCS 추적\n3. 퇴원 전 DUCS 재측정 → 30일 위험 stratification\n4. 퇴원 시 DUCS 높음 → 30일 follow-up 강화\n\n### POCUS 술기 요점\n- B-lines: 8 zone scan (≥3 B-lines = positive)\n- VEXUS: IVC + 간 정맥·문맥·간세정맥 doppler grade 0~3",
-      sources: []
-    },
-    notes: {
-      content: "기존 [[heart-failure-volume-overload|heart-failure-volume-overload]](BNP+POCUS B-lines 단독) 보강 — VEXUS 추가로 우심부전 동반 평가까지 확장. ADHF 외래·응급 환경에서 POCUS 보유 시 적용 가능 (Mir-T1 #1 POCUS·초음파 중재 영역).",
-      sources: []
-    }
-  },
-  uiHooks: null
-};
-KNOWLEDGE_BUNDLE["heart-failure-pocus-ducs"] = _hf_ducs_v2;
-KNOWLEDGE_BUNDLE["DUCS"] = _hf_ducs_v2;
-KNOWLEDGE_BUNDLE["VEXUS"] = _hf_ducs_v2;
+/* heart-failure-pocus-ducs (4-30 deep-extract, Mir-T1 #1 POCUS) — 2026-05-07 overwrite-fix: v2(line 5714)로 통합 폐기.
+   POCUS 술기 요점·8 zone scan·임상 적용 단계는 v2로 이전 보존.
+   alias(heart-failure-pocus-ducs·DUCS·VEXUS)는 v2(line 5714)에 단일 할당. (Auditor 2026-05-07 결단 a — 통합) */
 
 /* 2026-05-07 Auditor Tier 1 split: internal-medicine-2025-update (Cardiology + Endocrinology 합본) → 두 도메인 분리.
    - cardiology-2025-update: Atalla 2026 PMID:41974015
@@ -4167,7 +4036,8 @@ KNOWLEDGE_BUNDLE["sialolithiasis"] = _salivary_stones_v2;
 KNOWLEDGE_BUNDLE["타석증"] = _salivary_stones_v2;
 KNOWLEDGE_BUNDLE["설하샘 돌"] = _salivary_stones_v2;
 KNOWLEDGE_BUNDLE["턱밑샘 돌"] = _salivary_stones_v2;
-KNOWLEDGE_BUNDLE["침샘염"] = _salivary_stones_v2;
+/* "침샘염" alias는 의미상 sialadenitis(이하선염) → _parotitis_v2로 라우팅 (2026-05-07 overwrite-fix 결단 c).
+   타석증은 결석(sialolithiasis)이며 한국어 "침샘염"과 의학적으로 별개 질환. salivary-stones에서 제거. */
 
 /* ========== 5-1~5-4 cron deep-extract Liby ingest (Mir-T1 #1 POCUS) ========== */
 
@@ -4776,27 +4646,36 @@ KNOWLEDGE_BUNDLE["chronic-kidney-disease"] = _ckd_v2_full;
 KNOWLEDGE_BUNDLE["finerenone"] = _ckd_v2_full;
 
 /* MASH v2 보강 — JAAPA 2025 MASLD 1차의료 가이드 + 레스메티롬 (5-4 cron) */
+/* 2026-05-07 overwrite-fix: 기존 _mash_v2(line 2761) 통합 흡수.
+   - Monami 2026 PMID:41804193 (GLP-1 네트워크 메타) primarySources 추가
+   - protocol에 Tirzepatide·Semaglutide 네트워크 메타·FDA 허가·생활습관 보강
+   - notes에 비만→인슐린저항성→MASH 기전·GLP-1 효과 경로 추가 */
 var _mash_v2_full = {
   kind: "disease",
-  keywords: ["MASH","MASLD","비알코올지방간염","NAFLD","NASH","지방간염","FIB-4","GLP-1","semaglutide","resmetirom","Rezdiffra","FibroScan","간섬유화"],
+  keywords: ["MASH","MASLD","비알코올지방간염","비알코올성지방간","NAFLD","NASH","지방간","지방간염","FIB-4","GLP-1","semaglutide","tirzepatide","resmetirom","Rezdiffra","FibroScan","간섬유화"],
   primarySources: [
-    "Geary A. JAAPA 2025 Dec 23;39(1):21-25. PMID:41369205, DOI:10.1097/01.JAA.0000000000000296"
+    "Geary A. JAAPA 2025 Dec 23;39(1):21-25. PMID:41369205, DOI:10.1097/01.JAA.0000000000000296",
+    "Monami M et al. GLP-1 RA in MASH: Network Meta-Analysis. Diabetes Obes Metab 2026;28(5):4253-4260. PMID:41804193, DOI:10.1111/dom.70617"
   ],
   sections: {
     definition: {
-      content: "MASLD (Metabolic dysfunction-associated steatotic liver disease) = 대사 이상 동반 지방간. 진행 형: MASH (MASL + 염증·간세포 손상). 미국 NAFLD 유병률 ~25%, MASH 1.5-6.5%.",
+      content: "MASLD (Metabolic dysfunction-associated steatotic liver disease) = 대사 이상 동반 지방간. 진행 형: MASH (MASL + 염증·간세포 손상). 미국 NAFLD 유병률 ~25%, MASH 1.5-6.5%.\n\n명명 변경 (2023): NAFLD/NASH → MASLD/MASH (국제 합의)",
       sources: []
     },
     exam: {
-      content: "### FIB-4 기반 섬유화 위험 분층 (1차의료 적용)\n| FIB-4 값 | 해석 | 일차의료 행동 |\n|---|---|---|\n| **<1.30** | 고도 섬유화 배제 가능 | 추적 + 생활습관 교육 |\n| **1.30–2.67** | 중간 위험 | **FibroScan 또는 소화기내과 협진** |\n| **≥2.67** | 고도 섬유화 의심 | **간전문의 의뢰** |\n\n*FIB-4 = 나이(세) × AST(IU/L) / [혈소판(×10⁹/L) × √ALT(IU/L)]*",
+      content: "### 적응 환자군 선별\n- 비만(BMI ≥27) + 인슐린저항성(당뇨전단계·T2DM) → MASLD 가능성 높음\n- 대부분 무증상; 일부 우상복부 불편감\n- 비침습 평가: ALT↑ + 지방간 에코 (복부초음파)\n\n### FIB-4 기반 섬유화 위험 분층 (1차의료 적용)\n| FIB-4 값 | 해석 | 일차의료 행동 |\n|---|---|---|\n| **<1.30** | 고도 섬유화 배제 가능 | 추적 + 생활습관 교육 |\n| **1.30–2.67** | 중간 위험 | **FibroScan 또는 소화기내과 협진** |\n| **≥2.67** | 고도 섬유화 의심 | **간전문의 의뢰** |\n\n*FIB-4 = 나이(세) × AST(IU/L) / [혈소판(×10⁹/L) × √ALT(IU/L)]*",
       sources: []
     },
     protocol: {
-      content: "### 레스메티롬 (Resmetirom, Rezdiffra) — FDA 승인 MASH 약물\n**적응증**: 비간경변 MASH + **중등도~고도 섬유화 (F2–F3)** — **간 생검 불필요** (AASLD 지침 지지)\n- 기전: 간 선택적 갑상선호르몬 수용체 β(THRβ) 작용제 → 간 지방·MASH 조직학 개선\n- 용량: **80mg 또는 100mg 1일 1회** (체중 기준)\n- 약물 상호작용: CYP3A4 기질 다수 — 스타틴·면역억제제 상호작용 확인 필수\n- 안전성 모니터링: ALT/AST, 임신 가능 여성 **피임 필수** (생식독성)\n\n**처방 포인트**:\n- FIB-4 ≥1.30 + 초음파 지방간 → FibroScan F2 이상 확인 후 처방 고려\n- 1차의료 시작 가능하나 **간전문의 협진 권장** (복잡 모니터링)\n\n### 세마글루타이드 (Semaglutide) — MASH 신흥 옵션\n- 비간경변 MASH 조직학적 개선 데이터 축적 중\n- 비만+MASH 환자에서 체중 감량 + 간 개선 이중 효과\n- 2025년 기준 MASH 단독 적응증 FDA 미승인 (비만·당뇨 적응증 내 사용)\n\n### 생활습관 — 여전히 1차\n- 체중 **5~10% 감량** → 간지방·ALT 개선\n- 체중 **10% 이상** → MASH 조직학적 해소 가능\n- 알코올 금주, 당·정제탄수화물 제한, 유산소+저항 운동 병행",
+      content: "### 레스메티롬 (Resmetirom, Rezdiffra) — FDA 승인 MASH 약물\n**적응증**: 비간경변 MASH + **중등도~고도 섬유화 (F2–F3)** — **간 생검 불필요** (AASLD 지침 지지)\n- 기전: 간 선택적 갑상선호르몬 수용체 β(THRβ) 작용제 → 간 지방·MASH 조직학 개선\n- 용량: **80mg 또는 100mg 1일 1회** (체중 기준)\n- 약물 상호작용: CYP3A4 기질 다수 — 스타틴·면역억제제 상호작용 확인 필수\n- 안전성 모니터링: ALT/AST, 임신 가능 여성 **피임 필수** (생식독성)\n\n**처방 포인트**:\n- FIB-4 ≥1.30 + 초음파 지방간 → FibroScan F2 이상 확인 후 처방 고려\n- 1차의료 시작 가능하나 **간전문의 협진 권장** (복잡 모니터링)\n\n### GLP-1 RA — 네트워크 메타분석 (Monami 2026 PMID:41804193)\n6개 RCT (n=1379, biopsy-confirmed MASH):\n| 중재 | MASH 해소 |\n|---|---|\n| **Tirzepatide** | 위약 대비 유의 우월 |\n| **Semaglutide** | 위약 대비 유의 우월 |\n| 슬리브 위절제술 | 우월 |\n| 루와이 위우회술(RYGB) | 우월 |\n\n**핵심 발견:** TBWL%(총 체중 감량%)가 MASH 해소율·섬유화 개선의 주요 매개변수.\n주의: 네트워크 연결 약하고 위약군 중심 → 간접 비교 추정치 불정확. 약물 간 직접 비교 RCT 부재. **탐색적(exploratory)** 결과.\n\n### 세마글루타이드 — FDA 허가\n- **Semaglutide 2.4mg (위고비)**: FDA 2024 MASH F2-F3 섬유화 적응증 추가 (BMI ≥30, 또는 ≥27 + 동반질환)\n- 비간경변 MASH 조직학적 개선 데이터 축적 중\n- 비만+MASH 환자에서 체중 감량 + 간 개선 이중 효과\n\n### 생활습관 — 여전히 1차\n- 체중 **5~10% 감량** → 간지방·ALT 개선\n- 체중 **10% 이상** → MASH 조직학적 해소 가능\n- 알코올 금주, 당·정제탄수화물 제한, 유산소+저항 운동 병행",
+      sources: []
+    },
+    notes: {
+      content: "비만 → 인슐린저항성 → 간 지방 축적 → 산화스트레스·염증 → MASH → 간성상세포 활성화 → 섬유화 → 간경변·HCC\n\nGLP-1 효과 경로:\n1. 체중 감량 → 내장지방↓ → 인슐린저항성↓\n2. 직접 간 효과 (체중독립은 불확실)",
       sources: []
     },
     referral: {
-      content: "- FIB-4 ≥2.67 → 간전문의 의뢰\n- FibroScan F2 이상 + 레스메티롬 처방 고려 → 간전문의 협진\n- 알코올 사용장애 동반 시 (MASH-Alc 중복) → 간내과 + 중독전문\n- 관련: [[wegovy]], [[glp1-selection-strategy]], [[diabetes-dyslipidemia]]",
+      content: "- FIB-4 ≥1.30 (중간) → FibroScan 또는 소화기내과 협진\n- FIB-4 ≥2.67 → 간전문의 의뢰\n- FibroScan F2 이상 + 레스메티롬 처방 고려 → 간전문의 협진\n- 간경변 의심 (복수·황달·혈소판↓) → 즉시 의뢰\n- 알코올 사용장애 동반 시 (MASH-Alc 중복) → 간내과 + 중독전문\n- 비만수술 고려 → 외과\n- 관련: [[wegovy]], [[glp1-selection-strategy]], [[diabetes-dyslipidemia]]",
       sources: []
     }
   },
@@ -4806,33 +4685,46 @@ KNOWLEDGE_BUNDLE["MASH"] = _mash_v2_full;
 KNOWLEDGE_BUNDLE["MASLD"] = _mash_v2_full;
 KNOWLEDGE_BUNDLE["NAFLD"] = _mash_v2_full;
 KNOWLEDGE_BUNDLE["NASH"] = _mash_v2_full;
+KNOWLEDGE_BUNDLE["지방간"] = _mash_v2_full;
 KNOWLEDGE_BUNDLE["지방간염"] = _mash_v2_full;
+KNOWLEDGE_BUNDLE["비알코올성지방간"] = _mash_v2_full;
 KNOWLEDGE_BUNDLE["FIB-4"] = _mash_v2_full;
 KNOWLEDGE_BUNDLE["resmetirom"] = _mash_v2_full;
 KNOWLEDGE_BUNDLE["Rezdiffra"] = _mash_v2_full;
 
-/* frailty v2 보강 — Ann Int Med ITC 2026 (5-4 cron) */
+/* frailty v2 보강 — Ann Int Med ITC 2026 (5-4 cron).
+   2026-05-07 overwrite-fix: 기존 _frailty_v2(line 3143) 통합 흡수.
+   - Serra-Prat 2025 PMID:40295111 primarySources 추가 (회복률 코호트 근거)
+   - definition에 연간 회복률 수치 (7.1%/4.6%) 추가
+   - exam에 Fried 표준·보행 속도·악력 평가 추가
+   - protocol에 일차의료 중재 5단계·Beers/STOPP/START 추가
+   - precaution 섹션 신규 (다중이환·근감소성 비만·단기 입원) */
 var _frailty_v2_full = {
   kind: "disease",
-  keywords: ["frailty","허약","노쇠","frailty syndrome","CFS","Clinical Frailty Scale","FRAIL Scale","Fried","CGA","comprehensive geriatric assessment","deprescribing"],
+  keywords: ["frailty","허약","노쇠","frailty syndrome","근감소증","sarcopenia","다약제","polypharmacy","낙상","비계획입원","허약회복","Beers","STOPP","START","CFS","Clinical Frailty Scale","FRAIL Scale","Fried","CGA","comprehensive geriatric assessment","deprescribing"],
   primarySources: [
-    "Orkaby AR et al. Frailty. Ann Intern Med 2026 Feb 10;179(2):ITC17-ITC32. PMID:41662715, DOI:10.7326/ANNALS-25-04412"
+    "Orkaby AR et al. Frailty. Ann Intern Med 2026 Feb 10;179(2):ITC17-ITC32. PMID:41662715, DOI:10.7326/ANNALS-25-04412",
+    "Serra-Prat M et al. Frailty reversal and its main determinants. Fam Med Community Health 2025;13(2). PMID:40295111, DOI:10.1136/fmch-2024-003250"
   ],
   sections: {
     definition: {
-      content: "허약(Frailty): 다계통 생리적 예비능(physiologic reserve) 저하 증후군. 스트레스(감염·수술·약물)에 회복력 저하 → **입원·장애·시설화·사망 위험 증가** + 의인성 합병증(고위험 약물·시술) 피해 가능성 ↑.\n\n**핵심 메시지: 허약은 가역적**. 진단 후 즉각 개입으로 기능 유지·개선 가능. '노화이니 어쩔 수 없다'는 허무주의 탈피.",
+      content: "허약(Frailty): 다계통 생리적 예비능(physiologic reserve) 저하 증후군. 스트레스(감염·수술·약물)에 회복력 저하 → **입원·장애·시설화·사망 위험 증가** + 의인성 합병증(고위험 약물·시술) 피해 가능성 ↑.\n\n**핵심 메시지: 허약은 가역적**. 진단 후 즉각 개입으로 기능 유지·개선 가능. '노화이니 어쩔 수 없다'는 허무주의 탈피.\n\n### 연간 자연 회복률 (Serra-Prat 2025, Catalonia 코호트 n=1,465,312)\n| 상태 | 연간 회복률 |\n|---|---|\n| 허약 | **7.1%** |\n| 전허약 (prefrailty) | 4.6% |\n\n회복: 남성 > 여성, 나이 들수록 ↓. 다중이환·다약제·기능적 의존성 시 회복 가능성 ↓.",
       sources: []
     },
     exam: {
-      content: "### 허약 스크리닝 — 진료 환경별 도구 (ITC 2026)\n| 환경 | 권장 도구 | 특징 |\n|---|---|---|\n| **외래** | **FRAIL Scale, CFS** | 빠른 선별 (5문항) |\n| **입원** | CFS, Fried Phenotype | 시술 전 위험 평가 |\n| **지역사회 종합** | CGA (Comprehensive Geriatric Assessment) | 다영역 평가 |\n\n**가이드라인**: 만성질환 관리·입원 중 치료 모두에서 허약 스크리닝 권고. 허약 확인 → 위험 감소 + 환자 목표 정렬 ([[goals-of-care-acp]] 연계).",
+      content: "### 허약 스크리닝 — 진료 환경별 도구 (ITC 2026)\n| 환경 | 권장 도구 | 특징 |\n|---|---|---|\n| **외래** | **FRAIL Scale, CFS** | 빠른 선별 (5문항) |\n| **입원** | CFS, Fried Phenotype | 시술 전 위험 평가 |\n| **지역사회 종합** | CGA (Comprehensive Geriatric Assessment) | 다영역 평가 |\n\n### 도구 상세\n| 도구 | 항목 | 특징 |\n|---|---|---|\n| **FRAIL Scale** | 5문항 (피로·저항력·보행·질환·체중감소) | 1차 선별 |\n| **Fried Phenotype** | 체중감소·피로·저활동·보행속도·악력 | 표준 |\n| **CFS** | 1–9점 관찰 척도 | 빠른 임상 판단 |\n\n### 평가\n- 보행 속도 (<0.8 m/s = 위험)\n- 악력 (성별·체중 기준 하위 사분위)\n- 기립성 저혈압\n- 약물 목록 검토 (≥5종 = 다약제)\n\n**가이드라인**: 만성질환 관리·입원 중 치료 모두에서 허약 스크리닝 권고. 허약 확인 → 위험 감소 + 환자 목표 정렬 ([[goals-of-care-acp]] 연계).",
       sources: []
     },
     protocol: {
-      content: "### 허약 역전 가능 중재 (ITC 2026)\n- **영양 중재** — 단백질 보충 ≥1.2g/kg/일\n- **저항운동 + 균형 훈련**\n- **다약제 감소 (Deprescribing)** — [[deprescribing]], [[prescribing-cascade]] 참조\n- **만성질환 최적화** — 빈혈·갑상선·우울 교정\n\n### 일차의료 4대 핵심 레버 (Fam Med Community Health 2025 기존 근거)\n| 중재 | 효과 |\n|---|---|\n| **비계획 입원 회피** | 가장 큰 회복 인자 |\n| **다약제 감소** | 의인성 합병증 차단 |\n| **낙상 방지** | 골절 → 기능 저하 cascade 차단 |\n| **예방접종 (인플루엔자·폐렴구균·대상포진)** | 감염 → 비계획 입원 차단 |",
+      content: "### 허약 역전 가능 중재 (ITC 2026)\n- **영양 중재** — 단백질 보충 ≥1.2g/kg/일·비타민 D\n- **저항운동 + 균형 훈련** (주 2~3회)·물리치료\n- **다약제 감소 (Deprescribing)** — [[deprescribing]], [[prescribing-cascade]] 참조\n- **만성질환 최적화** — 빈혈·갑상선·우울 교정\n\n### 일차의료 4대 핵심 레버 (Fam Med Community Health 2025 기존 근거)\n| 중재 | 효과 |\n|---|---|\n| **비계획 입원 회피** | 가장 큰 회복 인자 |\n| **다약제 감소** | 의인성 합병증 차단 |\n| **낙상 방지** | 골절 → 기능 저하 cascade 차단 |\n| **예방접종 (인플루엔자·폐렴구균·대상포진)** | 감염 → 비계획 입원 차단 |\n\n### 회복 가능성을 높이는 중재 우선순위 (Serra-Prat 2025)\n| 중재 | 근거 | 실전 |\n|---|---|---|\n| **비계획 입원 회피** | 가장 큰 인자 | 폐렴·낙상·약물부작용 예방 |\n| **다약제 감소** | 독립 보호 인자 | ≥5종 재검토; 불필요 약물 중단 |\n| **낙상 방지** | 직접 연결 | 기립성 저혈압 교정·환경 개선 |\n| 빈혈 교정 | e-SIF 구성 | Hb 모니터링·철 결핍 교정 |\n| 시력 손상 교정 | e-SIF 구성 | 안과 의뢰 (백내장·굴절) |\n\n### 일차의료 중재 5단계\n1. **Deprescribing** — Beers·STOPP/START; 항콜린제·BZD·수면제 우선 검토 ([[prescribing-cascade]])\n2. **낙상 예방** — 집 환경 평가·기립성 저혈압 약물 조정\n3. **영양** — 단백질 ≥1.2 g/kg/일·비타민 D\n4. **운동** — 저항 운동 + 균형 훈련 (주 2~3회)·물리치료\n5. **[[예방접종|예방접종]]** — 독감·[[폐렴구균|폐렴구균]]·[[대상포진|대상포진]]·COVID",
+      sources: []
+    },
+    precaution: {
+      content: "- 다중이환(≥2개) + 기능 의존성 → 회복 ↓ — 완화의료 논의 병행\n- 근감소성 비만(sarcopenic obesity): BMI 정상이어도 근육량 저하 가능\n- 단기 입원(계획 수술 포함)도 허약 악화 계기",
       sources: []
     },
     referral: {
-      content: "- CFS ≥5 + 다중이환 → 노인의학과 CGA\n- 비계획 입원 반복 → 노인의학과·재택의료\n- 영양 중재 필요 → 영양사 협진\n- 관련: [[goals-of-care-acp]], [[deprescribing]], [[prescribing-cascade]], [[home-based-hypertension]]",
+      content: "- CFS ≥5 + 다중이환 → 노인의학과 CGA\n- 비계획 입원 반복 → 노인의학과·재택의료\n- 허약 + 보행 장애 → 재활의학·노인의학 (운동 처방)\n- 영양 중재 필요 → 영양사 협진\n- 관련: [[goals-of-care-acp]], [[deprescribing]], [[prescribing-cascade]], [[home-based-hypertension]]",
       sources: []
     },
     notes: {
@@ -5133,7 +5025,7 @@ KNOWLEDGE_BUNDLE["ferritin"] = _anemia_v2;
 /* headache v2 — IHS 2024 / SNNOOP10 / EFNS 2010 (5-6 inbox ingest). [CLINICAL] */
 var _headache_v2 = {
   kind: "disease",
-  keywords: ["두통","headache","편두통","migraine","긴장성두통","tension-type","TTH","triptan","트립탄","amitriptyline","propranolol","topiramate","SNNOOP10"],
+  keywords: ["두통","headache","긴장성두통","tension-type","TTH","triptan","트립탄","amitriptyline","propranolol","topiramate","SNNOOP10"],
   primarySources: [
     "SNNOOP10 (Do TT et al. Neurology 2019, PMC6340385)",
     "AAFP 2022 Acute Headache in Adults",
@@ -5160,11 +5052,12 @@ var _headache_v2 = {
 };
 KNOWLEDGE_BUNDLE["headache"] = _headache_v2;
 KNOWLEDGE_BUNDLE["두통"] = _headache_v2;
-KNOWLEDGE_BUNDLE["편두통"] = _headache_v2;
 KNOWLEDGE_BUNDLE["긴장성두통"] = _headache_v2;
 KNOWLEDGE_BUNDLE["tension-type-headache"] = _headache_v2;
 KNOWLEDGE_BUNDLE["TTH"] = _headache_v2;
 KNOWLEDGE_BUNDLE["SNNOOP10"] = _headache_v2;
+/* "편두통"·"migraine" alias는 _migraine_v2(line 4447)로 라우팅 — 의미 정합 (2026-05-07 overwrite-fix 결단 c).
+   _headache_v2 본문은 편두통 급성/예방을 다루지만 entry 핵심 주제는 일반 두통 감별·SNNOOP10. */
 
 /* thyroid-disorder v2 — ATA 2014/2016 (5-6 inbox ingest). [CLINICAL] */
 var _thyroid_disorder_v2 = {
@@ -5710,11 +5603,13 @@ var _hf_gdmt_dosing_v2 = {
 KNOWLEDGE_BUNDLE["heart-failure-gdmt-dosing"] = _hf_gdmt_dosing_v2;
 KNOWLEDGE_BUNDLE["GDMT 용량"] = _hf_gdmt_dosing_v2;
 
-/* heart-failure-pocus-ducs — POCUS DUCS 급성 심부전 예후 예측 (parent: heart-failure) */
+/* heart-failure-pocus-ducs — POCUS DUCS 급성 심부전 예후 예측 (parent: heart-failure).
+   2026-05-07 overwrite-fix: 기존 _hf_ducs_v2(line 3406, kind=topic) 통합 흡수.
+   - protocol 섹션 신규 (POCUS 임상 적용 단계·8 zone scan·VEXUS grade 0~3 술기) */
 var _hf_pocus_ducs_v2 = {
   kind: "disease",
   parents: ["heart-failure"],
-  keywords: ["heart-failure-pocus-ducs","DUCS","POCUS","VEXUS","B-lines","급성 심부전","예후 예측"],
+  keywords: ["heart-failure-pocus-ducs","DUCS","POCUS","VEXUS","lung ultrasound","B-lines","급성 심부전","ADHF prognosis","ΔDUCS","예후 예측"],
   primarySources: [
     "Scherer HC et al. J Ultrasound Med 2026. PMID:41863026, DOI:10.1002/jum.70229"
   ],
@@ -5722,6 +5617,10 @@ var _hf_pocus_ducs_v2 = {
     exam: {
       content: "### POCUS DUCS — 급성 심부전 예후 예측 복합 점수 [CLINICAL — 조건부]\n> [초록 기반 — 전문 미확인] 단일 기관, n=109, LVEF<50%, CICU 입원\n\n**DUCS (Dynamic Ultrasound Congestion Score)**: 폐 초음파(B-lines 수정) + VEXUS(정맥 울혈 초음파) 복합 점수.\n\n| DUCS 지표 | 예측 대상 | AUC |\n|---|---|---|\n| ΔDUCS (입원→72시간 변화) | 입원 중 사망 | **0.76** |\n| DUCS (CICU 퇴원 시) | 30일 사망·재입원 | **0.77** |\n\n**임상 포인트:**\n- 폐 초음파 B-lines 단독에서 VEXUS(경정맥·간정맥·신장 정맥 패턴) 통합으로 이뇨제 반응과 볼륨 과부하를 더 정확히 추적 가능\n- 72시간 내 DUCS 개선 여부가 예후 예측에 가장 유용 — 이뇨제 반응 모니터링 도구로 활용\n- 기존 BNP + POCUS B-lines 진단 데이터([[heart-failure|Volume Overload 진단 정확도]] 섹션)에 더해 **치료 모니터링** 용도로 VEXUS 개념 확장\n\n**VEXUS 검사 구성:**\n- IVC 확장(>2 cm + collapsibility↓) + 간정맥 파형(S파 소실·역류) + 문맥 간헐성 + 신장 정맥 간헐성\n\n> POCUS 술기 확장(VEXUS 포함)을 고려하는 임상가를 위한 근거. 일차의료 직접 적용보다는 상급기관·CICU 협진 시 참고.\n\n> 관련: [[heart-failure]] · [[heart-failure-monitoring]] · [[heart-failure-volume-overload]]",
       sources: ["Scherer HC et al. J Ultrasound Med 2026. PMID:41863026"]
+    },
+    protocol: {
+      content: "### POCUS DUCS 임상 적용 단계\n1. 입원 시 DUCS 측정 (baseline)\n2. 이뇨제 치료 후 ΔDUCS 추적 (72시간 변화)\n3. 퇴원 전 DUCS 재측정 → 30일 위험 stratification\n4. 퇴원 시 DUCS 높음 → 30일 follow-up 강화\n\n### POCUS 술기 요점\n- **B-lines**: 8 zone scan (≥3 B-lines = positive)\n- **VEXUS**: IVC + 간 정맥·문맥·간세정맥 doppler grade 0~3\n- ADHF 외래·응급 환경에서 POCUS 보유 시 적용 가능 (Mir-T1 #1 POCUS·초음파 중재 영역)",
+      sources: []
     }
   },
   uiHooks: null

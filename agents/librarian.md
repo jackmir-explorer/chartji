@@ -41,6 +41,7 @@ ingest 직전 체크: `sections` key 전부가 vocabulary 18개 또는 slugify(k
 - TIPS/INSIGHTS 항목을 출처(by ㅇㅇㅇ) 없이 저장 금지 — 출처 불명 시 반드시 미르에게 확인
 - **거대 파일 분할 금지** (2026-05-06 R2): Liby ingest로 비대해진 md를 Liby가 다시 자르는 건 이해충돌. 분할은 Auditor 영역 (`agents/auditor.md` "거대 파일 분할 후보" 항목). Liby는 분할 후 bundle 재컴파일·동기화만 담당.
 - **기존 entry에 이질 주제 추가 금지** (2026-05-06 신설 — heart-failure-volume-overload 사건 후속): Liby가 후속 ingest로 "보완"을 추가할 때 **기존 entry의 핵심 주제와 다른 주제이면 새 entry로 만들 것**. 같은 entry에 합치면 검색·LLM inject 시 주제 부조화 발생. 판단 기준: 새 컨텐츠의 PMID·키워드·임상 적용이 기존 entry의 primarySources·keywords·임상 흐름과 명백히 다른 도메인이면 → 새 entry. 의심 시 미르에게 확인.
+- **동일 키 재할당 금지** (2026-05-07 신설 — 20건 데이터 손실 사건 후속): `KNOWLEDGE_BUNDLE["X"] = ...`이 이미 존재하는 X에 대해 **두 번째 할당 절대 금지**. 보완 ingest는 신규 키로 만들고 의미 정합한 alias만 추가. 같은 entity의 보완은 기존 entry sections/keywords/primarySources에 직접 추가 (덮어쓰기 아님).
 
 ## Ingest 트리거
 미르가 raw 내용을 제공하고 Librarian을 호출할 때만 실행.

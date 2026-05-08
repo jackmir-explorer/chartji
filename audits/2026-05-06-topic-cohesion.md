@@ -94,3 +94,32 @@ ENT bulk 보강이지만 모두 단일 ENT 증상 entry 응집. 정합. 분리 �
 1. Tier 1 3건 (palliative-pain·glp1-selection-strategy·internal-medicine-2025-update) 다음 세션에 분할 작업 진행할지
 2. `glp1-selection-strategy` 키 중복 할당 — line 2967 v2를 살리고 4811 v2_full을 신규 키로 옮길지, 두 entry를 합본해 sections를 모두 보유할지
 3. 분할 시 작업 순서 (palliative-pain 가장 큰 분기 — 4 sub-entry 후보)
+
+---
+
+## 2026-05-07 후속 처리 (overwrite-fix)
+
+추가 발견(line 88-89) 동일 패턴이 **8개 entry 그룹 / 20건** 더 있음을 확인. 미르 결단 A (일괄 수정) 적용.
+
+| 그룹 | 결단 | 메모 |
+|---|---|---|
+| xerostomia | (c) v2 폐기 | v2_full이 상위집합 |
+| BMS | (c) v2 폐기 | v2_full이 상위집합 |
+| CKD | (b) 분리 | _ckd_monitoring_v2(topic) vs _ckd_v2_full(disease) 분리 라우팅 |
+| MASH | (a) 통합 | v2의 GLP-1 네트워크 메타를 v2_full에 흡수 |
+| frailty | (a) 통합 | v2(topic)의 회복률·5단계 중재를 v2_full(disease)에 흡수 |
+| HF-POCUS-DUCS | (a) 통합 | v2의 protocol을 v2_full(disease, parents=hf)에 흡수 |
+| 침샘염 alias | (c) 부분 폐기 | salivary-stones에서 제거, parotitis 단일 라우팅 |
+| 편두통 alias | (c) 부분 폐기 | headache에서 제거(keywords 포함), migraine 단일 라우팅 |
+
+상세: `sessions/2026-05-07-overwrite-fix.md`, 변환 로그: `/tmp/overwrite-fix-log.txt`.
+
+검증:
+- 키 중복 hard-check: 0건 (이전 20건)
+- syntax: OK
+- PMID 보존: 127개 = 127개 (0 손실)
+
+재발 방지:
+- `agents/auditor.md` — 키 중복 hard-check 항목 신설
+- `agents/librarian.md` — "동일 키 재할당 금지" 절대 금지 신설
+- `skills/knowledge-ingest/SKILL.md` — Step 7 직전 grep 체크 신설
