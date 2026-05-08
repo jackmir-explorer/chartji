@@ -76,3 +76,57 @@
 - 다음 세션 반영:
   - tdap·vaccine-interval md 파일이 있다면 후속 ingest 필요 (parent로 활용 가능해짐)
   - MAP.md "alias 쌍" 표는 bundle 실제 상태와 부분 불일치 — Auditor가 정기 동기화 필요 (예: hepatitis-b는 이제 alias로 통합됨)
+
+---
+
+## ADDENDUM — 2026-05-08 deep-extract 보강분 8건 재컴파일 (미르 직접 명령 "deep extract 무조건 포함해라")
+
+### 배경
+원 작업(신규 14건 ingest + 백신 alias 통합)이 완료된 후, 미르가 추가로 2026-05-08 deep-extract(commit 2292a47)와 이전 deep-extract 보강분의 bundle 미반영분을 재컴파일하라고 명령. 이 추가분은 신규 entry가 아닌 **기존 bundle entry의 sections·primarySources·keywords 보강**.
+
+### 재컴파일 대상 8건
+
+| # | Entry | 추가 섹션 / 보강 | PMID |
+|---|---|---|---|
+| 1 | `cancer-fatigue` | notes에 운동+행동지원 대장암 생존율 추가 (POEM) | 41544293 |
+| 2 | `low-back-pain` | exam·protocol에 급성 LBP AFP 통합 + precaution 신설 (척추 주사·RFA 금지) | 41252835, 41252845 |
+| 3 | `opioid-use-disorder` | 검토 결과 md ↔ bundle 일치 — 변경 없음 (sync 확인만) | (sync) |
+| 4 | `palliative-pain` | oud_cancer_pain·rotation_real_world 두 섹션 신설 — 부프레노르핀 본연 도메인 (5-7 분할 룰 준수) | 42092642, 42009265 |
+| 5 | `sudden-hearing-loss` | 검토 결과 md ↔ bundle 일치 — 변경 없음 (sync 확인만) | (sync) |
+| 6 | `vaccination` | ckd_elderly_flu 섹션 신설 + **백신 alias 통합** (3중 inline 중복 → 단일 entry 참조 공유) | 41771129 |
+| 7 | `deprescribing` | protocol 섹션 내부에 노인 Z-수면제 BI 통합 추가 | 42031000 |
+| 8 | `goals-of-care-acp` | dementia_eol_quality 섹션 신설 (notes ↔ referral 사이) | 41856050 |
+
+### 백신 alias 통합 (원 작업의 미완 항목 마무리)
+- 기존 inline 중복 3건 (vaccination / 예방접종 / 백신 — 각자 독립 sections 사본 보유) 제거
+- vaccination 본체 1건 유지 + KNOWLEDGE_BUNDLE 후처리 reference 할당으로 예방접종·백신 통합
+- 검증: `KNOWLEDGE_BUNDLE['vaccination'] === KNOWLEDGE_BUNDLE['예방접종']` → true / `=== ['백신']` → true
+- 본체 변경 시 alias 자동 반영 (CLAUDE.md "참조 공유" 패턴)
+
+### 변경 / 추가 카운트
+- cancer-fatigue: +0 새 섹션 (notes 내부 보강), primarySources 1→2, keywords 8→12, alias +1 (`colorectal-cancer-survival`)
+- low-back-pain: +1 precaution 신설, primarySources 2→4, keywords 11→17
+- palliative-pain: +2 oud_cancer_pain·rotation_real_world, primarySources 2→4, keywords 9→16
+- vaccination: +1 ckd_elderly_flu, primarySources 2→3, keywords 8→12, alias 3중 inline → 1 본체 + 2 reference
+- deprescribing: +0 새 섹션 (protocol 내부 보강), primarySources 2→3, keywords 11→17
+- goals-of-care-acp: +1 dementia_eol_quality, primarySources 2→3, keywords 13→17
+
+### 검증 (재컴파일분)
+- syntax: `require('./src/knowledge-bundle.js')` → SYNTAX OK
+- 8 신규 PMID 모두 bundle 내 ≥3회 등장 (sources 라벨 + content 인용 + primarySources 합계)
+- 키 재할당 중복 검사: KNOWLEDGE_BUNDLE 직접 할당 중 같은 키 2회+ 케이스 0건
+- 총 키 수: 601 (백신 alias inline 2건 제거 → reference 2건 추가, 순감 0)
+- cache version bump: `?v=0508-hier` → `?v=0508-recompile` (src/index.html, coding-behavior.md §3 룰 준수)
+- 백업: `src/knowledge-bundle.js.bak-2026-05-08-recompile`
+
+### 5-D / 5-D.1 가드 (재컴파일분)
+- 새 추가 섹션 본문 내 wikilinks (`[[opioid-use-disorder]]`, `[[예방접종|예방접종]]`, `[[afp-top20-poems-2024|AFP]]`) 모두 섹션당 첫 등장 1회 룰 준수
+- 동일 토큰 cross-target 위험 케이스 없음
+
+### 추가분 판정
+**통과** — syntax / PMID 보존 / no duplicate keys / alias 일관성 모두 OK.
+
+### 추가분 회고
+- opioid-use-disorder·sudden-hearing-loss는 md ↔ bundle 이미 동기 상태였음 — 미르 지시 8건 중 2건은 검증만으로 종결
+- 백신 alias 통합 패턴(inline 중복 → 후처리 reference 할당)은 다른 한국어/영어 듀얼 keyword에도 확장 적용 가능 (예: 자궁경부암 / cervical-cancer-screening 등 — 별도 세션에서 검토)
+- palliative-pain은 5-7 분할 룰("부프레노르핀 본연 entry만 남김") 준수 확인 후 추가 — OUD+암 / 오피오이드 내성 전환 둘 다 부프레노르핀 약리·완화의료 통증 도메인이므로 문제 없음

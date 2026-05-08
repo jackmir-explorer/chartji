@@ -69,13 +69,15 @@ var KNOWLEDGE_BUNDLE = {
   },
   /* dizziness v1 → v2 승격 (2026-04-23 ingest batch).
      참조 공유 본체는 파일 하단 `_dizziness_v2` 변수 참조. */
-  /* v2 (B2) — Phase 5a Liby ingest. 원본: knowledge/by-disease/vaccination.md */
+  /* vaccination — 예방접종 일반 + CKD 고령 고용량 독감 (5-8 deep-extract).
+     2026-05-08 alias 통합: vaccination / 예방접종 / 백신 → 단일 entry 공유 (파일 하단 KNOWLEDGE_BUNDLE 재할당). */
   "vaccination": {
     "kind": "disease",
-    "keywords": ["vaccination","예방접종","백신","독감","폐렴구균","대상포진","HPV","Tdap"],
+    "keywords": ["vaccination","예방접종","백신","독감","폐렴구균","대상포진","HPV","Tdap","CKD 고령","고용량 독감 백신","Fluzone High-Dose","Fluad"],
     "primarySources": [
       "CDC General Best Practice Guidelines for Immunization 2024",
-      "KDCA 성인 예방접종 가이드 2024"
+      "KDCA 성인 예방접종 가이드 2024",
+      "Sacks HS et al. In older adults, high- vs. standard-dose influenza vaccine reduced hospitalization for influenza or pneumonia in those with CKD. Ann Intern Med. 2026 Mar;179(3):JC33. PMID:41771129, DOI:10.7326/ANNALS-26-00324-JC"
     ],
     "sections": {
       "exam": {
@@ -86,59 +88,9 @@ var KNOWLEDGE_BUNDLE = {
         "content": "세부 스케줄은 개별 엔트리 참조:\n- [[Tdap|Tdap]] / [[대상포진|대상포진]] / [[폐렴구균|폐렴구균]] / HPV / A·[[B형간염|B형간염]] / [[일본뇌염|일본뇌염]] / 광견병 / 수두 / MMR / 폴리오\n- [[vaccine-interval|접종 간격]] 원칙 → `vaccine-interval` 엔트리\n- 성인 전체 권장 요약 → `[[vaccination-summary|vaccination-summary]]` 엔트리",
         "sources": []
       },
-      "draft-template": {
-        "content": "CC: [[예방접종|예방접종]]\nfever (-) uri sx (-) drug adverse effect (-) allergy (-)\n\n기존 접종력:\n기저 질환:\n\nVital Sign:\n\n접종: [백신명] [n차]\n추후 접종 계획: [백신명] [n개월 뒤] [n차]",
-        "sources": []
-      },
-      "draft-append": {
-        "content": "[[예방접종|예방접종]] 후 원내 30분 안정 취한 후 귀가 권고함.",
-        "sources": []
-      }
-    },
-    "uiHooks": null
-  },
-  "예방접종": {
-    "kind": "disease",
-    "keywords": ["예방접종","vaccination","백신"],
-    "primarySources": [
-      "CDC General Best Practice Guidelines for Immunization 2024",
-      "KDCA 성인 예방접종 가이드 2024"
-    ],
-    "sections": {
-      "exam": {
-        "content": "### 예방접종 전 일반 확인\n- 발열(38도↑ → 연기 고려)\n- 이전 접종 이상반응(아나필락시스 이력)\n- 임신 여부 (생백신 금기: MMR·수두·BCG·황열)\n- 면역저하 여부 (생백신 주의 — 전문의 상담)",
-        "sources": []
-      },
-      "schedule": {
-        "content": "세부 스케줄은 개별 엔트리 참조:\n- [[Tdap|Tdap]] / [[대상포진|대상포진]] / [[폐렴구균|폐렴구균]] / HPV / A·[[B형간염|B형간염]] / [[일본뇌염|일본뇌염]] / 광견병 / 수두 / MMR / 폴리오\n- [[vaccine-interval|접종 간격]] 원칙 → `vaccine-interval` 엔트리\n- 성인 전체 권장 요약 → `[[vaccination-summary|vaccination-summary]]` 엔트리",
-        "sources": []
-      },
-      "draft-template": {
-        "content": "CC: 예방접종\nfever (-) uri sx (-) drug adverse effect (-) allergy (-)\n\n기존 접종력:\n기저 질환:\n\nVital Sign:\n\n접종: [백신명] [n차]\n추후 접종 계획: [백신명] [n개월 뒤] [n차]",
-        "sources": []
-      },
-      "draft-append": {
-        "content": "예방접종 후 원내 30분 안정 취한 후 귀가 권고함.",
-        "sources": []
-      }
-    },
-    "uiHooks": null
-  },
-  "백신": {
-    "kind": "disease",
-    "keywords": ["백신","vaccination","예방접종"],
-    "primarySources": [
-      "CDC General Best Practice Guidelines for Immunization 2024",
-      "KDCA 성인 예방접종 가이드 2024"
-    ],
-    "sections": {
-      "exam": {
-        "content": "### [[예방접종|예방접종]] 전 일반 확인\n- 발열(38도↑ → 연기 고려)\n- 이전 접종 이상반응(아나필락시스 이력)\n- 임신 여부 (생백신 금기: MMR·수두·BCG·황열)\n- 면역저하 여부 (생백신 주의 — 전문의 상담)",
-        "sources": []
-      },
-      "schedule": {
-        "content": "세부 스케줄은 개별 엔트리 참조:\n- [[Tdap|Tdap]] / [[대상포진|대상포진]] / [[폐렴구균|폐렴구균]] / HPV / A·[[B형간염|B형간염]] / [[일본뇌염|일본뇌염]] / 광견병 / 수두 / MMR / 폴리오\n- [[vaccine-interval|접종 간격]] 원칙 → `vaccine-interval` 엔트리\n- 성인 전체 권장 요약 → `[[vaccination-summary|vaccination-summary]]` 엔트리",
-        "sources": []
+      "ckd_elderly_flu": {
+        "content": "### CKD 고령 환자 고용량 독감 백신 — 입원 감소 근거 [CLINICAL]\n> [출처: Sacks HS et al. Ann Intern Med 2026 Mar;179(3):JC33. PMID:41771129]\n> Annals of Internal Medicine Journal Club 형식 — 원 RCT 요약 [초록 기반 — 전문 미확인]\n\n**핵심 결론**:\n- CKD 동반 고령 환자(65세 이상)에서 **고용량 독감 백신**이 표준 용량 대비 독감·폐렴 관련 입원을 유의하게 감소\n\n**외래 적용 포인트**:\n- **CKD + 65세 이상** → 고용량 독감 백신(Fluzone High-Dose) 또는 보조제 첨가 백신(Fluad) 우선 처방 근거\n- 65세 이상 일반 고용량 권고를 넘어 **CKD 아군에서 이익 추가 확인**\n- 신장질환 동반 노인 독감 예방접종 상담 시 근거 직접 활용\n\n**한국 외래 변환 시 확인**:\n- 한국 고용량 독감 백신 급여 기준 및 가용 제품명 [출처 미확인 — researcher 검증 권장]\n- CKD 환자군 접종 시기·회차 [가이드라인 default: KCDC 성인 예방접종 권고안]",
+        "sources": ["Sacks HS et al. Ann Intern Med 2026 Mar;179(3):JC33. PMID:41771129"]
       },
       "draft-template": {
         "content": "CC: [[예방접종|예방접종]]\nfever (-) uri sx (-) drug adverse effect (-) allergy (-)\n\n기존 접종력:\n기저 질환:\n\nVital Sign:\n\n접종: [백신명] [n차]\n추후 접종 계획: [백신명] [n개월 뒤] [n차]",
@@ -1832,6 +1784,10 @@ var KNOWLEDGE_BUNDLE = {
   }
 };
 
+/* 2026-05-08: vaccination alias 통합. 기존 vaccination / 예방접종 / 백신 3중 inline 중복을 단일 entry 참조로 정리. */
+KNOWLEDGE_BUNDLE["예방접종"] = KNOWLEDGE_BUNDLE["vaccination"];
+KNOWLEDGE_BUNDLE["백신"] = KNOWLEDGE_BUNDLE["vaccination"];
+
 /* ═══════════════════════════════════════════════════════════════════
    L1 Phase B1 — v2 승격 (참조 공유 aliasing) · 2026-04-22
    설계서: sessions/design-2026-04-22-L1b-v1-migration.md
@@ -3120,13 +3076,15 @@ KNOWLEDGE_BUNDLE["diabetic-peripheral-neuropathy"] = _dpn_v2;
 KNOWLEDGE_BUNDLE["DPN"] = _dpn_v2;
 KNOWLEDGE_BUNDLE["당뇨신경병증"] = _dpn_v2;
 
-/* palliative-pain — 완화의료 부프레노르핀 (4-30 deep-extract, Mir-T1 #3 암성통증·완화). [CLINICAL] */
+/* palliative-pain — 완화의료 부프레노르핀 + OUD+암 + 오피오이드 내성 전환 (4-30 deep-extract + 5-7·5-8 deep-extract). [CLINICAL] */
 var _palliative_pain_v2 = {
   kind: "topic",
-  keywords: ["완화의료","palliative care","buprenorphine","부프레노르핀","오피오이드","암성통증","경피패치","transdermal","호스피스"],
+  keywords: ["완화의료","palliative care","buprenorphine","부프레노르핀","오피오이드","암성통증","경피패치","transdermal","호스피스","OUD","opioid use disorder","장기 주사 부프레노르핀","오피오이드 내성","opioid tolerant","buprenorphine rotation"],
   primarySources: [
     "Jose V et al. The Effectiveness and Safety of Buprenorphine in Palliative Care: Systematic Review. J Pain Symptom Manage 2025;71(5):e525-e539. PMID:41475688, DOI:10.1016/j.jpainsymman.2025.12.009",
-    "Weerasiri SD et al. A Case Report of End-of-Dosage Failure With Buprenorphine Patch. J Pain Symptom Manage. 2026 Jan 28;71(5):e606-e609. PMID:41617142, DOI:10.1016/j.jpainsymman.2026.01.018"
+    "Weerasiri SD et al. A Case Report of End-of-Dosage Failure With Buprenorphine Patch. J Pain Symptom Manage. 2026 Jan 28;71(5):e606-e609. PMID:41617142, DOI:10.1016/j.jpainsymman.2026.01.018",
+    "Lam AP et al. Managing Cancer-Related Pain in Patients Receiving Long-Acting Buprenorphine for Opioid Use Disorder. J Pain Symptom Manage. 2026 May. PMID:42092642, DOI:10.1016/j.jpainsymman.2026.04.617",
+    "Idom O et al. Real-World Experience with Initiating Buprenorphine in Opioid Tolerant Patients with Cancer Pain. J Pain Symptom Manage. 2026 Apr. PMID:42009265, DOI:10.1016/j.jpainsymman.2026.04.605"
   ],
   sections: {
     definition: {
@@ -3156,6 +3114,14 @@ var _palliative_pain_v2 = {
     notes_extra: {
       content: "암성통증 완화의료에서 **경피 부프레노르핀은 연하 곤란·장 기능 저하 말기 환자의 1차 대안**. OUD 우려 환자에서 부분 작용제 스튜어드십 대안으로도 활용.",
       sources: []
+    },
+    oud_cancer_pain: {
+      content: "### OUD 장기 주사 부프레노르핀 환자의 암성 통증 관리 [CLINICAL — 조건부]\n> [출처: Lam AP et al. J Pain Symptom Manage 2026 May. PMID:42092642]\n> 증례 기반 임상 리뷰 — 62세 남성, 중증 OUD 장기 주사 부프레노르핀 유지 중 암 진단 [초록 기반 — 전문 미확인]\n\n**OUD + 암성 통증 공존 시 핵심 원칙**:\n1. **OUD 치료 유지 최우선** — 장기 주사 부프레노르핀 중단 금지\n2. **수용체 점유 고려**: 장기 주사 부프레노르핀은 μ 수용체 높은 친화도 점유 → 완전 작용제 추가 시 수용체 가용성 확인 필요\n3. **반감기 고려**: 지속형 부프레노르핀 반감기 매우 길음 → 추가 오피오이드 titration 속도 조절\n4. **다중모달 진통**: 오피오이드 단일 전략 대신 NSAIDs·스테로이드·항경련제·인터벤션 병용\n5. **다학제 접근**: 완화의료·중독의학·통증의학 협력\n\n**외래 결정 분기**:\n```\nOUD 유지 부프레노르핀 환자 + 암 진단·통증\n      ↓\n1. 부프레노르핀 중단 고려? → 금지 (OUD 재발 위험)\n      ↓\n2. 완전 작용제 추가 필요 시:\n   - 수용체 점유 고려 → 고용량 완전 작용제 필요 가능\n   - 완화의료·중독의학 협진 필수\n      ↓\n3. 다중모달 진통 병행\n4. 정기 평가: OUD 안정성 + 통증 조절 균형\n```\n\n**가정의학과 역할**: 완화의료 협력 시점 조기 결정 — OUD+암 통증 복잡 케이스 단독 관리 금지. 관련: [[opioid-use-disorder]]",
+      sources: ["Lam AP et al. J Pain Symptom Manage 2026 May. PMID:42092642"]
+    },
+    rotation_real_world: {
+      content: "### 오피오이드 내성 암성통증 부프레노르핀 전환 — 실제 임상 경험 [CLINICAL — 조건부]\n> [출처: Idom O et al. J Pain Symptom Manage 2026 Apr. PMID:42009265]\n> 후향적 단일기관, n=48명 (활동성 또는 기왕력 악성종양), Vanderbilt 2023-2024. 경피 또는 협측 부프레노르핀.\n\n**핵심 수치**:\n| 지표 | 결과 |\n|---|---|\n| 30일 성공적 전환율 | **71% (34/48)** |\n| 통증 NRS 기저 → 30일 | 6.3 → **4.9** |\n| 금단 증상 발생 | **8%** |\n| 30일 부프레노르핀 유지율 | **77%** |\n| 초기 용량 그대로 유지 | 65% |\n\n**전환 성공 정의**: 30일 부프레노르핀 지속 + 금단 증상 없음 + 통증 안정/개선\n\n**임상 함의**:\n- 완전 오피오이드 조절 불량 암성통증 환자에서 부프레노르핀 전환은 **실현 가능한 전략**\n- 금단 증상 발생률 낮음 (8%) — 전환 프로토콜 준수 시 안전\n- 전환 실패 시 완전 작용제로 복귀 가능 (2명 복귀)\n- 추가 전향적 연구 필요 — [CLINICAL — 조건부] 등급",
+      sources: ["Idom O et al. J Pain Symptom Manage 2026 Apr. PMID:42009265"]
     },
     counseling: {
       content: "### 암환자의 '원인' 욕구 [INSIGHTS — by 미르 관찰]\n\n암환자들은 '원인'을 항상 알고 싶어한다. 내가 왜 걸린 건지, 유전인지, 환경인지, 무슨 인자가 있는 건지. 전근대에는 그것을 죄나 업보로 해석했다. 사람들은 **'설명'되기를 원하며 적절한 설명을 들으면 마음을 놓는 것 같다**.\n\n### 임상 함의\n- **답할 수 없는 질문에도 답하려는 시도가 정서적 의미** — '정확한 원인은 알기 어렵지만…'으로 시작\n- 가족력 / 환경 / 흡연 / 식이 / 감염 등 **알려진 위험인자를 점검·언급**\n- 환자가 '내 잘못 아닌데' 안심할 수 있는 framing — 자책·죄의식 완화\n- 모를 때는 **'많은 경우 명확한 단일 원인은 없습니다'**라고 명시 — 솔직함이 신뢰 형성\n- **시간을 충분히** — 1–2분의 설명이 환자 만족도·치료 순응도에 큰 영향\n\n### 전근대 vs 현대\n- 전근대: 죄·업보·악령\n- 현대: 유전·환경·생활습관·확률\n- 공통: **사람은 '설명되지 않은 고통'을 견디기 매우 어려워함** → 의사가 의미 부여(meaning-making) 역할\n\n[Related: Communication & Counseling 횡단 모듈]",
@@ -4249,13 +4215,14 @@ var _afp_eol_symptom_management_v2 = {
 };
 KNOWLEDGE_BUNDLE["afp-eol-symptom-management"] = _afp_eol_symptom_management_v2;
 
-/* goals-of-care-acp — ACP·GOC 7대 핵심 요소 + 외래 적용 (5-2 cron). [INSIGHTS] */
+/* goals-of-care-acp — ACP·GOC 7대 핵심 요소 + 치매 ACP + 치매 임종 질 (5-2 cron + 5-8 deep-extract). [INSIGHTS] */
 var _goc_acp_v2 = {
   kind: "topic",
-  keywords: ["ACP","사전돌봄계획","goals of care","GOC","완화의료","임종기","advance care planning","의사소통","EHR","구조화 대화","POLST","DNAR","치매ACP"],
+  keywords: ["ACP","사전돌봄계획","goals of care","GOC","완화의료","임종기","advance care planning","의사소통","EHR","구조화 대화","POLST","DNAR","치매ACP","치매 임종","임종 질","quality of death"],
   primarySources: [
     "Ma JE et al. J Pain Symptom Manage 2026;71(5):e579-e590. PMID:41548727, DOI:10.1016/j.jpainsymman.2026.01.006",
-    "van der Steen JT et al. Optimizing Approaches in Advance Care Planning in Dementia as Perceived by General Practitioners. J Pain Symptom Manage. 2026 Apr 30. PMID:42069237, DOI:10.1016/j.jpainsymman.2026.04.618"
+    "van der Steen JT et al. Optimizing Approaches in Advance Care Planning in Dementia as Perceived by General Practitioners. J Pain Symptom Manage. 2026 Apr 30. PMID:42069237, DOI:10.1016/j.jpainsymman.2026.04.618",
+    "Nakazawa Y et al. Quality of death among older adults with and without comorbid dementia: A nationwide mortality follow-back study. Arch Gerontol Geriatr. 2026 Mar;145:106218. PMID:41856050, DOI:10.1016/j.archger.2026.106218"
   ],
   sections: {
     definition: {
@@ -4270,6 +4237,10 @@ var _goc_acp_v2 = {
       content: "### ACP 핵심 질문 예시\n- '지금 가장 중요하게 생각하시는 것이 무엇인가요?'\n- '치료가 어렵거나 힘들어지는 상황에서 어떻게 하기를 원하시나요?'\n- '가족에게 돌봄 결정을 맡기신다면, 어떤 방향을 원하시는지 알고 계신가요?'\n- '집에서 편안하게 지내는 것과 병원에서 적극 치료하는 것 중 어느 쪽이 더 중요하신가요?'\n\n---\n\n### 치매 환자 ACP — 처방설정형 vs 목표도출형 접근법 [CLINICAL — 조건부]\n> [출처: van der Steen JT et al. J Pain Symptom Manage 2026 Apr 30. PMID:42069237]\n> 질적 연구, 네덜란드 GP 13명 인터뷰 + 비디오 비네트 12명; 삼각검증 적용.\n\n**두 접근법 비교**\n| 속성 | 처방설정형 (Order-setting) | 목표도출형 (Goal-eliciting) |\n|---|---|---|\n| **목표** | 특정 치료 한계·DNAR 등 결정 | 가치·목표·원하는 삶 파악 |\n| **선제 조건** | 이해+신뢰+준비+모멘텀 모두 필요 | 첫 대화부터 시작 가능 |\n| **모멘텀(timing)** | 임박한 임상 결정(입원·CPR) 때 자연 발생 | 주도적으로 만들어야 함 |\n| **결과** | 구체적 의료지시(POLST·DNAR) | 신뢰·준비도·이해 구축 |\n\n**4가지 속성 (이해·신뢰·준비·모멘텀)**: 이해는 환자·보호자 병 진행 이해, 신뢰는 의사 신뢰관계, 준비는 심리·정서적 준비, 모멘텀은 시작 적절 시점.\n\n**치매 외래 ACP 알고리즘**:\n```\n경증 치매 진단 초기\n      ↓\n목표도출형 접근 시작 (이해·신뢰·준비 구축)\n\"어떻게 살고 싶으세요?\" / \"무엇이 중요하신가요?\"\n      ↓\n중등도 진행 / 임박한 임상 결정\n      ↓\n처방설정형으로 전환 (입원·CPR·호스피스 구체 결정)\n\"이런 상황에서 어떻게 하기를 원하셨는지 기억하시나요?\"\n      ↓\nPOLST/DNAR 문서화 + 보호자 공유\n```\n\n**핵심 실전 포인트**:\n- 치매 초기부터 ACP 시작 → 자율성 최대화 (경증에서 직접 선호 표현 가능)\n- 준비되지 않은 환자·가족 → 목표도출형으로 신뢰 먼저 쌓기\n- 긴박한 결정 없이는 처방설정형 대화가 어색 → 모멘텀 부재 시 무리하지 말 것",
       sources: ["van der Steen JT et al. J Pain Symptom Manage 2026. PMID:42069237"]
     },
+    dementia_eol_quality: {
+      content: "### 치매 동반 노인 임종 질 저하 — 전국 사망 추적 근거 [CLINICAL]\n> [출처: Nakazawa Y et al. Arch Gerontol Geriatr 2026 Mar;145:106218. PMID:41856050]\n> 전국 사망 추적 조사, n=45,509명 (≥65세), 일본. 유족 조사 기반.\n\n**핵심 수치 (암 + 치매 동반 vs 암 단독)**:\n| 임종 질 영역 | aOR (95% CI) | 의미 |\n|---|---|---|\n| 자신 상황 인지 (자율성) | **0.29** (0.27–0.32) | 71% 낮음 |\n| 가족과 소통 | **0.47** (0.44–0.50) | 53% 낮음 |\n| 삶의 의미감 | **0.55** (0.53–0.61) | 45% 낮음 |\n| 선호 돌봄 장소 실현 | **0.67** (0.63–0.72) | 33% 낮음 |\n| 신체적 고통 없음 (반대로) | **1.34** (1.26–1.43) | 신체 고통은 오히려 더 낮음 |\n\n심장병 + 치매에서도 유사 패턴 (자율성 aOR 0.31, 소통 aOR 0.44).\n\n**증상 패턴 (치매 동반)**:\n- 연하곤란(Dysphagia) 더 흔함\n- 통증·불면 더 드묾\n\n**임상 함의**:\n1. **치매 조기 진단 직후 ACP 시작** — '치매가 진행될수록 EOL 논의가 더 어려워진다'를 OR 수치로 설득 가능\n2. **경증 치매 = 자율적 ACP 가능한 마지막 창문** — 인지 저하 전 선호·가치 문서화 필수\n3. 치매 환자 돌봄 계획 조정 포인트:\n   - 연하 곤란 대비: 식이 조정·영양팀 의뢰 계획 사전 수립\n   - 통증·불면보다 **소통 단절·자율성 상실**이 더 큰 문제 — ACP 대화 내용 구체화\n4. 보호자 조기 ACP 파트너 참여 — 중증 전환 전",
+      sources: ["Nakazawa Y et al. Arch Gerontol Geriatr 2026 Mar;145:106218. PMID:41856050"]
+    },
     referral: {
       content: "- 복잡한 GOC 결정 → 완화의료 팀 협진\n- 가족 갈등·의사결정 대리인 불명확 → 사회복지사·의료윤리팀\n- 호스피스 전환 상담 → 완화의학과",
       sources: []
@@ -4283,18 +4254,19 @@ KNOWLEDGE_BUNDLE["ACP"] = _goc_acp_v2;
 KNOWLEDGE_BUNDLE["GOC"] = _goc_acp_v2;
 KNOWLEDGE_BUNDLE["advance-care-planning"] = _goc_acp_v2;
 
-/* deprescribing — 부적절 처방 선별·캐나다 가이드라인 (5-4 cron). [CLINICAL + REGULATORY] */
+/* deprescribing — 부적절 처방 선별·캐나다 가이드라인 + Z-수면제 BI (5-4 cron + 5-8 deep-extract). [CLINICAL + REGULATORY] */
 var _deprescribing_v2 = {
   kind: "topic",
-  keywords: ["deprescribing","부적절 처방","PIP","STOPP","START","Beers","노인 다약제","polypharmacy","medication review","처방 최적화","STOPP-Frail"],
+  keywords: ["deprescribing","부적절 처방","PIP","STOPP","START","Beers","노인 다약제","polypharmacy","medication review","처방 최적화","STOPP-Frail","Z-수면제","z-hypnotics","brief intervention","간략 개입","졸피뎀","에스조피클론"],
   primarySources: [
     "McDonald EG et al. Can Fam Physician 2026 Mar;72(3):173-178. PMID:41844291, DOI:10.46747/cfp.7203173",
-    "Marcellaud E et al. Attitudes Toward Deprescribing Among Community-Dwelling Adults. Drugs Aging. 2026 May 2. PMID:42068533, DOI:10.1007/s40266-026-01298-6"
+    "Marcellaud E et al. Attitudes Toward Deprescribing Among Community-Dwelling Adults. Drugs Aging. 2026 May 2. PMID:42068533, DOI:10.1007/s40266-026-01298-6",
+    "Siddiqui TG et al. Brief intervention for inappropriate z-hypnotics use in older adults: a before and after intervention study in primary care. Scand J Prim Health Care. 2026;44(1):2660168. PMID:42031000, DOI:10.1080/02813432.2026.2660168"
   ],
   sections: {
     protocol: {
-      content: "### 캐나다 일차의료 권고 (2026)\n\n**권고 1 (강력, 중등도 근거)**: ≥65세 성인은 약물 적절성 최적화를 위한 **처방 점검(Prescription Checkup) 또는 관련 중재**를 받아야 함. 효과적 중재 형태: 처방의·약사가 **구조적 접근법 또는 규칙 기반 도구** 사용. 도구 예: STOPP/START, Beers, RAMQ.\n\n**권고 2 (강력, 중등도 근거)**: 정부는 약물 적절성 중재를 **재정 지원**해야 함.\n\n### 구조적 접근 도구\n| 도구 | 대상 | 활용 |\n|---|---|---|\n| **STOPP/START** | ≥65세 | 부적절(STOPP) + 누락(START) 동시 검출 |\n| **Beers Criteria** | ≥65세 (미국) | 노인 부적절 약물 목록 |\n| **STOPP-Frail** | 허약 노인 | 완화 목적 처방 최소화 |\n\n### 외래 적용 프로세스\n1. ≥65세 환자 → 연 1회 처방 전체 재검토 루틴화\n2. STOPP 도구로 부적절 약물 flagging\n3. 처방의·약사 협력: 확인·중단·대체\n4. 환자·보호자 상담 (중단 이유·기대 효과)\n5. 중단 후 추적: 증상 재발·금단 모니터링",
-      sources: []
+      content: "### 캐나다 일차의료 권고 (2026)\n\n**권고 1 (강력, 중등도 근거)**: ≥65세 성인은 약물 적절성 최적화를 위한 **처방 점검(Prescription Checkup) 또는 관련 중재**를 받아야 함. 효과적 중재 형태: 처방의·약사가 **구조적 접근법 또는 규칙 기반 도구** 사용. 도구 예: STOPP/START, Beers, RAMQ.\n\n**권고 2 (강력, 중등도 근거)**: 정부는 약물 적절성 중재를 **재정 지원**해야 함.\n\n### 구조적 접근 도구\n| 도구 | 대상 | 활용 |\n|---|---|---|\n| **STOPP/START** | ≥65세 | 부적절(STOPP) + 누락(START) 동시 검출 |\n| **Beers Criteria** | ≥65세 (미국) | 노인 부적절 약물 목록 |\n| **STOPP-Frail** | 허약 노인 | 완화 목적 처방 최소화 |\n\n### 외래 적용 프로세스\n1. ≥65세 환자 → 연 1회 처방 전체 재검토 루틴화\n2. STOPP 도구로 부적절 약물 flagging\n3. 처방의·약사 협력: 확인·중단·대체\n4. 환자·보호자 상담 (중단 이유·기대 효과)\n5. 중단 후 추적: 증상 재발·금단 모니터링\n\n---\n\n### 노인 Z-수면제 간략 개입 (BI) — 부적절 사용 감소 [CLINICAL — 조건부]\n> [출처: Siddiqui TG et al. Scand J Prim Health Care 2026;44(1):2660168. PMID:42031000]\n> 전후 비교 연구, n=45명 (평균 69.4세, 여성 31명), GP 21명, 노르웨이. ClinicalTrials.gov NCT06032715\n\n**핵심 수치**:\n| 지표 | 전(기저) | 후(치료) | 효과 크기 |\n|---|---|---|---|\n| 부적절 Z-수면제 사용 | **68.9%** | **27.8%** | OR 0.16 (0.04–0.65) |\n| 수면 점수 (GSAQ-insomnia) | 상승 | **유의 악화 없음** | 유지 |\n| 6개월 시점 불면증 | — | **0명** | — |\n| 불안·우울 (HADS) | 10.1 | 7.3 | Cohen's d -0.44 |\n| 인지기능 (MOCA) | 기저 | 유의 변화 없음 | — |\n| 통증 (VAS) | 기저 | 유의 변화 없음 | — |\n\n**부적절 Z-수면제 기준**: ≥4주 사용 + ≥주 3회 (STOPP)\n\n**간략 개입(BI) 구성 — GP 직접 시행**:\n1. 현재 수면제 사용 패턴·이유 탐색\n2. 장기 Z-수면제 위험 설명 (낙상·인지저하·의존성)\n3. 점진적 감량 계획 수립 (환자와 함께)\n4. 비약물 수면 전략 안내 (수면위생·인지행동치료)\n5. 6주·6개월·12개월 추적 평가\n\n**임상 함의**:\n- GP 직접 BI로 수면·인지·통증 악화 없이 Z-수면제 감약 달성 가능\n- 환자 설득 근거: '수면이 나빠지지 않는다' 데이터 직접 제시 가능\n- STOPP 기준 수면제 항목 실행 도구로 바로 적용\n- 소규모(n=45) 단일국가 연구 — 외삽 시 주의 [CLINICAL — 조건부]\n\n**한국 외래 변환 시 확인**:\n- 한국 졸피뎀 처방 급여 제한(2주 이상 원칙적 제한) [출처 미확인 — researcher 검증 권장]\n- 에스조피클론(루네스타) 한국 급여 기준 [출처 미확인]",
+      sources: ["Siddiqui TG et al. Scand J Prim Health Care 2026;44(1):2660168. PMID:42031000"]
     },
     notes: {
       content: "### 우선 재검토 약물군\n| 약물군 | 재검토 이유 |\n|---|---|\n| PPI | 장기 무증상 예방 사용 → 중단 시도 |\n| 수면진정제 (BZD·Z-drug) | 낙상·인지저하·의존 |\n| 항콜린 약물 | ACB 1도 낮은 부하도 영향 ([[anticholinergic-burden|항콜린 부담]] 참조) |\n| 스타틴 (임종기) | 단기 환자 이익 없음 |\n| 경구 혈당강하제 (임종기) | 저혈당 위험 vs 이익 |\n| 항고혈압제 (임종기·낙상) | 낙상 위험 vs 이익 |\n\n---\n\n### 지역사회 환자의 감약 거부 — 예측 인자·면담 전략 [CLINICAL — 조건부]\n> [출처: Marcellaud E et al. Drugs Aging 2026 May 2. PMID:42068533]\n> 단면 조사, n=505명(≥55세, 다약제 ≥5종, 지역약국), 프랑스.\n\n**핵심 수치**: 감약 거부율 **24.6%** (1/4 환자). 주요 사유: 치료 효과 확신 56.5% / 증상 재발 두려움 35.5%.\n\n**거부와 유의 연관 임상 조건**\n| 조건 | OR (95% CI) | 의미 |\n|---|---|---|\n| 수면장애 | 0.51 (0.33–0.78) | 감약 거부 가능성 2배 ↑ |\n| 요실금 | 0.58 (0.34–0.96) | 감약 거부 가능성 1.7배 ↑ |\n\n**감약 수용과 연관 요인**\n| 요인 | OR | 의미 |\n|---|---|---|\n| 약물 부담 과다 인지 | 1.82 (1.12–2.95) | 수용 가능성 1.8배 ↑ |\n| 일상 제약 부담 | 1.76 (1.07–2.89) | 수용 가능성 1.8배 ↑ |\n\n**외래 감약 면담 전략**:\n1. **수면제 감약 제안** → 효과 확신 강함 → 선제 공감 + 비약물 수면치료 대안 제시 먼저\n2. **요실금 약물 감약** → 공감 → 대체 전략(골반저운동·미라베그론 등) 먼저 제시 ([[nocturia|nocturia]] 참조)\n3. **감약 수용도 높은 환자 식별** → \"드시는 약이 너무 많아 불편하지 않으신가요?\" 질문으로 열기\n4. \"덜 먹는 게 더 건강할 수 있다\" 메시지 + 효과 있는 약은 유지함을 명확히 설명",
