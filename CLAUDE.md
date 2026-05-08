@@ -24,6 +24,16 @@ Chartji는 한국 가정의학과 외래 대화 기반 진료 보조 도구다.
 
 워크플로우 상세 → `rules/workflow.md`
 
+## ⚠ Liby ingest 절대 원칙 (2026-05-08 확정 — 미르 직접 지시)
+
+**"deep extract 항상 무조건 포함해라 절대 빼먹지 마라"**
+
+Liby ingest 호출 시 — 신규 md 파일 ingest뿐 아니라 **deep-extract 등으로 변경된 기존 md 파일의 bundle 재컴파일까지 항상 포함**한다. 누락 시 deep-extract 학습이 LLM inject·검색에 도달하지 않음. 점검 절차:
+
+1. `git log <last-ingest-commit>..HEAD --name-only -- 'knowledge/*.md'` 으로 변경 md 전수 확인
+2. 신규(A) + 수정(M) 모두 ingest 범위에 포함
+3. 누락 발견 시 즉시 추가 — "다음 세션에"는 금지
+
 ---
 
 ## 세션 프로토콜
