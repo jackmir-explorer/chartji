@@ -2614,30 +2614,36 @@ KNOWLEDGE_BUNDLE["concussion"] = _concussion_v2;
 KNOWLEDGE_BUNDLE["뇌진탕"] = _concussion_v2;
 KNOWLEDGE_BUNDLE["소아뇌진탕"] = _concussion_v2;
 
-/* low-back-pain — 만성 요통 PT vs CBT SMART RCT (4-27 deep-extract). [CLINICAL] */
+/* low-back-pain — 급성 AFP + 만성 PT vs CBT SMART + 척추 주사·RFA 금지 (4-27 deep-extract + 5-7 deep-extract). [CLINICAL] */
 var _low_back_pain_v2 = {
   kind: "disease",
-  keywords: ["low back pain","요통","만성요통","chronic LBP","physical therapy","cognitive behavioral therapy","PT","CBT","물리치료","급성요통","acute LBP"],
+  keywords: ["low back pain","요통","급성요통","만성요통","acute LBP","chronic LBP","physical therapy","cognitive behavioral therapy","PT","CBT","물리치료","red flag","NSAID","radicular","epidural injection","facet joint injection","trigger point injection","radiofrequency ablation"],
   primarySources: [
     "Fritz JM et al. Effectiveness of Nonpharmacologic Treatments for Chronic Low Back Pain: SMART RCT. Ann Intern Med 2026. PMID:42008809, DOI:10.7326/ANNALS-25-04645",
+    "Earwood JS, Doles NA, Russell RS. Acute Low Back Pain: Diagnosis and Management. Am Fam Physician. 2025;112(5):526-536. PMID:41252835",
+    "Shaughnessy AF. Practice Guideline: Do Not Use Injections or Radiofrequency to Treat Chronic Cervical Spine or Low Back Pain. Am Fam Physician. 2025 Nov;112(5):569-570. PMID:41252845",
     "Pant S. Physical Activity Safe in People With Low Back Pain. JAMA. 2026 Feb 3;335(5):391. PMID:41511791, DOI:10.1001/jama.2025.23014"
   ],
   sections: {
     definition: {
-      content: "만성 요통(cLBP): 12주 이상 지속 요부 통증. 비특이적 만성 요통이 대부분.",
+      content: "만성 요통(cLBP): 12주 이상 지속 요부 통증. 비특이적 만성 요통이 대부분.\n급성 요통(acute LBP): 발생 6주 미만; 대부분(>85%) 비특이적, 자연 회복.",
       sources: []
     },
     exam: {
-      content: "### 만성 요통 초진 체크\n- 통증 기간·부위·방사 여부\n- 야간통·발열·체중감소 → RedFlag 배제\n- 기능장애 평가: Oswestry Disability Index(ODI) 또는 Roland-Morris\n- 이전 치료력 (물리치료·약물·주사·수술)\n- 우울·불안 동반 (만성화 위험인자)",
-      sources: []
+      content: "### 급성 요통 — AFP 2025 [출처: Earwood JS et al. PMID:41252835]\n#### 원인 분류\n| 유형 | 특징 |\n|---|---|\n| **비특이적** (>85%) | 원인 불명; 자연 회복 |\n| **특이적** | 척추 내재성·전신질환·방사통; Red Flag 동반 |\n\n#### Red Flag (즉시 영상·전문과)\n- 신경학적 결손 (하지 근력·감각 이상, 방광·직장 기능 이상 → **마미증후군** 배제)\n- 최근 외상 이력\n- 악성·감염 의심: 발열·체중감소·야간통·면역저하·IV drug use\n- 골다공증·스테로이드 장기 복용 → 척추 골절 의심\n\n#### 영상 원칙\n- **비특이적 요통 — 영상 불필요** (Red Flag 없으면)\n- Red Flag 또는 8주 이상 지속 → 영상 + 검사실\n\n---\n\n### 만성 요통 초진 체크\n- 통증 기간·부위·방사 여부\n- 야간통·발열·체중감소 → RedFlag 배제\n- 기능장애 평가: Oswestry Disability Index(ODI) 또는 Roland-Morris\n- 이전 치료력 (물리치료·약물·주사·수술)\n- 우울·불안 동반 (만성화 위험인자)",
+      sources: ["Earwood JS et al. Am Fam Physician 2025;112(5):526-536. PMID:41252835"]
     },
     protocol: {
-      content: "### 비약물치료 1차 — SMART RCT 근거 (Ann Int Med 2026, n=749, 52주)\n\n**Stage I (8주)**\n| 치료 | 기능 개선(ODI) | 통증 강도 | 권고 |\n|---|---|---|---|\n| **물리치료(PT)** | ODI 2.8점 더 개선 (96% CI 0.38–5.1) | 유의차 없음 | **1차 우선** |\n| 인지행동치료(CBT) | 기준 | 동등 | 2차 대안 |\n\n주의: ODI 2.8점은 통계적으로 유의하나 임상적 최소 유의차(MID 6점) 미만.\n\n**Stage II (비반응자 8주 재치료)**\n| 전략 | 기능·통증 | 결과 |\n|---|---|---|\n| 마음챙김(Mindfulness) | 차이 없음 | 동등 |\n| 치료 전환(switch) | 차이 없음 | 동등 |\n\n→ 1차 비반응자: 마음챙김 또는 치료 전환 모두 동등 효과 — 환자 선호도·접근성으로 선택.",
-      sources: []
+      content: "### 급성 요통 처방 — AFP 2025 [출처: Earwood JS et al. PMID:41252835]\n#### 1차 (비약물)\n- **활동 유지** (안정 처방 금지)\n- 온열 요법(heat therapy)\n- Dry needling, TENS, 침술\n\n#### 약물\n- **NSAIDs 1차** (비특이적, 단기)\n- 유발점 주사 (trigger point injections — 급성에 한해)\n- 방사통 동반: 단기 경구 코르티코스테로이드 고려\n\n#### 처방 금지 (루틴 X)\n- **벤조다이아제핀**, **가바펜틴·프레가발린**, **오피오이드**, **아세트아미노펜**\n\n#### 경과\n- 대부분 4~6주 자연 회복\n- 8주↑ 지속 → 만성 경로 진입 위험 (만성 요통 섹션 참조)\n\n---\n\n### 만성 요통 비약물 1차 — SMART RCT (Ann Int Med 2026, n=749, 52주)\n\n**Stage I (8주)**\n| 치료 | 기능 개선(ODI) | 통증 강도 | 권고 |\n|---|---|---|---|\n| **물리치료(PT)** | ODI 2.8점 더 개선 (96% CI 0.38–5.1) | 유의차 없음 | **1차 우선** |\n| 인지행동치료(CBT) | 기준 | 동등 | 2차 대안 |\n\n주의: ODI 2.8점은 통계적으로 유의하나 임상적 최소 유의차(MID 6점) 미만.\n\n**Stage II (비반응자 8주 재치료)**\n| 전략 | 기능·통증 | 결과 |\n|---|---|---|\n| 마음챙김(Mindfulness) | 차이 없음 | 동등 |\n| 치료 전환(switch) | 차이 없음 | 동등 |\n\n→ 1차 비반응자: 마음챙김 또는 치료 전환 모두 동등 효과 — 환자 선호도·접근성으로 선택.",
+      sources: ["Earwood JS et al. Am Fam Physician 2025;112(5):526-536. PMID:41252835"]
     },
     referral: {
       content: "**PT 의뢰 — 1차 우선**\n- 만성 비특이적 요통 → PT 8주 의뢰\n\n**RedFlag → 즉시 영상·전문과**\n- 신경학적 결손 (하지 근력·감각 이상, 방광·직장 기능 이상)\n- 척추 골절 의심 (외상·골다공증)\n- 악성·감염 의심 (발열·체중감소·야간통·면역저하)\n\n**PT 비반응 (8주 후 개선 없음)**\n- 마음챙김 기반 치료 또는 CBT 의뢰\n- 필요 시 통증클리닉·재활의학과 협진",
       sources: []
+    },
+    precaution: {
+      content: "### 만성 경추·요추 통증 주사·고주파 금지 — AFP 진료 지침 [CLINICAL]\n> [출처: Shaughnessy AF. Am Fam Physician 2025 Nov;112(5):569-570. PMID:41252845]\n> AFP Practice Guideline POEM — 원 가이드라인 요약 [초록 미제공 — POEM 포맷]\n\n**핵심 권고** — 만성 경추·요추 통증에 아래 시술 **금지** (근거 없음):\n- 경막외 주사 (epidural injections)\n- 관절돌기 주사 (facet joint injections)\n- 유발점 주사 (trigger point injections)\n- 고주파 박리술 (radiofrequency ablation/neurotomy)\n\n**외래 적용**:\n- '주사 맞으면 낫나요?' → AFP POEM 근거: 만성화 이후 주사·시술 근거 없음\n- 전문과 시술 의뢰 전 → 보존적 치료(PT·CBT·운동) 강화 먼저\n- 불필요한 시술 의뢰 줄이는 deprescribing 연장선\n\n**환자 교육**:\n> '허리가 오래 아프다고 해서 주사 치료가 도움이 된다는 증거가 없습니다. 오히려 물리치료와 꾸준한 운동이 훨씬 효과적입니다.'",
+      sources: ["Shaughnessy AF. Am Fam Physician 2025 Nov;112(5):569-570. PMID:41252845"]
     },
     notes: {
       content: "- PT가 CBT보다 기능 회복 우월하나 통증 강도 차이 없음 → 기능 중심 목표 환자에게 PT 근거 제시\n- 비반응자에서 치료 전환 vs 마음챙김 동등 → 환자 선호도·비용·접근성 중심 결정\n- CBT 참여율이 PT보다 낮았음 (연구 제한) → 실제 임상에서 CBT 접근성 고려",
@@ -4467,17 +4473,18 @@ KNOWLEDGE_BUNDLE["자궁경부암스크리닝"] = _cervical_screening_v2;
 KNOWLEDGE_BUNDLE["HPV-screening"] = _cervical_screening_v2;
 KNOWLEDGE_BUNDLE["Pap-smear"] = _cervical_screening_v2;
 
-/* cancer-fatigue — 암 관련 피로 + 저항운동 (5-4 cron). [CLINICAL] */
+/* cancer-fatigue — 암 관련 피로 + 저항운동 + 운동·행동지원 대장암 생존율 (5-4 cron + 5-8 deep-extract). [CLINICAL] */
 var _cancer_fatigue_v2 = {
   kind: "disease",
-  keywords: ["암 관련 피로","cancer-related fatigue","CRF","저항운동","resistance training","운동처방","항암치료","재활"],
+  keywords: ["암 관련 피로","cancer-related fatigue","CRF","저항운동","resistance training","운동처방","항암치료","재활","대장암 생존자","colorectal cancer survivor","behavioral support","행동지원"],
   primarySources: [
-    "Eckert H et al. Am Fam Physician 2025 Nov;112(5):487-488. PMID:41252831"
+    "Eckert H et al. Am Fam Physician 2025 Nov;112(5):487-488. PMID:41252831",
+    "Shaughnessy AF. Exercise Plus Behavioral Support Significantly Increases Overall Survival in Patients With Colorectal Cancer. Am Fam Physician. 2026 Jan;113(1):96. PMID:41544293"
   ],
   sections: {
     notes: {
-      content: "### 핵심 결론 [출처: Eckert H [[afp-top20-poems-2024|AFP]] 2025 Nov POEM]\n**저항운동(Resistance Training)은 암 환자의 암 관련 피로(CRF)를 유의하게 감소시킨다.**\n\n- AFP POEM 형식 — 일차의료 즉시 적용 권고 수준 요약\n- 저항운동이 항암치료 중·후 피로 관리에 근거 기반 중재\n- [초록 미제공 — POEM 포맷, 전문 미확인]",
-      sources: []
+      content: "### 핵심 결론 [출처: Eckert H [[afp-top20-poems-2024|AFP]] 2025 Nov POEM]\n**저항운동(Resistance Training)은 암 환자의 암 관련 피로(CRF)를 유의하게 감소시킨다.**\n\n- AFP POEM 형식 — 일차의료 즉시 적용 권고 수준 요약\n- 저항운동이 항암치료 중·후 피로 관리에 근거 기반 중재\n- [초록 미제공 — POEM 포맷, 전문 미확인]\n\n---\n\n### 운동 + 행동지원이 대장암 전체 생존율 향상 [CLINICAL]\n> [출처: Shaughnessy AF. Am Fam Physician 2026 Jan;113(1):96. PMID:41544293]\n> AFP POEM — 원 RCT 요약 [초록 미제공 — POEM 포맷, 전문 미확인]\n\n**핵심 메시지**:\n- 대장암 환자에서 **구조화 운동 + 행동 지원 병합**이 전체 생존율을 유의하게 증가\n- AFP POEM 채택 수준 — 일차의료 즉시 적용 권고 근거\n\n**임상 함의**:\n- '항암 치료 끝난 대장암 생존자, 앞으로 어떻게 할까요?' → **운동 + 행동지원 처방 병합의 생존 이익 근거**\n- 기존 저항운동(CRF 감소)에 더해 대장암에서 **생존율 향상**이라는 더 강력한 근거 추가\n- 암 생존자 생활습관 처방 정당화에 직접 활용\n\n**외래 처방 포인트**:\n- 대장암 생존자 외래 추적 시 운동 처방 + 행동 지원 병합 권고\n- 행동 지원: 목표 설정·자기모니터링·동기 강화 포함 구조화 접근\n- 한국 암 재활 프로그램 가용성 [출처 미확인 — researcher 검증 권장]",
+      sources: ["Shaughnessy AF. Am Fam Physician 2026 Jan;113(1):96. PMID:41544293"]
     },
     protocol: {
       content: "### 외래 운동 처방 원칙\n- 암 관련 피로 호소 시 **저항운동을 적극적 치료 옵션**으로 제시\n- **항암치료 중 시작 가능** — 중단 말고 유지·시작 권고\n- 운동 강도: 환자 컨디션에 맞게 조절 (저~중강도로 시작)\n\n### 처방 포인트\n- '운동해도 되나요?' → '저항운동이 피로에 도움이 됩니다' — 근거 기반 답변\n- 재활 의뢰 또는 운동 교육 처방전 발급 근거\n- 피로 악화 시 → 운동 중단보다 강도 감소 후 지속",
@@ -4498,6 +4505,7 @@ KNOWLEDGE_BUNDLE["cancer-fatigue"] = _cancer_fatigue_v2;
 KNOWLEDGE_BUNDLE["암관련피로"] = _cancer_fatigue_v2;
 KNOWLEDGE_BUNDLE["CRF"] = _cancer_fatigue_v2;
 KNOWLEDGE_BUNDLE["resistance-training-cancer"] = _cancer_fatigue_v2;
+KNOWLEDGE_BUNDLE["colorectal-cancer-survival"] = _cancer_fatigue_v2;
 
 /* chronic-pain-integrative — 만성 통증 통합 중재 (5-4 cron). [CLINICAL — 조건부] */
 var _chronic_pain_integrative_v2 = {
@@ -6276,3 +6284,446 @@ var _delayed_diagnosis_v2 = {
 KNOWLEDGE_BUNDLE["delayed-diagnosis"] = _delayed_diagnosis_v2;
 KNOWLEDGE_BUNDLE["진단지연"] = _delayed_diagnosis_v2;
 KNOWLEDGE_BUNDLE["documentation-fragmentation"] = _delayed_diagnosis_v2;
+
+/* ═══════════════════════════════════════════════════════════════════
+   2026-05-08 Liby final ingest — backlog 일괄 처리
+   - 신규 entry: heel-pain, persistent-physical-symptoms, pocus-focus-cardiac,
+     hepatitis-ab-vaccine, herpes-zoster-vaccine, hpv-vaccine,
+     japanese-encephalitis-vaccine, pneumococcal-vaccine, rabies-vaccine,
+     varicella-mmr-polio-vaccine, adult-vaccination-summary, afp-poems-2025-dec
+   - alias 통합: hepatitis-b.md → 기존 _hepb_mgmt_v2 alias 추가;
+                primary-care-top20-2024.md → 기존 _afp_poems_2024_v2 alias 추가
+   - skip: knowledge/MAP.md (META index, 임상 entry 아님)
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* heel-pain — 발뒤꿈치 통증 진단·관리 (AFP 2025). [CLINICAL] */
+var _heel_pain_v2 = {
+  kind: "disease",
+  keywords: ["heel-pain","발뒤꿈치 통증","heel pain","족저근막염","plantar fasciitis","아킬레스건증","Achilles tendinopathy","retrocalcaneal bursitis","Sever disease"],
+  parents: [],
+  primarySources: [
+    "Morancie NA, Irvin L, Rayala BZ. Heel Pain: Diagnosis and Management. Am Fam Physician 2025 Dec;112(6):648-656. PMID:41533410"
+  ],
+  sections: {
+    notes: {
+      content: "### 역학\n- 연간 **2백만 건** 외래 방문\n- 위험 요인: 높은 BMI, 수작업직, 좌식 생활\n- 대부분 보존적 치료로 호전",
+      sources: []
+    },
+    differential: {
+      content: "| 원인 | 특징 | 특수 집단 |\n|---|---|---|\n| **족저근막염 (Plantar fasciitis)** | 기상 직후 통증 (첫 발걸음), 종골 내측 압통 | 성인, 가장 흔함 |\n| **후방 발뒤꿈치 점액낭염 (Retrocalcaneal bursitis)** | Haglund 변형 + 비후 아킬레스건 | 여성 40-60세 多 |\n| **종골 골단염 (Sever disease)** | 활동적 소아·청소년 후방 발뒤꿈치 통증 | 소아·청소년 (외래 근골격 16%) |\n| **Os trigonum 증후군** | 반복 족저굴곡 → 후방 발목 통증 + 절뚝걸음 | 축구·체조·무용 선수 |\n| **비골건 손상** | 외측 발뒤꿈치 통증 | 스테로이드 주사력·플루오로퀴놀론·RA·고부갑상선혈증·당뇨 위험 |\n\n**임상 진단 (족저근막염 — 전형):**\n- 기상 직후 첫 걸음 통증 (most sensitive)\n- 종골 내측 결절 압통\n- 장시간 앉다 일어날 때 악화\n\n**영상:**\n- **MRI**: 대부분 원인에 가장 정확\n- **POCUS**: 족저근막 두께 >4mm → 족저근막염 지지 ([[pocus-primary-care-efsumb|POCUS]] 외래 적용)\n- X-ray: 종골 골절·골종양 배제; 종골 골극(heel spur)은 진단적 가치 낮음",
+      sources: []
+    },
+    protocol: {
+      content: "**보존적 치료 (1차 — 대부분 호전):**\n\n| 단계 | 방법 |\n|---|---|\n| 1차 | 스트레칭 (아킬레스건·족저근막), 야간 부목(night splint), 쿠션 깔창 |\n| 2차 | 물리치료, 체외충격파치료(ESWT) |\n| 3차 (효과 없을 때) | 초음파 유도 스테로이드 주사 ([[msk-injection-therapy|근골격주사]] 적용) — 족저근막염·후방 점액낭염 |\n\n**소아 종골 골단염 (Sever disease):**\n- 활동 제한 + 쿠션 깔창 → 대부분 성장판 닫히면 자연 소실\n\n**심리 요인:**\n- Pain catastrophizing·kinesiophobia → 족부 기능 저하·예후 불량과 연관\n- 외래 확인: \"통증 때문에 움직이는 걸 피하시나요?\"",
+      sources: []
+    },
+    precaution: {
+      content: "- **비골건 주사 위험 요인 확인**: 플루오로퀴놀론 복용력, 당뇨, RA → 건 파열 위험 ↑\n- 수술 — 난치성(≥6개월 보존치료 실패) 시에만 고려",
+      sources: []
+    },
+    referral: {
+      content: "- 6개월 보존치료 실패 → 정형외과·족부 전문의\n- 복잡 영상 소견 또는 수술 고려 시\n- 소아 Sever 비전형 → 소아청소년과 또는 정형외과",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["heel-pain"] = _heel_pain_v2;
+KNOWLEDGE_BUNDLE["발뒤꿈치통증"] = _heel_pain_v2;
+KNOWLEDGE_BUNDLE["족저근막염"] = _heel_pain_v2;
+KNOWLEDGE_BUNDLE["plantar-fasciitis"] = _heel_pain_v2;
+
+/* persistent-physical-symptoms — PPS 일차의료 회복 접근법. [INSIGHTS] */
+var _pps_v2 = {
+  kind: "topic",
+  keywords: ["persistent-physical-symptoms","PPS","지속 신체증상","기능성 증상","신체화","MUS","뇌안개","포스트코비드","fibromyalgia","ME/CFS","brain-based threat response","biopsychosocial"],
+  parents: [],
+  primarySources: [
+    "Abrahamsen C et al. Persistent physical symptoms not explained by structural abnormalities or disease processes: a primary care approach to promote recovery. Scand J Prim Health Care 2026;44(1):2633765. PMID:41823400, DOI:10.1080/02813432.2026.2633765"
+  ],
+  sections: {
+    definition: {
+      content: "**지속 신체증상(PPS)**: 구조적 이상이나 질환 진행으로 충분히 설명되지 않는 신체 증상 — [[fatigue|피로]], 통증, 두통, 뇌안개(brain fog) — 이 수개월 이상 지속되어 삶의 질·업무 능력을 저하시키는 상태.\n\n포함: 만성피로증후군(ME/CFS), 섬유근통, 포스트코비드 증후군, 기능성 신체화",
+      sources: []
+    },
+    notes: {
+      content: "**뇌 기반 위협 반응 이론 (Brain-Based Threat Response):**\n- 증상은 뇌가 양성 감각을 **위험 신호**로 잘못 해석할 때 발생\n- 기대(expectation)와 학습된 연합(learned associations)이 증상 지속을 강화\n- 생물·심리·사회적 요인이 개인마다 이 기전에 기여하는 방식이 다름\n\n**임상적 함의:**\n- \"검사 정상인데 왜 아프냐\" → 뇌 처리 이상으로 설명 가능\n- 반복 검사·전문과 의뢰 → 위협 신호 강화 가능 (증상 악화 위험)\n- 타당화 + 기전 설명이 치료 첫 단계",
+      sources: []
+    },
+    differential: {
+      content: "**PPS 진단 접근:**\n1. 구조적 질환 배제 (적절한 1차 검사)\n2. 증상 타당화: \"검사 정상 = 꾀병이 아님\" 명시\n3. 위협 반응 기여 요인 탐색:\n   - 신체 요인: 수면 부족, 영양 불균형, 진통제 남용\n   - 심리 요인: 증상에 대한 공포·재앙화 사고\n   - 사회 요인: 직업 스트레스, 돌봄 부담, 고립",
+      sources: []
+    },
+    protocol: {
+      content: "**핵심 3단계 전략:**\n\n1. **증상 타당화 (Validation)**\n   - \"증상이 실재한다\"는 것 명시\n   - \"정상 검사 = 꾀병\"이라는 환자의 두려움 직접 해소\n   - 공감 표현: \"이런 증상이 얼마나 힘드신지 충분히 이해합니다\"\n\n2. **지속 설명 (Explanation)**\n   - 뇌 기반 위협 반응 개념 환자 언어로 설명\n   - \"뇌가 '위험' 신호를 너무 예민하게 처리하고 있는 상태입니다\"\n   - 반복 검사·회피 행동이 증상을 강화한다는 점 설명\n\n3. **개별화 관리 계획 (Personalised Management)**\n   - 생물·심리·사회 요인 동시 접근\n   - 점진적 활동 복귀 (pacing)\n   - 필요 시 [[chronic-pain-integrative|심리 치료(CBT)]] 또는 ACT 병행\n   - 포스트코비드: 동일 원칙 적용 가능",
+      sources: []
+    },
+    precaution: {
+      content: "- 반복 검사는 증상 해소에 도움되지 않고 오히려 위협 신호를 강화할 수 있음\n- 순수 생물의학적 설명만 추구하면 환자가 회복 경로를 찾지 못함\n- 포스트코비드·ME/CFS: 급격한 활동 증가(push-crash)는 금지 — 점진적 pacing\n- 관련: [[functional-dyspepsia|functional-dyspepsia]] (기능성 소화불량)",
+      sources: []
+    },
+    referral: {
+      content: "- 심한 기능 저하 + 심리적 재앙화 → 인지행동치료(CBT) 또는 수용전념치료(ACT) 전문가 의뢰\n- 포스트코비드 + 자율신경 이상·기립성 저혈압 → 내과·재활의학 협진 고려",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["persistent-physical-symptoms"] = _pps_v2;
+KNOWLEDGE_BUNDLE["PPS"] = _pps_v2;
+KNOWLEDGE_BUNDLE["지속신체증상"] = _pps_v2;
+KNOWLEDGE_BUNDLE["MUS"] = _pps_v2;
+KNOWLEDGE_BUNDLE["medically-unexplained-symptoms"] = _pps_v2;
+
+/* pocus-focus-cardiac — AI 강화 집중심장초음파 (FoCUS). [CLINICAL — 조건부] */
+var _pocus_focus_cardiac_v2 = {
+  kind: "topic",
+  keywords: ["pocus-focus-cardiac","FoCUS","집중심장초음파","cardiac POCUS","AI 초음파","핸드헬드 초음파","handheld ultrasound","LV 기능","판막질환","심낭삼출"],
+  parents: [],
+  primarySources: [
+    "Fisher L et al. Artificial Intelligence-Enhanced Cardiac Point-of-Care Ultrasound: A Prospective Single-Arm Study. Mayo Clin Proc Digit Health 2026 Mar;4(2):100355. PMID:42094314, DOI:10.1016/j.mcpdig.2026.100355"
+  ],
+  sections: {
+    notes: {
+      content: "전향적 단일군 연구, 660명 성인 (응급실·내과 병동), 2022-07~2023-12.\n\n| 지표 | 결과 |\n|---|---|\n| 임상적으로 관련된 심장 소견 발견 | **29% (193/660)** |\n| 새 소견으로 치료 수정 | **7% (49/660)** |\n| 중재적 시술 필요 | 1.4% (9/660) |\n| LV 기능 저하 및 판막 질환 | 고감도로 탐지 |\n| 우심계 이상 | **감도 낮음** |",
+      sources: []
+    },
+    indication: {
+      content: "- 임상적 의심 존재하거나 일상 평가 중 심장 평가가 필요한 외래·입원 환자\n- 비심장전문의(가정의학과·일반내과·응급의학과) 시행 시 AI 알고리즘 보조\n- 특히 **LV 기능 저하·판막 이상·심낭삼출** 선별 목적",
+      sources: []
+    },
+    protocol: {
+      content: "**AI 보조 FoCUS 워크플로우:**\n1. 핸드헬드 초음파 + AI 알고리즘 소프트웨어 연결\n2. 비심장전문의 집중 훈련 후 시행 (표준화 교육 필수)\n3. AI 자동 분석: 심실 기능·판막 질환·심낭삼출·IVC 크기\n4. AI 이상 소견 flagging → 심장 전문의 확진 또는 추가 영상 결정\n\n**POCUS 일차의료 적용 맵 (외래):**\n- 호흡 곤란 + 하지 부종 → LV 기능·판막·삼출 확인 ([[pocus-lung|폐 POCUS]] 병행)\n- 부정맥 환자 → LV 기능 기저 확인\n- 고혈압·심부전 위험군 → 선별 목적 FoCUS 고려",
+      sources: []
+    },
+    precaution: {
+      content: "- **우심계 이상 (우심실 기능·삼첨판막 질환)**: 감도 낮음 — FoCUS 음성이어도 임상 의심 지속 시 공식 심초음파 의뢰\n- 비심장전문의 시행 시 집중 훈련 필수 (5시간 미만 훈련으로 시작 가능, 지속 교육 필요)\n- 이 연구는 응급·병동 세팅 — 외래 일차의료 직접 외삽 주의 [초록 기반 — 전문 미확인]",
+      sources: []
+    },
+    comparison: {
+      content: "| 항목 | AI 보조 FoCUS | 표준 심초음파 |\n|---|---|---|\n| 시행자 | 비심장전문의 가능 | 초음파 전문사·심장전문의 |\n| 장점 | 즉시 가용, 치료 수정 가능 | 전체 심장 평가 표준 |\n| 한계 | 우심계·복잡 판막 평가 제한 | 예약 대기, 비용 |\n| 적합 | 선별·임상 결정 보조 | 확진·복잡 케이스 |\n\n관련: [[pocus-primary-care-efsumb|EFSUMB POCUS curriculum]], [[pocus-abdominal|복부 POCUS]]",
+      sources: []
+    },
+    referral: {
+      content: "- AI FoCUS에서 이상 소견 발견 → 심장전문의 공식 심초음파 의뢰\n- 우심계 이상 임상 의심 (폐고혈압·RV 부전) → 직접 심초음파 의뢰 (FoCUS 우회)\n- 심낭삼출 발견 + 혈역학적 불안정 → 즉시 의뢰",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["pocus-focus-cardiac"] = _pocus_focus_cardiac_v2;
+KNOWLEDGE_BUNDLE["FoCUS"] = _pocus_focus_cardiac_v2;
+KNOWLEDGE_BUNDLE["집중심장초음파"] = _pocus_focus_cardiac_v2;
+KNOWLEDGE_BUNDLE["cardiac-pocus"] = _pocus_focus_cardiac_v2;
+
+/* hepatitis-ab-vaccine — A·B형간염 백신 통합 entry. [CLINICAL] */
+var _hep_ab_vacc_v2 = {
+  kind: "disease",
+  keywords: ["hepatitis-ab-vaccine","A형간염","hepatitis A","B형간염","hepatitis B","Heplisav-B","Engerix-B","Recombivax HB"],
+  parents: [],
+  primarySources: [
+    "ACIP HepB Universal 2022 — MMWR 71(13); MMWR 73(48), 2024",
+    "CDC Hepatitis A Vaccination HCP 2024",
+    "KDCA 성인 예방접종 가이드 2024",
+    "Moore II R et al. Hepatitis B: Part I. Updates on Screening and Prevention. Am Fam Physician 2026 Mar;113(3):229-234. PMID:41839073"
+  ],
+  sections: {
+    indication: {
+      content: "### A형간염\n- 고위험군(의료인·해외여행자·만성 간질환자 등): 6-18개월 간격 2회\n- **40세 미만**: 항체검사 없이 접종 권고 (한국 임상 실용)\n- **40세 이상**: 항체검사 후 음성이면 접종 권고\n\n> 미국 CDC는 2020 이후 요청 시 모든 성인 접종 가능 (위험군 아니어도). 한국은 연령 기반 임상 기준 유지.\n\n**여행 관련**: 1차 접종 후 ~2주에 보호항체 95%↑ → 여행 직전 1차만 맞고 출국 가능. 장기면역(20년+)은 2차 완료 필요 → 귀국 후 추가.\n\n### B형간염 (ACIP Universal 2022)\n- **19~59세 성인**: 위험군 평가 없이 universal 접종 권고\n- ≥60세: 위험군 기반 접종 (의료인·투석·감염 노출 가능성 등)",
+      sources: []
+    },
+    schedule: {
+      content: "| 백신 | 스케줄 | 경로 |\n|---|---|---|\n| Engerix-B / Recombivax HB | 0·1·6개월 (3회) | 삼각근 근주 |\n| **Heplisav-B** | 0·1개월 (**2회**) | 삼각근 근주 |\n\n> Heplisav-B는 임신부에게도 허용 (2024.9 ACIP).",
+      sources: []
+    },
+    exam: {
+      content: "### 항체검사 시 혈액검사 세트\n- B형간염 + 기타: HBsAg / HBsAb / Anti-HCV Ab / HIV Ag/Ab — 4종\n- B형간염만 확인: HBsAg / HBsAb — 2종\n- 항체검사 원하는 경우: 3차 접종 1개월 후 anti-HBs\n\n### Triple Panel 스크리닝 (CDC)\n**배경**: 미국 내 만성 B형간염 환자의 약 2/3가 자신의 감염을 모름.\n\n| 항목 | 검사 |\n|---|---|\n| HBsAg | 현재 감염 여부 |\n| Anti-HBs (HBsAb) | 면역 형성 여부 |\n| Anti-HBc | 과거 감염 여부 |\n\n- **대상**: 모든 성인 — 적어도 1회 triple panel (위험군 평가 없이)\n- **임신 중**: 매 임신마다 스크리닝 (수직감염 차단)\n- 한국 KDCA 2024는 아직 전 성인 triple panel 채택 미완 — 임상 판단 가능\n\n### 해석 패턴\n| HBsAg | Anti-HBs | Anti-HBc | 해석 |\n|---|---|---|---|\n| - | + | - | 백신 면역 |\n| - | + | + | 과거 감염 후 자연 회복 |\n| - | - | - | 비면역 (접종 필요) |\n| + | - | + | 현재 감염 (HBV) |\n| - | - | + | 과거 감염 / window기 / 위양성 — 추가 평가 |",
+      sources: []
+    },
+    protocol: {
+      content: "### 항체 비생성자 (Non-responder) 관리\n**해당**: 노출 고위험군(의료인 등), 면역저하자\n\n1. 기본 3회 완료 후 anti-HBs (-) → 3회 재접종 (0·1·6개월)\n2. 재접종 완료 1-2개월 후 anti-HBs 재검사\n3. 재접종 후에도 anti-HBs (-) → **Non-responder 판정**\n   - 추가 접종 불필요\n   - HBsAg 음성 확인\n   - 추후 혈액 노출 시 즉시 HBIG + HBV 백신\n\n> 일반인은 재접종 불필요. 비면역(anti-HBs(-), anti-HBc(-)) 확인 시 즉시 접종 시작.",
+      sources: []
+    },
+    insurance: {
+      content: "### 한국 KDCA 차이 [REGULATORY]\n- KDCA 2024는 **universal 성인 전략 미채택** — 위험군·고위험군 기반 유지\n- 의료인·신생아·고위험군 중심 NIP 적용\n- 임상 판단으로 성인 접종 확대 가능 (자비)\n- Anti-HBc 추가가 핵심 변화 — 과거 감염(natural immunity) vs 미감염 구분",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["hepatitis-ab-vaccine"] = _hep_ab_vacc_v2;
+KNOWLEDGE_BUNDLE["A형간염"] = _hep_ab_vacc_v2;
+KNOWLEDGE_BUNDLE["B형간염백신"] = _hep_ab_vacc_v2;
+KNOWLEDGE_BUNDLE["hepatitis-a"] = _hep_ab_vacc_v2;
+KNOWLEDGE_BUNDLE["hepatitis-b-vaccine"] = _hep_ab_vacc_v2;
+KNOWLEDGE_BUNDLE["Heplisav-B"] = _hep_ab_vacc_v2;
+
+/* herpes-zoster-vaccine — 대상포진 백신 (RZV/ZVL). [CLINICAL] */
+var _hzv_v2 = {
+  kind: "disease",
+  keywords: ["herpes-zoster-vaccine","대상포진","herpes zoster","shingrix","싱그릭스","조스타박스","ZVL","RZV","Zostavax"],
+  parents: [],
+  primarySources: [
+    "MMWR 71(3), 2022 — RZV in Immunocompromised Adults",
+    "CDC Shingrix HCP Considerations 2024",
+    "KDCA 성인 예방접종 가이드 2024"
+  ],
+  sections: {
+    classification: {
+      content: "| 백신 | 종류 | 접종 | 상태 |\n|---|---|---|---|\n| RZV (Shingrix, 싱그릭스) | 사백신 | 2회 근육주사 | 1차 권고 |\n| ZVL (Zostavax, 조스타박스) | 생백신 | 1회 피하주사 | **2020년 미국 단종**, KDCA NIP 미포함 |",
+      sources: []
+    },
+    indication: {
+      content: "- **ACIP**: ≥50세 성인 / **≥19세** 중증면역저하자 (암치료 중, 면역억제제 복용 중)\n- **KDCA**: ≥60세 권고. 면역저하자 RZV는 임상 상황에 따라 자비 접종\n- **ZVL**: 미국 단종으로 사실상 폐용",
+      sources: []
+    },
+    schedule: {
+      content: "**면역정상 성인** (RZV 2회)\n- 2~6개월 간격 (최소 4주)\n- 6개월 초과 지연 시 → 처음부터 재시작 불필요, 바로 2차 접종 (효능 동일 여부는 불분명)\n\n**면역저하자** (RZV 2회)\n- **1~2개월 간격** (일반 2-6개월이 아닌 단축 스케줄)",
+      sources: []
+    },
+    protocol: {
+      content: "### 전환·재접종 특이사항\n- 조스타박스(ZVL) 접종 이력 → 2개월 후부터 싱그릭스(RZV) 접종 가능\n- 이전 대상포진 이환 이력 → 완전 회복 후 싱그릭스 접종 가능",
+      sources: []
+    },
+    contraindication: {
+      content: "- 면역저하자: 생백신(ZVL) 금기 → **RZV만** 사용",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["herpes-zoster-vaccine"] = _hzv_v2;
+KNOWLEDGE_BUNDLE["대상포진백신"] = _hzv_v2;
+KNOWLEDGE_BUNDLE["shingrix"] = _hzv_v2;
+KNOWLEDGE_BUNDLE["싱그릭스"] = _hzv_v2;
+KNOWLEDGE_BUNDLE["조스타박스"] = _hzv_v2;
+KNOWLEDGE_BUNDLE["RZV"] = _hzv_v2;
+KNOWLEDGE_BUNDLE["herpes-zoster"] = _hzv_v2;
+
+/* hpv-vaccine — HPV 백신. [CLINICAL] */
+var _hpv_v2 = {
+  kind: "disease",
+  keywords: ["hpv-vaccine","HPV","자궁경부암","인유두종바이러스","가다실","가다실9","Gardasil"],
+  parents: [],
+  primarySources: [
+    "CDC ACIP HPV Vaccination Considerations 2024",
+    "KDCA 예방접종도우미 — HPV 국가사업"
+  ],
+  sections: {
+    indication: {
+      content: "### ACIP 2024\n- **9~26세**: routine 권고 (성별 구분 없음)\n- **27~45세**: shared clinical decision-making (SCDM) — 파트너·감염 이력·미접종 상태 고려 개별 결정\n- **면역저하자**: 9~26세 routine, 연령 무관 3-dose",
+      sources: []
+    },
+    schedule: {
+      content: "| 개시 연령 | 스케줄 | 최소 간격 |\n|---|---|---|\n| 9~14세 | **2회** (0·6-12개월) | 1-2차 ≥5개월 |\n| ≥15세 또는 면역저하자 (연령 무관) | **3회** (0·2·6개월) | 1-2차 4주 / 2-3차 12주 / 1-3차 5개월 |\n\n> 2회 스케줄은 <15세 개시 시에만. 15세 이상으로 미완 시 3회로 전환.",
+      sources: []
+    },
+    insurance: {
+      content: "### 한국 KDCA 국가사업 [REGULATORY]\n- **여성 만 12세**: NIP 무료 접종 (2가 또는 4가)\n- **저소득층 만 13~17세 여성**: 무료 접종\n- **성인 routine 권고**: 여성 자비 접종, 남성 자비 접종 (KDCA routine 권고 제한적)\n- 27~45세 shared decision 접근은 ACIP 기준으로 임상 판단\n- 자궁경부암 스크리닝 별도 — [[cervical-cancer-screening|HPV 스크리닝·Pap]] 참조",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["hpv-vaccine"] = _hpv_v2;
+KNOWLEDGE_BUNDLE["HPV"] = _hpv_v2;
+KNOWLEDGE_BUNDLE["가다실"] = _hpv_v2;
+KNOWLEDGE_BUNDLE["가다실9"] = _hpv_v2;
+KNOWLEDGE_BUNDLE["인유두종바이러스"] = _hpv_v2;
+
+/* japanese-encephalitis-vaccine — 일본뇌염 백신. [CLINICAL] */
+var _je_v2 = {
+  kind: "disease",
+  keywords: ["japanese-encephalitis-vaccine","일본뇌염","Japanese encephalitis","IXIARO","Imojev"],
+  parents: [],
+  primarySources: [
+    "KDCA 성인 예방접종 가이드 2024",
+    "CDC JE Vaccine for Travelers"
+  ],
+  sections: {
+    classification: {
+      content: "| 구분 | 사백신 (불활성화, IXIARO 등) | 생백신 (약독화, Imojev 등) |\n|-----|--------------------------|--------------------------|\n| 접종 횟수 | 2회 (0일·28일) | 성인 1회 |\n| 추가접종 | 필요 시 1~2년 후 1회 | — |\n| 특징 | 부작용 적음, 해외 많이 사용 | 편의성 우수 |\n| 금기 | 없음 | 임신부·면역저하자 금기 |",
+      sources: []
+    },
+    indication: {
+      content: "**실전 선택**\n- **여행 직전 (시간 없을 때)**: 생백신 1회 (금기 없을 때)\n- **시간 여유 있을 때**: 불활성화 2회 완료\n- 소아기 접종 기록 불확실해도 성인 추가접종 안전\n- 관련: [[travel-vaccination|해외여행 백신]] 종합 권고",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["japanese-encephalitis-vaccine"] = _je_v2;
+KNOWLEDGE_BUNDLE["일본뇌염"] = _je_v2;
+KNOWLEDGE_BUNDLE["Japanese-encephalitis"] = _je_v2;
+KNOWLEDGE_BUNDLE["IXIARO"] = _je_v2;
+KNOWLEDGE_BUNDLE["Imojev"] = _je_v2;
+
+/* pneumococcal-vaccine — 폐렴구균 백신 (PCV/PPSV). [CLINICAL] */
+var _pneumo_v2 = {
+  kind: "disease",
+  keywords: ["pneumococcal-vaccine","폐렴구균","pneumococcal","폐렴백신","PCV13","PCV15","PCV20","PCV21","PPSV23"],
+  parents: [],
+  primarySources: [
+    "ACIP 2024.10 개정 — MMWR 74(1), 2025. PMID:39773952",
+    "KDCA 성인 예방접종 가이드 2024"
+  ],
+  sections: {
+    indication: {
+      content: "### ACIP 2024 (≥50세 universal PCV)\n| 대상 | 권고 |\n|---|---|\n| ≥50세 PCV-naive | PCV20 **또는** PCV21 단독 / **또는** PCV15 후 1년 뒤 PPSV23 |\n| ≥19세 면역저하·무비증·CSF 누출·인공와우 | PCV20/21 단독 / 또는 PCV15 후 ≥8주 PPSV23 |\n| ≥65세 PCV-naive | 위 ≥50세 공식과 동일 |\n| PPSV23만 기접종자 | ≥1년 후 PCV15/20/21 1회 보완 |\n\n> PCV13 단독 신규 접종은 면역저하·무비증·CSF 누출·인공와우 중심으로 축소. PCV15/20/21 확산.",
+      sources: []
+    },
+    insurance: {
+      content: "### 한국 KDCA 2024 차이 [REGULATORY]\n- ≥65세 **PPSV23 국가사업 유지** (1회)\n- ≥19세 PCV13: 면역저하자·무비증·CSF 누출·인공와우에만 NIP 적용\n- PCV15·PCV20·PCV21은 2024 현재 KDCA NIP 미포함, 임상 상황에 따라 자비 접종 고려\n- 실전 접근: **국가사업 대상은 PPSV23 유지 + 고위험군은 PCV13 우선**, ACIP 확대안은 참고",
+      sources: []
+    },
+    classification: {
+      content: "### 만성질환자 해당 범위\n알코올중독 · 만성 심혈관질환([[heart-failure|심부전]]·심근병증 포함) · 만성 간질환 · 만성 폐질환([[COPD|COPD]]·폐기종·천식 포함) · 흡연 · 당뇨병\n\n### 면역저하자 해당 범위\n선천·후천성 무비증 · 낫적혈구병·혈색소병증 · 만성 신질환 · 전신성 암 · HIV 감염 · 호지킨병 · 면역억제제 투여 · 백혈병 · 림프종 · 다발성 골수종 · 신증후군 · 고형장기이식",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["pneumococcal-vaccine"] = _pneumo_v2;
+KNOWLEDGE_BUNDLE["폐렴구균"] = _pneumo_v2;
+KNOWLEDGE_BUNDLE["폐렴백신"] = _pneumo_v2;
+KNOWLEDGE_BUNDLE["PCV13"] = _pneumo_v2;
+KNOWLEDGE_BUNDLE["PCV15"] = _pneumo_v2;
+KNOWLEDGE_BUNDLE["PCV20"] = _pneumo_v2;
+KNOWLEDGE_BUNDLE["PCV21"] = _pneumo_v2;
+KNOWLEDGE_BUNDLE["PPSV23"] = _pneumo_v2;
+KNOWLEDGE_BUNDLE["pneumococcal"] = _pneumo_v2;
+
+/* rabies-vaccine — 광견병 백신 (PrEP). [CLINICAL] */
+var _rabies_v2 = {
+  kind: "disease",
+  keywords: ["rabies-vaccine","광견병","rabies","PrEP rabies"],
+  parents: [],
+  primarySources: [
+    "MMWR 71(18), 2022 — Modified PrEP 2-dose Schedule",
+    "CDC Rabies PrEP Clinical Care 2024"
+  ],
+  sections: {
+    schedule: {
+      content: "### 노출 전 예방 (Pre-exposure Prophylaxis)\n**기본 2회**: 0일·7일, 어깨세모근 근육주사 (2022 ACIP 개정)\n\n**기본 3회** (0일·7일·21일 또는 28일):\n- 광견병 관련 실험실 종사자 등 매우 높은 노출 위험\n- 야생동물·유기동물 접촉 직업군\n- 광견병 발생률 높은 지역 장기 체류(>3년) 노출 위험",
+      sources: []
+    },
+    protocol: {
+      content: "### 추가접종 (Booster) — 2022 ACIP 개정\n노출 위험 카테고리(1~5군)에 따라 titer 기반 booster 정책으로 전환:\n\n- **지속적 직업 노출군**(실험실 종사자·동물 취급자 등): 주기적 titer 측정, ≥0.5 IU/mL 미만 시 booster\n- **간헐적 노출군**(여행자 등): 노출 이벤트 발생 시에만 post-exposure 처치 고려\n- 과거 \"1년째 추가 + 5년마다 booster\" 공식은 구 3회 스케줄 시대 경험칙 — **현 CDC 권고에는 없음**",
+      sources: []
+    },
+    insurance: {
+      content: "### 한국 KDCA 차이 [REGULATORY]\n- KDCA 건강정보포털은 2022 ACIP 2회 스케줄 미반영 (구 3회 잔존)\n- 임상에서는 **CDC 2회 스케줄을 국제 표준으로** 적용 권고",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["rabies-vaccine"] = _rabies_v2;
+KNOWLEDGE_BUNDLE["광견병"] = _rabies_v2;
+KNOWLEDGE_BUNDLE["rabies"] = _rabies_v2;
+
+/* varicella-mmr-polio-vaccine — 수두·MMR·폴리오 백신 통합. [CLINICAL] */
+var _vmp_v2 = {
+  kind: "disease",
+  keywords: ["varicella-mmr-polio-vaccine","수두","varicella","MMR","홍역","볼거리","풍진","폴리오","IPV","polio","measles","mumps","rubella"],
+  parents: [],
+  primarySources: [
+    "CDC Measles/Varicella/Polio HCP 2024",
+    "MMWR 72(49), 2023 — Adult IPV Updated Recs",
+    "KDCA 예방접종도우미 2024"
+  ],
+  sections: {
+    indication: {
+      content: "### 수두 (생백신)\n**대상**: 1970년 이후 출생 중 면역 없는 자 — 학생·군인·의료인·학교/유치원 교사·해외여행자·비자발급·고위험군(면역저하자)과 밀접 접촉자·가임기 여성\n\n### MMR (생백신)\n| 대상 | 권고 |\n|---|---|\n| **1968년 이전 출생자 (한국 KDCA 기준)** | 자연감염 항체 보유 가능성 — 일반적으로 불필요, 음성 시 접종 고려 |\n| CDC 미국 기준 | 1957년 이전 출생자 (presumptive immunity) |\n| 1968년 이후 출생, 항체 불확실/접종력 불명 | MMR 1회 권장 |\n| 고위험군 (의료인·군인·대학생·해외여행자·홍역 발생국 방문·비자발급) | MMR 2회 (4주 간격) |\n\n> 국내 진료는 **KDCA 1968년 기준** 적용. 역학 차이(미국 1957 vs 한국 1968).\n\n### 폴리오 (IPV, 사백신) — ACIP 2023 개정\n| 상황 | 접종 |\n|---|---|\n| **미접종 또는 불완전 접종 성인 (전 대상)** | IPV 3회: 0·1-2개월·6-12개월 |\n| 접종 완료 + 고위험 직업 / 폴리오 유행지역 여행 | 1회 추가 booster |\n\n> 2023 ACIP 투표로 기존 \"고위험군 한정\"에서 모든 미접종 성인으로 확대.",
+      sources: []
+    },
+    schedule: {
+      content: "**수두**: 4~8주 간격 2회 (생백신)\n**MMR**: 고위험군 2회는 ≥4주 간격\n**IPV (폴리오)**: 0·1-2개월·6-12개월 (3회)",
+      sources: []
+    },
+    insurance: {
+      content: "### 한국 KDCA 차이 [REGULATORY]\n- KDCA 성인 폴리오 routine 권고 제한적 — 여행자·고위험 직업 중심\n- 임상 판단으로 미접종 성인 IPV 3회 고려 가능 (자비)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["varicella-mmr-polio-vaccine"] = _vmp_v2;
+KNOWLEDGE_BUNDLE["수두백신"] = _vmp_v2;
+KNOWLEDGE_BUNDLE["MMR"] = _vmp_v2;
+KNOWLEDGE_BUNDLE["IPV"] = _vmp_v2;
+KNOWLEDGE_BUNDLE["varicella"] = _vmp_v2;
+KNOWLEDGE_BUNDLE["폴리오"] = _vmp_v2;
+KNOWLEDGE_BUNDLE["홍역백신"] = _vmp_v2;
+
+/* adult-vaccination-summary — 성인 예방접종 권장사항 요약. [CLINICAL] */
+var _adult_vacc_summary_v2 = {
+  kind: "topic",
+  keywords: ["adult-vaccination-summary","성인 예방접종","adult immunization","ACIP","KDCA","독감백신 처방"],
+  parents: [],
+  primarySources: [
+    "CDC Adult Immunization Schedule 2025",
+    "ASCO 2024 Vaccination of Adults With Cancer Guideline — JCO.24.00032",
+    "IDSA 2025 Immunocompromised RTI Vaccines",
+    "Zhang L et al. Effectiveness of prescription-based influenza vaccination services. Vaccine 2026;82:128588. PMID:42000148",
+    "대한심부전학회 심부전 생활백서 2025",
+    "Roubille F et al. Eur J Prev Cardiol 2025. doi:10.1093/eurjpc/zwaf366"
+  ],
+  sections: {
+    indication: {
+      content: "### 일반 성인 기본 권장\n| 백신 | 주기 / 대상 |\n|---|---|\n| 파상풍 (Td/Tdap) | 10년마다 |\n| 인플루엔자 | 매년 (특히 ≥65세·만성질환자·의료종사자) |\n| [[varicella-mmr-polio-vaccine|MMR]] | 1968년 이후 출생, 항체 불확실 시 (KDCA 기준) |\n\n### 고위험군별 추가 권장\n| 백신 | 대상 |\n|---|---|\n| [[pneumococcal-vaccine|폐렴구균]] | ≥65세 PPSV23 (KDCA) / ≥50세 PCV15/20/21 (ACIP) / 만성질환·면역저하자 PCV13 |\n| [[hepatitis-ab-vaccine|B형간염]] | ACIP 19-59세 universal / KDCA 의료인·고위험군 |\n| [[hepatitis-ab-vaccine|A형간염]] | 40세 미만 항체 없이, 40세 이상 항체검사 후, 의료인·해외여행자 |\n| [[herpes-zoster-vaccine|대상포진]] | ≥50세 RZV (ACIP) / ≥60세 RZV (KDCA) |\n| [[hpv-vaccine|HPV]] | 9-26세 routine (성별 무관), 27-45세 SCDM |\n| [[varicella-mmr-polio-vaccine|수두]]·수막구균 | 집단생활·군인·해외유학 |\n| [[rabies-vaccine|광견병]]·[[japanese-encephalitis-vaccine|일본뇌염]]·황열 | 해외여행·봉사 (지역별 맞춤) |",
+      sources: []
+    },
+    precaution: {
+      content: "### 항암치료 중 독감백신 (ASCO 2024 / IDSA 2025)\n- **불활성 독감백신 권고** (생백신 금기)\n- 이상적 타이밍: **화학요법 직전 치료 ≥7일 후 & 다음 치료 2주 전** — 사이클 사이 접종\n- ANC 절대수치 기준(이전 500/1000 cutoff)은 현행 지침에서 **폐기** — 타이밍 중심으로 전환\n- 표적항암치료 중 경도~중등도 leukopenia → 독감백신 특히 권고\n- 생백신(MMR·수두·ZVL 등): 항암치료 중·후 3-6개월 금기 (개별 상담)",
+      sources: []
+    },
+    protocol: {
+      content: "### 처방 기반 독감백신 접종률 제고 [CLINICAL]\n> 출처: Zhang L et al. Vaccine 2026;82:128588. PMID:42000148. 군집 RCT, ≥60세 839명, 5개 지역보건센터.\n\n| 중재군 | 독감백신 접종률 |\n|---|---|\n| 일상 진료 (대조군) | **9.55%** |\n| 처방 기반 모델 (외래 처방 시 독감백신 권유 루틴 삽입) | **30.86%** |\n| 처방 기반 모델 + 소액 수수료 면제 | **83.23%** |\n\n### 외래 실전 적용\n- 외래 처방 시 의료진이 \"독감백신 맞으셨어요?\" 루틴 질문 + 당일 접종 연계\n- **처방-접종 동선을 하나로 묶는 것**이 핵심 — 별도 예약·방문 장벽 제거\n- 한국 상황: 65세 이상 NIP 무료 접종 맥락에서도 \"한 마디\" 중재로 우연 접종 유도\n- 의료기관 프로세스 개선: 만성질환 재처방 외래에 접종 권유 루틴 내장",
+      sources: []
+    },
+    notes: {
+      content: "### 심부전 환자 고위험 예방접종\n[[heart-failure|심부전]] 환자: 감염은 심혈관 합병증(급성 심근염·부정맥·혈전·사망) 위험을 높이는 계기 → **독감·폐렴구균·대상포진·RSV·COVID·Tdap** 권고. 세부 권고·기전은 `heart-failure.schedule` 참조.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["adult-vaccination-summary"] = _adult_vacc_summary_v2;
+KNOWLEDGE_BUNDLE["성인예방접종"] = _adult_vacc_summary_v2;
+KNOWLEDGE_BUNDLE["vaccination-summary"] = _adult_vacc_summary_v2;
+KNOWLEDGE_BUNDLE["adult-immunization"] = _adult_vacc_summary_v2;
+KNOWLEDGE_BUNDLE["독감백신처방"] = _adult_vacc_summary_v2;
+
+/* afp-poems-2025-dec — AFP POEMs 2025년 12월호 요약. [CLINICAL — 조건부] */
+var _afp_poems_2025_dec_v2 = {
+  kind: "topic",
+  keywords: ["afp-poems-2025-dec","AFP POEM 2025","아나필락시스","anaphylaxis","ambulatory ECG","보행심전도","premenstrual","SSRI","출혈질환","황달","소아 관절염"],
+  parents: [],
+  primarySources: [
+    "AFP POEMs Summary. Am Fam Physician 2025;112(6):606. PMID:41533401"
+  ],
+  sections: {
+    notes: {
+      content: "AFP 2025년 12월 POEMs 요약에 수록된 핵심 임상 주제:\n\n| 주제 | 임상 요점 |\n|---|---|\n| **아나필락시스** | 1차의료 응급 처치 업데이트 — 에피네프린 즉시 투여 원칙 재확인 |\n| 보행 심전도 모니터링 (Ambulatory ECG) | 외래 부정맥 감지 지표 |\n| 출혈 질환 (Bleeding Disorders) | 외래 접근 |\n| 황달 (Jaundice) | 감별 진단 |\n| 월경전증후군 — SSRI | SSRIs in premenstrual disorders |\n| 소아 세균성 관절염 | 진단·처치 핵심 |\n\n> ⚠ 각 항목 세부 수치·권고 등급은 전문(full text) 확인 필요 [초록 기반 — 전문 미확인]",
+      sources: []
+    },
+    protocol: {
+      content: "### 아나필락시스 외래 핵심\n> ⚠ 아래는 일반 가이드라인 기반 — 본 PMID의 세부 내용 아님 [가이드라인 default 인용: WAO 2020 / UpToDate]\n\n- **1차 처치**: 에피네프린 근주(대퇴부 외측) — 즉시, 지체 없이\n- 에피네프린 용량: 0.3~0.5mg (성인) / 0.01mg/kg (소아, 최대 0.5mg)\n- 앙와위 자세 + 하지 거상 (저혈압 시)\n- 2차 약물: 항히스타민제·스테로이드는 보조 역할 (에피네프린 대체 불가)\n- 처치 후 **최소 4~6시간 관찰** — 이상성 반응(biphasic) 위험\n- 에피펜(자가주사기) 처방 + 사용법 교육 — 퇴원 시 필수\n- 비강내 에피네프린 대안: [[neffy|Neffy]] (PMID:41839078)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["afp-poems-2025-dec"] = _afp_poems_2025_dec_v2;
+KNOWLEDGE_BUNDLE["AFP-POEMs-2025-12"] = _afp_poems_2025_dec_v2;
+KNOWLEDGE_BUNDLE["POEM-2025"] = _afp_poems_2025_dec_v2;
+
+/* hepatitis-b.md alias 통합 — 기존 _hepb_mgmt_v2 entry로 라우팅 (동일 PMID:41839074, 동일 주제 — HBV 진단·치료) */
+KNOWLEDGE_BUNDLE["hepatitis-b"] = _hepb_mgmt_v2;
+KNOWLEDGE_BUNDLE["B형간염"] = _hepb_mgmt_v2;
+KNOWLEDGE_BUNDLE["HBV"] = _hepb_mgmt_v2;
+
+/* primary-care-top20-2024.md alias 통합 — 기존 _afp_poems_2024_v2 entry로 라우팅 (MAP.md alias pair 명시) */
+KNOWLEDGE_BUNDLE["primary-care-top20-2024"] = _afp_poems_2024_v2;
+KNOWLEDGE_BUNDLE["일차의료-top20-2024"] = _afp_poems_2024_v2;
