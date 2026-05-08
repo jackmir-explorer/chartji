@@ -308,6 +308,11 @@ var KNOWLEDGE_BUNDLE = {
   /* v2 (B2) — Phase 4 Liby ingest. 원본: knowledge/by-disease/obesity.md */
   "obesity": {
     "kind": "disease",
+    "relations": [
+      { "kind": "coprescribe", "target": "glp1-selection-strategy", "note": "약물 선택 전략 hub" },
+      { "kind": "synergy", "target": "smoking-cessation", "note": "동반 라이프스타일 개입" },
+      { "kind": "synergy", "target": "cardiac-rehabilitation", "note": "운동 처방 통합" }
+    ],
     "keywords": ["obesity","비만","phenotype","hungry brain","hungry gut","slow burn","emotional hunger"],
     "primarySources": [
       "Acosta A et al. Mayo Clinic 비만 표현형. Obesity 2021 (PMID:33759389)",
@@ -471,6 +476,10 @@ var KNOWLEDGE_BUNDLE = {
   "wegovy": {
     "kind": "drug",
     "parents": ["obesity"],
+    "relations": [
+      { "kind": "coprescribe", "target": "obesity", "note": "BMI≥30 또는 ≥27+동반질환 표준 적응" },
+      { "kind": "synergy", "target": "cardiac-rehabilitation", "note": "체중감량 + 운동 통합 관리" }
+    ],
     "keywords": ["wegovy","위고비","semaglutide 2.4mg"],
     "primarySources": [
       "FDA prescribing information — Wegovy (semaglutide 2.4mg)",
@@ -559,6 +568,11 @@ var KNOWLEDGE_BUNDLE = {
   "mounjaro": {
     "kind": "drug",
     "parents": ["obesity"],
+    "relations": [
+      { "kind": "coprescribe", "target": "diabetes", "note": "T2DM 표준 적응 (Mounjaro 상품명)" },
+      { "kind": "coprescribe", "target": "obesity", "note": "BMI≥30 또는 ≥27+동반질환 (Zepbound 상품명)" },
+      { "kind": "synergy", "target": "sglt2-inhibitors", "note": "T2DM에서 신·심장 보호 시너지" }
+    ],
     "keywords": ["mounjaro","마운자로","zepbound","tirzepatide"],
     "primarySources": [
       "Huang L et al. J Am Pharm Assoc 2026;103112. PMID:41962807, DOI:10.1016/j.japh.2026.103112"
@@ -1475,6 +1489,10 @@ var KNOWLEDGE_BUNDLE = {
      ═══════════════════════════════════════════════════════════════════════ */
   "heart-failure": {
     "kind": "disease",
+    "relations": [
+      { "kind": "coprescribe", "target": "sglt2-inhibitors", "note": "GDMT 4 pillars 표준" },
+      { "kind": "coprescribe", "target": "cardiac-rehabilitation", "note": "안정기 의뢰 권고" }
+    ],
     "keywords": ["heart-failure","심부전","heart failure","CHF","congestive heart failure","HFrEF","HFpEF","HFmrEF","GDMT"],
     "primarySources": [
       "대한심부전학회. 심부전 진료지침 2022",
@@ -3079,6 +3097,11 @@ KNOWLEDGE_BUNDLE["당뇨신경병증"] = _dpn_v2;
 /* palliative-pain — 완화의료 부프레노르핀 + OUD+암 + 오피오이드 내성 전환 (4-30 deep-extract + 5-7·5-8 deep-extract). [CLINICAL] */
 var _palliative_pain_v2 = {
   kind: "topic",
+  relations: [
+    { kind: "coprescribe", target: "eol-deprescribing", note: "임종기 LBM 중단과 연계" },
+    { kind: "synergy", target: "goals-of-care-acp", note: "사전돌봄계획 통합" },
+    { kind: "synergy", target: "afp-eol-symptom-management", note: "임종기 증상 관리 메타" }
+  ],
   keywords: ["완화의료","palliative care","buprenorphine","부프레노르핀","오피오이드","암성통증","경피패치","transdermal","호스피스","OUD","opioid use disorder","장기 주사 부프레노르핀","오피오이드 내성","opioid tolerant","buprenorphine rotation"],
   primarySources: [
     "Jose V et al. The Effectiveness and Safety of Buprenorphine in Palliative Care: Systematic Review. J Pain Symptom Manage 2025;71(5):e525-e539. PMID:41475688, DOI:10.1016/j.jpainsymman.2025.12.009",
@@ -4594,6 +4617,10 @@ KNOWLEDGE_BUNDLE["cardiac-rehab"] = _cardiac_rehab_v2;
 /* CKD v2 보강 — VA/DoD 2025 + Finerenone + KDIGO/AKIPS 통합 (5-2 cron) */
 var _ckd_v2_full = {
   kind: "disease",
+  relations: [
+    { kind: "coprescribe", target: "sglt2-inhibitors", note: "신·심장 표준 — KDIGO 권고" },
+    { kind: "synergy", target: "hypertension", note: "BP 130/80 동시 관리" }
+  ],
   keywords: ["CKD","만성신장병","만성신부전","eGFR","시스타틴C","cystatin C","크레아티닌","신기능 추적","SGLT-2i","GLP-1","피네레논","finerenone","VA/DoD","KDIGO"],
   primarySources: [
     "Scandrett K et al. BMJ 2026;392:e085005. PMID:41856526",
