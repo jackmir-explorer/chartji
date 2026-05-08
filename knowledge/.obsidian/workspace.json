@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f7ed2e772d3e6e8b",
+        "id": "958bb39fa1151391",
         "type": "tabs",
         "children": [
           {
-            "id": "ed125654748b9957",
+            "id": "e5faf9af24b9b0d4",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "그래프 뷰"
+              "type": "markdown",
+              "state": {
+                "file": "MAP.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "MAP"
             }
           }
         ]
@@ -177,8 +181,24 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ed125654748b9957",
+  "active": "e5faf9af24b9b0d4",
   "lastOpenFiles": [
+    "claude.md",
+    "heart-failure-volume-overload.md",
+    "by-drug/vaccine-interval.md",
+    "by-disease/vaccination.md",
+    "[fatigue.md",
+    "guidelines/endocrinology-2025-update.md",
+    "guidelines/cardiology-2025-update.md",
+    "by-disease/pocus-focus-cardiac.md",
+    "by-disease/persistent-physical-symptoms.md",
+    "by-disease/neonatal-fever-pecarn.md",
+    "by-disease/heel-pain.md",
+    "by-disease/eol-deprescribing.md",
+    "by-disease/cancer-neuropathic-pain-steroid.md",
+    "by-disease/asthma.md",
+    "by-disease/anticholinergic-burden.md",
+    "by-disease/afp-eol-symptom-management.md",
     "by-disease/opioid-use-disorder.md",
     "by-drug/cgm-t2dm.md",
     "by-disease/sudden-hearing-loss.md",
@@ -188,16 +208,6 @@
     "by-disease/heart-failure-hfpef-obesity.md",
     "by-disease/heart-failure-gdmt-dosing.md",
     "by-disease/heart-failure-cardiology-2025-update.md",
-    "by-disease/vestibular-neuritis.md",
-    "by-drug/wegovy.md",
-    "by-drug/mounjaro.md",
-    "by-disease/sleep-apnea.md",
-    "by-disease/diabetic-peripheral-neuropathy.md",
-    "by-disease/paresthesia.md",
-    "by-disease/CKD.md",
-    "by-disease/heart-failure.md",
-    "pediatric-fever-management.md",
-    "by-disease/pediatric-antibiotic-stewardship.md",
-    "scope.md"
+    "by-disease/vestibular-neuritis.md"
   ]
 }

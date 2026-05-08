@@ -1,12 +1,5 @@
 # CLAUDE.md — Chartji 개발 하네스
 
-Chartji는 한국 가정의학과 외래 대화 기반 진료 보조 도구다.
-이 어플은 의사가 진료할 때 반드시 빠트려서는 안되는 사항들을 간단하고 선명하게 보여준다.
-이 어플은 의사가 빠르고 정확한 판단을 할수 있도록 진료를 보조한다.
-이 어플은 진료 대화를 기반으로, 핵심이 잘 축약된 문서를 출력한다.
-
----
-
 ## 핵심 제품 원칙
 
 1. 화면 출력은 짧고 선명하게 — reasoning dump 금지
@@ -15,12 +8,11 @@ Chartji는 한국 가정의학과 외래 대화 기반 진료 보조 도구다.
 4. RedFlag는 transcript-only — context 주입 절대 금지
 
 ---
-
 ## 호출 규칙
 
 - **전략 리뷰가 필요할 때** → `Boss` 호출 (Board 심층 리뷰)
 - **구현 작업이 필요할 때** → `Architect` 호출 (구조 진단 → Designer → 실무진 파이프라인)
-- **임상 지식 저장/주입** → `Liby` 호출 (knowledge/ 관리) → `agents/librarian.md`
+- **임상 지식 저장/주입** → `Liby` 호출 (knowledge/ 관리) → Researcher (Web에서 검증 `agents/librarian.md`
 
 워크플로우 상세 → `rules/workflow.md`
 
@@ -42,7 +34,7 @@ Chartji는 한국 가정의학과 외래 대화 기반 진료 보조 도구다.
 
 ### 심층 워크플로우 (전략 리뷰)
 
-1. Boss → CMO · CLO · CFO · CVO 순차 분석
+1. Boss → CMO · CLO · CFO · CVO 병렬 분석
 2. Boss 종합 보고서 → 미르 검토
 3. 미르가 다음 행동 결정
 
