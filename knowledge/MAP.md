@@ -1,7 +1,7 @@
 # knowledge/MAP.md — 지식 베이스 지도
 
 tags: [META]
-updated: 2026-04-23
+updated: 2026-05-08
 generated: 수동 (추후 Mapper routine화 가능)
 목적: **"지금 knowledge에 뭐가 있고 어디가 비어있는지"** 한 눈에 보기
 
@@ -9,42 +9,44 @@ generated: 수동 (추후 Mapper routine화 가능)
 
 ## 🔎 핵심 요약 (한 줄)
 
-**42개 엔트리**(by-disease 21 · by-drug 18 · guidelines 3 + alias 3) — **이비인후과·예방접종 강점**, **만성질환(당뇨·이상지질혈증)·호흡기·소화기·근골격 대부분 공백**.
+**144개 고유 md 엔트리** (by-disease 109 · by-drug 20 · guidelines 15) + bundle **177 unique entry objects** (601 alias keys). **이비인후과·예방접종·GLP-1 강점 + 만성질환 본체 진입 + 완화의학·노인의학·POCUS 신설**. 4월말~5월 폭발적 성장 (42→144, 3.4배).
 
 ---
 
 ## 1. 엔트리 분포
 
-| 카테고리 | 엔트리 수 | 비고 |
+| 카테고리 | md 파일 | 비고 |
 |---|---|---|
-| **by-disease/** | 21 | 질환·증상 메인 저장소 |
-| **by-drug/** | 18 | 약물·백신 |
-| **guidelines/** | 3 + 2 alias | 공식 가이드·요약 |
-| **메타 (index·log·scope·vocabulary·sourcing)** | 5 | 운영 파일 |
-| **합계** | 47 파일 (본문 42 고유) | |
+| **by-disease/** | 109 | 질환·증상 메인 저장소 (5월 78건 추가) |
+| **by-drug/** | 20 | 약물·백신 |
+| **guidelines/** | 15 | 공식 가이드·요약·CLINICAL/REGULATORY/INSIGHTS/TIPS |
+| **myth-log/** | 2 | 의학적 myth 학습 자원 (inject 격리) |
+| **메타 (root)** | 6 | 운영 파일 (MAP·index·log·scope·sourcing-rules·section-vocabulary) |
+| **합계** | **152 md** | |
+| Bundle unique objects | 177 | topic alias·deep-extract 흡수분 포함 |
+| Bundle alias keys | 601 | 영문/한글/약어 다중 등록 |
 
-### alias 쌍 (동일 엔트리, 이름만 다름)
-- `CKD.md` ≡ `ckd-monitoring.md`
-- `vte-hormone-therapy.md` ≡ `sex-hormone-vte-risk.md`
-- `primary-care-top20-2024.md` ≡ `afp-top20-poems-2024.md`
+### kind 분포 (bundle)
+- disease: 109 / topic: 53 / drug: 15
 
 ---
 
-## 2. 최근 30일 활동 (2026-03-24 ~ 04-23)
+## 2. 최근 활동 (2026-04-25 ~ 05-08, 2주)
 
 | 날짜 | 추가/수정 건수 | 주요 테마 |
 |---|---|---|
-| 2026-04-23 | **10건** (신규 4 + 보강 6) | 성호르몬-VTE, CKD 모니터링, GLP-1 리뷰 3건, 청소년 비만 GLP-1, 어지럼증 척추동맥, 독감백신 처방, 금연 전자담배 |
-| 2026-04-22 | 5건 | LPR San Diego, SGLT-2 비뇨감염, 우울 스크리닝, 비타민D, Neffy |
-| 2026-04-21 | 3건 + Phase 5a/5c 마이그레이션 | 심부전·심부전 의뢰·백신 v2 · drug v2 · Phase 4 v2 |
-| 2026-04-17 | 4건 | urticaria·resistant-HT·GLP-1 SMI·GLP-1 전당뇨 |
-| 2026-04-16 | 7건 | obesity 대폭 보강·GLP-1 반응 예측·구강병변 escalation·LPR 대안·dysphonia·neck-mass |
-| 2026-04-15 | 9건 | GLP-1/비만/wegovy 집중 보강·hyposmia 신규 |
-| 2026-04-14 | 4건 | TIPS 출처 규칙 소급 수정 |
-| 2026-04-11 | 9건 | 구강/이비인후과 집중 (BPPV·dry-mouth·burning-mouth·LPR 등) |
-| 2026-04-08~09 | 12건 | 초기 vaccination·vaccine 계열·dizziness·BPPV |
+| 2026-05-08 | **20+ entry 변경** | Liby final ingest — 신규 14 (백신 7·heel-pain·persistent-physical-symptoms·pocus-focus-cardiac·adult-vax-summary·afp-poems-2025-dec) + 재컴파일 8 + Tier 1 분할 (palliative-pain·IM-2025-update) + 키 중복 20건 일괄 수습 |
+| 2026-05-07 | 13 entry | deep-extract — ACB·PECARN 신생아발열·경증천식 외 7건 + post-split bundle 동기화 (heart-failure 5 sub-entry 흡수, alcohol-use-disorder 신규 ingest) |
+| 2026-05-06 | **대규모** | knowledge search Phase 1 신설 + 5-D batch 256 wikilinks + heart-failure / glp1-selection-strategy 분할 + heart-failure-volume-overload 정화 + Auditor 7군 권고 |
+| 2026-05-04 | 다수 | scout routine + 5-D 후행 |
+| 2026-05-02 | 5건 | EOL deprescribing·dementia-eol·기타 cron |
+| 2026-04-30 | 12+건 | ENT bulk (otitis-externa·meniere·sudden-hearing-loss·vestibular-neuritis·laryngitis·thyroid-fna-cnb·salivary-gland-stones·epistaxis 신규) |
+| 2026-04-29 | scope.md Tier 1 선언 | 임상 핵심영역 8개 명문화 |
+| 2026-04-28 | 8건 | HFpEF+비만·POCUS DUCS·Volume Overload·심부전 보강 |
+| 2026-04-27 | 5건 | Volume Overload BNP+POCUS·obesity GRADE·기타 |
+| 2026-04-26 | 4건 | ENT 보강·기타 |
 
-**경향**: 최근 활동 매우 활발. 주당 평균 10건+ 추가·보강. 주제는 **GLP-1/비만·이비인후과·백신**이 3대 축.
+**경향**: **2주 만에 100+ entry 추가** (4-23 시점 42 → 5-8 시점 144). 5-D auto-wikilinks 적용으로 옵시디언 그래프 가치 6.6배 증가 (60→385+).
 
 ---
 
@@ -54,51 +56,59 @@ generated: 수동 (추후 Mapper routine화 가능)
 
 | 분야 | 커버리지 | 엔트리 |
 |---|---|---|
-| 만성질환 — 고혈압 | 🟡 부분 | `resistant-hypertension` (저항성만) |
-| 만성질환 — 당뇨 | 🔴 **공백** | 약물(GLP-1·SGLT-2)만 있고 질환 엔트리 없음 |
-| 만성질환 — 이상지질혈증 | 🔴 **공백** | — |
-| 만성질환 — 비만 | 🟢 강함 | `obesity`, GLP-1 약물 4종, `glp1-selection-strategy` |
-| 만성질환 — CKD | 🟢 있음 | `CKD`, `ckd-monitoring` |
-| **생활습관 의학** | 🔴 **공백** | scope.md 2026-04-23 추가 — 운동·수면·스트레스·식이·절주·금연. 가정의학 핵심 무기. smoking-cessation·obesity 단백질 ABC 부속만 존재 |
-| 호흡기 — 감기·천식·COPD·폐렴·기관지염·만성기침 | 🔴 **전면 공백** | — |
-| 소화기 — GERD·위염·궤양·IBS·장염·변비·설사·치질·지방간·담석·췌장염 | 🔴 **전면 공백** | `LPR`이 인접하지만 GERD 본체는 없음 |
-| **이비인후과** | 🟢🟢 강점 | BPPV·dizziness·LPR·dysphonia·hyposmia·oral-lesion·burning-mouth·dry-mouth·low-freq-hearing-loss·neck-mass (10건) |
-| 근골격·통증 — 요통·경추통·관절통·관절염·통풍·만성통증 | 🔴 **전면 공백** | — |
-| 건강검진 — 암 스크리닝·결과 상담 | 🔴 **공백** | — (우울 스크리닝만 별도) |
-| **예방접종** | 🟢🟢 완벽 | 9개 백신·간격·성인 요약·NIP·ACIP 전부 |
+| 만성질환 — 고혈압 | 🟢 진입 | `hypertension`·`home-based-hypertension`·`resistant-hypertension` |
+| 만성질환 — 당뇨 | 🟢 본체 진입 | `diabetes`·`diabetes-dyslipidemia`·`diabetic-peripheral-neuropathy` + GLP-1·SGLT-2·CGM 약물 |
+| 만성질환 — 이상지질혈증 | 🟢 진입 | `dyslipidemia` |
+| 만성질환 — 비만 | 🟢🟢 강함 | `obesity` + GLP-1 약물 4종 + `glp1-selection-strategy` + `glp1-safety-comparison` |
+| 만성질환 — CKD | 🟢🟢 강함 | `CKD` v2 (VA/DoD CPG·SGLT2·finerenone) + `ckd-monitoring` + `proteinuria` |
+| 만성질환 — 갑상선 | 🟡 부분 | `thyroid-disorder`·`thyroid-fna-cnb` |
+| **생활습관 의학** | 🟡 부분 | `smoking-cessation`·`alcohol-use-disorder` (운동·수면·식이 본체는 공백) |
+| 호흡기 — 천식·COPD·기관지염·만성기침 | 🟢 진입 | `asthma`·`COPD`·`chronic-cough`·`sinusitis`·`allergic-rhinitis` |
+| 소화기 — GERD·IBS·기능성소화불량·담석·지방간 | 🟢 진입 | `LPR`·`functional-dyspepsia`·`ibs`·`gallstones`·`MASH` |
+| **이비인후과** | 🟢🟢🟢 압도 | 20+ 엔트리 (BPPV·dizziness·hearing-loss·sudden-hearing-loss·vestibular-neuritis·meniere·tinnitus·hyposmia·dry-mouth·burning-mouth·oral-lesion·dysphonia·neck-mass·otitis-externa·laryngitis·salivary-gland-stones·parotitis-differential·epistaxis·sleep-apnea·low-freq-hearing-loss) |
+| 근골격·통증 — 요통·관절·통증 | 🟢 진입 | `low-back-pain`·`ankle-sprain`·`carpal-tunnel-syndrome`·`msk-injection-therapy`·`heel-pain`·`chronic-pain-integrative` |
+| 암 스크리닝 | 🟢 진입 | `cervical-cancer-screening`·`colorectal-cancer-screening` (위·간 공백) |
+| **예방접종** | 🟢🟢🟢 완벽 | 7개 백신 + `vaccination`·`adult-vaccination-summary`·`travel-vaccination`·`vaccine-interval` |
 
 ### Tier 2 — 자주 만난다
 
 | 분야 | 커버리지 | 엔트리 |
 |---|---|---|
-| 심혈관 | 🟡 부분 | `heart-failure`, `heart-failure-referral`, `resistant-hypertension` (부정맥·흉통·협심증·PAD 등 공백) |
-| 신경과 | 🟡 매우 부분 | `dizziness`만 (두통·치매·파킨슨·뇌졸중·안면신경마비·뇌전증 전부 공백) |
-| 정신건강 | 🟡 부분 | `depression-screening`, `smoking-cessation` (불안·공황·불면·ADHD 공백) |
-| 내분비 | 🟡 부분 | 비만·GLP-1만 (갑상선·골다공증·당뇨 본체 공백) |
-| 피부과 | 🟡 부분 | `urticaria`만 (악성 병변 감별·피부감염·습진 공백) |
-| 비뇨의학 | 🔴 거의 공백 | SGLT-2 UTI 부속만 (UTI 본체·전립선·배뇨장애·성기능 공백) |
-| 노인의학 | 🔴 **공백** | — |
-| 부인과 | 🟡 부분 | `vte-hormone-therapy`(HRT/COC/GAHT) (갱년기·월경이상 공백) |
+| 심혈관 | 🟢 강함 | `heart-failure` + 5 sub-entry (monitoring·gdmt-dosing·pocus-ducs·hfpef-obesity·cardiology-2025-update) + `cardiomyopathy`·`cardiac-rehabilitation`·`post-mi-deprescribing`·`ischemic-stroke-prevention`·`doac-elderly`·`cardiology-2025-update` |
+| 신경 | 🟡 진입 | `headache`·`migraine`·`concussion`·`paresthesia` (치매·파킨슨·뇌전증 공백) |
+| 정신건강 | 🟡 진입 | `depression-screening`·`anxiety-depression-cbt` (불안·공황·불면·ADHD 공백) |
+| 내분비 | 🟢 강함 | 비만·GLP-1·당뇨·갑상선·`endocrinology-2025-update` (당뇨·이상지질혈증 본체 진입 완료) |
+| 피부 | 🟡 부분 | `urticaria`만 |
+| 비뇨 | 🟡 진입 | `recurrent-uti`·`hematuria`·`nocturia`·`proteinuria` (전립선·배뇨장애·성기능 공백) |
+| **노인의학** | 🟢 진입 | `frailty`·`geriatric-assessment-4ms`·`anticholinergic-burden`·`prescribing-cascade`·`eol-deprescribing`·`osteoporosis`·`doac-elderly` (5월 신설 영역) |
+| 부인과 | 🟡 진입 | `menopause`·`preconception-screening`·`sex-hormone-vte-risk`·`vte-hormone-therapy` |
+| 혈액 | 🟡 부분 | `anemia`·`multiple-myeloma` |
 
 ### Tier 3 — 기본은 안다
 
 | 분야 | 커버리지 | 엔트리 |
 |---|---|---|
-| 응급 | 🟡 부분 | `neffy`(아나필락시스) (기타 응급 공백) |
-| 일반외상 | 🟡 부분 | tdap 외상 상처 기준만 |
-| 소아 | 🔴 **공백** | — |
-| 완화의학 | 🔴 **공백** | — |
-| **초음파 진단·인터벤션** | 🔴 **공백** | scope.md 2026-04-23 추가 — POCUS·근골격·연부조직·갑상선 + 봉사활동·저자원 환경(엑스레이 부재)에서 handy tool |
+| 응급 | 🟡 부분 | `neffy`(아나필락시스)·`epistaxis` (기타 공백) |
+| 일반외상 | 🟡 부분 | `tdap`(파상풍)·`ankle-sprain` |
+| 소아 | 🟢 진입 | `croup`·`neonatal-fever-pecarn`·`pediatric-antibiotic-stewardship`·`meningitis` (5월 추가) |
+| **완화의학** | 🟢🟢 강함 | `palliative-pain`·`eol-deprescribing`·`afp-eol-symptom-management`·`cancer-fatigue`·`cancer-neuropathic-pain-steroid`·`goals-of-care-acp` (Tier 1 분할로 6 entry 완성) |
+| **초음파 진단·인터벤션** | 🟢 진입 | `pocus-abdominal`·`pocus-lung`·`pocus-focus-cardiac`·`pocus-primary-care-efsumb`·`heart-failure-pocus-ducs` (5건) |
+| 감염 | 🟡 부분 | `covid-outpatient-antivirals`·`hepatitis-b`·`pediatric-antibiotic-stewardship` |
+| 기타 | 🟡 부분 | `unintentional-weight-loss`·`persistent-physical-symptoms`·`continuity-of-care`·`delayed-diagnosis`·`fatigue` (가정의학 메타) |
 
-### Tier 4 — 폐지 (2026-04-24)
-Tier 4 전체 제거. 학습 우선순위 체계를 Tier 1~3에 집중.
+### 🎯 Scope 커버리지 요약 (4-23 → 5-8 변화)
+- **이비인후과**: 10 → **20+** (압도적 강점)
+- **예방접종**: 10 → **11+** (완벽 유지 + adult-summary 통합)
+- **GLP-1/비만 축**: 8 → **15+** (selection-strategy 분할 + safety-comparison + AUD/SMI/prediabetes/cancer-risk)
+- **심부전 축**: 2 → **8** (5 sub-entry 분할)
+- **노인의학**: 0 → **7** (신설)
+- **완화의학**: 0 → **6** (신설, Tier 1 분할로 정합)
+- **POCUS**: 0 → **5** (신설)
+- **암 스크리닝**: 0 → 2 (cervical·colorectal)
+- **만성질환 본체 진입**: 당뇨·이상지질혈증·갑상선 모두 entry 생성
+- **호흡기·소화기 진입**: 5 + 5 = 10 entry (이전 0)
 
-### 🎯 Scope 커버리지 요약
-- **강점 영역 2개**: 이비인후과 10건 / 예방접종 10건 → **합쳐서 전체의 ~48%**
-- **GLP-1/비만 축**: 8건 (의심 없이 핵심 관심 영역)
-- **Tier 1 중 전면 공백**: 호흡기 · 소화기 · 근골격 · 건강검진 · 당뇨 본체 · 이상지질혈증
-- **Tier 2 거의 공백**: 노인의학 · 비뇨의학 대부분
-- **Tier 3~4 거의 전무**
+**남은 공백**: 피부 (urticaria만)·정신건강 (불면·불안·공황 등)·비뇨 (전립선·배뇨장애)·갱년기 본체
 
 ---
 
@@ -106,91 +116,92 @@ Tier 4 전체 제거. 학습 우선순위 체계를 Tier 1~3에 집중.
 
 | 태그 | 추정 엔트리 수 | 의미 |
 |---|---|---|
-| `[CLINICAL]` | ~30 | 주요 처방·치료·진단 근거 |
-| `[CLINICAL — 조건부]` | ~8 | 초록 기반 or 부분 지지 |
-| `[REGULATORY]` | ~5 | 급여·법적·국가 지침 |
-| `[TIPS]` | ~15 (중복) | 교수님·원장님·ENT 경험치 |
-| `[INSIGHTS]` | ~3 | 리뷰·트렌드 |
+| `[CLINICAL]` | ~120 | 주요 처방·치료·진단 근거 |
+| `[CLINICAL — 조건부]` | ~25 | 초록 기반 or 부분 지지 |
+| `[REGULATORY]` | ~10 | 급여·법적·국가 지침 |
+| `[TIPS]` | ~30 (중복) | 교수님·원장님·ENT 경험치 |
+| `[INSIGHTS]` | ~15 | 리뷰·트렌드·POEMS |
 
-**TIPS 출처 명시 (Attribution)**: 대부분 `by 로컬원장님`, `by ENT교수`, `by FM교수님` 명시됨 (2026-04-14 규칙 적용 후).
+**TIPS 출처 명시**: `by 로컬원장님`·`by ENT교수`·`by FM교수님`·`by 미르` 명시 (2026-04-14 규칙 적용 후 일관).
 
 ---
 
-## 5. Parent-Child 관계 (현재 알려진)
-
-현재 `parents[]` 필드로 연결된 구조 (B2 schema 도입 후):
+## 5. Parent-Child 관계 (B2 schema)
 
 ```
+heart-failure (parent)
+  ├─ heart-failure-monitoring
+  ├─ heart-failure-gdmt-dosing
+  ├─ heart-failure-pocus-ducs
+  ├─ heart-failure-hfpef-obesity
+  ├─ heart-failure-cardiology-2025-update
+  ├─ heart-failure-volume-overload (topic)
+  └─ heart-failure-referral (guideline)
+
 vaccination (parent)
-  ├─ tdap
-  ├─ herpes-zoster-vaccine
-  ├─ pneumococcal-vaccine
-  ├─ hpv-vaccine
-  ├─ hepatitis-ab-vaccine
-  ├─ japanese-encephalitis-vaccine
-  ├─ rabies-vaccine
-  ├─ varicella-mmr-polio-vaccine
+  ├─ tdap·herpes-zoster·pneumococcal·hpv·hepatitis-ab·jev·rabies·varicella-mmr-polio
   ├─ vaccine-interval (topic)
   └─ adult-vaccination-summary (topic)
 
-heart-failure (parent)
-  └─ heart-failure-referral (topic)
+palliative-pain (parent)
+  ├─ eol-deprescribing
+  ├─ cancer-neuropathic-pain-steroid
+  ├─ afp-eol-symptom-management
+  └─ cancer-fatigue (관련)
 
-dizziness (parent, 추정)
-  ├─ BPPV
-  └─ low-freq-hearing-loss (?)
+obesity ⟷ wegovy·mounjaro·zepbound·ozempic ⟷ glp1-selection-strategy ⟷ glp1-safety-comparison
 
-obesity (연관, parent 관계는 미명시)
-  ⟷ wegovy, mounjaro, ozempic (drug)
-  ⟷ glp1-selection-strategy (topic)
+dizziness (parent)
+  ├─ BPPV·meniere·vestibular-neuritis·sudden-hearing-loss·tinnitus·low-freq-hearing-loss
+
+CKD (parent)
+  ├─ ckd-monitoring (topic, UACR·UPCR)
+  └─ proteinuria
+
+frailty (parent, 추정)
+  ├─ geriatric-assessment-4ms
+  ├─ anticholinergic-burden
+  ├─ prescribing-cascade
+  └─ eol-deprescribing
 ```
 
-**현재 한계**: parent 관계만 있고 `coprescribe`·`contraindicate`·`synergy` 같은 횡적 관계는 아직 없음 → Wave 1 R2(relations[]) 도입 후 채워질 영역.
+**진전**: 5-D auto-wikilinks 256건 + 추가 47건 적용으로 본문 cross-link 가시화. 옵시디언 그래프뷰 즉시 활용 가능.
 
 ---
 
 ## 6. Freshness (신선도) 신호
 
-`freshness.primarySourceYear` 필드는 Wave 1 R1로 도입 예정. 현재는 엔트리 본문의 primary source 연도를 눈대중:
-
 | 연도 | 대략 엔트리 수 | 대표 |
 |---|---|---|
-| 2026 | ~12 | 최근 추가물 (4월 대량) |
-| 2024~2025 | ~20 | 주요 가이드라인 (ACIP·KDCA·AFP 2024~2026) |
-| 2021~2023 | ~5 | heart-failure 학회지침 2022 등 |
-| ~2020 이전 | ~3 | pilocarpine NEJM 1993 등 |
+| 2026 | ~70 | AI-FoCUS·PECARN·NEJM/JAMA 2026 등 (대규모 5월 deep-extract) |
+| 2024~2025 | ~50 | ACIP·KDCA·AFP 2024~2026 |
+| 2021~2023 | ~15 | 학회지침 2022·기존 v1 |
+| ~2020 이전 | ~5 | pilocarpine NEJM 1993 등 |
 
-**전반적으로 신선**. 5년 이상 된 소스 비중 낮음 (pilocarpine 용량·ZVL 2020 단종 언급 정도).
+**전반적으로 매우 신선**. 75% 이상이 최근 2년 내 출처.
 
 ---
 
 ## 7. 공백 영역 (즉시 인지해야 할 gap)
 
-scope.md 대비 **Tier 1에서 전면 공백인 영역** (우선순위 순):
+### 🔴 잔여 우선 공백
+1. **정신건강 — 불면·불안·공황·ADHD** (depression-screening·anxiety-depression-cbt만)
+2. **갱년기 증상 본체** (HRT·VTE risk만 있고 vasomotor·뼈건강·성건강 본체 없음)
+3. **비뇨의학 — 전립선·배뇨장애·성기능** (UTI·hematuria·nocturia·proteinuria만)
+4. **피부과 — 악성 병변 감별·피부감염·습진** (urticaria만)
+5. **생활습관 의학 본체 — 운동·수면·식이·스트레스** (smoking·AUD만)
 
-### 🔴 최우선 공백 (Tier 1 매일 쓰는 분야)
-1. **생활습관 의학** — 운동·수면·스트레스·식이·절주·금연 (가정의학 핵심 무기)
-2. **호흡기 전체** — 감기·천식·COPD·폐렴 등 외래 최다 CC 축
-3. **소화기 전체** — GERD 본체·IBS·변비·설사·치질·지방간 등
-4. **근골격·통증 전체** — 요통·경추통·관절통·통풍
-5. **당뇨 본체** — 약물 side만 있고 질환 관리·합병증·HbA1c 전략 없음
-6. **이상지질혈증** — statin·non-statin 선택·검사 주기 없음
-7. **건강검진 상담** — 암 스크리닝 결과 해석·권고
+### 🟡 보강 여지
+- **여행의학 권고 조합** (특정 백신은 있으나 여행지별 조합 없음)
+- **연령별 백신 trigger 규칙** (knowledge 아닌 규칙 영역)
+- **위·간·췌장암 스크리닝** (cervical·colorectal만)
 
-### 🟡 준공백 (Tier 2 자주 만나는)
-8. **비뇨의학** — UTI·전립선·배뇨장애
-9. **노인의학** — 노쇠·낙상·다약제·인지기능
-10. **정신건강** — 불안·공황·불면 (우울만 있음)
-11. **피부과** — 악성 병변 감별·피부감염
-12. **갱년기·월경이상** — HRT만 있고 갱년기 본체·월경장애 없음
-
-### 🟢 보강 여지 (이미 있지만 확장 가능)
-- **여행의학**: `hepatitis-ab-vaccine`·`japanese-encephalitis-vaccine`·`rabies-vaccine`은 있지만 **여행지별 권고 조합**(인도·동남아·아프리카 등) 없음 → 2026-04-23 Boss 보고서 N1 권고 대상
-- **연령별 백신 선제 권고**: 백신별 파일은 완비, 나이 window 기반 "60세 대상포진 cue" 같은 **trigger 규칙**은 공백 (knowledge 아닌 규칙 공백)
-
-### 🆕 신규 우선 영역 (2026-04-23 scope.md 추가)
-- **초음파 진단·인터벤션** (Tier 3): POCUS·근골격·연부조직·갑상선 진단 + 술기. 봉사활동·저자원 환경에서 엑스레이 없을 때 handy tool. 엔트리 0건.
-- **생활습관 의학** (Tier 1): 운동·수면·스트레스·식이·절주·금연 개별 주제. smoking-cessation 외 전무.
+### 🟢 강점 영역 — 추가 보강은 신중
+- 이비인후과 20+ (과집중 — 새 영역 우선)
+- 예방접종 11+ (완벽)
+- GLP-1/비만 15+
+- 심부전 축 8
+- 완화의학 6 (Tier 1 분할 후 정합)
 
 ---
 
@@ -200,25 +211,28 @@ scope.md 대비 **Tier 1에서 전면 공백인 영역** (우선순위 순):
 
 | 찾는 것 | 경로 |
 |---|---|
-| 백신 권고 (특정 백신) | `by-drug/[백신명]-vaccine.md` |
+| **검색 (모든 엔트리)** | 차트지 검색 모드 (🔍 Knowledge) — wikilinks 클릭 점프 가능 |
+| 백신 권고 (특정 백신) | `by-drug/[백신명]-vaccine.md` 또는 차트지 검색 |
 | 백신 전체 권고 요약 | `guidelines/adult-vaccination-summary.md` |
-| 백신 접종 간격 규칙 | `by-drug/vaccine-interval.md` |
-| 어지럼증 환자 대응 | `by-disease/dizziness.md` → BPPV 의심 시 `BPPV.md` |
-| 비만 환자 초진~처방 | `by-disease/obesity.md` + `by-drug/glp1-selection-strategy.md` |
-| GLP-1 약물 선택 | `by-drug/glp1-selection-strategy.md` (위고비 vs 마운자로) |
-| 심부전 의뢰 판단 | `guidelines/heart-failure-referral.md` (6시점 + I NEED HELP) |
-| 구강 문제 | `by-disease/oral-lesion.md` / `burning-mouth.md` / `dry-mouth.md` |
-| LPR·쉰목소리·코막힘 | `by-disease/LPR.md` · `dysphonia.md` · `hyposmia.md` |
-| 우울 스크리닝 | `by-disease/depression-screening.md` |
-| 금연 | `by-disease/smoking-cessation.md` |
-| 두드러기 | `by-disease/urticaria.md` (4배 증량 프로토콜 포함) |
-| HRT·성호르몬 VTE 평가 | `by-disease/vte-hormone-therapy.md` |
-| AFP TOP 20 요약 | `guidelines/afp-top20-poems-2024.md` |
+| 어지럼증 환자 대응 | `by-disease/dizziness.md` → BPPV/meniere/vestibular-neuritis/sudden-hearing-loss |
+| 비만 환자 초진~처방 | `by-disease/obesity.md` + `by-drug/glp1-selection-strategy.md` (선택 전략) + `glp1-safety-comparison` (안전성) |
+| 심부전 통합 관리 | `heart-failure` 본체 + 5 sub-entry (monitoring·dosing·pocus·hfpef·2025-update) + `heart-failure-referral` |
+| 노쇠·다약제·인지 | `frailty`·`geriatric-assessment-4ms`·`anticholinergic-burden`·`prescribing-cascade` |
+| 임종기·완화 통증 | `palliative-pain` (부프레노르핀 본연) + `eol-deprescribing`·`afp-eol-symptom-management`·`cancer-neuropathic-pain-steroid`·`goals-of-care-acp` |
+| 만성통증 비약물 | `chronic-pain-integrative`·`low-back-pain`·`heel-pain`·`carpal-tunnel-syndrome` |
+| POCUS 술기 | `pocus-primary-care-efsumb` (개관) + `pocus-abdominal`·`pocus-lung`·`pocus-focus-cardiac` |
+| 우울·불안 스크리닝 | `depression-screening`·`anxiety-depression-cbt` |
+| 흉통·심전도 후 처방 | `heart-failure`·`post-mi-deprescribing`·`doac-elderly`·`cardiology-2025-update` |
+| 신생아 발열 | `neonatal-fever-pecarn` (PECARN 룰) |
+| GERD vs LPR vs 천식 | `LPR` + `asthma-reflux-comorbidity` (guideline) + `functional-dyspepsia` |
+| HRT·성호르몬 VTE 평가 | `vte-hormone-therapy`·`sex-hormone-vte-risk`·`menopause` |
+| AFP TOP 20 / POEMS | `afp-top20-poems-2024`·`afp-poems-2025-dec` |
+| 1차의료 top 20 (2024) | `primary-care-top20-2024` |
 
 ### 메타 파일 (운영)
 - 전체 목록 한줄 요약: `knowledge/index.md`
 - 추가 이력: `knowledge/log.md`
-- 임상 학습 우선순위: `knowledge/scope.md`
+- 임상 학습 우선순위: `knowledge/scope.md` (Mir-Tier 1 영역)
 - 섹션 표준 18개: `knowledge/section-vocabulary.md`
 - 출처 규칙 3-tier: `knowledge/sourcing-rules.md`
 
@@ -226,18 +240,37 @@ scope.md 대비 **Tier 1에서 전면 공백인 영역** (우선순위 순):
 
 ## 9. 이 지도의 한계
 
-- **자동 생성 아님**: 수동 작성. `log.md`·`index.md`·`scope.md` 교차 참조로 구성.
-- **관계(relations) 정보 얕음**: Wave 1 R2 도입 전이라 횡적 관계(coprescribe·contraindicate 등) 미반영.
-- **Freshness 정량화 없음**: Wave 1 R1 `freshness.primarySourceYear` 도입 후에야 정확 분포 가능.
-- **승격 상태 축 없음**: 3층위 reframe 채택 시 "A 학습 / C 승격(상용구·약속처방) / B 노출" 축이 추가될 수 있음.
-- **갱신 타이밍**: 새 ingest마다 지도가 자동 갱신되지 않음 → 최근 ingest가 많이 몰린 시점에 수동 재생성 또는 Mapper routine 신설 필요.
+- **자동 생성 아님**: 수동 작성. log.md·index.md·scope.md 교차 참조로 구성. 다음 갱신은 **새로운 entry 30+건 추가 시점**에.
+- **bundle vs md 불일치**: bundle 177 unique objects vs md 144 — 차이 33은 topic alias·deep-extract 흡수분 (bundle에만 존재).
+- **Freshness 정량화**: bundle entry frontmatter `freshness.primarySourceYear` 도입은 미래 작업.
+- **갱신 타이밍**: 현재는 미르 수동 호출 시 갱신. Mapper routine 신설 검토 가능.
 
 ---
 
-## 10. 관련 브레인스토밍
+## 10. 최근 룰 보강 (2026-05-06~08)
 
-이 지도는 `sessions/2026-04-23-knowledge-visibility-brainstorm.md`에서 **갈래 2 (정적 MAP.md)**로 선택된 실험 결과물이다.
+진단부 사고 재발 방지 룰 7개 신설:
+1. **§5-D.1 token-target priority** (cross-keyword 오변환 차단)
+2. **거대 파일 분할 권한** Auditor 이관 (이해충돌 해소)
+3. **Liby 거대 파일 분할 금지**
+4. **기존 entry에 이질 주제 추가 금지** (heart-failure-volume-overload 사건 후속)
+5. **신규 ingest 시 주제 정합성 체크** 5단계
+6. **entry 주제 부조화 감사** (Auditor)
+7. **키 중복 할당 hard-check** (palliative-pain·glp1·xerostomia 등 20건 사건 후속)
+8. **동일 키 재할당 금지** (Liby)
+9. **ingest 직전 grep 사전 체크** (SKILL.md)
+10. **CLAUDE.md "Liby ingest 절대 원칙"**: deep-extract 수정 md 재컴파일 누락 금지
 
-- 유효하다면: Mapper routine 신설 검토 (Wave 1~2 완료 후)
-- 부족하다면: 갈래 1 (Obsidian + wikilinks) 재시도 — Wave 1 R2 완료 후 자연스럽게 경로 열림
-- 3층위 reframe 채택 시: A층 전용 도구로 격상 (B층 오염 금지)
+---
+
+## 11. 관련 브레인스토밍·세션
+
+- 2026-04-23 갈래 선택: `sessions/2026-04-23-knowledge-visibility-brainstorm.md`
+- 2026-05-06 검색 신설: `sessions/2026-05-06-knowledge-search-phase1.md`
+- 2026-05-06 5-D batch 3 wave: `sessions/2026-05-06-5d-wave[1-3].md`
+- 2026-05-06 거대 파일 분할: `sessions/2026-05-06-large-file-split.md`
+- 2026-05-06 topic-cohesion 감사: `audits/2026-05-06-topic-cohesion.md`
+- 2026-05-07 Tier 1 분할: `sessions/2026-05-07-tier1-split.md`
+- 2026-05-07 키 중복 20건 수습: `sessions/2026-05-07-overwrite-fix.md`
+- 2026-05-07 Liby cleanup: `sessions/2026-05-07-liby-cleanup.md`
+- 2026-05-08 final ingest: `sessions/2026-05-08-liby-final-ingest.md`
