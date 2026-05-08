@@ -28,9 +28,9 @@ input::placeholder{color:#2e374f;font-family:'JetBrains Mono',monospace}
 .search-md{font-size:12px;color:#94a3b8;line-height:1.8}
 .search-md h1,.search-md h2,.search-md h3,.search-md h4,.search-md h5,.search-md h6{
   color:#a78bfa;font-weight:700;margin:10px 0 4px;letter-spacing:.02em;line-height:1.4}
-.search-md h1{font-size:14px}
-.search-md h2{font-size:13px}
-.search-md h3{font-size:12px;text-transform:uppercase;letter-spacing:.05em}
+.search-md h1{font-size:13px}
+.search-md h2{font-size:12px}
+.search-md h3{font-size:12px;color:#c4b5fd}
 .search-md h4,.search-md h5,.search-md h6{font-size:11px;color:#8b7ec8}
 .search-md p{margin:4px 0;color:#94a3b8}
 .search-md ul,.search-md ol{margin:4px 0 8px 18px;padding:0}

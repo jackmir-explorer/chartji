@@ -282,11 +282,14 @@ function ResultDetail(props){
         return (
           <div key={b.key} style={{marginBottom:sectionOpen?10:2}}>
             <div onClick={function(){toggle(b.key);}}
-              style={{fontSize:10,color:sectionOpen?"#a78bfa":"#6b5c8a",fontWeight:700,
-                textTransform:"uppercase",letterSpacing:".07em",
-                marginBottom:sectionOpen?3:0,padding:"3px 0",cursor:"pointer",
+              style={{fontSize:14,color:sectionOpen?"#a78bfa":"#6b5c8a",fontWeight:800,
+                textTransform:"uppercase",letterSpacing:".09em",
+                marginBottom:sectionOpen?6:0,padding:"6px 8px",cursor:"pointer",
                 fontFamily:"'JetBrains Mono',monospace",
-                display:"flex",alignItems:"center",gap:6,userSelect:"none"}}>
+                display:"flex",alignItems:"center",gap:8,userSelect:"none",
+                borderLeft:sectionOpen?"3px solid #a78bfa":"3px solid #2e374f",
+                background:sectionOpen?"rgba(167,139,250,.06)":"transparent",
+                borderRadius:"0 4px 4px 0",transition:"all .15s"}}>
               <span style={{fontSize:8,opacity:.6}}>{sectionOpen?"▼":"▶"}</span>
               {b.key}
             </div>
