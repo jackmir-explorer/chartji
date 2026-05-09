@@ -75,6 +75,36 @@ EFSUMB Level 1 영역과 한국 가정의학과 외래 적용 연계:
 
 ---
 
+## FM 외래 POCUS 실전 시나리오 맵 (protocol) [CLINICAL]
+
+> [출처: Hui W. An Academic Family Physician's Point-of-Care Ultrasound (POCUS) Experience. J Am Board Fam Med. 2025;38(6):949-954. PMID:41593014, DOI:10.3122/jabfm.2024.240379R1]
+> Stanford FM 가정의학과 의사의 외래 POCUS 실제 활용 경험 — JABFM 2025
+
+**외래 급성 시나리오별 POCUS 활용처:**
+
+| 시나리오 | POCUS 적용 |
+|---|---|
+| 다리 부종·통증 | DVT 초음파 (deep vein thrombosis) |
+| 관절 부종·통증 | 관절삼출 확인 (joint effusion) |
+| 우상복부 통증·오심 | RUQ 담낭·담석 확인 |
+| 발열·기침 소아 | 폐 초음파 (폐렴·삼출) |
+| 어깨 통증 | 회전근개(rotator cuff) 평가 |
+| 배뇨 문제 | 방광 잔뇨량 측정 |
+
+**POCUS 유도 시술:**
+- Baker's cyst 흡인 — 정확도·안전성↑
+- 수근관증후군(CTS) 주사 — 유도 주사
+- DeQuervain 건초염 주사 — 유도 주사
+- 절개배농(I&D) 전처치 유도
+- 연부조직 종괴 절제 전 확인
+
+**배경 및 임상 의의:**
+- ACGME FM 레지던트 과정에 POCUS 의무화
+- 휴대용 초음파 보급 확산 → 가정의학과 외래 즉시 활용 가능한 시대
+- 갑상선·연부조직 외래에서도 적용 가능
+
+---
+
 ## 연관 knowledge 엔트리
 
 - [[pocus-lung]] — 폐 POCUS B-lines 임상 근거 (PMID:42031864)
