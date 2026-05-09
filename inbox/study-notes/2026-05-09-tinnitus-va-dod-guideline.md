@@ -4,6 +4,7 @@
 - **저널 / 연도**: American Family Physician 2026 Feb
 - **저자**: Arnold MJ
 - **출처 Scout**: inbox/scout/2026-05-05.md
+- 태그 : #원문대조
 
 ## 초록 요약
 
