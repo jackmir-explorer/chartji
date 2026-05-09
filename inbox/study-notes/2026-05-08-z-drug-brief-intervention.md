@@ -4,6 +4,7 @@
 - **저널 / 연도**: Scandinavian Journal of Primary Health Care 2026
 - **저자**: Siddiqui TG et al.
 - **출처 Scout**: inbox/scout/2026-05-08.md
+- 태그 : #원문대조
 
 ## 초록 요약
 
