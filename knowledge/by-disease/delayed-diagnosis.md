@@ -56,6 +56,49 @@ relations: []
 
 ---
 
+## Pattern Disruption — 진단 추론 향상 교육 개입 (protocol) [INSIGHTS]
+
+> [출처: Jerjes W, Majeed A. Pattern Disruption in GP speciality training: a practical intervention to enhance cognitive flexibility and diagnostic reasoning. Educ Prim Care. 2026 Apr 12. PMID:41968680, DOI:10.1080/14739879.2026.2634248]
+> GP 전공의 교육 개입 — Imperial College London. 이론 설계·구현 기술.
+
+**배경:**
+- 패턴 인식은 효율적 진료를 가능하게 하지만 **비전형적·진행성·복합적 사례에서 인지 경직 및 조기 진단 종결(premature closure)** 위험
+- Anchoring bias·overconfidence → 오진의 주요 원인
+
+**Pattern Disruption 개입 — 핵심 단계:**
+
+```
+1. 교육자가 "단 하나의 그럴듯한 disruptor" 삽입
+   (새 red flag / 모순 병력 / 맥락적 위험 / 약물 문제 / 시스템 제약)
+      ↓
+2. 전공의가 다음을 명시적으로 수행:
+   - 자신이 진입한 패턴 진술
+   - 그 패턴이 생성한 가정 확인
+   - 감별진단 확장
+   - 안전망(safety-netting)과 함께 관리 수정
+      ↓
+3. 구조화된 디브리핑
+   - 추론 과정 집중 (사실 암기 X)
+   - 불확실성 언어 명시화
+   - 적응적 의사결정
+```
+
+**확장 요소 (고급):**
+- 전공의 생성 disruptors — 아차 경험(near-miss)에서 도출
+- 반사실적 리허설 — "이 평범한 사례가 다른 방향이었다면?"
+- 종단적 추론 변화 기록
+
+**외래 즉시 적용 가능한 자기질문:**
+> "이 환자가 전형적으로 보이지 않는 요소는 무엇인가?"
+> "내가 지금 어떤 패턴을 적용하고 있고, 그 가정은 무엇인가?"
+
+**효과 (초기 관찰):**
+- 불확실성 내성 향상
+- 진단 위험 명확한 언어화
+- 비례적 후속 계획
+
+---
+
 ## 주의사항 (precaution)
 
 - 이 연구는 관찰 연구(체계적 고찰) — 개별 진료 행동 변화의 근거로 활용 가능하나, 특정 개입의 효과를 직접 증명하지는 않음

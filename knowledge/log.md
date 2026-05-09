@@ -201,6 +201,17 @@
 2026-05-04 | by-disease/frailty.md | 추가 — 허약 ITC 포괄 리뷰 (다계통 예비능 저하, 스크리닝 도구, 역전 가능 중재) [CLINICAL] — Ann Intern Med 2026 PMID:41662715
 2026-05-04 | guidelines/deprescribing.md | 신규 — 캐나다 일차의료 부적절 처방 선별 가이드라인 (≥65세 처방 점검 강력권고, STOPP/START) [CLINICAL, REGULATORY] — Can Fam Physician 2026 PMID:41844291
 
+2026-05-09 | by-disease/tinnitus.md | 추가 — VA/DoD 이명 관리 가이드라인: 청력검사 의무·CBT 가장 강한 근거·음향치료 권고·약물 단독 부족; 치료 목표는 습관화 [CLINICAL] PMID:41839118 (AFP 2026)
+2026-05-09 | by-disease/pocus-primary-care-efsumb.md | 추가 — FM 외래 POCUS 시나리오 맵: DVT·관절삼출·RUQ·폐·회전근개·방광·Baker's cyst 흡인·CTS·DeQuervain 유도주사 [CLINICAL] PMID:41593014 (JABFM 2025)
+2026-05-09 | by-disease/spine-related-arm-pain.md | 신규 — 척추유발 상지통(SAP) 진단 알고리즘: 통증 기전 3분류(통해성·신경병증·중추감작)·Red flag·신경학적 검진 의무·Safety-netting [CLINICAL] PMID:41956881 (MSK Sci Pract 2026)
+2026-05-09 | guidelines/goals-of-care-acp.md | 추가 — 노인 ACP 4유형(비참여형 60%·가족중심형 28%·문서중심형 7%·종합형 5%); 유형별 외래 맞춤 전략 [CLINICAL — 조건부] PMID:41747784 (JPSM 2026)
+2026-05-09 | guidelines/goals-of-care-acp.md | 추가 — 치매 중증도별 ACP 의사결정: 경증 60% 자율·중증 48% 대리; 경증 진단 직후 시작 근거; 보호자 조기 참여 [CLINICAL] PMID:42068255 (JAGS 2026)
+2026-05-09 | by-drug/sglt2-inhibitors.md | 추가 — SGLT-2i vs GLP-1RA 당뇨발: SGLT-2i 전체 당뇨발 RR 0.90·신경병증 RR 0.78; 차이 3년 이후 발생; PAD·궤양·절단 차이 없음 [CLINICAL] PMID:41490509 (Ann Intern Med 2026)
+2026-05-09 | by-disease/anticholinergic-burden.md | 추가 — AD 다약제 인지저하 1.68배·ACB≥3 OR 2.5 독립예측인자·낙상 RR 1.82·재입원 RR 1.67; 감약 면담 근거 [CLINICAL] PMID:42001284 (Pak J Pharm Sci 2026)
+2026-05-09 | by-disease/smoking-cessation.md | 추가 — 니코틴 전자담배 AFP 2025 리뷰: 금연 보조 선택지·장기 안전성 미확인·청소년 절대 금지; 성인 흡연자 상담 포인트 [CLINICAL — 조건부] PMID:41118192 (AFP 2025)
+2026-05-09 | by-disease/delayed-diagnosis.md | 추가 — Pattern Disruption 교육 개입: 단일 disruptor 삽입→패턴 명시→가정 확인→감별 확장→Safety-netting; 불확실성 내성↑ [INSIGHTS] PMID:41968680 (Educ Prim Care 2026)
+2026-05-09 | by-disease/osteoporosis.md | 추가 — VCF 척추압박골절: 기침·뒤집기 등 일상 동작 촉발; AP+Lat X-ray→음성시 MRI; 보존+항골다공증약 통증 개선; 6주 무효시 VP/KP [CLINICAL] PMID:41544281 (AFP 2026)
+
 2026-05-08 | by-disease/pocus-focus-cardiac.md | 신규 — AI 강화 FoCUS 집중심장초음파: 비심장전문의 시행 29% 신규 심장 소견, 7% 치료 수정; LV기능·판막질환 고감도, 우심계 감도 낮음 [CLINICAL — 조건부] PMID:42094314 (Mayo Clin Proc Digit Health 2026)
 2026-05-08 | by-disease/persistent-physical-symptoms.md | 신규 — 지속 신체증상(PPS) 일차의료 회복 접근: 뇌 기반 위협 반응 이론, 증상 타당화+기전 설명+개별화 관리, 포스트코비드·만성피로·섬유근통 포함 [INSIGHTS] PMID:41823400 (Scand J Prim Health Care 2026)
 2026-05-08 | by-disease/palliative-pain.md | 추가 — OUD 장기 주사 부프레노르핀 환자 암성통증: OUD 치료 유지 최우선, 수용체 점유·반감기 고려 완전 작용제 추가, 다중모달+다학제 [CLINICAL — 조건부] PMID:42092642 (JPSM 2026)
