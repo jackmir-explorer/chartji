@@ -151,6 +151,38 @@ OUD 유지 부프레노르핀 환자 + 암 진단·통증
 
 ---
 
+## 오피오이드 유발 오심구토(OINV) — 올란자핀 예방 투여 [CLINICAL — 조건부]
+
+> [출처: Satomi E et al. Olanzapine Prophylaxis for Opioid-Induced Nausea and Vomiting: A Single-Arm Exploratory Study. J Pain Symptom Manage. 2026 May 6. PMID:42103083, DOI:10.1016/j.jpainsymman.2026.04.623]
+> 단일군 탐색적 연구 (n=34), 일본 단일기관, 암 환자 오피오이드 시작 시 올란자핀 예방 투여
+> [초록 기반 — 전문 미확인]
+
+### 핵심 수치
+
+| 지표 | 결과 |
+|---|---|
+| **완전 조절(CC)율** (5일 내 구토 없음+구제제 불필요+오심 ≤3) | **79.4%** (95% CI: 64.5~89.9) |
+| **완전 반응(CR)율** (구토 없음+구제제 불필요) | **82.4%** (95% CI: 65.5~93.2) |
+| 구토 없는 비율 | 85.3% |
+| 심각한 이상반응 | **없음** |
+
+### 프로토콜
+- **올란자핀 5 mg/일 × 5일** — 오피오이드 정규 시작과 동시에 예방 투여
+- OINV 발생률: 10~45.3% (오피오이드 시작/증량 시)
+
+### 외래 적용 포인트
+- 암성 통증 오피오이드 시작 또는 증량 시 → OINV 예방으로 올란자핀 5mg 병용 고려
+- 오심 장벽으로 오피오이드 용량 적정이 어려운 환자에서 특히 유리
+- 올란자핀 항구토 효과는 CINV(항암 오심) 근거에서 이미 확립 → OINV 확장 적용
+- 단일군 탐색적 연구 — 추가 확증 RCT 필요; 임상 적용 시 환자별 판단
+
+### 이상반응 모니터링
+- 졸림·진정: 고령·허약 환자에서 주의 (5mg에서도 발생 가능)
+- 혈당 상승: 당뇨 환자 모니터링
+- 추체외로 증상: 드물지만 장기 사용 시 주의
+
+---
+
 ## 부프레노르핀 패치 조기 효력 소실 (End-of-Dosage Failure) (precaution) [CLINICAL — 조건부]
 
 > [출처: Weerasiri SD et al. A Case Report of End-of-Dosage Failure With Buprenorphine Patch. J Pain Symptom Manage. 2026 Jan 28;71(5):e606-e609. PMID:41617142, DOI:10.1016/j.jpainsymman.2026.01.018]
