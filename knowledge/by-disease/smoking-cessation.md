@@ -19,6 +19,22 @@ relations: []
 
 ## 비교
 
+### 니코틴 전자담배 금연 전략 — AFP 2025 리뷰 [CLINICAL — 조건부]
+
+> [출처: Montgomery L, Beaverson S. Nicotine e-Cigarettes as a Strategy for Smoking Cessation. Am Fam Physician. 2025 Oct;112(4):450-451. PMID:41118192] [초록 미공개 — AFP 요약]
+> AFP 2025 Oct — 니코틴 전자담배(e-cigarette)를 금연 보조 전략으로 다룬 AFP 리뷰
+
+**핵심 내용:**
+- 니코틴 전자담배가 금연 보조 전략으로서의 근거·한계·외래 상담 포인트 정리
+- 기존 NRT·varenicline 대비 전자담배 금연 근거 수준·적응 상황·부작용 상담 포인트
+- 금연 상담 도구 선택 의사결정에 직접 활용
+
+**외래 상담 요점 (AFP 요약 기반):**
+- "전자담배로 끊을 수 있나요?" → AFP 근거 기반 답변 가능
+- 효과 있을 수 있으나 **장기 폐·심혈관 안전성 unknowns** 고지 필수
+- 청소년·비흡연자에게는 사용 금지 강조
+- **흡연 중단 의사가 있는 성인 흡연자** 한정 선택지
+
 ### 전자담배(vaping) vs NRT 껌 — AFP 2026 POEM [CLINICAL — 조건부]
 
 > 출처: Shaughnessy AF. AFP 2026;113(3). PMID:41839085 [초록 기반 — 전문 미확인]

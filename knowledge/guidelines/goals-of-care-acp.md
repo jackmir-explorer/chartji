@@ -106,6 +106,59 @@ Goals of Care(GOC) 대화는 중증 질환 환자의 삶의 질 향상·환자·
 
 ---
 
+## 노인 ACP 참여 4유형 — 비참여형 60% (protocol) [CLINICAL — 조건부]
+
+> [출처: Bergman TD et al. Four Groups of Advance Care Planning Engagement Among Older People: A Latent Class Analysis. J Pain Symptom Manage. 2026 Feb 24;71(5):718-727.e3. PMID:41747784, DOI:10.1016/j.jpainsymman.2026.02.012]
+> 네덜란드 노인 1242명(65세↑) 잠재 클래스 분석, 응답률 93.2%.
+
+**4가지 ACP 참여 유형:**
+
+| 유형 | 비율 | 특징 |
+|---|---|---|
+| **비참여형 (Inactive)** | **60%** | ACP 전반 저참여 |
+| **가족중심형 (Relatives-oriented)** | **28%** | 가족·친구와 논의는 하지만 의료진·문서화는 미흡 |
+| **문서중심형 (Documentation-oriented)** | **7%** | 문서화는 됐으나 가족·의료진과 대화 부족 |
+| **종합형 (Comprehensive)** | **5%** | 모든 ACP 행동 종합 참여 |
+
+**유형별 특성:**
+- 종합형 → (매우)불량한 건강 상태, 고학력
+- 비참여형 → 종교적 신앙 강함, 학력 낮음
+
+**외래 맞춤 전략:**
+
+| 유형 | 접근법 |
+|---|---|
+| 비참여형 (60%) | ACP 인식 교육 먼저 — "왜 중요한지" 설명; 강요 금지 |
+| 가족중심형 (28%) | 보호자·가족과 함께 의료진 대화로 확장; 문서화 권유 |
+| 문서중심형 (7%) | 문서 이면의 가치·목표 대화 보완 |
+| 종합형 (5%) | 이미 준비된 환자 — 구체적 결정 지원 |
+
+> 종교심이 강한 환자·저학력층에서 비참여형 비율 높음 → 특별 문화적 접근 필요
+
+---
+
+## 치매 중증도별 ACP 의사결정 참여 유형 (protocol) [CLINICAL]
+
+> [출처: Zhang P et al. Involvement of Patients With Cognitive Impairment and Care Partners in Advance Care Planning Decision-Making: A Qualitative Study. J Am Geriatr Soc. 2026 May 2. PMID:42068255, DOI:10.1111/jgs.70476]
+> 경~중증 치매 노인 88명 ACP 대화 전사 분석.
+
+**치매 중증도별 의사결정 유형:**
+
+| 의사결정 유형 | 정의 | 경증 치매 | 중증 치매 |
+|---|---|---|---|
+| **자율적 결정** | 환자 단독 선호 표현 | **60%** | 드묾 |
+| **공동 결정** | 환자+보호자 협력 | 일부 | 일부 |
+| **위임형** | 환자가 보호자에게 결정 위임 | 드묾 (7%, 환자 선호) | 드묾 |
+| **대리 결정** | 보호자가 환자 알려진 선호 기반 결정 | — | **48%** |
+
+**임상 함의:**
+1. **경증 치매 진단 즉시 ACP 시작** — 60%가 선호를 직접 표현 가능한 창문
+2. **중증 진행 전 보호자 ACP 파트너로 조기 참여** — 중증 전환 시 대리결정 부담 완화
+3. **의사결정 위임 전환 시점 모니터링** — 중등도에서 지원 필요도 급증
+4. **보호자 역할**: 경~중증 전반에 걸쳐 지원 제공, 중증도 증가할수록 지원 강도↑
+
+---
+
 ## 치매 환자 ACP — 처방설정형 vs 목표도출형 접근법 (notes) [CLINICAL — 조건부]
 
 > [출처: van der Steen JT et al. Optimizing Approaches in Advance Care Planning in Dementia as Perceived by General Practitioners. J Pain Symptom Manage. 2026 Apr 30. PMID:42069237, DOI:10.1016/j.jpainsymman.2026.04.618]
