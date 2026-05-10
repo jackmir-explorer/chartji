@@ -8,7 +8,7 @@ supersedes: (미정)
 freshness.primarySourceYear: 2026
 applicability: 외래·응급실·병동 — 비심장전문의 심장 POCUS AI 활용
 parents: []
-relations: [[pocus-lung]], [[pocus-primary-care-efsumb]], [[pocus-abdominal]]
+relations: [[[pocus-lung]], [[pocus-primary-care-efsumb]], [[pocus-abdominal]]]
 
 > primarySources (Tier 1):
 > - Fisher L et al. Artificial Intelligence-Enhanced Cardiac Point-of-Care Ultrasound: A Prospective Single-Arm Study. Mayo Clin Proc Digit Health. 2026 Mar;4(2):100355. PMID:42094314, DOI:10.1016/j.mcpdig.2026.100355
@@ -17,7 +17,7 @@ relations: [[pocus-lung]], [[pocus-primary-care-efsumb]], [[pocus-abdominal]]
 
 ## 핵심 수치 (notes)
 
-> [출처: Fisher L et al. Mayo Clin Proc Digit Health 2026;4(2):100355. PMID:42094314]
+> [출캘: Fisher L et al. Mayo Clin Proc Digit Health 2026;4(2):100355. PMID:42094314]
 > 전향적 단일군 연구, 660명 성인 (응급실·내과 병동), 2022-07~2023-12
 
 | 지표 | 결과 |
@@ -47,7 +47,7 @@ relations: [[pocus-lung]], [[pocus-primary-care-efsumb]], [[pocus-abdominal]]
 4. AI 이상 소견 flagging → 심장 전문의 확진 또는 추가 영상 결정
 
 **POCUS 일차의료 적용 맵 (외래):**
-- 호흡 공난 + 하지 부종 → LV 기능·판막·삼출 확인
+- 호흡 곤란 + 하지 부종 → LV 기능·판막·삼출 확인
 - 부정맥 환자 → LV 기능 기저 확인
 - 고혈압·심부전 위험군 → 선별 목적 FoCUS 고려
 
@@ -75,8 +75,8 @@ relations: [[pocus-lung]], [[pocus-primary-care-efsumb]], [[pocus-abdominal]]
 ## 의뢰 기준 (referral)
 
 - AI FoCUS에서 이상 소견 발견 → 심장전문의 공식 심초음파 의뢰
-- 우심계 이상 임상 의심 (폙고협압·RV 부전) → 직접 심초음파 의뢰 (FoCUS 우회)
-- 심낙삼출 발견 + 혁역학적 불안정 → 즉시 의뢰
+- 우심계 이상 임상 의심 (폐고혈압·RV 부전) → 직접 심초음파 의뢰 (FoCUS 우회)
+- 심낙삼출 발견 + 혈역학적 불안정 → 즉시 의뢰
 
 ---
 
@@ -84,8 +84,8 @@ relations: [[pocus-lung]], [[pocus-primary-care-efsumb]], [[pocus-abdominal]]
 
 ## GP POCUS — 호흡곤란 심부전 감별 (일차의료 훈련 연구) [CLINICAL]
 
-> [출처: Kiss-Kovács R et al. Point-of-care ultrasound improves the diagnosis of heart failure in patients with dyspnea in primary care. Front Med (Lausanne). 2026 Feb 13;13:1721066. PMID:41767524, DOI:10.3389/fmed.2026.1721066]
-> 전향적 타당성 연구, 4개 일차의료 기관, 신규 숫참 환자 102명, GP 핸드헬드 POCUS 시행
+> [출캘: Kiss-Kovács R et al. Point-of-care ultrasound improves the diagnosis of heart failure in patients with dyspnea in primary care. Front Med (Lausanne). 2026 Feb 13;13:1721066. PMID:41767524, DOI:10.3389/fmed.2026.1721066]
+> 전향적 타당성 연구, 4개 일차의료 기관, 신규 숨참 환자 102명, GP 핸드헬드 POCUS 시행
 
 ### 핵심 수치
 
@@ -107,14 +107,14 @@ relations: [[pocus-lung]], [[pocus-primary-care-efsumb]], [[pocus-abdominal]]
 - 훈련: **단기 집중 교육** 후 실전 적용 가능 (훈련 시간 미명시; "brief training")
 
 ### 외래 적용 포인트
-- 신규 숫참 환자 → 임상 판단만으로는 특이도 38% (심부전 아닌데 의심) → POCUS 추가 시 88%로 향상
-- 폙 B-line 3개 이상 + LVEF 시각 저하 → 심부전 가능성 높음 → 즉각 치료·의뢰
-- 폙 B-line 없음 + 정상 LVEF → 심부전 낙음 → 타 원인 감별 우선
+- 신규 숨참 환자 → 임상 판단만으로는 특이도 38% (심부전 아닌데 의심) → POCUS 추가 시 88%로 향상
+- 폐 B-line 3개 이상 + LVEF 시각 저하 → 심부전 가능성 높음 → 즉각 치료·의뢰
+- 폐 B-line 없음 + 정상 LVEF → 심부전 낙음 → 타 원인 감별 우선
 - 훈련된 GP도 일차의료 세팅에서 즉시 적용 가능
 
 ---
 
-## 출처 학습 노트
+## 출캘 학습 노트
 
 - study-note: [[2026-05-08-ai-focus-cardiac-pocus]]
 - study-note: [[2026-05-10-pocus-hf-primary-care-gp]]
