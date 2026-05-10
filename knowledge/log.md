@@ -5,6 +5,16 @@
 
 ---
 
+2026-05-10 | by-disease/fall-prevention-awv.md | 신규 — AWV 낙상 스크리닝 후속 관리 QI: SmartSet + 아웃리치 조합 → 후속 53.8%→67.8%, 노인의학 의뢰 7.5%→40.4% [CLINICAL] PMID:42089560 — 과거 누락 복구 (출처 05-07)
+2026-05-10 | by-disease/anemia.md | 추가 — Annals ITC 2026 IDA 업데이트: ferritin <45(염증없음)/<100(염증있음); 격일 경구철분; IV 철분 심부전·흡수불량 우선; IDA 확인 즉시 내시경+H.pylori+celiac 검색 [CLINICAL] PMID:41525691 — 과거 누락 복구 (출처 05-07)
+2026-05-10 | by-disease/osteoporosis.md | 추가 — 당뇨 노인 골다공증: T2DM FRAX 과소평가(1.2배 보정 권장); TZD 회피·metformin/DPP4i/GLP1RA 골안전; bisphosphonate·denosumab 유효 [CLINICAL] PMID:41854838 — 과거 누락 복구 (출처 05-07)
+2026-05-10 | guidelines/dash-diet-cvd.md | 신규 — DASH 식이 심혈관 1·2차 예방: 채소·과일·통곡물·저지방유제품·견과류 중심, 포화지방·소금·당 제한 — AFP 2026 근거 정리 [CLINICAL] PMID:41839101 — 과거 누락 복구 (출처 05-07)
+2026-05-10 | by-disease/palliative-depression-ketamine.md | 신규 — 완화의료 우울 케타민: IV NNT=3(1주), 효과 1~24h 발현; 에스케타민 FDA 승인 TRD·자살관념; 완화의료 안전 프로파일; 기대여명 짧은 환자 선호 [CLINICAL] PMID:41997505 — 과거 누락 복구 (출처 05-07)
+2026-05-10 | by-disease/uterine-fibroids.md | 신규 — 자궁근종 AFP RER: TVUS+TAUS 1차 영상; COC·LNG-IUD·tranexamic acid·GnRH 약물; 자궁절제술·근종절제술·UAE 수술 옵션; 임신보존 vs 확정 치료 분기 [CLINICAL] PMID:41118184 — 과거 누락 복구 (출처 05-07)
+2026-05-10 | by-disease/pocus-focus-cardiac.md | 추가 — GP POCUS 호흡곤란 심부전 감별: 특이도 38→88%, Cohen's κ 0.254→0.723; 폐 B-line + FoCUS 조합, 단기 훈련 GP 즉시 적용 [CLINICAL] PMID:41767524 (출처 05-10)
+2026-05-10 | by-disease/bladder-pain-syndrome.md | 신규 — BPS/IC AFP RER: 행동수정+골반저PT 1차→가바펜티노이드·아미트립틸린·항히스타민 경구→방광내주입·신경조절; 배제 진단; 증상일지 [CLINICAL] PMID:42101600 (출처 05-10)
+2026-05-10 | by-disease/palliative-pain.md | 추가 — 올란자핀 OINV 예방: 5mg×5일; CC율 79.4%·CR율 82.4%; 중증이상반응 없음; 단일군 탐색적 연구 [CLINICAL — 조건부] PMID:42103083 (출처 05-10)
+2026-05-10 | by-disease/frailty.md | 추가 — 건강노인 생활습관 복합교정 ASPREE(n=11,287, 중앙74세): ≥3요소 사망/치매/장애 HR 0.60, 건강수명 +10%; 지중해식·신체활동·비흡연·절주 [CLINICAL] PMID:42095703 (출처 05-10)
 2026-05-07 | by-disease/anticholinergic-burden.md | 신규 — 항콜린 부담 노인 처방 점검: ACB 1–2 저부하도 구강건조 OR 2.06 (ACB=0 대비), ACB≥3 OR 2.25 — 역치 하향 근거; 외래 처방 점검 루틴·교체 우선 약물 목록 (oxybutynin→mirabegron 등) [CLINICAL] PMID:41824280 — 과거 누락 복구 (출처 05-03)
 2026-05-07 | by-disease/neonatal-fever-pecarn.md | 신규 — 신생아 발열(≤28일) PECARN 예측 룰: 저위험 3기준(UA음성+PCT≤0.5+ANC≤4000) — 민감도 94.2%·NPV 99.4%·저위험군 세균성 수막염 0건; LP 선별 적용 공유의사결정 근거 [CLINICAL] PMID:41359314 — 과거 누락 복구 (출처 05-03)
 2026-05-07 | by-disease/asthma.md | 신규 — 경증 조절불량 천식 PRN ICS+SABA 전략: 부데소나이드+알부테롤 PRN이 알부테롤 단독보다 악화 감소 우월; 매일 ICS 순응도 불량 환자 대안 [CLINICAL] PMID:41839117 — 과거 누락 복구 (출처 05-03)
