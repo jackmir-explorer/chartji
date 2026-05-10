@@ -8,7 +8,7 @@ supersedes: (미정)
 freshness.primarySourceYear: 2026
 applicability: 가정의학과 외래 — 2025년 내분비 변화 한눈에 파악
 parents: []
-relations: [[[glp1-selection-strategy]], [[sglt2-inhibitors]], [[MASH]], [[cardiology-2025-update]]]
+relations: [[glp1-selection-strategy]], [[sglt2-inhibitors]], [[MASH]], [[cardiology-2025-update]]]
 
 > primarySources (Tier 1):
 > - Update in Endocrinology 2025. Ann Intern Med. 2026. PMID:41974004, DOI:10.7326/ANNALS-26-01015 [초록 기반]

@@ -8,7 +8,7 @@ supersedes: (미정)
 freshness.primarySourceYear: 2026
 applicability: 구조적 이상이 없는 지속 증상 호소 환자 (피로·통증·두통·인지 저하)
 parents: []
-relations: [[[fatigue]], [[chronic-pain-integrative]], [[functional-dyspepsia]]]
+relations: [[fatigue]], [[chronic-pain-integrative]], [[functional-dyspepsia]]
 
 > primarySources (Tier 1):
 > - Abrahamsen C et al. Persistent physical symptoms not explained by structural abnormalities or disease processes: a primary care approach to promote recovery. Scand J Prim Health Care. 2026;44(1):2633765. PMID:41823400, DOI:10.1080/02813432.2026.2633765

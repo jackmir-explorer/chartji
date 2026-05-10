@@ -20,7 +20,7 @@ relations: []
 ### 1차 치료
 
 - 식염수 코세척 [CLINICAL — 조건부]
-  - CRS 동반 시 효과 확립, 단독 post-viral [[anosmia]]는 보조 수준
+  - CRS 동반 시 효과 확립, 단독 post-viral anosmia는 보조 수준
 - Nasal steroid spray [CLINICAL — 조건부]
   - CRS/비용종 동반 시 효과 확립 (Cochrane 2016, moderate evidence)
   - Post-COVID 단독 후각소실에는 단독 효과 미확립 (Abdelalim et al. Am J Otolaryngol 2021)

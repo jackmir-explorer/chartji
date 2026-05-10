@@ -8,7 +8,7 @@ supersedes: (미정)
 freshness.primarySourceYear: 2026
 applicability: 외래·응급실·병동 — 비심장전문의 심장 POCUS AI 활용
 parents: []
-relations: [[[pocus-lung]], [[pocus-primary-care-efsumb]], [[pocus-abdominal]]]
+relations: [[pocus-lung]], [[pocus-primary-care-efsumb]], [[pocus-abdominal]]
 
 > primarySources (Tier 1):
 > - Fisher L et al. Artificial Intelligence-Enhanced Cardiac Point-of-Care Ultrasound: A Prospective Single-Arm Study. Mayo Clin Proc Digit Health. 2026 Mar;4(2):100355. PMID:42094314, DOI:10.1016/j.mcpdig.2026.100355

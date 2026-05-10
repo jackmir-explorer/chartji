@@ -15,16 +15,16 @@ generated: 수동 (추후 Mapper routine화 가능)
 
 ## 1. 엔트리 분포
 
-| 카테고리 | md 파일 | 비고 |
-|---|---|---|
-| **by-disease/** | 109 | 질환·증상 메인 저장소 (5월 78건 추가) |
-| **by-drug/** | 20 | 약물·백신 |
-| **guidelines/** | 15 | 공식 가이드·요약·CLINICAL/REGULATORY/INSIGHTS/TIPS |
-| **myth-log/** | 2 | 의학적 myth 학습 자원 (inject 격리) |
-| **메타 (root)** | 6 | 운영 파일 (MAP·index·log·scope·sourcing-rules·section-vocabulary) |
-| **합계** | **152 md** | |
-| Bundle unique objects | 177 | topic alias·deep-extract 흡수분 포함 |
-| Bundle alias keys | 601 | 영문/한글/약어 다중 등록 |
+| 카테고리                  | md 파일      | 비고                                                            |
+| --------------------- | ---------- | ------------------------------------------------------------- |
+| **by-disease/**       | 109        | 질환·증상 메인 저장소 (5월 78건 추가)                                      |
+| **by-drug/**          | 20         | 약물·백신                                                         |
+| **guidelines/**       | 15         | 공식 가이드·요약·CLINICAL/REGULATORY/INSIGHTS/TIPS                   |
+| **myth-log/**         | 2          | 의학적 myth 학습 자원 (inject 격리)                                    |
+| **메타 (root)**         | 6          | 운영 파일 (MAP·index·log·scope·sourcing-rules·section-vocabulary) |
+| **합계**                | **152 md** |                                                               |
+| Bundle unique objects | 177        | topic alias·deep-extract 흡수분 포함                               |
+| Bundle alias keys     | 601        | 영문/한글/약어 다중 등록                                                |
 
 ### kind 분포 (bundle)
 - disease: 109 / topic: 53 / drug: 15
@@ -86,15 +86,15 @@ generated: 수동 (추후 Mapper routine화 가능)
 
 ### Tier 3 — 기본은 안다
 
-| 분야 | 커버리지 | 엔트리 |
-|---|---|---|
-| 응급 | 🟡 부분 | `neffy`(아나필락시스)·`epistaxis` (기타 공백) |
-| 일반외상 | 🟡 부분 | `tdap`(파상풍)·`ankle-sprain` |
-| 소아 | 🟢 진입 | `croup`·`neonatal-fever-pecarn`·`pediatric-antibiotic-stewardship`·`meningitis` (5월 추가) |
-| **완화의학** | 🟢🟢 강함 | `palliative-pain`·`eol-deprescribing`·`afp-eol-symptom-management`·`cancer-fatigue`·`cancer-neuropathic-pain-steroid`·`goals-of-care-acp` (Tier 1 분할로 6 entry 완성) |
-| **초음파 진단·인터벤션** | 🟢 진입 | `pocus-abdominal`·`pocus-lung`·`pocus-focus-cardiac`·`pocus-primary-care-efsumb`·`heart-failure-pocus-ducs` (5건) |
-| 감염 | 🟡 부분 | `covid-outpatient-antivirals`·`hepatitis-b`·`pediatric-antibiotic-stewardship` |
-| 기타 | 🟡 부분 | `unintentional-weight-loss`·`persistent-physical-symptoms`·`continuity-of-care`·`delayed-diagnosis`·`fatigue` (가정의학 메타) |
+| 분야              | 커버리지    | 엔트리                                                                                                                                                               |
+| --------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 응급              | 🟡 부분   | `neffy`(아나필락시스)·`epistaxis` (기타 공백)                                                                                                                               |
+| 일반외상            | 🟡 부분   | `tdap`(파상풍)·`ankle-sprain`                                                                                                                                        |
+| 소아              | 🟢 진입   | `croup`·`neonatal-fever-pecarn`·`pediatric-antibiotic-stewardship`·`meningitis` (5월 추가)                                                                           |
+| **완화의학**        | 🟢🟢 강함 | `palliative-pain`·`eol-deprescribing`·`afp-eol-symptom-management`·`cancer-fatigue`·`cancer-neuropathic-pain-steroid`·`goals-of-care-acp` (Tier 1 분할로 6 entry 완성) |
+| **초음파 진단·인터벤션** | 🟢 진입   | `pocus-abdominal`·`pocus-lung`·`pocus-focus-cardiac`·`pocus-primary-care-efsumb`·`heart-failure-pocus-ducs` (5건)                                                  |
+| 감염              | 🟡 부분   | `covid-outpatient-antivirals`·`hepatitis-b`·`pediatric-antibiotic-stewardship`                                                                                    |
+| 기타              | 🟡 부분   | `unintentional-weight-loss`·`persistent-physical-symptoms`·`continuity-of-care`·`delayed-diagnosis`·`fatigue` (가정의학 메타)                                           |
 
 ### 🎯 Scope 커버리지 요약 (4-23 → 5-8 변화)
 - **이비인후과**: 10 → **20+** (압도적 강점)
