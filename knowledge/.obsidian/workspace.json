@@ -179,6 +179,12 @@
   },
   "active": "a1fb1136ee2e1def",
   "lastOpenFiles": [
+    "guidelines/dash-diet-cvd.md",
+    "by-disease/uterine-fibroids.md",
+    "by-disease/spine-related-arm-pain.md",
+    "by-disease/palliative-depression-ketamine.md",
+    "by-disease/fall-prevention-awv.md",
+    "by-disease/bladder-pain-syndrome.md",
     "by-disease/hyposmia.md",
     "2026-05-07-heel-pain-afp.md",
     "by-disease/heel-pain.md",
@@ -198,12 +204,6 @@
     "claude.md",
     "heart-failure-volume-overload.md",
     "by-drug/vaccine-interval.md",
-    "by-disease/vaccination.md",
-    "by-disease/neonatal-fever-pecarn.md",
-    "by-disease/eol-deprescribing.md",
-    "by-disease/asthma.md",
-    "by-disease/anticholinergic-burden.md",
-    "by-disease/afp-eol-symptom-management.md",
-    "by-disease/opioid-use-disorder.md"
+    "by-disease/vaccination.md"
   ]
 }
