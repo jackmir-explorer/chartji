@@ -34,12 +34,12 @@ echo "Scout 대상 날짜 (KST): $TODAY"
 - `inbox/scout/$TODAY.md` 가 **이미 존재하면 → 현재 run 종료** (덮어쓰기·자동 보완 금지, 전날 파일을 잘못 수정하는 사고 방지)
 - 같은 날짜 재실행이 필요하면: 미르가 기존 파일을 `inbox/scout/archive/` 로 이동 후 재실행
 
-### Step 1 — 슬롯 할당 (2026-04-29 Mir-Tier 1 재편 / 4-29 patch는 흡수·DEPRECATED)
+### Step 1 — 슬롯 할당 (2026-04-29 Mir-Tier 1 재편 / 4-29 patch는 흡수·DEPRECATED / 2026-05-10 1-E gaps 슬롯 신설)
 
 > 본 routine은 미르의 임상 핵심영역(Mir-Tier 1)에 정렬된다.
 > source of truth: `~/.claude/projects/.../memory/user_clinical_focus.md` + `knowledge/scope.md` Mir-Tier 1 섹션.
 > 4-29 다양성 패치(영역 cap·0순위 풀)는 본 재편으로 흡수 — DEPRECATED, 아래 1-A~1-D로 대체.
-
+> **2026-05-10**: 1-E gaps 슬롯 신설. 미르 직접 input(`inbox/gaps.md`) 기반 탐색이 영역 cycling보다 우선. gaps 있는 날 1-D Tier 2가 양보 (4-29 Mir-T1 매일 7건 의무 유지).
 **1-A. 영역 내부 세부 키워드 추출 (영역간 cap 폐기)**
 
 `knowledge/log.md` 마지막 30개 항목 → Mir-Tier 1 7영역 각각의 빈도 TOP 1 세부 키워드 추출.
@@ -148,8 +148,57 @@ Anchor 저널: NEJM Clinical Problem-Solving · JAMA Patient Page · AFP. 1슬�
 3. 직전 7일 scout 보고서의 "공백채우기" 메모를 읽어 같은 분야 재선택 회피
 
 **Tier 3 랜덤 탐색(Step 2 Tier 3)과는 별도** — 합쳐 2개 탐색 방향.
-
 **목적**: scope.md Tier 2 미터치 영역이 자기강화 loop로 영구 공백화되는 것을 차단 (2026-04-29 다양성 검증 결과).
+> **2026-05-10 보강**: 본 공백 풀의 우선순위 표는 historical 기록. **현재 우선순위는 `knowledge/MAP.md` § "잔여 우선 공백"이 single source of truth** — MAP.md가 갱신될 때마다 1-D Tier 2 슬롯이 동적으로 따라감. 본 표의 0순위/보강 진행/보강됨 라벨은 MAP.md에서 재산정.
+### Step 1-E — Gaps 기반 슬롯 (2026-05-10 신설, 매일 0~3건)
+`inbox/gaps.md`를 읽어 미르의 임상 빈틈을 Scout 탐색에 반영한다. **미르 결단 (2026-05-10)**:
+- 환자 식별 정보 격리 불필요 — 미르 본인 통제로 신뢰 가능 (CLO 우려 무효)
+- 격일 rotation 폐기, **gaps 슬롯이 1-D Tier 2를 양보** 받는 구조
+- MAP.md 잔여 공백이 우선순위 single source — 0순위 풀 강제 cycling 불필요
+
+#### 파싱
+1. `inbox/gaps.md`에서 `- ` 로 시작하는 줄 중 `[x]`가 아닌 항목 수집
+2. 파일 아래쪽(최근 추가)부터 최대 **3건** 선택
+3. 환자 식별 정보(이름·나이·날짜·기관명) 발견 시 **즉시 중단 + 미르에게 보고** (격리 원칙)
+
+#### 키워드 추출 및 검색
+각 gap 항목에서:
+1. 의학 개념 추출 (질환·약물·술기·감별진단 등)
+2. 대괄호 prefix 있으면 1순위 키워드로 활용 (`- [POCUS] IVC collapsibility 해석` → "POCUS" + "IVC" + "collapsibility")
+3. PubMed 쿼리:
+   - `"{개념}" AND (primary care OR family medicine OR general practice) 2024[dp]:2026[dp]`
+   - 결과 부족 시: `"{개념}" review 2023[dp]:2026[dp]`
+4. 기존 Step 3 필터링(⭐/✕)과 동일 기준 적용
+
+#### Scout 보고서 표기
+⭐ 판정 논문에 gap 출처 명시:
+N. {제목 축약}
+저널·PMID·한 줄·왜 유용 (기존 형식)
+Gap: 노인 불면 trazodone vs 멜라토닌 1차 용량?
+추출 키워드: 노인 불면, trazodone, melatonin, 1차 처방
+Deep Extract: [ ]
+추출 키워드 라인은 **필수** — 한 줄 gap → PubMed 변환 정확도 검증 가능 (CMO 우려 대응).
+
+#### gaps.md 마커 갱신
+- ⭐ 논문 배정 시 → `- [x] {원문}`으로 자동 변경
+- 검색했으나 적합 논문 없음 → 미처리 유지, 보고서 footer에 `gap 미해소: {항목}` 기록 (다음 날 재시도)
+- `[x]` 30건 초과 시 → Archive 섹션으로 자동 이동
+- **7일 연속 미해소 항목** → 보고서 footer에 `⚠ gap 7일 미해소: {항목} — 키워드 재작성 권고` 알림
+
+#### 슬롯 조정 (gaps 양보 메커니즘)
+| 슬롯 | gaps 있는 날 | gaps 없는 날 |
+|---|---|---|
+| 1-B Mir-Tier 1 | 7건 (유지 — 4-29 매일 의무) | 7건 |
+| 1-C 횡단 (3일 cycle) | 1건 | 1건 |
+| 1-D Tier 2 (8일 cycle) | **0건** (gaps에 양보) | 1건 |
+| **1-E Gaps** | **N건 (1≤N≤3)** | 0건 |
+| 합계 | 8~10건 | 9건 |
+규칙:
+- N=1·2: Tier 2가 0건 양보, 합 8~9건
+- N=3: Tier 2가 0건 양보, 합 10건 (4-29 상한 일치)
+- gaps 0건: 1-D Tier 2 1건 정상 진행
+**Tier 2 양보 회복**: 1-D는 8일 cycle이므로 1~2일 양보해도 cycle 내 회복 가능 (CMO 우려 대응).
+**우선순위 사유**: gaps는 미르가 실제 진료에서 부딪힌 빈틈 — 영역 cycle보다 임상 학습 ROI 높음. 단 1-B Mir-T1 7건 의무는 절대 불가침 (4-29 미르 명시).
 
 ### Step 2 — 탐색 (Anchor 저널 + 영역 매핑 — 4-29 재편)
 
