@@ -9,10 +9,10 @@
 - [기침] subacute cough (3-8주) 알고리즘 — post-infectious cough 우선순위, 부비동염 직후 맥락
 - [기침] ACCP/CHEST cough guideline — UACS-Asthma-GERD triad + post-infectious + ACEi 5분 정리
 - [발한] diaphoresis 감별 — 야간발한 vs 일반, 결핵·림프종·갑상선·당뇨·심혈관·자율신경·약물·폐경·불안 분기
-- [현미경 혈뇨] 고령 여성 무증상 혈뇨 — AUA guideline workup, UTI보다 비뇨기계 악성 우선 배제
 - [환자 중심] ICE (Ideas·Concerns·Expectations) 가정의학과 진료 골격
 
 ---
 
 ## Archive
 <!-- Scout가 처리 완료 항목을 여기로 이동 -->
+- [현미경 혈뇨] 고령 여성 무증상 혈뇨 — AUA guideline workup, UTI보다 비뇨기계 악성 우선 배제 (→ PMID 40846188, 2026-05-11)
