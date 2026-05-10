@@ -21,7 +21,7 @@
 Medicare AWV 낙상 양성 노인 335명 대상 QI 연구. EHR SmartSet + 노인의학 클리닉 선제 아웃리치 조합으로 후속 관리 53.8%→67.8%, 노인의학 의뢰 7.5%→40.4% 향상. 스크리닝만으로는 부족 — 구조화 연결 전략이 핵심.
 
 ### 철결핍성 빈혈 Annals ITC 2026 (PMID:41525691)
-Ferritin cutoff 업데이트: 염증 없음 <45, 염증 있음 <100 ng/mL. 경구 철분은 격일 투여로 전환(헥시든 억제로 흡수 극대화). IV 철분은 심부전·흡수불량에 우선. IDA 확인 즉시 내시경+H.pylori+celiac 검색.
+Ferritin cutoff 업데이트: 염증 없음 <45, 염증 있음 <100 ng/mL. 경구 철분은 격일 투여로 전환(헵시딘 억제로 흡수 극대화). IV 철분은 심부전·흡수불량에 우선. IDA 확인 즉시 내시경+H.pylori+celiac 검색.
 
 ### 당뇨 노인 골다공증 (PMID:41854838)
 T2DM에서 FRAX 과소평가 → 1.2배 보정 권장. TZD 회피 필수, metformin·DPP4i·GLP1RA 골안전. Bisphosphonate·denosumab 당뇨 노인에도 유효.
@@ -36,10 +36,10 @@ IV 케타민 NNT=3(첫 1주), 효과 1~24h 발현, 1~2주 지속. 에스케타�
 TVUS+TAUS 1차 영상. 약물: COC·LNG-IUD·tranexamic acid·GnRH 계열. 수술: 자궁절제술(확정)·근종절제술(임신보존)·UAE. 1차의료 관리 vs 산부인과 의뢰 기준 명확화.
 
 ### GP POCUS 심부전 감별 (PMID:41767524)
-신규 호흡곤란 102명, GP 핸드헬드 POCUS 시행. 특이도 38→88%, κ 0.254→0.723. 폙 B-line + FoCUS 조합 단기 훈련으로 즉시 적용 가능.
+신규 호흡곤란 102명, GP 핸드헬드 POCUS 시행. 특이도 38→88%, κ 0.254→0.723. 폐 B-line + FoCUS 조합 단기 훈련으로 즉시 적용 가능.
 
 ### BPS/IC AFP RER (PMID:42101600)
-배놨통·만성 골반통 배제 진단. 1단계: 행동수정+골반저PT. 2단계: 아미트립틸린·가바펜티노이드·항히스타민. 3단계: 방광내주입. 비놨기과 의뢰 기준 포함.
+배뇨통·만성 골반통 배제 진단. 1단계: 행동수정+골반저PT. 2단계: 아미트립틸린·가바펜티노이드·항히스타민. 3단계: 방광내주입. 비뇨기과 의뢰 기준 포함.
 
 ### 올란자핀 OINV 예방 (PMID:42103083)
 암 환자 오피오이드 시작 시 olanzapine 5mg×5일 예방 투여. CC율 79.4%, CR율 82.4%. 단일군 탐색적 연구 — 추가 RCT 필요.
@@ -72,7 +72,7 @@ Liby가 수행할 작업 (자동화 제외 — 판단 필요):
 - parents 필드 판단 (child→parent 맥락 확장)
 - kind 부여 (disease / drug / topic)
 - sections[].sources[] 채움 (TIPS 타입 공식화 포함 — `skills/knowledge-ingest/SKILL.md` 5-B)
-- 셉션↔출세 주제 일치 자가검증 (SKILL.md 5-C)
+- 섹션↔출처 주제 일치 자가검증 (SKILL.md 5-C)
 - `src/knowledge-bundle.js` 엔트리 작성
 - TRIAGE 감지 확장 (SKILL.md Step 8)
 
