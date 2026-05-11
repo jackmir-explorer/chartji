@@ -3,6 +3,17 @@
 새 내용이 추가될 때마다 Claude Code가 여기에 한 줄 기록한다.
 형식: YYYY-MM-DD | 파일명 | 내용 요약
 
+2026-05-11 | by-drug/glp1-selection-strategy.md | 추가 — GLP-1RA 36 RCT 메타분석: 체중감량 중 근육 손실 비율 중앙 34.9%, 68% 연구에서 25% 기준치 초과; 저항운동+단백질 섭취 교육 필수 [CLINICAL] PMID:41996180 (출처 05-10)
+2026-05-11 | by-disease/prescribing-cascade.md | 이미 처리됨 (2026-04-30 기록) — Scout 05-10 마커만 [✓] 업데이트 [CLINICAL] PMID:41949780
+2026-05-11 | guidelines/deprescribing.md | 추가 — 치매 요양원 ADRD 232,543명: 항우울제 51.6% 사용, PHQ-9≥10은 <5%; 다약제 강연관; deprescribing 적응증 점검 [CLINICAL] PMID:42089534 (출처 05-10)
+2026-05-11 | by-disease/migraine.md | 추가 — IHS 급성 편두통 가이드라인 AFP 요약: 트립탄·NSAIDs 1차, 항구토제 구역 시 병용, MOH 기준·예방 [CLINICAL] PMID:41839119 (출처 05-10)
+2026-05-11 | by-disease/msk-injection-therapy.md | 추가 — 초음파 유도 말초신경차단(USG-PNB) 건초염 경피 시술: 극상근·외측상과·슬개건·아킬레스건·족저근막 등 7부위 신경표적 해부학 프로토콜 [CLINICAL] PMID:41479369 (출처 05-11)
+2026-05-11 | by-disease/chronic-pain-integrative.md | 추가 — APPROACH 연구(n=3,306): PD-CIH 단독 vs +자기관리(요가·마음챙김·태극권) — 통증 간섭 동등(-0.62 vs -0.70); 자기관리 군 피로·정신건강·웰빙 주관 개선 더 많음 [CLINICAL] PMID:41771006 (출처 05-11)
+2026-05-11 | by-disease/palliative-pain.md | 추가 — 암성통증 BH 개입: 인지율 17.6%, 사용률 4.0%, 의사 권고 시 34.3% 수용 의향, OR 2.53; 능동 권고 필수 [CLINICAL] PMID:42105883 (출처 05-11)
+2026-05-11 | by-disease/frailty.md | 추가 — 지역사회 집합장소 참여 × 운동습관 없는 노인: 인지장애 HR 0.51; 운동 안 하는 고령 환자 경로당·모임 참여 인지 예방 전략 [CLINICAL] PMID:42105326 (출처 05-11)
+2026-05-11 | by-disease/epilepsy-elderly.md | 신규 — 노인 뇌전증 ASM 내약성: 신약(라모트리진·레베티라세탐·라코사미드 등) 구약(페니토인·카바마제핀) 대비 내약성 우수; 저용량·느린 증량·효소유도제 회피 [CLINICAL] PMID:41706289 (출처 05-11)
+2026-05-11 | guidelines/deprescribing.md | 추가 — 생활습관 의학 통합 일차의료 T2DM 감약: 6.3% 감약 달성, 메트포르민 감량/중단·인슐린 감량; BMI -2.25·HbA1c -13%; 심각한 이상반응 0건 [CLINICAL] PMID:41976866 (출처 05-11)
+
 ---
 
 2026-05-10 | by-disease/fall-prevention-awv.md | 신규 — AWV 낙상 스크리닝 후속 관리 QI: SmartSet + 아웃리치 조합 → 후속 53.8%→67.8%, 노인의학 의뢰 7.5%→40.4% [CLINICAL] PMID:42089560 — 과거 누락 복구 (출처 05-07)
