@@ -183,6 +183,33 @@ OUD 유지 부프레노르핀 환자 + 암 진단·통증
 
 ---
 
+## 암성통증 환자의 행동건강 개입 — 의사 권고가 핵심 [CLINICAL]
+
+> [출처: Kao G et al. Bridging the Gap: Engagement with Behavioral Health for Pain Management Among Oncology Patients. J Pain Symptom Manage. 2026 May. PMID:42105883, DOI:10.1016/j.jpainsymman.2026.04.625]
+> 단면 설문, n=455명 암 외래 만성통증 환자, MD Anderson Cancer Center
+
+**핵심 수치:**
+
+| 지표 | 수치 |
+|---|---|
+| 행동건강(BH) 개입 인지율 | **17.6%** |
+| 현재 BH 개입 사용률 | **4.0%** |
+| 의료진 권고 시 이용 의향 | **34.3%** |
+| 의사 권고 → 수용 동기 (OR) | **2.53** (p<.001) |
+
+행동건강(BH) 개입: 인지행동치료·이완 요법·마음챙김·심상 요법 등
+
+**임상 메시지:**
+- "필요하면 말씀하세요" → 사용률 4%. **"저는 이걸 권합니다"** 로 바꾸면 수용률 최대 34%
+- 여성, 정신건강 병력 환자에서 이용률 높음 — 타겟 선제 상담 효과적
+
+**외래 적용:**
+- 암성 통증 외래마다 BH 개입 옵션 능동적 언급 루틴화
+- "심리치료나 이완 요법이 통증 조절에 실제로 효과 있습니다. 한번 해보시겠어요?"
+- 단일 대형 암 센터 단면 연구 — 의향(willingness)과 실제 이용의 괴리 주의
+
+---
+
 ## 부프레노르핀 패치 조기 효력 소실 (End-of-Dosage Failure) (precaution) [CLINICAL — 조건부]
 
 > [출처: Weerasiri SD et al. A Case Report of End-of-Dosage Failure With Buprenorphine Patch. J Pain Symptom Manage. 2026 Jan 28;71(5):e606-e609. PMID:41617142, DOI:10.1016/j.jpainsymman.2026.01.018]

@@ -137,6 +137,34 @@ relations: []
 
 ---
 
+## 지역사회 집합장소 참여 — 운동 부족 노인의 인지장애 예방 [CLINICAL]
+
+> [출처: Uemura K et al. Effect Modification by Exercise Habit on the Association Between Participation in Community Gathering Places and Cognitive Disability. J Am Geriatr Soc. 2026 May 9. PMID:42105326, DOI:10.1111/jgs.70499]
+> 후향적 코호트, n=2,758명 ≥65세 지역사회 노인, 일본 Habikino시, 2020-2024 추적
+
+**핵심 수치:**
+
+| 운동습관 유무 | 집합장소 참여 → 인지장애 위험 |
+|---|---|
+| **운동습관 없는 노인** | HR **0.51** (95% CI 0.27~0.97) — 인지장애 **49% 감소** |
+| 운동습관 있는 노인 | HR 1.09 (0.57~2.09) — 효과 없음 |
+| 상호작용 p값 | 0.092 (경계 유의) |
+
+**임상 해석:**
+- 집합장소 참여 = 신체활동 + 사회적 교류 + 인지 자극 복합 노출
+- 이미 운동하는 노인은 추가 이익 없음 → **비활동 노인에게 특화된 전략**
+
+**일차의료 적용:**
+- 관절통·허약·동기 부족으로 운동이 어려운 고령 환자에게 적용
+- "경로당, 마을회관, 동네 모임에 꾸준히 나가세요" — 인지장애 예방 근거로 권고 가능
+- 재택의료 방문 시: 사회적 격리 여부 + 지역사회 참여 정도 루틴 문진 추가
+
+**한계:**
+- 후향적 관찰 — 역인과성 배제 불가, 상호작용 p=0.092 (경계선)
+- 1개 시 일본 데이터 — 한국 경로당·복지관 적용 가능성은 높으나 외삽 주의
+
+---
+
 ## 건강한 노인 — 생활습관 복합 교정과 건강수명 [CLINICAL]
 
 > [출처: Robb C et al. Association of Combined Lifestyle Behaviors With Healthspan in Older Adults. J Am Geriatr Soc. 2026 May 7. PMID:42095703, DOI:10.1111/jgs.70426]
