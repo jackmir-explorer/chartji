@@ -2046,15 +2046,16 @@ var _smoking_cessation_v2 = {
   kind: "topic",
   keywords: ["smoking-cessation","금연","smoking cessation","전자담배","vaping","NRT","니코틴 대체요법","varenicline"],
   primarySources: [
-    "Shaughnessy AF. Vaping Is Better Than Nicotine Replacement Gum for Smoking Cessation. Am Fam Physician 2026;113(3). PMID:41839085 [초록 기반 — 전문 미확인]"
+    "Shaughnessy AF. Vaping Is Better Than Nicotine Replacement Gum for Smoking Cessation. Am Fam Physician 2026;113(3). PMID:41839085 [초록 기반 — 전문 미확인]",
+    "Montgomery L, Beaverson S. Nicotine e-Cigarettes as a Strategy for Smoking Cessation. Am Fam Physician 2025 Oct;112(4):450-451. PMID:41118192 [초록 미공개 — AFP 요약]"
   ],
   sections: {
     definition: {
-      content: "외래 금연 상담 시 약물·비약물 중재 선택지 정리. 2026 [[afp-top20-poems-2024|AFP]] POEM은 전자담배(vaping)가 니코틴 대체요법 껌(NRT gum)보다 금연 성공률이 높다고 요약.",
+      content: "외래 금연 상담 시 약물·비약물 중재 선택지 정리. 2026 [[afp-top20-poems-2024|AFP]] POEM은 전자담배(vaping)가 니코틴 대체요법 껌(NRT gum)보다 금연 성공률이 높다고 요약. 2025 AFP 리뷰는 니코틴 전자담배의 금연 보조 근거·한계·외래 상담 포인트 추가 정리.",
       sources: []
     },
     comparison: {
-      content: "### 전자담배(vaping) vs NRT 껌 — [[afp-top20-poems-2024|AFP]] 2026 POEM [CLINICAL — 조건부]\n> [초록 기반 — 전문 미확인]\n\n- **결론:** RCT 근거상 전자담배(vaping)가 NRT 껌보다 금연 성공률 높음\n- **함의:** 기존 NRT 우선 접근을 재고 가능. 금연 시도 상담 시 전자담배를 NRT 대안으로 제시하는 근거 형성.\n\n### 주의\n- 1차 선택으로 전환 금지. POEM 한 편 요약 — 전문 확인 + 지속적 폐·심혈관 위해 평가 필요.\n- 국내 규제·급여 상황 미반영. 성인 금연 시도 환자 맞춤 상담 시 옵션으로 소개하되 장기 안전성 unknowns 고지.\n- 기존 varenicline·NRT 패치/껌/로젠지·bupropion 옵션 병존. 전자담배 단독 추천 아님.",
+      content: "### 전자담배(vaping) vs NRT 껌 — [[afp-top20-poems-2024|AFP]] 2026 POEM [CLINICAL — 조건부]\n> [초록 기반 — 전문 미확인]\n\n- **결론:** RCT 근거상 전자담배(vaping)가 NRT 껌보다 금연 성공률 높음\n- **함의:** 기존 NRT 우선 접근을 재고 가능. 금연 시도 상담 시 전자담배를 NRT 대안으로 제시하는 근거 형성.\n\n### 니코틴 전자담배 금연 전략 — AFP 2025 리뷰 [CLINICAL — 조건부]\n> [출처: AFP 2025 Oct;112(4):450-451. PMID:41118192 — 초록 미공개, AFP 요약 기반]\n\n- 전자담배(e-cigarette)를 금연 보조 전략으로 다룬 AFP 2025 리뷰. 기존 NRT·varenicline 대비 근거 수준·적응 상황·부작용 상담 포인트 정리.\n- 금연 상담 도구 선택 의사결정에 직접 활용.\n\n**외래 상담 요점 (AFP 요약 기반):**\n- \"전자담배로 끊을 수 있나요?\" 질문에 AFP 근거 기반 답변 가능\n- 효과 있을 수 있으나 **장기 폐·심혈관 안전성 unknowns** 고지 필수\n- 청소년·비흡연자에게는 사용 금지 강조\n- **흡연 중단 의사가 있는 성인 흡연자** 한정 선택지",
       sources: []
     },
     protocol: {
@@ -3415,7 +3416,8 @@ var _tinnitus_v2 = {
   primarySources: [
     "Curr Opin Otolaryngol HNS 2025. PMID:40836771 (MEM pathophysiology and management)",
     "Westerberg 1996 baclofen RCT. PMID:8915419",
-    "Liu 2011 — Revisiting Baclofen for Severe Chronic Tinnitus. PMC3297816"
+    "Liu 2011 — Revisiting Baclofen for Severe Chronic Tinnitus. PMC3297816",
+    "Arnold MJ. Management of Tinnitus: Guidelines From the VA/DoD. Am Fam Physician 2026 Feb;113(2):194-195. PMID:41839118 [초록 미공개 — AFP 요약]"
   ],
   sections: {
     exam: {
@@ -3423,7 +3425,7 @@ var _tinnitus_v2 = {
       sources: []
     },
     protocol: {
-      content: "### Myoclonic tinnitus (Middle Ear Myoclonus, MEM) [CLINICAL — researcher 4-30 검증]\n\n**임상 단서**: 말하기·씹기·삼키기와 동기화된 클릭/딸각/다다닥 이명, 한쪽 귀, 객관적 (이경·청진으로 들림 가능). Palatal myoclonus는 양측 일정 리듬, MEM은 비주기성·burst.\n\n**약물 선택지** (high-quality evidence 부족, 모두 off-label):\n| 단계 | 약제 | 용량 |\n|---|---|---|\n| 1차 | **Clonazepam (리보트릴)** 0.5 mg HS → 0.5 mg TID | 가장 자주 first-line으로 보고 |\n| 1차 | **Carbamazepine (테그레톨)** 100 mg BID 시작 | — |\n| 2차/병용 | **Baclofen** 5 mg TID(15 mg/day) → 10 mg TID(30 mg/day) | 한국 10 mg 1정 → ½T TID → 1T TID |\n\n해외 표준 baclofen escalation은 60 mg/day까지이나 졸림·어지럼·혼동으로 26% 중도탈락. 외래에서는 30 mg/day 이내 현실적.\n\n**4-6주 시도 후 무효** → ENT 의뢰 (botulinum toxin intratympanic, 또는 stapedius/tensor tympani tenotomy).\n\n[TIPS 미르 routine: 'Baclofen 1.5T#3 줘본다' — 보수적 시작이지만 1차약은 clonazepam·carbamazepine. researcher 검증 4-30 수정]\n\n### 야간 이명 — 수면 영향 [TIPS — by ENT 교수]\n- **Clonazepam (리보트릴) 1 mg HS** (전액 본인부담)\n- 졸음 심하면 **0.5 mg HS**로 감량\n- 적응: 이명으로 입면 곤란",
+      content: "### Myoclonic tinnitus (Middle Ear Myoclonus, MEM) [CLINICAL — researcher 4-30 검증]\n\n**임상 단서**: 말하기·씹기·삼키기와 동기화된 클릭/딸각/다다닥 이명, 한쪽 귀, 객관적 (이경·청진으로 들림 가능). Palatal myoclonus는 양측 일정 리듬, MEM은 비주기성·burst.\n\n**약물 선택지** (high-quality evidence 부족, 모두 off-label):\n| 단계 | 약제 | 용량 |\n|---|---|---|\n| 1차 | **Clonazepam (리보트릴)** 0.5 mg HS → 0.5 mg TID | 가장 자주 first-line으로 보고 |\n| 1차 | **Carbamazepine (테그레톨)** 100 mg BID 시작 | — |\n| 2차/병용 | **Baclofen** 5 mg TID(15 mg/day) → 10 mg TID(30 mg/day) | 한국 10 mg 1정 → ½T TID → 1T TID |\n\n해외 표준 baclofen escalation은 60 mg/day까지이나 졸림·어지럼·혼동으로 26% 중도탈락. 외래에서는 30 mg/day 이내 현실적.\n\n**4-6주 시도 후 무효** → ENT 의뢰 (botulinum toxin intratympanic, 또는 stapedius/tensor tympani tenotomy).\n\n[TIPS 미르 routine: 'Baclofen 1.5T#3 줘본다' — 보수적 시작이지만 1차약은 clonazepam·carbamazepine. researcher 검증 4-30 수정]\n\n### 야간 이명 — 수면 영향 [TIPS — by ENT 교수]\n- **Clonazepam (리보트릴) 1 mg HS** (전액 본인부담)\n- 졸음 심하면 **0.5 mg HS**로 감량\n- 적응: 이명으로 입면 곤란\n\n### VA/DoD 이명 관리 가이드라인 — AFP 2026 요약 [CLINICAL]\n> [출처: AFP 2026 Feb;113(2):194-195. PMID:41839118 — VA/DoD 일반 이명 관리]\n\n**평가 단계:**\n- 청력검사(Audiogram) — 첫 평가 시 모든 환자에 시행\n- 편측성·박동성 이명 → 영상검사 고려 (vestibular schwannoma·혈관 병변 배제)\n- 동반 청력 손실·어지럼 → ENT/청각학과 의뢰\n\n**치료 옵션 (근거 기반):**\n\n| 치료 | 근거 | 적응 |\n|---|---|---|\n| **음향치료(Sound therapy)** | 권고 — 마스킹·습관화 | 집중·수면 방해 |\n| **인지행동치료(CBT)** | 가장 강한 근거 — 고통 감소 | 심리적 고통·수면장애 |\n| **이명 재훈련치료(TRT)** | 조건부 권고 | 음향치료+CBT 병합 |\n| 약물(항우울제·항불안제) | 동반 우울/불안 치료 | 동반 정신건강 문제 |\n\n> ⚠ 약물 단독으로 이명을 '치료'하는 근거 불충분 — 음향치료+CBT 병합이 핵심\n\n**환자 교육 메시지:** \"이명은 없애기 어렵지만 덜 힘들게 살아가는 방법이 있습니다 — 소리 치료와 인지행동치료가 가장 근거 있는 방법입니다.\"\n\n**의뢰 지침:**\n- 청력검사 이상 → 청각학과(Audiology)\n- 편측성·박동성 이명 → ENT\n- CBT 필요 → 심리사/정신건강의학과",
       sources: []
     },
     referral: {
@@ -5742,7 +5744,8 @@ var _anticholinergic_burden_v2 = {
   keywords: ["anticholinergic","항콜린","ACB","항콜린 부담","구강건조","xerostomia","노인 다약제","polypharmacy","STOPP","oxybutynin","diphenhydramine"],
   parents: [],
   primarySources: [
-    "Ringstad IB et al. Association Between Anticholinergic Burden and Dry Mouth Severity in Acutely Ill Older Adults. Drugs Aging. 2026 Mar;43(4):361-371. PMID:41824280, DOI:10.1007/s40266-026-01286-w"
+    "Ringstad IB et al. Association Between Anticholinergic Burden and Dry Mouth Severity in Acutely Ill Older Adults. Drugs Aging. 2026 Mar;43(4):361-371. PMID:41824280, DOI:10.1007/s40266-026-01286-w",
+    "Hu Y et al. Polypharmacy and cognitive outcomes in elderly inpatients with Alzheimer's disease. Pak J Pharm Sci. 2026 Jun;39(6):1792-1801. PMID:42001284, DOI:10.36721/PJPS.2026.39.6.170.1"
   ],
   sections: {
     monitoring: {
@@ -5763,6 +5766,10 @@ var _anticholinergic_burden_v2 = {
     },
     referral: {
       content: "- [[deprescribing|deprescribing]] — 부적절 처방 선별·중단 전략\n- [[nocturia|nocturia]] — OAB 약물 선택 (mirabegron 대안)\n- 4Ms — Medication M — Beers/STOPP 기반 점검 ([[geriatric-assessment-4ms|4Ms]] 참조)",
+      sources: []
+    },
+    notes: {
+      content: "### 알츠하이머 다약제 → 인지기능 저하 1.68배 [CLINICAL]\n> [출처: Hu Y et al. Pak J Pharm Sci 2026;39(6):1792-1801. PMID:42001284]\n> AD 입원 노인 300명, 3년 추적 후향 코호트 (PSM 적용).\n\n**핵심 수치:**\n\n| 결과 | 다약제군(≥5제) vs 비다약제군 | p |\n|---|---|---|\n| 인지기능 저하(MMSE -3점↑) | 64.0% vs 38.0% — **RR 1.68 (95%CI:1.33–2.13)** | <0.001 |\n| 낙상 | **RR 1.82** | <0.01 |\n| 재입원 | **RR 1.67** | <0.001 |\n| CDR 악화 속도 | 다약제군 빠름 | 유의 |\n| MoCA 연간 감소율 | 다약제군 더 큼 | 유의 |\n\n**항콜린 부담(ACB) 독립 예측인자:**\n- ACB ≥ 3 → 인지기능 저하 **OR 2.5 (95%CI: 1.7–3.7)** (p<0.001)\n- 다약제 자체와 별개로 항콜린 부담이 독립적 위험\n\n**외래 감약 근거:**\n- AD 환자 5제 이상 복용 시 3년 내 인지기능 저하 가속 → 감약 면담 시작 근거\n- ACB 점검 우선 대상: oxybutynin·diphenhydramine·1세대 항히스타민·amitriptyline\n- STOPP/START + ACB 계산기 병행 처방 점검 루틴화 근거\n\n> ⚠ 중국 단일기관 입원 코호트 — 지역사회 외래 한국 노인에 직접 외삽 주의",
       sources: []
     }
   },
@@ -6235,7 +6242,8 @@ var _delayed_diagnosis_v2 = {
   keywords: ["delayed diagnosis","진단 지연","diagnostic error","문서 단편화","documentation fragmentation","외래","종단적 정보","longitudinal care"],
   parents: [],
   primarySources: [
-    "Jumhour H. Delayed Diagnosis in Outpatient Care: A Systematic Review of Documentation Fragmentation as a Hidden Driver of Diagnostic Error. Cureus. 2026;18(2):e102990. PMID:41657870, DOI:10.7759/cureus.102990"
+    "Jumhour H. Delayed Diagnosis in Outpatient Care: A Systematic Review of Documentation Fragmentation as a Hidden Driver of Diagnostic Error. Cureus. 2026;18(2):e102990. PMID:41657870, DOI:10.7759/cureus.102990",
+    "Jerjes W, Majeed A. Pattern Disruption in GP speciality training: a practical intervention to enhance cognitive flexibility and diagnostic reasoning. Educ Prim Care. 2026 Apr 12. PMID:41968680, DOI:10.1080/14739879.2026.2634248"
   ],
   sections: {
     notes: {
@@ -6243,7 +6251,7 @@ var _delayed_diagnosis_v2 = {
       sources: []
     },
     protocol: {
-      content: "### 진단 연속성 확보를 위한 실천 원칙\n1. **이전 방문 기록 검토 루틴화**: 반복 외래 시 지난 3~6개월 증상 추적\n2. **진단 follow-up 명시**: \"이 증상 다음 방문에 재확인\" 메모 또는 의뢰\n3. **진화하는 패턴 인식**: 개별 방문마다 정상이어도 반복·악화 패턴에 경계\n4. **문서 통합**: 여러 기관 진료 기록 취합 — 타원 기록 적극 요청\n\n### 고위험 상황 인식\n- 여러 방문에 걸쳐 반복되는 비특이적 증상 (피로·통증·체중감소)\n- 다기관 진료 환자 — 각 기관별 부분 정보만 존재\n- EHR 간 정보 연계 미흡한 환경\n\n### Premature Closure vs Documentation Gap 구분\n| 상황 | 오류 유형 | 대응 |\n|---|---|---|\n| 한 번의 방문에서 진단 확정 | Anchoring bias | Pattern disruption 질문 추가 |\n| 반복 방문에도 패턴 인식 실패 | Documentation gap | 종단 기록 검토 루틴화 |\n| 타원 기록 미확인 | 정보 단편화 | 외부 기록 취합 요청 |",
+      content: "### 진단 연속성 확보를 위한 실천 원칙\n1. **이전 방문 기록 검토 루틴화**: 반복 외래 시 지난 3~6개월 증상 추적\n2. **진단 follow-up 명시**: \"이 증상 다음 방문에 재확인\" 메모 또는 의뢰\n3. **진화하는 패턴 인식**: 개별 방문마다 정상이어도 반복·악화 패턴에 경계\n4. **문서 통합**: 여러 기관 진료 기록 취합 — 타원 기록 적극 요청\n\n### 고위험 상황 인식\n- 여러 방문에 걸쳐 반복되는 비특이적 증상 (피로·통증·체중감소)\n- 다기관 진료 환자 — 각 기관별 부분 정보만 존재\n- EHR 간 정보 연계 미흡한 환경\n\n### Premature Closure vs Documentation Gap 구분\n| 상황 | 오류 유형 | 대응 |\n|---|---|---|\n| 한 번의 방문에서 진단 확정 | Anchoring bias | Pattern disruption 질문 추가 |\n| 반복 방문에도 패턴 인식 실패 | Documentation gap | 종단 기록 검토 루틴화 |\n| 타원 기록 미확인 | 정보 단편화 | 외부 기록 취합 요청 |\n\n### Pattern Disruption — 진단 추론 향상 교육 개입 [INSIGHTS]\n> [출처: Jerjes W, Majeed A. Educ Prim Care 2026 Apr 12. PMID:41968680] — GP 전공의 교육 개입 (Imperial College London).\n\n**배경:** 패턴 인식은 효율적 진료를 가능케 하나 비전형·진행성·복합 사례에서 **인지 경직·조기 진단 종결(premature closure)** 위험. Anchoring bias·overconfidence는 오진의 주원인.\n\n**핵심 단계:**\n```\n1. 교육자가 \"단 하나의 그럴듯한 disruptor\" 삽입\n   (새 red flag / 모순 병력 / 맥락적 위험 / 약물 문제 / 시스템 제약)\n      ↓\n2. 전공의가 명시적으로:\n   - 자신이 진입한 패턴 진술\n   - 그 패턴이 생성한 가정 확인\n   - 감별진단 확장\n   - 안전망(safety-netting)과 함께 관리 수정\n      ↓\n3. 구조화된 디브리핑\n   - 추론 과정 집중 (사실 암기 X)\n   - 불확실성 언어 명시화\n   - 적응적 의사결정\n```\n\n**확장 요소:** 전공의 생성 disruptors (near-miss 도출) / 반사실적 리허설 / 종단적 추론 변화 기록.\n\n**외래 즉시 적용 자기질문:**\n> \"이 환자가 전형적으로 보이지 않는 요소는 무엇인가?\"\n> \"내가 지금 어떤 패턴을 적용하고 있고, 그 가정은 무엇인가?\"\n\n**효과(초기 관찰):** 불확실성 내성 향상 / 진단 위험 명확한 언어화 / 비례적 후속 계획.",
       sources: []
     },
     precaution: {
