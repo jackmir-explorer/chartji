@@ -25,6 +25,8 @@
 - [GLP-1 RA 영양결핍] semaglutide 등 장기 사용 환자 — 식욕↓·위배출 지연 → iron·B12·protein 결핍 / 빈혈·피로 호소 시 약물 시작 시점과 timeline 비교 필수
 - [만성 설사 + 빈혈] celiac·IBD·colon pathology 적극 감별 — 평가 전 IBS 가정 증상약(Dicetel·Norzyme·Fotagel) 처방 금지 / anti-tTG·CRP·FOBT·필요 시 내시경
 - [Iron 보충 패러다임] 격일 투여 — daily보다 hepcidin biology상 효과적 / vitamin C 동반·공복 복용 / 만성 IDA 처방 default 변경
+- [어지러움 평가] TiTrATE framework — Timing(episodic vs continuous)·Triggers(positional·spontaneous·postural)·Associated sx·Targeted exam / 4 type 분류(vertigo·presyncope·disequilibrium·lightheadedness)별 표적 검사(Dix-Hallpike·기립성 BP·ECG·신경학적/gait·심리·약물) / "어지러움 ns" 기록 금지, 분류부터 시작
+- [TKI 부작용 profile] CML 환자 TKI별 CV·장기 부작용 — ponatinib·nilotinib vascular event(ATE·PAD·뇌졸중), dasatinib pleural effusion·PAH, imatinib edema·근경련·갑상선 영향 / 비특이증상(어지러움·피로) 호소 시 TKI 부작용 vs 질병 자체 vs 별개 원인 분기, 의심 시 혈액내과 환류
 
 ---
 
