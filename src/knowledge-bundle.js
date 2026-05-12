@@ -2219,7 +2219,8 @@ var _chronic_cough_v2 = {
   kind: "disease",
   keywords: ["만성기침","chronic cough","난치성기침","RCC","refractory chronic cough","duloxetine","SNRI","기침과민"],
   primarySources: [
-    "Wang S et al. Duloxetine for refractory chronic cough RCT. BMC Med 2026;24(1):82. PMID:41530764, DOI:10.1186/s12916-025-04613-x"
+    "Wang S et al. Duloxetine for refractory chronic cough RCT. BMC Med 2026;24(1):82. PMID:41530764, DOI:10.1186/s12916-025-04613-x",
+    "Khan D et al. Cough-hypersensitivity Syndrome — A New Paradigm in the Evaluation of Chronic Refractory Cough and Its Novel Therapeutic Horizons — A Review. J Community Hosp Intern Med Perspect 2024;14(6):75-81. PMID:39839174, DOI:10.55729/2000-9666.1417"
   ],
   sections: {
     definition: {
@@ -2236,6 +2237,10 @@ var _chronic_cough_v2 = {
     },
     notes: {
       content: "현재까지 RCC duloxetine 가장 명확한 RCT (PMID:41530764). 가바펜틴보다 부작용 프로파일 유리, 모르핀보다 일차의료 접근성↑. 기분장애 병발 환자는 오히려 duloxetine 적합할 수 있으나 RCT 범위 밖. [단일기관 n=98 — 대규모 재현 연구 필요. CLINICAL — 조건부]",
+      sources: []
+    },
+    cough_hypersensitivity: {
+      content: "### 기침 과민성 증후군(CHS) — UACS·천식·GERD 삼두마차 이후 패러다임 [CLINICAL — 조건부]\n> [출처: Khan D et al. J Community Hosp Intern Med Perspect 2024;14(6):75-81. PMID:39839174]\n> 서술 리뷰 [초록 기반 — 전문 미확인]\n\n**CHS 정의·위치:**\n- 만성기침(>8주) + GERD·UACS(상기도기침증후군)·호산성 기도염증 삼두마차 **모두 배제 후에도 지속**\n- **기침 과민성 증후군(Cough Hypersensitivity Syndrome, CHS)**: 저강도 자극(냄새·찬공기·말하기)에 유발되는 만성 기침\n- 기전: 중추·말초 신경 감작으로 기침 역치 하강\n\n**진단 흐름 (ACCP/CHEST 삼두마차 이후):**\n```\n만성기침(>8주)\n  → UACS 치료 시도 (비강 스테로이드·항히스타민)\n  → 천식/호산성 기도염증 배제·치료\n  → GERD 치료 시도\n  → 위 3가지 해소 후에도 지속\n  → ACEi 복용 중단 확인\n  → 감염 후 기침 자연 경과 대기\n  → ↓ 이후에도 지속 → **CHS 진단 고려**\n```\n\n**치료 옵션 (CHS):**\n| 치료 | 근거 | 비고 |\n|---|---|---|\n| Amitriptyline | 소규모 연구 | 25mg 저용량 시작 — 기침 감각신경 조절 |\n| Gabapentin | 소규모 연구 | 신경병증 기침 근거 [가이드라인 default: CHEST] |\n| Speech therapy (기침 억제 훈련) | 중등도 | 비약물 1차 선택 |\n| Gefapixant (P2X3 길항제) | 신규 — 영국 NICE 승인 2024 | 한국 가용성 [출처 미확인 — researcher 검증 권장] |\n| Morphine low-dose | 영국 가이드 | 부작용 부담 — 최후 수단 |\n\n**환자 교육:**\n> \"기침을 유발하는 신경이 과민해진 상태입니다. 폐나 목에 문제가 있어서가 아닙니다. 심한 기침 자체가 신경을 더 자극하므로, 기침 충동을 억제하는 훈련과 약물로 신경 민감도를 낮추는 치료를 해볼 수 있습니다.\"\n\n**외래 적용:**\n- \"설명 안 되는 만성기침\" 환자에게 CHS 기전 설명 → '심인성'으로 치부하던 접근 탈피\n- 삼두마차 치료 충분 시도 후(각 4~8주) CHS로 재개념화 + amitriptyline·gabapentin·speech therapy 도입\n- Duloxetine RCT(PMID:41530764) 결과와 연계 — 신경 조절 약물 RCC 근거로 함께 참조",
       sources: []
     }
   },
@@ -4281,7 +4286,8 @@ var _deprescribing_v2 = {
     "Marcellaud E et al. Attitudes Toward Deprescribing Among Community-Dwelling Adults. Drugs Aging. 2026 May 2. PMID:42068533, DOI:10.1007/s40266-026-01298-6",
     "Siddiqui TG et al. Brief intervention for inappropriate z-hypnotics use in older adults: a before and after intervention study in primary care. Scand J Prim Health Care. 2026;44(1):2660168. PMID:42031000, DOI:10.1080/02813432.2026.2660168",
     "Jacob Y et al. Deprescribing Following Access to Lifestyle Treatment. J Clin Med 2026 Mar 27;15(7). PMID:41976866, DOI:10.3390/jcm15072561",
-    "Liang S et al. Antidepressant Use Among US Nursing Home Residents With Dementia. J Am Geriatr Soc 2026 May 6. PMID:42089534, DOI:10.1111/jgs.70492"
+    "Liang S et al. Antidepressant Use Among US Nursing Home Residents With Dementia. J Am Geriatr Soc 2026 May 6. PMID:42089534, DOI:10.1111/jgs.70492",
+    "Yin F et al. Deprescribing Psychotropic Medications and Falls in Older Adults: A Setting-Stratified Systematic Review and Meta-Analysis. J Am Med Dir Assoc 2026;27(5):106146. PMID:41791728, DOI:10.1016/j.jamda.2026.106146"
   ],
   sections: {
     protocol: {
@@ -4306,6 +4312,10 @@ var _deprescribing_v2 = {
     },
     dementia_antidepressant: {
       content: "### 치매 요양원 거주자 항우울제 과처방 [CLINICAL]\n> [출처: Liang S et al. J Am Geriatr Soc 2026 May 6. PMID:42089534]\n> 단면 연구, MDS 3.0 연계 Medicare 청구, n=232,543명, ADRD 요양원 장기입소 노인(≥65세), 미국.\n\n| 지표 | 수치 |\n|---|---|\n| 항우울제 사용률 (전체 ADRD) | **51.6%** |\n| 중등도 이상 우울 (PHQ-9 ≥10) | **<5%** |\n| 우울·불안 동반 시 처방률 | 69.5% |\n| 통증 동반 시 처방률 | 61.9% |\n| 불면 동반 시 처방률 | 60.0% |\n| 위 조건 없이 처방된 비율 | **14.1%** |\n\n**가장 흔한 약물:** SSRIs (60.7%) — citalopram·sertraline; mirtazapine (수면/식욕), trazodone (수면).\n\n**임상 메시지:**\n- 치매 요양원 거주자 절반 이상이 항우울제 복용 → **우울 근거 없이 처방되는 경우 많음**\n- 다약제와 강한 양의 연관 → 처방 연쇄 가능성\n- 통증·불면·불안 대증 처방으로 항우울제 누적 → deprescribing 적응증 검토 대상\n\n**외래 치매 노인 항우울제 점검:**\n1. 적응증 명확 여부 확인 (PHQ-9 ≥5, 우울 진단 명기)\n2. 적응증 불명확 + 다약제 → 감약 적응증 평가\n3. 통증·불면·불안 목적 → 1차 치료 전략으로 대체 가능한지 검토\n4. SSRIs: 점진 감량 (중단 반응 방지); mirtazapine·trazodone: 수면·식욕 외 효과 재평가\n\n**주의:** 치매 환자 PHQ-9 정확도 낮음 (인지 저하로 과소보고); BPSD 조절 목적 SSRIs는 개별화 — 무조건 중단 금지.",
+      sources: []
+    },
+    psychotropic_falls: {
+      content: "### 정신과 약물 감약 → 낙상 감소 — 고충실도 프로그램이 핵심 [CLINICAL]\n> [출처: Yin F et al. J Am Med Dir Assoc 2026;27(5):106146. PMID:41791728]\n> 체계적 문헌고찰+메타분석, 18연구(RCT 11+NRSI 7), 노인(≥65세), 정신과 약물(BZD·수면제·항정신병약) 감약. 설정별 층화.\n\n| 설정 | 연구 수 | 낙상 OR | 유의성 |\n|---|---|---|---|\n| 지역사회 장기 RCT (전체) | — | 0.91 (0.59–1.39) | ✗ 비유의 |\n| **지역사회 고충실도 프로그램** | — | **0.61 (0.41–0.91)** | ✓ 유의 |\n| 지역사회 저충실도 | — | 효과 없음 | ✗ |\n| **입원환자 (NRSI 5개, n=5,972)** | 5 | **0.43 (0.19–0.96)** | ✓ 유의 |\n| 장기요양시설 | — | 비유의 | ✗ |\n| 퇴원후 전환기 돌봄 | — | 비유의 | ✗ |\n\n**임상 메시지:**\n- 정신과 약물 감약이 낙상을 줄이지만 **효과는 고충실도 프로그램에서만** → \"줄여봅시다\" 막연한 접근 ✗\n- **고충실도 = 구조화 프로토콜(STOPP/START 등) + 환자·보호자 교육 병행 + 체계적 추적**\n- 근거 수준: 낮음~매우 낮음 (GRADE) — 방향성은 명확, 확증 시험 필요\n\n**외래 적용 — 정신과 약물 감약 시작:**\n1. **대상 선별**: BZD·수면제·항정신병약 복용 중인 ≥65세 낙상 위험 환자 (STEADI 또는 낙상 이력)\n2. **프로토콜 기반 감약**: STOPP 기준 해당 여부 확인 → 단계적 감량 계획 수립\n3. **환자·보호자 교육**: 감약 이유·금단 증상·대체 전략(비약물 수면치료·CBT-I) 제시\n4. **추적**: 감약 2~4주 후 금단·재발·낙상 재평가 → 필요시 속도 조절\n5. 관련: [[fall-prevention-awv]], [[geriatric-assessment-4ms]]",
       sources: []
     }
   },
@@ -4515,7 +4525,8 @@ var _chronic_pain_integrative_v2 = {
   primarySources: [
     "Polizzi CP et al. J Psychiatr Res 2026 Feb 25;197:97-106. PMID:41774973, DOI:10.1016/j.jpsychires.2026.02.045",
     "Sokol R et al. Nonopioid Pharmacologic Management of Chronic Noncancer Pain. Am Fam Physician. 2025 Aug;112(2):187-196. PMID:40834375",
-    "Zeliadt SB et al. Adding Self-Care Complementary and Integrative Health Therapies to Care for Chronic Pain: The APPROACH Study. Med Care 2026 Mar;64(5):283-292. PMID:41771006, DOI:10.1097/MLR.0000000000002295"
+    "Zeliadt SB et al. Adding Self-Care Complementary and Integrative Health Therapies to Care for Chronic Pain: The APPROACH Study. Med Care 2026 Mar;64(5):283-292. PMID:41771006, DOI:10.1097/MLR.0000000000002295",
+    "Amin JR et al. Expectations and communication in opioid pain management: a qualitative study of patients' experience. Scand J Prim Health Care 2026;44(1):2616517. PMID:41574586, DOI:10.1080/02813432.2026.2616517"
   ],
   sections: {
     notes: {
@@ -4536,6 +4547,10 @@ var _chronic_pain_integrative_v2 = {
     },
     approach_study: {
       content: "### 만성 근골격통증 자기관리 보완의학 추가 — APPROACH 연구 [CLINICAL]\n> [출처: Zeliadt SB et al. Med Care 2026 Mar;64(5):283-292. PMID:41771006]\n> 실용적 비무작위 시험, n=3,306명 재향군인, 만성 근골격통증, VA 18개 센터, 2021-2023.\n\n**비교군:**\n- **PD-CIH:** 침술·척추교정·마사지 (시술사 제공)\n- **PD/SC-CIH:** PD-CIH + 요가·마음챙김·태극권 (자기관리 병행)\n\n| 결과 지표 | PD-CIH | PD/SC-CIH |\n|---|---|---|\n| 통증 간섭 개선 (6개월) | -0.62 | -0.70 |\n| 군간 차이 | **유의하지 않음** (-0.12, 95% CI -0.28~0.05) | |\n| 체감 통증 개선 보고 | — | +11% |\n| 체감 피로 개선 | — | +28% |\n| 체감 정신건강 개선 | — | +24% |\n| 체감 전반 웰빙 개선 | — | +27% |\n\n**임상 메시지:**\n- 통증 간섭 수치 두 군 **동등** — 자기관리 추가가 통증 점수를 추가 감소시키지는 않음\n- 자기관리 병행 군에서 피로·정신건강·웰빙 **주관적 개선** 체감 환자 더 많음\n- \"시술만큼 자기관리를 권고해도 효과 동등\" → 자기관리 프로그램 의뢰 근거\n\n**일차의료 적용:**\n- 만성 근골격통증 외래에서 요가·마음챙김·태극권 권고 근거 (n=3,306 실용 시험)\n- VA 특화 — 한국 외래 외삽 시 군 심리사회 복잡성 제외, 근골격 특성은 유사",
+      sources: []
+    },
+    opioid_communication: {
+      content: "### 오피오이드 처방 갱신과 소통 — 검증·동맹 전략 [INSIGHTS]\n> [출처: Amin JR et al. Scand J Prim Health Care 2026;44(1):2616517. PMID:41574586]\n> 정성 연구, n=15, 만성통증 오피오이드 처방 환자, 스웨덴 농촌 일차의료. 반구조 인터뷰 → 반성적 주제 분석.\n\n**두 핵심 주제:**\n\n**주제 1 — \"Prescribing Validation\" (처방 = 검증):**\n- 처방 갱신 → 환자에게 **통증 상태의 '공식 검증·인정'** 신호\n- 거절·감량 → **불신(mistrust)** 으로 경험 (\"내 통증을 믿지 않는다\")\n- 환자는 자신의 통증을 가장 잘 아는 전문가로 **인정받고자** 함\n\n**주제 2 — \"Battle for the Steering Wheel\" (주도권):**\n- 만성통증 삶 경험 바탕으로 환자는 자신의 전문성 주장\n- 종종 **무시당한다는 좌절감** 경험\n\n**외래 감량 대화 전략:**\n| 상황 | 전략 |\n|---|---|\n| 감량·거절 논의 시작 전 | **먼저 통증 경험 검증(validation)** — \"얼마나 힘드셨을지 이해합니다\" |\n| 감량 이유 설명 | \"처방 줄이는 게 통증을 믿지 않아서가 아님\"을 명확히 전달 |\n| ICE 접근 연결 | Ideas: \"오피오이드가 어떻게 도움이 된다고 느끼시나요?\" / Concerns: \"줄이면 어떤 걱정이 드세요?\" |\n| 신뢰 동맹 | 생물심리사회 교육은 신뢰 형성 **후**에 유효 — 관계 없이 교육 먼저는 역효과 |\n\n**임상 메시지:**\n- 처방 갱신의 숨은 의미: \"당신의 통증을 믿는다\"는 신호 → 거절·감량 전 선제 검증 필수\n- \"처방 감소 ≠ 불신\"을 명시적으로 전달 → 감량 대화 장벽 낮춤\n- 소규모 질적 연구(n=15, 스웨덴 농촌) — 문화 외삽 주의, 그러나 소통 원칙은 범용 적용 가능",
       sources: []
     }
   },
@@ -4920,7 +4935,8 @@ var _hypertension_v2 = {
     "한국고혈압학회(KSH) 2022 진료지침 (focused update)",
     "대한가정의학회 이차성 고혈압 종설",
     "심평원 고혈압 약제 인정기준",
-    "MacMahon S et al. 강압-stroke 메타분석"
+    "MacMahon S et al. 강압-stroke 메타분석",
+    "Bavishi C et al. BP-lowering drugs reduced major CV events to a similar extent in patients with or without isolated diastolic hypertension. Ann Intern Med 2026;179(4):JC43. PMID:41941743, DOI:10.7326/ANNALS-26-00760-JC"
   ],
   sections: {
     exam: {
@@ -4936,7 +4952,7 @@ var _hypertension_v2 = {
       sources: []
     },
     protocol: {
-      content: "### 약제 시작\n- SBP≥140 또는 DBP≥90 → 1제\n- **SBP≥160 또는 DBP≥100 → 처음부터 2제 병용** (보험 인정)\n- 처방 후 가정혈압·24시간 ABPM\n\n### 약물 선택 (KSH 2022)\n| 약물 | 우선 적응증 |\n|---|---|\n| **ACEi/ARB** | 광범위 1차 (HF·CKD·단백뇨·DM·post-MI·LVH) |\n| **CCB** | 노인 ISH, 안정형 협심증, 경동맥경화·LVH |\n| **이뇨제** | 노인 ISH, HF, stroke 후 (PROGRESS) |\n| **BB** | 협심증, post-MI, HFrEF, 빈맥성 부정맥 |\n\n⚠ **BB는 DM·대사증후군에서 주의** — 우선 적응증 아님.\n\n부작용: ARB(K+·신기능), BB(서맥). 변경 시 1개월 f/u — 가정혈압 지참. SBP<110 또는 어지러움 → 0.5T 또는 격일.",
+      content: "### 약제 시작\n- SBP≥140 또는 DBP≥90 → 1제\n- **SBP≥160 또는 DBP≥100 → 처음부터 2제 병용** (보험 인정)\n- 처방 후 가정혈압·24시간 ABPM\n\n### 약물 선택 (KSH 2022)\n| 약물 | 우선 적응증 |\n|---|---|\n| **ACEi/ARB** | 광범위 1차 (HF·CKD·단백뇨·DM·post-MI·LVH) |\n| **CCB** | 노인 ISH, 안정형 협심증, 경동맥경화·LVH |\n| **이뇨제** | 노인 ISH, HF, stroke 후 (PROGRESS) |\n| **BB** | 협심증, post-MI, HFrEF, 빈맥성 부정맥 |\n\n⚠ **BB는 DM·대사증후군에서 주의** — 우선 적응증 아님.\n\n부작용: ARB(K+·신기능), BB(서맥). 변경 시 1개월 f/u — 가정혈압 지참. SBP<110 또는 어지러움 → 0.5T 또는 격일.\n\n### 고립성 이완기 고혈압 (IDH) — 강압제 MACE 동등 감소 [CLINICAL]\n> [출처: Bavishi C et al. Ann Intern Med 2026;179(4):JC43. PMID:41941743]\n> Ann Int Med Journal Club 요약. GIM/FP/GP 직접 적용 명시. [초록 기반 — 전문 미확인]\n\n**정의:** 고립성 이완기 고혈압(IDH) = DBP 상승 + SBP 정상\n\n**핵심 메시지:**\n- 강압제가 IDH 환자에서 **주요 심혈관 사건(MACE)을 기타 고혈압 형태와 동등하게 감소**시킴\n- \"이완기만 높으면 치료 안 해도 되나?\" → **적극 치료 근거 확립**\n\n**외래 적용:**\n- SBP 정상·DBP만 상승한 환자 → KSH 기준 고혈압 범위 충족 시 강압제 시작 고려\n- 기존 SBP 중심 치료 관행에서 IDH도 동일 기준으로 관리\n- 생활습관 교정(저염·운동·체중감량) 병행 원칙 동일\n\n**주의:** Journal Club 형식 요약 — 원 연구 설계·대상은 전문 미확인. 이완기 임계값은 KSH 2022 적용.",
       sources: []
     },
     lifestyle: {
@@ -5171,7 +5187,8 @@ var _hematuria_v2 = {
     "AUA/SUFU 2020 Microhematuria Guideline (J Urol 2020;204:778)",
     "AUA 2025 Amendment (PMID 40013563)",
     "AAFP 2021 Microscopic Hematuria in Adults",
-    "AJKD 2022 Glomerular Hematuria Review"
+    "AJKD 2022 Glomerular Hematuria Review",
+    "Heard JR et al. Hematuria Cancer Risk Score in Combination With Oncuria-Detect for Patients Undergoing Evaluation for Hematuria. Urology 2025;207:178-183. PMID:40846188, DOI:10.1016/j.urology.2025.08.031"
   ],
   sections: {
     classification: {
@@ -5183,7 +5200,7 @@ var _hematuria_v2 = {
       sources: []
     },
     differential: {
-      content: "### 사구체 vs 비사구체\n| 패턴 | 소견 | 다음 단계 |\n|---|---|---|\n| **사구체혈뇨** | RBC cast(+), Dysmorphic RBC >40%, 단백뇨 | **신장내과** |\n| **비사구체혈뇨** | 종양·결석·외상·염증 | 상부+하부요로 평가 |",
+      content: "### 사구체 vs 비사구체\n| 패턴 | 소견 | 다음 단계 |\n|---|---|---|\n| **사구체혈뇨** | RBC cast(+), Dysmorphic RBC >40%, 단백뇨 | **신장내과** |\n| **비사구체혈뇨** | 종양·결석·외상·염증 | 상부+하부요로 평가 |\n\n### HCRS + Oncuria 조합 — 초진 방광암 선별 도구 [CLINICAL]\n> [출처: Heard JR et al. Urology 2025;207:178-183. PMID:40846188]\n> 전향적 코호트, n=365, 혈뇨 평가 의뢰 (방광암 55명/대조군 310명), Cedars-Sinai/Yale.\n\n| 도구 | 구성 | 1차의료 시행 |\n|---|---|---|\n| **HCRS** | 나이·성별·흡연력·혈뇨 정도 | ✓ 문진만으로 계산 |\n| **Oncuria-Detect** | 소변 바이오마커 패널 | ✓ 초진 외래 채뇨 |\n\n**성능 (n=365, 방광암 55명):**\n| 방법 | 민감도 | 특이도 | AUC | NPV |\n|---|---|---|---|---|\n| HCRS 단독 | **90.9%** | 71.9% | 0.890 | **97.8%** |\n| Oncuria 단독 | 78.2% | 76.8% | 0.838 | 94.9% |\n| HCRS + Oncuria | 87.3% | 80.6% | 0.909 | 97.3% |\n| **미세혈뇨 한정 조합** | **82.4%** | — | — | **98.7%** |\n\n**일차의료 적용:**\n- 무증상 미세혈뇨 첫 외래에서 **HCRS 계산 + Oncuria 채뇨** → 저위험 선별\n- NPV 98.7% (미세혈뇨 + 두 검사 음성) → 불필요한 비뇨기과 의뢰·방광경 최소화\n- 의뢰 흐름: HCRS 고위험 또는 Oncuria 양성 → 비뇨기과 cystoscopy; 두 검사 음성 → AUA 추적\n- UTI 귀인 전 위험 점수 우선 (고령 여성 무증상 미세혈뇨)\n\n**주의:**\n- Oncuria-Detect 현재 미국 사용; 한국 가용성 [출처 미확인 — researcher 검증 권장]\n- 단일 코호트 후향 분석 — 외부 검증 필요. 방광경 대체가 아닌 **의뢰 선별 보조 도구**.",
       sources: []
     },
     protocol: {
@@ -6259,7 +6276,8 @@ var _continuity_of_care_v2 = {
   keywords: ["continuity of care","주치의 연속성","지속의료","재입원","낙상","골절","약물 관련 입원","home care","재택의료","예방적 진료"],
   parents: [],
   primarySources: [
-    "Caughey GE et al. Primary Health Care Services and Continuity of Care Are Associated With Better Health Outcomes in the Older Population. J Am Geriatr Soc. 2026. PMID:42050887, DOI:10.1111/jgs.70465"
+    "Caughey GE et al. Primary Health Care Services and Continuity of Care Are Associated With Better Health Outcomes in the Older Population. J Am Geriatr Soc. 2026. PMID:42050887, DOI:10.1111/jgs.70465",
+    "Jaeken J et al. From knowledge to action: a blended training to enhance shared decision making skills in primary care physicians - a pilot study. BMC Prim Care 2026. PMID:42104282, DOI:10.1186/s12875-026-03351-0"
   ],
   sections: {
     notes: {
@@ -6272,6 +6290,10 @@ var _continuity_of_care_v2 = {
     },
     precaution: {
       content: "- 호주 지역사회 노인 장기 요양(home-based care) 대상 코호트 — 한국 일차의료 환경에 직접 외삽 시 주의\n- 연속성의 효과는 의사-환자 신뢰 관계·정보 연속성 복합 인자 — 단순 '같은 의사 만남'만이 아닌 임상 정보 통합이 핵심\n- 인과 관계 아닌 연관성 연구 [CLINICAL — 조건부]",
+      sources: []
+    },
+    sdm_training: {
+      content: "### SDM 블렌디드 훈련 — GP 환자 중심 의사소통 기술 단기 2배 향상 [INSIGHTS]\n> [출처: Jaeken J et al. BMC Prim Care 2026. PMID:42104282]\n> 전후 비교 파일럿, n=10 GP, 벨기에, e-learning + 시뮬레이션 환자 면대면 세션. 관찰자·환자·의사 3관점 평가.\n\n| 지표 | 훈련 전 | 훈련 후 | p값 | Cohen's d |\n|---|---|---|---|---|\n| OPTION12 (관찰자 SDM) | 19.4 | 37.7 | 0.001 | — |\n| 4SDM 척도 | 9.2 | 17.0 | 0.0001 | **2.39** |\n\n- SDM 지식·기술·의도 모두 유의 향상\n- Cohen's d 2.39: **대형 효과** — \"연습하면 는다\"는 강력 실증\n\n**블렌디드 훈련 구성:**\n1. **e-learning** — SDM 개념·지식 선행 학습\n2. **시뮬레이션 환자(SP) 면대면** — 실제 의사소통 기술 연습\n\n**임상 의의:**\n- ICE(Ideas·Concerns·Expectations)·SDM은 타고나는 기술이 아닌 **훈련으로 획득 가능**\n- 가정의학과 레지던트 교육, 지속 의학교육(CME) 커리큘럼에 도입 근거\n- 소규모 파일럿(n=10, 벨기에 단일 기관) — 확증 연구 필요\n\n**한국 적용:**\n- e-learning 플랫폼 가용; 시뮬레이션 환자 프로그램은 일부 의대·가정의학과 전공의 수련에서 운용 [출처 미확인 — researcher 검증 권장]\n- 관련: [[delayed-diagnosis]], [[chronic-pain-integrative]] (ICE 접근)",
       sources: []
     }
   },
@@ -6797,3 +6819,45 @@ KNOWLEDGE_BUNDLE["cervical-radiculopathy"] = _sap_v2;
 KNOWLEDGE_BUNDLE["경추신경근병증"] = _sap_v2;
 KNOWLEDGE_BUNDLE["arm-pain"] = _sap_v2;
 KNOWLEDGE_BUNDLE["팔통증"] = _sap_v2;
+
+/* epilepsy-elderly — 노인 뇌전증 ASM 선택 및 내약성 (5/11 deep-extract 신규). [CLINICAL] */
+var _epilepsy_elderly_v2 = {
+  kind: "disease",
+  keywords: ["epilepsy-elderly","노인 뇌전증","epilepsy","뇌전증","항경련제","antiseizure medication","ASM","라모트리진","lamotrigine","레베티라세탐","levetiracetam","페니토인","phenytoin","카바마제핀","carbamazepine","valproate","발프로에이트","낙상","인지저하"],
+  parents: [],
+  primarySources: [
+    "McCarthy LM et al. Antiseizure Medications in Older Adults with Epilepsy. Drugs Aging 2026 Feb 18;43(3):251-265. PMID:41706289, DOI:10.1007/s40266-026-01283-z"
+  ],
+  sections: {
+    definition: {
+      content: "노인(≥65세)은 현재 뇌전증 환자 중 가장 빠르게 성장하는 집단. 다약제·다이환·신기능 저하·낙상 취약으로 항경련제(ASM) 선택이 복잡. 발작 조절 효능은 약물 간 유사 → **내약성과 삶의 질이 치료 선택의 핵심**.",
+      sources: []
+    },
+    classification: {
+      content: "### 신세대 ASM (내약성 우수) [CLINICAL]\n> [출처: McCarthy LM et al. Drugs Aging 2026;43(3):251-265. PMID:41706289]\n\n| 약물 | 특이사항 | 노인 권고 |\n|---|---|---|\n| **Lamotrigine** (라모트리진) | 인지·낙상 부작용 적음; 약물 상호작용 낮음 | 1차 선택 고려 |\n| **Levetiracetam** (레베티라세탐) | 신장 배설 → eGFR 용량 조절; 신경정신 부작용(과민·우울) 주의 | 널리 사용 |\n| **Lacosamide** | 심장 전도 주의 (PR 연장) | 심방세동 노인 주의 |\n| **Brivaracetam** | 레베티라세탐 대비 신경정신 부작용 적음 | 레베티라세탐 불내 시 대안 |\n| **Eslicarbazepine acetate** | 카바마제핀보다 저나트륨혈증 적음 | 카바마제핀 대안 |\n| **Oxcarbazepine** | 저나트륨혈증 주의 | 카바마제핀보다 내약성 양호 |\n\n### 구세대 ASM — 노인 회피 권장\n| 약물 | 문제점 |\n|---|---|\n| **Phenytoin** (페니토인) | 다약물 상호작용 광범위; 뼈 대사·전정 영향; 좁은 치료역 |\n| **Carbamazepine** (카바마제핀) | 저나트륨혈증; 효소 유도 → 다약제 상호작용; 인지 영향 |\n| **Valproate** (발프로에이트) | 떨림·체중 증가·간독성·골다공증 위험 |\n| **Phenobarbital** | 진정·낙상·인지저하 — 노인 금기에 준함 |",
+      sources: []
+    },
+    protocol: {
+      content: "### 처방 원칙\n**저용량 시작, 천천히 증량:**\n- 신기능 저하·체수분 감소 → 일반 성인 용량의 50%에서 시작\n- 증량 간격 4~8주 (성인보다 느리게)\n- 발작 조절보다 **내약성 우선** — 부작용으로 중단하면 무의미\n\n**효소 유도 ASM 회피:**\n- 카바마제핀·페니토인·페노바르비탈 → 스타틴·DOAC·항생제 등 수십 가지 상호작용\n- 가능하면 비효소 유도 신약으로 대체",
+      sources: []
+    },
+    precaution: {
+      content: "### 동반 상황별 고려\n| 동반 상황 | 선택 고려 |\n|---|---|\n| 신기능 저하 | 레베티라세탐 → eGFR에 따라 용량 조절 |\n| 간기능 저하 | 라모트리진·발프로에이트 감량 |\n| 골다공증 | 효소 유도 ASM → 비타민 D 대사 방해 → 회피 |\n| 항응고제 사용 | 효소 유도 ASM → 와파린·DOAC 농도 변화 → 신약 선호 |\n| 치매 동반 | 신경정신 부작용 적은 라모트리진 선호 |\n| 뇌졸중 후 뇌전증 | 라모트리진·레베티라세탐 일반적 선택 |\n| 뇌종양 관련 | 비효소 유도 ASM 필수 (항암제 상호작용 차단) |",
+      sources: []
+    },
+    exam: {
+      content: "### 노인 ASM 처방 전·중 평가\n- 낙상 위험 평가 (STEADI 또는 TUG ≥12초)\n- 인지기능 기저치 (MMSE·MoCA)\n- 현재 복용 약물 → 효소 유도 상호작용 스크리닝\n- eGFR, LFT 기저치 → 용량 결정\n- 혈중 약물 농도 필요 시 (페니토인 특히 중요 — 치료역 좁음)",
+      sources: []
+    },
+    referral: {
+      content: "- 신규 뇌전증 진단 → 신경과 의뢰 (원인 규명·치료 계획)\n- 2종 이상 ASM 실패 → 신경과 협진 (난치성 뇌전증 평가)\n- ASM 전환·감량 결정 → 신경과 협의 후 진행\n- 발작 1~2년 소실 후 감약 → 신경과 필수\n- 관련: [[prescribing-cascade]] (다약제 처방 연쇄), [[frailty]] (낙상·다약제), [[geriatric-assessment-4ms]] (Medication Beers/STOPP)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["epilepsy-elderly"] = _epilepsy_elderly_v2;
+KNOWLEDGE_BUNDLE["노인뇌전증"] = _epilepsy_elderly_v2;
+KNOWLEDGE_BUNDLE["뇌전증노인"] = _epilepsy_elderly_v2;
+KNOWLEDGE_BUNDLE["ASM-elderly"] = _epilepsy_elderly_v2;
+KNOWLEDGE_BUNDLE["antiseizure-elderly"] = _epilepsy_elderly_v2;
