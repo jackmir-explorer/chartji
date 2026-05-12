@@ -9,6 +9,7 @@ knowledge/ 폴더의 임상 지식을 관리한다.
 - skills/knowledge-ingest/SKILL.md
 - skills/knowledge-inject/SKILL.md
 - skills/image-extract/SKILL.md
+- skills/gaps-process/SKILL.md
 
 ## B2 스키마 (2026-04-19 Phase 2 전환 중)
 - 섹션 표준: `knowledge/section-vocabulary.md` (18개 표준 섹션 + 자유 섹션 규칙)
@@ -84,13 +85,14 @@ ingest 직전 체크: `sections` key 전부가 vocabulary 18개 또는 slugify(k
 
 `inbox/gaps.md`는 scout(문헌 검색·요약·근거 확립)로 해소 가능한 지식 격차 리스트.
 
-**일상 페이스**:
-- daily 1건 처리 (FIFO — 위에서부터 오래된 순). 같은 카테고리 항목 인접 시 함께 묶어서 1건으로 처리.
-- 처리 완료 항목은 `gaps.md` 본문에서 제거하고 Archive 섹션으로 이동. Archive 형식: `- [카테고리] 요약 (→ PMID xxx, YYYY-MM-DD)`.
+**실행 스킬**: `skills/gaps-process/SKILL.md` (절차 상세는 스킬 문서 참조)
 
-**Burst 트리거**:
-- 본문 항목 수 > 10 초과 시점 → 그날 10건 일괄 처리.
-- 선별: FIFO 기본, 동일 카테고리 우선 묶음 (예: IDA 관련 3개 한 번에).
+**핵심 규칙** (스킬 SoT 보조 요약):
+- daily 1건 (FIFO, 의미적 카테고리 묶음 시 함께 처리)
+- 본문 카운트 > 10 → **자동 burst 모드** (그날 10건 일괄)
+- 처리 결과 산출물: `inbox/scout/{YYYY-MM-DD}-gap-{slug}.md` (Scout 루틴 자동 산출물 `{YYYY-MM-DD}.md`와 분리)
+- Archive 형식: `- [카테고리] 요약 (→ PMID xxx, YYYY-MM-DD)`
+- knowledge-ingest 분기: 후보 마킹은 자동, 실제 ingest는 미르 승인 후만 실행
 
 **Scope 분리**:
 - 진료 습관·기록·시스템·윤리 항목은 gaps.md가 아닌 `inbox/blind-spots.md`로 분류. 잘못 들어온 항목은 scout 처리 대신 blind-spots.md로 이동 (담당: 미르 또는 Liby가 미르 확인 후).
