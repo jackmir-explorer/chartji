@@ -8,6 +8,13 @@
 
 ## Active
 
+### [환자 요청 검사] reasoning 명시 없이 수행
+
+**맥락**: 2026-05-12, CML on TKI 환자가 두통/어지러움으로 carotid IMT 요청. CML+TKI baseline에서 CV risk 평가는 합리적 적응증인데 차트에는 "환자 요청"만 기록되고 CML 관련 reasoning 누락. 또한 어지러움 자체의 분류(vertigo vs presyncope vs lightheadedness)와 평가는 부실.
+**문제**: 환자 요청에 의한 검사가 (1) 실제로는 임상적 근거 있어도 reasoning 미기록 시 적응증 외 검사로 보임, (2) 환자 호소(어지러움)의 표적 평가가 검사 처방으로 대체됨. 검사가 끝나도 호소 원인은 미해결.
+**패턴**: 환자 argue 시 검사 처방으로 episode closure. baseline 질환 맥락에서 검사 적응증 재해석하는 단계 누락. 호소의 분류·표적 평가는 별개로 진행 안 됨.
+**대응**: 환자 요청 검사 시 routine — (1) 환자 baseline에서 적응증 합리화 가능한지 자문 (2) 합리적이면 reasoning 차트에 한 줄 ("CML on TKI CV screening 목적") (3) 호소 자체의 표적 평가는 검사와 분리해 동시 진행 (4) 어지러움이면 TiTrATE 분류 routine 적용.
+
 ### [Safety-netting] 재내원 trigger 명시 부재
 - **맥락**: 2026-05-12 두 케이스 모두 — 79세 bronchitis는 경험적 ABx 처방 후 "2주 후 f/u"만 적힘. 41세 IDA + 만성 설사도 "2주 후 재검"만. 무호전·악화 시 trigger 없음. 또한 IDA 케이스에서 f/u 사이에 동반 가능했던 검사(FOBT·TSH·anti-tTG·CRP) 누락.
 - **문제**: watchful waiting 또는 경험적 처방 모두에서 "악화 시 즉시 재내원" trigger 부재 — 환자가 언제 다시 와야 할지 모름. 진단 지연 위험. 또한 f/u plan을 "단순 재검 일자"로만 채우고 그 사이 병행 가능한 workup 누락.
