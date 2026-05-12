@@ -76,6 +76,25 @@ ingest 직전 체크: `sections` key 전부가 vocabulary 18개 또는 slugify(k
 > - `inbox/scout/` — Scout routine 산출물 (논문 리스트, ingest 대상 아님)
 > - `inbox/study-notes/` — Deep Extract 공부 보고서 (A층 순수학습용, Liby ingest 금지. `rules/file-ownership.md` inbox/study-notes § 참조)
 
+> **스캔 제외 파일** (2026-05-12):
+> - `inbox/gaps.md` — Scout 처리 대상 (지식 격차 리스트). Liby ingest 대상 아님. 처리 규칙은 아래 "gaps.md 처리 규칙" § 참조.
+> - `inbox/blind-spots.md` — 진료 습관·기록·시스템 사각지대. 미르 직접 review 대상, Liby 자동 처리 금지.
+
+## gaps.md 처리 규칙 (2026-05-12)
+
+`inbox/gaps.md`는 scout(문헌 검색·요약·근거 확립)로 해소 가능한 지식 격차 리스트.
+
+**일상 페이스**:
+- daily 1건 처리 (FIFO — 위에서부터 오래된 순). 같은 카테고리 항목 인접 시 함께 묶어서 1건으로 처리.
+- 처리 완료 항목은 `gaps.md` 본문에서 제거하고 Archive 섹션으로 이동. Archive 형식: `- [카테고리] 요약 (→ PMID xxx, YYYY-MM-DD)`.
+
+**Burst 트리거**:
+- 본문 항목 수 > 10 초과 시점 → 그날 10건 일괄 처리.
+- 선별: FIFO 기본, 동일 카테고리 우선 묶음 (예: IDA 관련 3개 한 번에).
+
+**Scope 분리**:
+- 진료 습관·기록·시스템·윤리 항목은 gaps.md가 아닌 `inbox/blind-spots.md`로 분류. 잘못 들어온 항목은 scout 처리 대신 blind-spots.md로 이동 (담당: 미르 또는 Liby가 미르 확인 후).
+
 > 여러 파일이 있을 경우 파일별로 순서대로 처리하고 각각 draft를 제시한다.
 
 ## Inject 트리거
