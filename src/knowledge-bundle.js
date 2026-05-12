@@ -3096,10 +3096,9 @@ var _palliative_pain_v2 = {
     "Jose V et al. The Effectiveness and Safety of Buprenorphine in Palliative Care: Systematic Review. J Pain Symptom Manage 2025;71(5):e525-e539. PMID:41475688, DOI:10.1016/j.jpainsymman.2025.12.009",
     "Weerasiri SD et al. A Case Report of End-of-Dosage Failure With Buprenorphine Patch. J Pain Symptom Manage. 2026 Jan 28;71(5):e606-e609. PMID:41617142, DOI:10.1016/j.jpainsymman.2026.01.018",
     "Lam AP et al. Managing Cancer-Related Pain in Patients Receiving Long-Acting Buprenorphine for Opioid Use Disorder. J Pain Symptom Manage. 2026 May. PMID:42092642, DOI:10.1016/j.jpainsymman.2026.04.617",
-    "Idom O et al. Real-World Experience with Initiating Buprenorphine in Opioid Tolerant Patients with Cancer Pain. J Pain Symptom Manage. 2026 Apr. PMID:42009265, DOI:10.1016/j.jpainsymman.2026.04.605",
-    "Satomi E et al. Olanzapine Prophylaxis for Opioid-Induced Nausea and Vomiting: A Single-Arm Exploratory Study. J Pain Symptom Manage. 2026 May 6. PMID:42103083, DOI:10.1016/j.jpainsymman.2026.04.623",
-    "Kao G et al. Bridging the Gap: Engagement with Behavioral Health for Pain Management Among Oncology Patients. J Pain Symptom Manage 2026 May. PMID:42105883, DOI:10.1016/j.jpainsymman.2026.04.625"
+    "Idom O et al. Real-World Experience with Initiating Buprenorphine in Opioid Tolerant Patients with Cancer Pain. J Pain Symptom Manage. 2026 Apr. PMID:42009265, DOI:10.1016/j.jpainsymman.2026.04.605"
   ],
+  /* 2026-05-12 Auditor R2 분할: OINV(Satomi 2026)·BH(Kao 2026) → cancer-pain-supportive-care entry로 이관 */
   sections: {
     definition: {
       content: "부프레노르핀은 부분 오피오이드 작용제(μ 부분 작용, κ/δ 길항). 완화의료에서 모르핀·펜타닐 등 완전 작용제와 **동등한 진통 효과**. 경피 패치는 연하 곤란·장 기능 저하 환자에 특히 유리.",
@@ -3141,12 +3140,8 @@ var _palliative_pain_v2 = {
       content: "### 암환자의 '원인' 욕구 [INSIGHTS — by 미르 관찰]\n\n암환자들은 '원인'을 항상 알고 싶어한다. 내가 왜 걸린 건지, 유전인지, 환경인지, 무슨 인자가 있는 건지. 전근대에는 그것을 죄나 업보로 해석했다. 사람들은 **'설명'되기를 원하며 적절한 설명을 들으면 마음을 놓는 것 같다**.\n\n### 임상 함의\n- **답할 수 없는 질문에도 답하려는 시도가 정서적 의미** — '정확한 원인은 알기 어렵지만…'으로 시작\n- 가족력 / 환경 / 흡연 / 식이 / 감염 등 **알려진 위험인자를 점검·언급**\n- 환자가 '내 잘못 아닌데' 안심할 수 있는 framing — 자책·죄의식 완화\n- 모를 때는 **'많은 경우 명확한 단일 원인은 없습니다'**라고 명시 — 솔직함이 신뢰 형성\n- **시간을 충분히** — 1–2분의 설명이 환자 만족도·치료 순응도에 큰 영향\n\n### 전근대 vs 현대\n- 전근대: 죄·업보·악령\n- 현대: 유전·환경·생활습관·확률\n- 공통: **사람은 '설명되지 않은 고통'을 견디기 매우 어려워함** → 의사가 의미 부여(meaning-making) 역할\n\n[Related: Communication & Counseling 횡단 모듈]",
       sources: []
     },
-    oinv_prophylaxis: {
-      content: "### 오피오이드 유발 오심구토(OINV) — 올란자핀 예방 투여 [CLINICAL — 조건부]\n> [출처: Satomi E et al. J Pain Symptom Manage 2026 May 6. PMID:42103083]\n> 단일군 탐색적 연구 (n=34), 일본 단일기관, 암 환자 오피오이드 시작 시 올란자핀 예방 투여 [초록 기반 — 전문 미확인]\n\n| 지표 | 결과 |\n|---|---|\n| **완전 조절(CC)율** (5일 내 구토 없음+구제제 불필요+오심 ≤3) | **79.4%** (95% CI: 64.5~89.9) |\n| **완전 반응(CR)율** (구토 없음+구제제 불필요) | **82.4%** (95% CI: 65.5~93.2) |\n| 구토 없는 비율 | 85.3% |\n| 심각한 이상반응 | **없음** |\n\n**프로토콜:**\n- **올란자핀 5 mg/일 × 5일** — 오피오이드 정규 시작과 동시에 예방 투여\n- OINV 발생률: 10~45.3% (오피오이드 시작/증량 시)\n\n**외래 적용 포인트:**\n- 암성 통증 오피오이드 시작 또는 증량 시 → OINV 예방으로 올란자핀 5mg 병용 고려\n- 오심 장벽으로 오피오이드 용량 적정이 어려운 환자에서 특히 유리\n- CINV(항암 오심) 근거에서 이미 확립 → OINV 확장 적용\n- 단일군 탐색적 연구 — 추가 RCT 필요\n\n**이상반응 모니터링:**\n- 졸림·진정: 고령·허약 환자에서 주의 (5mg에서도 발생 가능)\n- 혈당 상승: 당뇨 환자 모니터링\n- 추체외로 증상: 드물지만 장기 사용 시 주의",
-      sources: []
-    },
-    behavioral_health: {
-      content: "### 암성통증 환자의 행동건강 개입 — 의사 권고가 핵심 [CLINICAL]\n> [출처: Kao G et al. J Pain Symptom Manage 2026 May. PMID:42105883]\n> 단면 설문, n=455명 암 외래 만성통증 환자, MD Anderson Cancer Center.\n\n| 지표 | 수치 |\n|---|---|\n| 행동건강(BH) 개입 인지율 | **17.6%** |\n| 현재 BH 개입 사용률 | **4.0%** |\n| 의료진 권고 시 이용 의향 | **34.3%** |\n| 의사 권고 → 수용 동기 (OR) | **2.53** (p<.001) |\n\n행동건강(BH) 개입: 인지행동치료·이완 요법·마음챙김·심상 요법 등.\n\n**임상 메시지:**\n- \"필요하면 말씀하세요\" → 사용률 4%. **\"저는 이걸 권합니다\"** 로 바꾸면 수용률 최대 34%\n- 여성·정신건강 병력 환자에서 이용률 높음 — 타겟 선제 상담 효과적\n\n**외래 적용:**\n- 암성 통증 외래마다 BH 개입 옵션 능동적 언급 루틴화\n- \"심리치료나 이완 요법이 통증 조절에 실제로 효과 있습니다. 한번 해보시겠어요?\"\n- 단일 대형 암 센터 단면 — 의향과 실제 이용 괴리 주의",
+    related_supportive: {
+      content: "### 보조 케어 (OINV 예방·행동건강 BH 개입) → [[cancer-pain-supportive-care]]\n\n- 오피오이드 유발 오심구토(OINV) 올란자핀 예방 5mg/일 × 5일 — CC율 79.4%\n- 행동건강(BH) 개입 의사 권고 효과 — \"저는 이걸 권합니다\" 수용률 34%\n\n(2026-05-12 분할: OINV·BH 섹션은 cancer-pain-supportive-care 신규 entry로 이관)",
       sources: []
     }
   },
@@ -3156,6 +3151,42 @@ KNOWLEDGE_BUNDLE["palliative-pain"] = _palliative_pain_v2;
 KNOWLEDGE_BUNDLE["완화의료"] = _palliative_pain_v2;
 KNOWLEDGE_BUNDLE["buprenorphine"] = _palliative_pain_v2;
 KNOWLEDGE_BUNDLE["부프레노르핀"] = _palliative_pain_v2;
+
+/* cancer-pain-supportive-care — 암성통증 보조 케어 (2026-05-12 Auditor R2 분할; palliative-pain에서 OINV·BH 분리). [CLINICAL] */
+var _cancer_pain_supportive_v2 = {
+  kind: "topic",
+  keywords: ["암성통증 보조","cancer pain supportive","OINV","opioid-induced nausea","올란자핀","olanzapine","행동건강","behavioral health","BH 개입","통증 환자 상담","CBT 통증"],
+  primarySources: [
+    "Satomi E et al. Olanzapine Prophylaxis for Opioid-Induced Nausea and Vomiting: A Single-Arm Exploratory Study. J Pain Symptom Manage. 2026 May 6. PMID:42103083, DOI:10.1016/j.jpainsymman.2026.04.623",
+    "Kao G et al. Bridging the Gap: Engagement with Behavioral Health for Pain Management Among Oncology Patients. J Pain Symptom Manage 2026 May. PMID:42105883, DOI:10.1016/j.jpainsymman.2026.04.625"
+  ],
+  sections: {
+    definition: {
+      content: "암성통증 환자의 **보조 치료** — 오피오이드 부작용 예방(OINV 올란자핀) + 행동건강 BH 개입(CBT·이완 요법·마음챙김). 부프레노르핀 약리·완화의료 통증 본연은 [[palliative-pain]] 참조.",
+      sources: []
+    },
+    oinv_prophylaxis: {
+      content: "### 오피오이드 유발 오심구토(OINV) — 올란자핀 예방 [CLINICAL — 조건부]\n> [출처: Satomi E et al. J Pain Symptom Manage 2026 May 6. PMID:42103083]\n> 단일군 탐색적 연구 (n=34), 일본 단일기관, 암 환자 오피오이드 시작 시 올란자핀 예방 투여 [초록 기반 — 전문 미확인]\n\n| 지표 | 결과 |\n|---|---|\n| **완전 조절(CC)율** (5일 내 구토 없음+구제제 불필요+오심 ≤3) | **79.4%** (95% CI: 64.5~89.9) |\n| **완전 반응(CR)율** (구토 없음+구제제 불필요) | **82.4%** (95% CI: 65.5~93.2) |\n| 구토 없는 비율 | 85.3% |\n| 심각한 이상반응 | **없음** |\n\n**프로토콜:**\n- **올란자핀 5 mg/일 × 5일** — 오피오이드 정규 시작과 동시에 예방 투여\n- OINV 발생률(예방 없을 시): 10~45.3%\n\n**외래 적용:**\n- 암성 통증 오피오이드 시작 또는 증량 시 → OINV 예방으로 올란자핀 5mg 병용 고려\n- 오심 장벽으로 오피오이드 용량 적정이 어려운 환자에서 특히 유리\n- CINV(항암 오심) 근거 → OINV 확장 적용\n- 단일군 탐색적 — 추가 RCT 필요",
+      sources: ["Satomi E et al. J Pain Symptom Manage 2026 May 6. PMID:42103083"]
+    },
+    precaution: {
+      content: "### 올란자핀 5mg 이상반응 모니터링\n- 졸림·진정: 고령·허약 환자에서 주의 (5mg에서도 발생 가능)\n- 혈당 상승: 당뇨 환자 모니터링\n- 추체외로 증상: 드물지만 장기 사용 시 주의",
+      sources: []
+    },
+    behavioral_health: {
+      content: "### 암성통증 행동건강 개입 — 의사 권고가 핵심 [CLINICAL]\n> [출처: Kao G et al. J Pain Symptom Manage 2026 May. PMID:42105883]\n> 단면 설문, n=455명 암 외래 만성통증 환자, MD Anderson Cancer Center.\n\n| 지표 | 수치 |\n|---|---|\n| 행동건강(BH) 개입 인지율 | **17.6%** |\n| 현재 BH 개입 사용률 | **4.0%** |\n| 의료진 권고 시 이용 의향 | **34.3%** |\n| 의사 권고 → 수용 동기 (OR) | **2.53** (p<.001) |\n\n행동건강(BH) 개입: 인지행동치료·이완 요법·마음챙김·심상 요법 등.\n\n**임상 메시지:**\n- \"필요하면 말씀하세요\" → 사용률 4%. **\"저는 이걸 권합니다\"** 로 바꾸면 수용률 최대 34%\n- 여성·정신건강 병력 환자에서 이용률 높음 — 타겟 선제 상담 효과적\n\n**외래 적용:**\n- 암성 통증 외래마다 BH 개입 옵션 능동적 언급 루틴화\n- \"심리치료나 이완 요법이 통증 조절에 실제로 효과 있습니다. 한번 해보시겠어요?\"\n- 단일 대형 암 센터 단면 — 의향과 실제 이용 괴리 주의",
+      sources: ["Kao G et al. J Pain Symptom Manage 2026 May. PMID:42105883"]
+    },
+    referral: {
+      content: "- OINV 지속·올란자핀 무반응 → 완화의학·종양내과 협진\n- BH 개입 적응증 환자 → 종양심리·정신건강의학과 협진 (CBT·마음챙김 기반)\n- 다중 보조 치료 필요 → 완화의료팀 다학제 평가",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["cancer-pain-supportive-care"] = _cancer_pain_supportive_v2;
+KNOWLEDGE_BUNDLE["OINV"] = _cancer_pain_supportive_v2;
+KNOWLEDGE_BUNDLE["olanzapine-OINV"] = _cancer_pain_supportive_v2;
 
 /* home-based-hypertension — 재택 고혈압 CHW+원격 RCT (4-30 deep-extract, Mir-T1 #4 재택의료). [CLINICAL] */
 var _home_htn_v2 = {
@@ -4299,11 +4330,9 @@ var _deprescribing_v2 = {
   primarySources: [
     "McDonald EG et al. Can Fam Physician 2026 Mar;72(3):173-178. PMID:41844291, DOI:10.46747/cfp.7203173",
     "Marcellaud E et al. Attitudes Toward Deprescribing Among Community-Dwelling Adults. Drugs Aging. 2026 May 2. PMID:42068533, DOI:10.1007/s40266-026-01298-6",
-    "Siddiqui TG et al. Brief intervention for inappropriate z-hypnotics use in older adults: a before and after intervention study in primary care. Scand J Prim Health Care. 2026;44(1):2660168. PMID:42031000, DOI:10.1080/02813432.2026.2660168",
-    "Jacob Y et al. Deprescribing Following Access to Lifestyle Treatment. J Clin Med 2026 Mar 27;15(7). PMID:41976866, DOI:10.3390/jcm15072561",
-    "Liang S et al. Antidepressant Use Among US Nursing Home Residents With Dementia. J Am Geriatr Soc 2026 May 6. PMID:42089534, DOI:10.1111/jgs.70492",
-    "Yin F et al. Deprescribing Psychotropic Medications and Falls in Older Adults: A Setting-Stratified Systematic Review and Meta-Analysis. J Am Med Dir Assoc 2026;27(5):106146. PMID:41791728, DOI:10.1016/j.jamda.2026.106146"
+    "Siddiqui TG et al. Brief intervention for inappropriate z-hypnotics use in older adults: a before and after intervention study in primary care. Scand J Prim Health Care. 2026;44(1):2660168. PMID:42031000, DOI:10.1080/02813432.2026.2660168"
   ],
+  /* 2026-05-12 Auditor R2 분할: T2DM 감약(Jacob)·치매 항우울제(Liang)·정신과 약물 낙상(Yin) → 별도 entry 이관 */
   sections: {
     protocol: {
       content: "### 캐나다 일차의료 권고 (2026)\n\n**권고 1 (강력, 중등도 근거)**: ≥65세 성인은 약물 적절성 최적화를 위한 **처방 점검(Prescription Checkup) 또는 관련 중재**를 받아야 함. 효과적 중재 형태: 처방의·약사가 **구조적 접근법 또는 규칙 기반 도구** 사용. 도구 예: STOPP/START, Beers, RAMQ.\n\n**권고 2 (강력, 중등도 근거)**: 정부는 약물 적절성 중재를 **재정 지원**해야 함.\n\n### 구조적 접근 도구\n| 도구 | 대상 | 활용 |\n|---|---|---|\n| **STOPP/START** | ≥65세 | 부적절(STOPP) + 누락(START) 동시 검출 |\n| **Beers Criteria** | ≥65세 (미국) | 노인 부적절 약물 목록 |\n| **STOPP-Frail** | 허약 노인 | 완화 목적 처방 최소화 |\n\n### 외래 적용 프로세스\n1. ≥65세 환자 → 연 1회 처방 전체 재검토 루틴화\n2. STOPP 도구로 부적절 약물 flagging\n3. 처방의·약사 협력: 확인·중단·대체\n4. 환자·보호자 상담 (중단 이유·기대 효과)\n5. 중단 후 추적: 증상 재발·금단 모니터링\n\n---\n\n### 노인 Z-수면제 간략 개입 (BI) — 부적절 사용 감소 [CLINICAL — 조건부]\n> [출처: Siddiqui TG et al. Scand J Prim Health Care 2026;44(1):2660168. PMID:42031000]\n> 전후 비교 연구, n=45명 (평균 69.4세, 여성 31명), GP 21명, 노르웨이. ClinicalTrials.gov NCT06032715\n\n**핵심 수치**:\n| 지표 | 전(기저) | 후(치료) | 효과 크기 |\n|---|---|---|---|\n| 부적절 Z-수면제 사용 | **68.9%** | **27.8%** | OR 0.16 (0.04–0.65) |\n| 수면 점수 (GSAQ-insomnia) | 상승 | **유의 악화 없음** | 유지 |\n| 6개월 시점 불면증 | — | **0명** | — |\n| 불안·우울 (HADS) | 10.1 | 7.3 | Cohen's d -0.44 |\n| 인지기능 (MOCA) | 기저 | 유의 변화 없음 | — |\n| 통증 (VAS) | 기저 | 유의 변화 없음 | — |\n\n**부적절 Z-수면제 기준**: ≥4주 사용 + ≥주 3회 (STOPP)\n\n**간략 개입(BI) 구성 — GP 직접 시행**:\n1. 현재 수면제 사용 패턴·이유 탐색\n2. 장기 Z-수면제 위험 설명 (낙상·인지저하·의존성)\n3. 점진적 감량 계획 수립 (환자와 함께)\n4. 비약물 수면 전략 안내 (수면위생·인지행동치료)\n5. 6주·6개월·12개월 추적 평가\n\n**임상 함의**:\n- GP 직접 BI로 수면·인지·통증 악화 없이 Z-수면제 감약 달성 가능\n- 환자 설득 근거: '수면이 나빠지지 않는다' 데이터 직접 제시 가능\n- STOPP 기준 수면제 항목 실행 도구로 바로 적용\n- 소규모(n=45) 단일국가 연구 — 외삽 시 주의 [CLINICAL — 조건부]\n\n**한국 외래 변환 시 확인**:\n- 한국 졸피뎀 처방 급여 제한(2주 이상 원칙적 제한) [출처 미확인 — researcher 검증 권장]\n- 에스조피클론(루네스타) 한국 급여 기준 [출처 미확인]",
@@ -4321,16 +4350,8 @@ var _deprescribing_v2 = {
       content: "- 복잡 다약제(≥10종) + 다중이환 → 노인의학과 (CGA)\n- 약물 상호작용 고복잡도 → 임상약사 협진\n- 항응고제·항경련제·항정신병약 중단 → 전문과 협의 필요\n- 관련: [[frailty]] (허약 노인 다약제), [[palliative-pain]] (임종기 LBM 중단), [[prescribing-cascade]] (처방 연쇄)",
       sources: []
     },
-    t2dm_lifestyle: {
-      content: "### 생활습관 의학 통합 일차의료 — T2DM 감약 실사 근거 [CLINICAL]\n> [출처: Jacob Y et al. J Clin Med 2026 Mar 27;15(7). PMID:41976866]\n> 후향적 차트 리뷰, n=650명 T2DM, 생활습관 의학 통합 일차의료 2곳, 2014-2023.\n\n| 지표 | 결과 |\n|---|---|\n| 감약 이벤트 발생률 | **6.3%** (41/650명) |\n| 메트포르민 용량 감량 | 34% |\n| 메트포르민 중단 | 19.5% |\n| 인슐린 용량 감량 | 19.5% |\n| 감약 후 BMI 변화 | **-2.25 kg/m²** (p<0.0003) |\n| 감약 후 HbA1c 변화 | **-13%** (p<0.0013) |\n| 생활습관 변화 기록 환자 | 51% (식이·운동 명시) |\n| 심각한 이상반응 | **0건** |\n\n**임상 메시지:**\n- 생활습관 처방 기반 일차의료에서 T2DM 감약은 **안전하고 실현 가능**\n- 메트포르민·인슐린 감량/중단이 주요 유형 — 저혈당 위험 없이 달성\n- \"잘 조절되면 약을 줄일 수도 있어요\" 환자 상담의 실증 근거\n\n**외래 적용:**\n- HbA1c 목표 지속 달성 + 생활습관 개선 확인 → 메트포르민 감량 시도\n- 인슐린 집중 환자 → HbA1c 목표 이하 지속 → 단계적 감량 (저혈당 모니터링 병행)\n\n**한계:** 후향적·비대조·소규모·미국 단일 클리닉 — 외삽 주의.",
-      sources: []
-    },
-    dementia_antidepressant: {
-      content: "### 치매 요양원 거주자 항우울제 과처방 [CLINICAL]\n> [출처: Liang S et al. J Am Geriatr Soc 2026 May 6. PMID:42089534]\n> 단면 연구, MDS 3.0 연계 Medicare 청구, n=232,543명, ADRD 요양원 장기입소 노인(≥65세), 미국.\n\n| 지표 | 수치 |\n|---|---|\n| 항우울제 사용률 (전체 ADRD) | **51.6%** |\n| 중등도 이상 우울 (PHQ-9 ≥10) | **<5%** |\n| 우울·불안 동반 시 처방률 | 69.5% |\n| 통증 동반 시 처방률 | 61.9% |\n| 불면 동반 시 처방률 | 60.0% |\n| 위 조건 없이 처방된 비율 | **14.1%** |\n\n**가장 흔한 약물:** SSRIs (60.7%) — citalopram·sertraline; mirtazapine (수면/식욕), trazodone (수면).\n\n**임상 메시지:**\n- 치매 요양원 거주자 절반 이상이 항우울제 복용 → **우울 근거 없이 처방되는 경우 많음**\n- 다약제와 강한 양의 연관 → 처방 연쇄 가능성\n- 통증·불면·불안 대증 처방으로 항우울제 누적 → deprescribing 적응증 검토 대상\n\n**외래 치매 노인 항우울제 점검:**\n1. 적응증 명확 여부 확인 (PHQ-9 ≥5, 우울 진단 명기)\n2. 적응증 불명확 + 다약제 → 감약 적응증 평가\n3. 통증·불면·불안 목적 → 1차 치료 전략으로 대체 가능한지 검토\n4. SSRIs: 점진 감량 (중단 반응 방지); mirtazapine·trazodone: 수면·식욕 외 효과 재평가\n\n**주의:** 치매 환자 PHQ-9 정확도 낮음 (인지 저하로 과소보고); BPSD 조절 목적 SSRIs는 개별화 — 무조건 중단 금지.",
-      sources: []
-    },
-    psychotropic_falls: {
-      content: "### 정신과 약물 감약 → 낙상 감소 — 고충실도 프로그램이 핵심 [CLINICAL]\n> [출처: Yin F et al. J Am Med Dir Assoc 2026;27(5):106146. PMID:41791728]\n> 체계적 문헌고찰+메타분석, 18연구(RCT 11+NRSI 7), 노인(≥65세), 정신과 약물(BZD·수면제·항정신병약) 감약. 설정별 층화.\n\n| 설정 | 연구 수 | 낙상 OR | 유의성 |\n|---|---|---|---|\n| 지역사회 장기 RCT (전체) | — | 0.91 (0.59–1.39) | ✗ 비유의 |\n| **지역사회 고충실도 프로그램** | — | **0.61 (0.41–0.91)** | ✓ 유의 |\n| 지역사회 저충실도 | — | 효과 없음 | ✗ |\n| **입원환자 (NRSI 5개, n=5,972)** | 5 | **0.43 (0.19–0.96)** | ✓ 유의 |\n| 장기요양시설 | — | 비유의 | ✗ |\n| 퇴원후 전환기 돌봄 | — | 비유의 | ✗ |\n\n**임상 메시지:**\n- 정신과 약물 감약이 낙상을 줄이지만 **효과는 고충실도 프로그램에서만** → \"줄여봅시다\" 막연한 접근 ✗\n- **고충실도 = 구조화 프로토콜(STOPP/START 등) + 환자·보호자 교육 병행 + 체계적 추적**\n- 근거 수준: 낮음~매우 낮음 (GRADE) — 방향성은 명확, 확증 시험 필요\n\n**외래 적용 — 정신과 약물 감약 시작:**\n1. **대상 선별**: BZD·수면제·항정신병약 복용 중인 ≥65세 낙상 위험 환자 (STEADI 또는 낙상 이력)\n2. **프로토콜 기반 감약**: STOPP 기준 해당 여부 확인 → 단계적 감량 계획 수립\n3. **환자·보호자 교육**: 감약 이유·금단 증상·대체 전략(비약물 수면치료·CBT-I) 제시\n4. **추적**: 감약 2~4주 후 금단·재발·낙상 재평가 → 필요시 속도 조절\n5. 관련: [[fall-prevention-awv]], [[geriatric-assessment-4ms]]",
+    related_split: {
+      content: "### 분할된 응용 영역\n\n- T2DM 감약 (생활습관 의학 통합) → [[diabetes-deprescribing-lifestyle]]  \n  Jacob Y 2026, n=650, 감약률 6.3%, HbA1c -13%, BMI -2.25, 이상반응 0건\n- 치매 항우울제 과처방·정신과 약물 → 낙상 감소 → [[elderly-psychotropic-deprescribing]]  \n  Liang S 2026 (n=232,543, ADRD 항우울제 51.6%) + Yin F 2026 메타분석(고충실도 프로그램 OR 0.61)\n\n(2026-05-12 분할: 본 entry는 STOPP/START 본연·Z-수면제 BI·감약 거부 면담 유지. 응용 영역은 위 entry 참조.)",
       sources: []
     }
   },
@@ -4341,6 +4362,81 @@ KNOWLEDGE_BUNDLE["부적절처방"] = _deprescribing_v2;
 KNOWLEDGE_BUNDLE["PIP"] = _deprescribing_v2;
 KNOWLEDGE_BUNDLE["STOPP-START"] = _deprescribing_v2;
 KNOWLEDGE_BUNDLE["medication-review"] = _deprescribing_v2;
+
+/* diabetes-deprescribing-lifestyle — T2DM 감약 생활습관 의학 (2026-05-12 Auditor R2 분할; deprescribing에서 분리). [CLINICAL] */
+var _diabetes_deprescribing_v2 = {
+  kind: "topic",
+  keywords: ["T2DM 감약","제2형 당뇨 감약","metformin deprescribing","메트포르민 감량","인슐린 감량","lifestyle medicine","생활습관 의학 감약","HbA1c 감약","diabetes deprescribing"],
+  primarySources: [
+    "Jacob Y et al. Deprescribing Following Access to Lifestyle Treatment. J Clin Med 2026 Mar 27;15(7). PMID:41976866, DOI:10.3390/jcm15072561"
+  ],
+  sections: {
+    definition: {
+      content: "T2DM 외래에서 **HbA1c 지속 안정 + 생활습관 개선** 환자의 메트포르민·인슐린 감량/중단. 일반 deprescribing 원칙은 [[deprescribing]], T2DM 진단·표준 치료는 [[diabetes]] 참조.",
+      sources: []
+    },
+    notes: {
+      content: "### 핵심 수치 (Jacob Y 2026, n=650 T2DM, 후향적 차트 리뷰, 미국 단일 클리닉 2곳, 2014-2023)\n| 지표 | 결과 |\n|---|---|\n| 감약 이벤트 발생률 | **6.3%** (41/650) |\n| 메트포르민 용량 감량 | 34% |\n| 메트포르민 중단 | 19.5% |\n| 인슐린 용량 감량 | 19.5% |\n| 감약 후 BMI 변화 | **-2.25 kg/m²** (p<0.0003) |\n| 감약 후 HbA1c 변화 | **-13%** (p<0.0013) |\n| 생활습관 변화 기록 환자 | 51% (식이·운동 명시) |\n| 심각한 이상반응 | **0건** |\n\n**임상 메시지:**\n- 생활습관 처방 기반 일차의료에서 T2DM 감약은 **안전하고 실현 가능**\n- 메트포르민·인슐린 감량/중단이 주요 유형 — 저혈당 위험 없이 달성\n- \"잘 조절되면 약을 줄일 수도 있어요\" 환자 상담의 실증 근거",
+      sources: ["Jacob Y et al. J Clin Med 2026;15(7). PMID:41976866"]
+    },
+    protocol: {
+      content: "### 외래 감약 적용\n- HbA1c 목표 지속 달성 + 생활습관 개선 확인 → 메트포르민 감량 시도 가능\n- 인슐린 집중 환자 → HbA1c 목표 이하 지속 → 단계적 감량 (저혈당 모니터링 병행)\n\n### 감약 결정 전 체크리스트\n1. HbA1c ≥6개월 목표 이하 유지\n2. 식이·운동 행동 변화 기록 명확\n3. 저혈당 이력 없음\n4. 환자·보호자 감약 동의",
+      sources: []
+    },
+    precaution: {
+      content: "- 후향적·비대조·소규모·미국 단일 클리닉 — 외삽 시 주의\n- 인슐린 감량 시 SMBG 빈도 일시적 증가 권고 (저혈당 조기 검출)\n- 메트포르민 중단 시 eGFR 변화·동반 약물(SGLT2i·GLP-1RA) 점검",
+      sources: []
+    },
+    referral: {
+      content: "- 인슐린 다회 주사 환자 감약 시도 → 내분비내과 협진 권고\n- 생활습관 의학 통합 프로그램 부재 외래 → 영양사·운동치료사 의뢰\n- 감약 후 HbA1c 재상승 → 표준 약물 재처방 결정 (실패 아님 — [[deprescribing]] 원칙)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["diabetes-deprescribing-lifestyle"] = _diabetes_deprescribing_v2;
+KNOWLEDGE_BUNDLE["T2DM-deprescribing"] = _diabetes_deprescribing_v2;
+KNOWLEDGE_BUNDLE["T2DM감약"] = _diabetes_deprescribing_v2;
+
+/* elderly-psychotropic-deprescribing — 노인 정신과 약물 감약 (2026-05-12 Auditor R2 분할; deprescribing에서 분리). [CLINICAL] */
+var _elderly_psychotropic_dep_v2 = {
+  kind: "topic",
+  keywords: ["노인 정신과 약물 감약","psychotropic deprescribing","항우울제 감약","antidepressant deprescribing","치매 요양원 항우울제","dementia nursing home antidepressant","BZD 감약","Z-drug 감약","항정신병약 감약","낙상 예방 정신과약","BPSD"],
+  primarySources: [
+    "Liang S et al. Antidepressant Use Among US Nursing Home Residents With Dementia. J Am Geriatr Soc 2026 May 6. PMID:42089534, DOI:10.1111/jgs.70492",
+    "Yin F et al. Deprescribing Psychotropic Medications and Falls in Older Adults: A Setting-Stratified Systematic Review and Meta-Analysis. J Am Med Dir Assoc 2026;27(5):106146. PMID:41791728, DOI:10.1016/j.jamda.2026.106146"
+  ],
+  sections: {
+    definition: {
+      content: "≥65세 노인의 **정신과 약물(BZD·수면제·항정신병약·항우울제) 감약**. 치매 요양원 항우울제 과처방 + 정신과 약물 감약의 낙상 감소 효과(고충실도 프로그램에서만) 근거 기반. 일반 deprescribing 원칙은 [[deprescribing]], 치매 BPSD는 [[dementia]], 낙상 위험 평가는 [[fall-prevention-awv]] 참조.",
+      sources: []
+    },
+    dementia_antidepressant: {
+      content: "### 치매 요양원 거주자 항우울제 과처방 [CLINICAL]\n> [출처: Liang S et al. J Am Geriatr Soc 2026 May 6. PMID:42089534]\n> 단면 연구, MDS 3.0 연계 Medicare 청구, n=232,543명, ADRD 요양원 장기입소 노인(≥65세), 미국.\n\n| 지표 | 수치 |\n|---|---|\n| 항우울제 사용률 (전체 ADRD) | **51.6%** |\n| 중등도 이상 우울 (PHQ-9 ≥10) | **<5%** |\n| 우울·불안 동반 시 처방률 | 69.5% |\n| 통증 동반 시 처방률 | 61.9% |\n| 불면 동반 시 처방률 | 60.0% |\n| 위 조건 없이 처방된 비율 | **14.1%** |\n\n**가장 흔한 약물:** SSRIs (60.7%) — citalopram·sertraline; mirtazapine (수면/식욕), trazodone (수면).\n\n**임상 메시지:**\n- 치매 요양원 거주자 절반 이상 항우울제 복용 → **우울 근거 없이 처방되는 경우 많음**\n- 다약제와 강한 양의 연관 → 처방 연쇄 가능성\n- 통증·불면·불안 대증 처방으로 항우울제 누적 → deprescribing 적응증 검토 대상\n\n**외래 치매 노인 항우울제 점검:**\n1. 적응증 명확 여부 확인 (PHQ-9 ≥5, 우울 진단 명기)\n2. 적응증 불명확 + 다약제 → 감약 적응증 평가\n3. 통증·불면·불안 목적 → 1차 치료 전략으로 대체 가능한지 검토\n4. SSRIs: 점진 감량 (중단 반응 방지); mirtazapine·trazodone: 수면·식욕 외 효과 재평가",
+      sources: ["Liang S et al. J Am Geriatr Soc 2026 May 6. PMID:42089534"]
+    },
+    psychotropic_falls: {
+      content: "### 정신과 약물 감약 → 낙상 감소 — 고충실도 프로그램이 핵심 [CLINICAL]\n> [출처: Yin F et al. J Am Med Dir Assoc 2026;27(5):106146. PMID:41791728]\n> 체계적 문헌고찰+메타분석, 18연구(RCT 11+NRSI 7), 노인(≥65세), 정신과 약물(BZD·수면제·항정신병약) 감약. 설정별 층화.\n\n| 설정 | 낙상 OR | 유의성 |\n|---|---|---|\n| 지역사회 장기 RCT (전체) | 0.91 (0.59–1.39) | ✗ 비유의 |\n| **지역사회 고충실도 프로그램** | **0.61 (0.41–0.91)** | ✓ 유의 |\n| 지역사회 저충실도 | 효과 없음 | ✗ |\n| **입원환자 (NRSI 5개, n=5,972)** | **0.43 (0.19–0.96)** | ✓ 유의 |\n| 장기요양시설 | 비유의 | ✗ |\n| 퇴원후 전환기 돌봄 | 비유의 | ✗ |\n\n**임상 메시지:**\n- 정신과 약물 감약이 낙상을 줄이지만 **효과는 고충실도 프로그램에서만** → \"줄여봅시다\" 막연한 접근 ✗\n- **고충실도 = 구조화 프로토콜(STOPP/START 등) + 환자·보호자 교육 병행 + 체계적 추적**\n- 근거 수준: 낮음~매우 낮음 (GRADE) — 방향성은 명확, 확증 시험 필요",
+      sources: ["Yin F et al. J Am Med Dir Assoc 2026;27(5):106146. PMID:41791728"]
+    },
+    protocol: {
+      content: "### 외래 적용 — 정신과 약물 감약 시작 단계\n1. **대상 선별**: BZD·수면제·항정신병약 복용 중인 ≥65세 낙상 위험 환자 (STEADI 또는 낙상 이력)\n2. **프로토콜 기반 감약**: STOPP 기준 해당 여부 확인 → 단계적 감량 계획 수립\n3. **환자·보호자 교육**: 감약 이유, 금단 증상, 대체 전략(비약물 수면치료·CBT-I) 제시\n4. **추적**: 감약 2~4주 후 금단·재발·낙상 재평가 → 필요시 속도 조절",
+      sources: []
+    },
+    precaution: {
+      content: "- 치매 환자 PHQ-9 정확도 낮음 (인지 저하로 과소보고) — 무조건 중단 금지\n- BPSD 조절 목적 SSRIs는 개별화 판단 필요\n- 급격 중단 금기 약물군: BZD·SSRIs·항정신병약 (점진 감량 필수)\n- 메타분석 근거 수준 GRADE 낮음~매우 낮음 — 확증 시험 부재",
+      sources: []
+    },
+    referral: {
+      content: "- 다중 정신과 약물 (BZD+항우울제+항정신병약) 복합 감약 → 노인의학·정신건강의학과 협진\n- 치매 BPSD 조절 목적 항정신병약 감약 → 신경과·정신과 사전 협의\n- 낙상 반복 + 정신과 약물 → 낙상 예방 클리닉 / [[fall-prevention-awv]] 참조",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["elderly-psychotropic-deprescribing"] = _elderly_psychotropic_dep_v2;
+KNOWLEDGE_BUNDLE["psychotropic-deprescribing"] = _elderly_psychotropic_dep_v2;
+KNOWLEDGE_BUNDLE["치매-항우울제-감약"] = _elderly_psychotropic_dep_v2;
 
 /* ========== 5-1·5-2 cron Liby ingest (Batch 3 — 신경·정신) ========== */
 

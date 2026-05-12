@@ -8,7 +8,7 @@ supersedes: (미정)
 freshness.primarySourceYear: 2026
 applicability: ≥65세 외래 환자 — 다약제 처방 재검토
 parents: []
-relations: []
+relations: [[[diabetes-deprescribing-lifestyle]], [[elderly-psychotropic-deprescribing]], [[frailty]], [[palliative-pain]]]
 
 > primarySources (Tier 1):
 > - McDonald EG et al. Screening for potentially inappropriate prescribing in primary care: Canadian guideline. Can Fam Physician. 2026 Mar 17;72(3):173-178. PMID:41844291, DOI:10.46747/cfp.7203173
@@ -84,6 +84,10 @@ relations: []
 
 - [[frailty]] — 허약 노인 다약제 deprescribing
 - [[palliative-pain]] — 임종기 비필수 약물 중단
+- [[diabetes-deprescribing-lifestyle]] — T2DM 감약 (생활습관 의학)
+- [[elderly-psychotropic-deprescribing]] — 노인 항우울제·정신과 약물 감약·낙상 예방
+
+> (2026-05-12 Auditor R2 분할; 본 파일에서 T2DM 감약·치매 항우울제·정신과 약물 낙상 → 별도 entry 분리)
 
 ---
 
@@ -124,70 +128,6 @@ relations: []
 
 ---
 
-## 생활습관 의학 통합 일차의료 — T2DM 감약 실사 근거 [CLINICAL]
-
-> [출처: Jacob Y et al. Deprescribing Following Access to Lifestyle Treatment. J Clin Med. 2026 Mar 27;15(7). PMID:41976866, DOI:10.3390/jcm15072561]
-> 후향적 차트 리뷰, n=650명 T2DM, 생활습관 의학 통합 일차의료 2곳, 2014-2023
-
-**핵심 수치:**
-
-| 지표 | 결과 |
-|---|---|
-| 감약 이벤트 발생률 | **6.3%** (41/650명) |
-| 메트포르민 용량 감량 | 34% |
-| 메트포르민 중단 | 19.5% |
-| 인슐린 용량 감량 | 19.5% |
-| 감약 후 BMI 변화 | **-2.25 kg/m²** (p<0.0003) |
-| 감약 후 HbA1c 변화 | **-13%** (p<0.0013) |
-| 생활습관 변화 기록된 환자 | 51% (식이·운동 변화 명시) |
-| 심각한 이상반응 | **0건** |
-
-**임상 메시지:**
-- 생활습관 처방 기반 일차의료에서 T2DM 감약은 **안전하고 실현 가능**
-- 메트포르민·인슐린 감량/중단이 주요 유형 — 저혈당 위험 없이 달성
-- "잘 조절되면 약을 줄일 수도 있어요" 환자 상담 발언의 실증 근거
-
-**외래 적용:**
-- HbA1c 목표 지속 달성 + 생활습관 개선 확인 → 메트포르민 감량 시도 가능
-- 인슐린 집중 환자 → HbA1c 목표 이하 지속 → 단계적 감량 (저혈당 모니터링 병행)
-
-**한계:** 후향적·비대조·소규모·미국 단일 클리닉 — 외삽 주의
-
----
-
-## 치매 요양원 거주자 항우울제 과처방 [CLINICAL]
-
-> [출처: Liang S et al. Antidepressant Use Among US Nursing Home Residents With Dementia. J Am Geriatr Soc. 2026 May 6. PMID:42089534, DOI:10.1111/jgs.70492]
-> 단면 연구, MDS 3.0 연계 Medicare 청구, n=232,543명, ADRD 요양원 장기입소 노인(≥65세), 미국
-
-**핵심 수치:**
-
-| 지표 | 수치 |
-|---|---|
-| 항우울제 사용률 (전체 ADRD) | **51.6%** |
-| 중등도 이상 우울 (PHQ-9 ≥10) | **<5%** |
-| 우울·불안 동반 시 처방률 | 69.5% |
-| 통증 동반 시 처방률 | 61.9% |
-| 불면 동반 시 처방률 | 60.0% |
-| 위 조건 없이 처방된 비율 | **14.1%** |
-
-**가장 흔한 약물:** SSRIs (60.7%) — citalopram·sertraline; 기타 mirtazapine (수면/식욕), trazodone (수면)
-
-**임상 메시지:**
-- 치매 요양원 거주자 절반 이상이 항우울제 복용 → **우울 근거 없이 처방되는 경우 많음**
-- 다약제(polypharmacy)와 강한 양의 연관 → 처방 연쉬 가능성
-- 통증·불면·불안 대증 처방으로 항우울제 누적 → deprescribing 적응증 검토 대상
-
-**외래 치매 노인 항우울제 점검:**
-1. 적응증 명확 여부 확인 (PHQ-9 ≥5, 우울 진단 명기)
-2. 적응증 불명확 + 다약제 → 감약 적응증 평가
-3. 통증·불면·불안 목적 → 1차 치료 전략으로 대체 가능한지 검토
-4. SSRIs: 점진 감량 (중단 반응 방지); mirtazapine·trazodone: 수면·식욕 외 효과 재평가
-
-**주의:** 치매 환자 PHQ-9 정확도 낮음 (인지 저하로 과소보고); BPSD 조절 목적 SSRIs는 개별화 판단 필요 — 무조건 중단 금지
-
----
-
 ## 지역사회 환자의 감약 거부 — 예측 인자·면담 전략 (notes) [CLINICAL — 조건부]
 
 > [출처: Marcellaud E et al. Attitudes Toward Deprescribing Among Community-Dwelling Adults. Drugs Aging. 2026 May 2. PMID:42068533, DOI:10.1007/s40266-026-01298-6]
@@ -220,30 +160,5 @@ relations: []
 
 ---
 
-## 정신과 약물 감약 → 낙상 감소 — 고충실도 프로그램이 핵심 (notes) [CLINICAL]
-
-> [출처: Yin F et al. Deprescribing Psychotropic Medications and Falls in Older Adults: A Setting-Stratified Systematic Review and Meta-Analysis. J Am Med Dir Assoc. 2026;27(5):106146. PMID:41791728, DOI:10.1016/j.jamda.2026.106146]
-> 체계적 문헌고찰+메타분석, 18연구(RCT 11개+NRSI 7개), 노인(≥65세), 정신과 약물(BZD·수면제·항정신병약) 감약 중재. 설정별 층화 분석.
-
-**핵심 수치 — 설정별 효과:**
-
-| 설정 | 연구 수 | 낙상 OR | 유의성 |
-|---|---|---|---|
-| 지역사회 장기 RCT (전체) | — | 0.91 (0.59–1.39) | ✗ 비유의 |
-| **지역사회 고충실도 프로그램** | — | **0.61 (0.41–0.91)** | ✓ 유의 |
-| 지역사회 저충실도 | — | 효과 없음 | ✗ |
-| **입원환자 (NRSI 5개, n=5,972)** | 5 | **0.43 (0.19–0.96)** | ✓ 유의 |
-| 장기요양시설 | — | 비유의 | ✗ |
-| 퇴원후 전환기 돌봄 | — | 비유의 | ✗ |
-
-**임상 메시지:**
-- 정신과 약물 감약이 낙상을 줄이지만 **효과는 고충실도 프로그램에서만** → "줄여봅시다" 막연한 접근 ✗
-- **고충실도 = 구조화 프로토콜(STOPP/START 등) + 환자·보호자 교육 병행 + 체계적 추적**
-- 근거 수준: 낮음~매우 낮음 (GRADE) — 방향성은 명확, 확증 시험 필요
-
-**외래 적용 — 정신과 약물 감약 시작 단계:**
-1. **대상 선별**: BZD·수면제·항정신병약 복용 중인 ≥65세 낙상 위험 환자 (STEADI 또는 낙상 이력)
-2. **프로토콜 기반 감약**: STOPP 기준 해당 여부 확인 → 단계적 감량 계획 수립
-3. **환자·보호자 교육**: 감약 이유, 금단 증상, 대체 전략(비약물 수면치료·CBT-I) 제시
-4. **추적**: 감약 2~4주 후 금단·재발·낙상 재평가 → 필요시 속도 조절
-5. 관련: [[fall-prevention-awv]], [[geriatric-assessment-4ms]]
+> 정신과 약물(BZD·수면제·항정신병약) 감약 효과·낙상 감소·프로토콜은 [[elderly-psychotropic-deprescribing]] 참조.
+> T2DM 감약 실사 근거는 [[diabetes-deprescribing-lifestyle]] 참조.
