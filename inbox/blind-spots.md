@@ -45,6 +45,12 @@
 - **패턴**: HPI와 약물력을 따로 청취·기록. 두 데이터를 timeline에서 교차 비교하는 습관 부재.
 - **대응**: 새 호소 평가 시 routine — (1) 호소 시작 시점 명시 (2) 6개월 내 신규 약물·용량 변경 여부 확인 (3) timeline 비교 ("증상 시작 vs 약물 시작"). 의심 시 약물 부작용·약물-영양 상호작용 검토. GLP-1 RA·PPI·metformin 등 영양·흡수 영향 약물은 자동 점검.
 
+### [다중 신호 통합] 호소 + lab 이상 조합 통합 감별 부재
+- **맥락**: 2026-05-12, 41세 여성 케이스. "요 근래 설사를 한다" 호소 + IDA 확진이 같은 진료에서 확인됐으나 IBS-D 가정 증상약(Dicetel·Norzyme·Fotagel) 처방. 설사 onset·양상·빈도·혈변·야간·체중감소 미평가. 41세 + IDA + 만성 설사 조합이 가리키는 systemic 감별(celiac·IBD·microscopic colitis·colon malignancy) 미가동. 4주+ 설사임에도 chronic diarrhea workup framework(FOBT/FIT·CRP·ESR·TSH·anti-tTG) 가동 안 함.
+- **문제**: 두 신호(IDA + 설사)를 분리된 호소로 처리. 통합하면 systemic 감별 폭이 자동으로 넓어지는데 따로 다뤄서 각 호소가 단순 진단(IBS·생리성 IDA)으로 닫힘. chronic diarrhea 정의·최소 workup set이 외래 routine에 없음.
+- **패턴**: "한 호소에 한 진단·한 약" 처리. 다중 신호를 동시에 만족하는 진단 우선순위 부재. 만성 설사 cutoff(4주) 인식 부족 → acute 다루듯 증상약으로 closure.
+- **대응**: (1) 호소 + lab 이상 조합 시 두 신호 동시 만족 진단 우선 감별 (2) chronic diarrhea (>4주) 만나면 최소 workup 즉시 가동 — FOBT/FIT·CRP·ESR·TSH·anti-tTG·필요 시 stool studies (3) IDA + GI 증상 + 40대+ → colon screening 연령 근접 인식, GI workup 문턱 낮추기 (4) 증상약 처방은 평가 시작 후·미정 시점에만 ([증상약 도망] 원칙과 결합).
+
 ### HBV 항체 결과를 백신 2회차 접종할 때 f/u하려고 했음. 
 **항체 결과**:는 3회차 접종 후 1개월 이후 f/u하는게 가장 좋고, 의료종사자, 만성 B형간염 환자 가족, 혈액제제 수혜자, 투석 환자, 면역저하자가 아닌경우에 routine f/u은 필요 없음.
 
