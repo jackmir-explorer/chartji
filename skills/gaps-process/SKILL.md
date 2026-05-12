@@ -3,6 +3,19 @@
 > **목적**: `inbox/gaps.md` 본문의 지식 격차 항목을 scout 처리(Researcher 문헌 검색·요약)하고 Archive로 이동한다.
 > **호출**: 미르가 "gaps 처리" 또는 "gaps scout" 호출 시. Liby가 실행 주체 (`agents/librarian.md` gaps.md 처리 규칙 § 참조).
 
+> ⚠ **수동 호출·자율 발동 금지 (2026-05-12 명문화)**
+>
+> gaps.md 처리는 **Scout 루틴이 자동 처리**하는 영역이다. 흐름: `Scout 루틴 → inbox/scout/YYYY-MM-DD.md → Deep Extract → knowledge/*.md → (미르 호출 시) Liby ingest`.
+>
+> Claude가 "이 작업에 도움될 것 같다"는 판단으로 본 SKILL을 자율 발동하면 안 된다. 발동 조건은 단 하나 — **미르가 "gaps 처리" 또는 "gaps scout"을 명시적으로 호출한 경우**.
+>
+> 특히 다음 패턴 금지:
+> - "브랜치 이름이 X 관련이니까 gaps에 있는 X 항목을 처리하자"
+> - "Liby ingest의 (4) gaps 처리를 빠뜨리지 않으려고 자동 실행"
+> - "Researcher에게 gaps 항목 위임하는 것이 분명 유용하니까"
+>
+> 위 추론으로 발동된 호출은 **Scout 영역 침범**이며, 산출물은 폐기 대상이다. (실 사례: 2026-05-12 APN 3건 자율 위임 실수.)
+
 ## 입력
 없음. `inbox/gaps.md` 본문을 직접 읽는다. 옵션 인자:
 - `mode=daily` (기본) — 1건 처리 (FIFO + 의미적 카테고리 묶음 시 함께)
