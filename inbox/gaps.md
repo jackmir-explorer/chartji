@@ -23,6 +23,11 @@
 - [CKD ABx 용량] 신배설 ABx(amox-clav 등) — 처방 전 최근 eGFR 확인 / eGFR <30 감량, 30~60 부분 조정 / clavulanate 간독성 고령 증가
 - [고령 신약 추가] 기존 복약 + 약국 OTC(종합감기약 등) review 전제 — 중복·상호작용·polypharmacy 부담, 신약 추가 전 list-up 루틴화
 - [Safety-netting] watchful waiting·경험적 ABx 모두에 명시 재내원 trigger — 48~72시간 무호전·발열·호흡곤란·의식변화 / 경험적 ABx 선택 시 follow-up plan 동반 필수
+- [IDA 진단] MCV 정상범위(82.1 등 하한)도 IDA 배제 못함 — ferritin <30(또는 <15) 우선 확인 / 초기 IDA는 normocytic→microcytic 진행 / RDW·anisocytosis가 MCV보다 먼저 변함
+- [폐경 전 여성 IDA] 원인 자동 "월경" 가정 금지 — 5축 평가(월경·GI·malabsorption·약물·식이) / 40대 이상은 colon ca screening 연령 근접, GI workup 문턱 낮추기
+- [GLP-1 RA 영양결핍] semaglutide 등 장기 사용 환자 — 식욕↓·위배출 지연 → iron·B12·protein 결핍 / 빈혈·피로 호소 시 약물 시작 시점과 timeline 비교 필수
+- [만성 설사 + 빈혈] celiac·IBD·colon pathology 적극 감별 — 평가 전 IBS 가정 증상약(Dicetel·Norzyme·Fotagel) 처방 금지 / anti-tTG·CRP·FOBT·필요 시 내시경
+- [Iron 보충 패러다임] 격일 투여 — daily보다 hepcidin biology상 효과적 / vitamin C 동반·공복 복용 / 만성 IDA 처방 default 변경
 
 ---
 
