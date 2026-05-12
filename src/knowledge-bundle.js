@@ -3304,7 +3304,7 @@ KNOWLEDGE_BUNDLE["REDUCE-AMI"] = _post_mi_dep_v2;
 /* cardiology-2025-update — Cardiology 2025 핵심 변화 (Atalla 2026, 4-30 deep-extract). [CLINICAL] */
 var _cardiology_2025_update_v2 = {
   kind: "topic",
-  keywords: ["cardiology-2025","cardiology 2025 update","심장내과 2025","AF anticoagulation","mavacamten","aficamten","HCM","apixaban","rivaroxaban","post-MI BB"],
+  keywords: ["cardiology-2025","cardiology 2025 update","심장내과 2025","AF anticoagulation","mavacamten","aficamten","HCM","apixaban","rivaroxaban","post-MI BB","internal-medicine-2025-update","internal medicine 2025"],
   primarySources: [
     "Atalla M et al. Update in Cardiology 2025. Ann Intern Med 2026. PMID:41974015, DOI:10.7326/ANNALS-26-01014 [초록 기반]"
   ],
@@ -3318,12 +3318,12 @@ var _cardiology_2025_update_v2 = {
 };
 KNOWLEDGE_BUNDLE["cardiology-2025-update"] = _cardiology_2025_update_v2;
 KNOWLEDGE_BUNDLE["cardiology-2025"] = _cardiology_2025_update_v2;
-KNOWLEDGE_BUNDLE["internal-medicine-2025-update"] = _cardiology_2025_update_v2; /* deprecated alias — backward compat (합본 의도 분할됨, endocrinology는 endocrinology-2025-update 키로 분리) */
+KNOWLEDGE_BUNDLE["internal-medicine-2025-update"] = _cardiology_2025_update_v2; /* deprecated alias — backward compat (cardiology 라우팅; endocrinology 검색은 keywords로 보강, 2026-05-12 audit 후속) */
 
 /* endocrinology-2025-update — Endocrinology 2025 핵심 변화 (Endocrinology 2026, 4-30 deep-extract). [CLINICAL] */
 var _endocrinology_2025_update_v2 = {
   kind: "topic",
-  keywords: ["endocrinology-2025","endocrinology 2025 update","내분비 2025","GLP-1 NAION","SGLT-2 UTI 비교","finerenone","피네레논","MASH GLP-1"],
+  keywords: ["endocrinology-2025","endocrinology 2025 update","내분비 2025","GLP-1 NAION","SGLT-2 UTI 비교","finerenone","피네레논","MASH GLP-1","internal-medicine-2025-update","internal medicine 2025"],
   primarySources: [
     "Update in Endocrinology 2025. Ann Intern Med 2026. PMID:41974004, DOI:10.7326/ANNALS-26-01015 [초록 기반]"
   ],
@@ -5019,12 +5019,12 @@ var _osteoporosis_v2 = {
       content: "- 비전형 대퇴골 골절·ONJ 의심 → 정형/구강악안면\n- 부갑상선기능항진증·악성 동반 → 내분비\n- 데노수맙 5년+ ONJ 위험요인 → 골다공증 전문\n- VCF 6주 보존치료 무효 → vertebroplasty/kyphoplasty 의뢰 (신경 결손 동반 시 즉시)\n- 관련: [[CKD]], [[home-based-hypertension]], [[frailty]]",
       sources: []
     },
-    complication: {
+    complications: {
       content: "### 척추압박골절 (Vertebral Compression Fracture, VCF) [CLINICAL]\n> [출처: Creech-Organ J, Organ B. Vertebral Compression Fractures. Am Fam Physician 2026 Jan;113(1):51-56. PMID:41544281] [초록 기반 — 전문 미확인]\n\n**발생 기전·트리거**\n- 골다공증의 흔한 합병증\n- **일상 동작으로도 발생**: 침대 뒤집기·기침·재채기 → 환자가 \"갑자기 허리가 아파요\" 호소 시 VCF 반드시 감별\n- 외상성·전이성 원인도 가능 (악성 종양 기왕력 시 주의)\n\n**증상**\n- 자세 변화·발살바 조작(기침·힘주기)으로 악화되는 요통\n- 많은 환자가 **무증상** (영상 우연 발견)\n- 장기적: 후만증(kyphosis)·키 감소·근위축·추가 골밀도 손실\n\n**진단 알고리즘**\n```\n요통 + 고령 + 골다공증 기왕력/위험인자\n         ↓\nAP + Lateral 척추 X-ray\n         ↓\n[음성 + 임상 의심 강함] → MRI 추가 (골수 부종 확인, 급성·만성 구별)\n[양성 VCF 확인] → 보존치료 시작 + 골다공증 약물\n```\n- 악성 전이 감별 필요 시 MRI 우선\n\n**치료**\n1. **보존치료 (1차)**: 물리재활 + NSAID·acetaminophen / **항골다공증 약물 처방이 통증 개선** — 골절 후 조기 시작 권고\n2. **보조기·신경차단**: bracing 단기 이익 근거 매우 제한적 / 신경근 차단 근거 매우 제한적\n3. **수술 (2차)**: Vertebroplasty 또는 Kyphoplasty — **6주 보존치료 무효 시** 고려 / 척수 압박·신경 결손 시 즉시\n\n**골다공증 약물과 VCF**\n- VCF 발생 시점 = **항골다공증 치료 시작 최적 타이밍**\n- Bisphosphonate·데노수맙: 추가 골절 예방 + 통증 개선\n- 골절 후 약물 시작을 늦추지 말 것 — 조기 시작이 원칙",
       sources: []
     },
     diabetes_specific: {
-      content: "### 당뇨 노인 골다공증 — 특수 고려사항 [CLINICAL]\n> [출처: Bahat G et al. Drugs Aging 2026 Mar;43(4):341-360. PMID:41854838]\n\n**왜 당뇨 노인 골절 위험이 과소평가되는가**\n| 당뇨 유형 | 특징 |\n|---|---|\n| **T1DM** | BMD 감소 → FRAX 어느 정도 반영 |\n| **T2DM** | BMD 정상~증가, **골 미세구조·질 손상** (AGE 축적·저회전) → **FRAX 과소평가** |\n\n- T2DM에서 DXA T-score 정상이더라도 실제 골절 위험은 높음\n- **FRAX 보정**: T2DM 환자 산출 위험에 **1.2배 보정** 권장 (전문가 합의 기반)\n- [출처 미확인 — researcher 검증 권장]: 한국 FRAX 계산기 T2DM 보정 공식화 여부\n\n**혈당강하제별 골 안전성**\n| 약물군 | 골 영향 | 권고 |\n|---|---|---|\n| **Metformin** | 골안전·중성 또는 약간 유리 | 1차 유지 |\n| **DPP-4i** | 골안전 | 안심 사용 |\n| **GLP-1RA** | 골안전·유리 가능 | 선호 |\n| **TZD** (pioglitazone) | **BMD 감소·골절 위험 증가** | **회피 권고** |\n| **SGLT-2i** | 복잡 — 일부 골절 위험 증가 보고; 노인 주의 | 개별화 |\n| **고용량 인슐린** | 저혈당 → 낙상 → 골절 | 저혈당 최소화 |\n\n**항골다공증 치료 당뇨 노인 적용**\n- Bisphosphonate·Denosumab: 당뇨 환자에서도 유효 (주로 post hoc + 관찰 연구)\n- 당뇨 특화 RCT 부족 — 현재는 일반 골다공증 지침 준수\n- **치료 우선순위**: 골절 위험 확인 → 혈당강하제 교체(TZD→대안) → 항골다공증 치료 시작\n\n**생활습관 (당뇨 노인 특화)**\n- 단백질 ≥1.2~1.5 g/kg/일 (근감소 동반 고위험)\n- 칼슘·비타민 D 보충 (일반 골다공증 기준 동일)\n- **낙상 예방** 필수: 저혈당 → 낙상 연결 고리 — 혈당 조절 안정화 병행",
+      content: "### 당뇨 노인 골다공증 — 특수 고려사항 [CLINICAL]\n> [출처: Bahat G et al. Drugs Aging 2026 Mar;43(4):341-360. PMID:41854838]\n\n**왜 당뇨 노인 골절 위험이 과소평가되는가**\n| 당뇨 유형 | 특징 |\n|---|---|\n| **T1DM** | BMD 감소 → FRAX 어느 정도 반영 |\n| **T2DM** | BMD 정상~증가, **골 미세구조·질 손상** (AGE 축적·저회전) → **FRAX 과소평가** |\n\n- T2DM에서 DXA T-score 정상이더라도 실제 골절 위험은 높음\n- **FRAX 보정**: T2DM 환자 산출 위험에 **1.2배 보정** 권장 (전문가 합의 기반)\n- [출처 미확인 — researcher 검증 권장]: 한국 FRAX 계산기 T2DM 보정 공식화 여부\n\n**혈당강하제별 골 안전성**\n| 약물군 | 골 영향 | 권고 |\n|---|---|---|\n| **Metformin** | 골안전·중성 또는 약간 유리 | 1차 유지 |\n| **DPP-4i** | 골안전 | 안심 사용 |\n| [[glp1|**GLP-1RA**]] | 골안전·유리 가능 | 선호 |\n| **TZD** (pioglitazone) | **BMD 감소·골절 위험 증가** | **회피 권고** |\n| [[sglt2-inhibitors|**SGLT-2i**]] | 복잡 — 일부 골절 위험 증가 보고; 노인 주의 | 개별화 |\n| **고용량 인슐린** | 저혈당 → 낙상 → 골절 | 저혈당 최소화 |\n\n**항골다공증 치료 당뇨 노인 적용**\n- Bisphosphonate·Denosumab: 당뇨 환자에서도 유효 (주로 post hoc + 관찰 연구)\n- 당뇨 특화 RCT 부족 — 현재는 일반 골다공증 지침 준수\n- **치료 우선순위**: 골절 위험 확인 → 혈당강하제 교체(TZD→대안) → 항골다공증 치료 시작\n\n**생활습관 (당뇨 노인 특화)**\n- 단백질 ≥1.2~1.5 g/kg/일 (근감소 동반 고위험)\n- 칼슘·비타민 D 보충 (일반 골다공증 기준 동일)\n- **낙상 예방** 필수: 저혈당 → 낙상 연결 고리 — 혈당 조절 안정화 병행",
       sources: []
     }
   },
@@ -6836,6 +6836,7 @@ var _sap_v2 = {
 KNOWLEDGE_BUNDLE["spine-related-arm-pain"] = _sap_v2;
 KNOWLEDGE_BUNDLE["SAP"] = _sap_v2;
 KNOWLEDGE_BUNDLE["척추유발-상지통"] = _sap_v2;
+KNOWLEDGE_BUNDLE["척추유발상지통"] = _sap_v2;
 KNOWLEDGE_BUNDLE["cervical-radiculopathy"] = _sap_v2;
 KNOWLEDGE_BUNDLE["경추신경근병증"] = _sap_v2;
 KNOWLEDGE_BUNDLE["arm-pain"] = _sap_v2;
@@ -6863,7 +6864,7 @@ var _epilepsy_elderly_v2 = {
       sources: []
     },
     precaution: {
-      content: "### 동반 상황별 고려\n| 동반 상황 | 선택 고려 |\n|---|---|\n| 신기능 저하 | 레베티라세탐 → eGFR에 따라 용량 조절 |\n| 간기능 저하 | 라모트리진·발프로에이트 감량 |\n| 골다공증 | 효소 유도 ASM → 비타민 D 대사 방해 → 회피 |\n| 항응고제 사용 | 효소 유도 ASM → 와파린·DOAC 농도 변화 → 신약 선호 |\n| 치매 동반 | 신경정신 부작용 적은 라모트리진 선호 |\n| 뇌졸중 후 뇌전증 | 라모트리진·레베티라세탐 일반적 선택 |\n| 뇌종양 관련 | 비효소 유도 ASM 필수 (항암제 상호작용 차단) |",
+      content: "### 동반 상황별 고려\n| 동반 상황 | 선택 고려 |\n|---|---|\n| 신기능 저하 | 레베티라세탐 → eGFR에 따라 용량 조절 |\n| 간기능 저하 | 라모트리진·발프로에이트 감량 |\n| 골다공증 | 효소 유도 ASM → 비타민 D 대사 방해 → 회피 |\n| 항응고제 사용 | 효소 유도 ASM → 와파린·[[doac-elderly|DOAC]] 농도 변화 → 신약 선호 |\n| 치매 동반 | 신경정신 부작용 적은 라모트리진 선호 |\n| 뇌졸중 후 뇌전증 | 라모트리진·레베티라세탐 일반적 선택 |\n| 뇌종양 관련 | 비효소 유도 ASM 필수 (항암제 상호작용 차단) |",
       sources: []
     },
     exam: {
@@ -6882,3 +6883,184 @@ KNOWLEDGE_BUNDLE["노인뇌전증"] = _epilepsy_elderly_v2;
 KNOWLEDGE_BUNDLE["뇌전증노인"] = _epilepsy_elderly_v2;
 KNOWLEDGE_BUNDLE["ASM-elderly"] = _epilepsy_elderly_v2;
 KNOWLEDGE_BUNDLE["antiseizure-elderly"] = _epilepsy_elderly_v2;
+
+/* fall-prevention-awv — 낙상 예방 AWV 연계 QI (5/10 deep-extract 미ingest 보강). [CLINICAL] */
+var _fall_prevention_awv_v2 = {
+  kind: "disease",
+  keywords: ["fall-prevention-awv","낙상 예방","fall prevention","AWV","연간건강검진","STEADI","TUG","SmartSet","낙상 스크리닝","fall screening"],
+  parents: [],
+  primarySources: [
+    "Keller MS et al. Improving Follow-Up After Fall Risk Screening: A Quality Improvement Initiative in Primary Care After the Medicare Annual Wellness Visit. J Am Geriatr Soc 2026. PMID:42089560, DOI:10.1111/jgs.70504"
+  ],
+  sections: {
+    notes: {
+      content: "낙상은 노인 예방 가능한 손상·장애의 주요 원인. Medicare AWV에서 낙상 위험 스크리닝이 루틴이지만 **양성 스크리닝 후 후속 관리 단절** 문제 반복.\n\n### QI 개입 패키지 — 핵심 수치 [CLINICAL]\n> [출처: Keller MS et al. J Am Geriatr Soc 2026. PMID:42089560]\n> 후향적, AWV 완료 후 낙상 위험 양성(STEADI+TUG 비정상) 노인 335명. 개입: SmartSet 도입 + 노인의학 클리닉 선제 아웃리치(전화).\n\n| 지표 | 개입 전 | 개입 후 |\n|---|---|---|\n| **어떤 후속 관리든 받은 비율** | **53.8%** | **67.8%** |\n| **노인의학과 방문** | **7.5%** | **40.4%** |\n| 재활의학 의뢰 | (변화 없음) | (변화 없음) |\n| 사례관리 의뢰 | (변화 없음) | (변화 없음) |",
+      sources: []
+    },
+    protocol: {
+      content: "### 스크리닝 도구\n| 도구 | 내용 |\n|---|---|\n| **STEADI 3-item** | 지난 1년간 낙상 / 낙상 공포 / 보행 불안정 |\n| **TUG (Timed Up and Go)** | 비정상 시 낙상 위험 확정 |\n\n양성 기준: STEADI 양성 + 비정상 TUG (≥12초 고위험) [가이드라인 default 인용: STEADI ALGORITHM]\n\n### 개입 전략\n**1. SmartSet (EHR 구조화 도구)**\n- 양성 스크린 직후 임상의가 **다음 단계를 구조화 선택**\n- 선택지: 재활의학 의뢰 / 사례관리 / 노인의학 의뢰 / 노인의학 외래 방문\n\n**2. 선제적 아웃리치**\n- 노인의학 클리닉이 양성 환자에게 직접 전화 → 포괄 평가 예약 연결\n- 임상의 의뢰 없이도 클리닉 주도 접근\n\n### 외래 적용 포인트\n- AWV 낙상 스크리닝 후 후속 단절 → SmartSet + 아웃리치 조합 효과적\n- 노인의학 의뢰율 **5배 이상 향상** — 단순 권고만으로는 달성 불가\n- 한국 외래 적용: 검진 낙상 양성 → 노인의학·재활의학 의뢰 구조화 + 간호사 아웃리치 연계\n\n### 낙상 예방 근거 기반 개입 (STEADI 양성 후)\n- 물리치료 (균형·근력)\n- 노인의학 CGA ([[geriatric-assessment-4ms]])\n- 다약제 검토 (BZD·Z-drug·항무스카린제·혈압약 과잉; [[deprescribing]])\n- [[osteoporosis|골다공증]] 평가·치료\n- 시력 검사\n- 가정 위험 요인 평가",
+      sources: []
+    },
+    precaution: {
+      content: "- 단일 기관 후향적, 미국 Medicare 기준 — 한국 건강검진 구조 차이\n- 의뢰율 향상이 실제 낙상·골절 감소로 이어지는지 별도 추적 필요\n- [출처 미확인 — researcher 검증 권장]: 한국 낙상 예방 검진 급여·의뢰 연계 기준",
+      sources: []
+    },
+    referral: {
+      content: "- STEADI 양성 + TUG 비정상 → 노인의학·재활의학 의뢰\n- 다약제·인지 동반 → CGA\n- 관련: [[frailty]], [[deprescribing]], [[geriatric-assessment-4ms]], [[osteoporosis]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["fall-prevention-awv"] = _fall_prevention_awv_v2;
+KNOWLEDGE_BUNDLE["낙상예방"] = _fall_prevention_awv_v2;
+KNOWLEDGE_BUNDLE["낙상스크리닝"] = _fall_prevention_awv_v2;
+KNOWLEDGE_BUNDLE["STEADI"] = _fall_prevention_awv_v2;
+KNOWLEDGE_BUNDLE["TUG"] = _fall_prevention_awv_v2;
+
+/* bladder-pain-syndrome — 방광 통증 증후군/간질성 방광염 (5/10 deep-extract 미ingest 보강). [CLINICAL] */
+var _bladder_pain_syndrome_v2 = {
+  kind: "disease",
+  keywords: ["bladder-pain-syndrome","방광통증증후군","bladder pain syndrome","interstitial cystitis","BPS","IC","골반통","배뇨통","아미트립틸린","골반저물리치료","방광내주입"],
+  parents: [],
+  primarySources: [
+    "Roepcke F, Jones AE, Falk KN. Bladder Pain Syndrome: Rapid Evidence Review. Am Fam Physician 2026 Apr;113(4):360-368. PMID:42101600"
+  ],
+  sections: {
+    definition: {
+      content: "방광 통증 증후군(BPS)/간질성 방광염(IC)은 방광 통증 + 빈뇨·야간뇨 등 배뇨 증상 동반 만성 상태. 다른 원인 배제 후 진단하는 **배제 진단(diagnosis of exclusion)**.",
+      sources: []
+    },
+    differential: {
+      content: "### 초기 평가\n- 상세 병력 (증상 기간·패턴·유발/악화 인자)\n- 신체 진찰: 복부·골반저 근육 압통, 경질 진찰\n- **소변 검사 + 배양**: 반복 UTI 배제\n- 증상 일지: 진단 확인 + 유발인자(음식·스트레스·성관계) + 치료 반응 모니터링\n- **방광경(Cystoscopy)**: 1차 진단 아님 — 헌너 병변·감별 필요 시 추가\n\n### 배제 진단\n- 반복 UTI ([[recurrent-uti]]) / 성병 / 자궁내막증 / 난소 병변\n- 방광암 (혈뇨·연령 인자 동반 시; [[hematuria]] 참조)\n- 과활동성 방광 (OAB — 통증 없음이 특징)",
+      sources: []
+    },
+    protocol: {
+      content: "### 단계적 치료\n\n**1단계 — 행동 수정 + 골반저 물리치료 (1차)**\n- 유발 음식 회피: 커피·알코올·산성 음식·매운 음식·탄산음료\n- 방광 훈련: 배뇨 일지 + 배뇨 간격 연장\n- **골반저 물리치료(PFPT)**: 골반저 근육 긴장·경련 → 전문 PT 의뢰 (**강력 권고**)\n- 스트레스 관리, 수면 개선\n\n**2단계 — 경구 약물**\n| 약물 | 근거 |\n|---|---|\n| **아미트립틸린** (저용량) | 통증·빈뇨 개선 — 수면 장애 동반 시 유리 |\n| **가바펜티노이드** (gabapentin/pregabalin) | 만성 골반 통증 적응 |\n| **항히스타민제** (hydroxyzine) | 알레르기·과민 기전 기여 시 |\n| 펜토산 폴리황산나트륨(PPS) | FDA 승인; 장기 황반증 위험 주의 |\n\n**3단계 — 방광 내 주입**: DMSO·리도카인·헤파린 혼합제 (비뇨기과·요부인과 의뢰)\n\n**4단계 — 신경조절**: 천골신경조절술(SNM) / 경피적 경골신경 자극(PTNS) — 전문과\n\n### 원칙\n- **다학제·개별화**: 복합 접근이 효과적\n- 모든 단계에서 통증 기저 평가 + 추적\n- 반응 없으면 비뇨기과 또는 요부인과 의뢰",
+      sources: []
+    },
+    referral: {
+      content: "- 1~2단계 6~8주 반응 없음 → 비뇨기과/요부인과\n- 혈뇨 동반 → 방광암 배제 위한 방광경 우선\n- 자궁내막증 동반 가능 → 산부인과 병행\n- 관련: [[recurrent-uti]], [[chronic-pain-integrative]], [[hematuria]]",
+      sources: []
+    },
+    precaution: {
+      content: "- 병태생리 완전 미규명 — 여러 기전 혼재 (신경병증·자가면역·상피 결함·골반저 근긴장)\n- 장기 PPS 사용 → 황반 색소상피 이상(pigmentary maculopathy) 보고 — 안과 정기 검진\n- 치료 반응 개인차 큼·완치 어려움 → 증상 관리·기능 유지 목표\n- [출처 미확인 — researcher 검증 권장]: 한국 BPS/IC 보험 급여·골반저 물리치료 접근성\n\n### 환자 교육\n> \"이 상태는 방광이 만성적으로 예민해진 것으로, 세균 감염이 아니라 항생제가 듣지 않습니다. 유발 음식을 줄이고 골반 근육 물리치료를 먼저 받아 보시면서 증상 일지를 써 오시면 맞는 치료를 찾는 데 도움이 됩니다.\"",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["bladder-pain-syndrome"] = _bladder_pain_syndrome_v2;
+KNOWLEDGE_BUNDLE["방광통증증후군"] = _bladder_pain_syndrome_v2;
+KNOWLEDGE_BUNDLE["interstitial-cystitis"] = _bladder_pain_syndrome_v2;
+KNOWLEDGE_BUNDLE["간질성방광염"] = _bladder_pain_syndrome_v2;
+KNOWLEDGE_BUNDLE["BPS"] = _bladder_pain_syndrome_v2;
+KNOWLEDGE_BUNDLE["IC"] = _bladder_pain_syndrome_v2;
+
+/* palliative-depression-ketamine — 완화의료 우울증 케타민 (5/10 deep-extract 미ingest 보강). [CLINICAL] */
+var _palliative_depression_ketamine_v2 = {
+  kind: "disease",
+  keywords: ["palliative-depression-ketamine","케타민","ketamine","esketamine","에스케타민","완화의료 우울","palliative depression","치료저항성 우울","TRD","중증질환 우울","암 우울"],
+  parents: [],
+  primarySources: [
+    "Noufi P et al. Ketamine for Depression in Serious Illness: Evidence, Safety, and Practical Approaches. J Pain Symptom Manage 2026 Apr 15. PMID:41997505, DOI:10.1016/j.jpainsymman.2026.04.604"
+  ],
+  sections: {
+    notes: {
+      content: "### 핵심 수치 [CLINICAL]\n> [출처: Noufi P et al. J Pain Symptom Manage 2026. PMID:41997505]\n\n| 지표 | 결과 |\n|---|---|\n| **IV 케타민 반응 시간** | **1~24시간 이내** (전통 항우울제: 수 주) |\n| **효과 지속** | 1~2주 |\n| **NNT (첫 1주)** | **3** |\n| **효과 크기** | 중등도~대 |\n| **에스케타민(Spravato) FDA 승인** | TRD + 자살 관념 동반 주요우울증 |\n| 주요 이상반응 | 일과성 해리·고혈압·졸림 (대부분 일시) |\n| 중증 이상반응 | 드묾 |",
+      sources: []
+    },
+    indication: {
+      content: "완화의료 케타민 우선 고려 대상:\n1. 기존 항우울제 반응 없는 **치료저항성 우울 (TRD)**\n2. **기대 여명 짧은 환자** — 전통 항우울제 2~4주 발현 시간 기다릴 여유 없음\n3. 암·말기 심부전·ESRD 등 **중증 신체 질환 동반 우울**\n4. **자살 관념 긴급 조절** (에스케타민 FDA 승인 적응증)",
+      sources: []
+    },
+    protocol: {
+      content: "### 케타민 (IV)\n- 용량: **0.5 mg/kg IV, 40분 주입** (정신과 표준; 완화 세팅 적용 시 조정)\n- 효과 발현: 주입 후 1~24시간\n- 효과 유지: 1~2주 → 반복 주입 또는 유지 요법 필요\n- 시행 환경: IV 접근 + 모니터링 → 완화의료 입원/클리닉\n- [가이드라인 default 인용: 정신과 RCT 기반; 완화 세팅 별도 용량 최적화 데이터 제한적]\n\n### 에스케타민 (Spravato, 비강 스프레이)\n- FDA 승인: TRD, 자살 관념 동반 주요우울증\n- 투여: 비강 내 — IV보다 접근 편이\n- REMS 프로그램: 미국 인증 의료기관 필요\n- [출처 미확인 — researcher 검증 권장]: 한국 에스케타민 허가·급여 상태",
+      sources: []
+    },
+    monitoring: {
+      content: "| 이상반응 | 모니터링 |\n|---|---|\n| 해리 증상 | 주입 중·직후 관찰 (일과성, 수 시간 내 회복) |\n| 고혈압 | 주입 중 활력징후 모니터링 |\n| 졸림·진정 | 투여 후 이동·낙상 주의 |\n| 약물 남용 가능성 | 완화 맥락에서 위험 낮음; 반복 사용 계획 시 평가 |",
+      sources: []
+    },
+    precaution: {
+      content: "- 완화의료 대상 rigorous RCT 부족 — 수술기 암 환자 소규모 + 개방 라벨 중심\n- 장기 유지 요법·용량 프로토콜 미확립\n- 기대 여명에 따른 유지 전략 개별화 필요\n- 정신과 협진 또는 완화의료팀 내 전문 역량 필요\n- [출처 미확인 — researcher 검증 권장]: 한국 케타민 완화의료 우울 적용 가이드라인·급여\n- 관련: [[palliative-pain]], [[anxiety-depression-cbt]], [[afp-eol-symptom-management]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["palliative-depression-ketamine"] = _palliative_depression_ketamine_v2;
+KNOWLEDGE_BUNDLE["완화우울케타민"] = _palliative_depression_ketamine_v2;
+KNOWLEDGE_BUNDLE["케타민우울"] = _palliative_depression_ketamine_v2;
+KNOWLEDGE_BUNDLE["ketamine-depression"] = _palliative_depression_ketamine_v2;
+KNOWLEDGE_BUNDLE["esketamine"] = _palliative_depression_ketamine_v2;
+
+/* uterine-fibroids — 자궁근종 (5/10 deep-extract 미ingest 보강). [CLINICAL] */
+var _uterine_fibroids_v2 = {
+  kind: "disease",
+  keywords: ["uterine-fibroids","자궁근종","uterine fibroids","leiomyoma","월경과다","골반통","자궁근종절제술","UAE","GnRH","LNG-IUD","POCUS"],
+  parents: [],
+  primarySources: [
+    "Keating MK, Jones KB, Hansell MW. Uterine Fibroids: Rapid Evidence Review. Am Fam Physician 2025 Oct;112(4):393-400. PMID:41118184"
+  ],
+  sections: {
+    definition: {
+      content: "자궁근종은 여성에서 가장 흔한 양성 종양. 대부분 **무증상**, 증상이 있는 경우:\n- 복부 팽만·빈뇨·변비 (자궁 크기 증가에 의한 압박)\n- **월경과다 (AUB)**\n- 골반통·성교통\n- 불임",
+      sources: []
+    },
+    differential: {
+      content: "### 초기 평가\n- 전체 부인과 병력 + 복부·경질·경관 이중수지 진찰\n- **1차 영상: 경질초음파(TVUS) + 경복초음파(TAUS) 조합** → 위치·크기·개수\n- **MRI(조영제 포함)**: TVUS 불충분 또는 수술 계획 전 정밀 평가\n\n### 감별\n- 자궁내막용종 / 자궁선근증 / 자궁내막암 — AUB 호소 시 반드시 고려\n- 난소 종양 (골반통 동반 시)",
+      sources: []
+    },
+    protocol: {
+      content: "### 치료 결정 인자\n| 인자 | 영향 |\n|---|---|\n| 근종 위치·크기 | 치료 방법 선택 |\n| 임신 계획 | 보존 수술(근종절제술) vs 자궁절제술 |\n| 폐경 근접 여부 | 약물·경과 관찰 우선 가능 |\n| 증상 정도 | 월경과다→약물 1차 / 압박 증상→시술·수술 |\n\n### 약물치료 (AUB 조절)\n| 약물 | 기전·적응 |\n|---|---|\n| **복합 경구피임약(COC)** | AUB 조절 1차 — 근종 크기 감소 없음 |\n| **프로게스틴 단독 경구** | AUB 조절 |\n| **LNG-IUD (52mg)** | AUB 조절 효과적 — 자궁강 변형 없을 때 |\n| **NSAIDs** | 월경통 + AUB 보조 감소 |\n| **Tranexamic acid** | AUB 출혈량 감소 (수술 대기 중) |\n| **GnRH antagonist** (레루골릭스 등) | 수술 전 근종 축소 + AUB 조절; 골밀도 저하 주의 |\n| **GnRH agonist** (류프롤라이드 등) | 수술 전 단기; 골밀도 저하·갱년기 부작용 |\n\n**비타민 D 결핍**: 보충이 근종 크기 감소·진행 억제에 도움될 수 있음 (초기 근거)\n\n### 수술·시술\n| 시술 | 적응 | 비고 |\n|---|---|---|\n| **자궁절제술(Hysterectomy)** | 임신 불원 + 증상 중증 | 완치적 |\n| **자궁근종절제술(Myomectomy)** | 임신 보존 희망 | 재발 가능 |\n| **자궁동맥색전술(UAE)** | 임신 불원, 수술 고위험 | 자궁 보존; 방사선 |\n| **고주파 절제술(RFA)** | 특정 위치·크기 | 최소침습 |\n| **고강도 집속 초음파(HIFU)** | 실험적·제한적 | MRI 유도 |",
+      sources: []
+    },
+    referral: {
+      content: "**산부인과 의뢰**:\n- 약물 실패 또는 수술 계획\n- 자궁강 변형 → LNG-IUD 삽입 전\n- 임신 불임 의심\n- 악성 감별 필요 (급성 성장·폐경 후 근종)\n\n**1차의료 관리 가능**:\n- 무증상 근종 경과 관찰\n- TVUS 추적 (증상 변화)\n- 초기 약물 (COC·LNG-IUD·tranexamic acid)",
+      sources: []
+    },
+    precaution: {
+      content: "- 근종 위치(점막하·근층내·장막하)에 따라 치료 접근 상이 — TVUS로 위치 확인 필수\n- GnRH 계열 장기 사용 → 골밀도 저하, add-back 요법 고려\n- UAE 후 임신 성공률 저하 가능 — 임신 계획 환자 비권고\n- [출처 미확인 — researcher 검증 권장]: 한국 자궁근종 급여 기준 (시술별 보험 적용)\n\n### 환자 교육\n> \"자궁근종은 대부분 악성이 아니고 무증상이면 그냥 두어도 됩니다. 월경 양이 많거나 통증이 있으면 먼저 약물로 조절해 보고, 임신 계획이 없으시다면 자궁에 삽입하는 호르몬 기구(IUD)도 효과적입니다. 약물로 안 되거나 크기가 계속 커지면 수술 여부를 전문과와 함께 결정하게 됩니다.\"\n\n관련: [[menopause]], [[hematuria]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["uterine-fibroids"] = _uterine_fibroids_v2;
+KNOWLEDGE_BUNDLE["자궁근종"] = _uterine_fibroids_v2;
+KNOWLEDGE_BUNDLE["leiomyoma"] = _uterine_fibroids_v2;
+KNOWLEDGE_BUNDLE["근종"] = _uterine_fibroids_v2;
+
+/* dash-diet-cvd — DASH 식이 CV 예방 (5/10 deep-extract 미ingest 보강, guidelines/ 출처). [CLINICAL] */
+var _dash_diet_cvd_v2 = {
+  kind: "topic",
+  keywords: ["dash-diet-cvd","DASH","DASH diet","식이","고혈압 식이","cardiovascular prevention","심혈관 예방","저염식","과일채소","지중해식이"],
+  parents: [],
+  primarySources: [
+    "Clebak KT et al. DASH Diet for the Primary and Secondary Prevention of Cardiovascular Diseases. Am Fam Physician 2026 Feb;113(2):127-128. PMID:41839101 [초록 기반 — AFP POEM 요약]"
+  ],
+  sections: {
+    definition: {
+      content: "**DASH (Dietary Approaches to Stop Hypertension) 식이**: 채소·과일·저지방 유제품·통곡물·견과류·콩류 풍부 + 포화지방·소금·당·붉은 고기 제한. 원래 고혈압 조절 목적 개발 → 심혈관 1·2차 예방 모두에 근거.",
+      sources: []
+    },
+    notes: {
+      content: "### 핵심 수치 [CLINICAL]\n> [출처: Clebak KT et al. Am Fam Physician 2026 Feb;113(2):127-128. PMID:41839101] [초록 기반 — 전문 미확인]\n\n- **1차 예방**: DASH 식이 준수 시 심혈관 질환 발생 위험 유의하게 감소\n- **2차 예방**: 심혈관 기왕력 환자에서도 추가 사건 감소에 유의한 효과\n- AFP 2026 근거 정리 — 기존 증거 기반의 강력 권고",
+      sources: []
+    },
+    protocol: {
+      content: "### DASH 식이 외래 처방 원칙\n| 구분 | 권장 | 제한 |\n|---|---|---|\n| 채소·과일 | 하루 8~10회분 | - |\n| 저지방 유제품 | 하루 2~3회분 | 전지방 유제품 제한 |\n| 통곡물 | 하루 6~8회분 | 정제 곡물 |\n| 견과류·콩류 | 주 4~5회분 | - |\n| 소금 | 1일 1,500~2,300 mg | 가공식품·외식 |\n| 포화지방 | - | 붉은 고기·가공육·튀김 |\n| 당 | - | 가당 음료·단 음식 |\n\n### 외래 상담 전환 포인트\n- \"싱겁게 드세요\" 대신 → **구체적 식이 패턴** 안내 가능\n- [[hypertension|고혈압]]·[[dyslipidemia|고지혈증]]·심혈관 기왕력 환자: DASH 처방전 발행 근거\n- **지중해 식이와 병행 권고 가능** — 두 패턴 모두 CV 예방 근거\n\n### 환자 교육\n> \"채소·과일·통곡물 중심으로 드시고, 소금과 가공식품·기름진 고기를 줄이시면 혈압과 혈관 건강에 직접 도움이 됩니다. 이 식이 방식이 심장 질환 예방에 가장 근거가 좋습니다.\"",
+      sources: []
+    },
+    precaution: {
+      content: "- AFP 2026 POEM 형식 — 기존 문헌 요약. 개별 연구 상세 수치는 원문 메타분석 확인 필요.\n- 한국 식이 환경: DASH 패턴과 한식 원칙(국·찌개 염분, 젓갈류) 간 갈등 존재 — 실천 장벽 상담 필요\n- [출처 미확인 — researcher 검증 권장]: 한국형 DASH 식이 적용 지침·실천 도구",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["dash-diet-cvd"] = _dash_diet_cvd_v2;
+KNOWLEDGE_BUNDLE["DASH"] = _dash_diet_cvd_v2;
+KNOWLEDGE_BUNDLE["DASH-diet"] = _dash_diet_cvd_v2;
+KNOWLEDGE_BUNDLE["DASH식이"] = _dash_diet_cvd_v2;

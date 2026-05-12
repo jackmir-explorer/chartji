@@ -67,14 +67,14 @@ relations: []
 ## SDM 블렌디드 훈련 — GP 환자 중심 의사소통 기술 단기 2배 향상 (notes) [INSIGHTS]
 
 > [출처: Jaeken J et al. From knowledge to action: a blended training to enhance shared decision making skills in primary care physicians - a pilot study. BMC Prim Care. 2026. PMID:42104282, DOI:10.1186/s12875-026-03351-0]
-> 전후 비교 파일랿, n=10 GP, 벨기에, e-learning + 시뮬레이션 환자 면대면 세션. 관찰자·환자·의사 3관점 평가.
+> 전후 비교 파일럿, n=10 GP, 벨기에, e-learning + 시뮬레이션 환자 면대면 세션. 관찰자·환자·의사 3관점 평가.
 
 **주요 결과:**
 
-| 철도 | 훈련 전 | 훈련 후 | p값 | Cohen's d |
+| 척도 | 훈련 전 | 훈련 후 | p값 | Cohen's d |
 |---|---|---|---|---|
 | OPTION12 (관찰자 SDM) | 19.4 | 37.7 | 0.001 | — |
-| 4SDM 철도 | 9.2 | 17.0 | 0.0001 | **2.39** |
+| 4SDM 척도 | 9.2 | 17.0 | 0.0001 | **2.39** |
 
 - SDM 지식·기술·의도 모두 유의하게 향상
 - 효과 크기(Cohen's d 2.39): **대형 효과** — "연습하면 는다"는 강력한 실증
@@ -86,7 +86,7 @@ relations: []
 **임상 의의:**
 - ICE(Ideas·Concerns·Expectations)·SDM은 타고나는 기술이 아닌 **훈련으로 획득 가능**
 - 가정의학과 레지던트 교육, 지속 의학교육(CME) 커리큐럼에 SDM 블렌디드 훈련 도입 근거
-- 소규모 파일랿(n=10, 벨기엔 단일 기관) — 확증 연구 필요
+- 소규모 파일럿(n=10, 벨기에 단일 기관) — 확증 연구 필요
 
 **한국 적용:**
 - e-learning 플랫폼 가용성 있음; 시뮬레이션 환자 프로그램은 일부 의대·가정의학과 전공의 수련에서 운용 [출처 미확인 — researcher 검증 권장]

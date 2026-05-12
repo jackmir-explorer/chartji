@@ -17,7 +17,7 @@ relations: [[[pocus-lung]], [[pocus-primary-care-efsumb]], [[pocus-abdominal]]]
 
 ## 핵심 수치 (notes)
 
-> [출캘: Fisher L et al. Mayo Clin Proc Digit Health 2026;4(2):100355. PMID:42094314]
+> [출처: Fisher L et al. Mayo Clin Proc Digit Health 2026;4(2):100355. PMID:42094314]
 > 전향적 단일군 연구, 660명 성인 (응급실·내과 병동), 2022-07~2023-12
 
 | 지표 | 결과 |
@@ -26,7 +26,7 @@ relations: [[[pocus-lung]], [[pocus-primary-care-efsumb]], [[pocus-abdominal]]]
 | 새 소견으로 치료 수정 | **7% (49/660)** |
 | 중재적 시술 필요 | 1.4% (9/660) |
 | LV 기능 저하 및 판막 질환 | 고감도로 탐지 |
-| 우심계 이상 | **감도 낙음** |
+| 우심계 이상 | **감도 낮음** |
 
 ---
 
@@ -55,7 +55,7 @@ relations: [[[pocus-lung]], [[pocus-primary-care-efsumb]], [[pocus-abdominal]]]
 
 ## 주의사항 (precaution)
 
-- **우심계 이상 (우심실 기능·삼첨판막 질환)**: 감도 낙음 — FoCUS 음성이어도 임상 의심 지속 시 공식 심초음파 의뢰
+- **우심계 이상 (우심실 기능·삼첨판막 질환)**: 감도 낮음 — FoCUS 음성이어도 임상 의심 지속 시 공식 심초음파 의뢰
 - 비심장전문의 시행 시 집중 훈련 필수 (5시간 미만 훈련으로 시작 가능, 지속 교육 필요)
 - 이 연구는 응급·병동 세팅 — 외래 일차의료 직접 외삽 주의 [초록 기반 — 전문 미확인]
 
@@ -84,7 +84,7 @@ relations: [[[pocus-lung]], [[pocus-primary-care-efsumb]], [[pocus-abdominal]]]
 
 ## GP POCUS — 호흡곤란 심부전 감별 (일차의료 훈련 연구) [CLINICAL]
 
-> [출캘: Kiss-Kovács R et al. Point-of-care ultrasound improves the diagnosis of heart failure in patients with dyspnea in primary care. Front Med (Lausanne). 2026 Feb 13;13:1721066. PMID:41767524, DOI:10.3389/fmed.2026.1721066]
+> [출처: Kiss-Kovács R et al. Point-of-care ultrasound improves the diagnosis of heart failure in patients with dyspnea in primary care. Front Med (Lausanne). 2026 Feb 13;13:1721066. PMID:41767524, DOI:10.3389/fmed.2026.1721066]
 > 전향적 타당성 연구, 4개 일차의료 기관, 신규 숨참 환자 102명, GP 핸드헬드 POCUS 시행
 
 ### 핵심 수치
@@ -109,12 +109,12 @@ relations: [[[pocus-lung]], [[pocus-primary-care-efsumb]], [[pocus-abdominal]]]
 ### 외래 적용 포인트
 - 신규 숨참 환자 → 임상 판단만으로는 특이도 38% (심부전 아닌데 의심) → POCUS 추가 시 88%로 향상
 - 폐 B-line 3개 이상 + LVEF 시각 저하 → 심부전 가능성 높음 → 즉각 치료·의뢰
-- 폐 B-line 없음 + 정상 LVEF → 심부전 낙음 → 타 원인 감별 우선
+- 폐 B-line 없음 + 정상 LVEF → 심부전 낮음 → 타 원인 감별 우선
 - 훈련된 GP도 일차의료 세팅에서 즉시 적용 가능
 
 ---
 
-## 출캘 학습 노트
+## 출처 학습 노트
 
 - study-note: [[2026-05-08-ai-focus-cardiac-pocus]]
 - study-note: [[2026-05-10-pocus-hf-primary-care-gp]]
