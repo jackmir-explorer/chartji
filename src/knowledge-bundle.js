@@ -4972,7 +4972,8 @@ var _anemia_v2 = {
     "AAFP 2021 IDA (AGA Guidelines)",
     "AAFP 2013 IDA Evaluation",
     "AAFP 2017 Vitamin B12 Deficiency",
-    "KDIGO 2026 Anemia in CKD"
+    "KDIGO 2026 Anemia in CKD",
+    "Martens KL, DeLoughery TG. Iron Deficiency Anemia. Ann Intern Med 2026 Jan 13;179(1):ITC1-ITC16. PMID:41525691, DOI:10.7326/ANNALS-25-04416 [초록 기반 — Annals In the Clinic 종합 리뷰]"
   ],
   sections: {
     exam: {
@@ -4992,7 +4993,11 @@ var _anemia_v2 = {
       sources: []
     },
     referral: {
-      content: "- 골수 부전 의심 (pancytopenia·blast) → 혈액내과\n- 용혈성 원인 감별 → 혈액내과\n- 만성 GI 출혈 의심 (>50 IDA) → 내시경/소화기\n- 신성 빈혈 → [[CKD]]\n- 관련: [[CKD]], [[diabetes]], [[multiple-myeloma]]",
+      content: "- 골수 부전 의심 (pancytopenia·blast) → 혈액내과\n- 용혈성 원인 감별 → 혈액내과\n- 만성 GI 출혈 의심 (>50 IDA) → 내시경/소화기\n- 신성 빈혈 → [[CKD]]\n- IDA 확인 즉시 양방향 내시경·H. pylori·celiac 항-tTG IgA 동시 진행 — 지연 금지\n- 관련: [[CKD]], [[diabetes]], [[multiple-myeloma]]",
+      sources: []
+    },
+    notes: {
+      content: "### Annals ITC 2026 — IDA 업데이트 [CLINICAL]\n> [출처: Martens KL, DeLoughery TG. Ann Intern Med 2026 Jan 13;179(1):ITC1-ITC16. PMID:41525691] [초록 기반 — Annals In the Clinic 종합 리뷰]\n\n**Ferritin 진단 기준 업데이트**\n| 상황 | Ferritin cutoff |\n|---|---|\n| **염증 없음** | **<45 ng/mL** |\n| **염증 있음** (CRP/ESR 상승, 만성질환) | **<100 ng/mL** |\n\n- 기존 <15 기준 → 민감도 낮아 잠재 결핍 놓침. <45(또는 <100) 적용 시 IDA 더 많이 발견.\n- 기존 classification 표의 `<45 권고 cutoff`와 일치; 염증 동반 시 <100 추가.\n\n**경구 철분 최적 복용법 — 격일 투여**\n- **격일(alternate-day) 투여**가 매일 투여보다 흡수 높음\n- 매일 복용 시 헵시딘 상승 → 장내 철 흡수 억제 → 격일 복용으로 헵시딘 낮을 때 흡수 극대화\n- 기존 \"식사 직후·격일 시도\" 권고 → **격일 투여로 명확히 권고 전환**\n\n**정맥 철분 (IV iron) 적응증 확장**\n| 적응증 | 근거 |\n|---|---|\n| **심부전 동반** IDA | IV 철분 → 기능 호전·증상 개선 (경구보다 우선) |\n| **흡수 불량** (IBD·위절제·celiac) | 경구 흡수 불충분 → IV 우선 |\n| 경구 불내성 | 위장 부작용 지속 시 |\n| 빠른 교정 필요 | 심혈관 상태·수술 전 |\n\n**IDA 확인 시 원인 검색 체계화**\n- **양방향 내시경**: IDA 확인 즉시 GI 출혈 원인 검색\n- **H. pylori 검사·치료**: 제균 시 철 흡수 개선\n- **Celiac disease**: 항-tTG IgA 또는 IgA 수준\n- 빈혈 확인 직후 시작, 지연 금지",
       sources: []
     }
   },
@@ -6361,7 +6366,8 @@ var _pocus_focus_cardiac_v2 = {
   keywords: ["pocus-focus-cardiac","FoCUS","집중심장초음파","cardiac POCUS","AI 초음파","핸드헬드 초음파","handheld ultrasound","LV 기능","판막질환","심낭삼출"],
   parents: [],
   primarySources: [
-    "Fisher L et al. Artificial Intelligence-Enhanced Cardiac Point-of-Care Ultrasound: A Prospective Single-Arm Study. Mayo Clin Proc Digit Health 2026 Mar;4(2):100355. PMID:42094314, DOI:10.1016/j.mcpdig.2026.100355"
+    "Fisher L et al. Artificial Intelligence-Enhanced Cardiac Point-of-Care Ultrasound: A Prospective Single-Arm Study. Mayo Clin Proc Digit Health 2026 Mar;4(2):100355. PMID:42094314, DOI:10.1016/j.mcpdig.2026.100355",
+    "Kiss-Kovács R et al. Point-of-care ultrasound improves the diagnosis of heart failure in patients with dyspnea in primary care. Front Med (Lausanne) 2026 Feb 13;13:1721066. PMID:41767524, DOI:10.3389/fmed.2026.1721066"
   ],
   sections: {
     notes: {
@@ -6381,7 +6387,7 @@ var _pocus_focus_cardiac_v2 = {
       sources: []
     },
     comparison: {
-      content: "| 항목 | AI 보조 FoCUS | 표준 심초음파 |\n|---|---|---|\n| 시행자 | 비심장전문의 가능 | 초음파 전문사·심장전문의 |\n| 장점 | 즉시 가용, 치료 수정 가능 | 전체 심장 평가 표준 |\n| 한계 | 우심계·복잡 판막 평가 제한 | 예약 대기, 비용 |\n| 적합 | 선별·임상 결정 보조 | 확진·복잡 케이스 |\n\n관련: [[pocus-primary-care-efsumb|EFSUMB POCUS curriculum]], [[pocus-abdominal|복부 POCUS]]",
+      content: "| 항목 | AI 보조 FoCUS | 표준 심초음파 |\n|---|---|---|\n| 시행자 | 비심장전문의 가능 | 초음파 전문사·심장전문의 |\n| 장점 | 즉시 가용, 치료 수정 가능 | 전체 심장 평가 표준 |\n| 한계 | 우심계·복잡 판막 평가 제한 | 예약 대기, 비용 |\n| 적합 | 선별·임상 결정 보조 | 확진·복잡 케이스 |\n\n### GP POCUS 호흡곤란 심부전 감별 — 일차의료 훈련 연구 [CLINICAL]\n> [출처: Kiss-Kovács R et al. Front Med (Lausanne) 2026 Feb 13;13:1721066. PMID:41767524]\n> 전향적 타당성 연구, 4개 일차의료 기관, 신규 숨참 환자 102명, GP 핸드헬드 POCUS 시행.\n\n| 지표 | POCUS 전 (임상 판단) | POCUS 후 |\n|---|---|---|\n| **민감도** | 85.3% | **86.8%** |\n| **특이도** | 38.2% | **88.2%** |\n| PPV | 73.4% | **93.7%** |\n| NPV | 56.5% | **76.5%** |\n| **Cohen's κ** | 0.254 | **0.723** |\n\n- 특이도 38% → 88%: 불필요한 순환기 의뢰 감소 핵심 지표\n- GP B-lines·LVEF 판독이 심장초음파 전문의 결과와 강한 상관\n\n**GP POCUS 프로토콜 (이 연구):**\n- **폐 POCUS**: B-line 정량화 (≥3/zone 심부전 시사)\n- **FoCUS**: LVEF 시각 평가 (preserved vs reduced)\n- 사용 장비: 핸드헬드 초음파 (포켓형)\n- 훈련: **단기 집중 교육** 후 실전 적용 가능 (\"brief training\")\n\n**외래 적용 포인트:**\n- 신규 숨참 환자 → 임상 판단만으로 특이도 38% → POCUS 추가 시 88%로 향상\n- 폐 B-line 3개 이상 + LVEF 시각 저하 → 심부전 가능성 높음 → 즉각 치료·의뢰\n- 폐 B-line 없음 + 정상 LVEF → 심부전 낮음 → 타 원인 감별 우선\n- 훈련된 GP도 일차의료 세팅에서 즉시 적용 가능\n\n관련: [[pocus-primary-care-efsumb|EFSUMB POCUS curriculum]], [[pocus-abdominal|복부 POCUS]], [[pocus-lung|폐 POCUS]]",
       sources: []
     },
     referral: {
