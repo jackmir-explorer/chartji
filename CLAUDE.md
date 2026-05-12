@@ -16,6 +16,21 @@
 
 워크플로우 상세 → `rules/workflow.md`
 
+### "Liby ingest" 정의 (2026-05-12 명문화)
+
+"Liby ingest" 호출은 **네 가지 작업을 모두 포함**한다. 어느 하나도 빠뜨리지 말 것.
+
+1. **Raw 노트 → knowledge/*.md** (`skills/knowledge-ingest/SKILL.md`) — 미르가 던진 raw 텍스트·이미지·PDF를 knowledge 엔트리로 저장
+2. **inbox/ 파일 처리** (`agents/librarian.md` Inbox 트리거 §) — `.md`·이미지·PDF 자동 분류 + draft 제시
+3. **⚠ Deep Extract 산출물 → src/knowledge-bundle.js 컴파일** — `routines/deep-extract.md`가 매일 정오에 `knowledge/*.md`를 갱신하지만 bundle 반영은 자동화되지 않음. **Liby ingest 호출 시 반드시 backlog 점검**:
+   - `git log --oneline -- src/knowledge-bundle.js | head -1` → 최근 bundle 작업 commit
+   - `git log --oneline {bundle_commit}..HEAD -- knowledge/` → 미반영 deep-extract commit 리스트
+   - `knowledge/log.md` 항목과 bundle.js 내 키 비교
+   - 미반영 entry는 날짜별 batch로 컴파일 (한 번에 전체 처리 금지 — 2026-05-07 "20건 데이터 손실 사건" 재발 위험)
+4. **gaps.md 처리** (`skills/gaps-process/SKILL.md`) — 지식 격차 항목을 Researcher 위임으로 해소, Archive 이동
+
+> ⚠ **빠뜨리기 쉬운 지점**: 미르가 "liby ingest" 또는 "liby 돌려보자"라고 했을 때 (1)/(2)만 처리하고 (3) bundle 컴파일 backlog를 누락하는 패턴이 반복 관찰됨. 호출 시 반드시 4가지 모두 점검 + backlog 상태 보고.
+
 ---
 
 ## 세션 프로토콜
