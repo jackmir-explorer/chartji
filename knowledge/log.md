@@ -3,6 +3,16 @@
 새 내용이 추가될 때마다 Claude Code가 여기에 한 줄 기록한다.
 형식: YYYY-MM-DD | 파일명 | 내용 요약
 
+2026-05-12 | by-disease/chronic-pain-integrative.md | 추가 — 오피오이드 처방 갱신 = 환자 통증 검증 신호; 거절 = 불신; 감량 대화 전 validation 선행·ICE 접근 [INSIGHTS] PMID:41574586 (출처 05-11, 과거 누락 복구)
+2026-05-12 | by-disease/hematuria.md | 추가 — HCRS + Oncuria 조합 방광암 선별: HCRS 단독 민감도 90.9%·NPV 97.8%; 미세혈뇨 병용 NPV 98.7%; 초진 외래 시행 가능 [CLINICAL] PMID:40846188 (출처 05-11, 과거 누락 복구)
+2026-05-12 | by-disease/hypertension.md | 추가 — 고립성 이완기 고혈압(IDH): 강압제 MACE 감소 기타 고혈압과 동등; GIM/FP/GP 직접 적용 등급 [CLINICAL] PMID:41941743 (출처 05-12)
+2026-05-12 | guidelines/deprescribing.md | 추가 — 정신과 약물 감약 낙상 감소: 고충실도 지역사회 OR 0.61·입원 OR 0.43; 저충실도·요양시설·전환기 효과 없음 [CLINICAL] PMID:41791728 (출처 05-12)
+2026-05-12 | by-disease/continuity-of-care.md | 추가 — SDM 블렌디드 훈련(e-learning+SP): OPTION12 19.4→37.7, 4SDM 9.2→17.0 (Cohen's d=2.39); SDM 기술 훈련으로 단기 2배 향상 [INSIGHTS] PMID:42104282 (출처 05-12)
+2026-05-12 | by-disease/chronic-cough.md | 추가 — CHS 패러다임: 삼두마차 배제 후 만성기침 = 신경 감작; amitriptyline·gabapentin·speech therapy·gefapixant 치료 지평 [CLINICAL — 조건부] PMID:39839174 (출처 05-12)
+2026-05-12 | 마커만 업데이트 (이미 처리됨) — PMID:41533404 ankle-sprain (05-02), PMID:42103083 olanzapine-OINV (05-10), PMID:41544278 geriatric-4ms (05-06), PMID:42095703 lifestyle-aspree (05-10), PMID:41657870 delayed-diagnosis (05-06)
+
+---
+
 2026-05-11 | by-drug/glp1-selection-strategy.md | 추가 — GLP-1RA 36 RCT 메타분석: 체중감량 중 근육 손실 비율 중앙 34.9%, 68% 연구에서 25% 기준치 초과; 저항운동+단백질 섭취 교육 필수 [CLINICAL] PMID:41996180 (출처 05-10)
 2026-05-11 | by-disease/prescribing-cascade.md | 이미 처리됨 (2026-04-30 기록) — Scout 05-10 마커만 [✓] 업데이트 [CLINICAL] PMID:41949780
 2026-05-11 | guidelines/deprescribing.md | 추가 — 치매 요양원 ADRD 232,543명: 항우울제 51.6% 사용, PHQ-9≥10은 <5%; 다약제 강연관; deprescribing 적응증 점검 [CLINICAL] PMID:42089534 (출처 05-10)
