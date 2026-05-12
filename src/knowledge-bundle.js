@@ -6486,7 +6486,7 @@ KNOWLEDGE_BUNDLE["cardiac-pocus"] = _pocus_focus_cardiac_v2;
 
 /* hepatitis-ab-vaccine — A·B형간염 백신 통합 entry. [CLINICAL] */
 var _hep_ab_vacc_v2 = {
-  kind: "disease",
+  kind: "topic",
   keywords: ["hepatitis-ab-vaccine","A형간염","hepatitis A","B형간염","hepatitis B","Heplisav-B","Engerix-B","Recombivax HB"],
   parents: [],
   primarySources: [
@@ -6528,7 +6528,7 @@ KNOWLEDGE_BUNDLE["Heplisav-B"] = _hep_ab_vacc_v2;
 
 /* herpes-zoster-vaccine — 대상포진 백신 (RZV/ZVL). [CLINICAL] */
 var _hzv_v2 = {
-  kind: "disease",
+  kind: "topic",
   keywords: ["herpes-zoster-vaccine","대상포진","herpes zoster","shingrix","싱그릭스","조스타박스","ZVL","RZV","Zostavax"],
   parents: [],
   primarySources: [
@@ -6570,7 +6570,7 @@ KNOWLEDGE_BUNDLE["herpes-zoster"] = _hzv_v2;
 
 /* hpv-vaccine — HPV 백신. [CLINICAL] */
 var _hpv_v2 = {
-  kind: "disease",
+  kind: "topic",
   keywords: ["hpv-vaccine","HPV","자궁경부암","인유두종바이러스","가다실","가다실9","Gardasil"],
   parents: [],
   primarySources: [
@@ -6601,7 +6601,7 @@ KNOWLEDGE_BUNDLE["인유두종바이러스"] = _hpv_v2;
 
 /* japanese-encephalitis-vaccine — 일본뇌염 백신. [CLINICAL] */
 var _je_v2 = {
-  kind: "disease",
+  kind: "topic",
   keywords: ["japanese-encephalitis-vaccine","일본뇌염","Japanese encephalitis","IXIARO","Imojev"],
   parents: [],
   primarySources: [
@@ -6628,7 +6628,7 @@ KNOWLEDGE_BUNDLE["Imojev"] = _je_v2;
 
 /* pneumococcal-vaccine — 폐렴구균 백신 (PCV/PPSV). [CLINICAL] */
 var _pneumo_v2 = {
-  kind: "disease",
+  kind: "topic",
   keywords: ["pneumococcal-vaccine","폐렴구균","pneumococcal","폐렴백신","PCV13","PCV15","PCV20","PCV21","PPSV23"],
   parents: [],
   primarySources: [
@@ -6663,7 +6663,7 @@ KNOWLEDGE_BUNDLE["pneumococcal"] = _pneumo_v2;
 
 /* rabies-vaccine — 광견병 백신 (PrEP). [CLINICAL] */
 var _rabies_v2 = {
-  kind: "disease",
+  kind: "topic",
   keywords: ["rabies-vaccine","광견병","rabies","PrEP rabies"],
   parents: [],
   primarySources: [
@@ -6692,7 +6692,7 @@ KNOWLEDGE_BUNDLE["rabies"] = _rabies_v2;
 
 /* varicella-mmr-polio-vaccine — 수두·MMR·폴리오 백신 통합. [CLINICAL] */
 var _vmp_v2 = {
-  kind: "disease",
+  kind: "topic",
   keywords: ["varicella-mmr-polio-vaccine","수두","varicella","MMR","홍역","볼거리","풍진","폴리오","IPV","polio","measles","mumps","rubella"],
   parents: [],
   primarySources: [
