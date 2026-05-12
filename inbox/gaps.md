@@ -22,6 +22,11 @@
 - [Lab follow-up] 처방의가 결과 확인 책임 — critical value auto-alert 설정, 환자에 follow-up 방침 명시
 - [진단명 윤리] 청구용 진단명 갖다 붙이기 금지 — 의무기록 평생 남음, 보험·법적·동료 추론 오염 리스크
 - [진단추론] anchoring 검증 — "이 한 수치가 현재 가설로 설명되는가?" 자문 / 가설로 설명 안 되는 1개 데이터가 진짜 단서
+- [가래 색·acute bronchitis] 누런 가래 = 세균감염 myth — 호중구 MPO 산물, Cochrane RCT에서 ABx 효과 예측 인자 아님 / acute bronchitis 90%+ 바이러스성, 가래 색·인후통 단독 ABx trigger 금지
+- [호흡기 vital] 외래 호흡기 증상에 SpO2·호흡수·맥박수 필수 — cheap & quick, CRB-65 적용 위한 최소 데이터 / 고령 호흡기 증상에 SpO2 누락은 결정적 gap
+- [CKD ABx 용량] 신배설 ABx(amox-clav 등) — 처방 전 최근 eGFR 확인 / eGFR <30 감량, 30~60 부분 조정 / clavulanate 간독성 고령 증가
+- [고령 신약 추가] 기존 복약 + 약국 OTC(종합감기약 등) review 전제 — 중복·상호작용·polypharmacy 부담, 신약 추가 전 list-up 루틴화
+- [Safety-netting] watchful waiting·경험적 ABx 모두에 명시 재내원 trigger — 48~72시간 무호전·발열·호흡곤란·의식변화 / 경험적 ABx 선택 시 follow-up plan 동반 필수
 
 ---
 
