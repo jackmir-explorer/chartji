@@ -7,9 +7,9 @@
 - [고령 입원후] 의인성 원인 우선 배제 — DILI·C.difficile·항생제 후 부작용·ACEi 기침
 - [Red flag] 고령 + 한 달 지속 증상 + 입원력 → 자동 배제 리스트 (TB·악성·endocarditis·PE·약물 부작용)
 - [기침] subacute cough (3-8주) 알고리즘 — post-infectious cough 우선순위, 부비동염 직후 맥락
-- [기침] ACCP/CHEST cough guideline — UACS-Asthma-GERD triad + post-infectious + ACEi 5분 정리
+- [x] [기침] ACCP/CHEST cough guideline — UACS-Asthma-GERD triad + post-infectious + ACEi 5분 정리
 - [발한] diaphoresis 감별 — 야간발한 vs 일반, 결핵·림프종·갑상선·당뇨·심혈관·자율신경·약물·폐경·불안 분기
-- [환자 중심] ICE (Ideas·Concerns·Expectations) 가정의학과 진료 골격
+- [x] [환자 중심] ICE (Ideas·Concerns·Expectations) 가정의학과 진료 골격
 - [재발성 APN] recurrent APN 병력 + 비특이 prodrome → 의심도 한 단계 상향, baseline risk 가중 (U/A 저비용·저부담 → 문턱 낮추기)
 - [APN 진단] CVAT sensitivity 의외로 낮음 (50~60% 보고) — 고령·면역저하·초기 단계에서 음성 가능, CVAT 음성으로 APN 배제 금지
 - [APN 진단] 고령/면역저하 APN의 비전형 발현 — flank pain·fever 없이 권태감·식욕저하·섬망으로만 오는 spectrum 정리
