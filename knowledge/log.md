@@ -3,6 +3,8 @@
 새 내용이 추가될 때마다 Claude Code가 여기에 한 줄 기록한다.
 형식: YYYY-MM-DD | 파일명 | 내용 요약
 
+2026-05-12 | knowledge-bundle.js | Liby ingest 2026-05-09 batch step 1 — spine-related-arm-pain v2 신규 등록 (7 keys: spine-related-arm-pain·SAP·척추유발-상지통·cervical-radiculopathy·경추신경근병증·arm-pain·팔통증). 백로그 처리 1/4 day (05-09 신규 1건 완료, 업데이트 9건 다음 세션). 총 608 keys.
+
 2026-05-12 | by-disease/chronic-pain-integrative.md | 추가 — 오피오이드 처방 갱신 = 환자 통증 검증 신호; 거절 = 불신; 감량 대화 전 validation 선행·ICE 접근 [INSIGHTS] PMID:41574586 (출처 05-11, 과거 누락 복구)
 2026-05-12 | by-disease/hematuria.md | 추가 — HCRS + Oncuria 조합 방광암 선별: HCRS 단독 민감도 90.9%·NPV 97.8%; 미세혈뇨 병용 NPV 98.7%; 초진 외래 시행 가능 [CLINICAL] PMID:40846188 (출처 05-11, 과거 누락 복구)
 2026-05-12 | by-disease/hypertension.md | 추가 — 고립성 이완기 고혈압(IDH): 강압제 MACE 감소 기타 고혈압과 동등; GIM/FP/GP 직접 적용 등급 [CLINICAL] PMID:41941743 (출처 05-12)
