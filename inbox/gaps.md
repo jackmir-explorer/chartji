@@ -13,6 +13,15 @@
 - [재발성 APN] recurrent APN 병력 + 비특이 prodrome → 의심도 한 단계 상향, baseline risk 가중 (U/A 저비용·저부담 → 문턱 낮추기)
 - [APN 진단] CVAT sensitivity 의외로 낮음 (50~60% 보고) — 고령·면역저하·초기 단계에서 음성 가능, CVAT 음성으로 APN 배제 금지
 - [APN 진단] 고령/면역저하 APN의 비전형 발현 — flank pain·fever 없이 권태감·식욕저하·섬망으로만 오는 spectrum 정리
+- [두드러기 red flag] urticaria + (generalized/persistent LAP·B sx·HSM·항히스타민 무반응·6주 이상) → systemic workup, LDH·CBC 즉시
+- [LDH 해석] 단계별 — >2000 응급 감별(혈액암·HLH·TLS·massive necrosis), 1000~2000 림프종·용혈·광범위 조직손상 / 비특이 증상 + 다른 lab 이상 시 LDH 추가 문턱 낮추기
+- [LAP 평가] 양측성·cervical도 림프종 가능, supraclavicular는 크기 무관 악성 의심(Virchow) / 기록 필수 요소: 위치·크기·개수·압통·가동성·경도·기간
+- [신체검진 기록] "ns"·"non-specific" 금지 — positive·negative 모두 명시 (legal·임상적으로 안 한 것과 동일)
+- [두드러기 처방 금기] NSAID(COX-1→leukotriene shift, 20~30% 악화)·ACEi(angioedema)·opioid(mast cell degranulation) — 통증 없는 환자에 NSAID 처방 점검
+- [LAP+발열] 진단 전 steroid 금지 — 림프종 mask·자발성 TLS·감염 progression / 최소 CBC+diff·LDH·viral serology(EBV·CMV·HIV) 선행
+- [Lab follow-up] 처방의가 결과 확인 책임 — critical value auto-alert 설정, 환자에 follow-up 방침 명시
+- [진단명 윤리] 청구용 진단명 갖다 붙이기 금지 — 의무기록 평생 남음, 보험·법적·동료 추론 오염 리스크
+- [진단추론] anchoring 검증 — "이 한 수치가 현재 가설로 설명되는가?" 자문 / 가설로 설명 안 되는 1개 데이터가 진짜 단서
 
 ---
 
