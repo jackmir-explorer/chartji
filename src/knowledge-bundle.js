@@ -1697,12 +1697,17 @@ var KNOWLEDGE_BUNDLE = {
     "kind": "drug",
     "keywords": ["sglt2-inhibitors","SGLT2i","SGLT-2억제제","포시가","자디앙","다파글리플로진","엠파글리플로진","dapagliflozin","empagliflozin"],
     "primarySources": [
-      "Swanson J et al. Am Fam Physician 2026;113(3):281-282. PMID:41839088"
+      "Swanson J et al. Am Fam Physician 2026;113(3):281-282. PMID:41839088",
+      "Kristensen FPB et al. Effectiveness of SGLT-2 Inhibitors Versus GLP-1 Receptor Agonists on Diabetic Foot Disease. Ann Intern Med 2026 Jan 6;179(3):340-352. PMID:41490509, DOI:10.7326/ANNALS-25-01262"
     ],
     "sections": {
       "indication": {
         "content": "- 2형 당뇨병 혈당 조절\n- 심부전 (HFrEF·HFpEF) — 입원율·사망률 감소\n- 만성 콩팥병 진행 억제",
         "sources": ["[TIPS — 임시 (보강 대상)]"]
+      },
+      "comparison": {
+        "content": "### SGLT-2i vs GLP-1RA — 당뇨발 질환 비교 [CLINICAL]\n> [출처: Kristensen FPB et al. Ann Intern Med 2026;179(3):340-352. PMID:41490509]\n> 덴마크 국가 등록 코호트 — 53,769명 SGLT-2i / 30,380명 GLP-1RA, 최대 6년 추적.\n\n| 결과 지표 | SGLT-2i | GLP-1RA | RR (95% CI) | 해석 |\n|---|---|---|---|---|\n| 전체 당뇨발 질환 | 10.8% | 12.0% | **0.90 (0.84–0.97)** | SGLT-2i 10%↓ |\n| **말초 신경병증** | — | — | **0.78 (0.68–0.87)** | SGLT-2i 22%↓ ★ |\n| 말초동맥병증 | — | — | 차이 없음 | |\n| 발 궤양 | — | — | 차이 없음 | |\n| 하지 절단 | — | — | 차이 없음 | |\n\n- 차이는 **치료 3년 이후부터** 발생 (3년 미만에서 무차이)\n- 40% SGLT-2i / 32% GLP-1RA 사용자가 3년 내 초기 약제 중단\n\n**임상 적용:**\n- T2DM 약제 선택 시 신경병증 예방 측면 → SGLT-2i 우위 근거\n- GLP-1RA 사용 중 말초신경병증 발생 시 → SGLT-2i 추가·전환 고려\n- 공유의사결정에 직접 활용: \"어떤 약이 발 합병증 더 잘 막나\"\n- 말초동맥병증·궤양·절단은 두 계열 간 차이 없음 — 발 궤양 위험은 다른 인자가 결정\n\n> ⚠ 관찰 연구(에뮬레이티드 트라이얼) — 잔여 교란 가능; RCT 수준 인과성은 아님",
+        "sources": []
       },
       "notes": {
         "content": "### 비뇨생식기 감염 위험\nSGLT-2 억제제 처방 시 요로감염(UTI) 및 생식기 진균감염(여성: 질효모균증, 남성: 음경포피염) 위험 상승.\n\n**위험인자:**\n- 여성 (특히 반복성 UTI 기왕력)\n- 불량한 회음부 위생\n- 면역저하자\n\n**처방 전 반드시 교육:**\n- 충분한 수분 섭취 권고\n- 회음부 위생 교육 (소변 후 앞→뒤 닦기, 속옷 관리)\n- 증상 발생 시 즉시 내원 지시 (소변 시 통증·작열감, 분비물 변화)\n- 반복성 UTI 기왕력 환자: 위험-편익 재평가 후 처방 여부 결정",
@@ -4224,7 +4229,9 @@ var _goc_acp_v2 = {
   primarySources: [
     "Ma JE et al. J Pain Symptom Manage 2026;71(5):e579-e590. PMID:41548727, DOI:10.1016/j.jpainsymman.2026.01.006",
     "van der Steen JT et al. Optimizing Approaches in Advance Care Planning in Dementia as Perceived by General Practitioners. J Pain Symptom Manage. 2026 Apr 30. PMID:42069237, DOI:10.1016/j.jpainsymman.2026.04.618",
-    "Nakazawa Y et al. Quality of death among older adults with and without comorbid dementia: A nationwide mortality follow-back study. Arch Gerontol Geriatr. 2026 Mar;145:106218. PMID:41856050, DOI:10.1016/j.archger.2026.106218"
+    "Nakazawa Y et al. Quality of death among older adults with and without comorbid dementia: A nationwide mortality follow-back study. Arch Gerontol Geriatr. 2026 Mar;145:106218. PMID:41856050, DOI:10.1016/j.archger.2026.106218",
+    "Bergman TD et al. Four Groups of Advance Care Planning Engagement Among Older People: A Latent Class Analysis. J Pain Symptom Manage 2026 Feb 24;71(5):718-727.e3. PMID:41747784, DOI:10.1016/j.jpainsymman.2026.02.012",
+    "Zhang P et al. Involvement of Patients With Cognitive Impairment and Care Partners in Advance Care Planning Decision-Making: A Qualitative Study. J Am Geriatr Soc 2026 May 2. PMID:42068255, DOI:10.1111/jgs.70476"
   ],
   sections: {
     definition: {
@@ -4242,6 +4249,14 @@ var _goc_acp_v2 = {
     dementia_eol_quality: {
       content: "### 치매 동반 노인 임종 질 저하 — 전국 사망 추적 근거 [CLINICAL]\n> [출처: Nakazawa Y et al. Arch Gerontol Geriatr 2026 Mar;145:106218. PMID:41856050]\n> 전국 사망 추적 조사, n=45,509명 (≥65세), 일본. 유족 조사 기반.\n\n**핵심 수치 (암 + 치매 동반 vs 암 단독)**:\n| 임종 질 영역 | aOR (95% CI) | 의미 |\n|---|---|---|\n| 자신 상황 인지 (자율성) | **0.29** (0.27–0.32) | 71% 낮음 |\n| 가족과 소통 | **0.47** (0.44–0.50) | 53% 낮음 |\n| 삶의 의미감 | **0.55** (0.53–0.61) | 45% 낮음 |\n| 선호 돌봄 장소 실현 | **0.67** (0.63–0.72) | 33% 낮음 |\n| 신체적 고통 없음 (반대로) | **1.34** (1.26–1.43) | 신체 고통은 오히려 더 낮음 |\n\n심장병 + 치매에서도 유사 패턴 (자율성 aOR 0.31, 소통 aOR 0.44).\n\n**증상 패턴 (치매 동반)**:\n- 연하곤란(Dysphagia) 더 흔함\n- 통증·불면 더 드묾\n\n**임상 함의**:\n1. **치매 조기 진단 직후 ACP 시작** — '치매가 진행될수록 EOL 논의가 더 어려워진다'를 OR 수치로 설득 가능\n2. **경증 치매 = 자율적 ACP 가능한 마지막 창문** — 인지 저하 전 선호·가치 문서화 필수\n3. 치매 환자 돌봄 계획 조정 포인트:\n   - 연하 곤란 대비: 식이 조정·영양팀 의뢰 계획 사전 수립\n   - 통증·불면보다 **소통 단절·자율성 상실**이 더 큰 문제 — ACP 대화 내용 구체화\n4. 보호자 조기 ACP 파트너 참여 — 중증 전환 전",
       sources: ["Nakazawa Y et al. Arch Gerontol Geriatr 2026 Mar;145:106218. PMID:41856050"]
+    },
+    engagement_types: {
+      content: "### 노인 ACP 참여 4유형 — 비참여형 60% [CLINICAL — 조건부]\n> [출처: Bergman TD et al. J Pain Symptom Manage 2026 Feb 24;71(5):718-727.e3. PMID:41747784]\n> 네덜란드 노인 1242명(65세↑) 잠재 클래스 분석, 응답률 93.2%.\n\n| 유형 | 비율 | 특징 |\n|---|---|---|\n| **비참여형 (Inactive)** | **60%** | ACP 전반 저참여 |\n| **가족중심형 (Relatives-oriented)** | **28%** | 가족·친구와 논의 있지만 의료진·문서화 미흡 |\n| **문서중심형 (Documentation-oriented)** | **7%** | 문서화는 됐으나 가족·의료진과 대화 부족 |\n| **종합형 (Comprehensive)** | **5%** | 모든 ACP 행동 종합 참여 |\n\n**유형별 특성:**\n- 종합형 → (매우) 불량한 건강 상태, 고학력\n- 비참여형 → 종교적 신앙 강함, 학력 낮음\n\n**외래 맞춤 전략:**\n| 유형 | 접근법 |\n|---|---|\n| 비참여형 (60%) | ACP 인식 교육 먼저 — \"왜 중요한지\" 설명; 강요 금지 |\n| 가족중심형 (28%) | 보호자·가족과 함께 의료진 대화로 확장; 문서화 권유 |\n| 문서중심형 (7%) | 문서 이면의 가치·목표 대화 보완 |\n| 종합형 (5%) | 이미 준비된 환자 — 구체적 결정 지원 |\n\n> 종교심이 강한 환자·저학력층에서 비참여형 비율 높음 → 특별 문화적 접근 필요. 네덜란드 코호트 — 한국 외삽 시 주의.",
+      sources: []
+    },
+    dementia_severity_decision: {
+      content: "### 치매 중증도별 ACP 의사결정 참여 유형 [CLINICAL]\n> [출처: Zhang P et al. J Am Geriatr Soc 2026 May 2. PMID:42068255]\n> 경~중증 치매 노인 88명 ACP 대화 전사 분석.\n\n| 의사결정 유형 | 정의 | 경증 치매 | 중증 치매 |\n|---|---|---|---|\n| **자율적 결정** | 환자 단독 선호 표현 | **60%** | 드묾 |\n| **공동 결정** | 환자+보호자 협력 | 일부 | 일부 |\n| **위임형** | 환자가 보호자에게 결정 위임 | 드묾 (7%, 환자 선호) | 드묾 |\n| **대리 결정** | 보호자가 환자 알려진 선호 기반 결정 | — | **48%** |\n\n**임상 함의:**\n1. **경증 치매 진단 즉시 ACP 시작** — 60%가 선호를 직접 표현 가능한 창문\n2. **중증 진행 전 보호자 ACP 파트너로 조기 참여** — 중증 전환 시 대리결정 부담 완화\n3. **의사결정 위임 전환 시점 모니터링** — 중등도에서 지원 필요도 급증\n4. 보호자 역할: 경~중증 전반에 걸쳐 지원 제공, 중증도 증가할수록 지원 강도↑",
+      sources: []
     },
     referral: {
       content: "- 복잡한 GOC 결정 → 완화의료 팀 협진\n- 가족 갈등·의사결정 대리인 불명확 → 사회복지사·의료윤리팀\n- 호스피스 전환 상담 → 완화의학과",
@@ -4929,7 +4944,8 @@ var _osteoporosis_v2 = {
     "KSBMR 골다공증 진료지침 2024",
     "심평원 보험인정기준 (2024.5.1, 2024.12)",
     "ASBMR/AACE/Endocrine/ECTS/NOF Joint Guidance",
-    "ECTS 2020 Denosumab Discontinuation"
+    "ECTS 2020 Denosumab Discontinuation",
+    "Creech-Organ J, Organ B. Vertebral Compression Fractures. Am Fam Physician 2026 Jan;113(1):51-56. PMID:41544281 [초록 기반 — 전문 미확인]"
   ],
   sections: {
     classification: {
@@ -4949,7 +4965,11 @@ var _osteoporosis_v2 = {
       sources: []
     },
     referral: {
-      content: "- 비전형 대퇴골 골절·ONJ 의심 → 정형/구강악안면\n- 부갑상선기능항진증·악성 동반 → 내분비\n- 데노수맙 5년+ ONJ 위험요인 → 골다공증 전문\n- 관련: [[CKD]], [[home-based-hypertension]], [[frailty]]",
+      content: "- 비전형 대퇴골 골절·ONJ 의심 → 정형/구강악안면\n- 부갑상선기능항진증·악성 동반 → 내분비\n- 데노수맙 5년+ ONJ 위험요인 → 골다공증 전문\n- VCF 6주 보존치료 무효 → vertebroplasty/kyphoplasty 의뢰 (신경 결손 동반 시 즉시)\n- 관련: [[CKD]], [[home-based-hypertension]], [[frailty]]",
+      sources: []
+    },
+    complication: {
+      content: "### 척추압박골절 (Vertebral Compression Fracture, VCF) [CLINICAL]\n> [출처: Creech-Organ J, Organ B. Vertebral Compression Fractures. Am Fam Physician 2026 Jan;113(1):51-56. PMID:41544281] [초록 기반 — 전문 미확인]\n\n**발생 기전·트리거**\n- 골다공증의 흔한 합병증\n- **일상 동작으로도 발생**: 침대 뒤집기·기침·재채기 → 환자가 \"갑자기 허리가 아파요\" 호소 시 VCF 반드시 감별\n- 외상성·전이성 원인도 가능 (악성 종양 기왕력 시 주의)\n\n**증상**\n- 자세 변화·발살바 조작(기침·힘주기)으로 악화되는 요통\n- 많은 환자가 **무증상** (영상 우연 발견)\n- 장기적: 후만증(kyphosis)·키 감소·근위축·추가 골밀도 손실\n\n**진단 알고리즘**\n```\n요통 + 고령 + 골다공증 기왕력/위험인자\n         ↓\nAP + Lateral 척추 X-ray\n         ↓\n[음성 + 임상 의심 강함] → MRI 추가 (골수 부종 확인, 급성·만성 구별)\n[양성 VCF 확인] → 보존치료 시작 + 골다공증 약물\n```\n- 악성 전이 감별 필요 시 MRI 우선\n\n**치료**\n1. **보존치료 (1차)**: 물리재활 + NSAID·acetaminophen / **항골다공증 약물 처방이 통증 개선** — 골절 후 조기 시작 권고\n2. **보조기·신경차단**: bracing 단기 이익 근거 매우 제한적 / 신경근 차단 근거 매우 제한적\n3. **수술 (2차)**: Vertebroplasty 또는 Kyphoplasty — **6주 보존치료 무효 시** 고려 / 척수 압박·신경 결손 시 즉시\n\n**골다공증 약물과 VCF**\n- VCF 발생 시점 = **항골다공증 치료 시작 최적 타이밍**\n- Bisphosphonate·데노수맙: 추가 골절 예방 + 통증 개선\n- 골절 후 약물 시작을 늦추지 말 것 — 조기 시작이 원칙",
       sources: []
     }
   },
@@ -6147,7 +6167,8 @@ var _pocus_efsumb_v2 = {
   keywords: ["POCUS","일차의료","primary care","EFSUMB","curriculum","커리큘럼","competence level 1","훈련","ultrasound","초음파","Delphi"],
   parents: [],
   primarySources: [
-    "Andersen CA, Jenssen C, Poppleton A, et al. Point-of-care ultrasound in primary care — EFSUMB core curriculum and training recommendations. Ultraschall Med. 2026. PMID:41386291, DOI:10.1055/a-2771-2848"
+    "Andersen CA, Jenssen C, Poppleton A, et al. Point-of-care ultrasound in primary care — EFSUMB core curriculum and training recommendations. Ultraschall Med. 2026. PMID:41386291, DOI:10.1055/a-2771-2848",
+    "Hui W. An Academic Family Physician's Point-of-Care Ultrasound (POCUS) Experience. J Am Board Fam Med 2025;38(6):949-954. PMID:41593014, DOI:10.3122/jabfm.2024.240379R1"
   ],
   sections: {
     notes: {
@@ -6155,7 +6176,7 @@ var _pocus_efsumb_v2 = {
       sources: []
     },
     protocol: {
-      content: "### EFSUMB Level 1 — 일차의료 POCUS 4대 모듈 [초록 기반 — 전문 미확인]\n| 모듈 | 주요 적용 |\n|---|---|\n| **심장 (Cardiac)** | LV 기능 대략 평가, 심낭삼출 |\n| **폐 (Lung)** | B-lines (간질성 증후군), 기흉, 흉수 |\n| **복부 (Abdominal)** | 담석, 수신증, AAA, 복수 |\n| **근골격 (MSK)** | 관절삼출, 힘줄 손상, 유도 주사 |\n\n### 훈련 권고\n- 최소 훈련 시간 및 지도의(supervisor) 요건 제시\n- 각 국가별 임상 환경·환자군에 맞는 조정 허용\n- Delphi 프로세스: 국제 전문가 합의\n\n### 외래 POCUS 실용 적용 — 한국 가정의학과 연계\n| 영역 | 외래 즉시 활용 시나리오 |\n|---|---|\n| 심장 | 부종·호흡곤란 — LV 기능 대략 평가, 심낭삼출 배제 |\n| 폐 | 폐렴·폐부종 감별; B-lines ≥3 → 입원 고려 ([[pocus-lung|pocus-lung]] 참조) |\n| 복부 | 담낭 통증 — 담석 확인; 요통 — 수신증 배제; 복부 대동맥 ([[pocus-abdominal|pocus-abdominal]] 참조) |\n| MSK | 관절삼출 확인, 코르티코스테로이드 유도 주사 정확도↑ |",
+      content: "### EFSUMB Level 1 — 일차의료 POCUS 4대 모듈 [초록 기반 — 전문 미확인]\n| 모듈 | 주요 적용 |\n|---|---|\n| **심장 (Cardiac)** | LV 기능 대략 평가, 심낭삼출 |\n| **폐 (Lung)** | B-lines (간질성 증후군), 기흉, 흉수 |\n| **복부 (Abdominal)** | 담석, 수신증, AAA, 복수 |\n| **근골격 (MSK)** | 관절삼출, 힘줄 손상, 유도 주사 |\n\n### 훈련 권고\n- 최소 훈련 시간 및 지도의(supervisor) 요건 제시\n- 각 국가별 임상 환경·환자군에 맞는 조정 허용\n- Delphi 프로세스: 국제 전문가 합의\n\n### 외래 POCUS 실용 적용 — 한국 가정의학과 연계\n| 영역 | 외래 즉시 활용 시나리오 |\n|---|---|\n| 심장 | 부종·호흡곤란 — LV 기능 대략 평가, 심낭삼출 배제 |\n| 폐 | 폐렴·폐부종 감별; B-lines ≥3 → 입원 고려 ([[pocus-lung|pocus-lung]] 참조) |\n| 복부 | 담낭 통증 — 담석 확인; 요통 — 수신증 배제; 복부 대동맥 ([[pocus-abdominal|pocus-abdominal]] 참조) |\n| MSK | 관절삼출 확인, 코르티코스테로이드 유도 주사 정확도↑ |\n\n### FM 외래 POCUS 실전 시나리오 맵 [CLINICAL]\n> [출처: Hui W. JABFM 2025;38(6):949-954. PMID:41593014] — Stanford FM 가정의학과 의사 POCUS 실제 활용 경험.\n\n| 시나리오 | POCUS 적용 |\n|---|---|\n| 다리 부종·통증 | DVT 초음파 (deep vein thrombosis) |\n| 관절 부종·통증 | 관절삼출 확인 (joint effusion) |\n| 우상복부 통증·오심 | RUQ 담낭·담석 확인 |\n| 발열·기침 소아 | 폐 초음파 (폐렴·삼출) |\n| 어깨 통증 | 회전근개(rotator cuff) 평가 |\n| 배뇨 문제 | 방광 잔뇨량 측정 |\n\n**POCUS 유도 시술:**\n- Baker's cyst 흡인 — 정확도·안전성↑\n- 수근관증후군(CTS) 주사 — 유도 주사\n- DeQuervain 건초염 주사 — 유도 주사\n- 절개배농(I&D) 전처치 유도\n- 연부조직 종괴 절제 전 확인\n\n**배경:** ACGME FM 레지던트 과정에 POCUS 의무화 / 휴대용 초음파 보급 확산 → 가정의학과 외래 즉시 활용 가능. 갑상선·연부조직 외래에도 적용.",
       sources: []
     },
     precaution: {
