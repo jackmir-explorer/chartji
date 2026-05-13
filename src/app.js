@@ -50,7 +50,7 @@ function App(){
   var [reviewText,   setReviewText]   = useState("");
   var [reviewLoading,setReviewLoading]= useState(false);
   var [leftTab,      setLeftTab]      = useState("raw"); /* "raw" | "draft" | "calc-xxx" */
-  var [mode,         setMode]         = useState("clinic"); /* "clinic" | "search" — 2026-05-06 */
+  var [mode,         setMode]         = useState("clinic"); /* "clinic" | "search" | "snippets" — 2026-05-13 */
   var [themeMode,    setThemeMode]    = useState(function(){return localStorage.getItem("cj_theme")||"dark";}); /* "dark" | "light" — 2026-05-13 */
 
   /* ── 계산기 탭 ── */
@@ -345,6 +345,7 @@ function App(){
         <div className="mode-toggle">
           <button className={mode==="clinic"?"on":""} onClick={function(){setMode("clinic");}}>🩺 진료</button>
           <button className={mode==="search"?"on":""} onClick={function(){setMode("search");}}>🔍 검색</button>
+          <button className={mode==="snippets"?"on":""} onClick={function(){setMode("snippets");}}>📝 상용구</button>
         </div>
         <span style={{color:"var(--border)",fontSize:12}}>|</span>
         <div className="mode-toggle">
@@ -357,6 +358,13 @@ function App(){
       {mode==="search"&&(
         <div style={{flex:1,overflowY:"auto"}}>
           <SearchScreen/>
+        </div>
+      )}
+
+      {/* ── 상용구 모드 (2026-05-13 Phase 1) ── */}
+      {mode==="snippets"&&(
+        <div style={{flex:1,overflowY:"auto"}}>
+          <SnippetsScreen/>
         </div>
       )}
 

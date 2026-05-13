@@ -40,6 +40,18 @@
       CalcTabContent (계산기 폼 + 결과 + 참조표 + 면책)
 금지: 공유 상태 직접 참조 (props로만 수신), API 호출
 
+## src/components/snippets.js (2026-05-13 신설, Phase 1)
+책임: 상용구 별 surface — localStorage 기반 CRUD + 클립보드 복사 + Export/Import
+포함: SnippetsScreen (전체 화면 편집/호출 컴포넌트),
+      loadSnippets/saveSnippets (localStorage key "cj_snippets" I/O),
+      exportSnippets (JSON 다운로드), importSnippetsFromFile (파일 → 검증 → 덮어쓰기),
+      편집 즉시 자동 저장 (debounce 300ms), copyContent (navigator.clipboard + execCommand fallback)
+금지: API 호출(클라이언트 only, LLM 호출 0), KNOWLEDGE_BUNDLE 참조(독립 데이터),
+      진료 패널 state 직접 참조, 자동 분류·자동 추론(미르 수작업 입력 only),
+      section 분할(Phase 1 은 단일 content 필드 — 미르 사용 후 확장 판단)
+원칙: 의사 본인이 작성한 텍스트 그대로 복사. AI 추론 0. 진단·처방 추천 경로 아님.
+참조: rules/panel-contracts.md Snippets
+
 ## src/components/search.js (2026-05-06 신설)
 책임: Knowledge Search 모드 — 검색 UI + 검색 인덱스 빌드 + 결과 렌더
 포함: SearchScreen (전체 화면 검색 컴포넌트),

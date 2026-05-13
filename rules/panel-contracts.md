@@ -32,6 +32,19 @@
 출력: HPI / Key negatives / Findings / Assessment / Plan
 금지: PE 필드 AI 추론, 의사 미발화 Plan, ROS 자동 완성
 
+## Snippets (별 surface, 2026-05-13 신설, Phase 1)
+역할: 의사 본인이 작성한 상용구(EMR 붙여넣기용 텍스트) 저장·편집·호출
+출력: 좌측 목록 + 우측 편집 form (이름/본문) + 📋 복사 버튼 + ⬇Export/⬆Import
+진입: 상단 모드 토글 "🩺 진료 / 🔍 검색 / 📝 상용구"
+금지: AI 추론 생성, 자동 분류, KNOWLEDGE_BUNDLE 참조, 진료 패널 state 침범,
+      진료 모드 중 자동 노출(별 surface — 의사 명시적 진입만)
+원칙: 클라이언트 only(localStorage), LLM 호출 0, 의사 수작업 입력만.
+      편집 즉시 자동 저장 (debounce 300ms), Export/Import 로 PC/브라우저 이전.
+데이터 shape: `{id, name, content, updatedAt}` (최소 필드. section 분할은 Phase 확장 시 판단)
+Phase 2 예정: 단축키 hook, 검색 typeahead
+Phase 3 예정: 7일 미Export reminder, 카테고리 필터
+참조: rules/file-ownership.md src/components/snippets.js
+
 ## Knowledge Search (수동, 2026-05-06 신설)
 역할: 의사 능동 검색으로 knowledge/ 자산 raw 열람 — 진료 외 깊이 읽기 1순위, 진료 중 빠른 참조 2순위(Phase 2)
 출력: ranked 결과 목록(파일명·매칭 snippet·하이라이트) + 클릭 시 인라인 본문 펼침 + wikilink alias 동의어 + backlink
