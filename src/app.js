@@ -51,6 +51,7 @@ function App(){
   var [reviewLoading,setReviewLoading]= useState(false);
   var [leftTab,      setLeftTab]      = useState("raw"); /* "raw" | "draft" | "calc-xxx" */
   var [mode,         setMode]         = useState("clinic"); /* "clinic" | "search" — 2026-05-06 */
+  var [themeMode,    setThemeMode]    = useState(function(){return localStorage.getItem("cj_theme")||"dark";}); /* "dark" | "light" — 2026-05-13 */
 
   /* ── 계산기 탭 ── */
   var [detectedCalcs, setDetectedCalcs] = useState([]);
@@ -150,6 +151,12 @@ function App(){
       console.log("[KB-SMOKE] 통과 — primarySources 누락 0");
     }
   },[]);
+
+  /* ── 테마 모드: body class 토글 + localStorage 동기화 (2026-05-13) ── */
+  useEffect(function(){
+    document.body.classList.toggle("theme-light",themeMode==="light");
+    localStorage.setItem("cj_theme",themeMode);
+  },[themeMode]);
 
   /* ── 감지된 계산기 → 활성 탭 자동 추가 ── */
   useEffect(function(){
@@ -260,7 +267,7 @@ function App(){
   /* ════════════════════════════════════════════ RENDER ════════════════════════════════════════════ */
   return (
     <div style={{minHeight:"100vh",display:"flex",flexDirection:"column",
-      background:"#0d1018",color:"#e2e4ec",
+      background:"var(--bg-base)",color:"var(--text-primary)",
       fontFamily:"'Noto Sans KR',-apple-system,sans-serif",fontSize:14}}>
 
       {/* 면책 배너 */}
@@ -275,8 +282,8 @@ function App(){
 
       {/* 탑바 */}
       <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",
-        padding:"0 14px",height:50,background:"#131924",
-        borderBottom:"1px solid #1e2538",flexShrink:0}}>
+        padding:"0 14px",height:50,background:"var(--bg-panel)",
+        borderBottom:"1px solid var(--border)",flexShrink:0}}>
         <div style={{display:"flex",alignItems:"center",gap:10}}>
           <span style={{fontSize:16,fontWeight:800,color:"#c96442",letterSpacing:"-.02em"}}>차트지</span>
           <span style={{fontSize:10,color:"#2e374f",background:"#0d1018",
@@ -333,11 +340,16 @@ function App(){
       )}
 
       {/* ── 모드 토글 (상단 고정, 2026-05-06) ── */}
-      <div style={{padding:"8px 12px",borderBottom:"1px solid #1e2538",
-        background:"#0d1018",display:"flex",alignItems:"center",gap:12}}>
+      <div style={{padding:"8px 12px",borderBottom:"1px solid var(--border)",
+        background:"var(--bg-base)",display:"flex",alignItems:"center",gap:12}}>
         <div className="mode-toggle">
           <button className={mode==="clinic"?"on":""} onClick={function(){setMode("clinic");}}>🩺 진료</button>
           <button className={mode==="search"?"on":""} onClick={function(){setMode("search");}}>🔍 검색</button>
+        </div>
+        <span style={{color:"var(--border)",fontSize:12}}>|</span>
+        <div className="mode-toggle">
+          <button className={themeMode==="dark"?"on":""} onClick={function(){setThemeMode("dark");}}>🌙 다크</button>
+          <button className={themeMode==="light"?"on":""} onClick={function(){setThemeMode("light");}}>☀ 라이트</button>
         </div>
       </div>
 
