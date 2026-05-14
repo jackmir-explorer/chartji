@@ -33,7 +33,7 @@ G3(중등도): eGFR 30–59 mL/min/1.73 m².
 | EKFC (이중) | 80.2% | 최고 일치율 |
 
 - 전체 환자의 15.9%에서 3년 내 질환 진행 (GFR ≥25% 감소 + 카테고리 하강)
-- 어떤 방정식도 진행 감지 민감도 낮음 (<54.1%) — 특이도는 양호 (>90.4%)
+- 어떤 방정식도 진행 감지 민감도 낙음 (<54.1%) — 특이도는 양호 (>90.4%)
 
 > [출처: Scandrett K et al. BMJ 2026;392:e085005. PMID:41856526]
 
@@ -70,7 +70,7 @@ CKD G3 환자 추적 시 **시스타틴C 추가 검사 권장:**
 > [출처: Schwartz AR et al. 2025 VA/DoD CPG for the Primary Care Management of Chronic Kidney Disease. Ann Intern Med. 2025 Dec 30;179(3):411-424. PMID:41461086, DOI:10.7326/ANNALS-25-03499]
 > [초록 기반 — 전문 미확인]
 
-**2025년 주요 업데이트 (2019년 대비):**
+**2025년 주요 업데이트 (2019년 대비 주요 변화):**
 
 | 약물/전략 | 2025 권고 |
 |---|---|
@@ -107,3 +107,50 @@ CKD G3 환자 추적 시 **시스타틴C 추가 검사 권장:**
 - 전해질 (K⁺), 중탄산염, 혈압
 - 시스타틴C 이중 방정식: 정기 모니터링 주기마다 추가 권고 (BMJ 2026)
 - 빈혈 (Hb): CKD 관련 신성빈혈 스크리닝
+
+---
+
+## VA/DoD CKD 일차의료 가이드라인 2025 — SGLT-2i·GLP-1RA·finerenone 강력 권고 (protocol) [CLINICAL]
+
+> [출처: Schwartz AR et al. 2025 U.S. Department of Veterans Affairs and U.S. Department of Defense Clinical Practice Guideline for the Primary Care Management of Chronic Kidney Disease. Ann Intern Med. 2025;179(3):411-424. PMID:41461086, DOI:10.7326/ANNALS-25-03499]
+> GRADE 방법론, 12개 핵심 질문, 23개 권고. 2019 VA/DoD CKD CPG 개정판.
+> [초록 기반 — 전문 미확인]
+
+**2025 신규 핵심 권고 (2019 대비 주요 변화):**
+
+| 약제 | 2025 권고 | 핵심 적응 |
+|---|---|---|
+| **SGLT-2 억제제** | **강력 권고** (2019 대비 격상) | CKD + 당뇨 또는 심부전·eGFR ≥20~25 |
+| **GLP-1 수용체 작용제** | **신규 권고** (2019에 없음) | CKD + 당뇨·비만·심혈관 위험 |
+| **Finerenone** (비스테로이드 MRA) | **신규 권고** | DKD (당뇨 신장병) CV·신장 보호 |
+| ACEi/ARB | 유지 | 단백뇨 동반 CKD 1차 |
+| 스타틴 | 유지 | CKD 지질 관리 |
+
+**처방 핵심 변화:**
+
+**SGLT-2i 처방 확장:**
+- eGFR 30-60 환자에서 SGLT-2i 처방을 주저하는 관행에 직접 도전
+- eGFR ≥20~25부터 신장·심혈관 보호 목적 사용 가능 (당뇨 유무와 무관한 CKD 적응증)
+- [출처 미확인 — researcher 검증 권장]: 한국 CKD 단계별 SGLT-2i 보험 기준
+
+**GLP-1RA 신규 추가:**
+- CKD + 당뇨 + 비만 조합: 심장-신장-대사 트리플 보호 전략으로 포함
+- [출처 미확인 — researcher 검증 권장]: 한국 CKD + 당뇨 GLP-1RA 급여 기준
+
+**Finerenone (비스테로이드 MRA):**
+- FIDELIO-DKD / FIGARO-DKD 근거 기반 당뇨 신장병 처방 옵션
+- 전통 스피론락톤과 달리 고칼륨혈증 위험 낙음
+
+**공유 의사결정 (SDM):**
+- 투석 vs 보존적(conservative) 관리 선택 → 환자 가치관·기대여명 중심 결정
+- 신장 대체 요법 의뢰 전 SDM 원칙 명시 (일률적 투석 의뢰 지양)
+
+**조영제 유발 AKI 예방:**
+- 적절한 수액 전처치
+- 불필요한 조영제 사용 회피 + eGFR 기반 위험 평가
+
+**의뢰 기준 (2025 권고 기반):**
+- eGFR < 30 또는 빠른 감소 → 신장내과 의뢰
+- 투석·이식 고려 단계 → 신장내과 SDM 조기 시작
+
+관련: [[ckd-monitoring]], [[diabetes]], [[heart-failure]]
