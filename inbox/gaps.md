@@ -21,8 +21,8 @@
 - [호흡기 vital] 외래 호흡기 증상에 SpO2·호흡수·맥박수 필수 — cheap & quick, CRB-65 적용 위한 최소 데이터 / 고령 호흡기 증상에 SpO2 누락은 결정적 gap
 - [CKD ABx 용량] 신배설 ABx(amox-clav 등) — 처방 전 최근 eGFR 확인 / eGFR <30 감량, 30~60 부분 조정 / clavulanate 간독성 고령 증가
 - [IDA 진단] MCV 정상범위(82.1 등 하한)도 IDA 배제 못함 — ferritin <30(또는 <15) 우선 확인 / 초기 IDA는 normocytic→microcytic 진행 / RDW·anisocytosis가 MCV보다 먼저 변함
-- [폐경 전 여성 IDA] 원인 자동 "월경" 가정 금지 — 5축 평가(월경·GI·malabsorption·약물·식이) / 40대 이상은 colon ca screening 연령 근접, GI workup 문턱 낮추기
-- [GLP-1 RA 영양결핍] semaglutide 등 장기 사용 환자 — 식욕↓·위배출 지연 → iron·B12·protein 결핍 / 빈혈·피로 호소 시 약물 시작 시점과 timeline 비교 필수
+- [x] [폐경 전 여성 IDA] 원인 자동 "월경" 가정 금지 — 5축 평가(월경·GI·malabsorption·약물·식이) / 40대 이상은 colon ca screening 연령 근접, GI workup 문턱 낮추기 (→ PMID 42044770, 2026-05-15)
+- [x] [GLP-1 RA 영양결핍] semaglutide 등 장기 사용 환자 — 식욕↓·위배출 지연 → iron·B12·protein 결핍 / 빈혈·피로 호소 시 약물 시작 시점과 timeline 비교 필수 (→ PMID 41867417, 42117035, 2026-05-15)
 - [만성 설사 + 빈혈] celiac·IBD·colon pathology 적극 감별 — 평가 전 IBS 가정 증상약(Dicetel·Norzyme·Fotagel) 처방 금지 / anti-tTG·CRP·FOBT·필요 시 내시경
 - [x] [Iron 보충 패러다임] 격일 투여 — daily보다 hepcidin biology상 효과적 / vitamin C 동반·공복 복용 / 만성 IDA 처방 default 변경 (→ PMID 42024457, 2026-05-13)
 - [x] [어지러움 평가] TiTrATE framework — Timing(episodic vs continuous)·Triggers(positional·spontaneous·postural)·Associated sx·Targeted exam / 4 type 분류(vertigo·presyncope·disequilibrium·lightheadedness)별 표적 검사(Dix-Hallpike·기립성 BP·ECG·신경학적/gait·심리·약물) / "어지러움 ns" 기록 금지, 분류부터 시작 (→ PMID 42108535, 2026-05-13)
