@@ -15,6 +15,18 @@
 
 ---
 
+2026-05-15 | by-disease/heart-failure-pocus-ducs.md | 추가 — VExUS ≥2 vs ≤1 원내 사망률 14.1% vs 1.9%, OR 0.175, 99.91% 사후 확률; 베이즈 메타분석 5연구 565명 [CLINICAL — 조건부] PMID:41747972 (출처 05-15)
+2026-05-15 | by-disease/frailty.md | 추가 — 한국 허약 노인 Re-home 12주 전환기 케어: "완전 회복"이 아닌 "현재 건강 수용+일상 루틴 적응" 핵심; 보호자 조기 참여 중요 [CLINICAL — 조건부] PMID:41842916 (출처 05-15)
+2026-05-15 | by-disease/continuity-of-care.md | 추가 — 비계획 입원 위험인자(만성질환·돌봄 부재)·보호인자(GP 연속성·ACP·경험); 네덜란드 GP 포커스그룹 [CLINICAL — 조건부] PMID:42095496 (출처 05-15)
+2026-05-15 | by-disease/resistant-hypertension.md | 추가 — JAMA 2026 종합리뷰: 진성 10%·백의 37.5%·비순응 50%; 스피로노락톤 외래SBP -13.3mmHg (24 RCT 3485명); 신장차단술 -4.4mmHg [CLINICAL] PMID:41870448 (출처 05-15)
+2026-05-15 | guidelines/deprescribing.md | 추가 — 노르웨이 가정간호 결정서한 거의 미독; 실무는 케어플랜·구두협의 의존; 약물 안전 개선은 케어플랜 통합+환자참여 필요 [CLINICAL — 조건부] PMID:42132490 (출처 05-15)
+2026-05-15 | by-disease/vitamin-b12.md | 신규 — AFP 2025 실전 가이드: B12<180 확진·180-350 MMA 추가; 경구≒IM; B12>1000 악성종양 신호; 메트포르민·PPI 위험군 선별 [CLINICAL] PMID:40961307 (출처 05-15)
+2026-05-15 | by-disease/clinical-communication.md | 신규 — 글래스고 합의문 3 Overarching Tasks: 인지과부하·가정·취약성·권력비대칭 장벽 대응; 연결과신뢰·장벽완화·의미공동구성 [CLINICAL — 조건부] PMID:41762451 (출처 05-15)
+2026-05-15 | by-drug/glp1-selection-strategy.md | 추가 — GLP-1 RA 118,993명 1:1 매칭 코호트: 과다수면 1년 HR 1.21·5년 HR 1.23; 5년 철결핍 HR 1.11; ferritin 정기 점검 근거 [CLINICAL — 조건부] PMID:41867417 (출처 05-15)
+2026-05-15 | by-disease/anemia.md | 추가 — 동아시아 여성: MBL 높아도 ferritin·총체내철분과 연관 없음(NE 여성은 유의 연관); 한국 여성 IDA 원인 "월경 탓" 자동가정 금지 [CLINICAL — 조건부] PMID:42044770 (출처 05-15)
+
+---
+
 2026-05-11 | by-drug/glp1-selection-strategy.md | 추가 — GLP-1RA 36 RCT 메타분석: 체중감량 중 근육 손실 비율 중앙 34.9%, 68% 연구에서 25% 기준치 초과; 저항운동+단백질 섭취 교육 필수 [CLINICAL] PMID:41996180 (출처 05-10)
 2026-05-11 | by-disease/prescribing-cascade.md | 이미 처리됨 (2026-04-30 기록) — Scout 05-10 마커만 [✓] 업데이트 [CLINICAL] PMID:41949780
 2026-05-11 | guidelines/deprescribing.md | 추가 — 치매 요양원 ADRD 232,543명: 항우울제 51.6% 사용, PHQ-9≥10은 <5%; 다약제 강연관; deprescribing 적응증 점검 [CLINICAL] PMID:42089534 (출처 05-10)
