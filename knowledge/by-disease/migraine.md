@@ -58,6 +58,32 @@ relations: []
 
 ---
 
+## 급성기 치료 — IHS 가이드라인 [CLINICAL]
+
+> [출처: Arnold MJ. Acute Migraine Treatment: Guidelines From the International Headache Society. Am Fam Physician. 2026 Feb;113(2):196-198. PMID:41839119]
+> IHS 최신 가이드라인 AFP 요약 [초록 비공개 — Scout 설명 기반]
+
+### 1차 치료
+
+| 상황 | 선택 |
+|---|---|
+| 일반 급성 편두통 | **트립탄** 또는 **NSAIDs** (ibuprofen·naproxen) |
+| 구역·구토 동반 | 트립탄/NSAIDs + **항구토제 병용** (metoclopramide 등) |
+| 트립탄 금기 (심혈관질환) | NSAIDs, 디히드로에르고타민 (ergotamine 회피) |
+
+### 트립탄 처방 포인트
+- 두통 **발생 초기**에 복용 — 중등~중증으로 진행 후 효과 감소
+- Sumatriptan 50/100mg po 또는 6mg SC (빠른 발현)
+- 2시간 내 효과 없으면 1회 추가 또는 계열 변경
+
+### 진통제 남용 두통(MOH) 예방
+**MOH 기준:** 트립탄·에르고타민 월 10일 이상, 또는 NSAIDs·아세트아미노펜 월 15일 이상
+
+- 환자 교육: "두통약을 너무 자주 먹으면 오히려 두통이 더 잦아집니다"
+- 월 사용 횟수 추적 → 기준 근접 시 예방치료 시작 검토 (상단 [예방치료 적응증] 참조)
+
+---
+
 ## 유발 요인 관리 (precaution) [CLINICAL]
 
 흔한 편두통 유발 요인 — 환자 교육 및 일지 작성 권고:

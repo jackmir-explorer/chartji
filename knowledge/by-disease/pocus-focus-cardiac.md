@@ -1,7 +1,7 @@
 # 심장 초음파 POCUS — AI 강화 집중심장초음파 (FoCUS) [CLINICAL — 조건부]
 
 tags: [CLINICAL — 조건부]
-keywords: FoCUS, 집중심장초음파, cardiac POCUS, AI 초음파, 핸드헬드 초음파, handheld ultrasound, LV 기능, 판막질환, 심낭삼출, 비심장전문의
+keywords: FoCUS, 집중심장초음파, cardiac POCUS, AI 초음파, 핸드헬드 초음파, handheld ultrasound, LV 기능, 판막질환, 심낙삼출, 비심장전문의
 
 version: (미정)
 supersedes: (미정)
@@ -34,7 +34,7 @@ relations: [[[pocus-lung]], [[pocus-primary-care-efsumb]], [[pocus-abdominal]]]
 
 - 임상적 의심 존재하거나 일상 평가 중 심장 평가가 필요한 외래·입원 환자
 - 비심장전문의(가정의학과·일반내과·응급의학과) 시행 시 AI 알고리즘 보조
-- 특히 **LV 기능 저하·판막 이상·심낭삼출** 선별 목적
+- 특히 **LV 기능 저하·판막 이상·심낙삼출** 선별 목적
 
 ---
 
@@ -43,7 +43,7 @@ relations: [[[pocus-lung]], [[pocus-primary-care-efsumb]], [[pocus-abdominal]]]
 **AI 보조 FoCUS 워크플로우:**
 1. 핸드헬드 초음파 + AI 알고리즘 소프트웨어 연결
 2. 비심장전문의 집중 훈련 후 시행 (표준화 교육 필수)
-3. AI 자동 분석: 심실 기능·판막 질환·심낭삼출·IVC 크기
+3. AI 자동 분석: 심실 기능·판막 질환·심낙삼출·IVC 크기
 4. AI 이상 소견 flagging → 심장 전문의 확진 또는 추가 영상 결정
 
 **POCUS 일차의료 적용 맵 (외래):**
@@ -76,10 +76,45 @@ relations: [[[pocus-lung]], [[pocus-primary-care-efsumb]], [[pocus-abdominal]]]
 
 - AI FoCUS에서 이상 소견 발견 → 심장전문의 공식 심초음파 의뢰
 - 우심계 이상 임상 의심 (폐고혈압·RV 부전) → 직접 심초음파 의뢰 (FoCUS 우회)
-- 심낭삼출 발견 + 혈역학적 불안정 → 즉시 의뢰
+- 심낙삼출 발견 + 혈역학적 불안정 → 즉시 의뢰
+
+---
+
+---
+
+## GP POCUS — 호흡곤란 심부전 감별 (일차의료 훈련 연구) [CLINICAL]
+
+> [출처: Kiss-Kovács R et al. Point-of-care ultrasound improves the diagnosis of heart failure in patients with dyspnea in primary care. Front Med (Lausanne). 2026 Feb 13;13:1721066. PMID:41767524, DOI:10.3389/fmed.2026.1721066]
+> 전향적 타당성 연구, 4개 일차의료 기관, 신규 숨참 환자 102명, GP 핸드헬드 POCUS 시행
+
+### 핵심 수치
+
+| 지표 | POCUS 전 (임상 판단) | POCUS 후 |
+|---|---|---|
+| **민감도** | 85.3% | **86.8%** |
+| **특이도** | 38.2% | **88.2%** |
+| PPV | 73.4% | **93.7%** |
+| NPV | 56.5% | **76.5%** |
+| **Cohen's κ** | 0.254 | **0.723** |
+
+- 특이도 38% → 88%: 불필요한 순환기 의뢰 감소 핵심 지표
+- GP B-lines·LVEF 판독이 심장초음파 전문의 결과와 강한 상관
+
+### GP POCUS 프로토콜 (이 연구)
+- **폐 POCUS**: B-line 정량화 (≥3/zone 심부전 시사)
+- **FoCUS**: LVEF 시각 평가 (preserved vs reduced)
+- 사용 장비: 핸드헬드 초음파 (포켓형)
+- 훈련: **단기 집중 교육** 후 실전 적용 가능 (훈련 시간 미명시; "brief training")
+
+### 외래 적용 포인트
+- 신규 숨참 환자 → 임상 판단만으로는 특이도 38% (심부전 아닌데 의심) → POCUS 추가 시 88%로 향상
+- 폐 B-line 3개 이상 + LVEF 시각 저하 → 심부전 가능성 높음 → 즉각 치료·의뢰
+- 폐 B-line 없음 + 정상 LVEF → 심부전 낮음 → 타 원인 감별 우선
+- 훈련된 GP도 일차의료 세팅에서 즉시 적용 가능
 
 ---
 
 ## 출처 학습 노트
 
 - study-note: [[2026-05-08-ai-focus-cardiac-pocus]]
+- study-note: [[2026-05-10-pocus-hf-primary-care-gp]]

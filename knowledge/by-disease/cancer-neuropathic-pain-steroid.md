@@ -8,7 +8,7 @@ supersedes: (미정)
 freshness.primarySourceYear: 2026
 applicability: 암성 신경병증 통증 환자 — 코르티코스테로이드 시도 결정
 parents: [palliative-pain]
-relations: [[[palliative-pain]]]
+relations: [[[palliative-pain]]
 
 > primarySources (Tier 1):
 > - Koike R et al. Factors Indicating Cancer-Related Neuropathic Pain Relief by Corticosteroids Administration. J Pain Symptom Manage. 2026 Feb 5;71(5):668-675.e1. PMID:41654095, DOI:10.1016/j.jpainsymman.2026.01.024

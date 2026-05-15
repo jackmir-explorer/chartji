@@ -16,6 +16,21 @@
 
 워크플로우 상세 → `rules/workflow.md`
 
+### "Liby ingest" 정의 (2026-05-12 명문화)
+
+"Liby ingest" 호출은 **네 가지 작업을 모두 포함**한다. 어느 하나도 빠뜨리지 말 것.
+
+1. **Raw 노트 → knowledge/*.md** (`skills/knowledge-ingest/SKILL.md`) — 미르가 던진 raw 텍스트·이미지·PDF를 knowledge 엔트리로 저장
+2. **inbox/ 파일 처리** (`agents/librarian.md` Inbox 트리거 §) — `.md`·이미지·PDF 자동 분류 + draft 제시
+3. **⚠ Deep Extract 산출물 → src/knowledge-bundle.js 컴파일** — `routines/deep-extract.md`가 매일 정오에 `knowledge/*.md`를 갱신하지만 bundle 반영은 자동화되지 않음. **Liby ingest 호출 시 반드시 backlog 점검**:
+   - `git log --oneline -- src/knowledge-bundle.js | head -1` → 최근 bundle 작업 commit
+   - `git log --oneline {bundle_commit}..HEAD -- knowledge/` → 미반영 deep-extract commit 리스트
+   - `knowledge/log.md` 항목과 bundle.js 내 키 비교
+   - 미반영 entry는 날짜별 batch로 컴파일 (한 번에 전체 처리 금지 — 2026-05-07 "20건 데이터 손실 사건" 재발 위험)
+4. **gaps.md 처리** (`skills/gaps-process/SKILL.md`) — 지식 격차 항목을 Researcher 위임으로 해소, Archive 이동
+
+> ⚠ **빠뜨리기 쉬운 지점**: 미르가 "liby ingest" 또는 "liby 돌려보자"라고 했을 때 (1)/(2)만 처리하고 (3) bundle 컴파일 backlog를 누락하는 패턴이 반복 관찰됨. 호출 시 반드시 4가지 모두 점검 + backlog 상태 보고.
+
 ---
 
 ## 세션 프로토콜
@@ -66,6 +81,17 @@
 - **PR 생성 금지.** 작업 완료 시 Claude가 직접 `git checkout main && git merge <작업브랜치> && git push origin main` 수행
 - 이 원칙은 **모든 후속 세션에서 유지**. Claude가 반사적으로 적용 (미르에게 매번 묻지 않음)
 - 예외: 미르가 명시적으로 "PR 만들어"라고 지시한 경우에만 PR 생성
+
+### git push origin main 403 우회 (2026-05-12 확정)
+일부 Claude Code 환경에서 `git push origin main`이 HTTP 403으로 거부됨. 이 경우 **미르에게 묻지 말고 즉시 GitHub MCP로 우회**:
+
+1. `git rev-parse origin/main:<path>` 로 파일 blob SHA 획득
+2. `mcp__github__create_or_update_file` (단일 파일) 또는 `mcp__github__push_files` (다중 파일) 호출
+   - `owner=jackmir-explorer`, `repo=chartji`, `branch=main`
+   - 단일 파일 update 시 `sha` 필수
+3. push 후 `git fetch origin main && git reset --hard origin/main` 로 로컬 동기화
+
+> 적용 조건: 단순 파일 변경 (gaps·blind-spots·sessions·knowledge 추가 등). 복잡한 merge나 다중 commit 보존이 필요한 경우는 미르에게 위임.
 
 **종료 보고 포맷**: "커밋·푸시 완료"만으로는 부족. 반드시 **main 반영 상태**를 명시:
 - ✓ "main 반영 완료 (commit `abc1234`)"

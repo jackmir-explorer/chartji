@@ -72,6 +72,36 @@ relations: []
 
 ---
 
+## 초음파 유도 말초신경차단(USG-PNB) — 건초염 경피 시술 통증 관리 [CLINICAL]
+
+> [출처: Ribeiro-da-Silva T et al. Ultrasound-Guided Peripheral Nerve Blocks for Percutaneous Treatments of Common Tendinopathies. J Ultrasound Med. 2026;45(6):1139-1161. PMID:41479369, DOI:10.1002/jum.70172]
+> 해부학 기반 프로토콜 리뷰 — 건초염 경피 시술(UPNF/UPNT) 시 통증 관리 전략
+
+**핵심 문제 의식:**
+- 기존 peritendinous 국소마취(LA) → **테노사이트 억제 우려** → 건 회복 및 orthobiologics(PRP 등) 효능 저해 가능
+- 대안: **USG-PNB** — 시술 부위에서 떨어진 신경 표적화로 테노사이트 영향 없이 통증 차단
+
+### 건초염 부위별 신경차단 표적
+
+| 건초염 | 표적 신경 | 자세 |
+|---|---|---|
+| 극상근 건초염 | Suprascapular nerve | 앉은 자세·어깨 내전 |
+| 외측상과염 | Lateral antebrachial cutaneous nerve | 팔꿈치 신전 |
+| 내측상과염 | Medial antebrachial cutaneous nerve | 팔꿈치 신전 |
+| 슬개건 건초염 | Infrapatellar nerve branches | 앙와위 |
+| 아킬레스 건초염 | Sural nerve | 복와위 |
+| 족저근막염 | Medial calcaneal nerve | 측와위 |
+
+**적용 기준:**
+- 환자가 시술 통증에 민감하거나, PRP·prolotherapy 병용 시 LA 대신 USG-PNB 우선 고려
+- POCUS 역량 있는 1차의료에서 해부학 참조 후 직접 적용 가능
+
+**주의:**
+- 근위 신경차단 → 시술 부위 운동 기능 일시 저하 가능 — 귀가 안전 확인
+- POCUS 충분한 교육·경험 후 적용
+
+---
+
 ## 의뢰 기준 (referral)
 
 - 스테로이드 3회 이상 필요 예상 → PRP·초음파 유도 HA 고려 또는 정형외과 의뢰

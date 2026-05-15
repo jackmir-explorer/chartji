@@ -8,7 +8,7 @@ supersedes: (미정)
 freshness.primarySourceYear: 2025
 applicability: 완화의료 환자 — 중등도~중증 통증 조절
 parents: []
-relations: [[[eol-deprescribing]], [[cancer-neuropathic-pain-steroid]], [[afp-eol-symptom-management]]]
+relations: [[[eol-deprescribing]], [[cancer-neuropathic-pain-steroid]], [[afp-eol-symptom-management]], [[cancer-pain-supportive-care]]]
 
 > primarySources (Tier 1):
 > - Jose V et al. The Effectiveness and Safety of Buprenorphine in Palliative Care: A Systematic Review of RCTs, Prospective and Retrospective Studies. J Pain Symptom Manage. 2025;71(5):e525-e539. PMID:41475688, DOI:10.1016/j.jpainsymman.2025.12.009
@@ -17,8 +17,10 @@ relations: [[[eol-deprescribing]], [[cancer-neuropathic-pain-steroid]], [[afp-eo
 
 > 본 파일은 부프레노르핀 약리·완화의료 통증 본연 주제만 다룹니다.
 > 임종기 약물 중단은 [[eol-deprescribing]], 암성 신경병증 통증 스테로이드는 [[cancer-neuropathic-pain-steroid]],
-> AFP 임종기 다도메인 증상 관리·환자 의사소통 INSIGHTS는 [[afp-eol-symptom-management]] 참조.
+> AFP 임종기 다도메인 증상 관리·환자 의사소통 INSIGHTS는 [[afp-eol-symptom-management]],
+> OINV 올란자핀 예방·행동건강 BH 개입은 [[cancer-pain-supportive-care]] 참조.
 > (2026-05-07 Auditor Tier 1 분할; 원본 v2_full 합본 → 4 entry 분리)
+> (2026-05-12 Auditor R2 분할 추가; OINV·BH 섹션 → cancer-pain-supportive-care 분리)
 
 ---
 

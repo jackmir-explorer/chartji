@@ -1,12 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap');
+:root{
+  --bg-base:#0d1018; --bg-panel:#131924; --bg-input:#0d1018;
+  --text-primary:#e2e4ec; --text-secondary:#94a3b8; --text-muted:#4a5268; --text-faint:#2e374f;
+  --border:#1e2538; --border-strong:#252d42;
+  --accent-orange:#d4a574; --accent-purple:#9b8db8; --accent-purple-strong:#b3a8cc;
+  --accent-blue:#7a9cc4; --accent-blue-soft:rgba(122,156,196,.3);
+  --accent-purple-soft:rgba(155,141,184,.08); --accent-purple-mid:rgba(155,141,184,.18);
+  --mark-bg:rgba(212,165,116,.22); --mark-text:#d4a574;
+  --brand:#c96442; --success:#34c77b; --danger:#f87171;
+}
+body.theme-light{
+  --bg-base:#f6f7f9; --bg-panel:#ffffff; --bg-input:#f0f2f5;
+  --text-primary:#1f2533; --text-secondary:#5a6477; --text-muted:#8a93a5; --text-faint:#b8c0cd;
+  --border:#d8dce4; --border-strong:#b8c0cd;
+  --accent-orange:#a8763d; --accent-purple:#6b5b95; --accent-purple-strong:#8174a3;
+  --accent-blue:#3a6a9b; --accent-blue-soft:rgba(58,106,155,.2);
+  --accent-purple-soft:rgba(107,91,149,.06); --accent-purple-mid:rgba(107,91,149,.14);
+  --mark-bg:rgba(168,118,61,.18); --mark-text:#a8763d;
+  --brand:#a04e30; --success:#1f9d5d; --danger:#c83030;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0d1018;color:#e2e4ec;font-size:14px;min-height:100vh}
+body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:var(--bg-base);color:var(--text-primary);font-size:14px;min-height:100vh}
 button{font-family:inherit;cursor:pointer;border:none;background:none;transition:all .15s}
 textarea,input{font-family:inherit;resize:none;outline:none;border:none}
-textarea::placeholder{color:#2e374f;font-style:italic}
-input::placeholder{color:#2e374f;font-family:'JetBrains Mono',monospace}
+textarea::placeholder{color:var(--text-faint);font-style:italic}
+input::placeholder{color:var(--text-faint);font-family:'JetBrains Mono',monospace}
 ::-webkit-scrollbar{width:4px}
-::-webkit-scrollbar-thumb{background:#252d42;border-radius:10px}
+::-webkit-scrollbar-thumb{background:var(--border-strong);border-radius:10px}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
 @keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
@@ -21,37 +41,37 @@ input::placeholder{color:#2e374f;font-family:'JetBrains Mono',monospace}
 .mode-toggle{display:flex;gap:4px;align-items:center}
 .mode-toggle button{font-size:10px;font-weight:700;padding:4px 12px;border-radius:5px;
   cursor:pointer;letter-spacing:.05em;text-transform:uppercase;
-  font-family:'JetBrains Mono',monospace;border:1px solid transparent;background:transparent;color:#4a5268}
-.mode-toggle button.on{color:#60a5fa;background:#0d1018;border-color:rgba(96,165,250,.3)}
+  font-family:'JetBrains Mono',monospace;border:1px solid transparent;background:transparent;color:var(--text-muted)}
+.mode-toggle button.on{color:var(--accent-blue);background:var(--bg-base);border-color:var(--accent-blue-soft)}
 
 /* Knowledge Search 결과 본문 — Markdown 렌더 (marked.parse) */
-.search-md{font-size:12px;color:#94a3b8;line-height:1.8}
+.search-md{font-size:12px;color:var(--text-secondary);line-height:1.8}
 .search-md h1,.search-md h2,.search-md h3,.search-md h4,.search-md h5,.search-md h6{
-  color:#a78bfa;font-weight:700;margin:10px 0 4px;letter-spacing:.02em;line-height:1.4}
+  color:var(--accent-purple);font-weight:700;margin:10px 0 4px;letter-spacing:.02em;line-height:1.4}
 .search-md h1{font-size:13px}
 .search-md h2{font-size:12px}
-.search-md h3{font-size:12px;color:#c4b5fd}
-.search-md h4,.search-md h5,.search-md h6{font-size:11px;color:#8b7ec8}
-.search-md p{margin:4px 0;color:#94a3b8}
+.search-md h3{font-size:12px;color:var(--accent-purple-strong)}
+.search-md h4,.search-md h5,.search-md h6{font-size:11px;color:var(--accent-purple)}
+.search-md p{margin:4px 0;color:var(--text-secondary)}
 .search-md ul,.search-md ol{margin:4px 0 8px 18px;padding:0}
-.search-md li{margin:2px 0;color:#94a3b8}
+.search-md li{margin:2px 0;color:var(--text-secondary)}
 .search-md li>p{margin:0}
-.search-md strong{color:#e2e4ec;font-weight:700}
-.search-md em{color:#cbd5e1;font-style:italic}
-.search-md code{background:#1e2538;padding:1px 5px;border-radius:3px;
-  font-family:'JetBrains Mono',monospace;font-size:11px;color:#f5a623}
-.search-md pre{background:#1e2538;padding:8px 10px;border-radius:5px;overflow-x:auto;margin:6px 0}
-.search-md pre code{background:none;padding:0;color:#cbd5e1}
+.search-md strong{color:var(--text-primary);font-weight:700}
+.search-md em{color:var(--text-primary);font-style:italic}
+.search-md code{background:var(--border);padding:1px 5px;border-radius:3px;
+  font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent-orange)}
+.search-md pre{background:var(--border);padding:8px 10px;border-radius:5px;overflow-x:auto;margin:6px 0}
+.search-md pre code{background:none;padding:0;color:var(--text-primary)}
 .search-md table{border-collapse:collapse;margin:6px 0;font-size:11px;width:100%}
-.search-md th,.search-md td{border:1px solid #1e2538;padding:4px 8px;color:#94a3b8;text-align:left;vertical-align:top}
-.search-md th{background:rgba(167,139,250,.08);color:#a78bfa;font-weight:700}
-.search-md blockquote{border-left:3px solid rgba(167,139,250,.3);padding-left:10px;
-  margin:6px 0;color:#6b5c8a;font-style:italic}
-.search-md hr{border:0;border-top:1px solid #1e2538;margin:8px 0}
-.search-md a{color:#60a5fa;text-decoration:underline}
-.search-md a.wikilink{color:#a78bfa;background:rgba(167,139,250,.08);
+.search-md th,.search-md td{border:1px solid var(--border);padding:4px 8px;color:var(--text-secondary);text-align:left;vertical-align:top}
+.search-md th{background:var(--accent-purple-soft);color:var(--accent-purple);font-weight:700}
+.search-md blockquote{border-left:3px solid var(--accent-purple-mid);padding-left:10px;
+  margin:6px 0;color:var(--text-muted);font-style:italic}
+.search-md hr{border:0;border-top:1px solid var(--border);margin:8px 0}
+.search-md a{color:var(--accent-blue);text-decoration:underline}
+.search-md a.wikilink{color:var(--accent-purple);background:var(--accent-purple-soft);
   padding:0 4px;border-radius:3px;text-decoration:none;cursor:pointer;
-  border-bottom:1px dotted rgba(167,139,250,.4);transition:all .12s}
-.search-md a.wikilink:hover{background:rgba(167,139,250,.18);color:#c4b5fd;
-  border-bottom-color:#c4b5fd}
-.search-md mark{background:rgba(245,166,35,.4);color:#f5a623;padding:0 2px;border-radius:2px}
+  border-bottom:1px dotted var(--accent-purple-mid);transition:all .12s}
+.search-md a.wikilink:hover{background:var(--accent-purple-mid);color:var(--accent-purple-strong);
+  border-bottom-color:var(--accent-purple-strong)}
+.search-md mark{background:var(--mark-bg);color:var(--mark-text);padding:0 2px;border-radius:2px}

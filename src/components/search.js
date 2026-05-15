@@ -94,8 +94,7 @@ function buildSearchIndex(bundle){
       aliasKeys:aliasKeys,
       titleTokens:titleTokens,
       sectionBlocks:sectionBlocks,
-      primarySources:e.primarySources||[],
-      relations:Array.isArray(e.relations)?e.relations:[]
+      primarySources:e.primarySources||[]
     });
   });
   return {entries:entries,aliasToTarget:aliasToTarget,backlinks:backlinks};
@@ -301,51 +300,6 @@ function ResultDetail(props){
           </div>
         );
       })}
-      {entry.relations&&entry.relations.length>0&&(()=>{
-        var groups={coprescribe:[],contraindicate:[],synergy:[],supersede:[]};
-        entry.relations.forEach(function(r){
-          if(groups[r.kind]) groups[r.kind].push(r);
-        });
-        var labels={
-          coprescribe:{icon:"💊",label:"함께 처방",color:"#5eead4"},
-          contraindicate:{icon:"⚠",label:"금기",color:"#f87171"},
-          synergy:{icon:"⚡",label:"시너지",color:"#fbbf24"},
-          supersede:{icon:"🔄",label:"대체",color:"#94a3b8"}
-        };
-        var hasAny=Object.keys(groups).some(function(k){return groups[k].length>0;});
-        if(!hasAny) return null;
-        return (
-          <div style={{marginTop:10,paddingTop:8,borderTop:"1px solid #1e2538"}}>
-            {Object.keys(groups).map(function(kind){
-              if(groups[kind].length===0) return null;
-              var L=labels[kind];
-              return (
-                <div key={kind} style={{marginBottom:6,fontSize:11,lineHeight:1.7,
-                  display:"flex",alignItems:"flex-start",gap:8}}>
-                  <span style={{fontSize:10,color:L.color,fontWeight:700,minWidth:80,
-                    fontFamily:"'JetBrains Mono',monospace",letterSpacing:".05em"}}>
-                    {L.icon} {L.label}
-                  </span>
-                  <span style={{flex:1}}>
-                    {groups[kind].map(function(r,i){
-                      return (
-                        <span key={r.target+"_"+i} style={{marginRight:10,display:"inline-block"}}>
-                          <span onClick={function(ev){ev.stopPropagation(); onJumpKey(r.target);}}
-                            style={{cursor:"pointer",color:L.color,
-                              borderBottom:"1px dotted "+L.color,padding:"0 2px"}}>
-                            {r.target}
-                          </span>
-                          {r.note&&<span style={{fontSize:10,color:"#6b7280",marginLeft:4}}>— {r.note}</span>}
-                        </span>
-                      );
-                    })}
-                  </span>
-                </div>
-              );
-            })}
-          </div>
-        );
-      })()}
       {backlinks.length>0&&(
         <div style={{marginTop:8,paddingTop:8,borderTop:"1px solid #1e2538"}}>
           <div style={{fontSize:10,color:"#4a5268",marginBottom:4,

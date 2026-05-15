@@ -8,7 +8,7 @@ supersedes: (미정)
 freshness.primarySourceYear: 2025
 applicability: 발뒤꿈치 통증 호소 성인·소아 외래 환자
 parents: []
-relations: [[[msk-injection-therapy]], [[pocus-primary-care-efsumb]]]
+relations: [[msk-injection-therapy]], [[pocus-primary-care-efsumb]]
 
 > primarySources (Tier 1):
 > - Morancie NA, Irvin L, Rayala BZ. Heel Pain: Diagnosis and Management. Am Fam Physician. 2025 Dec;112(6):648-656. PMID:41533410

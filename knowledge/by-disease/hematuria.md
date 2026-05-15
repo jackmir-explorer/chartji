@@ -71,3 +71,37 @@ relations: []
 - AUA 2025 Amendment (PMID 40013563)
 - AAFP 2021 Microscopic Hematuria in Adults (Am Fam Physician 2021;104:655)
 - AJKD 2022 Glomerular Hematuria Review
+
+---
+
+## HCRS + Oncuria 조합 — 초진 방광암 선별 도구 (differential) [CLINICAL]
+
+> [출처: Heard JR et al. Hematuria Cancer Risk Score in Combination With Oncuria-Detect for Patients Undergoing Evaluation for Hematuria. Urology. 2025;207:178-183. PMID:40846188, DOI:10.1016/j.urology.2025.08.031]
+> 전향적 코호트, n=365, 혈뇨 평가 의뢰 환자 (방광암 55명/대조군 310명), Cedars-Sinai/Yale. 후향적 성능 분석.
+
+**도구 개요:**
+
+| 도구 | 구성 | 1차의료 시행 가능 여부 |
+|---|---|---|
+| **HCRS** | 나이·성별·흡연력·혈뇨 정도 | ✓ 문진만으로 계산 |
+| **Oncuria-Detect** | 소변 바이오마커 패널 | ✓ 초진 외래 채뇨 |
+
+**성능 지표 (n=365, 방광암 55명):**
+
+| 방법 | 민감도 | 특이도 | AUC | NPV |
+|---|---|---|---|---|
+| HCRS 단독 | **90.9%** | 71.9% | 0.890 | **97.8%** |
+| Oncuria 단독 | 78.2% | 76.8% | 0.838 | 94.9% |
+| HCRS + Oncuria 조합 | 87.3% | 80.6% | 0.909 | 97.3% |
+| **미세혈뇨 한정: HCRS + Oncuria** | **82.4%** | — | — | **98.7%** |
+
+**일차의료 적용:**
+- 혈뇨 환자(특히 무증상 미세혈뇨) 첫 외래 방문 시 **HCRS 계산 + Oncuria 채뇨** → 저위험 환자 선별
+- NPV 98.7% (미세혈뇨 + 두 검사 모두 음성) → 불필요한 비뇨기과 의뢰·방광경 최소화
+- **의뢰 결정 흐름**: HCRS 고위험 또는 Oncuria 양성 → 비뇨기과 cystoscopy; 두 검사 음성 저위험 → AUA 기준 추적
+- UTI로만 귀인하기 전 위험 점수 우선 적용 (특히 고령 여성 무증상 미세혈뇨)
+
+**주의:**
+- Oncuria-Detect는 현재 미국에서 사용 가능; 한국 가용성 [출처 미확인 — researcher 검증 권장]
+- 단일 코호트 후향 분석 — 외부 검증 연구 필요
+- 방광경 대체 목적이 아닌 **의뢰 선별 보조 도구**로 사용

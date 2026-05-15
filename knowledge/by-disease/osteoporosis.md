@@ -201,9 +201,49 @@ AP + Lateral 척추 X-ray
 
 ---
 
+## 당뇨 노인 골다공증 — 특수 고려사항 [CLINICAL]
+
+> [출처: Bahat G et al. Managing Bone Fragility in Older Adults with Diabetes: Pathophysiology, Assessment, and Therapeutic Considerations. Drugs Aging. 2026 Mar;43(4):341-360. PMID:41854838, DOI:10.1007/s40266-026-01290-0]
+
+### 왜 당뇨 노인 골절 위험이 과소평가되는가
+
+| 당뇨 유형 | 특징 |
+|---|---|
+| **T1DM** | BMD 감소 → FRAX 어느 정도 반영 |
+| **T2DM** | BMD 정상~증가, **골 미세구조·질 손상** (AGE 축적·저회전) → **FRAX 과소평가** |
+
+- T2DM에서 DXA T-score가 정상이더라도 실제 골절 위험은 높음
+- **FRAX 보정**: T2DM 환자 FRAX 산출 위험에 **1.2배 보정** 권장 (전문가 합의 기반)
+  - [출처 미확인 — researcher 검증 권장]: 한국 FRAX 계산기 T2DM 보정 방법 공식화 여부
+
+### 혈당강하제별 골 안전성
+
+| 약물군 | 골 영향 | 권고 |
+|---|---|---|
+| **Metformin** | 골안전·중성 또는 약간 유리 | 1차 유지 |
+| **DPP-4i** (sitagliptin 등) | 골안전 | 안심하고 사용 |
+| **GLP-1RA** | 골안전·유리 가능 | 선호 |
+| **TZD** (pioglitazone) | **BMD 감소·골절 위험 증가** | **회피 권고** |
+| **SGLT-2i** | 복잡 — 일부 골절 위험 증가 보고; 당뇨 노인 주의 | 개별화 |
+| **고용량 인슐린** | 저혈당 → 낙상 → 골절 위험 | 저혈당 최소화 |
+
+### 항골다공증 치료 당뇨 노인 적용
+
+- **Bisphosphonate·Denosumab**: 당뇨 환자에서도 유효 (주로 post hoc + 관찰 연구)
+- 당뇨 특화 RCT 부족 — 현재는 일반 골다공증 지침 준수
+- **치료 우선순위**: 골절 위험 확인 → 혈당강하제 교체(TZD→대안) → 항골다공증 치료 시작
+
+### 생활습관 (당뇨 노인 특화)
+- 단백질 충분 섭취: ≥1.2~1.5 g/kg/일 (근감소 동반 고위험)
+- 칼슘·비타민 D 보충 (일반 골다공증 기준 동일)
+- **낙상 예방** 필수: 저혈당 → 낙상 연결 고리 — 혈당 조절 안정화 병행
+
+---
+
 ## 출처
 
 - KSBMR 골다공증 진료지침 2024
 - 심평원 보험인정기준 (2024.5.1, 2024.12)
 - ASBMR/AACE/Endocrine/ECTS/NOF Joint Guidance
 - ECTS 2020 Denosumab Discontinuation
+- Bahat G et al. Drugs Aging. 2026;43(4):341-360. PMID:41854838

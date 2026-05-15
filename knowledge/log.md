@@ -3,8 +3,53 @@
 새 내용이 추가될 때마다 Claude Code가 여기에 한 줄 기록한다.
 형식: YYYY-MM-DD | 파일명 | 내용 요약
 
+2026-05-12 | knowledge-bundle.js | Liby ingest 2026-05-09 batch step 1 — spine-related-arm-pain v2 신규 등록 (7 keys: spine-related-arm-pain·SAP·척추유발-상지통·cervical-radiculopathy·경추신경근병증·arm-pain·팔통증). 백로그 처리 1/4 day (05-09 신규 1건 완료, 업데이트 9건 다음 세션). 총 608 keys.
+
+2026-05-12 | by-disease/chronic-pain-integrative.md | 추가 — 오피오이드 처방 갱신 = 환자 통증 검증 신호; 거절 = 불신; 감량 대화 전 validation 선행·ICE 접근 [INSIGHTS] PMID:41574586 (출처 05-11, 과거 누락 복구)
+2026-05-12 | by-disease/hematuria.md | 추가 — HCRS + Oncuria 조합 방광암 선별: HCRS 단독 민감도 90.9%·NPV 97.8%; 미세혈뇨 병용 NPV 98.7%; 초진 외래 시행 가능 [CLINICAL] PMID:40846188 (출처 05-11, 과거 누락 복구)
+2026-05-12 | by-disease/hypertension.md | 추가 — 고립성 이완기 고혈압(IDH): 강압제 MACE 감소 기타 고혈압과 동등; GIM/FP/GP 직접 적용 등급 [CLINICAL] PMID:41941743 (출처 05-12)
+2026-05-12 | guidelines/deprescribing.md | 추가 — 정신과 약물 감약 낙상 감소: 고충실도 지역사회 OR 0.61·입원 OR 0.43; 저충실도·요양시설·전환기 효과 없음 [CLINICAL] PMID:41791728 (출처 05-12)
+2026-05-12 | by-disease/continuity-of-care.md | 추가 — SDM 블렌디드 훈련(e-learning+SP): OPTION12 19.4→37.7, 4SDM 9.2→17.0 (Cohen's d=2.39); SDM 기술 훈련으로 단기 2배 향상 [INSIGHTS] PMID:42104282 (출처 05-12)
+2026-05-12 | by-disease/chronic-cough.md | 추가 — CHS 패러다임: 삼두마차 배제 후 만성기침 = 신경 감작; amitriptyline·gabapentin·speech therapy·gefapixant 치료 지평 [CLINICAL — 조건부] PMID:39839174 (출처 05-12)
+2026-05-12 | 마커만 업데이트 (이미 처리됨) — PMID:41533404 ankle-sprain (05-02), PMID:42103083 olanzapine-OINV (05-10), PMID:41544278 geriatric-4ms (05-06), PMID:42095703 lifestyle-aspree (05-10), PMID:41657870 delayed-diagnosis (05-06)
+
 ---
 
+2026-05-15 | by-disease/heart-failure-pocus-ducs.md | 추가 — VExUS ≥2 vs ≤1 원내 사망률 14.1% vs 1.9%, OR 0.175, 99.91% 사후 확률; 베이즈 메타분석 5연구 565명 [CLINICAL — 조건부] PMID:41747972 (출처 05-15)
+2026-05-15 | by-disease/frailty.md | 추가 — 한국 허약 노인 Re-home 12주 전환기 케어: "완전 회복"이 아닌 "현재 건강 수용+일상 루틴 적응" 핵심; 보호자 조기 참여 중요 [CLINICAL — 조건부] PMID:41842916 (출처 05-15)
+2026-05-15 | by-disease/continuity-of-care.md | 추가 — 비계획 입원 위험인자(만성질환·돌봄 부재)·보호인자(GP 연속성·ACP·경험); 네덜란드 GP 포커스그룹 [CLINICAL — 조건부] PMID:42095496 (출처 05-15)
+2026-05-15 | by-disease/resistant-hypertension.md | 추가 — JAMA 2026 종합리뷰: 진성 10%·백의 37.5%·비순응 50%; 스피로노락톤 외래SBP -13.3mmHg (24 RCT 3485명); 신장차단술 -4.4mmHg [CLINICAL] PMID:41870448 (출처 05-15)
+2026-05-15 | guidelines/deprescribing.md | 추가 — 노르웨이 가정간호 결정서한 거의 미독; 실무는 케어플랜·구두협의 의존; 약물 안전 개선은 케어플랜 통합+환자참여 필요 [CLINICAL — 조건부] PMID:42132490 (출처 05-15)
+2026-05-15 | by-disease/vitamin-b12.md | 신규 — AFP 2025 실전 가이드: B12<180 확진·180-350 MMA 추가; 경구≒IM; B12>1000 악성종양 신호; 메트포르민·PPI 위험군 선별 [CLINICAL] PMID:40961307 (출처 05-15)
+2026-05-15 | by-disease/clinical-communication.md | 신규 — 글래스고 합의문 3 Overarching Tasks: 인지과부하·가정·취약성·권력비대칭 장벽 대응; 연결과신뢰·장벽완화·의미공동구성 [CLINICAL — 조건부] PMID:41762451 (출처 05-15)
+2026-05-15 | by-drug/glp1-selection-strategy.md | 추가 — GLP-1 RA 118,993명 1:1 매칭 코호트: 과다수면 1년 HR 1.21·5년 HR 1.23; 5년 철결핍 HR 1.11; ferritin 정기 점검 근거 [CLINICAL — 조건부] PMID:41867417 (출처 05-15)
+2026-05-15 | by-disease/anemia.md | 추가 — 동아시아 여성: MBL 높아도 ferritin·총체내철분과 연관 없음(NE 여성은 유의 연관); 한국 여성 IDA 원인 "월경 탓" 자동가정 금지 [CLINICAL — 조건부] PMID:42044770 (출처 05-15)
+
+---
+
+2026-05-11 | by-drug/glp1-selection-strategy.md | 추가 — GLP-1RA 36 RCT 메타분석: 체중감량 중 근육 손실 비율 중앙 34.9%, 68% 연구에서 25% 기준치 초과; 저항운동+단백질 섭취 교육 필수 [CLINICAL] PMID:41996180 (출처 05-10)
+2026-05-11 | by-disease/prescribing-cascade.md | 이미 처리됨 (2026-04-30 기록) — Scout 05-10 마커만 [✓] 업데이트 [CLINICAL] PMID:41949780
+2026-05-11 | guidelines/deprescribing.md | 추가 — 치매 요양원 ADRD 232,543명: 항우울제 51.6% 사용, PHQ-9≥10은 <5%; 다약제 강연관; deprescribing 적응증 점검 [CLINICAL] PMID:42089534 (출처 05-10)
+2026-05-11 | by-disease/migraine.md | 추가 — IHS 급성 편두통 가이드라인 AFP 요약: 트립탄·NSAIDs 1차, 항구토제 구역 시 병용, MOH 기준·예방 [CLINICAL] PMID:41839119 (출처 05-10)
+2026-05-11 | by-disease/msk-injection-therapy.md | 추가 — 초음파 유도 말초신경차단(USG-PNB) 건초염 경피 시술: 극상근·외측상과·슬개건·아킬레스건·족저근막 등 7부위 신경표적 해부학 프로토콜 [CLINICAL] PMID:41479369 (출처 05-11)
+2026-05-11 | by-disease/chronic-pain-integrative.md | 추가 — APPROACH 연구(n=3,306): PD-CIH 단독 vs +자기관리(요가·마음챙김·태극권) — 통증 간섭 동등(-0.62 vs -0.70); 자기관리 군 피로·정신건강·웰빙 주관 개선 더 많음 [CLINICAL] PMID:41771006 (출처 05-11)
+2026-05-11 | by-disease/palliative-pain.md | 추가 — 암성통증 BH 개입: 인지율 17.6%, 사용률 4.0%, 의사 권고 시 34.3% 수용 의향, OR 2.53; 능동 권고 필수 [CLINICAL] PMID:42105883 (출처 05-11)
+2026-05-11 | by-disease/frailty.md | 추가 — 지역사회 집합장소 참여 × 운동습관 없는 노인: 인지장애 HR 0.51; 운동 안 하는 고령 환자 경로당·모임 참여 인지 예방 전략 [CLINICAL] PMID:42105326 (출처 05-11)
+2026-05-11 | by-disease/epilepsy-elderly.md | 신규 — 노인 뇌전증 ASM 내약성: 신약(라모트리진·레베티라세탐·라코사미드 등) 구약(페니토인·카바마제핀) 대비 내약성 우수; 저용량·느린 증량·효소유도제 회피 [CLINICAL] PMID:41706289 (출처 05-11)
+2026-05-11 | guidelines/deprescribing.md | 추가 — 생활습관 의학 통합 일차의료 T2DM 감약: 6.3% 감약 달성, 메트포르민 감량/중단·인슐린 감량; BMI -2.25·HbA1c -13%; 심각한 이상반응 0건 [CLINICAL] PMID:41976866 (출처 05-11)
+
+---
+
+2026-05-10 | by-disease/fall-prevention-awv.md | 신규 — AWV 낙상 스크리닝 후속 관리 QI: SmartSet + 아웃리치 조합 → 후속 53.8%→67.8%, 노인의학 의뢰 7.5%→40.4% [CLINICAL] PMID:42089560 — 과거 누락 복구 (출처 05-07)
+2026-05-10 | by-disease/anemia.md | 추가 — Annals ITC 2026 IDA 업데이트: ferritin <45(염증없음)/<100(염증있음); 격일 경구철분; IV 철분 심부전·흡수불량 우선; IDA 확인 즉시 내시경+H.pylori+celiac 검색 [CLINICAL] PMID:41525691 — 과거 누락 복구 (출처 05-07)
+2026-05-10 | by-disease/osteoporosis.md | 추가 — 당뇨 노인 골다공증: T2DM FRAX 과소평가(1.2배 보정 권장); TZD 회피·metformin/DPP4i/GLP1RA 골안전; bisphosphonate·denosumab 유효 [CLINICAL] PMID:41854838 — 과거 누락 복구 (출처 05-07)
+2026-05-10 | guidelines/dash-diet-cvd.md | 신규 — DASH 식이 심혈관 1·2차 예방: 채소·과일·통곡물·저지방유제품·견과류 중심, 포화지방·소금·당 제한 — AFP 2026 근거 정리 [CLINICAL] PMID:41839101 — 과거 누락 복구 (출처 05-07)
+2026-05-10 | by-disease/palliative-depression-ketamine.md | 신규 — 완화의료 우울 케타민: IV NNT=3(1주), 효과 1~24h 발현; 에스케타민 FDA 승인 TRD·자살관념; 완화의료 안전 프로파일; 기대여명 짧은 환자 선호 [CLINICAL] PMID:41997505 — 과거 누락 복구 (출처 05-07)
+2026-05-10 | by-disease/uterine-fibroids.md | 신규 — 자궁근종 AFP RER: TVUS+TAUS 1차 영상; COC·LNG-IUD·tranexamic acid·GnRH 약물; 자궁절제술·근종절제술·UAE 수술 옵션; 임신보존 vs 확정 치료 분기 [CLINICAL] PMID:41118184 — 과거 누락 복구 (출처 05-07)
+2026-05-10 | by-disease/pocus-focus-cardiac.md | 추가 — GP POCUS 호흡곤란 심부전 감별: 특이도 38→88%, Cohen's κ 0.254→0.723; 폐 B-line + FoCUS 조합, 단기 훈련 GP 즉시 적용 [CLINICAL] PMID:41767524 (출처 05-10)
+2026-05-10 | by-disease/bladder-pain-syndrome.md | 신규 — BPS/IC AFP RER: 행동수정+골반저PT 1차→가바펜티노이드·아미트립틸린·항히스타민 경구→방광내주입·신경조절; 배제 진단; 증상일지 [CLINICAL] PMID:42101600 (출처 05-10)
+2026-05-10 | by-disease/palliative-pain.md | 추가 — 올란자핀 OINV 예방: 5mg×5일; CC율 79.4%·CR율 82.4%; 중증이상반응 없음; 단일군 탐색적 연구 [CLINICAL — 조건부] PMID:42103083 (출처 05-10)
+2026-05-10 | by-disease/frailty.md | 추가 — 건강노인 생활습관 복합교정 ASPREE(n=11,287, 중앙74세): ≥3요소 사망/치매/장애 HR 0.60, 건강수명 +10%; 지중해식·신체활동·비흡연·절주 [CLINICAL] PMID:42095703 (출처 05-10)
 2026-05-07 | by-disease/anticholinergic-burden.md | 신규 — 항콜린 부담 노인 처방 점검: ACB 1–2 저부하도 구강건조 OR 2.06 (ACB=0 대비), ACB≥3 OR 2.25 — 역치 하향 근거; 외래 처방 점검 루틴·교체 우선 약물 목록 (oxybutynin→mirabegron 등) [CLINICAL] PMID:41824280 — 과거 누락 복구 (출처 05-03)
 2026-05-07 | by-disease/neonatal-fever-pecarn.md | 신규 — 신생아 발열(≤28일) PECARN 예측 룰: 저위험 3기준(UA음성+PCT≤0.5+ANC≤4000) — 민감도 94.2%·NPV 99.4%·저위험군 세균성 수막염 0건; LP 선별 적용 공유의사결정 근거 [CLINICAL] PMID:41359314 — 과거 누락 복구 (출처 05-03)
 2026-05-07 | by-disease/asthma.md | 신규 — 경증 조절불량 천식 PRN ICS+SABA 전략: 부데소나이드+알부테롤 PRN이 알부테롤 단독보다 악화 감소 우월; 매일 ICS 순응도 불량 환자 대안 [CLINICAL] PMID:41839117 — 과거 누락 복구 (출처 05-03)
