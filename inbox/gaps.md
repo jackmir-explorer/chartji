@@ -19,8 +19,8 @@
 - [진단추론] anchoring 검증 — "이 한 수치가 현재 가설로 설명되는가?" 자문 / 가설로 설명 안 되는 1개 데이터가 진짜 단서
 - [가래 색·acute bronchitis] 누런 가래 = 세균감염 myth — 호중구 MPO 산물, Cochrane RCT에서 ABx 효과 예측 인자 아님 / acute bronchitis 90%+ 바이러스성, 가래 색·인후통 단독 ABx trigger 금지
 - [호흡기 vital] 외래 호흡기 증상에 SpO2·호흡수·맥박수 필수 — cheap & quick, CRB-65 적용 위한 최소 데이터 / 고령 호흡기 증상에 SpO2 누락은 결정적 gap
-- [CKD ABx 용량] 신배설 ABx(amox-clav 등) — 처방 전 최근 eGFR 확인 / eGFR <30 감량, 30~60 부분 조정 / clavulanate 간독성 고령 증가
-- [IDA 진단] MCV 정상범위(82.1 등 하한)도 IDA 배제 못함 — ferritin <30(또는 <15) 우선 확인 / 초기 IDA는 normocytic→microcytic 진행 / RDW·anisocytosis가 MCV보다 먼저 변함
+- [x] [CKD ABx 용량] 신배설 ABx(amox-clav 등) — 처방 전 최근 eGFR 확인 / eGFR <30 감량, 30~60 부분 조정 / clavulanate 간독성 고령 증가 (→ PMID 39428714, 2026-05-16)
+- [x] [IDA 진단] MCV 정상범위(82.1 등 하한)도 IDA 배제 못함 — ferritin <30(또는 <15) 우선 확인 / 초기 IDA는 normocytic→microcytic 진행 / RDW·anisocytosis가 MCV보다 먼저 변함 (→ PMID 41916414, 2026-05-16)
 - [x] [폐경 전 여성 IDA] 원인 자동 "월경" 가정 금지 — 5축 평가(월경·GI·malabsorption·약물·식이) / 40대 이상은 colon ca screening 연령 근접, GI workup 문턱 낮추기 (→ PMID 42044770, 2026-05-15)
 - [x] [GLP-1 RA 영양결핍] semaglutide 등 장기 사용 환자 — 식욕↓·위배출 지연 → iron·B12·protein 결핍 / 빈혈·피로 호소 시 약물 시작 시점과 timeline 비교 필수 (→ PMID 41867417, 42117035, 2026-05-15)
 - [만성 설사 + 빈혈] celiac·IBD·colon pathology 적극 감별 — 평가 전 IBS 가정 증상약(Dicetel·Norzyme·Fotagel) 처방 금지 / anti-tTG·CRP·FOBT·필요 시 내시경
