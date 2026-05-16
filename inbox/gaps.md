@@ -17,13 +17,13 @@
 - [두드러기 처방 금기] NSAID(COX-1→leukotriene shift, 20~30% 악화)·ACEi(angioedema)·opioid(mast cell degranulation) — 통증 없는 환자에 NSAID 처방 점검
 - [LAP+발열] 진단 전 steroid 금지 — 림프종 mask·자발성 TLS·감염 progression / 최소 CBC+diff·LDH·viral serology(EBV·CMV·HIV) 선행
 - [진단추론] anchoring 검증 — "이 한 수치가 현재 가설로 설명되는가?" 자문 / 가설로 설명 안 되는 1개 데이터가 진짜 단서
-- [가래 색·acute bronchitis] 누런 가래 = 세균감염 myth — 호중구 MPO 산물, Cochrane RCT에서 ABx 효과 예측 인자 아님 / acute bronchitis 90%+ 바이러스성, 가래 색·인후통 단독 ABx trigger 금지
+- [x] [가래 색·acute bronchitis] 누런 가래 = 세균감염 myth — 호중구 MPO 산물, Cochrane RCT에서 ABx 효과 예측 인자 아님 / acute bronchitis 90%+ 바이러스성, 가래 색·인후통 단독 ABx trigger 금지; 7증상 바이러스·세균 예측 모델(double-sickening 포함) (→ PMID 41833564, 2026-05-17)
 - [호흡기 vital] 외래 호흡기 증상에 SpO2·호흡수·맥박수 필수 — cheap & quick, CRB-65 적용 위한 최소 데이터 / 고령 호흡기 증상에 SpO2 누락은 결정적 gap
 - [x] [CKD ABx 용량] 신배설 ABx(amox-clav 등) — 처방 전 최근 eGFR 확인 / eGFR <30 감량, 30~60 부분 조정 / clavulanate 간독성 고령 증가 (→ PMID 39428714, 2026-05-16)
 - [x] [IDA 진단] MCV 정상범위(82.1 등 하한)도 IDA 배제 못함 — ferritin <30(또는 <15) 우선 확인 / 초기 IDA는 normocytic→microcytic 진행 / RDW·anisocytosis가 MCV보다 먼저 변함 (→ PMID 41916414, 2026-05-16)
 - [x] [폐경 전 여성 IDA] 원인 자동 "월경" 가정 금지 — 5축 평가(월경·GI·malabsorption·약물·식이) / 40대 이상은 colon ca screening 연령 근접, GI workup 문턱 낮추기 (→ PMID 42044770, 2026-05-15)
 - [x] [GLP-1 RA 영양결핍] semaglutide 등 장기 사용 환자 — 식욕↓·위배출 지연 → iron·B12·protein 결핍 / 빈혈·피로 호소 시 약물 시작 시점과 timeline 비교 필수 (→ PMID 41867417, 42117035, 2026-05-15)
-- [만성 설사 + 빈혈] celiac·IBD·colon pathology 적극 감별 — 평가 전 IBS 가정 증상약(Dicetel·Norzyme·Fotagel) 처방 금지 / anti-tTG·CRP·FOBT·필요 시 내시경
+- [x] [만성 설사 + 빈혈] celiac·IBD·colon pathology 적극 감별 — 평가 전 IBS 가정 증상약(Dicetel·Norzyme·Fotagel) 처방 금지 / anti-tTG·CRP·FOBT·필요 시 내시경 (→ PMID 41770539, 2026-05-17)
 - [x] [Iron 보충 패러다임] 격일 투여 — daily보다 hepcidin biology상 효과적 / vitamin C 동반·공복 복용 / 만성 IDA 처방 default 변경 (→ PMID 42024457, 2026-05-13)
 - [x] [어지러움 평가] TiTrATE framework — Timing(episodic vs continuous)·Triggers(positional·spontaneous·postural)·Associated sx·Targeted exam / 4 type 분류(vertigo·presyncope·disequilibrium·lightheadedness)별 표적 검사(Dix-Hallpike·기립성 BP·ECG·신경학적/gait·심리·약물) / "어지러움 ns" 기록 금지, 분류부터 시작 (→ PMID 42108535, 2026-05-13)
 - [x] [TKI 부작용 profile] CML 환자 TKI별 CV·장기 부작용 — ponatinib·nilotinib vascular event(ATE·PAD·뇌졸중), dasatinib pleural effusion·PAH, imatinib edema·근경련·갑상선 영향 / 비특이증상(어지러움·피로) 호소 시 TKI 부작용 vs 질병 자체 vs 별개 원인 분기, 의심 시 혈액내과 환류 (→ PMID 41674449, 2026-05-13)
