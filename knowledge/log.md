@@ -15,6 +15,17 @@
 
 ---
 
+2026-05-17 | by-disease/occupational-msk-upper-extremity.md | 신규 — 직업성 상지 4대 MSK(CTS·외측상과염·회전근개건병증·방아쇠수지): AFP 진단 검사(Phalen·Tinel·drop arm·Neer)·보존요법·코르티코스테로이드 주사·직업복귀 권고 [CLINICAL] PMID:40378326 (출처 05-16)
+2026-05-17 | by-disease/palliative-care-primary-screening.md | 신규 — 일차의료 완화의료 선별 25연구 범위 리뷰: Surprise Question + EHR 통합이 핵심; 장벽(시간·의심·자원)·촉진요인(임상 챔피언·조기 재정의) [INSIGHTS] PMID:41765292 (출처 05-16)
+2026-05-17 | by-disease/diabetes-dyslipidemia.md | 추가 — T2DM 스타틴 1차 예방: QRISK3 저위험(<10%)에서도 전사망 RR 0.80·주요CVD RR 0.78 유의 감소; T2DM 자체가 독립 처방 적응증 [CLINICAL] PMID:41461087 (출처 05-16)
+2026-05-17 | by-disease/diabetes-prevention.md | 신규 — AI-DPP vs 인간코치 DPP Phase 3 RCT: 비열등성 충족(31.7% vs 31.9%); 참여율 AI 93.4%>인간 82.7%; 당뇨전단계+과체중 처방 근거 [CLINICAL] PMID:41144242 (출처 05-16)
+2026-05-17 | by-disease/depression-screening.md | 추가 — SDOH→만성질환 노인 우울: 저교육 HR 1.36·저소득 HR 1.10·경제적비활동 HR 1.17; PHQ+SDOH 동시 파악 스크리닝 강화 [CLINICAL — 조건부] PMID:41919405 (출처 05-16)
+2026-05-17 | by-disease/anemia.md | 추가 — IRON-5 철결핍 스크��닝: 5문항(채식·과다월경·회피·철분제 없음·호르몬 피임 없음) ≥3점 민감도 74%·특이도 57%; MCV 정상이어도 ferritin 먼저 [CLINICAL] PMID:41916414 (출처 05-16)
+2026-05-17 | by-disease/CKD.md | 추가 — CKD 노인 고용량 항바이러스 → AKI RR 3.83(절대위험<1%); valacyclovir·famciclovir eGFR별 감량 루틴 필수; 피부 호전 중에도 신기능 추적 [CLINICAL] PMID:39428714 (출처 05-16)
+2026-05-17 | 마커만 업데이트 (이미 처리됨) — PMID:42070202 mirabegron (05-07), PMID:42068533 deprescribing-attitudes (05-07)
+
+---
+
 2026-05-15 | by-disease/heart-failure-pocus-ducs.md | 추가 — VExUS ≥2 vs ≤1 원내 사망률 14.1% vs 1.9%, OR 0.175, 99.91% 사후 확률; 베이즈 메타분석 5연구 565명 [CLINICAL — 조건부] PMID:41747972 (출처 05-15)
 2026-05-15 | by-disease/frailty.md | 추가 — 한국 허약 노인 Re-home 12주 전환기 케어: "완전 회복"이 아닌 "현재 건강 수용+일상 루틴 적응" 핵심; 보호자 조기 참여 중요 [CLINICAL — 조건부] PMID:41842916 (출처 05-15)
 2026-05-15 | by-disease/continuity-of-care.md | 추가 — 비계획 입원 위험인자(만성질환·돌봄 부재)·보호인자(GP 연속성·ACP·경험); 네덜란드 GP 포커스그룹 [CLINICAL — 조건부] PMID:42095496 (출처 05-15)

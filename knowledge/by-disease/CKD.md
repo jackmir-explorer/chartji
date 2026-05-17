@@ -153,4 +153,52 @@ CKD G3 환자 추적 시 **시스타틴C 추가 검사 권장:**
 - eGFR < 30 또는 빠른 감소 → 신장내과 의뢰
 - 투석·이식 고려 단계 → 신장내과 SDM 조기 시작
 
+---
+
+## CKD 노인 항바이러스제 고용량 → AKI 위험 RR 3.83 [CLINICAL]
+
+> [출처: Olar P et al. Higher dose antiviral therapy for herpes infections is associated with a risk of serious adverse events in older adults with chronic kidney disease. Pharmacol Res Perspect. 2024 Dec;12(6):e70028. PMID:39428714, DOI:10.1002/prp2.70028]
+> 온타리오 코호트 (2008-2022), ≥66세 CKD 외래 환자, 경구 acyclovir·valacyclovir·famciclovir 신규 처방. 역확률치료가중(IPTW) 성향점수 보정.
+
+**핵심 수치 (CKD 하위코호트 — lab 확인 AKI):**
+
+| 비교 | 사건수 | 가중 RR (95% CI) | 절대위험 |
+|---|---|---|---|
+| 고용량 | 70/8,407 (0.83%) | **3.83 (1.87–7.87)** | |
+| 표준용량 | 18/8,230 (0.22%) | 참조 | |
+
+- 절대위험 차이: 0.62% (95% CI 0.37–0.86%) — 낮지만 CKD 환자에서 임상적 유의
+- 입원 AKI (주요 복합 결과): 전체 코호트에서 유의한 차이 없음 (lab 기반만 유의)
+
+**대상 약물 및 eGFR별 용량 조정 원칙:**
+
+[가이드라인 default 인용: 각 약물 허가사항 / Lexicomp] — 논문에 세부 감량표 포함 안 됨
+
+| 약물 | CKD eGFR별 감량 기준 |
+|---|---|
+| Valacyclovir (대상포진) | eGFR 30–49: 1g BID; eGFR 10–29: 1g QD; eGFR <10: 500mg QD |
+| Famciclovir (대상포진) | eGFR 40–59: 500mg BID; eGFR 20–39: 500mg QD; eGFR <20: 250mg QD |
+| Acyclovir (경구, 단순헤르페스) | eGFR 25–50: 용량 조정; <25: 추가 감량 |
+
+**외래 처방 체크리스트 — CKD 환자 항바이러스 처방 시:**
+
+```
+1. 처방 전 최근 eGFR 확인 (3개월 이내 권장)
+2. 대상포진·단순헤르페스 처방:
+   ・ eGFR ≥60: 표준용량 가능
+   ・ eGFR 30-59: 중간 감량 단계 적용
+   ・ eGFR <30: 최대 감량 적용
+3. 처방 후 7-14일 내 신기능 추적
+   ・ 피부 병변 호전 중에도 신기능 악화 가능 — 재확인 필수
+4. 재택 노인: 최근 eGFR 미확인 시 처방 전 반드시 확인
+```
+
+**한계:**
+- 신규 처방 코호트 — 의도적 고용량 vs 처방 오류 구분 어려움
+- 절대위험 낮음 (<1%) — 예방 근거이지 과도한 처방 회피 아님
+
+[초록 기반 — 전문 미확인]
+
+---
+
 관련: [[ckd-monitoring]], [[diabetes]], [[heart-failure]]

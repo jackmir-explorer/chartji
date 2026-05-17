@@ -100,8 +100,41 @@ relations: []
 
 ---
 
+---
+
+## T2DM 스타틴 1차 예방 — QRISK3 저위험군 포함 전층 유효 [CLINICAL]
+
+> [출처: Yan VKC et al. Effectiveness and Safety of Statins in Type 2 Diabetes According to Baseline Cardiovascular Risk: A Target Trial Emulation Study. Ann Intern Med. 2025 Dec 30;179(2):157-167. PMID:41461087, DOI:10.7326/ANNALS-25-00662]
+> UK 일차의료 실제 데이터(IQVIA MRD), target trial emulation, T2DM 25-84세, 10년 추적 (2005-2016). 스타틴 시작군 vs 비시작군 1:4 성향점수 매칭.
+
+**핵심 결과:**
+
+| QRISK3 층 | 전사망 RR (95% CI) | 주요 CVD RR (95% CI) |
+|---|---|---|
+| **저위험 (<10%)** | **0.80 (0.67-0.97)** | **0.78 (0.66-0.91)** |
+| 중등도 (10-19%) | 유의 감소 | 유의 감소 |
+| 고위험 (20-29%) | 유의 감소 | 유의 감소 |
+| 매우 고위험 (≥30%) | 유의 감소 | 유의 감소 |
+
+- **저위험군 절대 위험차**: 전사망 -0.53%, 주요 CVD -0.83% (10년)
+- 근병증: 중등도 층에서 약간 증가 (저위험·고위험층 없음)
+- 간독성: 모든 층에서 유의한 증가 없음
+
+**임상 의의:**
+
+> **T2DM 자체가 독립적 스타틴 처방 적응증** — QRISK3 10년 위험이 낮아도 예외 없음.
+
+- "심혈관 위험이 낮아서 스타틴이 필요 없다"는 상담 관행 수정 근거
+- 당뇨 진단 시 QRISK3 수치와 무관하게 스타틴 필요성 상담 권고
+- 안전성: 근병증·간독성 증가 없음 → 일반 인구 대비 추가 위험 없음
+
+[초록 기반 — 전문 미확인]
+
+---
+
 ## 관련 엔트리
 
 - [[glp1-selection-strategy]] — GLP-1 RA의 지질·심혈관 효과
 - [[sglt2-inhibitors]] — SGLT2 억제제 + 심혈관 보호
 - [[MASH]] — 지방간 동반 당뇨 지질 관리
+- [[diabetes]] — T2DM 외래 관리 본체
