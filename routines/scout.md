@@ -1,15 +1,29 @@
-# Routine: Scout (Daily PubMed Radar)
+# Routine: Scout (Problem-Based Scout)
 
-## 실행 주기
-매일 오전 6:00 (KST) 자동 실행
+## 핵심 원칙 (2026-05-17 재편)
+전문의 시험공부·외래진료가 1순위. Scout는 그 둘에서 더 파고들어야 할
+개념에 대해서만 논문 리뷰를 제공한다. **매일 자동 발행하는 push형 radar 폐기.**
+`inbox/gaps.md`는 "비워야 할 할 일 목록"이 아니라 "원할 때 꺼내 쓰는 주차장"이다.
+미해소가 default·정상 — 소진 의무 없음.
+
+## 실행 모델
+- **on-demand (기본)**: 미르가 세션에서 호출할 때만 발화.
+  - `scout [시험] 부정맥 초기대응` 식으로 직접 개념 지정, 또는
+  - `inbox/gaps.md` 에 항목 추가 후 `scout` 호출
+  - `[시험]` prefix 항목 자동 우선 처리
+- **주1회 안전망 (조건부)**: gaps.md에 미해소(`[x]` 아닌) 항목이 있을 때만 발화.
+  - 가장 오래된 ≤3건만 (`[시험]` prefix 우선) 처리
+  - 영역 cycling·자체 검색어 생성 **금지** — 기존 gap 항목만 처리
+  - 미해소 항목 없으면 **조용히 종료** (보고서 생성 안 함)
+
 → 결과는 `claude/scout-YYYY-MM-DD` 브랜치에 커밋되어 PR 생성 (main ← head)
 → 미르가 모바일 GitHub 앱 알림으로 PR 확인 → 원탭 머지
 → main 반영된 파일에서 [o] 체크 (Deep Extract 대상으로 선택)
 → Deep Extract Routine 이 정오 12:00 (KST) 에 [o] 항목 처리
 
 ## 목적
-일차의료 외래 의사에게 유용한 최신 논문을 자동 탐색해
-`inbox/scout/YYYY-MM-DD.md` 에 저장한다.
+시험공부·외래진료에서 미르가 부딪힌 구체적 문제(`inbox/gaps.md`)에 대해
+PubMed에서 타깃 논문을 찾아 `inbox/scout/YYYY-MM-DD.md` 에 저장한다.
 미르가 ⭐ 항목을 선택하면 Deep Extract Routine이 정식 ingest한다.
 
 ---
@@ -18,8 +32,8 @@
 
 ### Step 0 — 오늘 날짜 결정 (KST 기준, 신규 생성 우선)
 
-⚠ 시간대 주의: cron이 UTC 21:00 (= KST 06:00)에 실행되므로,
-runner의 기본 "오늘"이 UTC 기준으로 어제일 수 있다.
+⚠ 시간대 주의: 호출 시점 runner의 기본 "오늘"이 UTC 기준이면
+KST와 어긋날 수 있다 (특히 주1회 안전망이 UTC 야간에 돌 때).
 **파일명에 사용하는 "오늘"은 반드시 한국 표준시(KST, UTC+9) 기준이다.**
 
 Bash로 결정:
@@ -34,230 +48,84 @@ echo "Scout 대상 날짜 (KST): $TODAY"
 - `inbox/scout/$TODAY.md` 가 **이미 존재하면 → 현재 run 종료** (덮어쓰기·자동 보완 금지, 전날 파일을 잘못 수정하는 사고 방지)
 - 같은 날짜 재실행이 필요하면: 미르가 기존 파일을 `inbox/scout/archive/` 로 이동 후 재실행
 
-### Step 1 — 슬롯 할당 (2026-04-29 Mir-Tier 1 재편 / 4-29 patch는 흡수·DEPRECATED / 2026-05-10 1-E gaps 슬롯 신설)
+### Step 1 — Gaps 기반 탐색 (2026-05-17 본체 승격)
 
-> 본 routine은 미르의 임상 핵심영역(Mir-Tier 1)에 정렬된다.
-> source of truth: `~/.claude/projects/.../memory/user_clinical_focus.md` + `knowledge/scope.md` Mir-Tier 1 섹션.
-> 4-29 다양성 패치(영역 cap·0순위 풀)는 본 재편으로 흡수 — DEPRECATED, 아래 1-A~1-D로 대체.
-> **2026-05-10**: 1-E gaps 슬롯 신설. 미르 직접 input(`inbox/gaps.md`) 기반 탐색이 영역 cycling보다 우선. gaps 있는 날 1-D Tier 2가 양보 (4-29 Mir-T1 매일 7건 의무 유지).
-**1-A. 영역 내부 세부 키워드 추출 (영역간 cap 폐기)**
+`inbox/gaps.md`가 유일한 입력원. 영역 cycling·자체 검색어 생성 없음 —
+미르가 던진 문제만 처리한다. (구 1-A~1-D 영역 cycling·"매일 7건 의무"는 본 재편으로 폐기)
 
-`knowledge/log.md` 마지막 30개 항목 → Mir-Tier 1 7영역 각각의 빈도 TOP 1 세부 키워드 추출.
+#### 1-1. 대상 항목 선정
 
-영역간 cap은 **폐기** (1-B Mir-Tier 1 슬롯 분배가 자동 보장). 1-A는 영역 **내부** 세부 키워드 도구로만 사용:
-
-```
-출력 형식 (7줄):
-POCUS·초음파 중재: {세부 키워드}
-비암성 만성통증·근골격: {세부 키워드}
-암성통증·완화의료: {세부 키워드}
-재택의료·노인의학: {세부 키워드}
-만성질환 본체 확장: {세부 키워드}
-임상약물학·Deprescribing: {세부 키워드}
-생활습관의학: {세부 키워드}
-```
-
-해당 영역 log.md 항목이 없으면 영역 default 키워드 사용 (`knowledge/scope.md` Mir-Tier 1 표 "세부 키워드" 컬럼 참조).
-
-**1-B. Mir-Tier 1 슬롯 할당 (매일 7건 의무)**
-
-매일 7영역 × 1슬롯 = 7건 의무 cover:
-
-| # | 영역 | 검색 키워드 (default) | Anchor 저널 |
-|---|---|---|---|
-| 1 | POCUS·초음파 중재 | `POCUS OR ultrasound-guided` | J Ultrasound Med · AFP |
-| 2 | 비암성 만성통증·근골격 | `chronic non-cancer pain OR neuropathic pain` | Pain Medicine · AFP |
-| 3 | 암성통증·완화의료 | `palliative care OR cancer pain` | J Pain Symptom Manage · AFP |
-| 4 | 재택의료·노인의학 | `home-based care OR frailty` | J Am Geriatr Soc · Drugs & Aging |
-| 5 | 만성질환 본체 확장 | `multimorbidity OR chronic disease management` | Ann Int Med ITC · NEJM Clinical Practice |
-| 6 | 임상약물학·Deprescribing | `deprescribing OR drug interaction OR opioid stewardship` | Drugs & Aging · BMJ Practice Pointers |
-| 7 | 생활습관의학 | `lifestyle medicine OR exercise prescription` | AFP · JAMA RCE |
-
-각 슬롯 검색 키워드 = 1-A 추출 키워드 + default 키워드 OR 조합.
-
-**Fallback**: 특정 영역에서 후보가 없거나 모두 ✕ 판정이면 슬롯 비우고 footer에 `{영역} 발행 부족` 기록 + 1-D Tier 2로 자동 이전(추가 1건).
-
-**1-C. 횡단 모듈 슬롯 (3일 cycle)**
-
-`day = (UNIX day epoch) % 3`:
-- `0` → **A. 통증·완화·노인 정신건강** (`chronic pain depression OR palliative adjustment disorder OR geriatric depression`)
-- `1` → **B. Communication & Counseling** (`motivational interviewing OR breaking bad news OR shared decision making`)
-- `2` → **C. Diagnostic Reasoning** (`clinical problem solving OR diagnostic reasoning OR clinical pearls`)
-
-Anchor 저널: NEJM Clinical Problem-Solving · JAMA Patient Page · AFP. 1슬롯.
-
-**1-D. Tier 2 라운드로빈 (8일 cycle)**
-
-`day = (UNIX day epoch) % 8`:
-
-| Day % 8 | 영역 | 검색 키워드 |
-|---|---|---|
-| 0 | 호흡기 | `respiratory primary care` (4-24~28 보강 — 추가 시 빈도 낮춤) |
-| 1 | 소화기 | `gastroenterology primary care` |
-| 2 | 이비인후과 | `otolaryngology primary care` |
-| 3 | 내분비외 만성질환 | `endocrinology primary care` |
-| 4 | 비뇨·부인 기본 | `urology OR gynecology primary care OR menopause OR abnormal uterine bleeding` |
-| 5 | 예방접종·건강검진 | `adult vaccination OR cancer screening primary care` |
-| 6 | **외래응급** | `anaphylaxis OR hypoglycemia OR arrhythmia initial OR seizure OR laceration repair OR burn first aid primary care` |
-| 7 | 심혈관·신경 | `cardiology OR neurology primary care OR headache OR dementia OR stroke prevention` |
-
-직전 7일 scout 보고서 footer "Tier 2: [{영역}]" 회피해 cycling 보장. Anchor 저널: AFP · BMJ PP · NEJM CP · JAMA RCE · Ann Int Med ITC. 1슬롯.
-
-**합계**: 1-B 7건 (의무) + 1-C 1건 + 1-D 1건 = **9건**. ⭐ 8~10 목표 안전 범위.
-
----
-
-### (이전 4-29 patch 1-A·1-B는 본 재편으로 흡수)
-
-기존 0순위 풀(피부·두통·갱년기·불면) 매핑:
-- 피부과 → Tier 2 (1-D Day%8 별도 슬롯 없음, Anchor 저널·횡단 A에서 자연 등장)
-- 두통 → Mir-T1 부속 A (1-C) + Tier 2 day=7 (심혈관·신경)
-- 갱년기·월경이상 → Tier 2 day=4 (비뇨·부인 기본)
-- 불면·수면 → Mir-T1 7) 생활습관 (1-B #7) + 부속 A (1-C, 노인 수면)
-
-상세 매핑은 `knowledge/scope.md` "기존 0순위 풀 → Mir 매핑" 표 참조.
-
----
-
-### (이하 deprecated 1-B 라운드로빈 풀 정의는 4-29 patch 기록 보존용 — 본 routine 동작에서는 사용 안 함)
-
-`knowledge/scope.md` Tier 1~3 미터치/공백 영역에서 **라운드로빈 1개 분야 선택** (랜덤 아님 — 직전 7일 scout 파일에서 사용된 분야는 풀에서 제외해 cycling).
-
-**공백 풀 (2026-04-29 갱신, 우선순위 순)**:
-
-| 우선순위 | 분야 | 사유 |
-|---|---|---|
-| **🔴 0순위 미터치** | **피부과** | 4-22~29 ⭐ 0건 — Tier 2 외래 빈발인데 한 번도 ⭐ 안 됨 |
-| **🔴 0순위 미터치** | **두통/신경과** | 4-22~29 ⭐ 1건(소아 뇌진탕만) — 편두통·긴장성·CCH·치매·뇌졸중 모두 공백 |
-| **🔴 0순위 미터치** | **갱년기·월경이상** | 4-22~29 ⭐ 1건(성호르몬 VTE만) — 부인과 본체 공백 |
-| **🔴 0순위 미터치** | **불면·수면** | 4-22~29 ⭐ 0건 — Tier 2 정신건강 + 생활습관 |
-| 🟡 보강 진행 | 생활습관 의학 | 운동·수면·스트레스·식이·절주 — 금연 외 전무 |
-| 🟡 보강 진행 | 근골격·통증 | 만성요통·손목굴 시작 — 두통 외 관절통·통풍·신경병증 |
-| 🟡 보강 진행 | 건강검진 | FIT만 — 유방·자궁·간·갑상선·전립선 등 |
-| 🟡 보강 진행 | 갑상선·골다공증 | 내분비 본체 공백 |
-| 🟡 보강 진행 | 고혈압 본체 | resistant-HTN만 — 1차 처방·타깃 등 |
-| 🟡 보강 진행 | 이상지질혈증 본체 | 당뇨 동반만 — 일반 statin·non-statin 선택 |
-| 🟡 보강 진행 | 비뇨의학 본체 | 전립선·배뇨장애·성기능 |
-| 🟢 보강됨 | 호흡기 | 4-24~28 활발 — 다음 cycle에서 빈도 낮춤 |
-| 🟢 보강됨 | 소화기 | 4-29 IBS·기능성 소화불량 추가 — 다음 cycle 빈도 낮춤 |
-| 🟢 보강됨 | 노인의학 | frailty·DOAC·deprescribing — 보강됨 |
-
-**선택 알고리즘**:
-1. 🔴 0순위 미터치 4영역(피부·두통·갱년기·불면) **우선 cycling** — 4일에 한 번씩 라운드로빈
-2. 4영역 모두 1회 이상 cycling 후 → 🟡 보강 진행 영역으로 이동
-3. 직전 7일 scout 보고서의 "공백채우기" 메모를 읽어 같은 분야 재선택 회피
-
-**Tier 3 랜덤 탐색(Step 2 Tier 3)과는 별도** — 합쳐 2개 탐색 방향.
-**목적**: scope.md Tier 2 미터치 영역이 자기강화 loop로 영구 공백화되는 것을 차단 (2026-04-29 다양성 검증 결과).
-> **2026-05-10 보강**: 본 공백 풀의 우선순위 표는 historical 기록. **현재 우선순위는 `knowledge/MAP.md` § "잔여 우선 공백"이 single source of truth** — MAP.md가 갱신될 때마다 1-D Tier 2 슬롯이 동적으로 따라감. 본 표의 0순위/보강 진행/보강됨 라벨은 MAP.md에서 재산정.
-### Step 1-E — Gaps 기반 슬롯 (2026-05-10 신설, 매일 0~3건)
-`inbox/gaps.md`를 읽어 미르의 임상 빈틈을 Scout 탐색에 반영한다. **미르 결단 (2026-05-10)**:
-- 환자 식별 정보 격리 불필요 — 미르 본인 통제로 신뢰 가능 (CLO 우려 무효)
-- 격일 rotation 폐기, **gaps 슬롯이 1-D Tier 2를 양보** 받는 구조
-- MAP.md 잔여 공백이 우선순위 single source — 0순위 풀 강제 cycling 불필요
-
-#### 파싱
 1. `inbox/gaps.md`에서 `- ` 로 시작하는 줄 중 `[x]`가 아닌 항목 수집
-2. 파일 아래쪽(최근 추가)부터 최대 **3건** 선택
-3. 환자 식별 정보(이름·나이·날짜·기관명) 발견 시 **즉시 중단 + 미르에게 보고** (격리 원칙)
+2. **`[시험]` prefix 항목 자동 우선** — 시험공부가 1순위. `[시험]` 항목을 큐 맨 앞으로 정렬
+3. 처리 건수:
+   - **on-demand + 미르가 개념 지정**: 지정한 문제만 (gaps.md 추가 여부 무관)
+   - **on-demand (지정 없음)**: `[시험]` 우선 → 최근 추가 순, 미르가 멈추라 할 때까지 또는 상한 ≤5
+   - **주1회 안전망**: 가장 오래된 ≤3건만 (`[시험]` 우선). 미해소 0건이면 보고서 생성 없이 종료
+4. 환자 식별 정보 격리 불필요 (2026-05-10 미르 결단 — 본인 통제로 신뢰)
 
-#### 키워드 추출 및 검색
-각 gap 항목에서:
+#### 1-2. 키워드 추출 및 검색
+
+각 항목에서:
 1. 의학 개념 추출 (질환·약물·술기·감별진단 등)
-2. 대괄호 prefix 있으면 1순위 키워드로 활용 (`- [POCUS] IVC collapsibility 해석` → "POCUS" + "IVC" + "collapsibility")
+2. 대괄호 prefix는 1순위 키워드로 활용
+   - `[시험]`은 **우선순위 마커일 뿐 검색 키워드 아님** — 항목 본문에서 개념 추출
+   - `[POCUS] IVC collapsibility 해석` → "POCUS" + "IVC" + "collapsibility"
 3. PubMed 쿼리:
    - `"{개념}" AND (primary care OR family medicine OR general practice) 2024[dp]:2026[dp]`
    - 결과 부족 시: `"{개념}" review 2023[dp]:2026[dp]`
-4. 기존 Step 3 필터링(⭐/✕)과 동일 기준 적용
+   - 시험 항목은 review·guideline·핵심 정리 우선 (회독 적합성)
+4. Step 2 Anchor 저널은 보조 참조 (개념 영역 저널 우선 검색에만 활용)
+5. Step 3 필터링(⭐/✕) 동일 기준 적용
 
-#### Scout 보고서 표기
-⭐ 판정 논문에 gap 출처 명시:
-N. {제목 축약}
-저널·PMID·한 줄·왜 유용 (기존 형식)
-Gap: 노인 불면 trazodone vs 멜라토닌 1차 용량?
-추출 키워드: 노인 불면, trazodone, melatonin, 1차 처방
-Deep Extract: [ ]
-추출 키워드 라인은 **필수** — 한 줄 gap → PubMed 변환 정확도 검증 가능 (CMO 우려 대응).
+#### 1-3. gaps.md 마커 갱신
 
-#### gaps.md 마커 갱신
-- ⭐ 논문 배정 시 → `- [x] {원문}`으로 자동 변경
-- 검색했으나 적합 논문 없음 → 미처리 유지, 보고서 footer에 `gap 미해소: {항목}` 기록 (다음 날 재시도)
-- `[x]` 30건 초과 시 → Archive 섹션으로 자동 이동
-- **7일 연속 미해소 항목** → 보고서 footer에 `⚠ gap 7일 미해소: {항목} — 키워드 재작성 권고` 알림
+- ⭐ 논문 배정 시 → `- [x] {원문} (→ PMID {번호}, {날짜})` 으로 자동 변경
+- 검색했으나 적합 논문 없음 → 미처리 유지, 보고서 footer에 `gap 미해소: {항목}` 기록 (다음 호출 시 재시도 가능)
+- `[x]` 30건 초과 시 → gaps.md Archive 섹션으로 자동 이동
+- (구 "7일 연속 미해소 ⚠ 경고" 폐지 2026-05-17 — 미해소는 default·정상, 잔소리 엔진 제거)
 
-#### 슬롯 조정 (gaps 양보 메커니즘)
-| 슬롯 | gaps 있는 날 | gaps 없는 날 |
-|---|---|---|
-| 1-B Mir-Tier 1 | 7건 (유지 — 4-29 매일 의무) | 7건 |
-| 1-C 횡단 (3일 cycle) | 1건 | 1건 |
-| 1-D Tier 2 (8일 cycle) | **0건** (gaps에 양보) | 1건 |
-| **1-E Gaps** | **N건 (1≤N≤3)** | 0건 |
-| 합계 | 8~10건 | 9건 |
-규칙:
-- N=1·2: Tier 2가 0건 양보, 합 8~9건
-- N=3: Tier 2가 0건 양보, 합 10건 (4-29 상한 일치)
-- gaps 0건: 1-D Tier 2 1건 정상 진행
-**Tier 2 양보 회복**: 1-D는 8일 cycle이므로 1~2일 양보해도 cycle 내 회복 가능 (CMO 우려 대응).
-**우선순위 사유**: gaps는 미르가 실제 진료에서 부딪힌 빈틈 — 영역 cycle보다 임상 학습 ROI 높음. 단 1-B Mir-T1 7건 의무는 절대 불가침 (4-29 미르 명시).
+### Step 2 — 탐색 (Anchor 저널 보조 참조)
 
-### Step 2 — 탐색 (Anchor 저널 + 영역 매핑 — 4-29 재편)
+Step 1-2에서 만든 쿼리를 PubMed에 실행한다. 개념 영역에 해당하는
+Anchor 저널이 있으면 우선 검색 (1차의료 적용성 높은 review·guideline 우선):
 
-기존 3-Tier 구조(Tier 1 Anchor 저널 / Tier 2 귀납 / Tier 3 랜덤) 폐기. 새 구조: **Step 1 슬롯별 Anchor 저널 매핑**.
-
-**Anchor 저널 영역 매핑** (Step 1 슬롯별 우선 검색 저널):
-
-| 슬롯 | 저널 |
+| 개념 영역 | 우선 저널 |
 |---|---|
-| 1-B #1 POCUS | J Ultrasound Med · AFP |
-| 1-B #2 비암성 만성통증·근골격 | Pain Medicine · AFP |
-| 1-B #3 암성통증·완화의료 | J Pain Symptom Manage · AFP |
-| 1-B #4 재택의료·노인의학 | J Am Geriatr Soc · Drugs & Aging |
-| 1-B #5 만성질환 본체 확장 | Ann Int Med ITC · NEJM Clinical Practice |
-| 1-B #6 임상약물학·Deprescribing | Drugs & Aging · BMJ Practice Pointers |
-| 1-B #7 생활습관의학 | AFP · JAMA RCE |
-| 1-C 횡단 A·B·C | NEJM Clinical Problem-Solving · JAMA Patient Page · AFP |
-| 1-D Tier 2 (8일 cycle) | AFP · BMJ PP · NEJM CP · JAMA RCE · Ann Int Med ITC |
+| POCUS·초음파 | J Ultrasound Med · AFP |
+| 통증·완화 | Pain Medicine · J Pain Symptom Manage · AFP |
+| 재택·노인 | J Am Geriatr Soc · Drugs & Aging |
+| 만성질환·약물 | Ann Int Med ITC · Drugs & Aging · BMJ Practice Pointers |
+| 진단추론·일반 | NEJM Clinical Problem-Solving · AFP · BMJ PP · JAMA RCE |
 
-**검색 쿼리 형식**:
-```
-"{저널명}"[Journal] AND ({1-A 추출 키워드} OR {default 키워드}) 2025[dp]:2026[dp]
-```
+저널 매핑은 강제 아님 — 개념이 표에 안 맞으면 일반 PubMed 검색.
 
 **대체 검색 (논문 미발견 시)**:
-- 영역 default 키워드 단독 + `primary care review 2024[dp]:2026[dp]`
-- review·guideline·textbook 우선 (1차의료 외래 적용성 높음)
+- 개념 키워드 단독 + `primary care review 2024[dp]:2026[dp]`
+- review·guideline·textbook 우선 (1차의료/시험 적용성 높음)
 
-**탐색 부하**: 매일 평균 7저널 × 1~2 쿼리 = ~10 쿼리. 기존 5 anchor + Tier 2 + Tier 3 ≈ 7 쿼리와 비슷한 규모.
+※ 전체 스코프 정의: `knowledge/scope.md` 참조
 
-※ 전체 스코프·영역 정의: `knowledge/scope.md` Mir-Tier 1 섹션 참조
-
-### Step 2-B — 중복 PMID 사전 차단 (2026-04-29 재편 — 30일 + 자동 완화)
+### Step 2-B — 중복 PMID 사전 차단 (30일)
 
 Step 3 필터링 직전 적용:
-1. `inbox/scout/` 의 **최근 30일 보고서** 모두 스캔 (archive/ 제외 + archive/ 포함 직전 30일 cover)
-2. 각 보고서에서 ⭐ 항목으로 등록된 PMID 목록 추출 (정규식: `PMID:\s*\d+`)
-3. 이번 run의 후보 논문 중 **위 목록과 일치하는 PMID는 사전 제외** ([o] 체크 여부와 무관)
-4. 제외된 PMID는 보고서 footer "탐색 메모"에 한 줄 기록 (예: `중복 차단: PMID:41839077 (4-25 등록 후 30일 내)`)
+1. `inbox/scout/` 의 **최근 30일 보고서** 모두 스캔 (archive/ 포함 직전 30일 cover)
+2. 각 보고서에서 ⭐ 항목 PMID 추출 (정규식: `PMID:\s*\d+`)
+3. 이번 run 후보 중 위 목록과 일치하는 PMID는 사전 제외 ([o] 체크 여부 무관)
+4. 제외된 PMID는 footer "탐색 메모"에 한 줄 기록 (예: `중복 차단: PMID:41839077 (4-25 등록 후 30일 내)`)
 
-**자동 완화 fallback (4-29 재편)**:
-- 직전 2회 run에서 ⭐ 8건 미달이 연속이면 → 차단 기간 **30일 → 14일**로 자동 완화
-- 14일 완화 후에도 8건 미달이면 → **14일 → 7일**로 추가 완화
-- 8건 이상으로 회복되면 다음 run에서 자동 30일로 복귀
-- 완화·복귀 모두 footer에 한 줄 기록 (예: `PMID 차단 완화 발동: 30→14일 (직전 2회 8건 미달)`)
+**예외**: 미르가 직전 보고서에서 [x] 처리해 명시적으로 스킵한 PMID도 차단 (재등장 방지). [ ] 미확인 상태도 차단.
 
-**예외**: 미르가 직전 보고서에서 [x] 처리해 명시적으로 스킵한 PMID는 차단 대상 (기존 동작 유지). [ ] 미확인 상태도 차단 (재등장으로 알림 효과 보다 탐색 슬롯 낭비가 더 큼 — 2026-04-29 분석).
-
-배경: 4-25↔4-26 같은 PMID(수막염·크루프·B형간염·DOAC·FIT) 5건 중복 ⭐ 등장으로 탐색 슬롯 ~6개 낭비 사례. Mir-Tier 1 7영역 매일 cover 의무로 차단 기간 확장(7→30일) 필요. 발행 부족 영역(POCUS·재택)에서 ⭐ 미달 시 자동 완화.
+(2026-04-29 "직전 2회 8건 미달 → 30→14→7일 자동완화"는 폐지 2026-05-17 — problem-based 전환으로 8건 목표 소멸)
 
 ### Step 3 — 필터링
 수집한 논문 각각에 대해 아래 기준으로 ⭐/✕ 평가:
 
 | 등급 | 기준 |
 |------|------|
-| ⭐ | 1차의료 외래에서 바로 적용 가능한 실용 지식 포함 |
-| ✕ | 전문과 수술·처치 중심, 일차의료 적용 어려움 / 배경 지식만 있고 즉각 처방 변화 없음 |
+| ⭐ | 1차의료 외래 또는 전문의 시험에서 바로 적용 가능한 실용 지식 포함 |
+| ✕ | 전문과 수술·처치 중심, 일차의료 적용 어려움 / 배경 지식만 있고 즉각 처방·시험 변화 없음 |
 
-⭐ 항목만 최종 보고에 포함 (✕는 제외). 2026-04-24 △ 제거 — Deep Extract 대상이 아니므로 실효 없음.
+⭐ 항목만 최종 보고에 포함 (✕는 제외).
 
 ### Step 4 — 결과 파일 작성
 `inbox/scout/$TODAY.md` 파일 **신규 생성** (Step 0의 KST 날짜 사용):
@@ -269,29 +137,32 @@ Step 3 필터링 직전 적용:
 ### 1. {제목 축약}
 - **저널:** {저널명} | **PMID:** {번호}
 - **한 줄:** {임상 핵심 1줄}
-- **왜 유용:** {1차의료 적용 포인트}
+- **왜 유용:** {1차의료/시험 적용 포인트}
+- **Gap:** {원본 gap 항목 — `[시험]` 여부 포함}
+- **추출 키워드:** {gap → PubMed 변환 키워드}  ← 변환 정확도 검증용 (필수)
 - **Deep Extract:** [ ] ← 원하면 [o]로 변경 → 정오 12시에 자동 처리
 
 ### 2. ...
 
-*Scout 실행: {실행 시각} | 키워드: {사용한 키워드 목록}*
+*Scout 실행: {실행 시각} | 모드: {on-demand / 주1회 안전망}*
 ```
+
+추출 키워드 라인은 **필수** — 한 줄 gap → PubMed 변환 정확도 검증 가능.
 
 ### Step 5 — 아카이브 정리
 `inbox/scout/` 에서 오늘 날짜 기준 **7일 초과** 파일을 `inbox/scout/archive/` 로 이동한다.
 (archive/ 는 보관 전용 — Deep Extract 대상 아님)
 
-### Step 6 — 완료 보고 (4-29 재편 — Mir-Tier 1 cover footer 추가)
+### Step 6 — 완료 보고 (2026-05-17 problem-based 재편)
 
 scout 보고서 footer에 다음 양식 추가:
 
 ```
 ---
-Mir-Tier 1 cover: POCUS [✓/✕] · 통증 [✓/✕] · 완화 [✓/✕] · 재택 [✓/✕] · 만성질환 [✓/✕] · 약물 [✓/✕] · 생활습관 [✓/✕]
-횡단 모듈: [A/B/C] (오늘 cycle)
-Tier 2: [{오늘 영역}] (8일 cycle Day {N})
-PMID 차단: {N}건 (기간 {30/14/7}일 — {30일 기본 / 완화 발동 사유})
-영역별 발행 부족: [{영역명}, ...] (해당 시만)
+처리 모드: {on-demand / 주1회 안전망}
+처리 gap: {N}건 ([시험] {n1}건 · 외래 {n2}건)
+gap 미해소: [{항목}, ...] (해당 시만 — 미해소는 정상, 다음 호출 시 재시도 가능)
+PMID 중복 차단: {N}건
 ```
 
 마지막 줄에 다음 추가:
@@ -312,8 +183,8 @@ BRANCH="claude/scout-$TODAY"
 git fetch origin main
 git checkout -B $BRANCH origin/main
 
-# Scout 결과 파일 + archive 이동 결과 stage
-git add -A inbox/scout/
+# Scout 결과 파일 + archive 이동 결과 + gaps.md 마커 갱신 stage
+git add -A inbox/scout/ inbox/gaps.md
 
 # 커밋 ({TODAY}, {N} 은 실제 값으로 치환)
 git commit -m "feat(scout): $TODAY Scout Report — ⭐ {N}건"
@@ -330,7 +201,7 @@ git push -u origin $BRANCH || (sleep 5 && git push -u origin $BRANCH)
 - base: `main`
 - head: `$BRANCH` (즉 `claude/scout-$TODAY`)
 - title: `feat(scout): $TODAY Scout Report — ⭐ {N}건`
-- body: ⭐ 논문 각각의 PMID + 한 줄 요약 (미르가 모바일에서 제목·본문만 보고도 대략 파악 가능하도록)
+- body: ⭐ 논문 각각의 PMID + 한 줄 요약 + gap 출처 (미르가 모바일에서 제목·본문만 보고도 대략 파악 가능하도록)
 
 #### 7-3. 동작 흐름
 - 미르가 GitHub 모바일 앱 PR 알림 확인 → 원탭 머지 → main 반영
@@ -360,7 +231,7 @@ Scout 파일 내 각 항목의 상태는 다음 마커로 표시됨:
 ## 주의사항
 - 논문 내용 재현 금지 (저작권) — 핵심 임상 포인트 + PMID 링크만
 - PMID 없는 논문은 DOI 또는 저널+연도+저자 표기
-- 탐색 실패 시 (검색 결과 없음): 해당 Tier 건너뜀, 사유 기록
-- **하루 ⭐ 8~10건 목표 (2026-04-29 미르 지시)** — 하한 8건·상한 10건. Deep Extract 10건 상한과 동조.
-  - 8건 미만: Tier 2 귀납 키워드/공백 풀에서 추가 탐색 시도. 그래도 부족하면 Tier 3 랜덤 1건 추가. 이래도 8건 미만이면 보고서 footer에 "탐색 부족 사유: ...(저널 신규 발행 부족·공백 영역 적합 논문 부재 등)" 한 줄 기재
-  - 10건 초과: 일차의료 적용성·근거 강도 우선순위로 상위 10건만 선정, 나머지는 다음 run의 후보로 유지(자동 carryover 아님 — 다음 run의 일반 탐색에서 자연 등장 가능)
+- 탐색 실패 시 (검색 결과 없음): 해당 gap 건너뜀, footer에 `gap 미해소` 기록
+- **발행량 목표 없음** (2026-05-17 problem-based 전환) — ⭐ 건수는 미르가 던진 문제 수에 종속. 0건도 정상.
+  - 구 "하루 ⭐ 8~10건 목표"(2026-04-29) 폐지. 미해소 gap을 "비워야 할 큐"로 취급 금지.
+  - 전문의 시험공부·외래진료가 1순위, scout는 보조 — 주객전도 방지.
