@@ -15,10 +15,10 @@
 - [LDH 해석] 단계별 — >2000 응급 감별(혈액암·HLH·TLS·massive necrosis), 1000~2000 림프종·용혈·광범위 조직손상 / 비특이 증상 + 다른 lab 이상 시 LDH 추가 문턱 낮추기
 - [LAP 평가] 양측성·cervical도 림프종 가능, supraclavicular는 크기 무관 악성 의심(Virchow) / 기록 필수 요소: 위치·크기·개수·압통·가동성·경도·기간
 - [두드러기 처방 금기] NSAID(COX-1→leukotriene shift, 20~30% 악화)·ACEi(angioedema)·opioid(mast cell degranulation) — 통증 없는 환자에 NSAID 처방 점검
-- [LAP+발열] 진단 전 steroid 금지 — 림프종 mask·자발성 TLS·감염 progression / 최소 CBC+diff·LDH·viral serology(EBV·CMV·HIV) 선행
-- [진단추론] anchoring 검증 — "이 한 수치가 현재 가설로 설명되는가?" 자문 / 가설로 설명 안 되는 1개 데이터가 진짜 단서
-- [가래 색·acute bronchitis] 누런 가래 = 세균감염 myth — 호중구 MPO 산물, Cochrane RCT에서 ABx 효과 예측 인자 아님 / acute bronchitis 90%+ 바이러스성, 가래 색·인후통 단독 ABx trigger 금지
-- [호흡기 vital] 외래 호흡기 증상에 SpO2·호흡수·맥박수 필수 — cheap & quick, CRB-65 적용 위한 최소 데이터 / 고령 호흡기 증상에 SpO2 누락은 결정적 gap
+- [x] [LAP+발열] 진단 전 steroid 금지 — 림프종 mask·자발성 TLS·감염 progression / 최소 CBC+diff·LDH·viral serology(EBV·CMV·HIV) 선행 (→ PMID 40961306, 36689975, 2026-05-18)
+- [x] [진단추론] anchoring 검증 — "이 한 수치가 현재 가설로 설명되는가?" 자문 / 가설로 설명 안 되는 1개 데이터가 진짜 단서 (→ PMID 37358843, 2026-05-18)
+- [x] [가래 색·acute bronchitis] 누런 가래 = 세균감염 myth — 호중구 MPO 산물, Cochrane RCT에서 ABx 효과 예측 인자 아님 / acute bronchitis 90%+ 바이러스성, 가래 색·인후통 단독 ABx trigger 금지 (→ PMID 40106287, 2026-05-18)
+- [x] [호흡기 vital] 외래 호흡기 증상에 SpO2·호흡수·맥박수 필수 — cheap & quick, CRB-65 적용 위한 최소 데이터 / 고령 호흡기 증상에 SpO2 누락은 결정적 gap (→ PMID 38950975, 41719027, 2026-05-18)
 - [x] [CKD ABx 용량] 신배설 ABx(amox-clav 등) — 처방 전 최근 eGFR 확인 / eGFR <30 감량, 30~60 부분 조정 / clavulanate 간독성 고령 증가 (→ PMID 39428714, 2026-05-16)
 - [x] [IDA 진단] MCV 정상범위(82.1 등 하한)도 IDA 배제 못함 — ferritin <30(또는 <15) 우선 확인 / 초기 IDA는 normocytic→microcytic 진행 / RDW·anisocytosis가 MCV보다 먼저 변함 (→ PMID 41916414, 2026-05-16)
 - [x] [폐경 전 여성 IDA] 원인 자동 "월경" 가정 금지 — 5축 평가(월경·GI·malabsorption·약물·식이) / 40대 이상은 colon ca screening 연령 근접, GI workup 문턱 낮추기 (→ PMID 42044770, 2026-05-15)
