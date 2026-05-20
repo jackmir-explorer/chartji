@@ -3,6 +3,21 @@
 새 내용이 추가될 때마다 Claude Code가 여기에 한 줄 기록한다.
 형식: YYYY-MM-DD | 파일명 | 내용 요약
 
+2026-05-20 | by-disease/meniere.md | 추가 — 박소영 교수님 강의: 급성기 메칠론 1주 taper (8T#2 3일→6T#2 2일→4T 1일→2T 1일) + U-turn 병용 → 종료 후 U-turn+Dichlozid ½T 유지; ⚠ 스테로이드+이뇨제 동시 금지; 황반변성 스테로이드 금기 cross-link; risk factor(바이러스·스트레스) 명시 [TIPS — by 박소영 교수님]
+2026-05-20 | by-disease/sudden-hearing-loss.md | 추가 — 박소영 강의: 귀먹먹+청력저하 갑작스러운 동반 단서·동반 어지러움 금방 회복·스테로이드+유턴정 1주 → 유턴정 단독 수주 전환 (메니에르와 동일 패턴)·Ramsay Hunt 감별 cross-link·황반변성 스테로이드 금기 [TIPS — by 박소영 교수님 / 김근전 교수님]
+2026-05-20 | by-disease/low-freq-hearing-loss.md | 추가 — 박소영 강의: 코 강풀기·외상 history 필수·고막 통증 없음·본인 목소리 자꾸 들림(autophony)·비특이적 사례 유턴정 1T tid 경험적; 박소영 정확한 메칠론 taper (8T#2 3일→6T#2 2일→4T 1일→2T 1일); 스테로이드 1주+Dichlozid 동시 금지; 생활습관(카페인 끊기·수면 늘리기 강조) [TIPS — by 박소영 교수님]
+2026-05-20 | by-disease/sinusitis.md | 추가 — 강윤진 교수님 ABRS 외래 패키지: Clarithromycin 7일+애니코프+리노에바스텔+뮤코미스트(경구+코세척 mix)+INS; ⚠ 급성기 초기 항히스타민 금기 (점액·배액 악화); 난치성 부비동염 CT 필수·Levofloxacin(크라비트) 500 (곰팡이 10% 효과); 막연한 코악취 문진(코막힘·안면불편·항생제력); nasal-furuncle cross-link [TIPS — by 강윤진 교수님]
+2026-05-20 | by-disease/allergic-rhinitis.md | 추가 — 강윤진 소아 비염: INS 꾸준 사용 강조·씨잘+루키오 (조진희와 동일)·MAST 검사·**15세 이후 비중격 수술 고려** (성장기 안면발달 영향) [TIPS — by 강윤진 교수님]
+2026-05-20 | by-disease/dizziness.md | 추가 — 박소영 강의: 어지럼 환자 귀먹먹/청력저하 동반 여부 필수 문진 (메니에르·돌발성난청·내이수종 결정적 단서); Ramsay Hunt cross-link 추가; 관련 엔트리 확장 (meniere·sudden-hearing-loss) [TIPS — by 박소영 교수님]
+2026-05-20 | by-disease/ramsay-hunt-syndrome.md | 신규 — 대상포진 이성 (박소영 강의): 귀통증+두통+어지럼 prototype·안진·안면마비 확인·**Famciclovir 500mg TID 7d + Prednisolone 1mg/kg/d 5d taper** (발진 72h 이내)·입원 적응증·황반변성 시 스테로이드 보류+안과 협진·Bell's palsy보다 예후 불량 [TIPS — by 박소영 교수님 / CLINICAL]
+2026-05-20 | by-disease/nasal-fracture.md | 신규 — 비골 골절/코외상 (강윤진 강의): 소아는 촉진·X-ray 한계·CT 적응증(코피·외형 변형)·소아 1주 이내 전신마취 closed reduction 원칙·**Septal hematoma 즉시 배제·배농 ENT 의뢰**·소아 비중격수술은 15세 이후로 보류 [TIPS — by 강윤진 교수님]
+2026-05-20 | by-disease/nasal-furuncle.md | 신규 — 코 furuncle (강윤진 강의): Suprax(Cefixime) 100mg BID **최소 2주** + Mupirocin 2% 국소 + **손대지 말 것** (danger triangle 해면정맥동 혈전증 위험) + 1주 간격 f/u; MRSA·재발 시 TMP-SMX·decolonization 옵션 [TIPS — by 강윤진 교수님]
+2026-05-20 | by-disease/cervical-lymphadenitis.md | 신규 — 경부 임파선염 (김근전 강의): 단서 4종(location·onset·인후통·촉진)·**Meiact + Pelubi + solondo + stogar + muteran 7일** 외래 패키지·만성/오래된 경우 **초음파 필수**·황반변성 환자 solondo 금기·림프종·결핵 의심 시 스테로이드 처방 전 진단 우선 [TIPS — by 김근전 교수님]
+2026-05-20 | by-disease/macular-degeneration-steroid-caution.md | 신규 — 황반변성 환자 전신 스테로이드 신중 사용 (김근전 강의): 처방 전 안과력·시야 변동 5초 체크; 대안 옵션(ITS·INCS·NSAID 단독)·cross-link hub (meniere·low-freq·sudden·ramsay-hunt·cervical-lymphadenitis·asthma·urticaria) [TIPS — by 김근전 교수님]
+2026-05-20 | (요약) — 박소영·강윤진·김근전 교수님 외래 강의 노트 ingest: ENT 6개 보강 + 5개 신규. Researcher 호출 보류 (강의 정렬 [TIPS] 위주, 가이드라인 정합 부분만 [CLINICAL] 보수적). bundle.js 백로그 미반영 — 다음 batch에서 컴파일 (2026-05-07 사건 재발 방지)
+
+---
+
 2026-05-12 | knowledge-bundle.js | Liby ingest 2026-05-09 batch step 1 — spine-related-arm-pain v2 신규 등록 (7 keys: spine-related-arm-pain·SAP·척추유발-상지통·cervical-radiculopathy·경추신경근병증·arm-pain·팔통증). 백로그 처리 1/4 day (05-09 신규 1건 완료, 업데이트 9건 다음 세션). 총 608 keys.
 
 2026-05-12 | by-disease/chronic-pain-integrative.md | 추가 — 오피오이드 처방 갱신 = 환자 통증 검증 신호; 거절 = 불신; 감량 대화 전 validation 선행·ICE 접근 [INSIGHTS] PMID:41574586 (출처 05-11, 과거 누락 복구)

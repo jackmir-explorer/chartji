@@ -15,8 +15,9 @@ keywords: 돌발성난청, sudden hearing loss, SSNHL, sudden sensorineural hear
 ### 증상
 
 - **갑작스러운 편측 청력 저하** (보통 아침에 일어나니 안 들림) [[hearing-loss]]
+- **귀먹먹함(이충만감) + 청력저하 갑작스러운 동반** [TIPS — by 박소영 교수님] — 둘이 같이 오는 경우가 많음
 - 이명·이충만감 동반 흔함 [[tinnitus]]
-- 어지럼증 동반 시 예후 불량 [[dizziness]]
+- **어지럼증 동반 가능** — 박소영: 동반 어지러움은 **금방 낫는** 편 (지속하면 다른 진단·예후 불량 시사) [[dizziness]]
 
 ### 진단
 
@@ -33,11 +34,14 @@ keywords: 돌발성난청, sudden hearing loss, SSNHL, sudden sensorineural hear
 
 ## 처방/치료 (protocol)
 
-### 표준 — 경구 스테로이드 [TIPS — by ENT 교수]
+### 표준 — 경구 스테로이드 + Betahistine 1주 [TIPS — by 박소영 교수님 / ENT 교수]
 
 - **Methylprednisolone (메칠론) 8T#2 → 7일 tapering**
-  - 처방 표기: 시작 용량 → 1~2일 단위로 감량
+  - 처방 표기: 시작 용량 → 1~2일 단위로 감량 (저음성 난청 taper와 동일 패턴)
   - 가능한 빨리 시작 (발생 후 14일 이내가 효과 큼)
+- **U-turn (Betahistine) 1주간 병용** [TIPS — by 박소영 교수님] — 내이수종 치료와 동일하게
+- **스테로이드 종료 후 → U-turn 단독으로 몇 주 더 유지** [TIPS — by 박소영 교수님]
+- ⚠ 스테로이드 일주일 + 이뇨제 동시 처방 금지 — 일주일 종료 후 유지 단계 진입 ([[meniere]] 동일 원칙)
 
 ### Intratympanic Steroid (ITS) [TIPS — by ENT 교수]
 
@@ -48,16 +52,16 @@ keywords: 돌발성난청, sudden hearing loss, SSNHL, sudden sensorineural hear
 ### 보조
 
 - 산소·hyperbaric oxygen (논쟁 중, 일부 가이드라인 권장)
-- 생활습관 — 안정·스트레스 관리
+- 생활습관 — 안정·스트레스 관리 (저염·금주·금연·물 많이·스트레스 줄이기·수면)
 
 ---
 
 ## 주의 (precaution)
 
-### 스테로이드 처방 전 필수 확인 [TIPS — by ENT 교수]
+### 스테로이드 처방 전 필수 확인 [TIPS — by ENT 교수 / 김근전 교수님]
 
 - **당뇨**: 혈당 상승 — DM 환자도 처방 가능하지만 혈당 모니터링·환자 교육 필수
-- **녹내장·황반변성**: 스테로이드 외 옵션 고려 (특히 황반변성)
+- **녹내장·황반변성**: 스테로이드 외 옵션 고려 — **황반변성은 금기** [TIPS — by 김근전 교수님] ([[macular-degeneration-steroid-caution]] 참조)
 - 위궤양·소화기 출혈 과거력
 - 정신질환·BPSD
 - 활동성 감염
@@ -79,3 +83,4 @@ keywords: 돌발성난청, sudden hearing loss, SSNHL, sudden sensorineural hear
 - ITS 시술 필요 → ENT
 - 어지럼증 심한 동반 → 신경이과·내이 진단
 - vestibular schwannoma 의심 (편측·이명 동반) → MRI IAC + ENT
+- **귀 통증·두통·안면마비·심한 어지럼증 동반** → [[ramsay-hunt-syndrome]] 감별 (대상포진 이성, 입원 적응증 가능)

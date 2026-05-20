@@ -35,15 +35,53 @@ keywords: 부비동염, 축농증, sinusitis, ABRS, acute bacterial rhinosinusit
 - 비강 식염수 세척
 - INS (intra-nasal steroid) 병용 (점막 부종 감소)
 
+### 강윤진 교수님 ABRS 외래 처방 패키지 [TIPS — by 강윤진 교수님]
+
+> 한국 외래 실전 패턴 — 가이드라인 1차(amox/clav)와 괴리 있음. 임상 판단·환자 상황·내성 패턴 고려해 선택. macrolide 1차는 IDSA 권고 아님 (S. pneumoniae 내성 ~30%).
+
+| 약제 | 역할 |
+|---|---|
+| **Clarithromycin 7일** | 강윤진 외래 1차 (한국 임상 관행) |
+| **애니코프** (Anycof, 진해거담 복합) | 기침·가래 동반 시 |
+| **리노에바스텔** (Loratadine계 — 비충혈/점액 ↓) | 비충혈 완화 |
+| **뮤코미스트** (Mucomyst, N-acetylcysteine) | 점액용해 — 경구 + 코세척용 mix |
+| **식염수 코세척 + 뮤코미스트 앰플 mix** | 점액 배출 촉진 |
+| **Nasal spray (INS)** | 점막 부종 감소 |
+
+- 7일 후 미호전 → 재내원·추가 항생제
+- 누적 호전 없으면 → CT + ENT 의뢰
+
+### ⚠ 급성기 초기 항히스타민제 금기 [TIPS — by 강윤진 교수님]
+
+> **급성 부비동염 초기에는 항히스타민제 처방하지 않는다.** 점액을 뻑뻑하게 만들어 부비동 배액을 방해 → 축농증 악화 가능. 알레르기 동반 만성기에는 사용 가능.
+
 ---
 
 ## 영상 (exam — CT 적응증)
 
-[TIPS — by ENT 교수]
+[TIPS — by ENT 교수 / 강윤진 교수님]
 
-- **재발성 부비동염**: CT 적극 권고 — anatomical anomaly·진균성 구분
+- **재발성·난치성 부비동염**: CT 필수 권고 — anatomical anomaly·진균성·물혹(nasal polyp) 구분 [강윤진: "난치성 부비동염은 반드시 CT를 봐야 된다"]
 - 항생제 ladder 끝까지 실패 → CT
 - 일회성 ABRS 진단에는 CT 불필요 (임상 진단)
+
+---
+
+## 난치성 부비동염 (refractory / chronic) [TIPS — by 강윤진 교수님]
+
+### 특징
+- 항생제로 잘 낫지 않고 자꾸 재발
+- 구조적 문제: **곰팡이 (fungal sinusitis), 물혹 (nasal polyp), anatomical anomaly**
+- 수술 (FESS) 고려하지만 약물 유지 f/u로 살아가는 환자도 있음
+
+### 약물 — 퀴놀론 우선
+- **Levofloxacin (크라비트) 500 mg/d** — 1차 선택
+- **곰팡이성 부비동염에서도 약 10% 효과 보고** — 진균 외 세균 동반 시 cover
+- 진단 확정·수술 결정은 ENT 영역
+
+### 의뢰
+- 1차 라더(목시클 → step-up) 실패 + CT에서 구조적 이상 → ENT
+- 진균성 sinusitis 의심 (단측 골 침식·면역저하·진균구) → ENT 응급
 
 ---
 
@@ -58,5 +96,22 @@ keywords: 부비동염, 축농증, sinusitis, ABRS, acute bacterial rhinosinusit
 
 ## 비고 (notes)
 
-- 한국 외래에서 매크로라이드(특히 Roxithromycin)를 step에 끼워 쓰는 임상 관행 존재 — 가이드라인과 괴리 ([TACIT — guideline-vs-practice])
+- 한국 외래에서 매크로라이드(Clarithromycin·Roxithromycin)를 1차 또는 step에 끼워 쓰는 임상 관행 존재 — 가이드라인과 괴리 ([TACIT — guideline-vs-practice])
 - ABRS 90% 이상은 viral → 항생제 없이 자연 호전. 항생제 적응증: 10일 이상 지속 + 악화 + 고열·심한 안면통
+
+### 막연한 코 악취 문진 [TIPS — by 강윤진 교수님]
+
+> "코에서 냄새가 난다 / 이상한 냄새가 난다"라고 막연하게 오는 환자 — 표준 문진:
+
+- **코막힘** 동반 여부
+- **얼굴 불편감** (안면통·압통)
+- **항생제 사용력** (최근 부비동염 치료력)
+- → 만성 부비동염·진균구·치성 부비동염·이물 감별
+
+---
+
+## 관련
+
+- [[nasal-furuncle]] — 코끝·콧방울 furuncle (감별·동반)
+- [[allergic-rhinitis]] — 알레르기 비염 동반 시
+- [[hyposmia]] — 후각 저하 동반
