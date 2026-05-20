@@ -2270,7 +2270,7 @@ var _allergic_rhinitis_v2 = {
       sources: []
     },
     "clinical-pattern": {
-      content: "### 한국 외래 처방 패턴 [TIPS — by ENT 교수, 조진희 교수님, 강윤진 교수님]\n\n**단순 비염**: INS + 리노에바스텔 (Loratadine 계열) — 최소 처방으로 충분\n\n**심한 비염**:\n- INS **2회 분무 BID** (아침·저녁) → 호전 시 **1회 분무 QD**로 감량\n- 처방 기간: 2주 후 f/u\n\n**INS 사용법 환자 교육**:\n- 사용 시간대 자유 — 꼭 아침에만 쓸 필요 없음. **가장 불편한 시간대**에 사용\n- 분사 방향: 비중격 아닌 **외측벽 향**\n\n**조진희 교수님 처방**: Xyzal (levocetirizine) + Lukio (montelukast) + 코세척 + INS\n— 류코트리엔 차단제 병용 (AR + asthma overlap·비용종 동반 시)\n\n**강윤진 교수님 처방 (비염 + 기침)**: 리노에바스텔 + 애니코프 + 움카민 시럽 + INS + 코세척\n— 스프레이 사용 강조, 미사용자에게 사용법 재교육 핵심\n\n### 비염 환자 문진 표준\n- 코막힘 / 콧물 / 재채기 / 가려움 / **냄새 잘 맡는지** (후각 동반 저하 → 비용종·CRS 의심)\n- **심한 시점**: 하루 중·연중 (계절성 vs 통년성 감별)\n- 알러지 검사력\n- INS 스프레이 사용력 (있다면 효과·순응도)",
+      content: "### 한국 외래 처방 패턴 [TIPS — by ENT 교수, 조진희 교수님, 강윤진 교수님]\n\n**단순 비염**: INS + 리노에바스텔 (Loratadine 계열) — 최소 처방으로 충분\n\n**심한 비염**:\n- INS **2회 분무 BID** (아침·저녁) → 호전 시 **1회 분무 QD**로 감량\n- 처방 기간: 2주 후 f/u\n\n**INS 사용법 환자 교육**:\n- 사용 시간대 자유 — 꼭 아침에만 쓸 필요 없음. **가장 불편한 시간대**에 사용\n- 분사 방향: 비중격 아닌 **외측벽 향**\n\n**조진희 교수님 처방**: Xyzal (levocetirizine) + Lukio (montelukast) + 코세척 + INS\n— 류코트리엔 차단제 병용 (AR + asthma overlap·비용종 동반 시)\n\n**강윤진 교수님 처방 (비염 + 기침)**: 리노에바스텔 + 애니코프 + 움카민 시럽 + INS + 코세척\n— 스프레이 사용 강조, 미사용자에게 사용법 재교육 핵심\n\n### 소아 비염 [TIPS — by 강윤진 교수님]\n- **스프레이를 꾸준하게 사용**해야 함 — 소아라도 INS 순응도가 핵심\n- 약제 조합: **씨잘(Xyzal, levocetirizine) + 루키오(Lukio, montelukast)** — 조진희와 동일\n- **MAST 검사** 고려 (특이 알레르겐 동정)\n- **15세 이후 비중격수술 고려** — 코막힘이 약물·스프레이로 조절 안 되는 심한 경우. 성장기 비중격 수술은 안면 발달 영향 우려로 보통 15세 이후로 미룬다.\n\n### 비염 환자 문진 표준\n- 코막힘 / 콧물 / 재채기 / 가려움 / **냄새 잘 맡는지** (후각 동반 저하 → 비용종·CRS 의심)\n- **심한 시점**: 하루 중·연중 (계절성 vs 통년성 감별)\n- 알러지 검사력\n- INS 스프레이 사용력 (있다면 효과·순응도)",
       sources: []
     },
     procedure: {
@@ -3371,10 +3371,10 @@ KNOWLEDGE_BUNDLE["endocrinology-2025"] = _endocrinology_2025_update_v2;
 
 /* ========== 4-30 ENT bulk ingest (Batch 4 — 비강·축농증) ========== */
 
-/* sinusitis — 부비동염 항생제 ladder + 가이드라인 정렬 (4-30 ENT bulk). [CLINICAL] */
+/* sinusitis — 부비동염 항생제 ladder + 가이드라인 정렬 (4-30 ENT bulk + 5/20 강윤진 보강). [CLINICAL] */
 var _sinusitis_v2 = {
   kind: "disease",
-  keywords: ["부비동염","축농증","sinusitis","ABRS","acute bacterial rhinosinusitis","rhinosinusitis","만성부비동염","CRS"],
+  keywords: ["부비동염","축농증","sinusitis","ABRS","acute bacterial rhinosinusitis","rhinosinusitis","만성부비동염","CRS","clarithromycin","클라리스로마이신","뮤코미스트","애니코프","리노에바스텔","크라비트","levofloxacin","강윤진","fungal-sinusitis"],
   primarySources: [
     "IDSA 2012 ABRS guideline. Chow et al. CID 2012;54:e72",
     "AAO-HNS 2015 Adult Sinusitis CPG. PMID:25832968",
@@ -3382,19 +3382,23 @@ var _sinusitis_v2 = {
   ],
   sections: {
     protocol: {
-      content: "### 항생제 ladder — 가이드라인 정렬 [CLINICAL]\n| 단계 | 약제 | 비고 |\n|---|---|---|\n| 1차 | **Amoxicillin/clavulanate (목시클)** 5–10일 | IDSA·AAO-HNS·EPOS 1차 |\n| 7일 내 호전 없음 | **High-dose amox/clav** 또는 **Cefditoren (메이액트)** | 다른 베타락탐 step-up |\n| 그래도 실패 | **Levofloxacin / Moxifloxacin** | 퀴놀론 step-up |\n| PCN 알러지 (non-anaphylactic) | **Macrolide** (Clarithromycin / Roxithromycin) 또는 cefditoren | **alternative만**, step-up 약제 아님 |\n\n⚠ Macrolide는 *S. pneumoniae* 내성률 ~30% — IDSA는 경험적 1차 비추천. PCN 알러지·intolerance 시 alternative로만.\n\n### 사용 기간 [TIPS — by ENT 교수]\n- ABRS 표준 5–10일. 호전 없으면 약제 교체.\n- F/U **5–7일 간격** — 호전 무이면 step-up 또는 약제 변경.\n- **누적 1개월(2–3 cycle 합) 후에도 호전 없음** → 항생제 중단 + 대증치료 + ENT 의뢰. 만성 부비동염(CRS)·structural 평가 영역.\n\n### 보조\n- 비강 식염수 세척\n- INS 병용 (점막 부종 감소)",
+      content: "### 항생제 ladder — 가이드라인 정렬 [CLINICAL]\n| 단계 | 약제 | 비고 |\n|---|---|---|\n| 1차 | **Amoxicillin/clavulanate (목시클)** 5–10일 | IDSA·AAO-HNS·EPOS 1차 |\n| 7일 내 호전 없음 | **High-dose amox/clav** 또는 **Cefditoren (메이액트)** | 다른 베타락탐 step-up |\n| 그래도 실패 | **Levofloxacin / Moxifloxacin** | 퀴놀론 step-up |\n| PCN 알러지 (non-anaphylactic) | **Macrolide** (Clarithromycin / Roxithromycin) 또는 cefditoren | **alternative만**, step-up 약제 아님 |\n\n⚠ Macrolide는 *S. pneumoniae* 내성률 ~30% — IDSA는 경험적 1차 비추천. PCN 알러지·intolerance 시 alternative로만.\n\n### 강윤진 교수님 ABRS 외래 패키지 [TIPS — by 강윤진 교수님]\n> 한국 외래 실전 패턴 — 가이드라인 1차(amox/clav)와 괴리 있음. macrolide 1차는 IDSA 권고 아님 (S. pneumoniae 내성 ~30%). 임상 판단·환자 상황·내성 패턴 고려해 선택.\n\n| 약제 | 역할 |\n|---|---|\n| **Clarithromycin 7일** | 강윤진 외래 1차 (한국 임상 관행) |\n| **애니코프** (Anycof, 진해거담 복합) | 기침·가래 동반 시 |\n| **리노에바스텔** (Loratadine계) | 비충혈·점액 완화 |\n| **뮤코미스트** (Mucomyst, N-acetylcysteine) | 점액용해 — 경구 + 코세척용 mix |\n| **식염수 코세척 + 뮤코미스트 앰플 mix** | 점액 배출 촉진 |\n| **Nasal spray (INS)** | 점막 부종 감소 |\n\n- 7일 후 미호전 → 재내원·추가 항생제\n- 누적 호전 없으면 → CT + ENT 의뢰\n\n### ⚠ 급성기 초기 항히스타민 금기 [TIPS — by 강윤진 교수님]\n> **급성 부비동염 초기에 항히스타민제 처방 금지.** 점액을 뻑뻑하게 만들어 부비동 배액을 방해 → 축농증 악화. 알레르기 동반 만성기에는 사용 가능.\n\n### 사용 기간 [TIPS — by ENT 교수]\n- ABRS 표준 5–10일. 호전 없으면 약제 교체.\n- F/U **5–7일 간격** — 호전 무이면 step-up 또는 약제 변경.\n- **누적 1개월(2–3 cycle 합) 후에도 호전 없음** → 항생제 중단 + 대증치료 + ENT 의뢰. 만성 부비동염(CRS)·structural 평가 영역.\n\n### 보조\n- 비강 식염수 세척\n- INS 병용 (점막 부종 감소)",
       sources: []
     },
     exam: {
-      content: "### 영상 — CT 적응증 [TIPS — by ENT 교수]\n- **재발성 부비동염**: CT 적극 권고 (anatomical anomaly·진균성 구분)\n- 항생제 ladder 끝까지 실패 → CT\n- 일회성 ABRS 진단에는 CT 불필요 (임상 진단)",
+      content: "### 영상 — CT 적응증 [TIPS — by ENT 교수 / 강윤진 교수님]\n- **재발성·난치성 부비동염**: CT 필수 권고 — anatomical anomaly·진균성·물혹(nasal polyp) 구분 [강윤진: \"난치성 부비동염은 반드시 CT를 봐야 된다\"]\n- 항생제 ladder 끝까지 실패 → CT\n- 일회성 ABRS 진단에는 CT 불필요 (임상 진단)\n\n### 막연한 코 악취 문진 [TIPS — by 강윤진 교수님]\n\"코에서 냄새가 난다 / 이상한 냄새가 난다\"라고 막연하게 오는 환자 — 표준 문진:\n- **코막힘** 동반 여부\n- **얼굴 불편감** (안면통·압통)\n- **항생제 사용력** (최근 부비동염 치료력)\n- → 만성 부비동염·진균구·치성 부비동염·이물 감별",
+      sources: []
+    },
+    "refractory-sinusitis": {
+      content: "### 난치성 부비동염 (refractory / chronic) [TIPS — by 강윤진 교수님]\n#### 특징\n- 항생제로 잘 낫지 않고 자꾸 재발\n- 구조적 문제: **곰팡이 (fungal sinusitis), 물혹 (nasal polyp), anatomical anomaly**\n- 수술 (FESS) 고려하지만 약물 유지 f/u로 살아가는 환자도 있음\n\n#### 약물 — 퀴놀론 우선\n- **Levofloxacin (크라비트) 500 mg/d** — 1차 선택\n- **곰팡이성 부비동염에서도 약 10% 효과 보고** — 진균 외 세균 동반 시 cover\n- 진단 확정·수술 결정은 ENT 영역\n\n#### 의뢰\n- 1차 라더(목시클 → step-up) 실패 + CT에서 구조적 이상 → ENT\n- 진균성 sinusitis 의심 (단측 골 침식·면역저하·진균구) → ENT 응급",
       sources: []
     },
     referral: {
-      content: "- 누적 1개월 항생제 후에도 증상 지속\n- 재발성 (연 4회 이상)\n- 안와·두개내 합병증 의심 (안구 운동 제한·시력 저하·심한 두통·의식 변화) → **응급**\n- 항진균 의심 (단측 골 침식·면역저하)",
+      content: "- 누적 1개월 항생제 후에도 증상 지속\n- 재발성 (연 4회 이상)\n- 안와·두개내 합병증 의심 (안구 운동 제한·시력 저하·심한 두통·의식 변화) → **응급**\n- 항진균 의심 (단측 골 침식·면역저하)\n\n### 관련\n- [[nasal-furuncle]] — 코끝·콧방울 furuncle (감별·동반)\n- [[allergic-rhinitis]] — 알레르기 비염 동반 시\n- [[hyposmia]] — 후각 저하 동반",
       sources: []
     },
     notes: {
-      content: "한국 외래에서 매크로라이드(특히 Roxithromycin)를 step에 끼워 쓰는 임상 관행 존재 — 가이드라인과 괴리 [TACIT — guideline-vs-practice]. ABRS 90% 이상은 viral → 항생제 없이 자연 호전. 항생제 적응증: 10일 이상 지속 + 악화 + 고열·심한 안면통.",
+      content: "한국 외래에서 매크로라이드(Clarithromycin·Roxithromycin)를 1차 또는 step에 끼워 쓰는 임상 관행 존재 — 가이드라인과 괴리 [TACIT — guideline-vs-practice]. ABRS 90% 이상은 viral → 항생제 없이 자연 호전. 항생제 적응증: 10일 이상 지속 + 악화 + 고열·심한 안면통.",
       sources: []
     }
   },
