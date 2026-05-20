@@ -261,3 +261,35 @@ T2DM 환자에서 GLP-1RA는 SGLT-2i 대비 UTI·생식기 진균감염 위험�
 - 후향 코호트, 폴리소음노그래피 시행군 선택 편향 가능(수면 문제 의심 환자 과대 포함)
 - 18–50세 한정 — 고령 환자 외삽 주의
 - GLP-1 RA 종류·용량 구분 없음; 인과 관계 미확정
+
+---
+
+## GLP-1 RA 치료 중 경구 영양보충(ONS) — 체지방↓·제지방 보존 (후향 코호트) [CLINICAL — 조건부]
+
+> [출처: Hong K et al. Oral Nutritional Supplements and Body Composition Outcomes Among GLP-1 Receptor Agonist Users: Real-World Evidence. Diabetes Metab Syndr Obes. 2026;19:574765. PMID:42117035, DOI:10.2147/DMSO.S574765]
+> 미국 외래 252명 후향 코호트. CEM(Coarsened Exact Matching) 매칭: ONS n=88 vs 비ONS n=32. 단백질 영양불량 진단 환자에 ONS 처방. 관측기간 2018–2025.
+> ⚠ **COI**: 저자 3명(Sulo S, Kerr KW, Williams DR)이 Abbott Nutrition 소속 — 결과 해석 시 독립 복제 전까지 신중 적용
+
+**ONS 적응증 (이 연구 기준):** 단백질 영양불량 진단 + GLP-1 RA 치료 중
+
+**핵심 수치 (ONS vs 비ONS, difference-in-differences):**
+
+| 결과 지표 | ONS 효과 | 유의성 |
+|---|---|---|
+| BMI | -1.4 kg/m² | p<0.05 |
+| 체지방 | -8.4 lbs | p<0.05 |
+| 총 체중 | -10.1 lbs | p<0.05 |
+| 체지방률 | -2%p | p<0.05 |
+| 제지방(LBM) 손실 | -5.5 lbs | p<0.01 |
+| 지방:LBM 손실 비율 | **2.3** | p<0.01 — 체지방이 LBM보다 2.3배 더 감소 |
+
+**효과 가장 큰 서브그룹:** 50세 미만 · ONS 순응도 높음 · GLP-1 RA 181–365일 사용 · 당뇨 없는 비만 환자
+
+**임상 시사점:**
+- GLP-1 RA 처방 시 **단백질 영양불량 고위험군 식별 → ONS 병행 처방 고려**
+- 고위험 프로파일: 저체중·근감소·저활동·영양불량력·50세 이상
+- LBM도 일부 손실되나 fat-to-LBM 손실비 2.3 — 체성분 개선 방향 유지
+- 기존 "[인크레틴 계열 근육 손실 경고]" 섹션 처방 원칙(저항운동+단백질 ≥1.2g/kg)과 함께 적용
+
+**한계:** 후향 코호트, 소규모(n=252), Abbott Nutrition COI, 한국 ONS 처방 기준 외삽 주의
+- [출처 미확인 — researcher 검증 권장] 한국 ONS 보험 급여 기준 및 외래 ONS 처방 실무 절차
