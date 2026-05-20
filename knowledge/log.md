@@ -301,3 +301,5 @@
 2026-05-08 | guidelines/goals-of-care-acp.md | 추가 — 치매 동반 노인 임종 질 저하 전국 연구: 치매+암 = 자율성 aOR 0.29, 소통 0.47, 장소 선호 실현 0.67; 연하곤란↑ 통증·불면↓; ACP 조기 시작 근거 [CLINICAL] PMID:41856050 (Arch Gerontol Geriatr 2026)
 2026-05-08 | by-disease/low-back-pain.md | 추가 — 만성 경추·요추 통증 주사·고주파 금지 AFP 진료 지침: epidural·facet·trigger point 주사 및 RFA 모두 근거 없음 [CLINICAL] PMID:41252845 (AFP 2025)
 2026-05-08 | by-disease/heel-pain.md | 신규 — 발뒤꿈치 통증 진단·관리 AFP 리뷰: 족저근막염(기상통증·종골압통), POCUS >4mm, 야간부목·스트레칭·ESWT·주사, Sever disease 소아, 대부분 보존치료 [CLINICAL] PMID:41533410 (AFP 2025)
+
+2026-05-20 | guidelines/adult-vaccination-korea-faq.md | 신규 — 김대균 교수(인천성모) 성인예방접종 강의: 6 Key Switches 판단 프레임, 국내 제품명 매핑, B형간염 투석 고용량/무반응자 6회 프로토콜+환자설명 스크립트, A형간염 40세 컷, MMR 4주2회, 싱그릭스 50세미만 응대·생백신 기접종 8주, PCV20/21·NIP vs 임상선택, Tdap 매임신 27~36주·가족 cocooning, RSV 75+ 전원·60~74 고위험, HPV 지연·성경험·중년여성 응대 [INSIGHTS — 연수강의 김대균 2025]
