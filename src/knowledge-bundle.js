@@ -7445,3 +7445,132 @@ KNOWLEDGE_BUNDLE["palliative-screening"] = _palliative_care_primary_screening_v2
 KNOWLEDGE_BUNDLE["Surprise-Question"] = _palliative_care_primary_screening_v2;
 KNOWLEDGE_BUNDLE["SPICT"] = _palliative_care_primary_screening_v2;
 KNOWLEDGE_BUNDLE["palliative-primary-care"] = _palliative_care_primary_screening_v2;
+
+/* ramsay-hunt-syndrome — 대상포진 이성 (5/20 박소영 교수님 강의 신규). [TIPS, CLINICAL] */
+var _ramsay_hunt_syndrome_v2 = {
+  kind: "disease",
+  keywords: ["ramsay-hunt-syndrome","람세이헌트","Ramsay Hunt","herpes zoster oticus","대상포진 이성","귀 대상포진","슬상신경절","geniculate ganglion","안면신경마비","팜시클로비어","famciclovir","acyclovir","발라시클로비어","valacyclovir","VZV","prednisolone"],
+  parents: [],
+  primarySources: [
+    "Sweeney CJ. J Neurol Neurosurg Psychiatry 2001;71(2):149-154 — 고전 리뷰",
+    "AAFP 2017 Bell's palsy/RHS 리뷰"
+  ],
+  sections: {
+    definition: {
+      content: "VZV 재활성화로 안면신경(VII) 슬상신경절(geniculate ganglion) 침범 → **편측 안면마비 + 외이도/이개 vesicle + 청각·전정 증상** 삼주증. Bell's palsy보다 회복률·예후 불량.",
+      sources: []
+    },
+    exam: {
+      content: "### 임상 단서 [TIPS — by 박소영 교수님]\n> \"귀가 아프고 머리가 아프고 어지럽다고 오는 경우에는 대상포진일 수가 있다.\" — 박소영\n\n- **귀 통증 (otalgia)** — 흔히 첫 증상, vesicle 출현 전 며칠 선행 가능\n- **두통** 동반\n- **어지럼증 (vertigo)** — 전정신경 침범\n- **편측성**\n- 청력저하·이명 동반 가능\n\n### 신체 검사 — 박소영 강의 골격 [TIPS — by 박소영 교수님]\n| 항목 | 확인 |\n|---|---|\n| **귀(외이도·이개) 시진** | vesicle / erythematous rash — **귀를 꼭 본다** |\n| **안진(nystagmus)** | 전정신경 침범 |\n| **안면마비 (House-Brackmann)** | 같은 쪽 표정근 비대칭, 눈감기·이마 주름 |\n| 청력검사 | 동반 청각신경 침범 시 감각신경성 난청 |\n| 구강·구개 시진 | 동측 구개 vesicle 가능 (CN VII 감각 분지) |",
+      sources: []
+    },
+    differential: {
+      content: "### Bell's palsy 감별\n- Bell's palsy: 안면마비 단독, vesicle 없음, otalgia 경미\n- Ramsay Hunt: vesicle + otalgia + (전정·청각 증상) — 회복률 낮음",
+      sources: []
+    },
+    protocol: {
+      content: "### 표준 — 항바이러스 + 스테로이드 [TIPS — by 박소영 교수님 / CLINICAL]\n> 박소영: \"스테로이드와 팜시클로비어를 준다.\" — 가이드라인 정합 (조기 항바이러스 + 스테로이드 병용).\n\n| 약제 | 표준 용량 | 비고 |\n|---|---|---|\n| **Famciclovir (팜시클로비어)** | 500 mg TID 7일 | 박소영 1차 선택 |\n| 대안 — Valacyclovir | 1000 mg TID 7일 | 흡수율·복용 빈도 면 |\n| 대안 — Acyclovir | 800 mg 5회/일 7일 | 신기능에 따라 조정 |\n| **경구 스테로이드** | Prednisolone 1 mg/kg/d (보통 60 mg) 5일 → taper | 안면마비 회복률 개선 |\n\n- **발진 발생 72시간 이내 시작** 시 효과 최대\n- 안면마비·청력저하 단서 보이면 vesicle 명확하지 않아도 경험적 치료 시작 고려\n\n### 입원 적응증 [TIPS — by 박소영 교수님]\n> \"입원이 필요한 상황일 수도 있다.\" — 박소영\n\n- 심한 어지럼·구토로 경구 불가\n- 광범위 vesicle·고령·면역저하\n- 안면마비 빠른 진행 + 청력저하 동반\n- 진단 불확실 (뇌간 병변 감별 필요)\n\n### 보조\n- 안구 보호 (눈감기 불완전 시 artificial tear·眼軟膏·야간 patch)\n- 통증 조절 — 신경병증성 통증(gabapentin·pregabalin) 고려 (PHN 예방·치료)\n- 어지럼 → 항히스타민 진토 (Meclizine 등)",
+      sources: []
+    },
+    precaution: {
+      content: "- **황반변성 병력**: 스테로이드 금기 ([[macular-degeneration-steroid-caution]] 참조) — 항바이러스 단독 + 안과 협진 [TIPS — by 김근전 교수님]\n- 당뇨·녹내장·위궤양 — 일반 스테로이드 주의 사항\n- 신기능 저하 — acyclovir/valacyclovir/famciclovir 용량 조정",
+      sources: []
+    },
+    prognosis: {
+      content: "- 회복률: Bell's palsy(>80%) 대비 Ramsay Hunt 회복률 **~60% 미만** (지연 치료 시 더 낮음)\n- 후유증: 영구 안면마비·청력저하·이명·**Post-herpetic Neuralgia (PHN)**\n- 50세 이상 + 면역저하 환자에서 빈도 ↑\n- VZV 백신(Shingrix) 예방 효과 있음 — 가능 환자에 권유",
+      sources: []
+    },
+    referral: {
+      content: "- **즉시 의심·확인 시 ENT/신경과 의뢰** — 72시간 이내 치료 시작 결정적\n- 안면마비 호전 없음·악화 → ENT (전기생리·재활)\n- 청력저하 동반 → 청력검사 + ENT\n- 신경학적 이상 (구음장애·복시·편측 위약·심한 어지럼) → 응급 영상 + 신경과\n\n### 관련\n- [[sudden-hearing-loss]] — 청력저하 단독·동반 시 감별\n- [[meniere]] — 어지럼 + 청력저하 감별\n- [[dizziness]] — 어지럼증 분기\n- [[macular-degeneration-steroid-caution]] — 스테로이드 처방 전 안과 확인",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["ramsay-hunt-syndrome"] = _ramsay_hunt_syndrome_v2;
+KNOWLEDGE_BUNDLE["람세이헌트"] = _ramsay_hunt_syndrome_v2;
+KNOWLEDGE_BUNDLE["Ramsay-Hunt"] = _ramsay_hunt_syndrome_v2;
+KNOWLEDGE_BUNDLE["herpes-zoster-oticus"] = _ramsay_hunt_syndrome_v2;
+KNOWLEDGE_BUNDLE["대상포진이성"] = _ramsay_hunt_syndrome_v2;
+KNOWLEDGE_BUNDLE["귀대상포진"] = _ramsay_hunt_syndrome_v2;
+KNOWLEDGE_BUNDLE["zoster-oticus"] = _ramsay_hunt_syndrome_v2;
+
+/* nasal-fracture — 비골 골절·코외상 (5/20 강윤진 교수님 강의 신규). [TIPS] */
+var _nasal_fracture_v2 = {
+  kind: "disease",
+  keywords: ["nasal-fracture","비골골절","코뼈 골절","nasal bone fracture","코외상","nasal trauma","소아 비골골절","pediatric nasal fracture","비폐색","septal hematoma","비강 격막혈종","closed reduction"],
+  parents: [],
+  primarySources: [
+    "AAO-HNS clinical 자료·박재형 외 한국이비인후과학회 가이드라인·Sharma 2017 — researcher 검증 보류 (강의 노트 정렬)"
+  ],
+  sections: {
+    definition: {
+      content: "비골(nasal bone) 또는 비중격(septum)의 외상성 골절. 안면 골절 중 가장 흔함. 소아는 성장기 비골 연골 비율이 커서 평가·교정 원칙이 성인과 다르다.",
+      sources: []
+    },
+    exam: {
+      content: "### 표준 평가\n- 외상 기전 (직접 타격·낙상·운동·교통)\n- **코피(epistaxis)** 발생 여부 [강윤진 강조]\n- **외형 변형(deformity)** — 안비·비측만·함몰 [강윤진 강조]\n- 비폐색·호흡 곤란\n- 안와·턱뼈·치아·경추 동반 손상 평가\n\n### 성인 vs 소아 — 강윤진 강의 흐름 [TIPS — by 강윤진 교수님]\n| 항목 | 성인 | 소아 |\n|---|---|---|\n| **촉진** | 외형·crepitus 평가 가능 | **촉진으로 확인 어려움** (연골 비율 ↑, 통증) |\n| **단순 X-ray** | 진단 보조 | **잘 드러나지 않는 경우 多** |\n| **CT** | 적응증 시 (선별적) | **확진 — 적응증 시 강력 권고** |\n| **초음파** | — | 보는 경우도 있음 |\n| **교정 시점** | 외상 후 7~14일 (부종 감소 후) | **외상 후 1주 이내 교정 원칙** |\n\n### CT 적응증 [TIPS — by 강윤진 교수님]\n소아 코외상에서 단순 X-ray는 한계 — 다음 중 하나면 CT:\n- **코피가 났던 경우** (점막·골 손상 시사)\n- **외형 변형(변형)이 생긴 경우**\n- 비폐색 지속\n- 안와·뇌·다른 안면 골절 의심\n\n### Septal hematoma — 반드시 배제 [TIPS]\n- 비중격에 양측 보랏빛 융기 → 천공·괴사·안비 진행 가능\n- **즉시 절개·배농 + ENT 의뢰**",
+      sources: []
+    },
+    protocol: {
+      content: "### 응급 처치\n- 코피: 압박 (콧등 단단한 부위 아닌 콧방울 부위, 10~15분), 머리 약간 앞으로 숙임\n- 진통제 — APAP (NSAIDs는 출혈 우려 시 회피)\n- 얼음 (외부 적용)\n- 비강 충혈제거 스프레이 (oxymetazoline) 단기 — 출혈·부종 ↓\n\n### 교정 (closed reduction) [TIPS — by 강윤진 교수님]\n- **소아: 외상 후 1주 이내 교정** — 빨리 유합되므로 지연 시 변형 영구화\n- 성인: 7~14일 (부종 감소 후 평가 + 교정)\n- **소아는 전신마취 하 교정 원칙**\n- 변형 심하거나 비중격 동반 골절 — open reduction·septoplasty 고려 (ENT)",
+      sources: []
+    },
+    precaution: {
+      content: "- **소아 비중격 수술은 15세 이후로 미루는 것이 원칙** — 성장기 비중격 수술은 안면 발달에 영향 가능 ([[allergic-rhinitis]] 참조) [TIPS — by 강윤진 교수님]\n- 동반 두부외상·경추 손상 — 의식·신경학적 평가\n- Septal hematoma 놓치지 않기\n\n### 비고\n- 비골 골절 자체는 응급 아니지만, **septal hematoma·뇌척수액 누출·안와 침범**은 응급\n- 미용 결과: 1주 이내 교정 → 만족도·재교정률 ↓\n- 영상 음성이라도 임상 변형 있으면 ENT 평가",
+      sources: []
+    },
+    referral: {
+      content: "- 외형 변형 명확 → ENT (closed reduction)\n- 비중격 동반 골절·septal hematoma → ENT 즉시\n- 안와·전두동·사골 침범 의심 → CT + 두개안면 외상 팀\n- **소아 골절 확인 → 1주 이내 전신마취 교정 가능 ENT 의뢰** [강윤진 강조]\n\n### 관련\n- [[nasal-furuncle]] — 비강 표면 감염 (외상·도구 노출 후)\n- [[allergic-rhinitis]] — 비중격 수술 시점 원칙\n- [[epistaxis]] — 외상성 코피",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["nasal-fracture"] = _nasal_fracture_v2;
+KNOWLEDGE_BUNDLE["비골골절"] = _nasal_fracture_v2;
+KNOWLEDGE_BUNDLE["코뼈골절"] = _nasal_fracture_v2;
+KNOWLEDGE_BUNDLE["nasal-bone-fracture"] = _nasal_fracture_v2;
+KNOWLEDGE_BUNDLE["코외상"] = _nasal_fracture_v2;
+KNOWLEDGE_BUNDLE["nasal-trauma"] = _nasal_fracture_v2;
+KNOWLEDGE_BUNDLE["septal-hematoma"] = _nasal_fracture_v2;
+KNOWLEDGE_BUNDLE["비중격혈종"] = _nasal_fracture_v2;
+
+/* nasal-furuncle — 코 furuncle·비전정염 (5/20 강윤진 교수님 강의 신규). [TIPS] */
+var _nasal_furuncle_v2 = {
+  kind: "disease",
+  keywords: ["nasal-furuncle","코 furuncle","nasal furuncle","nasal vestibulitis","코 뾰루지","비전정염","코끝 종기","suprax","cefixime","세픽심","mupirocin","박트로반","danger triangle","해면정맥동"],
+  parents: [],
+  primarySources: [
+    "AAFP·UpToDate 표준 — researcher 검증 보류 (강의 노트 정렬)"
+  ],
+  sections: {
+    definition: {
+      content: "비강 전정(nasal vestibule) 또는 콧방울·코끝의 화농성 모낭염/절종. 주된 원인균 **Staphylococcus aureus** (MSSA·MRSA 가능). **얼굴 danger triangle**에 위치 → 해면정맥동 혈전증 등 합병증 위험으로 보수적 관리 필수.",
+      sources: []
+    },
+    exam: {
+      content: "### 증상\n- 코끝·콧방울·비전정 부위 통증성 종기 / pustule\n- 발적·압통·국소 부종\n- 발열·전신증상 (드물지만 봉와직염 진행 시)\n- 외상·코털 뽑기·도구·만성 비강 자극력\n\n### 단서\n- 단발성 종기 vs 모낭염 다발\n- 비중격 침범 — septal abscess 가능성 (즉시 의뢰)\n- 면역저하·당뇨 — 더 적극 평가",
+      sources: []
+    },
+    protocol: {
+      content: "### 강윤진 교수님 외래 표준 [TIPS — by 강윤진 교수님]\n> \"코에 뾰루지가 크게 난 경우에는 손을 대지 말아야 한다. 항생제는 suprax (세파계열)로 줘야 되고 연고는 국소항생제 연고를 처방한다. 최소한 항생제를 2주일간 복용하도록 하고 1주마다 팔로업을 해야 된다.\"\n\n| 항목 | 처방·지침 |\n|---|---|\n| **경구 항생제** | **Cefixime (Suprax, 세픽심) 100 mg BID** — 강윤진 1차 선택 |\n| **기간** | **최소 2주** |\n| **국소 항생제 연고** | **Mupirocin 2% (박트로반) BID** 또는 fusidic acid — 병변에 점적 |\n| **F/U** | **1주 간격** 재평가 |\n| **금지 행위** | **손으로 짜지 말 것** — danger triangle 해면정맥동 혈전증 위험 |\n\n### MRSA 의심·재발성 [TIPS]\n- TMP-SMX 또는 doxycycline 고려\n- Nasal carrier decolonization: mupirocin nasal ointment BID 5일 + 클로르헥시딘 세안\n- 재발 시 비강 균배양 + ENT 의뢰",
+      sources: []
+    },
+    precaution: {
+      content: "### Danger Triangle [TIPS — by 강윤진 교수님]\n- 코·인중·턱끝 삼각 부위 정맥 환류는 안면 정맥 → 해면정맥동 직접 연결\n- 짜거나 째면 → 감염 파급·**해면정맥동 혈전증·뇌막염** 위험\n- **손대지 말기·도구 사용 금지** 환자 교육 핵심\n\n### 입원·응급 적응증\n- 발열·심한 부종·안와 침범 (안검부종·안구돌출·안구 운동제한·시력 변화)\n- 두통·의식 변화 — 두개 침범 가능\n- 면역저하·당뇨 컨트롤 불량 + 빠른 진행\n\n### 비고\n- Cefixime은 S. aureus에 대한 활성이 제한적 — 강윤진 routine은 한국 외래 패턴 (가이드라인 1차로는 dicloxacillin·cephalexin·clindamycin 추천 더 많음). 한국 정황·약물 가용성·강윤진 임상 결과 기반.\n- 호전 빠르면 1주 후 항생제 중단 가능하나 강윤진은 **최소 2주 권고** (재발·잠재 합병증 방지)",
+      sources: []
+    },
+    referral: {
+      content: "- 1주 후 호전 없음 → ENT\n- Septal abscess 의심 (비중격 통증·종창) → ENT 즉시\n- 안와·두개 침범 의심 → 응급 영상 + 입원\n- 재발성·MRSA 동정 → 감염내과·ENT\n\n### 관련\n- [[sinusitis]] — 동반 평가 (만성 비강 감염 환경)\n- [[nasal-fracture]] — 외상 후 감염 합병증",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["nasal-furuncle"] = _nasal_furuncle_v2;
+KNOWLEDGE_BUNDLE["코furuncle"] = _nasal_furuncle_v2;
+KNOWLEDGE_BUNDLE["코뾰루지"] = _nasal_furuncle_v2;
+KNOWLEDGE_BUNDLE["nasal-vestibulitis"] = _nasal_furuncle_v2;
+KNOWLEDGE_BUNDLE["비전정염"] = _nasal_furuncle_v2;
+KNOWLEDGE_BUNDLE["코끝종기"] = _nasal_furuncle_v2;
