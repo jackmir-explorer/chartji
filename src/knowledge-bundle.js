@@ -7160,3 +7160,95 @@ KNOWLEDGE_BUNDLE["dash-diet-cvd"] = _dash_diet_cvd_v2;
 KNOWLEDGE_BUNDLE["DASH"] = _dash_diet_cvd_v2;
 KNOWLEDGE_BUNDLE["DASH-diet"] = _dash_diet_cvd_v2;
 KNOWLEDGE_BUNDLE["DASH식이"] = _dash_diet_cvd_v2;
+
+/* heat-illness — 열관련 질환 외래·응급 관리 (5/14 deep-extract 신규). [CLINICAL] */
+var _heat_illness_v2 = {
+  kind: "disease",
+  keywords: ["heat-illness","열관련질환","heat illness","heat stroke","열사병","heat exhaustion","열탈진","heat cramps","열경련","heat-cramps","heat-stroke","heat-exhaustion","exertional heat illness","냉각","cold water immersion","acclimatization","순화","고위험군"],
+  parents: [],
+  primarySources: [
+    "Gauer RL et al. Heat-Related Illnesses. Am Fam Physician 2026;113(4):369-381. PMID:42101601"
+  ],
+  sections: {
+    classification: {
+      content: "### 스펙트럼 분류 [CLINICAL]\n> [출처: Gauer RL et al. Am Fam Physician 2026;113(4):369-381. PMID:42101601] [초록 기반 — 전문 미확인]\n\n| 중증도 | 질환 | 핵심 특징 |\n|---|---|---|\n| **경미** | 열부종 (Heat edema) | 사지 부종 |\n| 경미 | 열발진 (Heat rash) | 땀샘 폐색 피부 발진 |\n| 경미 | 열경련 (Heat cramps) | 심한 운동 후 근경련, 저나트륨 관련 |\n| **중등도** | 운동 관련 허탈 | 활동 직후 쓰러짐, 의식 명료 |\n| 중등도 | 열탈진 (Heat exhaustion) | 허약·피로·두통·오심·구토, 체온 <40°C, CNS 정상 |\n| 중등도 | 운동 횡문근융해 | 근육통·갈색뇨·CK↑ |\n| **응급** | 열사병 (Heat stroke) | 핵심 체온 **>40°C + CNS 변화** — 즉각 냉각 필수 |\n| 응급 | 중증 운동 관련 저나트륨혈증 | 혼돈·경련, 열사병과 감별 필수 (치료 다름) |\n| 응급 | 낫모양 적혈구 특성 관련 허탈 | 운동 중 갑작스러운 허탈, 높은 사망률 |",
+      sources: []
+    },
+    exam: {
+      content: "### 열탈진 vs 열사병 감별 (핵심)\n| 항목 | 열탈진 | 열사병 |\n|---|---|---|\n| 체온 | <40°C | **>40°C** |\n| CNS 변화 | **없음** (의식 명료) | **있음** (혼돈·의식저하·경련) |\n| 긴급도 | 중등도 — 안정·냉각 | **응급 — 30분 내 즉각 냉각** |",
+      sources: []
+    },
+    precaution: {
+      content: "### 고위험군·위험 약물\n> 열관련 질환 위험 증가 약물·상태 — 처방 재검토 근거\n\n| 위험인자 | 기전 |\n|---|---|\n| **이뇨제** | 수분·전해질 고갈 |\n| **항콜린제** (항히스타민·방광약·항정신병약 등) | 발한 억제 → 체온 조절 장애 |\n| **항정신병약** | 발한 억제 + 체온조절 중추 영향 |\n| 고령·소아 | 체온조절 능력 저하 |\n| 순화 미완성 | 더위 적응 전 고강도 활동 |\n| 최근 질병·탈수 | 생리적 예비능 감소 |\n| 과도한 의복·장비 | 열 발산 방해 |\n| 비만·심폐 기저질환 | 열 발산 효율 저하 |\n\n**처방 연결**: 이뇨제·항콜린제 복용 환자 → 고온 노출 전 복약 재검토 + 수분 섭취 강조. [[anticholinergic-burden]] 점검 시 열관련 위험 겹침.",
+      sources: []
+    },
+    protocol: {
+      content: "### 경미한 열관련 질환\n- 활동 중단, 시원한 환경으로 이동\n- 경구 수분 보충 (전해질 포함)\n- 열경련: 스트레칭 + 생리식염수 경구 보충\n\n### 열탈진\n- 안정 + 수분 보충 + 기본 냉각 (선풍기·그늘·분무)\n- IV 수액 (경구 섭취 불가 시)\n- 30분 관찰 후 증상 지속·악화 → 열사병 재평가\n\n### 열사병 — 즉각 응급 처치 [CLINICAL]\n> ⚠ 열사병은 **30분 이내 핵심 체온 하강**이 생사 결정\n\n1. **얼음물 침수 냉각** (Cold water immersion) — 냉각 속도 최우선 방법\n   - 샤워·선풍기보다 냉각 속도 현저히 우월\n   - 병원 이송 대기 중에도 현장에서 즉시 시작\n2. 목표 체온: 핵심 체온 <39°C까지 냉각\n3. 기도·호흡·순환 유지 + 즉시 응급실 이송\n4. IV 수액 (생리식염수)\n5. 모니터링: 간기능·신기능·혈액응고·CK (다장기부전 감별)\n\n### 중증 운동 관련 저나트륨혈증 — 열사병과 치료 방향 다름\n- 저나트륨혈증이 원인 → 과도한 저장성 수액 금지\n- 혈중 Na+ 확인 후 고장성 생리식염수 고려",
+      sources: []
+    },
+    counseling: {
+      content: "### 순화 (Acclimatization)\n- **10~14일에 걸쳐 점진적 더위 노출** → 심폐 적응·발한 증가\n- 새 환경·새 계절 시작 시 강도 즉시 올리지 않도록 교육\n\n### 고위험군 외래 상담 핵심\n1. 이뇨제·항콜린제·항정신병약 복용자 → 폭염 시 주의 사항 교육\n2. 충분한 수분 섭취 (갈증 전 음수 습관)\n3. 폭염 경보 시: 야외 활동 자제 + 시원한 환경 유지\n4. 가족·보호자: 고령 환자 이상 행동(혼돈·의식 변화) → 즉시 응급 연락",
+      sources: []
+    },
+    notes: {
+      content: "### 환자 교육\n> \"열탈진과 열사병은 다릅니다. 더위에 지쳐서 쓰러졌는데 정신이 멀쩡하면 열탈진, 의식이 흐릿하거나 헛소리를 하면 열사병입니다. 열사병은 즉시 찬물에 담가 식히고 119를 불러야 합니다. 혈압약이나 이뇨제를 드시는 분은 폭염 때 특히 조심하세요.\"\n\n### 관련\n- [[anticholinergic-burden]] — 항콜린 부담 점검 (열관련 고위험 약물 겹침)\n- [[frailty]] — 고령 허약 환자 열관련 고위험군 연결",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["heat-illness"] = _heat_illness_v2;
+KNOWLEDGE_BUNDLE["열관련질환"] = _heat_illness_v2;
+KNOWLEDGE_BUNDLE["열사병"] = _heat_illness_v2;
+KNOWLEDGE_BUNDLE["heat-stroke"] = _heat_illness_v2;
+KNOWLEDGE_BUNDLE["heatstroke"] = _heat_illness_v2;
+KNOWLEDGE_BUNDLE["열탈진"] = _heat_illness_v2;
+KNOWLEDGE_BUNDLE["heat-exhaustion"] = _heat_illness_v2;
+KNOWLEDGE_BUNDLE["열경련"] = _heat_illness_v2;
+KNOWLEDGE_BUNDLE["heat-cramps"] = _heat_illness_v2;
+
+/* trigeminal-neuralgia — 삼차신경통 외래 진단·치료 (5/14 deep-extract 신규). [CLINICAL] */
+var _trigeminal_neuralgia_v2 = {
+  kind: "disease",
+  keywords: ["trigeminal-neuralgia","삼차신경통","trigeminal neuralgia","TN","얼굴통증","face pain","신경병증성통증","neuropathic facial pain","carbamazepine","카바마제핀","oxcarbazepine","미세혈관감압술","microvascular decompression","MVD","전기충격형 통증","trigger zone"],
+  parents: ["headache"],
+  primarySources: [
+    "Amaechi O. Trigeminal Neuralgia: Rapid Evidence Review. Am Fam Physician 2025;111(5):427-432. PMID:40378323"
+  ],
+  sections: {
+    definition: {
+      content: "> [출처: Amaechi O. Am Fam Physician 2025;111(5):427-432. PMID:40378323] [초록 기반 — 전문 미확인]\n\n삼차신경통(TN)은 삼차신경(Cranial Nerve V) 분포 영역의 **전기충격형(electric shock-like), 작열·찌르는 극심한 안면통증**이 갑작스럽게 반복되는 만성 신경병증성 통증.\n\n- 평균 발병 연령: **50–60세**, 연령 증가와 함께 발생률 상승\n- 병태생리: 신경근 혈관 접촉·압박 → 탈수초화 → 비정상 신경 발화",
+      sources: []
+    },
+    classification: {
+      content: "### IHS 분류\n| 유형 | 원인 |\n|---|---|\n| **고전형 (Classic TN)** | 혈관에 의한 신경근 직접 압박·해부학적 압박 |\n| **이차성 (Secondary TN)** | 다발성경화증(MS)·종양 등 다른 질환 |\n| **특발성 (Idiopathic TN)** | 확인된 원인 없음 |",
+      sources: []
+    },
+    exam: {
+      content: "### 진단 기준 핵심 특징\n- **분포**: 삼차신경 1개 이상 분지 (V1 안와, V2 상악, V3 하악)\n- **성상**: 갑작스러운 전기충격형, 수초~수분 지속, 완전 무통 간기\n- **유발**: 가벼운 촉각 자극 (말하기·씹기·세안·바람) → Trigger zone 자극\n- **발작 간 증상 없음** (발작 간 정상)\n\n### 진단 함정\n- 치과 통증·TMJ·편두통으로 오인 → 불필요한 발치 빈발\n- 치통·치아 발치에도 통증 지속 → TN 감별 필수\n\n### 뇌 MRI — 모든 TN 의심 환자에 필수\n> ⚠ **MRI without/with contrast 필수 — 임상 증상만으로 결정 금지**\n\n적응:\n- **종양 배제**\n- **MS 배제**\n- 수술 적응 여부 결정 (혈관 압박 확인 = 미세혈관감압술 후보 선택)",
+      sources: []
+    },
+    protocol: {
+      content: "### 1차 약물: Carbamazepine\n| 항목 | 내용 |\n|---|---|\n| **초기 조절률** | **75%** — 가장 강력한 근거 |\n| 시작 용량 | 100–200 mg 1–2회/일 (점진 증량) |\n| 목표 용량 | 200–1200 mg/일 (증상 조절 최소 유효량) |\n| 모니터링 | 저나트륨혈증·골수억제·간기능 (특히 아시아인 HLA-B*1502 Stevens-Johnson syndrome 위험) |\n| 한국 보험 | [출처 미확인 — researcher 검증 권장] |\n\n### 2차 약물 (carbamazepine 불내성·불응성)\n- **Oxcarbazepine** — 내약성 다소 개선, 효능 유사\n- Lamotrigine, gabapentin, baclofen — 근거 약함, 보조로만\n- [출처 미확인 — researcher 검증 권장]: 한국 처방 현황·보험 기준\n\n### 수술 (약물 불응성 또는 부작용으로 지속 불가 시)\n- **미세혈관감압술 (Microvascular decompression, MVD)** — 다른 수술 옵션보다 증상 개선·완화에 가장 효과적\n- 경피적 수술 옵션: 글리세롤 주입·방사선 수술·풍선 압박 (MVD 대안)\n- 수술 의뢰 기준: 약물 최대 용량에도 조절 불량, 부작용으로 약물 지속 불가\n\n### 외래 결정 분기\n```\nTN 의심 안면통증\n│\n├─ 뇌 MRI with/without contrast 의뢰 (모든 환자)\n│   ├─ 종양·MS 발견 → 신경과·신경외과 의뢰\n│   └─ 음성 (혈관 압박 or 불명) → Carbamazepine 시작\n│\n└─ Carbamazepine 시작 → 75% 초기 조절\n    ├─ 조절 양호 → 유지\n    └─ 불응·부작용 심함\n        ├─ 2차 약물 병용 시도\n        └─ 수술 평가 의뢰 (신경외과)\n```",
+      sources: []
+    },
+    precaution: {
+      content: "### Carbamazepine 처방 전 검사·교육\n- **HLA-B*1502** — 아시아인 양성 환자에서 Stevens-Johnson syndrome 위험 — FDA 권고 처방 전 검사 고려\n- 저나트륨혈증 모니터링 (특히 노인 — [[epilepsy-elderly]] 참조)\n- 골수억제·간기능 — baseline + 4~6주 후 재검\n- 효소 유도 — 와파린·DOAC·항암제 농도 변화 (다약제 검토)\n\n### 노인 환자 주의\n- 노인 항경련제 내약성 — [[epilepsy-elderly]] (라모트리진·옥스카바제핀 등 신약 우선 검토)",
+      sources: []
+    },
+    notes: {
+      content: "### 환자 교육\n> \"이 통증은 얼굴에 있는 신경이 자극되어서 전기 충격처럼 아픈 질환입니다. 치아 문제가 아닙니다. 뇌 MRI로 원인을 확인하고 약물 치료를 시작하면 대부분은 좋아집니다. 약이 안 듣거나 부작용이 심하면 수술 치료도 있습니다.\"",
+      sources: []
+    },
+    referral: {
+      content: "- 뇌 MRI 이상 소견 (종양·MS) → **신경과 즉시 의뢰**\n- 약물 최대 용량 불응 → **신경외과 (미세혈관감압술 평가)**\n- 고령 + 약물 부작용 심각 → 신경외과 조기 의뢰 고려\n\n### 관련\n- [[headache]] — 두통 감별 (TN vs 두통 유발성 안면통 구분)\n- [[epilepsy-elderly]] — 노인 카바마제핀 내약성 주의",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["trigeminal-neuralgia"] = _trigeminal_neuralgia_v2;
+KNOWLEDGE_BUNDLE["삼차신경통"] = _trigeminal_neuralgia_v2;
+KNOWLEDGE_BUNDLE["TN"] = _trigeminal_neuralgia_v2;
+KNOWLEDGE_BUNDLE["trigeminal"] = _trigeminal_neuralgia_v2;
+KNOWLEDGE_BUNDLE["삼차"] = _trigeminal_neuralgia_v2;
