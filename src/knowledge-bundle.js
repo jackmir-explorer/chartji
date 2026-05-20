@@ -1867,11 +1867,11 @@ var _dizziness_v2 = {
   primarySources: [],
   sections: {
     exam: {
-      content: "### 어지럼증 기본 문진 11항목 [TIPS — 교수님 외래 참관]\n1. 언제부터 어지러웠는지\n2. 갑자기 발생했는지\n3. 과거 비슷한 episode 있었는지\n4. 한번 어지러울 때 얼마나 지속되는지\n5. 괜찮을 땐 완전히 괜찮은지 (삽화성 vs 지속성)\n6. 심한 정도 — 구역/구토 동반 여부, 휘청거림\n7. 귀먹먹함(이충만감) 동반 여부\n8. 이명 동반 여부\n9. 만성이면 한달 발생 빈도\n10. 어떤 상황에서 특히 어지러운지 (자세변화, 기립, 스트레스 등)\n11. 가장 최근 episode는 언제\n\n### 편두통성 어지럼증 추가 문진\n- 편두통 과거력 확인\n- 두통 동반 여부, 빛·소리 과민, 구역/구토, 전조증상, 두통 양상(박동성/지속시간), 가족력, 발작 빈도\n\n### 환자가 '어지럽다'고 할 때 [TIPS — by ENT 교수]\n- '어지럽냐'고 물으면 다 어지럽다고 함 → **구체화 질문** 필수\n- **'걸을 때 비틀거리거나 중심을 못 잡은 적 있는지'** — 진짜 vertigo·ataxia 감별의 시작점\n\n### 어지럼증 초진 검사 표준 [TIPS — by ENT 교수]\n| 항목 | 확인 |\n|---|---|\n| 구토 여부 | 동반 여부·빈도 |\n| 일상생활 지장 정도 | 침상안정·휘청거림 정도 |\n| **Head Impulse Test (HIT)** | 말초 vs 중추 감별 (catch-up saccade 유무) |\n| **Tandem gait** | 소뇌·후순환 의심 시 |\n| 난청·이명·귀 먹먹함 | 메니에르·내이수종 감별 |\n| **고막 시진** | 외이염·중이염·천공 |\n\nHIT abnormal + skew deviation 없음·nystagmus 단방향 = **HINTS 양성 → 말초성**\nHIT normal + skew deviation 있음·nystagmus 변화 = **HINTS 음성 → 중추성 의심 (소뇌 경색)**\n\n### 귀에 물약 → 일시적 어지럼 [TIPS — by ENT 교수]\n- 귀에 물약을 넣었을 때 어지러울 수 있음\n- 원인: 물약이 차가움 → 외이도 내 온도 자극 → caloric stimulation\n- 환자 교육: **물약을 손에 잠시 쥐어 체온 정도로 데워서** 점안",
-      sources: ["[TIPS — 교수님 외래 참관]"]
+      content: "### 어지럼증 기본 문진 [TIPS — 교수님 외래 참관 / by 박소영 교수님]\n1. 언제부터 어지러웠는지\n2. 갑자기 발생했는지\n3. 과거 비슷한 episode 있었는지\n4. 한번 어지러울 때 얼마나 지속되는지\n5. 괜찮을 땐 완전히 괜찮은지 (삽화성 vs 지속성)\n6. 심한 정도 — 구역/구토 동반 여부, 휘청거림\n7. **귀먹먹함(이충만감) 동반 여부** — 박소영 강조: \"어지럽다고 내원한 환자에서도 **귀가 먹먹한지 안 들리는지 꼭 물어본다**\" (메니에르·돌발성 난청·내이수종 감별의 결정적 단서)\n8. **이명 동반 여부**\n9. **청력 저하 동반 여부** — 박소영 강조\n10. 만성이라면 한달 발생 빈도\n11. 어떤 상황에서 특히 어지러운지 (자세변화, 기립, 스트레스 등)\n12. 가장 최근 episode는 언제\n\n### 편두통성 어지럼증 추가 문진\n- 편두통 과거력 확인\n- 두통 동반 여부, 빛·소리 과민, 구역/구토, 전조증상, 두통 양상(박동성/지속시간), 가족력, 발작 빈도\n\n### 환자가 '어지럽다'고 할 때 [TIPS — by ENT 교수]\n- '어지럽냐'고 물으면 다 어지럽다고 함 → **구체화 질문** 필수\n- **'걸을 때 비틀거리거나 중심을 못 잡은 적 있는지'** — 진짜 vertigo·ataxia 감별의 시작점\n\n### 어지럼증 초진 검사 표준 [TIPS — by ENT 교수]\n| 항목 | 확인 |\n|---|---|\n| 구토 여부 | 동반 여부·빈도 |\n| 일상생활 지장 정도 | 침상안정·휘청거림 정도 |\n| **Head Impulse Test (HIT)** | 말초 vs 중추 감별 (catch-up saccade 유무) |\n| **Tandem gait** | 소뇌·후순환 의심 시 |\n| 난청·이명·귀 먹먹함 | 메니에르·내이수종 감별 |\n| **고막 시진** | 외이염·중이염·천공 |\n\nHIT abnormal + skew deviation 없음·nystagmus 단방향 = **HINTS 양성 → 말초성**\nHIT normal + skew deviation 있음·nystagmus 변화 = **HINTS 음성 → 중추성 의심 (소뇌 경색)**\n\n### 귀에 물약 → 일시적 어지럼 [TIPS — by ENT 교수]\n- 귀에 물약을 넣었을 때 어지러울 수 있음\n- 원인: 물약이 차가움 → 외이도 내 온도 자극 → caloric stimulation\n- 환자 교육: **물약을 손에 잠시 쥐어 체온 정도로 데워서** 점안",
+      sources: ["[TIPS — 교수님 외래 참관]","[TIPS — by 박소영 교수님 5/20]"]
     },
     differential: {
-      content: "### Horses — 흔한 원인 (빈도순)\n1. **[[BPPV|BPPV]]** — 자세 변화 시 수초~1분 내 소실. 가장 흔함(말초성 현훈의 절반 이상)\n2. **전정신경염** — 바이러스 후 급성 지속성 현훈. 청력저하 없음. 오심·보행장애 동반\n3. **편두통성 어지럼증 (Vestibular [[migraine|migraine]])** — 편두통 과거력 + 반복성. 두통 없이도 어지럼만 올 수 있음\n4. **기립성 저혈압** — 기립 시 어지럼. 노인·탈수·강압제 복용자\n5. **메니에르병** — 반복성 현훈 + 이명 + 편측 청력저하 + 이충만감 동반\n\n### Zebra — 드물지만 절대 놓치면 안 됨\n- ⚠ **소뇌경색 / TIA** — 갑작스러운 발병. 보행장애, 두통, 복시·안면마비·구음장애 동반 시 즉시 의심. RedFlag 영역.",
+      content: "### Horses — 흔한 원인 (빈도순)\n1. **[[BPPV|BPPV]]** — 자세 변화 시 수초~1분 내 소실. 가장 흔함(말초성 현훈의 절반 이상)\n2. **전정신경염** — 바이러스 후 급성 지속성 현훈. 청력저하 없음. 오심·보행장애 동반\n3. **편두통성 어지럼증 (Vestibular [[migraine|migraine]])** — 편두통 과거력 + 반복성. 두통 없이도 어지럼만 올 수 있음\n4. **기립성 저혈압** — 기립 시 어지럼. 노인·탈수·강압제 복용자\n5. **메니에르병** — 반복성 현훈 + 이명 + 편측 청력저하 + 이충만감 동반\n\n### Zebra — 드물지만 절대 놓치면 안 됨\n- ⚠ **소뇌경색 / TIA** — 갑작스러운 발병. 보행장애, 두통, 복시·안면마비·구음장애 동반 시 즉시 의심. RedFlag 영역.\n- ⚠ **[[ramsay-hunt-syndrome]]** — 귀 통증 + 두통 + 어지럼증 동반 (대상포진 이성). 안면마비·안진 확인 필수. 입원 적응증 가능 [TIPS — by 박소영 교수님]",
       sources: ["AAFP Am Fam Physician 2017","NCBI StatPearls"]
     },
     referral: {
@@ -3535,10 +3535,10 @@ KNOWLEDGE_BUNDLE["감각신경성난청"] = _hearing_loss_v2;
 
 /* ========== 4-30 ENT bulk ingest (Batch 7 — 메니에르·저주파·돌발성) ========== */
 
-/* low-freq-hearing-loss — 급성 저주파 감각신경성 난청 (4-30 ENT bulk, v1 alias 마이그레이션). [TIPS] */
+/* low-freq-hearing-loss — 급성 저주파 감각신경성 난청 (4-30 ENT bulk + 5/20 박소영 보강). [TIPS] */
 var _low_freq_v2 = {
   kind: "disease",
-  keywords: ["저음성난청","저주파난청","급성 저주파 감각신경성 난청","ALHL","low-frequency SNHL","귀먹먹함","이충만감","내이수종","endolymphatic hydrops","U-turn","Betahistine","메칠론"],
+  keywords: ["저음성난청","저주파난청","급성 저주파 감각신경성 난청","ALHL","low-frequency SNHL","귀먹먹함","이충만감","내이수종","endolymphatic hydrops","U-turn","Betahistine","메칠론","박소영","autophony","자기목소리"],
   primarySources: [],
   sections: {
     definition: {
@@ -3546,15 +3546,15 @@ var _low_freq_v2 = {
       sources: []
     },
     exam: {
-      content: "### 증상 [TIPS — by ENT 교수]\n- 청력 저하\n- **귀먹먹함 / 이충만감** (비행기 탔거나 물에 들어간 듯한 느낌)\n- 어지럼증 (경미~중등도, 회전성은 드묾)\n- 매미·우웅 등 다양한 소리의 이명 동반 가능\n\n### 진단\n- 청력검사 (PTA): 저주파(125–500 Hz) 손실 — 변동성\n- 고막 시진 정상\n- 내이 MRI는 일반적으로 불필요",
+      content: "### 증상 [TIPS — by 박소영 교수님 / ENT 교수]\n- 청력 저하\n- **귀먹먹함 / 이충만감** (비행기 탔거나 물에 들어간 듯한 느낌)\n- **본인 목소리가 자꾸 들림 (autophony)** [TIPS — by 박소영 교수님] — 내이수종 시사 단서\n- 어지럼증 (경미~중등도, 회전성은 드묾)\n- 매미·우웅 등 다양한 소리의 이명 동반 가능\n- **통증 없음** — 박소영: \"고막은 통증을 느낄 수 없기 때문\" — 통증 호소 시 다른 진단(외이염·중이염·zoster) 고려\n\n### History 필수 [TIPS — by 박소영 교수님]\n- **코를 세게 풀었는지** / **외상 여부** — 고막 천공 감별 (귀먹먹·자기 목소리 들림 → 천공 증상과 겹침)\n- 청력검사는 인디케이션 — 발생 시점부터 청력 저하 정량화\n- **고막 시진 필수** — 천공 배제\n\n### 진단\n- 청력검사 (PTA): 저주파(125–500 Hz) 손실 — 변동성\n- **고막 시진 — 천공 배제** (코 강풀기·외상 history 시 더 적극)\n- 내이 MRI는 일반적으로 불필요",
       sources: []
     },
     protocol: {
-      content: "### 급성기 [TIPS — by ENT 교수]\n**스테로이드 + 위장약 + 내이 미세순환제**:\n| 약제 | 용량 | 기간 |\n|---|---|---|\n| **메칠론(Methylprednisolone)** | 10T#2 ×3일 → 8T#2 → 6T#2 → 4T#2 → 2T#2 (1일씩 감량) | 총 7일 tapering |\n| **Storgar** (위장약) | 표준 용량 병용 | 동기간 |\n| **U-turn (Betahistine)** | 1T TID | 동기간 |\n\n30%는 약 무반응 — **컨디션 조절(생활습관)이 더 중요**.\n\n### 유지/만성 [TIPS — by ENT 교수]\n- **U-turn (Betahistine)** TID — 내림프수종 완화 (귀먹먹함 단독 시 단독 처방 가능)\n- **Dichlozid (HCTZ) ½T** 추가 — 티아지드 이뇨제로 내압 감소\n- 미호전 시 청력검사 재평가",
+      content: "### 비특이적 / 단순 귀먹먹함 — 경험적 1차 [TIPS — by 박소영 교수님]\n> 청력검사 정상이거나 비특이적으로 귀먹먹함만 호소 → **U-turn (Betahistine) 1T TID 경험적**으로 사용 가능. 메칠론 taper는 청력 저하·증상 강도 확인된 경우.\n\n### 급성기 — 메칠론 taper (박소영 강의 정렬) [TIPS — by 박소영 교수님]\n**스테로이드 + 위장약 + 내이 미세순환제**:\n| 약제 | 용량 | 기간 |\n|---|---|---|\n| **메칠론(Methylprednisolone)** | 8T#2 ×3일 → 6T#2 ×2일 → 4T ×1일 → 2T ×1일 | 총 7일 tapering (박소영) |\n| **Storgar** (위장약) | 표준 용량 병용 | 동기간 |\n| **U-turn (Betahistine)** | 1T TID | 동기간 |\n\n> 박소영 정확한 taper. 미르 routine은 10T 시작 가능 — 임상 판단에 따라 시작 용량 조정. 30%는 약 무반응 — **생활습관 개선이 더 중요**.\n\n### 유지/만성 — 스테로이드 종료 후 전환 [TIPS — by 박소영 교수님 / ENT 교수]\n- **U-turn (Betahistine)** TID — 내림프수종 완화 (귀먹먹함 단독 시 단독 처방 가능)\n- **Dichlozid (HCTZ) ½T** 추가 — 티아지드 이뇨제로 내압 감소\n- ⚠ **스테로이드 1주 + Dichlozid 동시 금지** — 1주 종료 후 이뇨제 시작\n- 미호전 시 청력검사 재평가",
       sources: []
     },
     lifestyle: {
-      content: "### 생활습관 개선 [TIPS — by ENT 교수]\n- **저염식**\n- **금주, 카페인(커피) 제한**\n- **물 많이 마시기**\n- **스트레스 관리** — 스트레스 → 내압 상승 → 증상 악화",
+      content: "### 생활습관 개선 [TIPS — by 박소영 교수님 / ENT 교수]\n- **저염식**\n- **금주·금연**\n- **카페인(커피) 끊기** — 박소영 강조\n- **물 많이 마시기**\n- **스트레스 관리** — 박소영: \"스트레스 받으면 달팽이관 내압이 올라간다\" → 이명·귀먹먹함 악화\n- **수면시간 늘리기** — 박소영 강조",
       sources: []
     },
     precaution: {
@@ -3580,10 +3580,10 @@ KNOWLEDGE_BUNDLE["이충만감"] = _low_freq_v2;
 KNOWLEDGE_BUNDLE["ALHL"] = _low_freq_v2;
 KNOWLEDGE_BUNDLE["내이수종"] = _low_freq_v2;
 
-/* meniere — 메니에르병 (4-30 ENT bulk). [TIPS] */
+/* meniere — 메니에르병 (4-30 ENT bulk + 5/20 박소영 보강). [TIPS] */
 var _meniere_v2 = {
   kind: "disease",
-  keywords: ["메니에르","메니에르병","Meniere","Menieres","내이수종","endolymphatic hydrops","U-turn","Betahistine","Dichlozid","보나링"],
+  keywords: ["메니에르","메니에르병","Meniere","Menieres","내이수종","endolymphatic hydrops","U-turn","Betahistine","Dichlozid","보나링","메칠론","methylprednisolone","박소영"],
   primarySources: [],
   sections: {
     definition: {
@@ -3595,19 +3595,19 @@ var _meniere_v2 = {
       sources: []
     },
     protocol: {
-      content: "### 유지 약물 [TIPS — by ENT 교수]\n| 약제 | 용량 | 역할 |\n|---|---|---|\n| **U-turn (Betahistine)** | 1T TID | 내림프 수종 완화 (1차) |\n| **Dichlozid (HCTZ)** | ½T 추가 | 티아지드 이뇨제로 내압 감소 |\n\n### 응급 약물 (acute attack) [TIPS — by ENT 교수]\n- **보나링 (Meclizine)** — 회전성 현훈 발작 시\n- 오심·구토 동반 시 항히스타민 진토 효과",
+      content: "### 급성 발작기 — Methylprednisolone taper [TIPS — by 박소영 교수님]\n> 메니에르 급성 악화·내림프수종 급성 증상 (귀먹먹·이충만감 강하게·청력 변동·이명 강화) — 일주일 스테로이드 burst:\n\n| 기간 | 용량 |\n|---|---|\n| 3일 | **메칠론 8T#2** (아침·저녁) |\n| 2일 | **메칠론 6T#2** |\n| 1일 | **메칠론 4T×1d** |\n| 1일 | **메칠론 2T×1d** → 중단 |\n\n- 동기간 **U-turn (Betahistine)** 병용\n- 일주일 스테로이드 종료 후 → **U-turn + Dichlozid ½T** 유지 단계로 전환\n- ⚠ **스테로이드와 이뇨제 동시 처방 금지** (저칼륨·전해질 불균형 가중) — 스테로이드 일주일 종료 후 이뇨제 시작\n\n### 유지 약물 [TIPS — by 박소영 교수님 / ENT 교수]\n| 약제 | 용량 | 역할 |\n|---|---|---|\n| **U-turn (Betahistine)** | 1T TID | 내림프 수종 완화 (1차) |\n| **Dichlozid (HCTZ)** | ½T 추가 | 티아지드 이뇨제로 내압 감소 |\n\n### 응급 약물 (acute attack) [TIPS — by ENT 교수]\n- **보나링 (Meclizine)** — 회전성 현훈 발작 시\n- 오심·구토 동반 시 항히스타민 진토 효과",
       sources: []
     },
     lifestyle: {
-      content: "- 저염식 (sodium <1500 mg/day)\n- 금주·카페인 제한·물 충분 섭취\n- 스트레스 관리 (내압 상승 요인)",
+      content: "[TIPS — by 박소영 교수님] — 약보다도 **생활습관 관리가 더 중요**.\n\n- **저염식** (sodium <1500 mg/day)\n- **물을 많이 마시기**\n- **금주·금연**\n- **카페인(커피) 끊기** (박소영 강조)\n- **스트레스 관리** — 박소영: \"스트레스 받으면 달팽이관 내압이 올라간다\" → 내압 상승 → 증상 악화\n- **충분한 수면** (수면시간 늘리기, 박소영 강조)",
       sources: []
     },
     precaution: {
-      content: "### U-turn (Betahistine) 부작용 [TIPS — researcher 4-30 보강]\n- **흔한 부작용: 두통**, 편두통력 확인 — 편두통 동반 시 두통 악화 가능\n- 두통 심하면 ½T TID로 감량, 심하면 신경과 consult\n\n### 일반\n- 크롬친화세포종(pheochromocytoma) 절대 금기\n- HCTZ: 저칼륨·저나트륨·고요산 모니터링",
+      content: "### U-turn (Betahistine) 부작용 [TIPS — researcher 4-30 보강]\n- **흔한 부작용: 두통**, 편두통력 확인 — 편두통 동반 시 두통 악화 가능\n- 두통 심하면 ½T TID로 감량, 심하면 신경과 consult\n\n### 일반\n- 크롬친화세포종(pheochromocytoma) 절대 금기\n- HCTZ: 저칼륨·저나트륨·고요산 모니터링\n- ⚠ **스테로이드+이뇨제 병용 금기** [TIPS — by 박소영 교수님] — Methylprednisolone 1주 taper 중 Dichlozid 처방 금지. 스테로이드 종료 후 유지 단계에서 이뇨제 시작.\n- **황반변성 환자 스테로이드 주의** [TIPS — by 김근전 교수님] — 황반변성 병력 시 스테로이드 burst 금기 ([[macular-degeneration-steroid-caution]])",
       sources: []
     },
     notes: {
-      content: "반복되는 급성 저주파 감각신경성 난청(ALHL)은 메니에르로 진행 가능 ([[low-freq-hearing-loss]]). 진행성 청력 저하 — 보청기 적응 시점 고려. 양측성 메니에르(~30%)·자가면역 내이질환 의심 시 ENT/면역 평가. 난치성 — 화학적 미로파괴(intratympanic gentamicin)·외과(endolymphatic sac decompression) ENT 영역.",
+      content: "반복되는 급성 저주파 감각신경성 난청(ALHL)은 메니에르로 진행 가능 ([[low-freq-hearing-loss]]). **Risk factor: 바이러스 감염·스트레스** [TIPS — by 박소영 교수님]. 진행성 청력 저하 — 보청기 적응 시점 고려. 양측성 메니에르(~30%)·자가면역 내이질환 의심 시 ENT/면역 평가. 난치성 — 화학적 미로파괴(intratympanic gentamicin)·외과(endolymphatic sac decompression) ENT 영역.\n\n**감별**: 귀+머리+어지러움 동반 시 [[ramsay-hunt-syndrome]] (대상포진 이성) 감별 필수.",
       sources: []
     },
     referral: {
@@ -3622,10 +3622,10 @@ KNOWLEDGE_BUNDLE["메니에르"] = _meniere_v2;
 KNOWLEDGE_BUNDLE["메니에르병"] = _meniere_v2;
 KNOWLEDGE_BUNDLE["Meniere"] = _meniere_v2;
 
-/* sudden-hearing-loss — 돌발성 난청 SSNHL (4-30 ENT bulk). [TIPS] */
+/* sudden-hearing-loss — 돌발성 난청 SSNHL (4-30 ENT bulk + 5/20 박소영 보강). [TIPS] */
 var _sudden_hl_v2 = {
   kind: "disease",
-  keywords: ["돌발성난청","sudden hearing loss","SSNHL","sudden sensorineural hearing loss","메칠론","MPD","ITS","intratympanic steroid"],
+  keywords: ["돌발성난청","sudden hearing loss","SSNHL","sudden sensorineural hearing loss","메칠론","MPD","ITS","intratympanic steroid","U-turn","Betahistine","박소영"],
   primarySources: [],
   sections: {
     definition: {
@@ -3633,15 +3633,15 @@ var _sudden_hl_v2 = {
       sources: []
     },
     exam: {
-      content: "### 증상\n- **갑작스러운 편측 청력 저하** (보통 아침에 일어나 보니 안 들림)\n- 이명·이충만감 동반 흔함\n- 어지럼증 동반 시 예후 불량\n\n### 진단\n- 청력검사 (PTA) — 즉시 시행\n- 고막 시진 정상 (전음성 난청 배제)\n- MRI internal auditory canal — vestibular schwannoma 배제 (특히 이명 동반)\n\n### 동반 평가 [TIPS — by ENT 교수]\n- **당뇨 확인 — 스테로이드 처방 전 필수**\n- 고혈압·심혈관 위험 평가",
+      content: "### 증상\n- **갑작스러운 편측 청력 저하** (보통 아침에 일어나 보니 안 들림)\n- **귀먹먹함(이충만감) + 청력저하 갑작스러운 동반** [TIPS — by 박소영 교수님] — 둘이 같이 오는 경우 많음\n- 이명·이충만감 동반 흔함\n- **어지럼증 동반 가능** — 박소영: 동반 어지러움은 **금방 낫는** 편 (지속하면 다른 진단·예후 불량 시사)\n\n### 진단\n- 청력검사 (PTA) — 즉시 시행\n- 고막 시진 정상 (전음성 난청 배제)\n- MRI internal auditory canal — vestibular schwannoma 배제 (특히 이명 동반)\n\n### 동반 평가 [TIPS — by ENT 교수]\n- **당뇨 확인 — 스테로이드 처방 전 필수**\n- 고혈압·심혈관 위험 평가",
       sources: []
     },
     protocol: {
-      content: "### 표준 — 경구 스테로이드 [TIPS — by ENT 교수]\n- **Methylprednisolone (메칠론) 8T#2 → 7일 tapering**\n  - 가능한 빨리 시작 (발생 후 14일 이내가 효과 큼)\n\n### Intratympanic Steroid (ITS) [TIPS — by ENT 교수]\n- 호전을 빠르게 하고 싶을 때 추가\n- 적응: 경구 단독 미반응 / 빠른 회복 필요 / DM·궤양 등 경구 부담\n- ENT 시술\n\n### 보조\n- 산소·hyperbaric oxygen (논쟁 중, 일부 가이드라인 권장)\n- 안정·스트레스 관리",
+      content: "### 표준 — 경구 스테로이드 + Betahistine 1주 [TIPS — by 박소영 교수님 / ENT 교수]\n- **Methylprednisolone (메칠론) 8T#2 → 7일 tapering**\n  - 가능한 빨리 시작 (발생 후 14일 이내가 효과 큼)\n  - 박소영 taper 패턴: 8T#2 (3일) → 6T#2 (2일) → 4T (1일) → 2T (1일) = 1주\n- **U-turn (Betahistine) 1주간 병용** [TIPS — by 박소영 교수님] — 내이수종 치료와 동일\n- **스테로이드 종료 후 → U-turn 단독 몇 주 더 유지** [TIPS — by 박소영 교수님]\n- ⚠ 스테로이드 1주 + 이뇨제 동시 금지 — 1주 종료 후 유지 단계 ([[meniere]] 동일 원칙)\n\n### Intratympanic Steroid (ITS) [TIPS — by ENT 교수]\n- 호전을 빠르게 하고 싶을 때 추가\n- 적응: 경구 단독 미반응 / 빠른 회복 필요 / DM·궤양 등 경구 부담 / **황반변성** (전신 회피)\n- ENT 시술\n\n### 보조\n- 산소·hyperbaric oxygen (논쟁 중, 일부 가이드라인 권장)\n- 안정·스트레스 관리 (저염·금주·금연·물·수면)",
       sources: []
     },
     precaution: {
-      content: "### 스테로이드 처방 전 필수 확인 [TIPS — by ENT 교수]\n- **당뇨**: 혈당 상승 — DM 환자도 처방 가능하지만 혈당 모니터링·환자 교육 필수\n- **녹내장·황반변성**: 스테로이드 외 옵션 고려 (특히 황반변성)\n- 위궤양·소화기 출혈 과거력\n- 정신질환·BPSD\n- 활동성 감염",
+      content: "### 스테로이드 처방 전 필수 확인 [TIPS — by ENT 교수 / 김근전 교수님]\n- **당뇨**: 혈당 상승 — DM 환자도 처방 가능하지만 혈당 모니터링·환자 교육 필수\n- **녹내장·황반변성**: 스테로이드 외 옵션 고려 — **황반변성은 금기** [TIPS — by 김근전 교수님] ([[macular-degeneration-steroid-caution]] 참조 + ITS 우선)\n- 위궤양·소화기 출혈 과거력\n- 정신질환·BPSD\n- 활동성 감염",
       sources: []
     },
     notes: {
@@ -3649,7 +3649,7 @@ var _sudden_hl_v2 = {
       sources: []
     },
     referral: {
-      content: "- **돌발성 난청 의심 즉시 ENT 의뢰** — 시간이 회복률 결정\n- ITS 시술 필요 → ENT\n- 어지럼증 심한 동반 → 신경이과·내이 진단\n- vestibular schwannoma 의심 (편측·이명 동반) → MRI IAC + ENT",
+      content: "- **돌발성 난청 의심 즉시 ENT 의뢰** — 시간이 회복률 결정\n- ITS 시술 필요 → ENT\n- 어지럼증 심한 동반 → 신경이과·내이 진단\n- vestibular schwannoma 의심 (편측·이명 동반) → MRI IAC + ENT\n- **귀 통증·두통·안면마비·심한 어지럼증 동반** → [[ramsay-hunt-syndrome]] 감별 (대상포진 이성, 입원 적응증 가능)",
       sources: []
     }
   },
