@@ -7574,3 +7574,89 @@ KNOWLEDGE_BUNDLE["코뾰루지"] = _nasal_furuncle_v2;
 KNOWLEDGE_BUNDLE["nasal-vestibulitis"] = _nasal_furuncle_v2;
 KNOWLEDGE_BUNDLE["비전정염"] = _nasal_furuncle_v2;
 KNOWLEDGE_BUNDLE["코끝종기"] = _nasal_furuncle_v2;
+
+/* cervical-lymphadenitis — 경부 임파선염 (5/20 김근전 교수님 강의 신규). [TIPS] */
+var _cervical_lymphadenitis_v2 = {
+  kind: "disease",
+  keywords: ["cervical-lymphadenitis","경부 임파선염","cervical lymphadenitis","경부 림프절염","경부 멍울","cervical lymphadenopathy","Meiact","cefditoren","Pelubi","solondo","prednisolone","stogar","muteran","림프절 초음파","supraclavicular","Virchow"],
+  parents: [],
+  primarySources: [
+    "AAFP 2016 Cervical Lymphadenopathy 리뷰 (참조)",
+    "김근전 교수님 외래 강의 노트 (2026-05-20) — researcher 검증 보류"
+  ],
+  sections: {
+    definition: {
+      content: "경부 림프절의 급성/만성 종창. 대부분 감염성 반응성 림프절염(viral·세균성)이지만, **만성·고령·supraclavicular** 등은 결핵·림프종·전이암 등 악성 감별 영역.",
+      sources: []
+    },
+    exam: {
+      content: "### 김근전 교수님 임상 단서 (단순 임파선염 시사) [TIPS — by 김근전 교수님]\n> \"임파선염을 의심할 수 있는 단서는 location, onset, 인후통 여부, 촉진이 있다.\"\n\n| 단서 | 확인 |\n|---|---|\n| **Location** | 상부 경부(턱밑·턱끝·앞목)·jugulodigastric — 인후·치성 감염 반응 시 흔함. **Supraclavicular (Virchow)**·**후경부**는 악성 의심 |\n| **Onset** | 갑작스러운 압통성 종창 → 급성 반응성. 서서히 무통성 커짐 → 만성·악성 의심 |\n| **인후통 동반** | 동반 시 viral pharyngitis·tonsillitis·치성 반응성 |\n| **촉진** | 압통·가동성·경도(soft·firm·hard·rubbery)·크기·개수 |\n\n### 추가 평가\n- 발열·전신증상(B sx — 발열·야간발한·체중감소)\n- 구강·치아·인후·이개·두피 — 일차 감염원 시진\n- 양측 vs 편측\n- HSM (간비대·비장종대), 다른 부위 LAP (광범위 LAP → 림프종·HIV·EBV 등)\n- 약물력 (phenytoin·allopurinol 등 약물 유발 LAP)\n\n### 영상 — 김근전 강의 [TIPS — by 김근전 교수님]\n> \"급성임파선염이 아니라 만성적으로 오래된 경우에는 초음파를 꼭 해 본다.\"\n\n- **만성·재발·무통성·크기 변동성** → 경부 초음파 (구조·혈관·내부 echogenicity 평가)\n- 초음파 의심 소견 → FNA·CNB\n- 결핵 의심 → 흉부 X-ray·IGRA, 농양 의심 → 영상 + 배농\n- Supraclavicular·단단한 노드 → CT 또는 영상 + 혈액내과/외과 의뢰",
+      sources: []
+    },
+    protocol: {
+      content: "### 김근전 교수님 단순 경부 임파선염 처방 패키지 [TIPS — by 김근전 교수님]\n> \"병력상 임파선염이 굉장히 의심되는 경우 — Meiact, Pelubi, solondo, stogar, muteran을 7일간 처방한다. 좋아지면 그만 먹으라고 해도 된다.\"\n\n| 약제 | 약리 | 역할 |\n|---|---|---|\n| **Meiact (Cefditoren) 100 mg TID** | 3세대 cephalosporin | 1차 항생제 (S. aureus·S. pyogenes cover) |\n| **Pelubi (Pelubiprofen)** | NSAID | 통증·염증 |\n| **Solondo (Prednisolone) 5 mg** 단기 | 경구 스테로이드 | 종창·통증 빠른 완화 |\n| **Stogar (Stomach protector)** | H2RA/PPI | NSAID·스테로이드 위장 보호 |\n| **Muteran (Mucolytics 또는 진해)** | — | 동반 인후·기침 증상 보조 |\n\n- **기간 7일** — 호전되면 중단 가능\n- 호전 없음·악화 → 영상 + 의뢰\n\n### 스테로이드 사용 주의 ⚠ [TIPS — by 김근전 교수님]\n> \"황반변성 병력이 있는 사람에게는 스테로이드를 주의하고 금기이다.\"\n\n- **황반변성 환자 — solondo 금기** ([[macular-degeneration-steroid-caution]] 참조)\n- 당뇨·녹내장·위궤양 — 일반 스테로이드 주의\n- 림프종·결핵 의심 시 **스테로이드 처방 전 진단 우선** (스테로이드가 진단 mask 가능)",
+      sources: []
+    },
+    precaution: {
+      content: "### Red Flag — 림프종·결핵·전이 의심\n- ≥2 cm·무통·단단·고정 (immobile)\n- Supraclavicular 위치 (Virchow node)\n- B sx (발열·야간발한·6개월 10% 체중감소)\n- HSM·광범위 LAP·CBC 이상 (lymphocytosis·blast·세포감소)\n- 만성 (>4주), 자라는 양상\n- **LDH 상승** (>2000 응급 감별, 1000~2000 림프종·용혈 의심)\n- 항히스타민·항생제 무반응 두드러기 + LAP 동반 → systemic workup\n\n### 스테로이드 처방 금기·주의 [TIPS — by 김근전 교수님]\n- **황반변성** → 금기\n- 림프종 의심 — 진단 전 스테로이드 mask (CBC·LDH·viral serology·biopsy 선행)\n- 활동성 결핵 미치료 시 금기\n\n### 비고\n- 급성 반응성 림프절염 — 7~10일 항생제 + 대증치료로 호전 흔함\n- 김근전 routine의 스테로이드 단기 병용은 한국 외래 일반화된 패턴 (해외 가이드라인은 보통 항생제 단독)\n- AFP 2016 cervical LAP 알고리즘 — 4주 관찰 + workup 시점 결정. 김근전 1주 호전 평가는 외래 실전 timing.",
+      sources: []
+    },
+    referral: {
+      content: "- 7일 항생제 후 호전 없음 → 영상 + 평가\n- 만성·무통·단단·supraclavicular → 초음파·FNA/CNB·혈액내과\n- B sx·HSM·다발 LAP → 혈액내과 (림프종 workup)\n- 결핵 의심 → 호흡기·감염내과 (IGRA·배양·biopsy)\n- 농양 형성 → 외과·ENT 절개배농\n\n### 관련\n- [[macular-degeneration-steroid-caution]] — 스테로이드 처방 전 안과 점검\n- [[urticaria]] — 두드러기 + LAP 동반 시 systemic workup",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["cervical-lymphadenitis"] = _cervical_lymphadenitis_v2;
+KNOWLEDGE_BUNDLE["경부임파선염"] = _cervical_lymphadenitis_v2;
+KNOWLEDGE_BUNDLE["cervical-lymphadenopathy"] = _cervical_lymphadenitis_v2;
+KNOWLEDGE_BUNDLE["경부 림프절염"] = _cervical_lymphadenitis_v2;
+KNOWLEDGE_BUNDLE["경부 멍울"] = _cervical_lymphadenitis_v2;
+KNOWLEDGE_BUNDLE["lymphadenitis-cervical"] = _cervical_lymphadenitis_v2;
+KNOWLEDGE_BUNDLE["neck-lymph-node"] = _cervical_lymphadenitis_v2;
+
+/* macular-degeneration-steroid-caution — 황반변성 + 전신 스테로이드 신중 (5/20 김근전 교수님 강의 신규). [TIPS] */
+var _macular_degeneration_steroid_caution_v2 = {
+  kind: "topic",
+  keywords: ["macular-degeneration-steroid-caution","황반변성 스테로이드","AMD","age-related macular degeneration","CSC","central serous chorioretinopathy","systemic steroid contraindication","스테로이드 금기","solondo","methylprednisolone","안과 협진","ITS","intratympanic steroid"],
+  parents: [],
+  primarySources: [
+    "김근전 교수님 외래 강의 노트 (2026-05-20)",
+    "Ophthalmology consensus — 스테로이드 유발 CSC·황반부종 가속 가능성 (researcher 검증 보류)"
+  ],
+  sections: {
+    definition: {
+      content: "황반변성(특히 wet AMD·CSC 병력) 환자에서 **전신 코르티코스테로이드 사용 시 황반부종·삼출 가속·중심성 장액성 망막병증(CSC) 유발·악화 위험**. 따라서 단기 burst라도 처방 전 안과 상태 확인·대안 약제 우선 고려가 원칙. 일차의료 cross-link hub 역할.",
+      sources: []
+    },
+    notes: {
+      content: "### 1차 진료 시 어디서 부딪히나 [TIPS — by 김근전 교수님]\n- [[meniere]] 급성기 메칠론 1주 taper\n- [[low-freq-hearing-loss]] 급성기 메칠론 1주 taper\n- [[sudden-hearing-loss]] 메칠론 7일 taper\n- [[ramsay-hunt-syndrome]] Prednisolone 1 mg/kg/d 5일\n- [[cervical-lymphadenitis]] Solondo 단기 (김근전 외래 routine)\n- [[allergic-rhinitis]] INCS는 전신 흡수 낮음 — 일반적으로 허용\n- [[asthma]] OCS burst — 안과 협진\n- [[urticaria]] short course steroid — 안과 협진\n\n### 김근전 교수님 강의 원칙 [TIPS — by 김근전 교수님]\n> \"황반변성 병력이 있는 사람에게는 스테로이드를 주의하고 금기이다.\"\n\n- **전신 경구·정맥 스테로이드** — 황반변성 환자에서 일반적으로 금기 또는 신중 사용\n- **국소·흡입·INCS** — 전신 흡수 낮으면 비교적 허용 (안과 의견 참고)\n- **외래 routine 처방 전 안과력·시력 변동 단서 확인 필수**",
+      sources: []
+    },
+    exam: {
+      content: "### 문진 — 처방 전 5초 체크 [TIPS — by 김근전 교수님]\n- 황반변성·CSC·중심성 장액성 망막병증·당뇨망막병증 진단력\n- 시력 변동·중심 시야 왜곡·암점·메타모르프시아(직선 휘어짐)\n- 안과 추적 중인지·최근 주사치료 (anti-VEGF) 이력\n- 스테로이드 noted 시기·반응\n- 동반 녹내장 (안압 상승 위험 별도)\n\n> 환자에게 \"녹내장 / 백내장 / 황반변성 / 망막 주사 맞으신 적 있나요?\" 단순 단어 질문이 가장 효과적",
+      sources: []
+    },
+    protocol: {
+      content: "### 대안 (alternative) — 경구 스테로이드 회피·감량 옵션\n- **돌발성 난청·메니에르 급성기** → **Intratympanic Steroid (ITS)** 우선 (전신 노출 ↓) — ENT 협진\n- **Ramsay Hunt** → 항바이러스 단독 + 안과 협진 (스테로이드 보류 시 회복률 영향 — 사전 안과 평가)\n- **임파선염** → NSAID + 항생제 단독 (스테로이드 생략 가능) — 김근전 외래 routine에서 solondo 부분만 제거\n- **부비동염·두드러기** → INS / 항히스타민 / leukotriene 차단 / anti-IgE — 전신 스테로이드 회피",
+      sources: []
+    },
+    referral: {
+      content: "- 황반변성 진단력 있는 환자에서 **불가피한 전신 스테로이드 적응증** (예: 심한 천식 발작·자가면역 질환) → **안과 사전 의뢰** + 최단기 최저용량 + 안과 모니터링\n- 시력 변화·중심 시야 왜곡 호소 → 안과 즉시\n- 스테로이드 시작 후 시력 변화 → 약 중단·안과 즉시",
+      sources: []
+    },
+    precaution: {
+      content: "### 비고\n- AMD 자체에 스테로이드가 직접 진행을 가속한다는 high-quality 근거는 제한적이지만, CSC·황반부종은 코르티코스테로이드 유발·악화가 명확. AMD 환자에서 동반 CSC·황반부종 위험 평가 가능성 때문에 **신중 사용·안과 협진** 원칙이 임상 표준.\n- INCS·국소 스테로이드는 전신 흡수가 낮아 안과 단서 없으면 사용 가능 — 단, 안압·각막 부작용 별도 평가.\n- 김근전 강의의 \"금기\" 표현은 안전 우선 임상 원칙 — 절대 금기가 아닌 신중 사용/대안 우선.\n\n### 관련\n- [[meniere]] / [[low-freq-hearing-loss]] / [[sudden-hearing-loss]] / [[ramsay-hunt-syndrome]] / [[cervical-lymphadenitis]] — 스테로이드 사용 영역\n- [[asthma]] / [[urticaria]] — 전신 스테로이드 적응 영역",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["macular-degeneration-steroid-caution"] = _macular_degeneration_steroid_caution_v2;
+KNOWLEDGE_BUNDLE["황반변성스테로이드"] = _macular_degeneration_steroid_caution_v2;
+KNOWLEDGE_BUNDLE["AMD-steroid"] = _macular_degeneration_steroid_caution_v2;
+KNOWLEDGE_BUNDLE["macular-steroid"] = _macular_degeneration_steroid_caution_v2;
+KNOWLEDGE_BUNDLE["황반변성"] = _macular_degeneration_steroid_caution_v2;
+KNOWLEDGE_BUNDLE["AMD"] = _macular_degeneration_steroid_caution_v2;
+KNOWLEDGE_BUNDLE["CSC"] = _macular_degeneration_steroid_caution_v2;

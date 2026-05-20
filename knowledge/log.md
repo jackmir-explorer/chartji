@@ -3,6 +3,7 @@
 새 내용이 추가될 때마다 Claude Code가 여기에 한 줄 기록한다.
 형식: YYYY-MM-DD | 파일명 | 내용 요약
 
+2026-05-20 | knowledge-bundle.js | **Bundle backlog Batch 5** — 5/20 신규 2/2 (2건 컴파일): cervical-lymphadenitis v2 (7 keys, [TIPS] 김근전) + macular-degeneration-steroid-caution v2 (kind=topic, 7 keys, cross-link hub [TIPS] 김근전). 총 687 keys (673+14). node --check 통과. **2026-05-20 ENT 신규 5개 entry 모두 bundle 반영 완료.**
 2026-05-20 | knowledge-bundle.js | **Bundle backlog Batch 4** — 5/20 신규 1/2 (3건 컴파일): ramsay-hunt-syndrome v2 (7 keys, [TIPS, CLINICAL] 박소영) + nasal-fracture v2 (8 keys, [TIPS] 강윤진) + nasal-furuncle v2 (6 keys, [TIPS] 강윤진). 총 673 keys (652+21). node --check 통과.
 2026-05-20 | knowledge-bundle.js | **Bundle backlog Batch 3** — 5/17 신규 3건 컴파일: diabetes-prevention v2 (parents=["diabetes"], 6 keys, [CLINICAL] PMID:41144242) + occupational-msk-upper-extremity v2 (11 keys, [CLINICAL] PMID:40378326) + palliative-care-primary-screening v2 (kind=topic, 6 keys, [INSIGHTS] PMID:41765292). 총 652 keys (629+23). node --check 통과.
 2026-05-20 | knowledge-bundle.js | **Bundle backlog Batch 2** — 5/15 신규 2건 컴파일: clinical-communication v2 (kind=topic, 5 keys, [CLINICAL — 조건부] PMID:41762451) + vitamin-b12 v2 (parents=["anemia"], 8 keys, [CLINICAL] PMID:40961307). 총 629 keys (616+13). node --check 통과.
