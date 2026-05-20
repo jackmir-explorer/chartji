@@ -7252,3 +7252,74 @@ KNOWLEDGE_BUNDLE["삼차신경통"] = _trigeminal_neuralgia_v2;
 KNOWLEDGE_BUNDLE["TN"] = _trigeminal_neuralgia_v2;
 KNOWLEDGE_BUNDLE["trigeminal"] = _trigeminal_neuralgia_v2;
 KNOWLEDGE_BUNDLE["삼차"] = _trigeminal_neuralgia_v2;
+
+/* clinical-communication — Glasgow Consensus 3 Overarching Tasks (5/15 deep-extract 신규). [CLINICAL — 조건부] */
+var _clinical_communication_v2 = {
+  kind: "topic",
+  keywords: ["clinical-communication","임상소통","clinical communication","Glasgow Consensus Statement","글래스고 합의문","인지과부하","cognitive overload","신뢰형성","취약성","권력비대칭","power asymmetry","가정","assumption","소통장벽","communication barriers","Calgary-Cambridge"],
+  parents: [],
+  primarySources: [
+    "Gulbrandsen P, Udvardi A. Could the overarching tasks in the Glasgow Consensus Statement change teaching and practice? Patient Educ Couns 2026;148:109561. PMID:41762451, DOI:10.1016/j.pec.2026.109561"
+  ],
+  sections: {
+    notes: {
+      content: "### 핵심 문제의식\n> [출처: Gulbrandsen P et al. Patient Educ Couns 2026;148:109561. PMID:41762451] [초록 기반 — 전문 미확인]\n\n**기존 의사소통 모델의 한계:**\n- Calgary-Cambridge 등 기존 모델은 전형적 내과의-환자 1:1 면담 상황 설계 — 현대 진료 다양성 커버 불충분\n- 소통의 **생존 기능(survival function)**, 인지 과부하, 불확실성, 취약성, 권력 비대칭 미반영\n\n**현대 의료 환경 변화:**\n- 진료 전문화·분절화·디지털화 심화\n- 짧고 특정 문제 해결 중심의 진료 증가\n- 여러 의료인을 순서 없이 만나는 비선형적 환자 경험\n\n### 소통 장벽 4가지\n| 장벽 | 설명 |\n|---|---|\n| **인지 과부하** | 의사·환자 모두 정보 처리 한계 — 짧은 진료에서 더 심각 |\n| **가정(Assumption) 습관** | 환자 상황을 확인 없이 가정 → 소통 오류 발생 |\n| **취약성** | 환자의 신체적·정서적 취약 상태가 소통 수용·표현 저해 |\n| **권력 비대칭** | 의사-환자 구조적 불평등 → 환자 발언·질문 억제 |",
+      sources: []
+    },
+    protocol: {
+      content: "### 3 Overarching Tasks\n> 글래스고 합의문이 제시한 3가지 초월 과제. 모든 임상 상황에 적용 가능.\n\n1. **연결과 신뢰 형성**: 짧은 진료에서도 환자-의사 관계 기반을 의식적으로 구축\n2. **소통 장벽 인식·완화**: 위 4개 장벽을 의식적으로 점검하고 대응\n3. **의미 공동 구성**: 진단·치료 계획을 환자와 함께 만들어가는 과정\n\n> ⚠ 구체 3과제 명칭 및 세부 내용은 논문 전문 기준 — 초록 기반 요약, researcher 검증 권장\n\n**임상 예시 (근골격 통증 외래):**\n- \"무릎이 아파요\" → 가정 없이 \"어떤 상황에서 아프고, 어떤 걱정이 있으신가요?\" 먼저 확인\n- 짧은 진료에서도 30초 연결 질문이 신뢰 형성에 기여\n\n### 가정의학과 외래 적용\n| 원칙 | 실천 |\n|---|---|\n| 인지 과부하 최소화 | 한 번에 1–2개 핵심 메시지만 전달 |\n| 가정 확인 | \"제가 제대로 이해했나요? ~라는 말씀이신가요?\" |\n| 취약성 고려 | 고령·저교육·언어 장벽 → 천천히, 쉬운 언어 |\n| 권력 비대칭 완화 | \"어떻게 생각하세요?\" / \"걱정되는 게 있나요?\" 습관화 |\n\n**근골격 통증 적용 예시:**\n- \"관절이 아파요\" → 먼저 \"어디서, 언제부터, 일상에서 어떤 지장이 있는지\" 물어보기\n- 치료 결정 전 환자 기대·걱정·일상 영향 확인",
+      sources: []
+    },
+    "educational-implications": {
+      content: "### 교육적 함의\n- 기존 OSCE·소통 훈련 커리큘럼 → Glasgow 3과제 통합으로 현대 진료 환경에 맞게 보완 필요\n- 짧은 진료·여러 전문가·디지털 진료 등 새로운 상황에 더 적합한 교육 프레임 제공\n\n### 관련 엔트리\n- [[continuity-of-care]] — SDM 블렌디드 훈련, ICE 소통\n- [[delayed-diagnosis]] — Pattern Disruption (가정 확인·감별 확장)\n- [[persistent-physical-symptoms]] — 증상 타당화·기전 설명\n- [[chronic-pain-integrative]] — ICE 접근 (환자 기대·걱정 탐색)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["clinical-communication"] = _clinical_communication_v2;
+KNOWLEDGE_BUNDLE["임상소통"] = _clinical_communication_v2;
+KNOWLEDGE_BUNDLE["Glasgow-Consensus"] = _clinical_communication_v2;
+KNOWLEDGE_BUNDLE["글래스고합의문"] = _clinical_communication_v2;
+KNOWLEDGE_BUNDLE["communication-skills"] = _clinical_communication_v2;
+
+/* vitamin-b12 — B12 결핍 일차의료 진단·치료 (5/15 deep-extract 신규). [CLINICAL] */
+var _vitamin_b12_v2 = {
+  kind: "disease",
+  keywords: ["vitamin-b12","비타민B12","vitamin B12 deficiency","코발라민","cobalamin","methylmalonic acid","MMA","메트포르민","metformin","PPI","위축성위염","atrophic gastritis","자가면역위염","악성빈혈","pernicious anemia","경구보충","oral cobalamin","B12 신경병증"],
+  parents: ["anemia"],
+  primarySources: [
+    "Patel H, McGuirk R. Vitamin B12 Deficiency: Common Questions and Answers. Am Fam Physician 2025 Sep;112(3):294-300. PMID:40961307"
+  ],
+  sections: {
+    definition: {
+      content: "> [출처: Patel H et al. Am Fam Physician 2025;112(3):294-300. PMID:40961307]\n\n**유병률:** 미국 성인의 약 2–3%\n\n비타민 B12(코발라민)는 DNA 합성·신경 수초화·적혈구 생성에 필수. 결핍 시 대적혈구 빈혈·신경병증·인지저하·실조 등 다양한 증상을 일으킨다.",
+      sources: []
+    },
+    precaution: {
+      content: "### 주요 위험인자\n| 위험인자 | 기전 |\n|---|---|\n| **메트포르민 복용** | 장내 B12 흡수 저해 |\n| **PPI 장기 복용** | 위산 감소 → 단백질 결합 B12 유리 저해·내인성 인자↓ |\n| 흡수 장애 | 위절제·IBD·celiac disease |\n| 식이 제한 | 엄격 채식주의자·비건 |\n| 고령 | 내인성 인자·위산 분비 감소 |\n| 위축성 위염·자가면역 위염 | 내인성 인자 항체 → 악성 빈혈 |\n\n### ⚠ 지속 상승 B12 (>1000 pg/mL) 주의\n**두 번 측정 모두 >1000 pg/mL → 적극 원인 탐색 필요:**\n- 고형암 (간암·폐암 등 악성종양과 연관)\n- 혈액 악성종양 (백혈병·림프종)\n- 심혈관 사망 위험 증가와 연관\n\n> 보충제 과량 복용 외 원인인 경우 고위험 신호 — 즉시 원인 감별",
+      sources: []
+    },
+    exam: {
+      content: "### 증상\n- 피로, brain fog, 우울\n- 말초 신경병증 (손발 저림·감각이상·균형장애)\n- 실조(ataxia)\n- 빈혈 (대적혈구증, MCV↑)\n- 설염, 인지저하\n\n> 무증상 기간이 길 수 있음 — 위험인자 있으면 증상 전 선별 고려\n\n### 선별 기준\n**보편적 선별 권고 없음.** 다음 조건에서 검사:\n- **위험인자 ≥1개 + 임상 증상(피로·신경병증·인지저하 등) ≥1개** 동시 존재\n\n### 진단 — 1차: 혈청 총 B12\n| 수치 | 판정 |\n|---|---|\n| **< 180 pg/mL** | **결핍 확진** |\n| **180–350 pg/mL** | 경계치 → MMA 추가 검사 |\n| > 350 pg/mL | 결핍 가능성 낮음 |\n\n### 2차: Methylmalonic acid (MMA)\n- 경계치 B12(180–350 pg/mL) → MMA 측정\n- **MMA 상승** → B12 결핍 진단 (기능적 결핍 반영)\n\n### 원인 불명 시 추가 검사\n- **H. pylori 검사·치료** (위축성 위염 유발, 제균 시 B12 흡수 개선 가능)\n- **항내인성인자항체 (anti-IF Ab)** + **항위벽세포항체 (anti-parietal cell Ab)** → 자가면역 위염·악성 빈혈 감별",
+      sources: []
+    },
+    protocol: {
+      content: "### 경구 vs 근육주사 (IM)\n> **경구 보충 ≒ IM (비열등성 확인)** — 흡수 장애가 있어도 수동 확산으로 일부 흡수 가능\n\n| 상황 | 권장 경로 |\n|---|---|\n| 대부분 환자 | **경구** 우선 (방문 없이 유지 가능) |\n| 중증 결핍 | IM 고려 |\n| **신경학적 증상** | **IM 우선** (빠른 교정 필요) |\n| 흡수 장애 (위절제·IBD) | IM 필요 |\n\n> [구체 경구 용량: 논문 전문 기준 — researcher 검증 권장]\n\n### 외래 핵심 포인트\n- **메트포르민 복용 당뇨 환자** → 피로·신경 증상 있으면 B12 선별 고려 (복용 기간 무관)\n- **PPI 장기 복용 환자** → 동일하게 B12 선별 고려\n- 경구 B12 처방 가능 — 주사 내원 불필요 (순응도·편의성 유리)\n- 악성 빈혈 의심(위염 병력·항체 양성 위험) → anti-IF Ab + H. pylori 검사 병행\n- B12 지속 상승(>1000 pg/mL) 발견 → 악성종양 감별 워크업 필수",
+      sources: []
+    },
+    referral: {
+      content: "- B12 지속 상승(>1000 pg/mL) → 종양 감별·혈액내과·소화기내과\n- 신경학적 증상 심함 → 신경과 협진\n- 악성 빈혈 의심·항체 양성 → 혈액내과\n\n### 관련 엔트리\n- [[anemia]] — 빈혈 1차 평가 (B12 결핍 대적혈구빈혈 감별)\n- [[diabetes]] — 메트포르민 장기 복용 모니터링",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["vitamin-b12"] = _vitamin_b12_v2;
+KNOWLEDGE_BUNDLE["비타민B12"] = _vitamin_b12_v2;
+KNOWLEDGE_BUNDLE["vitamin-B12"] = _vitamin_b12_v2;
+KNOWLEDGE_BUNDLE["B12"] = _vitamin_b12_v2;
+KNOWLEDGE_BUNDLE["cobalamin"] = _vitamin_b12_v2;
+KNOWLEDGE_BUNDLE["코발라민"] = _vitamin_b12_v2;
+KNOWLEDGE_BUNDLE["B12-deficiency"] = _vitamin_b12_v2;
+KNOWLEDGE_BUNDLE["B12결핍"] = _vitamin_b12_v2;

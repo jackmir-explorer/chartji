@@ -3,6 +3,9 @@
 새 내용이 추가될 때마다 Claude Code가 여기에 한 줄 기록한다.
 형식: YYYY-MM-DD | 파일명 | 내용 요약
 
+2026-05-20 | knowledge-bundle.js | **Bundle backlog Batch 2** — 5/15 신규 2건 컴파일: clinical-communication v2 (kind=topic, 5 keys, [CLINICAL — 조건부] PMID:41762451) + vitamin-b12 v2 (parents=["anemia"], 8 keys, [CLINICAL] PMID:40961307). 총 629 keys (616+13). node --check 통과.
+2026-05-20 | knowledge-bundle.js | **Bundle backlog Batch 1** — 5/14 신규 2건 컴파일: heat-illness v2 (9 keys, [CLINICAL] PMID:42101601) + trigeminal-neuralgia v2 (parents=["headache"], 5 keys, [CLINICAL] PMID:40378323). 총 616 keys (602+14). node --check 통과.
+
 2026-05-20 | by-disease/meniere.md | 추가 — 박소영 교수님 강의: 급성기 메칠론 1주 taper (8T#2 3일→6T#2 2일→4T 1일→2T 1일) + U-turn 병용 → 종료 후 U-turn+Dichlozid ½T 유지; ⚠ 스테로이드+이뇨제 동시 금지; 황반변성 스테로이드 금기 cross-link; risk factor(바이러스·스트레스) 명시 [TIPS — by 박소영 교수님]
 2026-05-20 | by-disease/sudden-hearing-loss.md | 추가 — 박소영 강의: 귀먹먹+청력저하 갑작스러운 동반 단서·동반 어지러움 금방 회복·스테로이드+유턴정 1주 → 유턴정 단독 수주 전환 (메니에르와 동일 패턴)·Ramsay Hunt 감별 cross-link·황반변성 스테로이드 금기 [TIPS — by 박소영 교수님 / 김근전 교수님]
 2026-05-20 | by-disease/low-freq-hearing-loss.md | 추가 — 박소영 강의: 코 강풀기·외상 history 필수·고막 통증 없음·본인 목소리 자꾸 들림(autophony)·비특이적 사례 유턴정 1T tid 경험적; 박소영 정확한 메칠론 taper (8T#2 3일→6T#2 2일→4T 1일→2T 1일); 스테로이드 1주+Dichlozid 동시 금지; 생활습관(카페인 끊기·수면 늘리기 강조) [TIPS — by 박소영 교수님]
