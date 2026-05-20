@@ -3,6 +3,7 @@
 새 내용이 추가될 때마다 Claude Code가 여기에 한 줄 기록한다.
 형식: YYYY-MM-DD | 파일명 | 내용 요약
 
+2026-05-20 | knowledge-bundle.js | **Bundle backlog Batch 3** — 5/17 신규 3건 컴파일: diabetes-prevention v2 (parents=["diabetes"], 6 keys, [CLINICAL] PMID:41144242) + occupational-msk-upper-extremity v2 (11 keys, [CLINICAL] PMID:40378326) + palliative-care-primary-screening v2 (kind=topic, 6 keys, [INSIGHTS] PMID:41765292). 총 652 keys (629+23). node --check 통과.
 2026-05-20 | knowledge-bundle.js | **Bundle backlog Batch 2** — 5/15 신규 2건 컴파일: clinical-communication v2 (kind=topic, 5 keys, [CLINICAL — 조건부] PMID:41762451) + vitamin-b12 v2 (parents=["anemia"], 8 keys, [CLINICAL] PMID:40961307). 총 629 keys (616+13). node --check 통과.
 2026-05-20 | knowledge-bundle.js | **Bundle backlog Batch 1** — 5/14 신규 2건 컴파일: heat-illness v2 (9 keys, [CLINICAL] PMID:42101601) + trigeminal-neuralgia v2 (parents=["headache"], 5 keys, [CLINICAL] PMID:40378323). 총 616 keys (602+14). node --check 통과.
 

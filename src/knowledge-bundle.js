@@ -7323,3 +7323,125 @@ KNOWLEDGE_BUNDLE["cobalamin"] = _vitamin_b12_v2;
 KNOWLEDGE_BUNDLE["코발라민"] = _vitamin_b12_v2;
 KNOWLEDGE_BUNDLE["B12-deficiency"] = _vitamin_b12_v2;
 KNOWLEDGE_BUNDLE["B12결핍"] = _vitamin_b12_v2;
+
+/* diabetes-prevention — AI-DPP vs 인간 코치 비열등성 (5/17 deep-extract 신규). [CLINICAL] */
+var _diabetes_prevention_v2 = {
+  kind: "disease",
+  keywords: ["diabetes-prevention","당뇨예방","diabetes prevention","prediabetes","당뇨전단계","DPP","Diabetes Prevention Program","AI-DPP","생활습관","lifestyle intervention","체중감량","HbA1c","비열등성","IFG","IGT"],
+  parents: ["diabetes"],
+  primarySources: [
+    "Mathioudakis N et al. An AI-Powered Lifestyle Intervention vs Human Coaching in the Diabetes Prevention Program: A Randomized Clinical Trial. JAMA 2025 Dec 16;334(23):2079-2089. PMID:41144242, DOI:10.1001/jama.2025.19563"
+  ],
+  sections: {
+    definition: {
+      content: "당뇨전단계(IFG 100–125 mg/dL 또는 IGT 또는 HbA1c 5.7–6.4%) + 과체중/비만 성인을 대상으로 한 **구조화된 생활습관 프로그램**(DPP)이 당뇨 발생률을 줄인다는 근거가 견고. 최근 AI 기반 자동화 DPP가 인간 코치 DPP와 비열등성을 보임.",
+      sources: []
+    },
+    classification: {
+      content: "### 핵심 근거 — AI-DPP Phase 3 RCT [CLINICAL]\n> [출처: Mathioudakis N et al. JAMA 2025;334(23):2079-2089. PMID:41144242]\n> Phase 3, 비열등성 RCT, 368명, 2개 미국 임상 센터, 12개월 추적\n\n**대상:** 당뇨전단계 + 과체중/비만 (BMI 중앙 32.3) 성인, 중앙 58세, 여성 71%\n\n**비교:**\n- AI-DPP: 모바일 앱 + 블루투스 디지털 체중계 (완전 자동화)\n- 인간 코치 DPP: 원격 코치 주도 (표준 DPP)\n\n**1차 복합 결과 (12개월):**\n- HbA1c <6.5% 유지 + {체중 ≥5% 감소 OR 체중 ≥4%+주 150분 신체활동 OR HbA1c 절대값 0.2%p↓} 중 1개 달성\n- AI-DPP: 31.7%, 인간 코치: 31.9% (위험차 -0.2%, 1-sided 95% CI 하한 -8.2%)\n- **비열등성 기준 충족** (-15% 미초과)\n\n**참여율:** AI 93.4% vs 인간 코치 82.7% — AI가 더 높은 참여 시작률",
+      sources: []
+    },
+    protocol: {
+      content: "### 대상 선별\n- **진단:** 당뇨전단계 (IFG 또는 IGT, HbA1c 5.7–6.4%) + 과체중(BMI≥25) 또는 비만\n- 인간 코치 DPP 접근 불가, 비용 장벽, 시간 제약 환자에게 AI-DPP 대안 제시 가능\n\n### 처방 흐름\n```\n1. 당뇨전단계 확인 (HbA1c 5.7-6.4% 또는 공복혈당 100-125)\n2. AI-DPP 앱 소개 + 등록 (모바일 기기 필요)\n3. 12개월 프로그램 안내:\n   ・ 목표: 체중 5-7% 감량 + 주 150분 중등도 신체활동\n   ・ 모바일 앱 식이·활동 모니터링\n   ・ 블루투스 체중계 자가 모니터링 권장\n4. 3개월 추적 방문: HbA1c + 체중 확인\n```\n\n### 기대 효과\n- 12개월 체중감량·HbA1c 개선: 인간 코치 DPP와 동등\n- 프로그램 시작률 AI에서 더 높음 (접근 용이성)",
+      sources: []
+    },
+    insurance: {
+      content: "- [출처 미확인 — researcher 검증 권장]: 한국 건강보험 당뇨예방 프로그램 급여 여부\n- [출처 미확인 — researcher 검증 권장]: 국내 AI-DPP 앱 승인·가용성 여부\n- 미국 CDC 인증 DPP 앱 기준과 국내 기준 차이 확인 필요",
+      sources: []
+    },
+    referral: {
+      content: "### 관련 엔트리\n- [[diabetes]] — T2DM 진단·관리\n- [[glp1-selection-strategy]] — GLP-1RA 체중감량 처방 (당뇨전단계 고위험군 옵션)",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["diabetes-prevention"] = _diabetes_prevention_v2;
+KNOWLEDGE_BUNDLE["당뇨예방"] = _diabetes_prevention_v2;
+KNOWLEDGE_BUNDLE["prediabetes"] = _diabetes_prevention_v2;
+KNOWLEDGE_BUNDLE["당뇨전단계"] = _diabetes_prevention_v2;
+KNOWLEDGE_BUNDLE["DPP"] = _diabetes_prevention_v2;
+KNOWLEDGE_BUNDLE["AI-DPP"] = _diabetes_prevention_v2;
+
+/* occupational-msk-upper-extremity — 직업성 상지 4대 MSK (5/17 deep-extract 신규). [CLINICAL] */
+var _occupational_msk_upper_extremity_v2 = {
+  kind: "disease",
+  keywords: ["occupational-msk-upper-extremity","직업성근골격","occupational musculoskeletal","CTS","수근관증후군","carpal tunnel syndrome","외측상과염","lateral epicondylitis","tennis elbow","회전근개","rotator cuff tendinopathy","방아쇠수지","trigger finger","stenosing tenosynovitis","부목","corticosteroid injection","물리치료"],
+  parents: [],
+  primarySources: [
+    "Hall S, Compton MR. Common Occupational Upper Extremity Musculoskeletal Disorders. Am Fam Physician 2025 May;111(5):451-458. PMID:40378326"
+  ],
+  sections: {
+    definition: {
+      content: "가정의학과 외래에서 가장 흔한 직업성 상지 4대 근골격 질환(CTS·외측상과염·회전근개건병증·방아쇠수지). 과도한 반복 동작·진동 노출이 공통 유발 기전. 과거력에서 직업·업무 유형(반복 손동작, 두 팔 위 작업, 반복 파지) 청취가 진단 관문.",
+      sources: []
+    },
+    classification: {
+      content: "### 4대 질환 개요\n| 질환 | 환자군 | 핵심 검사 |\n|---|---|---|\n| **CTS** (수근관증후군) | 손목 반복 굴신 (키보드·조립·청소·미용) | Phalen 60초·Tinel·NCS/EMG |\n| **외측상과염** (Tennis elbow) | 손목 신전 반복 (테니스·타이핑·목수·배관공) | 외측상과 압통·Maudsley |\n| **회전근개건병증** | 두 팔 위 반복 (선반·수영·건설) | Drop arm·Neer·Hawkins-Kennedy |\n| **방아쇠수지** | 반복 파지 (공장·농업·정원사) | A1 활차 결절·triggering |",
+      sources: []
+    },
+    exam: {
+      content: "### 수근관증후군 (CTS)\n**증상:** 1~4지 저림·타는 느낌, 야간 악화, 손떨어뜨림, 무지구 위축(진행 시)\n\n**이학적 검사:**\n- **Phalen 검사**: 손목 최대 굴곡 60초 유지 → 증상 재현 (민감도 68%, 특이도 73%)\n- **Tinel 징후**: 수근관 위 타진 → 원위 방사 저림 (민감도 50%, 특이도 77%)\n- 무지구 근력 약화: 진행 징후\n\n**확진:** 신경전도검사(NCS) / 근전도(EMG) — 임상 진단 불확실하거나 수술 전 필수\n\n### 외측상과염 (Tennis Elbow)\n**증상:** 외측 팔꿈치 통증, 파지 시 악화, 악수·문 손잡이 회전 시 악화\n\n**이학적 검사:**\n- 외측상과 압통 (촉진)\n- Maudsley 검사: 저항에 대한 중지 신전 시 외측상과 통증 재현\n\n**영상:** 임상 진단 원칙 — 초음파는 건증 확인·주사 유도 목적\n\n### 회전근개건병증\n**증상:** 어깨 전외측 통증, 두 팔 위 동작 시 악화, 야간 불편\n\n**이학적 검사:**\n- **Drop arm 검사**: 90° 외전 후 천천히 내리지 못함 → 회전근개 파열 시사\n- **Neer 검사**: 전완 내회전 + 전방 거상 시 통증 (극상근 충돌)\n- **Hawkins-Kennedy 검사**: 90° 전방 거상 후 내회전 시 통증\n\n**영상:** 초음파 또는 MRI — 초기 보존 후 진단 불확실 시 또는 수술 전\n\n### 방아쇠수지\n**증상:** 굴곡 후 신전 시 걸림(triggering), 아침 강직, A1 활차 부위 압통 및 결절\n\n**Quinnell 분류:**\n- 1도: 불규칙적 굴신, 결절 없음\n- 2도: 능동 굴신 가능, 결절 촉지\n- 3도: 수동 도움 필요\n- 4도: 고정 구축",
+      sources: []
+    },
+    protocol: {
+      content: "### CTS 치료\n```\n1단계 — 보존요법 (최소 3개월):\n  - 야간 부목 (손목 중립위)\n  - 재활 운동 / 업무 환경 조정\n  - 경구 코르티코스테로이드 단기 (2-4주) — 증상 완화 목적\n  ↓ 3개월 보존요법 실패 또는 심한 증상·신경 손상\n2단계 — 코르티코스테로이드 국소 주사 (수근관 내):\n  - 1차 보존 실패 또는 증상 신속 완화 목적\n  - 주사 후 재발 흔함 — 주사 횟수 제한 (2-3회 권고)\n3단계 — 수술 (수근관 개방 또는 내시경 유리):\n  - 보존 3개월 실패 또는 중증 (근위축·지속 신경 손상)\n```\n**핵심 원칙:** 수술 전 보존요법 3개월 의무 적용\n\n### 외측상과염 치료\n- **팔꿈치 보조기** (forearm strap) + NSAID\n- **물리치료**: 편심 강화 운동\n- **코르티코스테로이드 주사**: 단기 통증 완화 효과 (6주), 장기 재발률 증가 주의\n- 수술: 6-12개월 보존 실패 후 고려 (드묾)\n\n### 회전근개건병증 치료\n- **NSAID + 물리치료** (1차) — 대부분 비수술적 관리\n- **코르티코스테로이드 견봉하 주사**: 통증 완화 목적 (초음파 유도 시 정확도↑)\n- 수술: 6-12개월 보존 실패 + 영상에서 파열 확인 시\n\n### 방아쇠수지 치료\n```\n1차 — 코르티코스테로이드 국소 주사 (A1 활차 내):\n  - 완전 관해율 50-70%\n  - 2-3회 반복 가능 (반응 감소 시 수술 전환)\n2차 — 부목 고정 (야간 신전 부목)\n3차 — 수술 (경피적 또는 개방 활차 유리):\n  - 주사 2-3회 실패 또는 중증 구축\n```\n**당뇨 환자**: 재발률 높고 다지 이환 흔함 — 코르티코스테로이드 주사 후 혈당 일시 상승 주의",
+      sources: []
+    },
+    referral: {
+      content: "### 직업 복귀·의뢰 기준\n- 가정의학과 외래에서 부목·물리치료·주사 직접 처방 가능\n- 업무 복귀 시: 증상 유발 작업 부분 제한 → 단계적 복귀 권고서 작성\n- 의뢰 기준:\n  - 보존 치료 3-6개월 실패\n  - 신경 손상·근위축 진행 (CTS)\n  - 영상에서 파열 확인 (회전근개)\n  - 수술 필요 판단 시 → 정형외과 또는 수부외과\n\n### 관련 엔트리\n- [[msk-injection-therapy]] — 초음파 유도 주사 프로토콜\n- [[carpal-tunnel-syndrome]] — CTS 전용 상세 entry",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["occupational-msk-upper-extremity"] = _occupational_msk_upper_extremity_v2;
+KNOWLEDGE_BUNDLE["직업성근골격"] = _occupational_msk_upper_extremity_v2;
+KNOWLEDGE_BUNDLE["occupational-msk"] = _occupational_msk_upper_extremity_v2;
+KNOWLEDGE_BUNDLE["upper-extremity-msk"] = _occupational_msk_upper_extremity_v2;
+KNOWLEDGE_BUNDLE["trigger-finger"] = _occupational_msk_upper_extremity_v2;
+KNOWLEDGE_BUNDLE["방아쇠수지"] = _occupational_msk_upper_extremity_v2;
+KNOWLEDGE_BUNDLE["lateral-epicondylitis"] = _occupational_msk_upper_extremity_v2;
+KNOWLEDGE_BUNDLE["tennis-elbow"] = _occupational_msk_upper_extremity_v2;
+KNOWLEDGE_BUNDLE["외측상과염"] = _occupational_msk_upper_extremity_v2;
+KNOWLEDGE_BUNDLE["rotator-cuff-tendinopathy"] = _occupational_msk_upper_extremity_v2;
+KNOWLEDGE_BUNDLE["회전근개건병증"] = _occupational_msk_upper_extremity_v2;
+
+/* palliative-care-primary-screening — 일차의료 완화의료 조기 선별 (5/17 deep-extract 신규). [INSIGHTS] */
+var _palliative_care_primary_screening_v2 = {
+  kind: "topic",
+  keywords: ["palliative-care-primary-screening","완화의료선별","palliative care screening","Surprise Question","SPICT","GSF-PIG","ACP","사전돌봄계획","EHR 통합","완화의뢰","일차의료완화","조기선별"],
+  parents: [],
+  primarySources: [
+    "Johnson K et al. Screening Protocols for Identifying Palliative Care Needs in Primary Care: A Scoping Review. J Pain Symptom Manage 2026;71(6):e711-e724. PMID:41765292, DOI:10.1016/j.jpainsymman.2026.02.018"
+  ],
+  sections: {
+    definition: {
+      content: "일차의료에서 완화의료 필요 조기 선별은 권고되지만 실제 구현은 일관되지 않음.\n25개 연구 범위 리뷰 — 장벽·촉진요인 및 구현 전략 정리.\n\n**핵심 전환:** 완화의료 = 포기·말기 관리 → **\"돌봄 강화·증상 완화·사전계획\" 재정의**가 조기 선별의 전제 조건.",
+      sources: []
+    },
+    exam: {
+      content: "### Surprise Question (SQ)\n> \"이 환자가 내년에도 살아계실 것 같습니까?\"\n\n- 간단한 단일 문항 — 외래에서 즉시 적용 가능\n- 의사가 \"아니요\"라고 답할 경우: 완화의료 필요 고위험군 신호\n- ACP 대화 개시 트리거로 사용\n\n### 표준화 도구 + EHR 통합\n- **EHR 통합 선별이 핵심 촉진요인**: 자동 플래깅 → 의사 개인 판단 의존 줄임\n- 적용 도구 예시: SPICT (Supportive and Palliative Care Indicators Tool), GSF-PIG",
+      sources: []
+    },
+    notes: {
+      content: "### 장벽 (barriers)\n> [출처: Johnson K et al. J Pain Symptom Manage 2026;71(6):e711-e724. PMID:41765292]\n\n| 범주 | 주요 장벽 |\n|---|---|\n| **시간·자원** | 외래 시간 부족, 전담 완화의료 인력 미확보 |\n| **인식·태도** | 선별 도구 가치에 대한 의구심, \"완화 = 포기\" 인식 |\n| **소통** | 환자·가족과의 완화 대화 기술 부족 |\n| **재정·구조** | 불리한 수가 모델, 완화의료 의뢰 경로 미확보 |\n| **사회문화적** | 죽음·말기 논의에 대한 문화적 회피 |\n\n### 촉진요인 (facilitators)\n1. **EHR 통합** — 선별 자동화, 의사 결정 지원 알림\n2. **임상 챔피언** — 팀 내 완화의료 선도 의사/간호사\n3. **조기 재정의** — \"완화 = 초기부터 삶의 질 지원\"으로 팀 재교육\n4. **명확한 역할 분담** — 누가 선별하고 누가 대화하는지 프로세스 정의\n5. **맞춤형 교육** — 실제 대화 시뮬레이션 포함 훈련",
+      sources: []
+    },
+    protocol: {
+      content: "### 조기 선별 실천 체계\n```\n1단계 — 선별 대상 플래깅:\n  ・ 중증 만성질환 (COPD Stage III-IV / 말기 심부전 / 치매 중기 이상)\n  ・ Surprise Question 활용 → \"아니요\" 시 완화 대화 개시\n\n2단계 — ACP 대화:\n  ・ \"포기\"가 아닌 \"앞으로의 돌봄 목표 명확화\"로 프레이밍\n  ・ 가족 참여 권장 (초기 단계부터)\n  ・ 결정 문서화 (사전의료의향서 / DNR)\n\n3단계 — 완화의료 의뢰:\n  ・ 증상 조절 어려울 때 또는 환자 희망 시\n  ・ \"완화의뢰 = 말기\"가 아님을 환자에게 명시\n```\n\n### 한국 외래 변환 시 확인\n- [출처 미확인 — researcher 검증 권장]: 한국 일차의료 완화의료 의뢰 경로·급여 기준\n- EHR 시스템별 완화의료 플래깅 기능 가용성 확인 필요\n- 문화적 맥락: 가족 중심 의사결정 → 환자 직접 선별과 가족 통합 선별 병행",
+      sources: []
+    },
+    referral: {
+      content: "### 관련 엔트리\n- [[goals-of-care-acp]] — ACP·사전의료의향서 프로토콜\n- [[afp-eol-symptom-management]] — 임종기 증상 관리",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["palliative-care-primary-screening"] = _palliative_care_primary_screening_v2;
+KNOWLEDGE_BUNDLE["완화의료선별"] = _palliative_care_primary_screening_v2;
+KNOWLEDGE_BUNDLE["palliative-screening"] = _palliative_care_primary_screening_v2;
+KNOWLEDGE_BUNDLE["Surprise-Question"] = _palliative_care_primary_screening_v2;
+KNOWLEDGE_BUNDLE["SPICT"] = _palliative_care_primary_screening_v2;
+KNOWLEDGE_BUNDLE["palliative-primary-care"] = _palliative_care_primary_screening_v2;
