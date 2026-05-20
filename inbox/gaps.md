@@ -1,6 +1,6 @@
 <!-- 아래에 한 줄씩 추가 -->
-- [황반변성 스테로이드] AMD/CSC 환자에서 전신 corticosteroid 사용 RCT·코호트 근거 — [[macular-degeneration-steroid-caution]] 강의 노트로만 저장됨; researcher 검증 필요 (CSC induction·황반부종 가속 메커니즘 정량화·실제 위험 등급 — 김근전 강의 "금기" 표현의 근거 강도 확인)
-- [Ramsay Hunt steroid evidence] Ramsay Hunt syndrome에서 항바이러스 + 스테로이드 병용 vs 단독 비교 RCT/메타분석 — Bell's palsy 대비 회복률 보강 근거, 황반변성 환자에서 스테로이드 보류 결정의 outcome 영향
+- [x] [황반변성 스테로이드] AMD/CSC 환자에서 전신 corticosteroid 사용 RCT·코호트 근거 — [[macular-degeneration-steroid-caution]] 강의 노트로만 저장됨; researcher 검증 필요 (CSC induction·황반부종 가속 메커니즘 정량화·실제 위험 등급 — 김근전 강의 "금기" 표현의 근거 강도 확인) (→ PMID 39933627, 2026-05-21)
+- [x] [Ramsay Hunt steroid evidence] Ramsay Hunt syndrome에서 항바이러스 + 스테로이드 병용 vs 단독 비교 RCT/메타분석 — Bell's palsy 대비 회복률 보강 근거, 황반변성 환자에서 스테로이드 보류 결정의 outcome 영향 (→ PMID 38520982, 39916394, 2026-05-21)
 - [ABRS mucolytics] 급성 부비동염에서 N-acetylcysteine(뮤코미스트) 경구·코세척 mix RCT 근거 — 강윤진 routine 정합성·증상 완화·항생제 기간 단축 등 outcome 검증
 - [Nasal furuncle 항생제 선택] Cefixime(Suprax) 1차 vs anti-staph penicillin/cephalexin/clindamycin 비교 근거 — 강윤진 외래 routine과 가이드라인(dicloxacillin·cephalexin) 괴리; danger triangle furuncle 합병증 예방 outcome
 - [진단추론] lab-driven thinking 회피 — 주호소→가설→검증 순서, 검사 이상치에서 역산 금지
