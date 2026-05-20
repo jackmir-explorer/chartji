@@ -3,8 +3,12 @@
 새 내용이 추가될 때마다 Claude Code가 여기에 한 줄 기록한다.
 형식: YYYY-MM-DD | 파일명 | 내용 요약
 
+<<<<<<< HEAD
 2026-05-20 | by-drug/glp1-selection-strategy.md | 추가 — GLP-1 RA 중 ONS 병행: BMI -1.4 kg/m²·체지방 -8.4 lbs·총체중 -10.1 lbs; fat:LBM 손실비 2.3; 50세 미만·비당뇨 효과 우세 ⚠ Abbott COI [CLINICAL — 조건부] PMID:42117035 (출처 05-15, 과거 누락 복구)
 
+=======
+2026-05-20 | by-disease/anemia.md · by-drug/hepatitis-ab-vaccine.md · knowledge-bundle.js | **Liby ingest — 미르 gaps Google Docs (1848자, you1are1so1good@gmail.com 드라이브)** — 학습 gap 노트 ingest. anemia: RDW 진단 표 (초기 IDA·진행 IDA·ACD·thalassemia·B12·혼합)·Reticulocyte/RPI 정상치 및 해석 표·IDA F/U 4종 (CBC+Ferritin+Retic+RDW)·치료 반응 기대 수치 (4w +1-2g·8-12w 정상화·target Ferritin>50·IV iron escalation). hepatitis-ab-vaccine: 3차 완료 후 low titer 대응 — CDC 옵션 A/B/C·anti-HBs 0 vs 1~9 booster 반응률·**HBsAg + Anti-HBc total 동반 검사로 booster 전 carrier 배제**. bundle entry 동기화 (anemia v2 4개 자유 sections 추가, hep-ab-vaccine v2 protocol 보강). 687 keys (동일, 보강만). [TIPS — by 미르 gaps]
+>>>>>>> 1d942eb (Liby ingest — 미르 gaps Google Docs (학습 gap 노트, 1848자))
 2026-05-20 | knowledge-bundle.js | **Bundle backlog Batch 5** — 5/20 신규 2/2 (2건 컴파일): cervical-lymphadenitis v2 (7 keys, [TIPS] 김근전) + macular-degeneration-steroid-caution v2 (kind=topic, 7 keys, cross-link hub [TIPS] 김근전). 총 687 keys (673+14). node --check 통과. **2026-05-20 ENT 신규 5개 entry 모두 bundle 반영 완료.**
 2026-05-20 | knowledge-bundle.js | **Bundle backlog Batch 4** — 5/20 신규 1/2 (3건 컴파일): ramsay-hunt-syndrome v2 (7 keys, [TIPS, CLINICAL] 박소영) + nasal-fracture v2 (8 keys, [TIPS] 강윤진) + nasal-furuncle v2 (6 keys, [TIPS] 강윤진). 총 673 keys (652+21). node --check 통과.
 2026-05-20 | knowledge-bundle.js | **Bundle backlog Batch 3** — 5/17 신규 3건 컴파일: diabetes-prevention v2 (parents=["diabetes"], 6 keys, [CLINICAL] PMID:41144242) + occupational-msk-upper-extremity v2 (11 keys, [CLINICAL] PMID:40378326) + palliative-care-primary-screening v2 (kind=topic, 6 keys, [INSIGHTS] PMID:41765292). 총 652 keys (629+23). node --check 통과.

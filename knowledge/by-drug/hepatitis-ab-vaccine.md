@@ -66,6 +66,36 @@ relations: []
 
 > 일반인은 재접종 불필요.
 
+### 3차 완료 후 Low titer 환자 대응 [TIPS — by 미르 gaps]
+
+> 백신 3차 접종 완료한 환자가 anti-HBs **low titer**로 내원한 경우 — 0 과 1~9는 booster 반응이 다르다.
+
+| Anti-HBs | Booster 단일 접종 시 반응률 |
+|---|---|
+| **0 mIU/mL** | **30–50%** |
+| **1–9 mIU/mL** | **50% 이상** (단일 booster 효과 기대) |
+
+### CDC guideline — Low titer 대응 옵션
+
+| 옵션 | 절차 | 적용 |
+|---|---|---|
+| **A** | Single booster 1회 → 1개월 후 anti-HBs 재검 → titer ≥10: 종료 / titer <10: 2차·3차 이어서 0/1/6 schedule | 일반 환자 |
+| **B** | **중간 항체검사 없이 0/1/6 schedule full series 재접종** → 1개월 후 anti-HBs | **노출 고위험 의료진 권고** |
+| **C** | Heplisav-B 2회 스케줄 full series → 1개월 후 anti-HBs | (한국 미도입) |
+
+- 3차 재접종 완료 후에도 titer <10 → **True non-responder** (추가 접종 권고 X, 노출 시 HBIG)
+
+### Low titer 환자 동반 검사 [TIPS — by 미르 gaps]
+
+> 항체검사 외에도 반드시 함께 봐야 할 검사 — booster를 무작정 주기 전 carrier 배제 필수:
+
+- **HBsAg** — active infection·carrier 배제
+- **Anti-HBc total** — 과거 노출 확인
+  - 양성이면 백신 무반응이 아니라 **natural infection 후 anti-HBs 소실** 가능성
+  - 이 평가 없이 booster만 주면 **carrier였을 경우 시간·비용 낭비**
+
+> 즉, low titer 환자 → **anti-HBs + HBsAg + Anti-HBc total 동시 평가**로 (백신 무반응 vs 과거 감염 vs 현재 감염) 감별 후 booster·재접종 결정
+
 ### 한국 KDCA 차이 [REGULATORY]
 
 - KDCA 2024는 **universal 성인 전략 미채택** — 위험군·고위험군 기반 유지

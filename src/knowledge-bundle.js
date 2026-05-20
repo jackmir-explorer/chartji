@@ -5178,6 +5178,18 @@ var _anemia_v2 = {
     notes: {
       content: "### Annals ITC 2026 — IDA 업데이트 [CLINICAL]\n> [출처: Martens KL, DeLoughery TG. Ann Intern Med 2026 Jan 13;179(1):ITC1-ITC16. PMID:41525691] [초록 기반 — Annals In the Clinic 종합 리뷰]\n\n**Ferritin 진단 기준 업데이트**\n| 상황 | Ferritin cutoff |\n|---|---|\n| **염증 없음** | **<45 ng/mL** |\n| **염증 있음** (CRP/ESR 상승, 만성질환) | **<100 ng/mL** |\n\n- 기존 <15 기준 → 민감도 낮아 잠재 결핍 놓침. <45(또는 <100) 적용 시 IDA 더 많이 발견.\n- 기존 classification 표의 `<45 권고 cutoff`와 일치; 염증 동반 시 <100 추가.\n\n**경구 철분 최적 복용법 — 격일 투여**\n- **격일(alternate-day) 투여**가 매일 투여보다 흡수 높음\n- 매일 복용 시 헵시딘 상승 → 장내 철 흡수 억제 → 격일 복용으로 헵시딘 낮을 때 흡수 극대화\n- 기존 \"식사 직후·격일 시도\" 권고 → **격일 투여로 명확히 권고 전환**\n\n**정맥 철분 (IV iron) 적응증 확장**\n| 적응증 | 근거 |\n|---|---|\n| **심부전 동반** IDA | IV 철분 → 기능 호전·증상 개선 (경구보다 우선) |\n| **흡수 불량** (IBD·위절제·celiac) | 경구 흡수 불충분 → IV 우선 |\n| 경구 불내성 | 위장 부작용 지속 시 |\n| 빠른 교정 필요 | 심혈관 상태·수술 전 |\n\n**IDA 확인 시 원인 검색 체계화**\n- **양방향 내시경**: IDA 확인 즉시 GI 출혈 원인 검색\n- **H. pylori 검사·치료**: 제균 시 철 흡수 개선\n- **Celiac disease**: 항-tTG IgA 또는 IgA 수준\n- 빈혈 확인 직후 시작, 지연 금지",
       sources: []
+    },
+    "rdw-pattern": {
+      content: "### RDW — 빈혈 감별의 1차 단서 [TIPS — by 미르 gaps]\n| 상황 | MCV | RDW |\n|---|---|---|\n| **초기 IDA** | 정상 | **상승 (첫 신호)** |\n| 진행된 IDA | ↓ | ↑ |\n| 만성질환 빈혈 (ACD) | 정상 또는 ↓ | 정상 |\n| Thalassemia trait | ↓ | **정상** (감별 포인트) |\n| B12/folate 결핍 | ↑ | ↑ |\n| **혼합 결핍 (IDA + B12)** | **정상 (서로 상쇄)** | **현저히 ↑** |\n\n> 핵심: **MCV 정상이라도 RDW 단독 상승 = 초기 IDA 또는 혼합 결핍 의심**. RDW가 MCV보다 먼저 변하는 패턴 — 진단 함정 회피.",
+      sources: []
+    },
+    "reticulocyte-rpi": {
+      content: "### Reticulocyte 단위와 정상치 [TIPS — by 미르 gaps]\n| 지표 | 정상치 | 의미 |\n|---|---|---|\n| Reticulocyte (%) | 0.5–1.5% | 전체 적혈구 중 망상적혈구 비율 |\n| Absolute reticulocyte count | 50,000–100,000/μL | 절대 숫자 |\n| RPI (Reticulocyte Production Index) | 1.0 | **빈혈 보정한 골수 반응 지표** |\n\n- Reticulocyte 상승 = 골수가 일을 열심히 하고 있다.\n- **RPI 개념**: 빈혈이 심하면 골수가 일을 열심히 안 하더라도 전체 적혈구 숫자가 작아서 %가 높게 나올 수 있음. 그것을 보정한 것이 RPI.\n\n### RPI 값 해석\n| RPI | 의미 | 예시 |\n|---|---|---|\n| **>3** | 골수가 매우 활발히 반응 | 출혈·용혈·철분제 치료 잘 듣는 IDA |\n| 2–3 | 적절한 반응 | 치료 중인 빈혈 |\n| 1–2 | 약간 부족한 반응 | 치료 초기 IDA |\n| **<1** | **골수 반응 부족** | 미치료 IDA·골수 문제·만성질환 |",
+      sources: []
+    },
+    "follow-up-schedule": {
+      content: "### 철결핍 빈혈 F/U 검사 set [TIPS — by 미르 gaps]\n> **CBC + Ferritin + Reticulocyte + RDW** — 4종 동시 확인이 reactor·storage·micro 다층 평가\n\n### 철결핍 빈혈 치료 반응 기대 수치 [TIPS — by 미르 gaps]\n- **4주 후**: Hgb **1–2 g/dL 증가**\n- **8–12주 후**: Hgb **정상화**\n- → **Hgb 정상화 후에도 저장철 채우기 위해 3–6개월 추가 복용 필요**. **target: Ferritin >50**\n- → **반응 부족하면 IV iron 고려** (경구 흡수 장애·지속 출혈·심부전 동반 등)",
+      sources: []
     }
   },
   uiHooks: null
@@ -6613,7 +6625,7 @@ var _hep_ab_vacc_v2 = {
       sources: []
     },
     protocol: {
-      content: "### 항체 비생성자 (Non-responder) 관리\n**해당**: 노출 고위험군(의료인 등), 면역저하자\n\n1. 기본 3회 완료 후 anti-HBs (-) → 3회 재접종 (0·1·6개월)\n2. 재접종 완료 1-2개월 후 anti-HBs 재검사\n3. 재접종 후에도 anti-HBs (-) → **Non-responder 판정**\n   - 추가 접종 불필요\n   - HBsAg 음성 확인\n   - 추후 혈액 노출 시 즉시 HBIG + HBV 백신\n\n> 일반인은 재접종 불필요. 비면역(anti-HBs(-), anti-HBc(-)) 확인 시 즉시 접종 시작.",
+      content: "### 항체 비생성자 (Non-responder) 관리\n**해당**: 노출 고위험군(의료인 등), 면역저하자\n\n1. 기본 3회 완료 후 anti-HBs (-) → 3회 재접종 (0·1·6개월)\n2. 재접종 완료 1-2개월 후 anti-HBs 재검사\n3. 재접종 후에도 anti-HBs (-) → **Non-responder 판정**\n   - 추가 접종 불필요\n   - HBsAg 음성 확인\n   - 추후 혈액 노출 시 즉시 HBIG + HBV 백신\n\n> 일반인은 재접종 불필요. 비면역(anti-HBs(-), anti-HBc(-)) 확인 시 즉시 접종 시작.\n\n### 3차 완료 후 Low titer 환자 대응 [TIPS — by 미르 gaps]\n> 백신 3차 접종 완료 환자가 anti-HBs **low titer**로 내원 — 0 과 1~9는 booster 반응이 다르다.\n\n| Anti-HBs | Booster 단일 접종 반응률 |\n|---|---|\n| **0 mIU/mL** | **30–50%** |\n| **1–9 mIU/mL** | **50% 이상** (단일 booster 효과 기대) |\n\n#### CDC guideline — Low titer 대응 옵션\n| 옵션 | 절차 | 적용 |\n|---|---|---|\n| **A** | Single booster 1회 → 1개월 후 anti-HBs 재검 → ≥10: 종료 / <10: 2차·3차 이어서 (0/1/6) | 일반 환자 |\n| **B** | **중간 항체검사 없이 0/1/6 schedule full series 재접종** → 1개월 후 anti-HBs | **노출 고위험 의료진 권고** |\n| **C** | Heplisav-B 2회 스케줄 full series → 1개월 후 anti-HBs | (한국 미도입) |\n\n- 3차 재접종 후에도 titer <10 → **True non-responder** (추가 접종 권고 X, 노출 시 HBIG)\n\n#### Low titer 환자 동반 검사 [TIPS — by 미르 gaps]\n> 항체검사 외에도 반드시 함께 봐야 할 검사 — booster 무작정 주기 전 carrier 배제 필수:\n- **HBsAg** — active infection·carrier 배제\n- **Anti-HBc total** — 과거 노출 확인\n  - 양성이면 백신 무반응이 아니라 **natural infection 후 anti-HBs 소실** 가능성\n  - 이 평가 없이 booster만 주면 **carrier였을 경우 시간·비용 낭비**\n\n> low titer 환자 → **anti-HBs + HBsAg + Anti-HBc total 동시 평가**로 (백신 무반응 vs 과거 감염 vs 현재 감염) 감별 후 booster·재접종 결정",
       sources: []
     },
     insurance: {
