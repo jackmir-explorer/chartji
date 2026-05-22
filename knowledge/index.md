@@ -75,6 +75,14 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - anxiety-depression-cbt.md — **정신과 약물 plan 보강**: 1차 SSRI·동반증상별 선택·follow-up·불안 NICE CG113·불면 AASM 2017 (trazodone/멜라토닌 1차 X, 고령 BZD/Z-drug Beers 회피) — 기존 CBT 효과크기 + 약물 처방 [CLINICAL]
 - alcohol-use-disorder.md — **AUDIT/FRAMES/음주량 정의 보강**: AUDIT-K 두 버전(원판/KR), AUDIT-C 컷오프, 음주량 정의(폭음 여 4잔 정정), FRAMES 6요소, USPSTF 2018 — 기존 naltrexone·acamprosate + brief intervention [CLINICAL]
 - heart-failure.md — **ACC/AHA Stage A/B/C/D 분류 보강** (Stage B에 BNP/NT-proBNP 포함), BNP cutoff 외래 vs 응급실 분리, 유발 약물 — 기존 GDMT 4 pillars + Stage 매핑 [CLINICAL]
+- clinical-reasoning.md — 진단추론 4대 함정 (lab-driven·anchoring·premature closure·pretest probability 무시) + Stern Symptom to Diagnosis 흐름 + anchoring 검증 routine [INSIGHTS/TIPS] PMID:12915363 Croskerry Acad Med 2003 — topic
+- elderly-nonspecific-symptoms.md — 65세+ \"기운없음\" 8축 감별 + post-hospital syndrome (Krumholz NEJM 2013) + BANC + Red flag 자동배제 리스트 (TB·악성·endocarditis·PE·약물부작용) [CLINICAL/INSIGHTS] parents=fatigue PMID:23301730/20370761
+- diaphoresis.md — 발한·야간발한 9축 감별 (감염·악성·갑상선·당뇨·심혈관·자율신경·약물·호르몬·심리/수면) + AAFP minimum workup + B symptoms red flags [CLINICAL] PMID:12643362 Mold AFP 2003 + Bryce AFP 2020
+- acute-pyelonephritis.md — APN 전형 vs 비전형 (고령 CVAT sensitivity ~50-60%·fever 부재 최대 20%) + 재발성 APN workup + 외래 항생제 (cipro·levo·TMP-SMX·ceftriaxone) [CLINICAL] PMID:21888302 Colgan AFP 2011 + IDSA 2010
+- lymphadenopathy.md — 림프절병증 평가 7요소 + high-risk (supraclavicular·B sx·matted·firm·fixed) + **LAP+발열 진단 전 steroid 금지** (림프종 mask·TLS·감염 progression) + minimum workup [CLINICAL] PMID:27929264 Gaddey AFP 2016 — bundle key는 peripheral-lymphadenopathy
+- ldh-interpretation.md — LDH 단계별 (>2000 응급 HLH/TLS·1000-2000 림프종/용혈/sepsis·500-1000 경증 용혈/간염/폐렴) + HLH cluster + 용혈 평가 + in vitro hemolysis 함정 [CLINICAL] — topic
+- acute-bronchitis.md — 급성 기관지염 90% viral + **가래 색 myth** (호중구 MPO, Cochrane: 가래색·인후통 단독 ABx 효과 예측 X) + **외래 호흡기 vital 필수** (SpO2·RR·CRB-65) + post-infectious cough [CLINICAL] PMID:29488727 Smith Cochrane 2017 + AAFP 2025
+- chronic-diarrhea-workup.md — 만성 설사 ≥4주 + Red flags (빈혈·체중감소·혈변·야간설사·50세+ 신규·CRP↑) + IBS 가정 금지 + 5축 organic 감별 (celiac·IBD·colon ca·microscopic colitis·bile acid) + Anti-tTG·fecal calprotectin [CLINICAL] PMID:32293842 Burgers AFP 2020 + AGA 2019
 
 ### by-drug/
 - vaccine-interval.md — 백신 접종 간격 원칙 (생+사/생+생/사+사) [CLINICAL] — topic

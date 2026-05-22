@@ -76,6 +76,26 @@ tags: [TIPS]
 
 ---
 
+## 가이드라인 1차 vs 강윤진 routine 비교 [CLINICAL]
+
+> IDSA SSTI 2014 (Stevens DL et al. *CID* 2014;59:e10-52. PMID:[24973422](https://pubmed.ncbi.nlm.nih.gov/24973422/)) — 화농성 SSTI (furuncle 포함) 항생제 권고
+
+| 항생제 | IDSA 1차 권고 | S. aureus 활성 | 강윤진 routine | 비고 |
+|---|---|---|---|---|
+| **Dicloxacillin** | ✓ 500 mg QID | 강 (MSSA) | — | 미국 표준, 한국 공급 제한 |
+| **Cephalexin** | ✓ 500 mg QID | 강 (MSSA), 1세대 cephalosporin | — | 한국 공급 양호 (케플렉스) — 가이드라인 정렬 대안 |
+| **Cefixime (Suprax)** | — | **제한적** (3세대 oral cephalosporin, S. aureus 활성 약함) | ✓ 1차 (100 mg BID, 2주) | 강윤진 임상 경험 기반·한국 외래 패턴 |
+| **Clindamycin** | ✓ 300-450 mg TID/QID | 강 (CA-MRSA cover) | — | MRSA 의심·재발성 |
+| **TMP-SMX DS** | ✓ BID | 강 (CA-MRSA cover) | — | MRSA 의심 |
+
+### 임상 시사 (danger triangle furuncle 합병증 예방)
+- IDSA 1차 (dicloxacillin·cephalexin)가 S. aureus 활성 측면에서 더 명확 — 합병증 예방 outcome 우선이라면 **cephalexin 500 mg QID 2주**가 강윤진 routine보다 가이드라인 정렬
+- 강윤진 cefixime routine의 효과는 *임상 결과 기반 경험치* — danger triangle 합병증 (해면정맥동 혈전증) outcome 비교 데이터 부재
+- **MRSA risk factor** (이전 MRSA 동정·반복 SSTI·요양시설·운동선수) 있으면 TMP-SMX 또는 clindamycin
+- 외래 진료 후 **48-72h 호전 없음 → step-up 또는 ENT 의뢰** — 가이드라인·강윤진 공통
+
+---
+
 ## 의뢰 기준 (referral)
 
 - 1주 후 호전 없음 → ENT

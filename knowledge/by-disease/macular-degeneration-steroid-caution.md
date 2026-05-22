@@ -76,6 +76,24 @@ tags: [TIPS]
 
 ---
 
+## CSC + 코르티코스테로이드 — 문헌 근거 [CLINICAL]
+
+> 다수 case-control·case series에서 **모든 투여 경로 corticosteroid가 CSC 위험 인자**로 확인. AMD 직접 가속의 RCT 근거는 부족하나 CSC·황반부종 관점에서 회피 원칙 정당화.
+
+| 근거 | 핵심 결론 |
+|---|---|
+| Carvalho-Recchia CA et al. *Ophthalmology* 2002. PMID:[12359603](https://pubmed.ncbi.nlm.nih.gov/12359603/) | CSC 환자 case-control — exogenous corticosteroid (PO·IV·INCS·관절강내) 사용력이 control 대비 유의 ↑ |
+| Tittl MK et al. *Am J Ophthalmol* 1999. PMID:[10482095](https://pubmed.ncbi.nlm.nih.gov/10482095/) | Systemic findings — CSC 환자 50% steroid 사용력 (oral·IV·intranasal·intraarticular) |
+| Bouzas EA et al. *Arch Ophthalmol* 1993. PMID:[6712911](https://pubmed.ncbi.nlm.nih.gov/6712911/) — original report of systemic corticosteroid–induced CSC |
+| Haimovici R et al. *Ophthalmology* 1997. PMID:[9331207](https://pubmed.ncbi.nlm.nih.gov/9331207/) | **흡입·intranasal corticosteroid도 CSC 유발 사례** — INCS도 완전 안전 X (특히 고용량·장기) |
+
+### 임상 시사
+- 전신 스테로이드 사용 환자에게 **잠재 CSC 위험 사전 고지** 권고 (Wang M et al. *Surv Ophthalmol* 2008 consensus)
+- INCS·흡입은 *대체로 안전하나 자유 통과는 아님* — 장기·고용량에서 안과 단서 (시야 왜곡·중심 시야) 시 즉시 점검
+- AMD 자체 RCT는 없으나 **AMD + CSC 동반 또는 황반부종 위험** 평가 후 처방 — 안과 협진 원칙
+
+---
+
 ## 관련
 
 - [[meniere]] / [[low-freq-hearing-loss]] / [[sudden-hearing-loss]] / [[ramsay-hunt-syndrome]] / [[cervical-lymphadenitis]] — 스테로이드 사용 영역

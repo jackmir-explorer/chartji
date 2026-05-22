@@ -142,6 +142,53 @@ up-dosing (fourfold) — off-label이지만 EAACI 가이드라인 및 다수 RCT
 
 ---
 
+## 두드러기 환자 처방 금기 약물 [CLINICAL]
+
+> 비만세포 탈과립·angioedema 유발 가능 — urticaria 환자에서 처방 시 악화·합병증 위험.
+
+| 약물 계열 | 기전 | 임상 영향 |
+|---|---|---|
+| **NSAID (특히 aspirin·ibuprofen)** | COX-1 억제 → leukotriene shift | **두드러기 환자 20-30%에서 악화** (NSAID-exacerbated cutaneous disease) |
+| **ACEi** | bradykinin 분해 ↓ | **Angioedema 위험** (특히 두드러기 + 혈관부종 병력) |
+| **Opioid (codeine·morphine)** | 직접 mast cell 탈과립 | acute urticaria/flushing |
+| **Vancomycin (rapid IV)** | mast cell 탈과립 (red man) | 천천히 infusion |
+| **방사선 조영제** | 비IgE 매개 mast cell 활성 | 재내원 시 사전 평가 |
+
+### 실전 적용 [CLINICAL]
+- 두드러기 환자 통증 호소 시 **NSAID 회피**, acetaminophen 우선
+- 고혈압 동반 시 ACEi 회피, ARB·CCB·thiazide 대체
+- 진통 필요 시 opioid 회피 또는 tramadol 신중 (덜 mast cell active이나 case report 있음)
+
+> ⚠ "통증 없는 환자에 NSAID 처방 점검" — 두드러기 active 환자 routine NSAID 처방 자동 회피
+
+---
+
+## 두드러기 + Red flag → systemic workup [CLINICAL]
+
+> Urticaria + 다음 1개 이상 → 단순 두드러기 평가 넘어 systemic disease workup
+
+| Red flag | 의심 |
+|---|---|
+| **Generalized / persistent LAP** | 림프종·자가면역 |
+| **B symptoms** (발열·야간발한·체중감소) | 림프종·systemic vasculitis |
+| **HSM (간비장비대)** | 림프종·systemic mastocytosis |
+| **항히스타민 무반응** (4배 증량 후에도) | mastocytosis·urticarial vasculitis |
+| **6주 이상 + 비대칭·통증** (지속 >24h 한 위치) | urticarial vasculitis |
+| **혈관부종 반복** | HAE·acquired C1-INH deficiency |
+
+### 즉시 평가
+- **CBC + diff** (eosinophilia·atypical lymphocyte)
+- **LDH** ([[ldh-interpretation]] 단계별 해석)
+- **CRP / ESR**
+- **Tryptase** (mastocytosis 의심 시)
+- **Skin biopsy** (urticarial vasculitis 의심 — 24h 이상 지속 wheal)
+- **C4, C1-INH** (HAE 의심)
+- **HIV·EBV·hepatitis serology** (감염 후)
+
+> ⚠ **LAP·B sx·HSM 동반 urticaria → 항히스타민 증량보다 systemic workup 우선** ([[lymphadenopathy]] 참조)
+
+---
+
 ## 출처 요약
 
 - AFP 2026 임상 리뷰 (개요): Semenya AM et al. Am Fam Physician 2026;113(3):222-228. PMID:41839072 — (초록 기반, 전문 DOI 없음)

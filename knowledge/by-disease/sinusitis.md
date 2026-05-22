@@ -55,6 +55,23 @@ keywords: 부비동염, 축농증, sinusitis, ABRS, acute bacterial rhinosinusit
 
 > **급성 부비동염 초기에는 항히스타민제 처방하지 않는다.** 점액을 뻑뻑하게 만들어 부비동 배액을 방해 → 축농증 악화 가능. 알레르기 동반 만성기에는 사용 가능.
 
+### N-acetylcysteine (뮤코미스트) 보조 — 근거 평가 [CLINICAL]
+
+> 강윤진 routine의 NAC (경구 + 코세척 mix) 보조는 한국 외래 패턴. **공식 가이드라인 (IDSA·AAO-HNS·EPOS) 1차 권고 약제 아님**, 직접적 ABRS RCT 근거 제한적.
+
+| 영역 | 근거 |
+|---|---|
+| **만성 부비동염 (CRS) post-FESS** | NAC 식염수 세척 single-blind RCT (PMID:[39071700](https://pmc.ncbi.nlm.nih.gov/articles/PMC11311464/) PMC11311464, 2024) — 점액 청결·후각·SNOT-22 호전 보고 |
+| **급성 비부비동염 (ARS) inhalation** | 다기관 cluster-RCT 진행 중 (NCT04131686·NCT04123405) — preliminary 효과 신호, 결정적 결과 미발표 |
+| **동물 모델 (rat ARS)** | 점막 염증 감소 (PMID:[35661091](https://pubmed.ncbi.nlm.nih.gov/35661091/)) |
+
+### 임상 시사
+- ABRS에서 NAC 단독으로 항생제 기간 단축·증상 완화 증명한 large RCT 부재
+- 보조 (식염수 세척 mix·경구 mucolytic)로 사용은 안전성 양호, 효과는 mechanistic·소규모 근거
+- 한국 routine 유지는 임상 판단·환자 만족도 영역, 가이드라인 1차로 격상은 부족
+- 가래 점도 ↓·배출 촉진은 plausible — 비용·부작용 낮으면 적응 가능
+- "ABRS 자연 경과는 7-10일, NAC가 그 안에 의미 있는 outcome 차이 만들지 의문" — gap 잔존
+
 ---
 
 ## 영상 (exam — CT 적응증)

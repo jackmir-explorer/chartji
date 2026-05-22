@@ -93,6 +93,24 @@ VZV 재활성화로 안면신경(VII) 슬상신경절(geniculate ganglion) 침�
 
 ---
 
+## 항바이러스 + 스테로이드 병용 근거 — 최신 메타분석 [CLINICAL]
+
+> Lin YY et al. *Auris Nasus Larynx* 2024. PMID:[38520982](https://pubmed.ncbi.nlm.nih.gov/38520982/) — Antiviral treatment for Ramsay Hunt syndrome: systematic review and meta-analysis (2 RCT + 7 cohort, n=474)
+
+### 결과 (비회복률, odds ratio)
+- 항바이러스 vs 비투여: OR 0.68 (95% CI 0.37-1.27, p=0.22) — 통계적 유의 X
+- 항바이러스 단독: OR 0.48 (0.15-1.61)
+- 항바이러스 + 전신 스테로이드 병용: OR 0.73 (0.34-1.57)
+- **Intratympanic steroid** 추가군: OR 0.14 (0.04-0.50) — 유의한 회복률 개선
+
+### 해석
+- RCT 근거 자체는 제한적 (총 2개), 효과 크기 작음
+- 그럼에도 임상 표준은 **72시간 이내 병용** — 자연 경과의 회복률 한계 + 안전성·접근성 + 후유증 부담
+- Bell's palsy는 corticosteroid 단독이 우선 (Sullivan FM NEJM 2007 PMID:17942874 — antivirals 미효과) — Ramsay Hunt는 VZV 신경친화성이 강해 antiviral 합당
+- **황반변성 환자 등 스테로이드 보류 결정 시 outcome 영향 명시** — 안과 협진 후 risk-benefit 균형, antiviral 단독 회복률은 낮음 ([[macular-degeneration-steroid-caution]])
+
+---
+
 ## 의뢰 기준 (referral)
 
 - **즉시 의심·확인 시 ENT/신경과 의뢰** — 72시간 이내 치료 시작 결정적

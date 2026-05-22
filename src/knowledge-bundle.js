@@ -7681,3 +7681,296 @@ KNOWLEDGE_BUNDLE["macular-steroid"] = _macular_degeneration_steroid_caution_v2;
 KNOWLEDGE_BUNDLE["황반변성"] = _macular_degeneration_steroid_caution_v2;
 KNOWLEDGE_BUNDLE["AMD"] = _macular_degeneration_steroid_caution_v2;
 KNOWLEDGE_BUNDLE["CSC"] = _macular_degeneration_steroid_caution_v2;
+
+/* clinical-reasoning — 진단추론·인지편향 (5/22 gaps ingest 신규). [INSIGHTS, TIPS] */
+var _clinical_reasoning_v2 = {
+  kind: "topic",
+  keywords: ["clinical-reasoning","진단추론","cognitive bias","anchoring","pretest probability","lab-driven thinking","Symptom to Diagnosis","premature closure","인지편향"],
+  parents: [],
+  primarySources: [
+    "Croskerry P. Acad Med 2003;78(8):775-780. PMID:12915363 (cognitive errors)",
+    "Stern SDC. Symptom to Diagnosis: An Evidence-Based Guide (McGraw-Hill, 4th ed)"
+  ],
+  sections: {
+    definition: {
+      content: "증상→감별→검증의 사고 흐름. **검사 결과에서 역산하는 lab-driven thinking은 anchoring·premature closure 같은 인지편향을 강화**한다. 외래에서 한 lab 이상치(예: TSH 4.9)로 다증상을 통합 설명하려는 시도는 baseline pretest probability를 무시한 결과.",
+      sources: []
+    },
+    notes: {
+      content: "### 4대 사고 함정\n| 함정 | 대처 |\n|---|---|\n| Lab-driven thinking | 주호소→가설→검증 순서, 검사는 가설 검증 도구 |\n| Anchoring | \"이 한 수치가 현재 가설로 설명되는가?\" 자문 |\n| Premature closure | 다른 1개 데이터가 가설로 설명 안 되면 그게 진짜 단서 |\n| Pretest probability 무시 | 증상 cluster + 인구학적 baseline 먼저 |\n\n> Croskerry P. *Acad Med* 2003 (PMID:12915363)\n\n### Symptom to Diagnosis (Stern) 흐름\n1. Chief complaint 환자 단어 그대로\n2. 감별 list (pivotal points: 인구·증상 양상·시간 경과)\n3. 가설별 pretest probability\n4. 검사·문진 = likelihood ratio 도구\n5. Posttest probability → 치료 threshold\n\n### Anchoring 검증 routine\n1. \"이 lab/symptom이 현재 가설로 설명되는가?\"\n2. 설명 안 되는 1개 데이터 → 별개 가설\n3. carry-over from previous visit → 의식적 재평가",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["clinical-reasoning"] = _clinical_reasoning_v2;
+KNOWLEDGE_BUNDLE["진단추론"] = _clinical_reasoning_v2;
+KNOWLEDGE_BUNDLE["인지편향"] = _clinical_reasoning_v2;
+KNOWLEDGE_BUNDLE["anchoring"] = _clinical_reasoning_v2;
+KNOWLEDGE_BUNDLE["pretest probability"] = _clinical_reasoning_v2;
+KNOWLEDGE_BUNDLE["lab-driven thinking"] = _clinical_reasoning_v2;
+KNOWLEDGE_BUNDLE["Symptom to Diagnosis"] = _clinical_reasoning_v2;
+
+/* elderly-nonspecific-symptoms — 고령 비특이증상·post-hospital syndrome (5/22 gaps ingest 신규). [CLINICAL, INSIGHTS] */
+var _elderly_nonspecific_symptoms_v2 = {
+  kind: "disease",
+  keywords: ["elderly-nonspecific-symptoms","고령 비특이증상","기운없음","generalized deterioration","post-hospital syndrome","post-hospitalization syndrome","노인 쇠약","노인 권태감","BANC"],
+  parents: ["fatigue"],
+  primarySources: [
+    "Krumholz HM. NEJM 2013;368(2):100-102. PMID:23301730 (Post-Hospital Syndrome)",
+    "Nemec M et al. Eur J Intern Med 2010. PMID:20370761 (BANC study)"
+  ],
+  sections: {
+    definition: {
+      content: "65세+ 환자에서 \"기운없음·식욕저하·인지 변화\" 등 **비특이 증상이 단일 주호소**로 제시되는 경우. 표적 증상 부재 + 광범위 감별 + 진단 지연 위험. 입원력(특히 최근 30일 이내)이 있으면 **post-hospital syndrome**(Krumholz 2013)을 별개 진단축으로 평가.",
+      sources: []
+    },
+    exam: {
+      content: "### 8축 감별 알고리즘 (65세+ \"기운없음\")\n| 축 | 평가 | 최소 검사 |\n|---|---|---|\n| 감염 | 호흡기·UTI·피부·치주·복부 (발열 없을 수 있음) | CBC, U/A, CRP, 흉부 X-ray |\n| 심부전 | dyspnea·부종·체중 변화 | NT-proBNP, X-ray, ECG |\n| 악성 | 체중감소·식욕저하·통증·LAP | CBC, LFT, LDH, screening 상태 |\n| 우울·인지 | 식욕·수면·즐거움 상실·집중력 | PHQ-9, MMSE/MoCA |\n| 약물 부작용 | polypharmacy·신규 약물·항콜린 | 약물 reconciliation |\n| 갑상선 | 변비·추위·서맥/빈맥·체중감소 | TSH, free T4 |\n| 빈혈·영양 | 창백·운동 호흡곤란·혀 통증 | CBC, ferritin, B12, folate |\n| 전해질·신기능 | 의식변화·근력·기립성 | BMP, Ca |\n\n> **Red flag 자동 배제 리스트**: 65세+ + 한 달 이상 지속 + 최근 입원력 → **TB·악성·endocarditis·PE·약물 부작용** 자동 평가 (anchoring 차단).",
+      sources: []
+    },
+    notes: {
+      content: "### Post-Hospital Syndrome (Krumholz NEJM 2013, PMID:23301730)\n퇴원 후 ~30일 이내, **입원 중 deconditioning·수면 박탈·영양 결핍·인지 변화·약물 변화** 누적 → *generalized vulnerability* transient syndrome.\n\n핵심 위험요소: 근육·심혈관 deconditioning · 영양↓ · 수면박탈 · 신규 약물 (진정·항콜린) · delirium 잔존 · HAI\n\n외래 적용:\n- 최근 30일 입원력 단서 자동 질문\n- 입원 약물 reconciliation\n- 영양·체중·식욕 평가\n- delirium 잔존 → MoCA·가족 청취\n- 30일 readmission 위험 환자 → F/U 강화\n\n### BANC study (Nemec 2010, PMID:20370761)\n응급실 내원 비특이 호소 환자 약 60%가 1년 이내 acute morbidity (감염·심부전·악성·낙상·delirium). 외래 \"기운없음\" 단독도 광범위 평가 신호.",
+      sources: []
+    },
+    referral: {
+      content: "- 급격한 인지·기능 변화 → 응급/노인의학\n- post-hospital syndrome 의심 + 30일 readmission risk → 노인의학·가정의학 통합관리\n- 단서 잡힌 영역 → 해당 전문과\n\n비고: 고령 환자에서 fever 없는 감염, dyspnea 없는 심부전, weight loss 없는 악성 모두 가능 — 절대값보다 *delta from baseline* 추적. 노인의학 4Ms framework과 결합.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["elderly-nonspecific-symptoms"] = _elderly_nonspecific_symptoms_v2;
+KNOWLEDGE_BUNDLE["고령 비특이증상"] = _elderly_nonspecific_symptoms_v2;
+KNOWLEDGE_BUNDLE["기운없음"] = _elderly_nonspecific_symptoms_v2;
+KNOWLEDGE_BUNDLE["post-hospital syndrome"] = _elderly_nonspecific_symptoms_v2;
+KNOWLEDGE_BUNDLE["post-hospitalization syndrome"] = _elderly_nonspecific_symptoms_v2;
+KNOWLEDGE_BUNDLE["generalized deterioration"] = _elderly_nonspecific_symptoms_v2;
+KNOWLEDGE_BUNDLE["노인 쇠약"] = _elderly_nonspecific_symptoms_v2;
+
+/* diaphoresis — 발한·야간발한 (5/22 gaps ingest 신규). [CLINICAL] */
+var _diaphoresis_v2 = {
+  kind: "disease",
+  keywords: ["diaphoresis","발한","야간발한","night sweats","hyperhidrosis","다한증","식은땀"],
+  parents: [],
+  primarySources: [
+    "Mold JW. Am Fam Physician 2003;67(5):1019-1024. PMID:12643362 (Diagnosing Night Sweats)",
+    "Bryce C. Am Fam Physician 2020;102(7):427-433 (Persistent Night Sweats)"
+  ],
+  sections: {
+    definition: {
+      content: "**야간발한 (night sweats)** = 잠옷·시트가 젖을 정도의 수면 중 발한, 주변 온도와 무관. **일반 발한 (diaphoresis)** = 다른 trigger 없는 과도 발한. 둘 다 비특이지만 야간발한은 결핵·림프종·HIV 등 systemic disease의 cardinal symptom.",
+      sources: []
+    },
+    exam: {
+      content: "### 9축 감별 (Bryce *AFP* 2020)\n| 축 | 진단 | 단서/검사 |\n|---|---|---|\n| 감염 | TB·HIV·EBV·CMV·endocarditis | TB workup, HIV, serology |\n| 악성 | 림프종·백혈병·고형암 | CBC+diff, LDH, LAP·HSM 평가 |\n| 갑상선 | hyperthyroidism | TSH, free T4 |\n| 당뇨 | 야간 저혈당 (insulin·sulfonylurea) | 야간 혈당, HbA1c |\n| 심혈관 | unstable angina·MI 발한 prodrome | ECG, troponin |\n| 자율신경 | 당뇨·파킨슨·MSA | 기립성 BP, 신경학 |\n| 약물 | SSRI·SNRI·opioids·tamoxifen·acetaminophen·steroid taper | 약물 reconciliation |\n| 호르몬 | 폐경·androgen deficiency·pheochromocytoma | FSH·estradiol/testosterone, metanephrine |\n| 심리/수면 | anxiety·panic·PTSD·OSA·악몽 | PHQ-9·GAD-7, 수면평가 |\n\n### 1차 외래 minimum workup\nCBC + diff, LDH (림프종·용혈), TSH, HIV, CRP/ESR, TB testing (IGRA/PPD), 흉부 X-ray. 임상 단서 시: testosterone/FSH, 야간 혈당, 24h urine metanephrine.",
+      sources: []
+    },
+    notes: {
+      content: "### Red flags → 즉시 systemic workup\n- 체중감소 (>5% 6개월)\n- 발열 (>38℃)\n- LAP (특히 supraclavicular)\n- HSM\n- 야간 통증 (림프종·악성)\n- 항히스타민·진통제 무반응\n\n### 야간발한 vs 일반 발한\n- **야간발한**: TB·림프종·HIV·갑상선 우선 평가. AAFP minimum workup 적용.\n- **일반 발한**: 약물·자율신경·다한증 우선. trigger 평가.\n\n외래 환자 대부분 양성 (폐경·기분장애·GERD·갑상선·비만). 그러나 결핵·림프종이 야간발한 dominant 발현 → minimum workup 필수.",
+      sources: []
+    },
+    referral: {
+      content: "- B symptoms + 야간발한 → 혈액종양·감염내과\n- TB·HIV 양성 → 감염내과·보건소\n- pheochromocytoma 의심 → 내분비\n\n관련: [[lymphadenopathy]] · [[ldh-interpretation]] · [[menopause]] · [[sleep-apnea]] · [[unintentional-weight-loss]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["diaphoresis"] = _diaphoresis_v2;
+KNOWLEDGE_BUNDLE["발한"] = _diaphoresis_v2;
+KNOWLEDGE_BUNDLE["야간발한"] = _diaphoresis_v2;
+KNOWLEDGE_BUNDLE["night sweats"] = _diaphoresis_v2;
+KNOWLEDGE_BUNDLE["hyperhidrosis"] = _diaphoresis_v2;
+KNOWLEDGE_BUNDLE["다한증"] = _diaphoresis_v2;
+KNOWLEDGE_BUNDLE["식은땀"] = _diaphoresis_v2;
+
+/* acute-pyelonephritis — APN 진단·치료 (5/22 gaps ingest 신규). [CLINICAL] */
+var _acute_pyelonephritis_v2 = {
+  kind: "disease",
+  keywords: ["acute-pyelonephritis","APN","급성신우신염","신우신염","acute pyelonephritis","recurrent APN","CVA tenderness","CVAT","비전형 신우신염"],
+  parents: [],
+  primarySources: [
+    "Colgan R et al. Am Fam Physician 2011;84(5):519-526. PMID:21888302 (APN in Women)",
+    "Gupta K et al. IDSA UTI guideline. CID 2011;52:e103-e120"
+  ],
+  sections: {
+    definition: {
+      content: "신장·신우의 세균성 감염. 전형 triad (fever + flank pain + CVA tenderness)는 일부 환자에만 나타남. **고령·면역저하·당뇨에서 비전형 발현 흔함** — fever 부재 최대 20%·고령 1/3, CVAT sensitivity ~50-60%. CVAT 음성으로 APN 배제 금지.",
+      sources: []
+    },
+    exam: {
+      content: "### 전형 (typical, 젊은 여성)\n- 발열 ≥38℃, CVAT, N/V ± dysuria/urgency/frequency\n- U/A: pyuria + bacteriuria. Urine culture 항상.\n\n### 비전형 (고령·면역저하·당뇨)\n- fever 없을 수 있음 (Colgan AFP 2011, 최대 20%·고령 1/3)\n- flank pain 없을 수 있음 — 권태감·식욕저하·섬망·낙상으로만 옴\n- **CVAT sensitivity ~50-60%** — 음성으로 APN 배제 금지\n- GI 증상 dominant — 20% 보고\n- altered mental status·delirium 단일 단서 가능\n\n### 재발성 APN\n- 정의: 6개월 이내 ≥2회 또는 12개월 이내 ≥3회\n- 의심도 상향: 재발 + 비특이 prodrome(권태·미열·요통) → 한 단계 ↑\n- baseline risk: structural·VUR·diabetes·immunocompromise·urolithiasis\n- Workup: urine culture, 신장·방광 영상 (US/CT), VCUG·urodynamic",
+      sources: []
+    },
+    protocol: {
+      content: "### 외래 가능 (uncomplicated, hemodynamically stable)\n| 약제 | 용량 | 기간 |\n|---|---|---|\n| **Ciprofloxacin** | 500 mg BID PO | 7일 (IDSA) |\n| Levofloxacin | 750 mg QD PO | 5일 |\n| TMP-SMX DS (감수성 확인 후) | BID | 14일 |\n| Ceftriaxone 1g IV → PO 전환 | — | — |\n\n> 한국 cipro resistance ≥20% 지역 — first-dose IV ceftriaxone 또는 aminoglycoside 후 culture 기반 step-down.\n\n### 입원 적응\n- N/V로 경구 불가, 임신, 고열+sepsis 신호 (qSOFA ≥2)\n- 면역저하·당뇨·structural·urolithiasis\n- 외래 항생제 48h 후 호전 없음\n\n### 합병증 평가\n- emphysematous pyelonephritis (당뇨 + 가스)\n- perinephric abscess, papillary necrosis, urosepsis, AKI\n→ 영상 (CT) + 비뇨기과·감염내과 즉시 의뢰",
+      sources: []
+    },
+    referral: {
+      content: "- 입원 적응 위 case\n- 재발성 + structural → 비뇨기과\n- 합병증 의심 → 응급 영상 + 비뇨기과\n- 임신 APN → 산과 + 입원\n\n비고: \"fever + CVAT\" 없으면 APN 아니다 — 흔한 오류. 고령에서 *generalized deterioration* 단독 발현 가능. 재발성 APN은 단순 UTI ([[recurrent-uti]])와 구분 — APN은 상기도, structural workup 더 적극.\n\n관련: [[recurrent-uti]] · [[elderly-nonspecific-symptoms]] · [[clinical-reasoning]] · [[hematuria]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["acute-pyelonephritis"] = _acute_pyelonephritis_v2;
+KNOWLEDGE_BUNDLE["APN"] = _acute_pyelonephritis_v2;
+KNOWLEDGE_BUNDLE["급성신우신염"] = _acute_pyelonephritis_v2;
+KNOWLEDGE_BUNDLE["신우신염"] = _acute_pyelonephritis_v2;
+KNOWLEDGE_BUNDLE["acute pyelonephritis"] = _acute_pyelonephritis_v2;
+KNOWLEDGE_BUNDLE["recurrent APN"] = _acute_pyelonephritis_v2;
+KNOWLEDGE_BUNDLE["CVA tenderness"] = _acute_pyelonephritis_v2;
+KNOWLEDGE_BUNDLE["CVAT"] = _acute_pyelonephritis_v2;
+
+/* peripheral-lymphadenopathy — LAP 평가 알고리즘 (5/22 gaps ingest 신규). [CLINICAL] */
+var _peripheral_lymphadenopathy_v2 = {
+  kind: "disease",
+  keywords: ["peripheral-lymphadenopathy","림프절병증","림프절 비대","peripheral lymphadenopathy","LAP","supraclavicular","Virchow node","림프종","lymphoma evaluation"],
+  parents: [],
+  primarySources: [
+    "Gaddey HL, Riegel AM. Am Fam Physician 2016;94(11):896-903. PMID:27929264 (Unexplained Lymphadenopathy)"
+  ],
+  sections: {
+    definition: {
+      content: "림프절 크기·수·경도 이상. 일차의료 LAP의 **악성 prevalence ~1.1%** (대부분 양성·자기제한). 단 위치·동반 증상·기간에 따라 즉시 systemic workup 필요한 high-risk cluster 존재.",
+      sources: []
+    },
+    exam: {
+      content: "### 기록 필수 7요소\n| 항목 | 평가 |\n|---|---|\n| 위치 | 단일 vs 양측·전신; cervical·axillary·inguinal·supraclavicular·epitrochlear·popliteal |\n| 크기 | 단축 직경 (cm), >1 cm 일반적 abnormal (epitrochlear >0.5, inguinal >1.5 tolerable) |\n| 개수 | 단일 vs 다발 vs 매트 (matted) |\n| 압통 | tender (염증) vs painless (악성·림프종) |\n| 가동성 | mobile vs fixed (악성 의심) |\n| 경도 | soft vs firm·rubbery (림프종) vs rock-hard (전이암) |\n| 기간 | <2주(감염), 2-6주(반응성), >6주(악성 의심) |\n\n### High-risk 위치·양상 → 즉시 systemic workup (Gaddey *AFP* 2016, PMID:27929264)\n- **Supraclavicular** — 크기 무관 악성 의심 (Virchow node, 좌측 복부 / 우측 흉부)\n- **Epitrochlear >5 mm** — 림프종·sarcoidosis·syphilis·HIV\n- **Popliteal·iliac** — 정상 촉지 X\n- **양측성·전신성** — 림프종·HIV·SLE·sarcoidosis\n- **Matted** — TB·림프종·전이암\n- **Painless + firm + fixed** — 악성 강한 의심\n- **B symptoms** (발열·야간발한·체중감소 >10%/6개월) — 림프종 staging 시급\n\n### Risk factors for malignancy\n나이 >40세, 남성, 백인, supraclavicular, B symptoms, 6주 이상, fixed·painless·firm",
+      sources: []
+    },
+    precaution: {
+      content: "### ⚠ LAP + 발열 시 진단 전 steroid 금지\n이유: 림프종 mask · 자발성 TLS · 감염 progression (TB·EBV·CMV·HIV)\n\n### Minimum workup 선행\n- CBC with differential (atypical lymphocyte·blast)\n- **LDH** ([[ldh-interpretation]] 단계별)\n- CRP / ESR\n- Viral serology: EBV (mono-spot, VCA-IgM), CMV IgM, HIV\n- Peripheral blood smear\n- 흉부 X-ray (mediastinal LAP·TB)\n\n→ Workup 완료·진단 명확 후 치료. steroid는 림프종·SLE 확진 후 종양혈액내과·류마티스 영역.",
+      sources: []
+    },
+    referral: {
+      content: "### 영상·조직 검사\n- US: 첫 단계 영상 (size, shape, hilum, vascularity)\n- FNA: 감염성 의심 시 culture, 림프종 진단 한계\n- Core needle biopsy: 림프종 진단 가능성 ↑\n- Excisional biopsy: 림프종 의심 시 gold standard\n\n### 의뢰 기준\n- **Supraclavicular LAP** → 즉시 종양혈액내과\n- High-risk 양상 (firm·fixed·painless·>6주) → 외과 + 종양혈액내과\n- B symptoms → 종양혈액내과 staging\n- 양측·전신 + systemic 단서 → 감염내과 (HIV·TB) 또는 류마티스 (SLE·sarcoidosis)\n- 조직 진단 필요 → 외과 (excisional biopsy)\n\n관련: [[cervical-lymphadenitis]] · [[neck-mass]] · [[ldh-interpretation]] · [[diaphoresis]] · [[unintentional-weight-loss]] · [[clinical-reasoning]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["peripheral-lymphadenopathy"] = _peripheral_lymphadenopathy_v2;
+KNOWLEDGE_BUNDLE["림프절병증"] = _peripheral_lymphadenopathy_v2;
+KNOWLEDGE_BUNDLE["림프절 비대"] = _peripheral_lymphadenopathy_v2;
+KNOWLEDGE_BUNDLE["LAP"] = _peripheral_lymphadenopathy_v2;
+KNOWLEDGE_BUNDLE["supraclavicular"] = _peripheral_lymphadenopathy_v2;
+KNOWLEDGE_BUNDLE["Virchow node"] = _peripheral_lymphadenopathy_v2;
+KNOWLEDGE_BUNDLE["unexplained lymphadenopathy"] = _peripheral_lymphadenopathy_v2;
+
+/* ldh-interpretation — LDH 단계별 해석 (5/22 gaps ingest 신규). [CLINICAL] */
+var _ldh_interpretation_v2 = {
+  kind: "topic",
+  keywords: ["ldh-interpretation","LDH","lactate dehydrogenase","락테이트 디히드로게나제","젖산탈수소효소","LDH 해석","HLH","TLS","림프종 LDH","hemolysis LDH","용혈"],
+  parents: [],
+  primarySources: [
+    "Shipman AR. J Lab Precis Med 2023 (Investigative algorithms for plasma LDH)",
+    "StatPearls Biochemistry LDH (NBK557536)"
+  ],
+  sections: {
+    definition: {
+      content: "LDH는 거의 모든 세포에 존재하는 효소로 lactate↔pyruvate 전환을 촉매. **조직 손상·세포 turnover·악성 turnover marker**, 비특이적. 정상범위 ~140-280 U/L (검사실별 상이). **수치 단계별 임상 의미를 layered 해석**해야 anchoring 회피.",
+      sources: []
+    },
+    exam: {
+      content: "### 단계별 해석 알고리즘\n| LDH 단계 | 응급도 | 주된 감별 | 동반 검사 |\n|---|---|---|---|\n| **>2000** | 응급 | HLH · TLS · massive necrosis · 혈액암 (림프종·백혈병) · 광범위 횡문근융해 | CBC+diff, ferritin, fibrinogen, triglyceride, smear, K·P·UA, LFT, coagulation, **즉시 종양혈액내과/응급 의뢰** |\n| **1000-2000** | 신속 평가 | 림프종 · 용혈 · 광범위 조직손상 · severe sepsis · MI/PE · 췌장염 | CBC+diff, haptoglobin, reticulocyte, smear, LFT, troponin, D-dimer, LDH isoenzyme |\n| **500-1000** | 평가 | 경증 용혈 · 간염 · 폐렴 · 신우신염 · 갑상선기능항진 · vitamin B12 결핍 | 임상 맥락 표적 |\n| **<500** | routine | 정상범위 또는 minor — clinical correlation | repeat in context |\n\n> ⚠ 비특이 증상 + 다른 lab 이상 (CBC·LFT·CRP) → LDH 추가 문턱 ↓",
+      sources: []
+    },
+    notes: {
+      content: "### Critical pattern: HLH (LDH >2000 + cluster)\n- 발열 지속 (>1주)\n- 비장비대\n- 양혈구감소 (≥2 lineage)\n- 고중성지방혈증 ≥265 또는 저fibrinogen <150\n- ferritin >500 (실제 진단에는 >10,000 흔함)\n- soluble CD25 ↑, NK cell activity ↓\n→ 즉시 종양혈액내과·중환자\n\n### TLS\nLDH 급증 (>2000) + K↑·P↑·UA↑·Ca↓·AKI → 즉시 입원, hydration, rasburicase·allopurinol\n\n### 용혈 평가\nLDH 상승 + haptoglobin↓·indirect bilirubin↑·reticulocyte↑·smear(schistocyte/spherocyte/bite cell)·DAT(autoimmune)\n→ in vitro hemolysis(검체 처리 오류) 우선 배제 — 같은 검체 K·hemolysis index 점검\n\n### 림프종 staging marker\nNHL·HL의 prognostic factor (IPI score 구성). DLBCL·Burkitt에서 특히 상승, indolent에서는 정상 가능. **소량 변동은 tumor burden 직결 X**.\n\n### 흔한 함정\n- In vitro hemolysis (채혈·이송 오류)\n- 운동·근육 손상 — 임상 맥락 후 re-check\n- 간염 LFT 동반 상승 → 간 원인 우선\n- LDH 단독 추적 무의미",
+      sources: []
+    },
+    referral: {
+      content: "- LDH >2000 → 즉시 종양혈액내과·응급\n- LDH 1000-2000 + B sx/LAP/세포감소 → 종양혈액내과\n- 명확한 용혈 → 혈액내과\n- 간·심·근 원인 → 해당 과\n\n관련: [[peripheral-lymphadenopathy]] · [[diaphoresis]] · [[anemia]] · [[unintentional-weight-loss]] · [[clinical-reasoning]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["ldh-interpretation"] = _ldh_interpretation_v2;
+KNOWLEDGE_BUNDLE["LDH"] = _ldh_interpretation_v2;
+KNOWLEDGE_BUNDLE["lactate dehydrogenase"] = _ldh_interpretation_v2;
+KNOWLEDGE_BUNDLE["락테이트 디히드로게나제"] = _ldh_interpretation_v2;
+KNOWLEDGE_BUNDLE["젖산탈수소효소"] = _ldh_interpretation_v2;
+KNOWLEDGE_BUNDLE["LDH 해석"] = _ldh_interpretation_v2;
+KNOWLEDGE_BUNDLE["HLH"] = _ldh_interpretation_v2;
+KNOWLEDGE_BUNDLE["TLS"] = _ldh_interpretation_v2;
+
+/* acute-bronchitis — 급성 기관지염 (5/22 gaps ingest 신규). [CLINICAL] */
+var _acute_bronchitis_v2 = {
+  kind: "disease",
+  keywords: ["acute-bronchitis","급성 기관지염","acute bronchitis","누런 가래","sputum color","가래 색","호흡기 vital","SpO2","CRB-65","post-infectious cough"],
+  parents: [],
+  primarySources: [
+    "Smith SM et al. Cochrane Database Syst Rev 2017;6:CD000245. PMID:29488727 (Antibiotics for acute bronchitis)",
+    "AAFP Rapid Evidence Review 2025 (Acute Bronchitis)"
+  ],
+  sections: {
+    definition: {
+      content: "기침 (gen ± 가래) ≤3주, **하기도 점막 자기제한적 염증**. 90% 이상 바이러스성. 항생제 임상이득 미미 — Cochrane 2017 메타분석 17 trials/5099명: 기침 기간 0.5일 단축, 부작용 ↑.",
+      sources: []
+    },
+    notes: {
+      content: "### 가래 색 myth — 항생제 trigger 금지 (Smith Cochrane 2017, PMID:29488727)\n- **누런·녹색 가래 = 호중구 myeloperoxidase 산물**, **세균감염 ≠**\n- 바이러스 감염도 호중구 침윤 단계에서 누런 가래 흔함\n- Cochrane 메타: **가래 색·인후통 단독으로 항생제 효과 예측 안 됨**\n- 누런 가래 단독 항생제 처방 금지. 가래 색 변화는 자연 경과로 환자 설명.\n- 항생제 trigger는 *연령·동반질환·중증도*.\n\n### Post-infectious cough\n- acute bronchitis 후 3-8주 기침 지속 — viral airway hyperreactivity\n- antitussive (codeine·dextromethorphan) 제한적, ICS short course 고려\n- 8주 이상 → [[chronic-cough]] workup",
+      sources: []
+    },
+    exam: {
+      content: "### 외래 호흡기 vital 필수 (AAFP 2025)\n호흡기 증상 외래 환자 다음 vital 누락 금지:\n| 항목 | 의미 |\n|---|---|\n| **SpO2** | <94% → 폐렴·악화 의심 |\n| **호흡수 (RR)** | ≥30 → 중증, CRB-65 1점 |\n| **맥박수 + 혈압** | sepsis·dehydration 평가 |\n| **체온** | 발열 지속 (≥38℃ >3일) → 폐렴 의심 |\n| **mentation** | 의식 변화 → CRB-65 1점, 입원 |\n\n> ⚠ **고령 환자 SpO2 누락은 결정적 gap** — pneumonia 놓치는 주된 원인.\n\n### CRB-65 (pneumonia 의심)\nC(Confusion)·R(RR ≥30)·B(BP <90/60)·65(age ≥65) 각 1점\n- 0 저위험 → 외래\n- 1-2 중위험 → 입원 고려\n- 3-4 고위험 → 입원/중환자",
+      sources: []
+    },
+    protocol: {
+      content: "### 항생제 적응 — 좁은 범위 (Smith Cochrane 2017 + AAFP 2025)\n**일반 acute bronchitis**: 항생제 비권고. 환자 교육·증상 조절. 백일해 의심 시 macrolide.\n\n**항생제 고려 가능 (제한적)**:\n- COPD acute exacerbation 동반\n- 면역저하·심한 동반질환\n- 10일 이상 + 악화\n- pneumonia 의심 (SpO2 ↓·CRB-65 ≥1·국소 청진·CXR 침윤) — pneumonia 항생제, bronchitis 항생제 아님\n\n### 환자 교육\n- \"누런 가래는 우리 몸이 염증과 싸우는 과정에서 나오는 것이지 세균 감염의 증거가 아닙니다.\"\n- \"기침은 보통 1-3주, 일부는 8주까지 갈 수 있어요.\"\n- \"감기약·진해제는 증상을 줄여줄 뿐 회복을 빠르게 하지 않습니다.\"",
+      sources: []
+    },
+    referral: {
+      content: "- SpO2 <92% 지속 / CRB-65 ≥2 → 응급/입원\n- 객혈·체중감소·야간발한 → 결핵·악성 의심, 영상 + 호흡기내과\n- 8주 이상 기침 → [[chronic-cough]] workup\n\n관련: [[chronic-cough]] · [[asthma]] · [[COPD]] · [[sinusitis]] · [[pediatric-antibiotic-stewardship]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["acute-bronchitis"] = _acute_bronchitis_v2;
+KNOWLEDGE_BUNDLE["급성 기관지염"] = _acute_bronchitis_v2;
+KNOWLEDGE_BUNDLE["acute bronchitis"] = _acute_bronchitis_v2;
+KNOWLEDGE_BUNDLE["누런 가래"] = _acute_bronchitis_v2;
+KNOWLEDGE_BUNDLE["sputum color"] = _acute_bronchitis_v2;
+KNOWLEDGE_BUNDLE["가래 색"] = _acute_bronchitis_v2;
+KNOWLEDGE_BUNDLE["CRB-65"] = _acute_bronchitis_v2;
+KNOWLEDGE_BUNDLE["post-infectious cough"] = _acute_bronchitis_v2;
+
+/* chronic-diarrhea-workup — 만성 설사 평가 (5/22 gaps ingest 신규). [CLINICAL] */
+var _chronic_diarrhea_workup_v2 = {
+  kind: "disease",
+  keywords: ["chronic-diarrhea-workup","만성 설사","chronic diarrhea","celiac","IBD","colon cancer","IBS 감별","anti-tTG","fecal calprotectin","만성 설사 빈혈"],
+  parents: [],
+  primarySources: [
+    "Burgers K, Lindberg B, Bevis ZJ. Am Fam Physician 2020;101(8):472-480. PMID:32293842",
+    "AGA 2019 IBD/celiac screening guideline"
+  ],
+  sections: {
+    definition: {
+      content: "**4주 이상** 지속 묽은 변 (Bristol 6-7) 또는 빈도 증가 (>3회/일). 흔한 원인: IBS · IBD · celiac · microscopic colitis · bile acid diarrhea · 약물 · post-infectious. **빈혈 동반 시 IBS 가정 금지**, organic etiology 적극 감별.",
+      sources: []
+    },
+    exam: {
+      content: "### Red flags — IBS 가정 금지 (Burgers *AFP* 2020, PMID:32293842)\n다음 1개라도 → 증상약 처방 X, organic workup 우선:\n| Red flag | 의심 |\n|---|---|\n| **빈혈** (특히 IDA) | celiac · IBD · colon cancer |\n| **체중감소** | IBD · 악성 · celiac |\n| **혈변/FOBT+** | IBD · colon cancer · diverticular |\n| **야간 설사** | organic |\n| **50세 이상 신규** | colon cancer 우선 |\n| **발열 / CRP↑** | IBD · 감염 |\n| **가족력** IBD·celiac·colon ca | screening 문턱 ↓ |\n| **B symptoms** | 악성 |\n\n### 최소 1차 검사 (AGA 2019 + AAFP 2020)\n- CBC (빈혈 = celiac/IBD/colon cancer 신호)\n- CRP / ESR (IBD)\n- **Anti-tissue transglutaminase IgA + total IgA** (celiac screening — 총 IgA 결핍 false-negative 회피)\n- TSH, BMP, LFT, albumin\n- **Fecal calprotectin (또는 lactoferrin)** — IBD 감별\n- FOBT/FIT — colon cancer screening\n- Stool culture, C. difficile toxin\n\n> ⚠ **Ova & parasite는 routine 비권고** (저수율, AGA 2019). 여행력·면역저하 시만.",
+      sources: []
+    },
+    notes: {
+      content: "### \"만성 설사 + 빈혈\" 적극 감별\n1. **Celiac**: Anti-tTG IgA + total IgA → 양성/high suspicion → 십이지장 생검 (EGD). IDA가 GI 증상보다 먼저/단독 발현 가능. HLA-DQ2/DQ8 음성이면 사실상 배제.\n2. **IBD**: Fecal calprotectin >150-250 μg/g → colonoscopy. ESR·CRP·hypoalbuminemia.\n3. **Colorectal cancer**: 50세+ (한국 검진 45세부터) 신규 → colonoscopy. FIT+ → colonoscopy. 가족력 → 문턱↓.\n4. **Microscopic colitis**: 50세+ 여성, watery, colonoscopy 정상 → random biopsy. 약물 유발 (NSAID·PPI·SSRI·statin) 확인.\n5. **Bile acid diarrhea**: 회장 절제·Crohn·cholecystectomy 후. SeHCAT 또는 empirical cholestyramine.\n\n### ⚠ IBS 가정 전 처방 금기\n미르 임상 경험: \"IBS 진단 전에 Dicetel·Norzyme·Fotagel 등 증상약 처방하면 organic etiology 진단 지연·놓치는 사례 반복\". Red flag 1개+ → 증상약 중지, workup 우선. 정상 workup + Rome IV 기준 → IBS 진단.",
+      sources: []
+    },
+    referral: {
+      content: "- Red flag → 소화기내과\n- Anti-tTG 양성 → 소화기내과 (EGD + duodenal biopsy)\n- Fecal calprotectin 상승 → 소화기내과 (colonoscopy)\n- 50세+ 신규 / 가족력 / FOBT+ → colonoscopy\n- IDA + 만성 설사 → 동시 위·대장 내시경 ([[anemia]] workup + GI source)\n\n비고: 만성 설사 ~10-15%가 organic (Burgers 2020). IBS는 *증후군* — Rome IV + organic 배제 후. **빈혈 동반은 IBS와 양립 어려움** — 항상 organic 우선.\n\n환자 교육: \"오래 가는 설사에 빈혈이 함께 있으면 단순 과민성 대장이 아니라 다른 원인을 먼저 찾아야 합니다.\"\n\n관련: [[ibs]] · [[functional-dyspepsia]] · [[anemia]] · [[colorectal-cancer-screening]] · [[clinical-reasoning]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["chronic-diarrhea-workup"] = _chronic_diarrhea_workup_v2;
+KNOWLEDGE_BUNDLE["만성 설사"] = _chronic_diarrhea_workup_v2;
+KNOWLEDGE_BUNDLE["chronic diarrhea"] = _chronic_diarrhea_workup_v2;
+KNOWLEDGE_BUNDLE["만성 설사 빈혈"] = _chronic_diarrhea_workup_v2;
+KNOWLEDGE_BUNDLE["fecal calprotectin"] = _chronic_diarrhea_workup_v2;
+KNOWLEDGE_BUNDLE["anti-tTG"] = _chronic_diarrhea_workup_v2;
