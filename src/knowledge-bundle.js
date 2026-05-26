@@ -4992,8 +4992,16 @@ var _dyslipidemia_v2 = {
       sources: []
     },
     referral: {
-      content: "- 가족성 고콜레스테롤혈증 의심 (LDL≥190, 가족력) → 내분비/심장\n- 고강도 statin + ezetimibe 후도 미달 → PCSK9 검토\n- 관련: [[diabetes-dyslipidemia]], [[home-based-hypertension]], [[obesity]]",
+      content: "- 가족성 고콜레스테롤혈증 의심 (LDL≥190, 가족력, DLCN ≥6) → 내분비/심장 (Lp(a)·apoB 추가)\n- 고강도 statin + ezetimibe 후도 미달 → PCSK9 검토\n- Lp(a) ≥125 nmol/L + 가족력 → 평생 위험 평가·가족 screening 안내\n- 관련: [[diabetes-dyslipidemia]], [[home-based-hypertension]], [[obesity]]",
       sources: []
+    },
+    lpa_lifetime_measurement: {
+      content: "### Lp(a) 측정 — 평생 1회 [CLINICAL]\n> NLA 2024 focused update + 2025 ESC/EAS Class IIa Level B\n\n- **모든 성인 평생 ≥1회** Lp(a) 측정 권고\n- 고위험 cutoff: **≥50 mg/dL (≈≥125 nmol/L)** — 일반 인구 ~20%가 초과\n- baseline Lp(a)와 ASCVD 사건은 **연속·log-linear** — 25-50 nmol/L에서도 유의한 증가\n- 40-75세 + 10년 ASCVD 7.5-19.9% + Lp(a) ≥125 nmol/L → **risk-enhancing factor** → 중-고강도 statin / LDL 목표 한 단계 ↓ (예: 70 → 55)\n- 동반 강화: 혈압·흡연·당뇨 + statin + ezetimibe 조기 병용\n- 고위험: PCSK9i — LDL뿐 아니라 **Lp(a)도 20-30% 감소**\n- 약물로 Lp(a) 직접 큰 폭 감소는 어렵지만 전체 ASCVD frame을 재분류하는 단서",
+      sources: ["Koschinsky ML et al. NLA focused update. J Clin Lipidol 2024;18(3):e308-e319. PMID:38565461, DOI:10.1016/j.jacl.2024.03.001"]
+    },
+    fh_evaluation: {
+      content: "### 가족성 고콜레스테롤혈증(FH) 평가 — LDL≥190 [CLINICAL]\n> EAS Consensus Statement on FH (Nordestgaard 2013)\n\n- **LDL ≥190 mg/dL** = severe hypercholesterolemia → statin 즉시 시작 + FH 평가 병행\n- **진단 도구**: Dutch Lipid Clinic Network (DLCN) score (**≥8 definite / 6-8 probable**) 또는 Simon Broome criteria\n- **평가 항목**:\n  - 가족력 — 1촌 조기 CAD (남<55 / 여<60) 또는 1촌 severe lipid\n  - 신체검진 — **tendon xanthoma** (Achilles·extensor digitorum) · **corneal arcus**\n  - 2차 원인 배제 — 갑상선저하증·신증후군·간담도 폐쇄·약물(diuretic·cyclosporine)\n- FH 확정 → 가족 cascade screening (1촌 LDL 측정)·소아 조기 statin·PCSK9i 적응증 확대",
+      sources: ["Nordestgaard BG et al. EAS Consensus Statement on FH. Eur Heart J 2013;34(45):3478-3490. PMID:23956253, DOI:10.1093/eurheartj/eht273"]
     }
   },
   uiHooks: null
@@ -5271,6 +5279,10 @@ var _thyroid_disorder_v2 = {
     referral: {
       content: "- Graves 안병증·중증 항진증 → 내분비\n- RAI/수술 검토 → 내분비\n- 임신 중 갑상선 이상 → 내분비\n- 결절 + 기능 이상 → [[thyroid-fna-cnb]]\n- 관련: [[thyroid-fna-cnb]], [[depression-screening]]",
       sources: []
+    },
+    subclinical_hypothyroid: {
+      content: "### Subclinical Hypothyroidism — AACE/ATA 2012 [CLINICAL]\n> Garber JR et al. AACE/ATA 2012 Clinical Practice Guidelines for Hypothyroidism in Adults\n\n| TSH | 증상 동반 | 권고 |\n|---|---|---|\n| **>10** | 무관 | **LT4 시작** (CHF·CV mortality·dyslipidemia·진행 risk) |\n| **4.5-10 (gray zone)** | 동반 | **LT4 trial** 합리적 — 증상·anti-TPO 양성·CV 위험·임신 계획 시 우선 |\n| **4.5-10** | 무 | 관찰 — 3-6개월 후 재검 (자연 정상화 30~50%) |\n\n- TSH 4.5-10 gray zone에서 LT4 trial 결정: 증상(피로·체중·우울·근육통)·anti-TPO 양성·연령(70+ 신중)·CV risk·임신 계획\n- 70세+ 무증상 gray zone은 일반적으로 관찰 (CV·골절 risk·과치료 우려)\n- 임신부·임신 계획: TSH >2.5 trimester-specific cutoff 적용 (별도 가이드)\n\n> ⚠ raw note의 \"TSH 7\" 분기 cutoff는 일부 EU/UK 알고리듬 변형 — ATA 본문은 4.5-10 gray zone으로 통일.",
+      sources: ["Garber JR et al. AACE/ATA 2012 Clinical Practice Guidelines for Hypothyroidism in Adults. Thyroid 2012;22(12):1200-1235. PMID:22954017, DOI:10.1089/thy.2012.0205"]
     }
   },
   uiHooks: null
@@ -7714,6 +7726,10 @@ var _clinical_reasoning_v2 = {
     },
     notes: {
       content: "### 4대 사고 함정\n| 함정 | 대처 |\n|---|---|\n| Lab-driven thinking | 주호소→가설→검증 순서, 검사는 가설 검증 도구 |\n| Anchoring | \"이 한 수치가 현재 가설로 설명되는가?\" 자문 |\n| Premature closure | 다른 1개 데이터가 가설로 설명 안 되면 그게 진짜 단서 |\n| Pretest probability 무시 | 증상 cluster + 인구학적 baseline 먼저 |\n\n> Croskerry P. *Acad Med* 2003 (PMID:12915363)\n\n### Symptom to Diagnosis (Stern) 흐름\n1. Chief complaint 환자 단어 그대로\n2. 감별 list (pivotal points: 인구·증상 양상·시간 경과)\n3. 가설별 pretest probability\n4. 검사·문진 = likelihood ratio 도구\n5. Posttest probability → 치료 threshold\n\n### Anchoring 검증 routine\n1. \"이 lab/symptom이 현재 가설로 설명되는가?\"\n2. 설명 안 되는 1개 데이터 → 별개 가설\n3. carry-over from previous visit → 의식적 재평가",
+      sources: []
+    },
+    anchoring_case_example: {
+      content: "### 사례 — \"환자가 원인을 말해도 동반 질환 고려\" [INSIGHTS — by 미르 gaps 2026-05-26]\n\n**케이스**: 스트레스 동반 체중감소 + 생리불순 + AFP 상승. 환자가 \"스트레스 때문에 빠졌다\" 호소.\n\n**Anchoring 함정**: 환자 제공 원인(스트레스)에 가설 고정 → 체중감소·생리불순·AFP 상승을 단일 framing(스트레스성)으로 설명 시도 → \"더 중요한 amplifier\"(갑상선·종양·DM·IBD·EDD/Depression·만성 감염·임신·간질환·난소 GCT) framing을 못 바꿈.\n\n**대응**:\n- 체중감소 → Thyroid·종양·DM·IBD·EDD/Depression·TB/HIV 감별\n- 생리불순 → Prolactin·LH·FSH·Estradiol·urine HCG·LMP/양/기간 (산부인과 evaluation 필요성 판단)\n- AFP 상승 → [[afp-elevation-workup]] 5축 differential (임신·간질환·GCT·흡연·유전적)\n\n**Routine**: 환자가 호소 원인을 단정해도 lab/증상 cluster가 그 단일 framing으로 모두 설명 안 되면 → 별개 가설 강제 평가. \"환자 발언 framing\"에 anchoring하지 말 것.",
       sources: []
     }
   },
