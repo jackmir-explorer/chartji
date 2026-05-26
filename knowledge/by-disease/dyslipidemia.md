@@ -50,6 +50,35 @@ relations: []
 
 ---
 
+## Lp(a) 측정 — 평생 1회 [CLINICAL]
+
+> 근거: Koschinsky ML et al. NLA focused update. J Clin Lipidol 2024;18(3):e308-e319. DOI:10.1016/j.jacl.2024.03.001. PMID:38565461
+> 보조: 2025 ESC/EAS — Class IIa Level B 평생 1회 측정
+
+- **모든 성인 평생 ≥1회** Lp(a) 측정 권고
+- 고위험 cutoff: **≥50 mg/dL (≈≥125 nmol/L)** — 일반 인구의 약 20%가 이 수준 초과
+- baseline Lp(a)와 ASCVD 사건은 **연속·log-linear 관계**, 통상 "저위험"(25-50 nmol/L)도 작지만 유의한 증가
+- 40-75세 + 10년 ASCVD risk **7.5-19.9% 중간위험** + Lp(a) ≥125 nmol/L → **risk-enhancing factor** → 중-고강도 statin 시작 / LDL 목표 한 단계 하향 (예: 70 → 55)
+- 동반: 혈압·흡연·당뇨 강화 관리, statin + ezetimibe 조기 병용 고려
+- 고위험: PCSK9 inhibitor — LDL뿐 아니라 **Lp(a)도 20-30% 감소**
+- 진단 후에도 약물로 Lp(a) 직접 큰 폭 감소는 어렵지만, 전체 ASCVD 위험 frame을 재분류하는 단서
+
+---
+
+## 가족성 고콜레스테롤혈증(FH) 평가 — LDL≥190 mg/dL [CLINICAL]
+
+> 근거: Nordestgaard BG et al. EAS Consensus Statement on FH. Eur Heart J 2013;34(45):3478-3490. DOI:10.1093/eurheartj/eht273. PMID:23956253
+
+- **LDL ≥190 mg/dL** = severe hypercholesterolemia → statin 즉시 시작 + FH 평가 병행
+- **진단 도구**: Dutch Lipid Clinic Network (DLCN) score (≥8 definite / 6-8 probable) 또는 Simon Broome criteria
+- **평가 항목**:
+  - 가족력 — 1촌 조기 CAD (남<55세 / 여<60세) 또는 1촌 severe lipid
+  - 신체검진 — tendon xanthoma (Achilles·extensor digitorum)·corneal arcus
+  - 2차 원인 배제 — 갑상선저하증·신증후군·간담도 폐쇄·약물(diuretic·cyclosporine)
+- FH 확정 → 가족 cascade screening (1촌 LDL 측정)·소아 조기 statin·PCSK9i 적응증 확대
+
+---
+
 ## ASCVD 이차 예방 — LDL<55 목표의 근거 [CLINICAL]
 
 > 근거: Lee YJ et al. (Ez-PAVE trial) Intensive LDL Cholesterol Targeting in Atherosclerotic Cardiovascular Disease. N Engl J Med. 2026;394(14):1365-1375. PMID:41910315. DOI:10.1056/NEJMoa2600283
@@ -124,8 +153,9 @@ relations: []
 
 ## 의뢰 기준
 
-- 가족성 고콜레스테롤혈증 의심 (LDL≥190, 가족력) → 내분비/심장
+- 가족성 고콜레스테롤혈증 의심 (LDL≥190, 가족력, DLCN score ≥6) → 내분비/심장 (Lp(a)·apoB 추가 측정)
 - 고강도 statin + ezetimibe 후도 LDL 미달 → 내분비/심장 (PCSK9 검토)
+- Lp(a) ≥125 nmol/L + 가족력 → 평생 위험 평가·가족 screening 안내
 - 관련: [[diabetes-dyslipidemia]], [[home-based-hypertension]], [[obesity]]
 
 ---
@@ -135,4 +165,6 @@ relations: []
 - KSoLA 이상지질혈증 진료지침 5판 2022
 - ACC/AHA 2018 Cholesterol Guideline (Circulation 2019)
 - ESC/EAS 2019 Dyslipidaemia Guidelines
+- 2024 NLA Lp(a) focused update PMID:38565461
+- EAS FH Consensus 2013 PMID:23956253
 - 심평원 약제 보험인정기준

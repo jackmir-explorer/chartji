@@ -7,7 +7,10 @@
       "mcp__a193225c-a204-4503-94d6-56c3fef73f33__get_article_metadata",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "mcp__2a214189-d932-4e54-8303-01631d2f561b__search_files",
+      "mcp__2a214189-d932-4e54-8303-01631d2f561b__list_recent_files",
+      "mcp__2a214189-d932-4e54-8303-01631d2f561b__read_file_content"
     ]
   }
 }

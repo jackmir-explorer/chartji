@@ -83,6 +83,14 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - ldh-interpretation.md — LDH 단계별 (>2000 응급 HLH/TLS·1000-2000 림프종/용혈/sepsis·500-1000 경증 용혈/간염/폐렴) + HLH cluster + 용혈 평가 + in vitro hemolysis 함정 [CLINICAL] — topic
 - acute-bronchitis.md — 급성 기관지염 90% viral + **가래 색 myth** (호중구 MPO, Cochrane: 가래색·인후통 단독 ABx 효과 예측 X) + **외래 호흡기 vital 필수** (SpO2·RR·CRB-65) + post-infectious cough [CLINICAL] PMID:29488727 Smith Cochrane 2017 + AAFP 2025
 - chronic-diarrhea-workup.md — 만성 설사 ≥4주 + Red flags (빈혈·체중감소·혈변·야간설사·50세+ 신규·CRP↑) + IBS 가정 금지 + 5축 organic 감별 (celiac·IBD·colon ca·microscopic colitis·bile acid) + Anti-tTG·fecal calprotectin [CLINICAL] PMID:32293842 Burgers AFP 2020 + AGA 2019
+- hematologic-malignancy-uri-screening.md — 관해 중 혈액암 환자 URI: ANC·LDH·LN·B sx gatekeeper + febrile neutropenia 응급 + Rituximab HBV/PJP/백신 cross-link [CLINICAL] PMID:30575480 Shapiro NEJM 2018 + AAFP PMID:25591238
+- anthracycline-cardiotoxicity.md — Doxorubicin 노출+DOE 지속 = cardiomyopathy 의심: BNP/NT-proBNP+troponin→TTE→cardio-oncology, CTRCD 기준 (LVEF<50% or GLS>15% 상대 감소) [CLINICAL] PMID:36017568 ESC 2022 cardio-oncology
+- ana-interpretation.md — ANA Titer 1:40-1:640 해석·Pattern과 연관 항체·FP(약물/감염/악성/정상변이)·FN(early SLE/cutaneous lupus/면역억제) [CLINICAL] PMID:31385462 ACR/EULAR 2019 + PMID:30862649 ICAP + PMID:15767027 Rubin 2005 — topic
+- afp-elevation-workup.md — AFP HCC cutoff (>20/>200) + 5축 differential (임신/간질환/GCT/흡연/유전적 baseline) + anchoring 함정 cross-link [CLINICAL] PMID:25921665 Wong Clin Liver Dis 2015
+- pancreatic-cystic-lesion.md — Kyoto IPMN 2024 worrisome features (≥30mm·MPD 5-9mm·CA19-9·new-onset DM·가족력) + HRS (MPD≥10·mural nodule≥5mm·황달) + 50세+ NOD 췌장암 6-8배 [CLINICAL] PMID:38182527 Ohtsuka Pancreatology 2024
+- hepatic-cyst.md — Simple vs complex (septation/mural nodule/thick wall/enhancement→GI 의뢰) + PCLD ADPKD link + 크기별 임상 컨벤션 (4cm/4-10cm/10cm+ 또는 증상) [CLINICAL] PMID:35728731 EASL 2022
+- lymphocytosis-workup.md — ALC 계산 (WBC×Lymph%) + 연령별 first concern (<30 감염/30-50 자가면역+감염/≥65 악성) + iwCLL 2018 (clonal B≥5,000×3mo) + MBL (pre-CLL 1-2%/y) [CLINICAL] PMID:29540348 Hallek iwCLL 2018
+- neutropenia-workup.md — ANC 분류 (mild 1k-1.5k/moderate/severe <500) + 약물·만성감염·자가면역·MDS·BEN(Duffy)·B12/Folate 감별 + febrile neutropenia 응급 임계 [CLINICAL] AAFP 2025 + PMID:30828799 Atallah-Yunes BEN 2019
 
 ### by-drug/
 - vaccine-interval.md — 백신 접종 간격 원칙 (생+사/생+생/사+사) [CLINICAL] — topic
@@ -114,3 +122,4 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - brain-metabolism-enhancers.md — 뇌대사 개선제 급여: 7약제 1종만, **콜린알포 2025.9.21 치매 외 80% 선별급여 전환**, 사미온 5/10mg 적응증, 소마지나 24h 6주, 케타스 어지러움, 니세틸 시장 퇴출 [REGULATORY] — topic
 - travel-vaccination.md — 해외여행 예방접종: CDC Yellow Book 2024 지역별 매트릭스, 황열 ICVP 2016 평생 유효, 일본뇌염 ≥1mo+위험요인, 말라리아 화학예방, 사우디 ACWY 의무 [CLINICAL] — topic
 - chest-xray-template.md — 기숙사 입소·검진 SOAP template (Z115), 변형 4종 (취업·학교·흉부 검진) [TIPS — by 미르] — topic
+- immunocompromised-vaccination.md — 면역저하자 백신 일차의료 프로토콜: RZV(생백신 금기·항암 후 3mo)·HD-influenza·PCV20/PCV15→≥8주 PPSV23·RSV 60세+·COVID·Tdap·Rituximab HBV screening 필수 [CLINICAL] PMID:24421306 IDSA 2013 — topic
