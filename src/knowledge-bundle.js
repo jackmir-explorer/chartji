@@ -8046,3 +8046,300 @@ KNOWLEDGE_BUNDLE["death preparedness"] = _eol_dyadic_v2;
 KNOWLEDGE_BUNDLE["EOL discussion"] = _eol_dyadic_v2;
 KNOWLEDGE_BUNDLE["prognosis awareness"] = _eol_dyadic_v2;
 KNOWLEDGE_BUNDLE["임종기 가족 동석"] = _eol_dyadic_v2;
+
+/* ========== Batch 2 — Drive gaps 2026-05-26 신규 9 entry ========== */
+
+/* hematologic-malignancy-uri-screening — 관해 중 혈액암 환자 URI screening. [CLINICAL] */
+var _hematologic_uri_v2 = {
+  kind: "topic",
+  keywords: ["hematologic-malignancy-uri-screening","관해 중 혈액암","cancer survivor URI","lymphoma surveillance","호중구감소성 발열","febrile neutropenia","B symptoms"],
+  primarySources: [
+    "Shapiro CL. Cancer Survivorship. N Engl J Med 2018;379(25):2438-2450. PMID:30575480, DOI:10.1056/NEJMra1712502",
+    "Skolarus TA et al. Surveillance of the Adult Cancer Survivor. Am Fam Physician 2015;91(1):29-36. PMID:25591238"
+  ],
+  sections: {
+    definition: {
+      content: "관해 중 혈액암 환자가 단순 URI로 내원해도 일반 외래 routine 그대로 적용 금지. 재발·치료 부작용·면역억제 합병증 screening을 동시에 가동 — 일차의료 = **gatekeeper**.",
+      sources: []
+    },
+    protocol: {
+      content: "### URI 시 빠른 screening 알고리듬\n| 항목 | 목적 | 행동 임계 |\n|---|---|---|\n| **ANC** (CBC w/diff) | 호중구감소성 발열 배제 | ANC <1,500 + 발열 → 응급실/혈종내과 |\n| **LDH** | 림프종 surveillance | baseline 대비 ↑ → 재발 의심 |\n| **LN 진찰** | 재발 vs reactive 감별 | 신규/firm/matted/supraclavicular → [[lymphadenopathy]] |\n| **B 증상** | 림프종 재발 단서 | 체중감소(10%/6mo)·야간발한·발열(>38℃×2주) ≥1 → 즉시 의뢰 |\n\n추가: 흉부·간비종대·peripheral smear (atypical lymph·blast)\n\n### 호중구감소성 발열 응급\n- ANC <500 + T ≥38.3°C 1회 또는 ≥38.0°C × 1시간 = **응급**\n- 일차의료 외래 발견 시 → 응급실 위임, 자체 항생제 처방 금지\n\n### 면역억제 환자 추가\n- Rituximab 사용 → HBsAg/anti-HBs/anti-HBc 사전 screening ([[hepatitis-ab-vaccine]])\n- PJP prophylaxis 누락 확인 (CLL·R-CHOP·BTKi)\n- 백신 status — [[immunocompromised-vaccination]]",
+      sources: []
+    },
+    referral: {
+      content: "- ANC <1,500 + 발열 → 응급실/혈종내과 즉시\n- LDH baseline 대비 ↑ + B 증상 ≥1 → 혈종내과\n- 신규 LN >1cm + firm/matted/supraclavicular → [[lymphadenopathy]] workup 후 의뢰\n- Smear blast/atypical lymph → 혈종내과\n\n관련: [[lymphadenopathy]] · [[ldh-interpretation]] · [[anthracycline-cardiotoxicity]] · [[immunocompromised-vaccination]] · [[hepatitis-ab-vaccine]] · [[lymphocytosis-workup]] · [[neutropenia-workup]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["hematologic-malignancy-uri-screening"] = _hematologic_uri_v2;
+KNOWLEDGE_BUNDLE["관해 중 혈액암"] = _hematologic_uri_v2;
+KNOWLEDGE_BUNDLE["cancer survivor URI"] = _hematologic_uri_v2;
+KNOWLEDGE_BUNDLE["호중구감소성 발열"] = _hematologic_uri_v2;
+KNOWLEDGE_BUNDLE["febrile neutropenia"] = _hematologic_uri_v2;
+KNOWLEDGE_BUNDLE["lymphoma surveillance"] = _hematologic_uri_v2;
+
+/* immunocompromised-vaccination — 면역저하자 백신 일차의료 프로토콜. [CLINICAL] */
+var _immunocomp_vacc_v2 = {
+  kind: "topic",
+  keywords: ["immunocompromised-vaccination","면역저하자 백신","항암 후 백신","rituximab HBV","RZV 면역저하","고용량 인플루엔자"],
+  primarySources: [
+    "Rubin LG et al. 2013 IDSA Clinical Practice Guideline for Vaccination of the Immunocompromised Host. Clin Infect Dis 2014;58(3):e44-e100. PMID:24421306, DOI:10.1093/cid/cit684"
+  ],
+  sections: {
+    definition: {
+      content: "면역저하자(혈액암·고형암·이식·HIV·면역억제제·만성 신부전) 1차 예방접종 프로토콜. 생백신 금기·항암 후 ≥3개월 대기·동거 가족 cocoon strategy.",
+      sources: []
+    },
+    protocol: {
+      content: "### 일반 원칙\n- **생백신 금기**: MMR·varicella·MMRV·oral typhoid·yellow fever·BCG·LAIV·OPV\n- 항암 후 **≥3개월** 대기 (CD4·림프구 회복 후)\n- 사백신 안전 — 단 rituximab·고용량 스테로이드 중 반응↓\n- 동거 가족 — 인플루엔자·MMR·VZV 적극 권장 (cocoon)\n\n### 권고 백신 5종\n| 백신 | 권고 | 비고 |\n|---|---|---|\n| **RZV (Shingrix)** | ≥19세 면역저하 우선 (ACIP 2022) | **사백신 OK·ZVL 금기**, 항암 후 3개월+ ([[herpes-zoster-vaccine]]) |\n| **인플루엔자** | 매년, 65세+ **4배 고용량(HD-IIV)** | LAIV 금기 — IIV만 |\n| **폐렴구균** | PCV20/21 단독 또는 PCV15 → **≥8주 PPSV23** (간격 단축) | ACIP 2024 ≥50세 universal ([[pneumococcal-vaccine]]) |\n| **RSV** | ≥60세 또는 만성 폐·심·면역저하 | 사백신/단클론 — 안전 |\n| **COVID-19** | mRNA 추가 + 매년 갱신 | 면역저하 booster ↑ |\n\n### 기타\n- Tdap 10년 주기 ([[tdap]])·HepB anti-HBs <10 → series 재접종 ([[hepatitis-ab-vaccine]])\n- HAV·HPV (≥27세 면역저하 3-dose)\n\n### Rituximab/Anti-CD20 — HBV reactivation screening 필수\n- 처방 전: **HBsAg + anti-HBs + anti-HBc total**\n- HBsAg(+) 또는 anti-HBc(+) → 간내과 + entecavir/TDF prophylaxis (rituximab 종료 후 6-12개월 유지)\n- 가능하면 백신은 rituximab 시작 **2주 전** (B cell depletion 전)\n\n### 항암 timing\n| 상황 | 시점 |\n|---|---|\n| 화학요법 중 | 사백신 OK·생백신 금기 |\n| 화학 종료 후 | **3개월** 후 생백신 OK |\n| 조혈모세포이식 후 | 6mo 사백신/24mo 생백신 (별도 schedule) |\n| 고형장기이식 | 평생 생백신 금기 |\n| 고용량 스테로이드 (PD ≥20mg/d × ≥2주) | 1개월 후 생백신 OK |",
+      sources: []
+    },
+    referral: {
+      content: "- HBV reactivation 위험 (HBsAg/anti-HBc 양성 + 면역억제 예정) → 간내과\n- 백신 반응 부족 (반복 series 후 anti-HBs <10) → 감염내과·이식센터\n- 이식 환자 백신 schedule → 이식 코디네이터\n\n관련: [[hematologic-malignancy-uri-screening]] · [[pneumococcal-vaccine]] · [[herpes-zoster-vaccine]] · [[hepatitis-ab-vaccine]] · [[tdap]] · [[vaccination]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["immunocompromised-vaccination"] = _immunocomp_vacc_v2;
+KNOWLEDGE_BUNDLE["면역저하자 백신"] = _immunocomp_vacc_v2;
+KNOWLEDGE_BUNDLE["항암 후 백신"] = _immunocomp_vacc_v2;
+KNOWLEDGE_BUNDLE["rituximab HBV"] = _immunocomp_vacc_v2;
+KNOWLEDGE_BUNDLE["RZV 면역저하"] = _immunocomp_vacc_v2;
+KNOWLEDGE_BUNDLE["고용량 인플루엔자"] = _immunocomp_vacc_v2;
+
+/* anthracycline-cardiotoxicity — 안트라사이클린 심독성 surveillance. [CLINICAL] */
+var _anthracycline_v2 = {
+  kind: "disease",
+  parents: ["heart-failure"],
+  keywords: ["anthracycline-cardiotoxicity","anthracycline 심독성","doxorubicin cardiomyopathy","cardio-oncology","항암 심부전","CTRCD"],
+  primarySources: [
+    "Lyon AR et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J 2022;43(41):4229-4361. PMID:36017568, DOI:10.1093/eurheartj/ehac244"
+  ],
+  sections: {
+    definition: {
+      content: "Anthracycline (doxorubicin·epirubicin·daunorubicin) 노출 history + DOE 지속 = anthracycline cardiomyopathy 의심 신호. 일차의료 게이트키퍼는 즉시 평가 알고리듬 가동.",
+      sources: []
+    },
+    protocol: {
+      content: "### 일차의료 게이트키퍼 알고리듬\n```\nDOE / orthopnea / 부종 / 운동능력 저하\n        ↓\n1차 검사: BNP 또는 NT-proBNP + Troponin (hs-cTn)\n        ↓\n이상치 (BNP ≥35 외래 / NT-proBNP ≥125 / troponin ↑)\n        ↓\nTTE (LVEF + GLS)\n        ↓\nLVEF <50% 또는 GLS >15% 상대 감소 → cardio-oncology 의뢰\n```\n\n### CTRCD 진단 기준 (ESC 2022)\n- **Symptomatic CTRCD**: HF 증상 + LVEF 감소\n- **Asymptomatic moderate**: LVEF 40-49% (>10% absolute 감소) 또는 GLS >15% 상대 감소\n- **Asymptomatic mild**: LVEF ≥50% + GLS >15% 상대 감소 또는 troponin/NT-proBNP ↑\n\n### Surveillance schedule\n| 환자군 | TTE/biomarker 간격 |\n|---|---|\n| 누적 doxorubicin ≥250 mg/m² 또는 epirubicin ≥600 mg/m² | 치료 중 12주마다, 종료 후 1년·5년 |\n| 흉부 방사선 동시 (좌측) | 더 적극적 — 1년 간격 |\n| 무증상 저누적·저위험 | 종료 후 1년 + 임상 신호 시 |\n\n### High-risk → surveillance 강화\n- 누적 doxorubicin ≥250 mg/m² (equivalent)\n- 흉부 방사선 동시 (좌측)\n- 65세+ 또는 18세 미만\n- 기저 CV (HTN·DM·CAD·prior HF)\n- HER2 표적치료 (trastuzumab) 동시·sequential",
+      sources: []
+    },
+    referral: {
+      content: "- BNP ≥100 / NT-proBNP ≥300 + DOE → cardio-oncology\n- TTE LVEF <50% (baseline 대비 ≥10% 감소) → cardio-oncology\n- GLS >15% 상대 감소 (subclinical) → cardio-oncology\n- 증상 명백 + 검사 정상이라도 → 추적 + cardio-oncology 자문\n\n관련: [[heart-failure]] · [[hematologic-malignancy-uri-screening]] · [[heart-failure-referral]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["anthracycline-cardiotoxicity"] = _anthracycline_v2;
+KNOWLEDGE_BUNDLE["anthracycline 심독성"] = _anthracycline_v2;
+KNOWLEDGE_BUNDLE["doxorubicin cardiomyopathy"] = _anthracycline_v2;
+KNOWLEDGE_BUNDLE["cardio-oncology"] = _anthracycline_v2;
+KNOWLEDGE_BUNDLE["항암 심부전"] = _anthracycline_v2;
+KNOWLEDGE_BUNDLE["CTRCD"] = _anthracycline_v2;
+
+/* ana-interpretation — ANA Titer/Pattern/FP·FN 해석. [CLINICAL] */
+var _ana_interp_v2 = {
+  kind: "topic",
+  keywords: ["ana-interpretation","ANA","antinuclear antibody","ANA titer","ANA pattern","SLE 진단","drug-induced ANA","false positive ANA"],
+  primarySources: [
+    "Aringer M et al. 2019 EULAR/ACR Classification Criteria for SLE. Arthritis Rheumatol 2019;71(9):1400-1412. PMID:31385462, DOI:10.1002/art.40930",
+    "Damoiseaux J et al. ICAP perspective on HEp-2 IIF patterns. Ann Rheum Dis 2019;78(7):879-889. PMID:30862649",
+    "Rubin RL. Drug-induced lupus. Toxicology 2005;209(2):135-147. PMID:15767027"
+  ],
+  sections: {
+    definition: {
+      content: "ANA screening 결과 해석 — Titer·Pattern·FP/FN 감별로 SLE 분류기준·specific Ab panel 진행 여부 결정. ACR/EULAR 2019 entry criterion = ANA ≥1:80 (HEp-2 IIF, sensitivity 97.8%).",
+      sources: []
+    },
+    notes: {
+      content: "### Titer별 해석\n| Titer | 의미 | 행동 |\n|---|---|---|\n| **1:40** | 거의 의미 없음 — FP 매우 흔함 | 명백 자가면역 임상 없으면 추적 X |\n| **1:80** | gray zone (정상 10-15%) | 단독 진단 X · 임상 맥락 있을 때만 specific Ab · FP 검토 |\n| **1:160** | 임상적 의미 threshold | **SLE entry criterion ≥1:80** — 증상 시 specific Ab |\n| **1:320** | 강한 자가면역 (정상 1-3%, SLE 95% 이상) | specific Ab 필수, 증상 없어도 추적 |\n| **1:640** | 거의 항상 자가면역 | 진단 알고리듬 즉시 가동 |\n\n### Pattern과 연관 항체 (ICAP 2019)\n| Pattern | 항체 | 시사 질환 |\n|---|---|---|\n| Homogeneous | dsDNA·histone·nucleosome | SLE·drug-induced lupus·JIA |\n| Speckled | Sm·RNP·Ro/La·Scl-70 | SLE·MCTD·Sjögren·scleroderma (비특이) |\n| Nucleolar | Scl-70·PM-Scl·RNA pol III | scleroderma·다발근염 |\n| Centromere | CENP-A/B | 제한성 scleroderma (CREST) |\n| Nuclear dots | Sp100·PML | **PBC ★** |\n| Nuclear rim | gp210·lamins | PBC·SLE |\n| Cytoplasmic | Jo-1·mitochondria | 다발근염·PBC (AMA) |",
+      sources: []
+    },
+    precaution: {
+      content: "### False Positive ANA\n- 정상 변이: 건강 성인 5-15%가 1:40 양성 (여성·고령↑)\n- 감염: HIV·매독·TB·B/C형 간염·EBV·parvovirus·심내막염·COVID\n- 악성: 림프증식(CLL·lymphoma)·고형암\n- **약물 (drug-induced)**: procainamide (장기 50-90%, lupus 발현 ~20%) · hydralazine · INH · minocycline · phenytoin · carbamazepine · TNFi · methyldopa · chlorpromazine · quinidine — 중단 시 수개월~수년 음전\n- 만성 간/신/폐 질환·자가면역 갑상선·1형 DM·celiac·IBD\n\n> ⚠ Procainamide ANA \"95%\"는 최대치 — 실제 50-90% (Rubin 2005)\n\n### False Negative ANA — 놓치지 말 것\n- Early SLE (전신증상 후 양성화)·cutaneous lupus (DLE/SCLE)·Ro-positive SCLE·면역억제·IgA deficiency",
+      sources: []
+    },
+    referral: {
+      content: "- ANA ≥1:160 + 임상 증상(관절통·발진·다장기) → 류마티스\n- ANA ≥1:320 무증상 → specific Ab + 추적, 류마티스 자문\n- Pattern + specific Ab 일치 — PBC(Sp100·AMA)·CREST(centromere)·scleroderma(Scl-70/RNA pol III) → 해당 전문과\n- Drug-induced lupus 의심 → 약물 중단 + 3-6개월 후 재검\n\n관련: [[lymphocytosis-workup]] · [[ldh-interpretation]] · [[clinical-reasoning]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["ana-interpretation"] = _ana_interp_v2;
+KNOWLEDGE_BUNDLE["ANA"] = _ana_interp_v2;
+KNOWLEDGE_BUNDLE["antinuclear antibody"] = _ana_interp_v2;
+KNOWLEDGE_BUNDLE["ANA titer"] = _ana_interp_v2;
+KNOWLEDGE_BUNDLE["ANA pattern"] = _ana_interp_v2;
+KNOWLEDGE_BUNDLE["drug-induced ANA"] = _ana_interp_v2;
+KNOWLEDGE_BUNDLE["false positive ANA"] = _ana_interp_v2;
+
+/* afp-elevation-workup — AFP 상승 해석·workup. [CLINICAL] */
+var _afp_elev_v2 = {
+  kind: "topic",
+  keywords: ["afp-elevation-workup","AFP","alpha-fetoprotein","AFP 상승","HCC screening","mild AFP elevation","germ cell tumor"],
+  primarySources: [
+    "Wong RJ, Ahmed A, Gish RG. Elevated alpha-fetoprotein: differential diagnosis — HCC and other disorders. Clin Liver Dis 2015;19(2):309-323. PMID:25921665, DOI:10.1016/j.cld.2015.01.005"
+  ],
+  sections: {
+    definition: {
+      content: "AFP 상승 발견 시 감별 — HCC vs benign cause 분기. HCC screening cutoff **>20 ng/mL** (cirrhosis), strongly suggestive **>200**.",
+      sources: []
+    },
+    protocol: {
+      content: "### HCC Screening Cutoff\n| AFP | 해석 |\n|---|---|\n| **>20 ng/mL** | HCC screening cutoff (특히 cirrhosis) |\n| **>200 ng/mL** | HCC strongly suggestive |\n| **>400 ng/mL** | HCC 매우 높음 (영상 + 임상) |\n\n> 단독 진단 X — AASLD/EASL HCC surveillance = 간초음파 + AFP q6mo (cirrhosis·만성 HBV)\n\n### Mild AFP Elevation 5축 Differential (cirrhosis 부재 시)\n1. **임신** — 젊은 여성 first rule-out → **urine/serum hCG**\n2. **비악성 간질환** (가장 흔함) — 만성 HBV/HCV·간경변·**지방간(MASLD/MASH)**·AIH·약물 → HBsAg+anti-HBc·anti-HCV·ANA·AMA·LFT·간초음파\n3. **난소 Germ Cell Tumor** (non-seminomatous, yolk sac) → 질초음파 consult\n4. **흡연** — baseline 약간 ↑\n5. **유전적 baseline** — hereditary persistence of AFP (가족력 확인)\n\n### 외래 1차 평가 패널 (cirrhosis history 없음)\n1. urine hCG (가임기 여성)\n2. LFT — AST·ALT·GGT·T-bil·ALP\n3. 간염 marker — HBsAg·anti-HBs·anti-HBc·anti-HCV\n4. 간초음파 (이상 → APCT/MRI)\n5. CBC + ANA·AMA (AIH 의심 시)\n6. 재검 4-6주 — trend (안정 vs 상승)",
+      sources: []
+    },
+    notes: {
+      content: "### Anchoring 함정\n- 환자 \"스트레스로 빠졌다\" 호소한 체중감소 + 생리불순 + AFP 상승 → 단일 framing 회피\n- AFP는 다중 신호 통합 단서 — 체중감소·생리불순·소화불량 동반 시 systemic 감별 확장\n- [[clinical-reasoning]] anchoring routine 적용",
+      sources: []
+    },
+    referral: {
+      content: "- AFP >200 → 간내과 (HCC 평가)\n- AFP 50-200 + 간초음파 이상 → 간내과\n- 가임기 여성 hCG 양성 → 산부인과\n- hCG 음성 + AFP 지속 ↑ + 난소 mass → 부인종양\n- cause 불명 + AFP 4-6주 지속 ↑ → 간내과\n\n관련: [[clinical-reasoning]] · [[unintentional-weight-loss]] · [[hepatic-cyst]] · [[pancreatic-cystic-lesion]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["afp-elevation-workup"] = _afp_elev_v2;
+KNOWLEDGE_BUNDLE["AFP 상승"] = _afp_elev_v2;
+KNOWLEDGE_BUNDLE["alpha-fetoprotein"] = _afp_elev_v2;
+KNOWLEDGE_BUNDLE["HCC screening"] = _afp_elev_v2;
+KNOWLEDGE_BUNDLE["mild AFP elevation"] = _afp_elev_v2;
+
+/* pancreatic-cystic-lesion — 췌장 낭성 병변 / IPMN. [CLINICAL] */
+var _pancreatic_cyst_v2 = {
+  kind: "disease",
+  keywords: ["pancreatic-cystic-lesion","췌장 낭성 병변","IPMN","pancreatic cyst","CA 19-9","new-onset DM 췌장암"],
+  primarySources: [
+    "Ohtsuka T et al. International evidence-based Kyoto guidelines for IPMN. Pancreatology 2024;24(2):255-270. PMID:38182527, DOI:10.1016/j.pan.2023.12.009"
+  ],
+  sections: {
+    definition: {
+      content: "복부 sono/CT에서 우연 발견된 췌장 낭성 병변. 1차 평가 + Kyoto 2024 worrisome features로 의뢰 결정.",
+      sources: []
+    },
+    exam: {
+      content: "### 1차 평가 패널\n| 검사·항목 | 목적 |\n|---|---|\n| **CA 19-9** (cutoff 37 U/mL) | Tumor marker — trend·surveillance; 황달·간담도 폐쇄 시 FP |\n| **HbA1c·공복혈당** | **New-onset DM = paraneoplastic** — 50세+ 새 DM → 췌장암 **6-8배** |\n| LFT (AST/ALT/GGT/T-bil) | 담관 폐쇄·간 전이 |\n| Amylase·Lipase | 췌장염 동반 |\n| 증상·가족력 | 복통(새로/등 방사)·체중감소·황달·췌장암 가족력 |\n| **소화기내과 의뢰** | **MRCP/MRI** — cyst 형태 평가 |",
+      sources: []
+    },
+    protocol: {
+      content: "### Worrisome Features (Kyoto 2024) — 즉시 소화기내과\n- Cyst size **≥30 mm**\n- MPD **5-9 mm**\n- CA 19-9 상승\n- New-onset DM (50세+)\n- 췌장암 가족력\n- 빠른 cyst 성장 (>5 mm/year)\n\n### High-Risk Stigmata (수술 적응)\n- Enhancing mural nodule **≥5 mm**\n- MPD **≥10 mm**\n- 폐쇄성 황달 + 췌두부 cyst\n\n### Surveillance 참고 (Kyoto 2024)\n| Cyst size | 간격 |\n|---|---|\n| <10 mm | 6mo 후 1회 → 안정 시 q2y |\n| 10-20 mm | q1y |\n| 20-30 mm | q6-12mo |\n| ≥30 mm 또는 worrisome | 즉시 의뢰 / EUS·FNA |\n\n> 일차의료는 의뢰 결정만 — 상세 surveillance는 소화기내과\n\n### New-Onset DM + 50세+ — 췌장암 알람\n- Olmsted County: 50세+ 새 DM 3년 내 PDAC **6-8배**\n- 50세+ 무위험 신규 DM에 췌장 sono/CA19-9 routine X, 단 **체중감소·식욕부진·복통·황달** 동반 시 적극 평가\n- 1촌 췌장암 가족력 또는 BRCA1/2·PALB2·CDKN2A·Lynch → 50세 이전 surveillance",
+      sources: []
+    },
+    referral: {
+      content: "- Cyst ≥30 mm → 소화기내과\n- MPD ≥5 mm 또는 mural nodule → 소화기내과 (HRS는 응급)\n- CA 19-9 ↑ + new-onset DM + 50세+ → 소화기내과\n- 췌장암 가족력 + 임의 cyst → 소화기내과\n- 황달 + 췌두부 cyst → 응급 의뢰\n\n관련: [[hepatic-cyst]] · [[afp-elevation-workup]] · [[diabetes]] · [[unintentional-weight-loss]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["pancreatic-cystic-lesion"] = _pancreatic_cyst_v2;
+KNOWLEDGE_BUNDLE["췌장 낭성 병변"] = _pancreatic_cyst_v2;
+KNOWLEDGE_BUNDLE["IPMN"] = _pancreatic_cyst_v2;
+KNOWLEDGE_BUNDLE["pancreatic cyst"] = _pancreatic_cyst_v2;
+KNOWLEDGE_BUNDLE["CA 19-9"] = _pancreatic_cyst_v2;
+KNOWLEDGE_BUNDLE["new-onset DM 췌장암"] = _pancreatic_cyst_v2;
+
+/* hepatic-cyst — 간낭종. [CLINICAL] */
+var _hepatic_cyst_v2 = {
+  kind: "disease",
+  keywords: ["hepatic-cyst","간낭종","simple liver cyst","polycystic liver disease","PCLD","mucinous cystic neoplasm"],
+  primarySources: [
+    "EASL Clinical Practice Guidelines on management of cystic liver diseases. J Hepatol 2022;77(4):1083-1108. PMID:35728731, DOI:10.1016/j.jhep.2022.06.002"
+  ],
+  sections: {
+    definition: {
+      content: "우연 발견된 간낭종 평가 — Simple vs Complex 감별. Simple은 대부분 양성·평가 불필요. Complex (septation·mural nodule·thick wall·enhancement)는 mucinous cystic neoplasm 가능 → GI 의뢰.",
+      sources: []
+    },
+    protocol: {
+      content: "### 분류\n**Simple Hepatic Cyst** (대부분 — 양성)\n- Anechoic·thin wall·no septation·no enhancement\n- 무증상 + simple feature → 추가 평가·치료 불필요\n- 일반 인구 ~5-10%, 여성·고령↑\n\n**Polycystic Liver Disease (PCLD)** — 5-10% 다발성\n- 가족력 동반 흔함 (autosomal dominant PCLD or ADPKD 연관)\n- **신장 echo 고려** — ADPKD 동반 평가\n- Estrogen (HRT·COC)이 cyst 크기 ↑ — 증상 동반 시 중단 검토\n\n**Complex Cyst** — 의뢰 대상\n- Septation·mural nodule·thick wall·enhancement (CT/MRI)·빠른 크기 변화·동반 출혈/감염 → 소화기내과\n\n### 크기별 f/u (임상 컨벤션)\n> ⚠ EASL 2022는 simple cyst routine size-based surveillance를 **명시 권고 안 함**. 아래는 임상 컨벤션.\n\n| Size | 권고 |\n|---|---|\n| **<4 cm** | surveillance 보통 불필요 — 임상 변화 시만 재평가 |\n| **4-10 cm** | clinical f/u (1-2년 간격) — 크기·증상 모니터링 |\n| **≥10 cm 또는 증상** | 평가·치료 고려 (소화기내과·간담췌외과) |\n\n증상: 복부 팽만·식후 불편·간기능 이상·압박 증상\n\n### 1차 평가 패널\n- **LFT** (AST/ALT/GGT/ALP/T-bil) — 정상이면 simple 가능성↑\n- CBC — 감염·출혈\n- **CA 19-9·CEA** (complex feature 시) — cystic neoplasm 의심\n- **신장 sono** (PCLD/다발 cyst) — ADPKD 동반\n- 가족력 — PCLD/ADPKD\n\n> Echinococcal cyst (포낭충) — 여행력·축산 노출 시 serology",
+      sources: []
+    },
+    referral: {
+      content: "- Complex feature (septation/mural nodule/thick wall/enhancement) → 소화기내과\n- ≥10 cm 또는 증상 → 소화기내과·간담췌외과\n- PCLD + ADPKD 동반 의심 → 신장내과 + 간내과\n- 빠른 크기 변화 (>1 cm/year) → 소화기내과\n- 감염/출혈 → 응급실/간내과\n\n관련: [[pancreatic-cystic-lesion]] · [[afp-elevation-workup]] · [[ckd-monitoring]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["hepatic-cyst"] = _hepatic_cyst_v2;
+KNOWLEDGE_BUNDLE["간낭종"] = _hepatic_cyst_v2;
+KNOWLEDGE_BUNDLE["simple liver cyst"] = _hepatic_cyst_v2;
+KNOWLEDGE_BUNDLE["polycystic liver disease"] = _hepatic_cyst_v2;
+KNOWLEDGE_BUNDLE["PCLD"] = _hepatic_cyst_v2;
+
+/* lymphocytosis-workup — 림프구증가증 평가 (CLL/MBL). [CLINICAL] */
+var _lymphocytosis_v2 = {
+  kind: "topic",
+  keywords: ["lymphocytosis-workup","림프구증가증","lymphocytosis","CLL","chronic lymphocytic leukemia","MBL","monoclonal B-cell lymphocytosis","ALC"],
+  primarySources: [
+    "Hallek M et al. iwCLL guidelines for diagnosis, indications for treatment, response assessment, and supportive management of CLL. Blood 2018;131(25):2745-2760. PMID:29540348, DOI:10.1182/blood-2017-09-806398"
+  ],
+  sections: {
+    definition: {
+      content: "CBC w/diff에서 lymphocyte % 또는 ALC 상승 발견 시 1차 평가. **ALC = WBC × Lymphocyte %**. 정상 1,000-4,000/μL. **Absolute lymphocytosis = ALC >4,000**.",
+      sources: []
+    },
+    exam: {
+      content: "### Relative vs Absolute\n- **Absolute lymphocytosis (ALC >4,000)**: 진짜 증가 → 평가 필요\n- **Relative**: percentage만 ↑, ALC 정상 — neutrophil 감소가 본질 ([[neutropenia-workup]])\n\n### 연령별 first concern\n| 연령 | 우선 감별 |\n|---|---|\n| **<30세** | 거의 항상 감염 (EBV·CMV·HIV·acute viral) |\n| **30-50세** | 감염·자가면역 우선 |\n| **≥65세** | **악성 (CLL·lymphoma) 가능성 ↑** — 평가 필수 |",
+      sources: []
+    },
+    protocol: {
+      content: "### CLL / MBL — 가장 중요한 감별 (특히 65세+)\n> iwCLL 2018\n\n- **CLL 진단**: clonal B-lymphocytes **≥5,000/μL × ≥3개월** + flow cytometry로 clonality 입증 (CD5+CD19+CD20+CD23+)\n- **MBL (Monoclonal B-cell Lymphocytosis)**: clonal B <5,000/μL + cytopenia·장기비대 없음\n  - 일반 인구 ≥40세 ~5%에서 검출\n  - 매년 **1-2%가 CLL로 진행**\n  - 일차의료 surveillance — CBC q6-12mo, 림프절·비장 진찰\n\n> ALC ≥5,000 (특히 65세+) 발견 → **flow cytometry 의뢰**가 핵심\n\n### 감별진단\n**감염**: EBV·CMV·HIV·HBV/HCV·Toxoplasma·**Pertussis**·TB\n**자가면역**: SLE·RA (보통 lymphopenia가 더 흔함)·ALPS (rare)\n**약물·생리적**: Stress (trauma·surgery·strenuous exercise transient)·**흡연**·**Splenectomy 후 평생**·drug-induced (rare)\n**기타**: Hashimoto thyroiditis\n\n### 1차 평가 패널 (ALC >4,000)\n1. **Peripheral blood smear** — atypical lymph (mono)·blast·smudge cell (CLL 단서)\n2. **LDH** — 림프종 surveillance ([[ldh-interpretation]])\n3. 림프절·비장 진찰 — LAP·HSM ([[lymphadenopathy]])\n4. EBV·CMV·HIV serology (특히 <30세 atypical lymph)\n5. **65세+ 또는 ALC >5,000 지속** → **flow cytometry** (혈종내과)",
+      sources: []
+    },
+    referral: {
+      content: "- ALC ≥5,000 지속 (3개월+) → 혈종내과 (flow cytometry)\n- ALC <5,000 + 림프절·비장 증대 → 혈종내과\n- LDH ↑ + B 증상(체중감소·야간발한·발열) → 즉시 혈종내과\n- Smear blast 또는 atypical lymph 다수 → 혈종내과\n- viral cause 없이 ALC ↑ 4-8주 지속 → 혈종내과\n\n관련: [[neutropenia-workup]] · [[lymphadenopathy]] · [[ldh-interpretation]] · [[hematologic-malignancy-uri-screening]] · [[ana-interpretation]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["lymphocytosis-workup"] = _lymphocytosis_v2;
+KNOWLEDGE_BUNDLE["림프구증가증"] = _lymphocytosis_v2;
+KNOWLEDGE_BUNDLE["lymphocytosis"] = _lymphocytosis_v2;
+KNOWLEDGE_BUNDLE["CLL"] = _lymphocytosis_v2;
+KNOWLEDGE_BUNDLE["MBL"] = _lymphocytosis_v2;
+KNOWLEDGE_BUNDLE["monoclonal B-cell lymphocytosis"] = _lymphocytosis_v2;
+
+/* neutropenia-workup — 호중구감소증 평가. [CLINICAL] */
+var _neutropenia_v2 = {
+  kind: "topic",
+  keywords: ["neutropenia-workup","neutropenia","호중구감소증","ANC","benign ethnic neutropenia","BEN","drug-induced neutropenia"],
+  primarySources: [
+    "AAFP Neutropenia: Evaluation and Management in the Primary Care Setting. Am Fam Physician 2025",
+    "Atallah-Yunes SA et al. Benign Ethnic Neutropenia. Br J Haematol 2019;185(4):625-639. PMID:30828799, DOI:10.1111/bjh.15805"
+  ],
+  sections: {
+    definition: {
+      content: "**ANC = WBC × (Neutrophil% + Band%)**. 약물·만성감염·자가면역·MDS·BEN·B12 감별. ANC <500 + 발열 = febrile neutropenia 응급.",
+      sources: []
+    },
+    exam: {
+      content: "### ANC 분류\n| ANC | 분류 |\n|---|---|\n| 1,800-7,000 /μL | 정상 |\n| **1,000-1,500** | Mild |\n| **500-1,000** | Moderate |\n| **<500** | Severe (감염 위험 ↑↑) |",
+      sources: []
+    },
+    protocol: {
+      content: "### 감별진단\n**1. 약물 유발 (가장 흔함)** — OTC·한약 포함 정밀 청취:\n- **NSAIDs**·antibiotics (β-lactam·sulfa·TMP-SMX·vancomycin)\n- **Antithyroid** (MMI·PTU)\n- **PPI**·**Statin** (드물지만 보고)\n- 항암제·항정신병약·anticonvulsant·colchicine\n\n**2. 만성 감염**: HIV·HCV·HBV·EBV·CMV\n\n**3. 자가면역**: **SLE·RA·Sjögren** (흔함)·primary autoimmune neutropenia\n\n**4. MDS** — 65세+ 호발: persistent cytopenia·smear dysplasia·다계열 감소\n\n**5. Benign Ethnic Neutropenia (BEN)**\n- **African·일부 Asian** 인종, **Duffy-null** 표현형 연관\n- 평생 mild (ANC 1,000-1,800), 감염 위험 ↑ 없음\n- 한국인에서도 일부 보고\n- Choosing Wisely — Duffy 표현형 검사 (불필요한 BM biopsy 회피)\n\n**6. 영양 결핍**: **B12·Folate** (MCV ↑ + isolated cytopenia 가능)\n\n**7. 갑상선**: Hashimoto cytopenia 동반·hyperthyroid 치료 시 antithyroid drug\n\n### 1차 평가 패널 (ANC <1,500)\n1. **약물력 정밀** (OTC·한약·최근 1-3mo 신약)\n2. **Peripheral smear** — dysplasia·blast·hypogranulation (MDS)\n3. **CBC trend** (이전 결과 — chronic vs acute)\n4. **B12·Folate** (MCV ↑ 또는 ANC 단독)\n5. HIV·HCV·HBV·EBV serology\n6. **TSH·anti-TPO** (Hashimoto)\n7. **ANA** (자가면역 — [[ana-interpretation]])\n8. 인종/가족력 (BEN → Duffy)\n\n### ANC <500 또는 발열\n- **ANC <500 + T ≥38℃ = febrile neutropenia 응급** → 즉시 응급실/혈종내과\n- 일차의료 자체 항생제 처방 금지",
+      sources: []
+    },
+    referral: {
+      content: "- **ANC <500** → 즉시 혈종내과 (발열 시 응급)\n- **ANC <1,000 지속** (4-8주) + 원인 불명 → 혈종내과\n- Pancytopenia/다계열 감소 → 혈종내과 (MDS·재생불량성빈혈)\n- Smear blast/dysplasia → 혈종내과\n- BEN 가능 + 추가 평가 회피 결정 → 환자 상담 후 routine 추적\n\n관련: [[lymphocytosis-workup]] · [[hematologic-malignancy-uri-screening]] · [[ana-interpretation]] · [[anemia]] · [[vitamin-b12]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["neutropenia-workup"] = _neutropenia_v2;
+KNOWLEDGE_BUNDLE["neutropenia"] = _neutropenia_v2;
+KNOWLEDGE_BUNDLE["호중구감소증"] = _neutropenia_v2;
+KNOWLEDGE_BUNDLE["ANC"] = _neutropenia_v2;
+KNOWLEDGE_BUNDLE["benign ethnic neutropenia"] = _neutropenia_v2;
+KNOWLEDGE_BUNDLE["BEN"] = _neutropenia_v2;
+KNOWLEDGE_BUNDLE["drug-induced neutropenia"] = _neutropenia_v2;
