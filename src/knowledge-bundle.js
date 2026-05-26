@@ -2729,6 +2729,10 @@ var _copd_v2 = {
     referral: {
       content: "- 외래에서 ABE 분류 + 호산구 → 흡입기 처방 결정 가능\n- 의뢰: 진단 불확실, FEV1 <30%, 잦은 입원 악화, 수술 고려, α1-AT 결핍 의심",
       sources: []
+    },
+    exacerbation_primary_care: {
+      content: "### COPD 급성 악화 — 일차의료 관리 (Drug Ther Bull 2024)\n> Moore A et al. Managing COPD exacerbations in primary care. Drug Ther Bull 2024;62(7):102-107. PMID:38950975\n\n**중증도별 처방**\n| 중증도 | 기준 | 처방 |\n|---|---|---|\n| **경증** | SABA 반응, SpO2 정상 | **SABA 단독** |\n| **중등도** | SpO2↓ 또는 호흡곤란 악화 | **항생제 + 단기 경구 prednisolone** |\n| **중증** | 새로운·악화하는 저산소증 | **입원 적응** |\n\n**SpO2 모니터링 — 핵심 원칙**\n- ⚠ \"New or worsening hypoxia is an indication for hospital admission\"\n- 악화 중증도 판단 시 SpO2 측정 **생략 금지**\n- pulse oximeter 환자 안전 경보 인지\n\n**⚠ COPD Rescue Pack — 상시 처방 금지**\n- 항생제·스테로이드 rescue pack 일상 처방 → 항생제·스테로이드 남용 위험\n- 매 외래 \"지난 1년 증상 악화 몇 번?\" 확인 → E군 재분류 기회\n\n**Hospital at Home (가정 입원)**:\n- 중등도 악화 선택 환자 → 안전·효과적 (한국 재택의료 확대 맥락 적용 가능)\n- 원격 모니터링('virtual wards')으로 지원 확대\n\n**악화 = 기저 케어 점검 기회**: 흡입기 기술·금연·예방접종 상태 재확인. COPD action plan(자기관리) 환자 교육.",
+      sources: ["Moore A et al. Managing COPD exacerbations in primary care. Drug Ther Bull 2024;62(7):102-107. PMID:38950975, DOI:10.1136/dtb.2023.000026"]
     }
   },
   uiHooks: null
@@ -4358,6 +4362,10 @@ var _deprescribing_v2 = {
     related_split: {
       content: "### 분할된 응용 영역\n\n- T2DM 감약 (생활습관 의학 통합) → [[diabetes-deprescribing-lifestyle]]  \n  Jacob Y 2026, n=650, 감약률 6.3%, HbA1c -13%, BMI -2.25, 이상반응 0건\n- 치매 항우울제 과처방·정신과 약물 → 낙상 감소 → [[elderly-psychotropic-deprescribing]]  \n  Liang S 2026 (n=232,543, ADRD 항우울제 51.6%) + Yin F 2026 메타분석(고충실도 프로그램 OR 0.61)\n\n(2026-05-12 분할: 본 entry는 STOPP/START 본연·Z-수면제 BI·감약 거부 면담 유지. 응용 영역은 위 entry 참조.)",
       sources: []
+    },
+    antidepressant_slow_tapering: {
+      content: "### 항우울제 감약 — Slow (Hyperbolic) Tapering + CBT (BMJ 2025)\n> Wise J. BMJ news 2025. PMID:41381099\n\n**급격 중단 금지** — 세로토닌 수용체 약리(점유율 비선형)에 기반한 **hyperbolic tapering**:\n- 수개월에 걸친 소량 단계 감량 (예: 50% → 25% → 12.5% → 6.25% ...)\n- 표준 \"매주 25% 감량\" 도식은 후반 단계에 수용체 점유 급락 → 금단 위험\n- CBT 동시 병행 → 재발·금단증상 위험 최소화\n\n**적응증**:\n- 장기 항우울제 사용 (>2년) + 적응증 해소 또는 부작용\n- 고령 STOPP 대상 (Beers/STOPP) 다약제 정리\n- 환자 자발적 감약 의사\n\n**외래 프로토콜**:\n1. 환자에 \"slow tapering = 정상 과정·실패 아님\" 설명\n2. 액상 제형 또는 정제 절반·1/4 활용 (드물게 compounded liquid 필요)\n3. 4–8주 간격 외래 추적 + 금단증상 체크리스트 (DESS — Discontinuation-Emergent Signs and Symptoms)\n4. CBT 단기 코스(8–12회) 동시 병행\n5. 금단증상 발생 시 → 최근 단계로 복귀 + 더 느린 감량\n\n**고령 우선 대상**: TCA·paroxetine·venlafaxine (반감기 짧고 금단 심함)",
+      sources: ["Wise J. Mental health charity recommends slow tapering and CBT for antidepressant withdrawal. BMJ 2025;391:r2353. PMID:41381099, DOI:10.1136/bmj.r2353"]
     }
   },
   uiHooks: null
@@ -7173,6 +7181,10 @@ var _dash_diet_cvd_v2 = {
     precaution: {
       content: "- AFP 2026 POEM 형식 — 기존 문헌 요약. 개별 연구 상세 수치는 원문 메타분석 확인 필요.\n- 한국 식이 환경: DASH 패턴과 한식 원칙(국·찌개 염분, 젓갈류) 간 갈등 존재 — 실천 장벽 상담 필요\n- [출처 미확인 — researcher 검증 권장]: 한국형 DASH 식이 적용 지침·실천 도구",
       sources: []
+    },
+    saturated_fat_risk_stratified: {
+      content: "### 포화지방 감소·변경 — 위험군별 SR (Ann Intern Med 2025)\n> 17 RCT, 66,337명; 저~중등도 확실성\n\n**핵심: 고위험군에서만 임상적 절대 이득**\n| 심혈관 위험군 | 5년간 포화지방 감소 효과 |\n|---|---|\n| **저위험군** | 전사망·CVD 절대 감소 **임계 미달** (<5/1000명 — 임상 무의미) |\n| **고위험군** | 전사망·CVD **유의한 절대 감소** (저~중등도 확실성) |\n\n**포화지방 → PUFA 대체: 비치명적 MI 추가 감소**\n- 비치명적 MI: **RR 0.75** (95% CI 0.58–0.99; 중등도 신뢰도)\n- 단순 포화지방 제한보다 **PUFA 대체**가 효과적\n- PUFA 식품: 등 푸른 생선(고등어·참치)·견과류(호두·아몬드)·식물성 기름(들기름·올리브유)\n\n**외래 식이 상담 개인화**:\n- \"포화지방 줄이세요\" 일률 권고 탈피\n- 저위험군 → 일반 균형식·DASH 강조, 포화지방 강박적 제한 X\n- 고위험군 (ASCVD·DM·고LDL) → 포화지방 → PUFA 적극 대체 권고",
+      sources: ["Steen JP et al. Effect of Interventions Aimed at Reducing or Modifying Saturated Fat Intake on Cholesterol, Mortality, and Major Cardiovascular Events: A Risk Stratified Systematic Review of Randomized Trials. Ann Intern Med 2025;179(2):242-255. PMID:41397264, DOI:10.7326/ANNALS-25-02229"]
     }
   },
   uiHooks: null
@@ -7292,8 +7304,12 @@ var _clinical_communication_v2 = {
       sources: []
     },
     "educational-implications": {
-      content: "### 교육적 함의\n- 기존 OSCE·소통 훈련 커리큘럼 → Glasgow 3과제 통합으로 현대 진료 환경에 맞게 보완 필요\n- 짧은 진료·여러 전문가·디지털 진료 등 새로운 상황에 더 적합한 교육 프레임 제공\n\n### 관련 엔트리\n- [[continuity-of-care]] — SDM 블렌디드 훈련, ICE 소통\n- [[delayed-diagnosis]] — Pattern Disruption (가정 확인·감별 확장)\n- [[persistent-physical-symptoms]] — 증상 타당화·기전 설명\n- [[chronic-pain-integrative]] — ICE 접근 (환자 기대·걱정 탐색)",
+      content: "### 교육적 함의\n- 기존 OSCE·소통 훈련 커리큘럼 → Glasgow 3과제 통합으로 현대 진료 환경에 맞게 보완 필요\n- 짧은 진료·여러 전문가·디지털 진료 등 새로운 상황에 더 적합한 교육 프레임 제공\n\n### 관련 엔트리\n- [[continuity-of-care]] — SDM 블렌디드 훈련, ICE 소통\n- [[delayed-diagnosis]] — Pattern Disruption (가정 확인·감별 확장)\n- [[persistent-physical-symptoms]] — 증상 타당화·기전 설명\n- [[chronic-pain-integrative]] — ICE 접근 (환자 기대·걱정 탐색)\n- [[eol-dyadic-communication]] — 이인조 SDM / EOL 의사소통",
       sources: []
+    },
+    sdm_burden_scoping: {
+      content: "### SDM 부담 — 218개 연구 범위 리뷰 [INSIGHTS]\n> Montori V et al. Patient Educ Couns 2026 — scoping review 218 studies\n\n**SDM 부담을 명시적으로 측정한 연구는 단 한 건도 없음**\n\n| 부담 유형 | 간접 포착 비율 |\n|---|---|\n| **인지적 부담** (정보처리·이해) | **98.6%** |\n| **정서적 부담** (불안·두려움·불확실성) | 95.8% |\n| **사회적 부담** (가족·역할 갈등) | 92.6% |\n\n- 최다 사용 대리 지표: **Decisional Conflict Scale (DCS)** — 71% 연구\n- SDM 전용 부담 측정 도구 현재 없음\n\n**외래 SDM 실천 시사점**:\n- 환자가 SDM 부담 느껴도 의료진 인식 못하는 구조적 문제\n- 고부담 결정 시 인지·정서 부담 명시 탐색: \"어떤 점이 결정하기 어려우세요?\"\n- DCS 항목 스크리닝: \"확실하지 않아서 걱정된다\", \"어떻게 결정해야 할지 모르겠다\"\n- SDM ≠ 정보 제공 — 부담 없이 결정 돕는 것이 본질\n- 인지 부담 최소화: 한 번에 1–2 핵심 옵션·결정 분할(지금 결정+다음 외래 확인)·보호자 동석·결정 메모 제공",
+      sources: ["Montori V et al. The burden of shared decision-making: A scoping review of burden assessments in SDM research. Patient Educ Couns 2026;148:109550. PMID:41713171, DOI:10.1016/j.pec.2026.109550"]
     }
   },
   uiHooks: null
@@ -7926,6 +7942,18 @@ var _acute_bronchitis_v2 = {
     referral: {
       content: "- SpO2 <92% 지속 / CRB-65 ≥2 → 응급/입원\n- 객혈·체중감소·야간발한 → 결핵·악성 의심, 영상 + 호흡기내과\n- 8주 이상 기침 → [[chronic-cough]] workup\n\n관련: [[chronic-cough]] · [[asthma]] · [[COPD]] · [[sinusitis]] · [[pediatric-antibiotic-stewardship]]",
       sources: []
+    },
+    afp_2025_rer: {
+      content: "### AFP 2025 Rapid Evidence Review — 치료 원칙 보강 (Mulhem AFP 2025)\n\n**효과 없는 치료 — 처방 금지** (evidence against use):\n- 진해제 (antitussives·codeine·dextromethorphan)\n- 꿀 (honey)\n- 항히스타민제\n- 항콜린제\n- 경구 NSAID\n- 흡입·경구 스테로이드\n\n**항생제 재확인**:\n- 기침 기간 ≈ **0.5일 단축**, 부작용이 더 큼 → 처방 비권고\n- 환자 설명: \"chest cold(가슴 감기)\" 표현이 ABx 처방률 감소에 효과적\n\n**환자 교육 (기대 기침 기간)**:\n> \"급성 기관지염은 보통 2–3주 지속됩니다. 항생제는 도움이 되지 않고, 특별한 처방 없이도 낫는 병입니다. 2–3주 지나도 지속되거나 갑자기 나빠지면 다시 오세요.\"",
+      sources: ["Mulhem E et al. Acute Bronchitis: Rapid Evidence Review. Am Fam Physician 2025;111(3):214-217. PMID:40106287"]
+    },
+    viral_bacterial_7symptoms: {
+      content: "### 바이러스 vs 세균 LRTI — 7증상 예측 모델 (Ebell 2026) [CLINICAL — 조건부]\n> Ebell M et al. Influenza Other Respir Viruses 2026 — 미국 일차의료·응급 718명, 46종 PCR 코호트; 전향적 검증 필요\n\n| 증상 | 방향 |\n|---|---|\n| 콧물 (coryza) | 바이러스 ↑ |\n| 혼돈 (confusion) | 바이러스 ↑ |\n| 발열 | 바이러스 ↑ |\n| 흉부울혈 (chest congestion) | 바이러스 ↑ |\n| 가래 있음 | 세균 ↑ |\n| 유색 가래 | 세균 ↑ (단독 trigger 금지) |\n| **이중 악화 (double-sickening)** | 세균 ↑ — **신규 단서** (한번 호전 후 재악화) |\n\n> ⚠ 유색 가래는 7증상 중 1개 — 단독 ABx trigger 금지 원칙 유지\n\n**바이러스 가능성 점수**:\n| 위험도 | 바이러스 가능성 | 처치 |\n|---|---|---|\n| 저위험 | 29% | ABx 처방 고려 |\n| 중위험 | 56% | 지연 처방 또는 관찰 |\n| 고위험 | 79% | ABx 보류, 증상 관리 |\n\n**바이러스 고확률 조합**: 콧물 + 발열 + 흉부울혈 → ABx 보류 원칙 강화",
+      sources: ["Ebell M et al. Symptoms Associated With Detection of Viral Versus Bacterial Pathogens in Outpatients With Lower Respiratory Infections. Influenza Other Respir Viruses 2026;20(3):e70229. PMID:41833564, DOI:10.1111/irv.70229"]
+    },
+    grace_score_cap: {
+      content: "### GRACE Score — 외래 CAP 진단 예측 도구 (Ebell 2026)\n> Ebell M et al. Eur J Gen Pract 2026 — EAST-PC 718명 external validation, **AUROCC 0.81 (최고 정확도)**\n\n**GRACE Score 구성 7항목**:\n1. 콧물 **없음** (absence of runny nose)\n2. 호흡곤란 (breathlessness)\n3. 폐 수포음 (crackles)\n4. 호흡음 감소 (diminished vesicular breathing)\n5. 심박수 > 100/min\n6. 체온 > 37.8°C\n7. CRP > 30 mg/L *(없어도 유사 성능)*\n\n**CAP 분류 결과**:\n| 위험도 | 환자 수 | CAP 비율 | 임상 결정 |\n|---|---|---|---|\n| **저위험** | 280명 | **0.7%** | ABx 보류, bronchitis 관리 |\n| 중위험 | 265명 | 5.7% | 임상 판단 + 추적 |\n| **고위험** | 30명 | **33.3%** | CXR + 항생제 (CAP 처치) |\n\n→ CRP 없이도 유사 성능 — 즉시 CRP 불가 외래에서도 적용 가능",
+      sources: ["Ebell M et al. External validation of risk scores and multivariate models for the diagnosis of community-acquired pneumonia in outpatients. Eur J Gen Pract 2026;32(1):2628370. PMID:41719027, DOI:10.1080/13814788.2026.2628370"]
     }
   },
   uiHooks: null
@@ -7964,6 +7992,10 @@ var _chronic_diarrhea_workup_v2 = {
     referral: {
       content: "- Red flag → 소화기내과\n- Anti-tTG 양성 → 소화기내과 (EGD + duodenal biopsy)\n- Fecal calprotectin 상승 → 소화기내과 (colonoscopy)\n- 50세+ 신규 / 가족력 / FOBT+ → colonoscopy\n- IDA + 만성 설사 → 동시 위·대장 내시경 ([[anemia]] workup + GI source)\n\n비고: 만성 설사 ~10-15%가 organic (Burgers 2020). IBS는 *증후군* — Rome IV + organic 배제 후. **빈혈 동반은 IBS와 양립 어려움** — 항상 organic 우선.\n\n환자 교육: \"오래 가는 설사에 빈혈이 함께 있으면 단순 과민성 대장이 아니라 다른 원인을 먼저 찾아야 합니다.\"\n\n관련: [[ibs]] · [[functional-dyspepsia]] · [[anemia]] · [[colorectal-cancer-screening]] · [[clinical-reasoning]]",
       sources: []
+    },
+    jama_2026_update: {
+      content: "### JAMA 2026 종합리뷰 업데이트 (Singh JAMA 2026)\n- **만성 설사 13%가 microscopic colitis** — 육안 정상 colonoscopy 시에도 **random biopsy 필수** (좌·우 결장 모두)\n- 약물 유발 microscopic colitis 흔한 원인: **NSAID·PPI·SSRI·statin** → 중단 시도 우선\n- **IDA + 만성 설사 → 대장내시경 단독 X, 상부내시경 병행 필수** (celiac·소장 출혈 배제)\n- 내시경 적응 (업데이트): GI 출혈·불명 체중감소·**45세+ 신규 발생**·야간 설사·steatorrhea·**IDA**\n- 경험적 치료 (organic 배제 후) **50–80% 개선**:\n  - **Loperamide** 1차 (opiate agonist)\n  - Hyoscyamine·Dicyclomine (경련성 복통 동반 시)\n  - **Ondansetron** (5-HT3 길항제) — 구역 없어도 설사에 효과\n  - 저FODMAP 식이 + 비카페인 음료 ≥8컵·카페인 ≤3컵·알코올/탄산 금지",
+      sources: ["Singh P et al. Chronic, Noninfectious Diarrhea: A Review. JAMA 2026;335(14):1250-1262. PMID:41770539, DOI:10.1001/jama.2026.0872"]
     }
   },
   uiHooks: null
@@ -7974,3 +8006,43 @@ KNOWLEDGE_BUNDLE["chronic diarrhea"] = _chronic_diarrhea_workup_v2;
 KNOWLEDGE_BUNDLE["만성 설사 빈혈"] = _chronic_diarrhea_workup_v2;
 KNOWLEDGE_BUNDLE["fecal calprotectin"] = _chronic_diarrhea_workup_v2;
 KNOWLEDGE_BUNDLE["anti-tTG"] = _chronic_diarrhea_workup_v2;
+
+/* eol-dyadic-communication — 임종기 이인조 죽음 준비도 (5/26 deep-extract 신규). [CLINICAL — 조건부] */
+var _eol_dyadic_v2 = {
+  kind: "disease",
+  parents: ["palliative-pain"],
+  keywords: ["eol-dyadic-communication","이인조 죽음 준비도","dyadic concordance","death preparedness","EOL discussion","prognosis awareness","임종기 가족 동석"],
+  primarySources: [
+    "Wen FH et al. Dyadic-Concordance Death-Preparedness and End-of-Life Discussions in Cancer Patients' Last 6 Months. J Pain Symptom Manage 2026;71(6):796-803. PMID:41802578, DOI:10.1016/j.jpainsymman.2026.03.005"
+  ],
+  sections: {
+    definition: {
+      content: "암 말기 **이인조(환자-가족)의 죽음 준비도 합치(concordance)**가 임종기 의사소통 참여를 예측. 환자 단독 평가만으로는 EOL 의사소통 설계에 불충분 — 양측을 함께 평가.",
+      sources: []
+    },
+    notes: {
+      content: "### 임종기 6개월 의사 침묵 패턴 (Wen JPSM 2026, n=694 dyads)\n| 대화 유형 | 초기 | 임종 직전 |\n|---|---|---|\n| **의사 침묵 (대화 없음)** | **82.8%** | 41.6% |\n| 의사-가족 단독 | 13.8% | **35.7%** |\n| 의사-환자-가족 3자 | 1.7% | 18.1% |\n| 의사-환자 단독 | 1.7% | 4.6% |\n\n→ 의사 침묵이 임종 직전까지 **40%에서 지속**. 가족 단독 대화가 가장 큰 증가 패턴.\n\n### 죽음 준비도 합치 → EOL 대화 참여 AOR\n- 충분 합치(인지+정서): 의사-가족 1.87 / 3자 3.09\n- **인지 합치**(예후 인식 공유): 3자 **3.61** ★ 핵심 출발점\n- 정서 합치는 시간 소요 — 인지 합치 우선",
+      sources: []
+    },
+    protocol: {
+      content: "### EOL 의사소통 개입 원칙 4가지\n1. **이인조 평가 필수** — 환자 단독 평가 불충분, 환자+가족 함께 죽음 준비도 탐색\n2. **인지 합치 먼저** — 양측 예후 인식 공유가 EOL 의사소통 핵심 출발점 (AOR 3.61)\n3. **가족 중심 대화가 현실** — ACP를 환자 단독 상담으로 완결하려는 설계는 현실 괴리 (의사-환자 단독은 4.6%로 희귀)\n4. **조기 개입** — 의사 침묵 40% 지속 → 조기 ACP + 예후 인식 공유 촉진\n\n### 탐색 질문 (환자·가족 함께)\n| 목적 | 질문 |\n|---|---|\n| 인지 탐색 | \"앞으로 어떻게 될 것 같다고 생각하시나요?\" |\n| 정서 탐색 | \"걱정되거나 두려운 것이 있으신가요?\" |\n| 이인조 합치 확인 | \"두 분이 같은 생각이신가요?\" |\n| 불합치 감지 | 환자·보호자 인식 차이 → 합치 촉진 상담 우선 |",
+      sources: []
+    },
+    precaution: {
+      content: "- 타이완 암 코호트 — 한국 완화의료·가족 문화 직접 외삽 시 주의 [CLINICAL — 조건부]\n- 환자-보호자 이인조가 함께 외래 참여 가능한 구조 전제\n- 4개 합치 유형 분류는 연구 설계 — 임상 표준화 도구 아님",
+      sources: []
+    },
+    referral: {
+      content: "- 합치 불가능·심한 갈등 → 완화의료팀 협진\n- 환자/가족 정신과적 위기 → 정신건강의학과·완화의료 사회복지\n\n관련: [[afp-eol-symptom-management]] · [[eol-deprescribing]] · [[goals-of-care-acp]] · [[palliative-care-primary-screening]] · [[palliative-pain]] · [[clinical-communication]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["eol-dyadic-communication"] = _eol_dyadic_v2;
+KNOWLEDGE_BUNDLE["이인조 죽음 준비도"] = _eol_dyadic_v2;
+KNOWLEDGE_BUNDLE["dyadic concordance"] = _eol_dyadic_v2;
+KNOWLEDGE_BUNDLE["death preparedness"] = _eol_dyadic_v2;
+KNOWLEDGE_BUNDLE["EOL discussion"] = _eol_dyadic_v2;
+KNOWLEDGE_BUNDLE["prognosis awareness"] = _eol_dyadic_v2;
+KNOWLEDGE_BUNDLE["임종기 가족 동석"] = _eol_dyadic_v2;
