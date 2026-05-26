@@ -60,8 +60,20 @@ relations: []
 
 ### 치료 시작 기준
 
-- **TSH > 10 mIU/L** (CHF·CV mortality 증가) → 치료
-- TSH 정상~10: 증상·항체·CV 위험 등 개별 평가
+> 근거: Garber JR et al. AACE/ATA 2012 Clinical Practice Guidelines for Hypothyroidism in Adults. Thyroid 2012;22(12):1200-1235. PMID:22954017
+
+| TSH | 증상 동반 | 권고 |
+|---|---|---|
+| **>10** | 무관 | **LT4 시작** (CHF·CV mortality 증가, dyslipidemia·진행 risk) |
+| **4.5-10 (gray zone)** | 동반 | **LT4 trial** 합리적 — 증상·anti-TPO 양성·CV 위험·임신 계획 시 우선 |
+| **4.5-10 (gray zone)** | 무 | 관찰 — 3-6개월 후 재검 (자연 정상화 30~50%) |
+
+- TSH 4.5-10 gray zone에서 LT4 trial 결정 요소: 증상(피로·체중·우울·근육통)·anti-TPO 양성·연령(70+ 신중)·CV risk·임신 계획
+- 70세+ 무증상 gray zone은 일반적으로 관찰 (CV·골절 risk·과치료 우려)
+- 임신부·임신 계획: TSH >2.5 trimester-specific cutoff 적용 (별도 가이드)
+
+> ⚠ raw note의 "TSH 7" 분기 cutoff는 일부 EU/UK 알고리듬 변형 — ATA 본문은 4.5-10 gray zone으로 통일.
+
 
 ### 약물 — Levothyroxine (LT4)
 
@@ -105,4 +117,5 @@ relations: []
 
 - ATA 2016 Hyperthyroidism Guidelines (PMID 27521067)
 - ATA 2014 Hypothyroidism Treatment Guidelines (PMC4267409)
+- AACE/ATA 2012 Subclinical Hypothyroidism (PMID:22954017)
 - KTA 갑상선기능항진증 진단 및 치료

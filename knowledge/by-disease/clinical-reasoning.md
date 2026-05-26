@@ -59,6 +59,16 @@ relations: []
 2. **설명 안 되는 1개 데이터** → 무시하지 말고 별개 가설 고려
 3. **첫 인상이 굳어지는 시점** (carry-over from previous visit) → 의식적으로 재평가
 
+### 사례 — "환자가 원인을 말해도 동반 질환을 고려" [INSIGHTS — by 미르 gaps 2026-05-26]
+
+- **케이스**: 스트레스 동반 체중감소 + 생리불순 + AFP 상승 호소. 환자가 "스트레스 때문에 빠졌다"라고 말함.
+- **anchoring 함정**: 환자가 제공한 원인(스트레스)에 가설을 고정 → 체중감소·생리불순·AFP 상승을 단일 framing(스트레스성)으로 설명하려 시도 → "더 중요한 amplifier"(갑상선·종양·당뇨·IBD·정신과 EDD·만성 감염·임신·간질환·난소 GCT) framing을 못 바꿈
+- **대응**:
+  - 체중감소 → Thyroid·종양·DM·IBD·EDD/Depression·TB/HIV 감별
+  - 생리불순 → Prolactin·LH·FSH·Estradiol·urine HCG·LMP/양/기간 (산부인과 evaluation 필요성 판단)
+  - AFP 상승 → [[afp-elevation-workup]] 5축 differential 가동 (임신·간질환·GCT·흡연·유전적)
+- **routine**: 환자가 호소 원인을 단정해도 lab/증상 cluster가 그 단일 framing으로 모두 설명 안 되면 → 별개 가설 강제 평가. "환자 발언 framing"에 anchoring하지 말 것.
+
 ---
 
 ## 비고 (notes)
