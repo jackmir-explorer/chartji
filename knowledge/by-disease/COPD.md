@@ -109,7 +109,48 @@ E군 + 호산구 <100 → ICS 회피 (효과↓ + 폐렴 위험↑)
 
 ---
 
+## COPD 급성 악화 — 일차의료 관리 (Drug Ther Bull 2024) [CLINICAL]
+
+> [출처: Moore A et al. Managing COPD exacerbations in primary care. Drug Ther Bull. 2024;62(7):102-107. PMID:38950975, DOI:10.1136/dtb.2023.000026]
+
+### 악화 중증도별 처방
+
+| 중증도 | 기준 | 처방 |
+|---|---|---|
+| **경증** | SABA 반응, SpO2 정상 | **단기 작용 기관지확장제 (SABA)** 단독 |
+| **중등도** | SpO2↓ 또는 호흡곤란 악화 | **항생제 + 단기 경구 prednisolone** |
+| **중증** | 새로운·악화하는 저산소증 | **입원 적응** |
+
+### SpO2 모니터링 — 핵심 원칙 [CLINICAL]
+
+> ⚠ **"New or worsening hypoxia is an indication for hospital admission"**
+
+- **SpO2 모니터링은 악화 중증도 판단의 핵심** — 생략 금지
+- 새로 생기거나 악화하는 저산소증 → 즉시 입원 의뢰
+- 산소 포화도 측정기(pulse oximeter) 환자 안전 경보 인지
+
+### Hospital at Home (가정 입원) [CLINICAL]
+
+- 중등도 악화 선택 환자: Hospital at home → **안전하고 효과적**
+- 원격 모니터링('virtual wards')으로 지원 확대 추세
+- 한국 재택의료 확대 맥락에서 적용 가능성
+
+### ⚠ COPD Rescue Pack — 상시 처방 금지
+
+> **Rescue packs on repeat prescription are NOT recommended**
+- 항생제·스테로이드 rescue pack 일상 처방 → 항생제·스테로이드 남용 위험
+
+### 장기 관리 통합 포인트
+
+- **악화 빈도 정기 확인** — 매 외래: "지난 1년 증상 악화가 몇 번 있었나요?"
+- 악화 → ABE 분류 재평가 기회 (E군 해당 시 LABA+LAMA±ICS 조정)
+- **자기관리 계획 (COPD action plan)** — 증상 악화 시 환자 스스로 대응 교육
+- 급성 악화 = 기저 케어 점검 기회: 흡입기 기술·금연·예방접종 상태 재확인
+
+---
+
 ## 관련 엔트리
 
 - [[adult-vaccination-summary]] — COPD 환자 예방접종 권고
 - [[smoking-cessation]] — COPD 최우선 중재
+- [[acute-bronchitis]] — LRTI 감별, SpO2 vital 원칙

@@ -82,9 +82,47 @@ relations: []
 
 ---
 
+## SDM 부담 — 218개 연구 범위 리뷰 [INSIGHTS]
+
+> [출처: Montori V et al. The burden of shared decision-making: A scoping review of burden assessments in SDM research. Patient Educ Couns. 2026;147:109550. PMID:41713171, DOI:10.1016/j.pec.2026.109550]
+> 범위 리뷰(scoping review), 218개 연구
+
+### 핵심 발견 — SDM 부담 측정 연구 전무
+
+**SDM 부담을 명시적 목적으로 측정한 연구는 단 한 건도 없음**
+
+| 부담 유형 | 간접 포착 비율 |
+|---|---|
+| **인지적 부담** (정보처리·이해) | **98.6%** 연구에서 간접 포착 |
+| **정서적 부담** (불안·두려움·불확실성) | 95.8% |
+| **사회적 부담** (가족·역할 갈등) | 92.6% |
+
+- 가장 많이 사용된 대리 지표: **Decisional Conflict Scale (DCS)** — 71% 연구
+- SDM 전용 부담 측정 도구 현재 없음
+
+### 외래 SDM 실천 시사점
+
+**환자가 SDM 부담을 느껴도 의료진이 인식 못하는 구조적 문제 확인:**
+
+1. **고부담 결정 시 인지·정서 부담 명시 탐색**
+   - 항암·수술·장기 약물 결정 전: "어떤 점이 결정하기 어려우세요?" 루틴 추가
+   - DCS 주요 항목 스크리닝: "확실하지 않아서 걱정된다", "어떻게 결정해야 할지 모르겠다"
+
+2. **SDM ≠ 정보 제공** — 부담 없이 결정할 수 있게 돕는 것이 SDM 본질
+   - 환자가 침묵하거나 빨리 동의해도 부담이 없는 것이 아님
+   - "선택하기 어려운 부분이 있으신가요?" 추가 탐색 필요
+
+3. **인지 부담 최소화 전략**
+   - 한 번에 1–2가지 핵심 옵션만 제시
+   - 결정 분할: 지금 결정 + 다음 외래 확인 구조
+   - 보호자 동석 + 결정 메모 제공
+
+---
+
 ## 관련 엔트리
 
 - [[continuity-of-care]] — SDM 블렌디드 훈련, ICE 소통
 - [[delayed-diagnosis]] — Pattern Disruption (가정 확인·감별 확장)
 - [[persistent-physical-symptoms]] — 증상 타당화·기전 설명
 - [[chronic-pain-integrative]] — ICE 접근 (환자 기대·걱정 탐색)
+- [[eol-dyadic-communication]] — 이인조 SDM / EOL 의사소통

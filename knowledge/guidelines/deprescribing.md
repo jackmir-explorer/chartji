@@ -160,6 +160,47 @@ relations: [[[diabetes-deprescribing-lifestyle]], [[elderly-psychotropic-depresc
 
 ---
 
+## 항우울제 Deprescribing — 느린 점감 + 심리치료 병행 [CLINICAL — 조건부]
+
+> [출처: Wise J. Antidepressant deprescribing: Slow tapering plus therapy is best way to come off medication, say researchers. BMJ. 2025;391:r2608. PMID:41381099, DOI:10.1136/bmj.r2608]
+> BMJ 뉴스 기사 — 연구진 권고 보고; 원 연구논문 전문 미확인 [초록 기반 — 전문 미확인]
+
+### 핵심 권고 — 항우울제 중단 최선 방법
+
+| 방법 | 결과 |
+|---|---|
+| 급격 중단 (abrupt) | 금단증상(불안·어지럼·전기충격감) + 재발 위험 ↑ |
+| 빠른 감량 (fast taper) | 급격 중단보다 낫지만 위험 여전 |
+| **느린 점감 (slow hyperbolic tapering)** | **금단증상·재발 위험 최소화** |
+| 심리치료 병행 (CBT·지지 상담) | 중단 성공률 ↑ |
+
+### Hyperbolic Tapering 원리
+
+- 세로토닌 수용체 점유는 용량의 **대수(log)적 비례** — 소량 단계에서도 조금씩 감량 필수
+- 예: 20mg→10mg 감량보다 2mg→1mg 감량이 수용체 점유 변화 폭이 더 큼
+- 임상 적용: **수개월에 걸쳐 소량 단계적 감량** (수주 감량 금지)
+
+### 외래 적용 프로토콜
+
+1. **감량 전 안정 기간 확인** — 우울 증상 재발 없이 ≥6개월 안정 유지
+2. **심리치료 병행 시작** — CBT 또는 지지 상담 (감량 개시 전 또는 동시)
+3. **점진적 감량 계획** — 수개월 일정; SSRI 저용량 정제 또는 액체형 활용
+4. **금단증상 모니터링** — 불안·어지럼·전기충격감·GI 증상; 증상 시 감량 속도 늦추기
+5. **"감량 실패"는 없음** — 속도 재조정 옵션; 급재처방보다 속도 조절 우선
+
+### 해당 환자군
+
+- 우울·불안으로 SSRI/SNRI 복용 중 → 6개월+ 안정 후 중단 검토
+- STOPP 대상 항우울제 (≥65세 항콜린 부담·낙상 위험 재검토 대상)
+- 관련: [[elderly-psychotropic-deprescribing]] — 노인 항우울제 감약 + 낙상 예방
+
+### 한국 외래 변환 시 확인
+
+- SSRI 저용량 분할·액체형 처방 가용성 [출처 미확인 — researcher 검증 권장]
+- CBT 급여 현황 [출처 미확인 — researcher 검증 권장]
+
+---
+
 > 정신과 약물(BZD·수면제·항정신병약) 감약 효과·낙상 감소·프로토콜은 [[elderly-psychotropic-deprescribing]] 참조.
 > T2DM 감약 실사 근거는 [[diabetes-deprescribing-lifestyle]] 참조.
 

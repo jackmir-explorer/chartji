@@ -106,10 +106,94 @@ relations: []
 
 ---
 
+## AFP 2025 Rapid Evidence Review — 치료 원칙 보강 (Mulhem 2025) [CLINICAL]
+
+> [출처: Mulhem E et al. Acute Bronchitis: Rapid Evidence Review. Am Fam Physician. 2025;111(3):214-217. PMID:40106287]
+> AFP 공식 Rapid Evidence Review
+
+### 효과 없는 치료 — 처방 금지
+
+**근거 없는 치료 (evidence against use):**
+- 진해제 (antitussives·codeine·dextromethorphan)
+- 꿀 (honey)
+- 항히스타민제
+- 항콜린제
+- 경구 NSAID
+- 흡입·경구 스테로이드
+
+### 항생제 — 재확인
+
+- 기침 기간 ≈ **0.5일 단축**, 부작용이 더 큼 → **처방 비권고**
+- 환자에게 설명: "chest cold(가슴 감기)"로 표현하는 전략이 ABx 처방률 감소에 효과적
+
+### 환자 교육 (기대 기침 기간)
+
+> "급성 기관지염(감기로 인한 기침)은 보통 2–3주 지속됩니다. 항생제는 이 기침에 도움이 되지 않고, 특별한 처방 없이도 낫는 병입니다. 2–3주 지나도 지속되거나 갑자기 나빠지면 다시 오세요."
+
+---
+
+## 바이러스 vs 세균 LRTI — 7증상 예측 모델 (Ebell 2026) [CLINICAL — 조건부]
+
+> [출처: Ebell M et al. Symptoms Associated With Detection of Viral Versus Bacterial Pathogens in Outpatients With Lower Respiratory Infections. Influenza Other Respir Viruses. 2026;20(3):e70229. PMID:41833564, DOI:10.1111/irv.70229]
+> 미국 일차의료·응급 718명, 46종 PCR 확인 코호트; 전향적 검증 필요 [CLINICAL — 조건부]
+
+### 7증상 예측 모델
+
+| 증상 | 방향 |
+|---|---|
+| 콧물 (coryza) | 바이러스 ↑ |
+| 혼돈 (confusion) | 바이러스 ↑ |
+| 발열 | 바이러스 ↑ |
+| 흉부울혈 (chest congestion) | 바이러스 ↑ |
+| 가래 있음 (presence of sputum) | 세균 ↑ |
+| 유색 가래 (colored sputum) | 세균 ↑ (단독 trigger 금지) |
+| **이중 악화 (double-sickening)** | 세균 ↑ — **신규 단서** (한번 호전 후 재악화) |
+
+> ⚠ 유색 가래는 세균 지표이나 7증상 중 1개 — **단독 ABx trigger 금지** 원칙 유지
+
+### 바이러스 가능성 점수
+
+| 위험도 | 바이러스 가능성 | 처치 방향 |
+|---|---|---|
+| 저위험 | 29% | ABx 처방 고려 |
+| 중위험 | 56% | 지연 처방 또는 관찰 |
+| 고위험 | 79% | ABx 보류, 증상 관리 |
+
+**바이러스 고확률군**: 콧물 + 발열 + 흉부울혈 조합 → ABx 보류 원칙 강화
+
+---
+
+## GRACE Score — 외래 CAP 진단 예측 도구 검증 (Ebell 2026) [CLINICAL]
+
+> [출처: Ebell M et al. External validation of risk scores and multivariate models for the diagnosis of community-acquired pneumonia in outpatients. Eur J Gen Pract. 2026;32(1):2628370. PMID:41719027, DOI:10.1080/13814788.2026.2628370]
+> EAST-PC 연구 718명, 미국 일차의료·응급 external validation; AUROCC 0.81 (최고 정확도)
+
+### GRACE Score 구성 7항목
+
+1. 콧물 **없음** (absence of runny nose)
+2. 호흡곤란 (breathlessness)
+3. 폐 수포음 (crackles)
+4. 호흡음 감소 (diminished vesicular breathing)
+5. 심박수 > 100/min
+6. 체온 > 37.8°C
+7. CRP > 30 mg/L *(없어도 유사 성능)*
+
+### GRACE CAP 분류 결과
+
+| 위험도 | 환자 수 | CAP 비율 | 임상 결정 |
+|---|---|---|---|
+| **저위험** | 280명 | **0.7%** | ABx 보류, bronchitis 관리 |
+| 중위험 | 265명 | 5.7% | 임상 판단 + 추적 계획 |
+| **고위험** | 30명 | **33.3%** | CXR + 항생제 (CAP 처치) |
+
+> CRP 없이도 유사 성능 — 외래 즉시 CRP 검사 불가 시에도 적용 가능
+
+---
+
 ## 관련
 
 - [[chronic-cough]] — 8주 이상 지속 시
 - [[asthma]] — wheeze·야간 증상
-- [[COPD]] — 동반 시 항생제 검토
+- [[COPD]] — 동반 시 항생제 검토; COPD 악화 처방 프로토콜
 - [[sinusitis]] — UACS 동반
 - [[pediatric-antibiotic-stewardship]] — stewardship 원칙
