@@ -95,7 +95,7 @@ VZV 재활성화로 안면신경(VII) 슬상신경절(geniculate ganglion) 침�
 
 ## 항바이러스 + 스테로이드 병용 근거 — 최신 메타분석 [CLINICAL]
 
-> Lin YY et al. *Auris Nasus Larynx* 2024. PMID:[38520982](https://pubmed.ncbi.nlm.nih.gov/38520982/) — Antiviral treatment for Ramsay Hunt syndrome: systematic review and meta-analysis (2 RCT + 7 cohort, n=474)
+> Fujiwara T, Uraguchi K. *Auris Nasus Larynx* 2024;51(3):488-491. PMID:[38520982](https://pubmed.ncbi.nlm.nih.gov/38520982/), DOI:10.1016/j.anl.2024.01.008 — Antiviral treatment for Ramsay Hunt syndrome: systematic review and meta-analysis (2 RCT + 7 cohort, n=474)
 
 ### 결과 (비회복률, odds ratio)
 - 항바이러스 vs 비투여: OR 0.68 (95% CI 0.37-1.27, p=0.22) — 통계적 유의 X
@@ -108,6 +108,42 @@ VZV 재활성화로 안면신경(VII) 슬상신경절(geniculate ganglion) 침�
 - 그럼에도 임상 표준은 **72시간 이내 병용** — 자연 경과의 회복률 한계 + 안전성·접근성 + 후유증 부담
 - Bell's palsy는 corticosteroid 단독이 우선 (Sullivan FM NEJM 2007 PMID:17942874 — antivirals 미효과) — Ramsay Hunt는 VZV 신경친화성이 강해 antiviral 합당
 - **황반변성 환자 등 스테로이드 보류 결정 시 outcome 영향 명시** — 안과 협진 후 risk-benefit 균형, antiviral 단독 회복률은 낮음 ([[macular-degeneration-steroid-caution]])
+
+---
+
+## Bell's palsy vs RHS 관리 분기 최신 업데이트 [CLINICAL]
+
+> [출처: Kim SH, Kwak MY. J Audiol Otol. 2025;29(1):1-7. PMID:39916394, DOI:10.7874/jao.2024.00731]
+> [초록 기반 — 전문 미확인]
+
+### 두 질환 비교
+
+| 항목 | Bell's palsy | Ramsay Hunt Syndrome |
+|---|---|---|
+| 원인 | HSV-1 재활성화 / 허혈 / 염증 | VZV 재활성화 — 슬상신경절 |
+| 수포(vesicle) | 없음 | 외이도·이개·구강점막 |
+| 이통(otalgia) | 경미 | 심한 otalgia (선행 가능) |
+| 전정·청각 증상 | 없음 | 어지럼·청력저하·이명 가능 |
+| 연간 발생률 | 20~30/100,000 | 더 낮음 |
+| 예후 | >80% 회복 | ~60% 미만 (지연 치료 시 더 나쁨) |
+
+### 치료 원칙 (2025 업데이트)
+
+**Bell's palsy:**
+- **경구 스테로이드** = cornerstone (72시간 이내 시작 시 효과 최대)
+- 항바이러스제 단독 추가 시 유의미한 회복률 개선 미입증 (Sullivan NEJM 2007 비교)
+- 중증도 무관하게 스테로이드가 primary treatment
+
+**Ramsay Hunt Syndrome:**
+- **스테로이드 + 항바이러스 병용** = 권고 (severe RHS·VZV 강력 의심 시)
+- RCT 근거 제한적(2개 RCT만, 통계적 유의성 미충족) — 임상적 판단 기반
+- Bell's palsy에 비해 고질의 증거 부족하나 VZV 신경친화성·중증 후유증 위험으로 병용 유지
+- **후유증 예방**: 영구 안면마비·청력저하·이명·현기증 가능 — 조기 치료가 핵심
+
+### 골든타임 적용
+
+- **72시간 이내** 치료 시작 = Bell's palsy·RHS 모두 예후 결정 핵심
+- RHS는 vesicle 출현 전 otalgia로 제시 가능 → 수포 기다리지 말고 임상 의심 시 경험적 치료 시작 고려
 
 ---
 

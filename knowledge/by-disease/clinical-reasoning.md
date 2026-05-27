@@ -79,6 +79,78 @@ relations: []
 
 ---
 
+## 진단추론 교육 전략 — 구조화 리뷰 [INSIGHTS]
+
+> [출처: Petersen LA et al. AACN Adv Crit Care. 2025;36(2):131-142. PMID:40445787, DOI:10.4037/aacnacc2025341]
+> [초록 기반 — 전문 미확인]
+
+진단추론 교육은 지식 개발·감별진단·성찰 세 축을 의도적으로 통합해야 진단 오류를 줄인다.
+
+### 교육 도구별 목표
+
+| 도구 | 훈련 목적 | 실전 적용 |
+|---|---|---|
+| **Illness scripting** | 질환별 패턴을 인과 schema로 저장 | "이 증상 cluster → 이 질환" 패턴 빠른 인출 |
+| **Problem representation** | 환자 정보를 추상적 1문장으로 변환 | 주호소·경과·위험인자를 압축 → 감별 생성 |
+| **Differential grids/lists** | 감별 우선순위 시각화 | 증상별 가능 진단 matrix — 우선순위 부여 훈련 |
+| **Self-explanation** | 추론 과정 소리 내어 설명 | 인지 편향 자가 탐지 — 설명 안 되는 지점이 blind spot |
+| **Structured reflection** | 사례 후 체계적 회고 | 확증 편향·anchoring 사후 교정 |
+
+### Dual-process theory 교육 연결
+
+- **System 1** (빠른 직관 인식) ↔ **System 2** (느린 분석 추론) 전환 훈련이 핵심
+- 임상 압박 하에서 System 1만 작동 → anchoring·premature closure 위험
+- 교육 목표: System 2를 의식적으로 개입시키는 습관 구조화
+
+---
+
+## Pretest Probability 실증 — 연령보정 D-dimer DVT 배제 [CLINICAL]
+
+> [출처: Le Gal G et al. JAMA. 2026;335(5):416-424. PMID:41490105, DOI:10.1001/jama.2025.21561]
+> 다국가(벨기에·캐나다·프랑스·스위스) 전향적 관리 연구, 27개 센터, n=3,205
+
+**핵심 메시지:** 동일 D-dimer 수치도 사전확률(Wells score)과 함께 해석하면 불필요한 영상검사를 줄이면서 안전하게 DVT를 배제할 수 있다.
+
+### 연구 설계
+
+- **사전확률** Wells score (unlikely/non-high) → **D-dimer** (종래 컷오프 500 μg/L vs 연령보정 컷오프: 50세 이상에서 나이×10 μg/L) → **압박 초음파**
+- Primary outcome: D-dimer 양성(종래 기준)이지만 연령보정 컷오프 이하 환자의 3개월 VTE 발생률
+
+### 결과
+
+| 지표 | 수치 |
+|---|---|
+| DVT 유병률 | 14% (3,205명 중) |
+| 종래 컷오프(<500 μg/L) 음성 환자 | 24.5% (531/2,169) |
+| 연령보정으로 추가 배제 가능 환자 | **+7.4%** (161명) |
+| 연령보정 구간에서 VTE 발생 | **0%** (95% CI 0-2.3%) |
+| 75세 이상 — 기존 음성률 | 8.7% (33/379) |
+| 75세 이상 — 연령보정 음성률 | **26.1%** (99/379) |
+
+### 진단추론 적용 — pretest probability 실증
+
+- **같은 lab 값(D-dimer)도 사전확률이 낮아야 유효 배제 도구** → lab 결과만으로 진단·배제 불가
+- Wells 점수 = 사전확률을 수치화한 프로토타입. Lab보다 먼저 임상 평가
+- 고령(75+)에서 절대 D-dimer가 높아도 연령보정 컷오프 적용 시 상당수 영상 없이 배제 가능
+- **Lab-driven thinking 대척점**: 임상 pretest probability 먼저 → lab은 그 가설을 조정하는 도구
+
+### 처방/치료 관련 — DVT 배제 알고리즘
+
+```
+DVT 의심 환자
+  ↓
+Wells score (unlikely ≤1 / non-high <3)
+  ↓
+D-dimer 측정
+  ├── 종래 컷오프(<500) → DVT 배제 OK
+  └── 종래 이상 but ≤ 나이×10 (50세+) → 연령보정 배제 가능
+        → 3개월 VTE 위험 0% 검증됨
+        → 압박 초음파 생략 가능
+  → Wells high/likely 또는 D-dimer > 연령보정 컷오프 → 압박 초음파 진행
+```
+
+---
+
 ## 관련
 
 - [[elderly-nonspecific-symptoms]] — 고령 비특이증상에서 anchoring 특히 위험

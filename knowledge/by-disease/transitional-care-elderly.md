@@ -1,0 +1,123 @@
+# 노인 병원→가정 전환기 돌봄 (Transitional Care for Older Adults)
+
+keywords: 전환기돌봄, transitional care, hospital-to-home, 퇴원 계획, discharge planning, 재입원, readmission, 기능 저하, post-hospitalization syndrome, 노인, 65세, 보호자 참여
+
+tags: [CLINICAL — 조건부]
+
+version: (미정)
+supersedes: (미정)
+freshness.primarySourceYear: 2025
+applicability: 65세 이상 입원 후 가정으로 퇴원하는 노인
+
+relations: ["by-disease/frailty", "by-disease/elderly-nonspecific-symptoms"]
+
+> primarySources (Tier 1):
+> - Steiner LM, Osmancevic S, Hahn S, Bonetti L, Zwakhalen S. Eur J Ageing. 2025;22(1):58. PMID:41186737, DOI:10.1007/s10433-025-00890-w
+>   (SR of 25 RCTs, n=17,542, age ≥65. 2013~2024 PubMed/CINAHL/Scopus 검색)
+
+---
+
+## 정의 / 범위 (definition)
+
+병원→가정 전환기(hospital-to-home transition)는 노인에서 기능 저하·재입원·삶의 질 저하 고위험 시기. Krumholz 2013 *post-hospitalization syndrome* — deconditioning·식욕감소·인지 변화·면역 기능 저하가 복합적으로 작용.
+
+---
+
+## 효과적 중재 핵심 요소 [CLINICAL — 조건부]
+
+> 25개 RCT, n=17,542 SR 요약 (Steiner et al. Eur J Ageing 2025)
+
+### 근거 있는 중재 구성요소
+
+| 구성요소 | 근거 |
+|---|---|
+| **구조화된 퇴원 계획** | 기능·재입원·응급실 방문 개선과 연관 |
+| **조기 퇴원 후 추적 방문** | 성공의 핵심 활성인자 — 빠를수록 효과 |
+| **보호자(가족) 참여** | 기능·기분·영양 개선에 독립적 기여 |
+| **다직종 팀 접근** | 간호·물리치료·사회복지 통합 |
+| **가정 기반 지원** | 보행·ADL 회복 보조 |
+
+### 개선된 결과 지표
+
+- **기능 상태(functional status)** — ADL·보행
+- **기분(mood)** — 우울 감소
+- **영양 상태** — 영양섭취·체중 개선
+- **단기 재입원·응급실 방문** — 소폭 감소
+
+### 근거 한계
+
+- 중재 이질성 큼 — 표준화된 중재 구성 없음
+- **6개월 이상 장기 효과 데이터 부족** — 지속 효과는 불확실
+- 사망률·부작용에 대한 효과 미입증
+
+---
+
+## 외래 적용 — 일차의료 역할 (protocol)
+
+### 퇴원 후 첫 방문 (조기 추적)
+
+- **퇴원 후 7일 이내** 추적 방문 권장 (연구들의 공통 활성인자)
+- 확인 항목:
+  - 복약 변경 사항 확인·순응도 평가
+  - 기능·ADL 변화 (입원 전 대비 저하 여부)
+  - 식욕·영양 상태
+  - 인지·기분 (CAM·GDS 단문)
+  - 낙상 위험 재평가
+
+### 보호자 참여 강화 포인트
+
+- 퇴원 교육 시 **보호자 직접 포함** (전화가 아닌 대면)
+- 가정 내 risk 제거 checklist 제공 (낙상·복약 혼동 등)
+- 보호자 스트레스 평가 + 지역사회 자원 연결
+
+### 외래 결정 분기
+
+```
+입원 후 퇴원 노인 환자 (65세+)
+  ↓
+퇴원 7일 이내 추적 방문 예약
+  ↓
+기능·복약·영양·인지·기분 확인
+  ├── 기능 현저 저하 → 물리치료·재활의학 의뢰
+  ├── 영양 문제 → 영양사·방문 식사 지원 연결
+  ├── 인지 악화 → [[geriatric-assessment-4ms]] 적용
+  └── 사회적 고립 → 지역사회 돌봄 서비스 연결
+```
+
+---
+
+## 주의사항 (precaution)
+
+- 단기 효과는 있으나 6개월+ 장기 유지 불확실 — 지속 모니터링 계획 수립 필요
+- 이 SR은 유럽·북미 RCT 기반 — 한국 가정의학과 맥락(방문 빈도·보험·자원)에 직접 외삽 주의
+- 독거 노인·가족 없는 경우 보호자 참여 전략 대안 필요
+
+---
+
+## 병태생리 (notes) — Post-hospitalization Syndrome
+
+> Krumholz HM. NEJM 2013. PMID:23301730 — (cross-link: [[elderly-nonspecific-symptoms]])
+
+입원 자체가 야기하는 생리적·심리적 스트레스:
+- **Deconditioning**: 침상 안정 → 근력·균형 급격 저하
+- **식욕 저하**: 스트레스·약물·환경 변화
+- **인지 변화**: 수면 교란·환경 박탈·약물
+- **면역 기능 변화**: 감염 취약성↑
+- **누적 피로**: 심리적 소진 + 신체 피로
+
+---
+
+## 의뢰 기준 (referral)
+
+- ADL 현저 저하·재입원 위험 고 → 가정 방문 간호·재활의학
+- 사회적 지지 부족 + 고위험 노인 → 사회복지 의뢰·지역사회 돌봄 연계
+- 인지 기능 악화 → 신경과·정신건강의학과 협진
+
+---
+
+## 관련
+
+- [[frailty]] — 허약 노인에서 전환기 위험 배가
+- [[elderly-nonspecific-symptoms]] — 퇴원 후 비특이증상의 감별
+- [[geriatric-assessment-4ms]] — 4M 기반 노인 평가
+- [[eol-deprescribing]] — 퇴원 후 복약 정리 기회
