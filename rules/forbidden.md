@@ -28,7 +28,7 @@
 - Boss 승인서만으로 Builder 즉시 실행 금지 — 반드시 Designer 설계서 → 미르 승인 순서 준수
 - **세션 종료 시 main 반영 체크 생략 금지** — 이번 세션 변경이 (a) 다음 세션에서 참조 필요 / (b) routine·trigger·CI 등 자동 시스템 동작에 영향 / (c) 다른 브랜치·외부 시스템 의존 대상 인 경우 **Claude가 직접 main에 머지**하고 원격 푸시. 커밋·푸시만으로 "완료"라 보고하지 말 것. 체크리스트 상세: `CLAUDE.md` 「세션 종료 체크리스트」 참조.
 - **PR 생성 금지 (2026-04-20 미르 지시)** — 미르가 명시적으로 "PR 만들어"라고 지시하지 않는 한 PR 생성 금지. 대신 Claude가 main에 직접 머지. 후속 세션에서도 유지.
-- **예외 — 자동 routine 산출물 (2026-04-22 확정)**: `routines/deep-extract.md` 등 **자동 routine이 생성하는 md 파일 반영**은 PR 없이 **main 직접 머지**. `[o]` 체크 자체가 미르의 ingest 승인 신호이므로 추가 게이트 불필요. 과거 routine 명세의 "PR 생성 후 미르 승인" 경로는 폐기. (`routines/scout.md`는 별도 규칙 유지 — Scout PR 방식은 trigger 진단 세션 2026-04-19 후 확정된 경로로 존속.)
+- **예외 — 자동 routine 산출물**: `routines/scout.md`, `routines/deep-extract.md` 등 **자동 routine은 PR 방식 사용**. Scout PR은 trigger 진단 세션 2026-04-19 후 확정된 경로. **Deep Extract PR은 2026-05-26 재편** — `[o]` 체크는 여전히 ingest 승인 신호이지만 PR body에 study-notes 풀 임베드해서 모바일 공부 자원으로 활용 (개별 study-notes 파일 159건 누적 후 미열람 사장 해결). 머지는 "공부 완료" 신호. 구 "deep-extract main 직접 머지" 규칙(2026-04-22)은 폐기.
 
 ## Liby (Librarian)
 - Liby ingest 후 KNOWLEDGE_BUNDLE에 새 키가 추가되면 Triage 감지 확장을 물어보지 말고 자동 실행
