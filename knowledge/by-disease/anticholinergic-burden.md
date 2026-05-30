@@ -108,6 +108,41 @@ relations: []
 
 ## 관련 엔트리
 
+---
+
+## 항콜린 부담 감량 4단계 알고리즘 — 검증된 1차의료 도구 (protocol) [CLINICAL]
+
+> [출처: Garcia TS et al. Development and Validity of an Algorithm for Reducing Anticholinergic Burden in Older Individuals in Primary Health Care. J Eval Clin Pract. 2026;32(4):e70479. PMID:42189088, DOI:10.1111/jep.70479]
+> 개발·검증 연구(2020-2024). Delphi 전문가 합의법(CVI ≥0.8 달성).
+> [초록 기반 — 전문 미확인]
+
+**4단계 알고리즘:**
+
+| 단계 | 내용 |
+|---|---|
+| **Step 1** | 총 항콜린 부담 점수 산출 (ACB calculator 활용) |
+| **Step 2** | 감약 가능한 항콜린 약물 선별 |
+| **Step 3** | amitriptyline·chlorpromazine·imipramine·paroxetine·promethazine 사용 확인 → 저항콜린 부담 대체 약물 Flowchart 적용 |
+| **Step 4** | 대체 약물 선택·시작 시점·용법 추가 지침 제공 |
+
+**Step 3 대상 약물 임상 의의:**
+- **amitriptyline**: 만성통증(신경병증·섬유근통)·우울 병용 처방 빈발 — 가장 우선 검토
+- **paroxetine**: SSRI 중 항콜린 부담 가장 높음 → sertraline·escitalopram 전환 검토
+- **promethazine**: 구역·수면보조 용도로 노인 처방 빈발 — 고위험
+
+**알고리즘 활용 이점:**
+- STOPP/START 기준 외 항콜린 부담 특화 체계적 접근 추가
+- Delphi 검증(CVI ≥0.8) — 전문가 합의 도구 신뢰도 확보
+- 다약제 노인 외래에서 인지기능 저하·낙상·재입원 위험 감소 목표
+
+**임상 적용:**
+- 기존 "ACB ≥3 약물 우선 교체" 루틴에 Step 3 Flowchart 추가 → 대체 경로 구체화
+- amitriptyline 만성통증 처방 검토 시 duloxetine·gabapentin·pregabalin 대체 순서 [[chronic-pain-integrative]] 참조
+
+---
+
+## 관련 엔트리
+
 - [[deprescribing]] — 부적절 처방 선별·중단 전략
 - [[nocturia]] — OAB 약물 선택 (mirabegron 대안)
 - [[geriatric-assessment-4ms]] — Medication M — Beers/STOPP 기반 점검
