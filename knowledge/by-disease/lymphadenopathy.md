@@ -125,9 +125,37 @@ LAP 발견
 
 ---
 
+## AFP 2025 업데이트 — 진단 전 corticosteroid 금지 명시 [CLINICAL]
+
+> [출처: Falk N et al. Lymphadenopathy: Evaluation and Differential Diagnosis. Am Fam Physician. 2025;112(3):286-293. PMID:40961306]
+> AFP 공식 리뷰; 전문 미확인 [초록 기반]
+
+### AFP 2025 핵심 추가 사항
+
+- **유병률**: 연간 인구의 0.6% — 대부분 양성 원인
+- **4주 이상 지속 또는 전신증상 동반 시** → 영상 + 검사 (CBC, CRP, ESR, TB 검사)
+- **생검 방법**: FNA, core needle biopsy, excisional biopsy
+- **항생제 고려**: 세균성 림프절염 등 양성·자기제한성 원인 추정 시
+
+### AFP 2025 — Corticosteroid 처방 금지 명시 (재확인)
+
+> "Corticosteroids should be avoided because they can mask the histologic diagnosis of lymphoma or other malignancy."
+> — Falk N et al. AFP 2025
+
+AFP 2025가 이 원칙을 명시적으로 게재함으로써 이전 AFP 2016 기준에서 한층 강조. **크기·기간 무관하게 진단 확정 전 corticosteroid 금지**는 미국 일차의료 공식 가이드라인 권고.
+
+### 악성 시사 특이적 기준 (AFP 2025)
+
+- **>2 cm, hard, 또는 주변 조직에 matted/fused** → 악성 또는 육아종성 질환 의심 (특히 소아)
+- Epitrochlear 또는 supraclavicular 림프절 → 악성 우선 고려
+- 국소 림프절병증도 감염 또는 악성 가능 — "국소 = 양성" 단정 금지
+
+---
+
 ## 관련
 
 - [[cervical-lymphadenitis]] — 화농성 cervical LAP 처치
+- [[infectious-mononucleosis]] — EBV LAP+발열 핵심 감별
 - [[neck-mass]] — 경부 종괴 감별
 - [[ldh-interpretation]] — LDH 단계별 해석
 - [[diaphoresis]] — 야간발한 동반 시

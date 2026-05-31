@@ -151,6 +151,74 @@ D-dimer 측정
 
 ---
 
+## 앵커링 편향 대규모 실증 — 트리아지 CHF 기재 → PE 검사율 저하 [CLINICAL]
+
+> [출처: Ly DP et al. Evidence for Anchoring Bias During Physician Decision-Making. JAMA Intern Med. 2023;183(8):818-823. PMID:37358843, DOI:10.1001/jamainternmed.2023.2366]
+> 미국 VA 전국 데이터 2011-2018, n=108,019, 횡단 연구
+
+CHF+호흡곤란(SOB) 환자에서 triage 단계에서 "CHF" 기재가 이후 담당의 PE 감별을 억제하는지 검증.
+
+### 핵심 결과
+
+| 지표 | 수치 |
+|---|---|
+| 표본 | 108,019명 (평균 71.9세, 여성 2.5%) |
+| triage에 CHF 기재율 | 4.1% |
+| 전체 PE 검사율 | 13.2% |
+| **CHF 기재 시 PE 검사율 차이** | **–4.6 pp (95% CI –5.7~–3.5)** |
+| PE 검사 지연 | **+15.5분 (95% CI 5.7~25.3분)** |
+| BNP 검사율 차이 | +6.9 pp (확증 방향 편향) |
+| ED 내 PE 진단율 차이 | –0.15 pp (p 유의) |
+| 30일 내 최종 PE 진단율 차이 | 0.06 pp (유의하지 않음) |
+
+### 임상 시사점
+
+- triage 단계의 단 한 줄 기재("CHF")가 의사 판단을 닫는다 — 환자를 직접 보기 전 문서 정보가 anchoring의 실체
+- BNP 검사 증가(확증 방향) vs PE 검사 감소(대안 방향) — anchoring이 검사 선택을 편향
+- 30일 내 최종 PE 진단율 차이 없음 → "놓친 PE"가 즉각 드러나지 않아 anchoring이 자기교정되지 않음
+
+### Anchoring 방어 루틴 보강
+
+- 이전 기록·트리아지 기재를 "가설 종료" 신호로 받지 말 것
+- SOB 환자: CHF 가설 지지 검사(BNP)와 함께 PE 가설 검토(D-dimer·Wells score)를 의식적으로 병렬 수행
+- "이전 진단명이 없다면 오늘 내가 어떤 검사를 할까?" 자문
+
+---
+
+## 앵커링 편향 극복의 핵심 — 감별 지식 > 신중한 재고 (Mamede 2024 RCT) [INSIGHTS]
+
+> [출처: Mamede S et al. Role of knowledge and reasoning processes as predictors of resident physicians' susceptibility to anchoring bias in diagnostic reasoning: a randomised controlled experiment. BMJ Qual Saf. 2024;33(9):563-572. PMID:38365449, DOI:10.1136/bmjqs-2023-016621]
+> 네덜란드 2개 대학병원 내과 레지던트 68명, 6개 질환 케이스 RCT; 전문 확인
+
+### 연구 설계
+
+- Phase 1: 6개 질환에 대한 **감별 지식(discriminating features)** 평가
+- Phase 2 (1주 후): 동일 케이스 — SDF+ (초기 오도 단서 있음) vs SDF- 버전 무작위 배정
+- SDF = salient distracting features (초기에 잘못된 진단 방향을 암시하는 단서)
+
+### 결과
+
+| 비교 | 수치 |
+|---|---|
+| SDF- 케이스에서 higher/lower knowledge 간 차이 | 없음 |
+| **SDF+ 케이스에서 higher knowledge가 anchoring 저항** | **p=0.02** |
+| SDF+ 케이스에서 진단 시간 | higher/lower 간 차이 없음 (p=0.88) |
+| SDF+ 케이스에서 자신감 차이 | 없음 (p=0.96) |
+| SDF+ vs SDF- 진단 시간 비교 | SDF+에서 더 긴 시간 + 낮은 자신감 (p<0.001) — 두 그룹 모두 System 2 활성화 시도 |
+
+### 핵심 시사점
+
+- **"한 발 물러서 신중히 재고하는" 것(metacognition) 자체는 anchoring을 풀지 못함** — 더 많은 시간을 쓰고 자신감을 낮춰도 knowledge가 낮으면 결과가 같음
+- **핵심은 감별 소견 지식(discriminating features)**: A와 B를 구별하는 임상 단서를 정확히 알아야 오도 신호를 무력화할 수 있음
+- 진단추론 교육에서 metacognition 훈련 단독으로는 부족 — **감별진단 지식 구축이 선행**
+
+### 외래 적용
+
+- "A인지 B인지 구분하는 단 하나의 소견이 뭔가?" 자문이 시간 연장보다 효과적
+- Illness scripting / Symptom-to-Diagnosis 케이스 학습 = 감별 knowledge 축적 경로
+
+---
+
 ## 관련
 
 - [[elderly-nonspecific-symptoms]] — 고령 비특이증상에서 anchoring 특히 위험
