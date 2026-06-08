@@ -144,3 +144,34 @@ relations: []
 ## 기타 특이사항 (notes)
 
 처방 연쇄는 **인지되지 않은 채 지속**되는 것이 가장 큰 문제. "새 약이 필요한 증상인가 vs 기존 약 부작용인가"를 매번 자문하는 습관이 핵심 예방법. 고령 외래에서 다약제 처방 전 반드시 cascade 가능성 점검.
+
+---
+
+## ChEI → OAB 항무스카린제 처방연쇄 — 치매 노인, mirabegron 우선 [CLINICAL — 조건부]
+
+> [출처: Tucker SB et al. Association Between Cholinesterase Inhibitor-Overactive Bladder Antimuscarinic Prescribing Cascade and Risk of Delirium and Falls Among Individuals Living With Dementia. J Am Geriatr Soc. 2026;74(5):1314-1325. PMID:41833520, DOI:10.1111/jgs.70386]
+> 후향적 코호트 (Anlitiks All-Payor Claims 2015-2020), n=2,693 (항무스카린제 201명, mirabegron 2,492명). 섬망·낙상 사건 수 제한적 → wide 95% CI.
+
+**처방연쇄 메커니즘:**
+
+ChEI(도네페질·리바스티그민) → 콜린성 자극 → 방광 과활동 → 요실금 → **OAB 항무스카린제 추가** (cascade)
+
+**핵심 결과:**
+
+| 결과 | 항무스카린제 | Mirabegron | 조정 HR |
+|---|---|---|---|
+| 섬망 (1년) | 4.0% | 3.8% | 1.35 (95% CI 0.64–2.86) |
+| 낙상 (1년) | 1.5% | 2.5% | 0.66 (95% CI 0.20–2.15) |
+
+> ⚠ 광범위 CI — 항무스카린제 vs mirabegron 섬망/낙상 차이 통계적 유의 없음. 하지만 항무스카린제의 항콜린성 인지 악화 **기전** + ChEI 효과 길항 고려 시 mirabegron 우선이 합리적.
+
+**임상 적용:**
+
+1. ChEI 복용 중인 치매 노인이 요실금 호소 → **처방연쇄 의심 먼저** (OAB 신규 질환 진단 전)
+2. 불가피하게 OAB 약 필요하면:
+   - oxybutynin·solifenacin(항무스카린제) 추가 → mirabegron으로 교체 우선
+   - 이유: 항무스카린제 = ChEI 효과 길항 + ACB 3점 = 인지저하·낙상 위험
+3. 검토 루틴: "ChEI 시작 60일 내 OAB 약 추가" = cascade 신호
+
+관련: [[nocturia]] — 미라베그론 허약 노인 우선 전략 (PMID:42070202)
+관련: [[anticholinergic-burden]] — ACB 부담 감약 알고리즘

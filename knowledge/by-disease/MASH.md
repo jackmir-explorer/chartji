@@ -217,3 +217,31 @@ MASH + F2~F3 확인 시 resmetirom 또는 semaglutide 고려
 - 체중 5~10% 감량 → 간지방·ALT 개선
 - 체중 10% 이상 감량 → MASH 조직학적 해소 가능
 - 알코올 금주, 당·정제탄수화물 제한, 유산소+저항 운동 병행
+
+---
+
+## MASLD 진단·관리 임상 리뷰 — BMJ 2025 [CLINICAL]
+
+> [출처: Musso G et al. Diagnosis and management of metabolic dysfunction associated steatotic liver disease. BMJ. 2025;391:r1928. PMID:41232955, DOI:10.1136/bmj-2025-084950]
+> BMJ 임상 리뷰. [초록 미제공 — 전문 미확인]
+> ⚠ PubMed 초록 미제공 논문. 아래 내용은 Scout 요약 기반.
+
+### BMJ 2025 외래 결정 흐름
+
+초음파 지방간 발견 / 비만·T2DM·대사증후군 환자에서:
+
+1. MASLD 진단 5기준 확인 (지방간 + 대사위험인자 ≥1개)
+2. FIB-4 계산
+   - <1.30 → 1차의료 생활습관 교육 + 추적
+   - 1.30~2.67 → FibroScan 또는 소화기내과 협진
+   - ≥2.67 → 간전문의 의뢰
+3. MASH + F2~F3 확인 시 → 생활습관 교정 + GLP-1RA 또는 resmetirom 치료 결정
+
+### 보강 포인트 (BMJ 2025)
+
+- MASLD 진단 5기준 명문화 재확인 (지방간 + 대사위험인자 ≥1개)
+- GLP-1RA 체중 감량 → 지방간 섬유화 개선 경로 강조
+- 생활습관 교정 + resmetirom/GLP-1RA 병합 치료 결정 흐름 명확화
+
+> 세부 치료 기준·약물 상세는 위 JAMA 2026(Tilg et al.) 섹션 참조.
+> [출처 미확인 — researcher 검증 권장]: 전문 접근 불가로 세부 수치·기준 직접 확인 필요

@@ -119,6 +119,34 @@ relations: []
 
 ---
 
+---
+
+## 초기 T2DM에서 Tirzepatide — 정상혈당 60% 회복 (SURPASS-EARLY) [CLINICAL]
+
+> [출처: Del Prato S et al. Tirzepatide Versus Intensified Conventional Care After 2 Years of Treatment in Early Type 2 Diabetes. Ann Intern Med. 2026 May 26. PMID:42184419, DOI:10.7326/ANNALS-25-05602]
+> Phase 4 RCT (SURPASS-EARLY), n=794, 10개국 78개 기관, 오픈라벨. Eli Lilly 재원.
+> ⚠ Eli Lilly 재원 RCT — 이해충돌 고려 필요.
+
+**대상**: 진단 후 ≤4년, metformin 단독으로 조절 불충분한 초기 T2DM 성인
+
+**결과 (tirzepatide 15mg vs 기존 강화치료 [ICC, GLP-1RA 포함 가능]):**
+
+| 결과 지표 | 추정 치료 차이 (ETD) | 유의성 |
+|---|---|---|
+| HbA1c 변화 | **-0.68%p** (-0.84~-0.51) | p<0.001 |
+| 체중 | **-8.0 kg** (-9.39~-6.50) | p<0.001 |
+| 허리둘레 | **-6.2 cm** (-7.54~-4.93) | p<0.001 |
+| **정상혈당 달성 (HbA1c<5.7%)** | **60.2% vs 24.0%** | 유의 |
+
+**임상 적용:**
+- **초기 T2DM + metformin 불충분** → tirzepatide 조기 도입의 Phase 4 근거
+- "당뇨 관해" 목표 (HbA1c 달성 수준에서 정상혈당 회복으로) 전환을 환자 동기 부여에 활용
+- GLP-1RA 불충분 시 tirzepatide 전환 우선 근거와 연결
+
+관련: [[glp1-selection-strategy]] — tirzepatide vs semaglutide 선택 전략
+
+---
+
 ## 출처
 
 - KDA 2023 당뇨병 진료지침

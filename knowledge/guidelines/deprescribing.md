@@ -233,3 +233,40 @@ relations: [[[diabetes-deprescribing-lifestyle]], [[elderly-psychotropic-depresc
 **한국 적용 주의:**
 - 노르웨이 지자체 기반 가정간호 시스템 — 한국 방문간호·재택의료 구조와 상이 [조건부 외삽]
 - 국내 방문간호 기록 체계·GP 연계 강화가 유사 간극 해소 방향
+
+---
+
+## 장기 PPI 감약 — 환자+GP 병행 개입이 가장 효과적 (JAMA Intern Med 2026) [CLINICAL]
+
+> [출처: Fournier JP et al. Deprescribing Intervention and Reduction of Proton Pump Inhibitor Use in Primary Care: A Cluster Randomized Clinical Trial. JAMA Intern Med. 2026;186(6):668-676. PMID:41973459, DOI:10.1001/jamainternmed.2026.0584]
+> 클러스터 RCT (1:1:1), n=1,498 GP·34,409 환자, 프랑스 서부 2개 지역, 2020-2021.
+
+**대상**: 성인 ≥1년 PPI 사용자 (부적절 장기 사용)
+
+**3군 설계:**
+1. **환자+GP 병행 개입**: 환자 직접 우편 교육 브로셔 + GP에 감약 알고리즘 편지
+2. **GP 단독 개입**: GP에만 알고리즘 편지
+3. **일반치료 (대조군)**
+
+**핵심 결과 (PPI 50% 이상 감량 달성률):**
+
+| 군 | 감량 달성률 | 조정 절대차 |
+|---|---|---|
+| 환자+GP 병행 | **14.9%** | +6.9% (vs 대조군) |
+| GP 단독 | 7.7% | — |
+| 일반치료 | 7.0% | (기준) |
+
+- **GERD 증상(GIS 점수)**: 세 군 간 유의 차이 없음 → 증상 악화 우려 근거 없음
+
+**임상 적용:**
+
+1. 외래 장기 PPI 환자 감약 상담 시 환자에게 **직접 교육 자료 제공** 이 핵심 (GP 설명 단독보다 효과 우월)
+2. "PPI 끊으면 속 쓰릴까봐 걱정" 호소 환자 → "GERD 증상 악화 없음" 대규모 RCT 근거 직접 제시
+3. 감약 알고리즘: 적응증 없는 장기 PPI → 격주 감량 → 중단 시도 → 재발 시 PRN 전환
+
+**감약 적응증 확인 (장기 PPI 재검토 기준):**
+- 적응증 있는 PPI 유지: 활동성 GERD·위궤양·NSAID 병용·H.pylori 박멸 후 고위험군
+- **재검토 대상**: 적응증 없는 예방 목적 장기 사용 (≥1년)
+
+관련: [[functional-dyspepsia]] — 기능성 소화불량·GERD 감별
+관련: [[prescribing-cascade]] — PPI 추가 cascade (NSAID → 위장 → PPI → 마그네슘 결핍 → 보충제)

@@ -76,3 +76,24 @@ relations: [[[palliative-pain]], [[anxiety-depression-cbt]], [[afp-eol-symptom-m
 - 기대 여명에 따른 유지 전략 개별화 필요
 - 정신과 협진 또는 완화의료팀 내 전문 역량 필요
 - [출처 미확인 — researcher 검증 권장]: 한국 케타민 완화의료 우울 적용 가이드라인, 급여 여부
+
+---
+
+## 정신자극제 (Psychostimulants) — 근거 제한적, 선별 사용 [CLINICAL — 조건부]
+
+> [출처: Sadowska K et al. Psychostimulants for Depression in Serious Illness: Limited Evidence, Select Indications. J Pain Symptom Manage. 2026;72(1):e58-e63. PMID:41905727, DOI:10.1016/j.jpainsymman.2026.03.015]
+> 서사 리뷰. [초록 기반 — 전문 미확인]
+
+**핵심 결론:**
+- 완화의료 중증 질환 우울에서 정신자극제(methylphenidate, modafinil 등) **단독 요법은 근거 약함** — 소규모 이질적 RCT 메타분석에서 위약 대비 효과 소폭
+- **증강 요법(augmentation)**: 통계적으로 유의하나 임상적 효과 크기 소폭
+- **대안 우선**: 케타민/에스케타민(↑ 위 섹션, NNT=3, 1~24h 효과) 또는 2세대 항정신병제 augmentation이 더 강한 근거
+
+**선별 적응증 (정신자극제 사용 정당화):**
+1. **ADHD 동반** 완화의료 환자
+2. **과거 정신자극제 반응 확실**한 이력
+
+**외래 결정 분기 (완화의료 우울):**
+- 빠른 효과 필요(기대 여명 짧음·기존 항우울제 반응 없음) → 케타민/에스케타민 또는 2세대 항정신병제 augmentation 우선
+- SSRIs 4~6주 대기 여유 있으면 → SSRIs/SNRIs 1차
+- 정신자극제 → ADHD 동반 또는 과거 반응 확실 시에만 고려
