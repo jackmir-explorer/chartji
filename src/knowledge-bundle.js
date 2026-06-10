@@ -8715,3 +8715,212 @@ KNOWLEDGE_BUNDLE["uncomplicated UTI"] = _uti_complicated_v2;
 KNOWLEDGE_BUNDLE["UTI classification"] = _uti_complicated_v2;
 KNOWLEDGE_BUNDLE["HAUTI"] = _uti_complicated_v2;
 KNOWLEDGE_BUNDLE["healthcare-associated UTI"] = _uti_complicated_v2;
+
+/* ========== Batch III — deep-extract 5-27 ~ 6-8 신규 6 entry ========== */
+
+/* transitional-care-elderly — 노인 병원→가정 전환기 돌봄 (5-27 deep-extract 신규). [CLINICAL — 조건부] */
+var _transitional_care_v2 = {
+  kind: "disease",
+  parents: ["frailty"],
+  keywords: ["transitional-care-elderly","전환기돌봄","transitional care","hospital-to-home","퇴원 계획","discharge planning","재입원","post-hospitalization syndrome"],
+  primarySources: [
+    "Steiner LM et al. Eur J Ageing 2025;22(1):58. PMID:41186737, DOI:10.1007/s10433-025-00890-w (SR 25 RCTs, n=17,542, ≥65세)"
+  ],
+  sections: {
+    definition: {
+      content: "병원→가정 전환기 = 노인 기능 저하·재입원·QOL 저하 고위험 시기. Krumholz 2013 **post-hospitalization syndrome** — deconditioning·식욕↓·인지 변화·면역 ↓ 복합. 구조화 개입으로 결과 개선 가능.",
+      sources: []
+    },
+    protocol: {
+      content: "### 효과적 중재 핵심 5요소 (SR 25 RCTs)\n| 구성요소 | 근거 |\n|---|---|\n| **구조화된 퇴원 계획** | 기능·재입원·응급실 방문 개선 |\n| **조기 퇴원 후 추적 방문** | 성공 핵심 — **빠를수록 효과** |\n| **보호자(가족) 참여** | 기능·기분·영양 개선 독립 기여 |\n| **다직종 팀** | 간호·물리치료·사회복지 통합 |\n| **가정 기반 지원** | 보행·ADL 회복 |\n\n### 외래 실천\n- 퇴원 후 **2주 내 (가능하면 1주)** 외래 f/u 확보\n- 보호자 동석 권장 — 약물·식이·운동 교육\n- 다약제 review (Beers·STOPP·이전 입원 신규 약물 점검)\n- BANC 평가 ([[elderly-nonspecific-symptoms]])\n- 영양·수면·인지 routine 점검",
+      sources: []
+    },
+    referral: {
+      content: "- 재입원 위험 ↑ + 다중 동반질환 → 노인의학·다직종 협진\n- 보호자 burden ↑ → 사회복지·요양 자원 연계\n- 기능 저하 progressive → 재활의학\n\n관련: [[frailty]] · [[elderly-nonspecific-symptoms]] · [[deprescribing]] · [[geriatric-assessment-4ms]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["transitional-care-elderly"] = _transitional_care_v2;
+KNOWLEDGE_BUNDLE["전환기돌봄"] = _transitional_care_v2;
+KNOWLEDGE_BUNDLE["transitional care"] = _transitional_care_v2;
+KNOWLEDGE_BUNDLE["hospital-to-home"] = _transitional_care_v2;
+KNOWLEDGE_BUNDLE["퇴원 계획"] = _transitional_care_v2;
+KNOWLEDGE_BUNDLE["post-hospitalization syndrome"] = _transitional_care_v2;
+
+/* osteoarthritis — 골관절염 + 수면 중재 (5-30 + 6-8 deep-extract 신규). [CLINICAL — 조건부] */
+var _osteoarthritis_v2 = {
+  kind: "disease",
+  keywords: ["osteoarthritis","골관절염","OA","관절통","joint pain","knee OA","hip OA","CBT-i OA","OA sleep","metformin OA"],
+  primarySources: [
+    "Hall M et al. Time to wake up to the potential benefits of targeting sleep in osteoarthritis management. Osteoarthritis Cartilage 2026;34(6):776-783. PMID:41876082, DOI:10.1016/j.joca.2026.03.122"
+  ],
+  sections: {
+    definition: {
+      content: "퇴행성 관절질환 — 통증·기능 저하. 외래 1차 = 운동·체중감량·NSAIDs·국소 치료. 최근 근거: **수면 중재·식이 동반·메트포르민 통증 가능성**.",
+      sources: []
+    },
+    notes: {
+      content: "### 수면 장애 → OA 통증 악화 (Hall 2026)\n- OA 환자 수면 장애 매우 흔하나 진료에서 거의 고려 안 됨\n- 수면 장애 → 근골격 통증 강도 ↑ + 신체·정서 결과 ↓\n- 동반: 피로·우울·통증 파국화·부정적 기분\n\n### 수면 중재 → OA 통증 개선\n| 중재 | 경로 | 통증 효과 |\n|---|---|---|\n| **CBT-i** | 수면 인지·행동 교정 | 수면 ↑ → OA 통증 ↓ |\n| **운동** | 일주기리듬 + 피로 ↓ | 수면 + **직접 통증 감소 (이중 이득)** |\n| **식이·체중감량** | 염증 ↓ | 수면 ↑ → 통증 ↓ |\n\n→ OA 외래 routine: \"요즘 잠은 잘 자고 계세요?\" 문진",
+      sources: []
+    },
+    protocol: {
+      content: "### 식이+운동 vs 운동 단독 (Ann Intern Med 2026 PMID:41974007)\n- **고관절 OA**: 식이+운동 > 운동 단독 (통증·기능 개선)\n- **슬관절 OA**: 보행 **1,000보/일** 증가 → OA 예방 근거\n- 운동 처방: 수영·자전거·태극권·요가 (저충격)\n\n### 약물\n- 1차: 국소 NSAIDs (topical diclofenac) — 전신 부작용 ↓\n- 2차: 경구 NSAIDs (단기 사용, GI/CV 위험 평가)\n- Capsaicin·duloxetine 보조\n- ⚠ Opioid 비권고 (장기 효과 미입증·부작용 ↑)\n\n### 메트포르민 통증 가능성 (Ann Intern Med 2026)\n관찰 연구 — DM 환자에서 메트포르민 사용이 OA 통증 ↓와 연관. RCT 근거 부족 — DM 적응증 외 처방 X.",
+      sources: ["Ann Intern Med 2026;179(5_Suppl):e2600984. PMID:41974007"]
+    },
+    referral: {
+      content: "- 기능 저하 심한 진행성 OA (KL grade 3-4) → 정형외과 (관절치환 검토)\n- 염증성 관절염 의심 (조조강직 >1h·다관절·CRP↑) → 류마티스\n- 신경병증성 통증 동반 → 통증의학과\n\n관련: [[chronic-pain-integrative]] · [[depression-screening]] · [[obesity]] · [[diabetes]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["osteoarthritis"] = _osteoarthritis_v2;
+KNOWLEDGE_BUNDLE["골관절염"] = _osteoarthritis_v2;
+KNOWLEDGE_BUNDLE["OA"] = _osteoarthritis_v2;
+KNOWLEDGE_BUNDLE["관절통"] = _osteoarthritis_v2;
+KNOWLEDGE_BUNDLE["joint pain"] = _osteoarthritis_v2;
+KNOWLEDGE_BUNDLE["knee OA"] = _osteoarthritis_v2;
+KNOWLEDGE_BUNDLE["hip OA"] = _osteoarthritis_v2;
+
+/* infectious-mononucleosis — EBV 단핵구증 (5-31 deep-extract 신규). [CLINICAL] */
+var _mono_v2 = {
+  kind: "disease",
+  keywords: ["infectious-mononucleosis","전염단핵구증","단핵구증","EBV","Epstein-Barr virus","heterophile antibody","Monospot","비장파열 예방"],
+  primarySources: [
+    "Sylvester JE et al. Infectious Mononucleosis: Rapid Evidence Review. Am Fam Physician 2023;107(1):71-78. PMID:36689975"
+  ],
+  sections: {
+    definition: {
+      content: "EBV 원발 감염 바이러스 증후군. **발열·인두염·후경부 림프절병증 3주징**. 15-24세 peak, 타액 전파. **3주 운동 금지** (비장파열 예방).",
+      sources: []
+    },
+    exam: {
+      content: "### 임상 3주징\n- 발열·인두염·**후경부 림프절병증** (posterior cervical LAP)\n→ 3가지 모두 → mono 감별 우선\n\n### 검사 순서\n1. **CBC w/diff**: >40% 림프구·>10% atypical lymphocytes\n2. **Heterophile antibody (Monospot)**: sens 87%·spec 91%\n   - **False-negative**: 5세 미만·발병 첫 1주\n3. Heterophile 음성 + 강력 의심 → **EBV VCA-IgM** (더 민감/특이)\n\n### 추가 평가 시\n- LFT (간염 흔함, AST/ALT 2-3배 ↑)\n- 비장 진찰 (HSM 동반)\n- 인후 streptococcal swab (group A strep 감별)",
+      sources: []
+    },
+    protocol: {
+      content: "### 치료 — Supportive Only\n- 휴식·수분·해열진통제 (acetaminophen·ibuprofen)\n- **항바이러스제 routine 비권고** (acyclovir 효과 X)\n- **Corticosteroid routine 비권고** — 기도 폐쇄 임박 시만 단기 prednisolone 검토\n\n### ⚠ 운동 제한 — 비장파열 예방\n- **발병 후 3주 운동 금지** (특히 contact sport)\n- 비장 비대 흔함 → 외상·복부 압박으로 파열 위험\n- 4주 이후 재평가 후 재개\n\n### Amoxicillin/Ampicillin 금기\n- Mono 환자 amoxicillin 투여 → **morbilliform rash** 흔함 (true allergy 아님, 일시적)\n- 인후염 ABx 처방 전 mono screening 권장\n\n### EBV 장기 관련 — 9종 암 연관\nNasopharyngeal cancer·Burkitt lymphoma·Hodgkin lymphoma 등. **MS, lupus 등 자가면역과도 연관**.",
+      sources: []
+    },
+    referral: {
+      content: "- 기도 폐쇄 임박 (인후 stridor·심한 부종) → 응급실 (스테로이드 + ENT)\n- 비장 파열 의심 (LUQ 통증·shock·외상 후) → 응급실\n- 4주+ 지속 LAP·LDH ↑ → 혈종내과 (림프종 배제)\n- 면역억제 환자 EBV → 감염내과\n\n관련: [[lymphadenopathy]] · [[ldh-interpretation]] · [[hematologic-malignancy-uri-screening]] · [[clinical-reasoning]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["infectious-mononucleosis"] = _mono_v2;
+KNOWLEDGE_BUNDLE["전염단핵구증"] = _mono_v2;
+KNOWLEDGE_BUNDLE["단핵구증"] = _mono_v2;
+KNOWLEDGE_BUNDLE["EBV"] = _mono_v2;
+KNOWLEDGE_BUNDLE["Epstein-Barr virus"] = _mono_v2;
+KNOWLEDGE_BUNDLE["heterophile antibody"] = _mono_v2;
+KNOWLEDGE_BUNDLE["Monospot"] = _mono_v2;
+
+/* skin-soft-tissue-infection — SSTI (6-8 deep-extract 신규). [CLINICAL] */
+var _ssti_v2 = {
+  kind: "disease",
+  keywords: ["skin-soft-tissue-infection","SSTI","cellulitis","연조직염","abscess","농양","MRSA","erysipelas","단독","necrotizing fasciitis"],
+  primarySources: [
+    "Chambliss ML, Rumball A, Brown CM. Skin and Soft Tissue Infections. Am Fam Physician 2026;113:440-448. PMID:42202366"
+  ],
+  sections: {
+    definition: {
+      content: "피부연조직 감염 분류 = **화농성(purulent) vs 비화농성(nonpurulent)** 이분법 (AFP 2026). 양측 연조직염은 드묾(≤5%) — **DVT·정맥울혈 우선 배제**.",
+      sources: []
+    },
+    exam: {
+      content: "### 화농성 vs 비화농성\n| | 비화농성 | 화농성 |\n|---|---|---|\n| 원인균 우세 | Streptococcus spp. | **MRSA ↑** (CA-MRSA) |\n| 대표 질환 | Erysipelas·Nonpurulent cellulitis | Furuncle·Carbuncle·Abscess |\n\n경증 → MSSA/Strep; 중증 → 다균성 + 혐기균\n\n### 3가지 핵심 감별\n**1. 양측 연조직염은 드물다 (≤5%)**\n- 양측 호소 → **DVT·정맥울혈피부염 우선 배제**\n- 단방향 사고 교정 신호\n\n**2. POCUS 농양 감별**\n- 손가락 촉진보다 정확 (fluid collection·loculation)\n- 의심 시 ED·외과 의뢰 전 POCUS 우선 시도\n\n**3. Necrotizing fasciitis red flag**\n- 통증이 진찰소견 대비 **과도** (pain out of proportion)\n- 빠른 진행·전신중독·crepitus·bullae·marbling\n- → **응급 surgical consult**",
+      sources: []
+    },
+    protocol: {
+      content: "### 외래 항생제\n**비화농성 cellulitis** — Strep 표적:\n- 1차: **Cephalexin** 500mg QID 5-7일 또는 **dicloxacillin** 500mg QID\n- Penicillin allergy: clindamycin 300-450mg QID\n\n**화농성 (abscess·furuncle)** — MRSA 표적:\n- **I&D 우선** — small abscess는 단독으로 충분\n- 큰 abscess·동반 cellulitis·면역저하 → **TMP-SMX** 800/160mg BID 또는 **doxycycline** 100mg BID 5-7일\n\n### 입원 적응\n- Sepsis 징후·hypotension·심한 동반질환\n- 광범위·빠른 진행·necrotizing 의심\n- 외래 치료 무반응 (48-72h)\n- 면역저하·DM 조절 불량",
+      sources: []
+    },
+    referral: {
+      content: "- Necrotizing fasciitis 의심 → 응급실 + 외과 즉시\n- 큰 abscess·복잡 위치 (얼굴·항문) → 외과\n- 재발성·이상 cellulitis → 감염내과/혈관내과\n- DVT 의심 → 즉시 응급실 (D-dimer·doppler)\n\n관련: [[cellulitis]] · [[nasal-furuncle]] · [[mrsa]] · [[diabetes]] · [[clinical-reasoning]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["skin-soft-tissue-infection"] = _ssti_v2;
+KNOWLEDGE_BUNDLE["SSTI"] = _ssti_v2;
+KNOWLEDGE_BUNDLE["cellulitis"] = _ssti_v2;
+KNOWLEDGE_BUNDLE["연조직염"] = _ssti_v2;
+KNOWLEDGE_BUNDLE["abscess"] = _ssti_v2;
+KNOWLEDGE_BUNDLE["농양"] = _ssti_v2;
+KNOWLEDGE_BUNDLE["erysipelas"] = _ssti_v2;
+KNOWLEDGE_BUNDLE["necrotizing fasciitis"] = _ssti_v2;
+
+/* post-bariatric-surgery — 비만대사수술 후 가정의학과 (6-8 deep-extract 신규). [CLINICAL] */
+var _post_bariatric_v2 = {
+  kind: "disease",
+  keywords: ["post-bariatric-surgery","비만수술","bariatric surgery","metabolic surgery","sleeve gastrectomy","RYGB","덤핑증후군","dumping syndrome","수술후 영양결핍"],
+  primarySources: [
+    "Green L, Dunlap C, Glass C. Postoperative Management After Metabolic Surgery: Role of the Family Physician. Am Fam Physician 2026;113:469-478. PMID:42202351"
+  ],
+  sections: {
+    definition: {
+      content: "비만대사수술 후 가정의학과 = 장기 만성질환 관리·합병증 감시·영양 모니터링 핵심 역할. 미국 연 ~27만 건. 개선 대상: T2DM·HTN·OSA·불임.",
+      sources: []
+    },
+    protocol: {
+      content: "### T2DM — 혈당약 감량 시점\n- 수술 후 T2DM **완해/유의 개선** 흔함 (특히 RYGB)\n- 혈당 정상화 시 **당뇨약 즉시 감량** 필수 — 저혈당 예방\n- **인슐린 → 수술 후 수일 내 대폭 감량**; 경구약 단계적 중단\n\n### HTN — 항고혈압제 조정\n- 체중 감량에 따라 BP 개선 → 감량/중단 검토\n- 초기 급속 감량 시기 BP monitoring 강화\n\n### 영양 결핍 routine check (RYGB·SG 둘 다)\n| 영양소 | 보충 | 검사 빈도 |\n|---|---|---|\n| Multivitamin + mineral | 매일 | 매년 |\n| **Vitamin B12** | 350-500 mcg/d 경구 또는 IM | 6-12mo |\n| **Iron** | 45-60 mg/d (월경 여성 ↑) | 6-12mo |\n| **Calcium citrate** | 1,200-1,500 mg/d | 매년 (DXA) |\n| **Vitamin D** | 3,000 IU/d (target 25-OH ≥30) | 매년 |\n| Thiamine (B1) | 합병증 시 | 임상 단서 시 |\n\n### 덤핑증후군 (Dumping syndrome)\n- **Early (수 분-1h)**: 식후 nausea·복통·설사·tachycardia·발한 — 음식 빠른 위→소장 이동\n- **Late (1-3h)**: 저혈당 sx (reactive hypoglycemia) — 인슐린 spike\n- 관리: **소량 자주·단순당 회피·식사 중 수분 분리**·고단백/고섬유\n\n### 피임 — **수술 후 12-18개월 금지**\n- 급속 체중감량·영양결핍 시기 임신 → 태아 영양결핍·소아기 합병증\n- 경구 피임약 흡수 ↓ — **IUD·implant 권고**",
+      sources: []
+    },
+    notes: {
+      content: "### Long-term monitoring\n- 매년 영양·체중·BP·HbA1c·lipid·B12·iron·Vit D·calcium\n- DXA 매년 (수술 후 골밀도 ↓ risk)\n- 우울·식이장애 screening (수술 후 정신건강 변화)\n- 알코올 사용 — 흡수 변화로 알코올 의존 위험 ↑",
+      sources: []
+    },
+    referral: {
+      content: "- 영양 결핍 심함·교정 어려움 → 임상영양사·비만대사외과\n- 덤핑증후군 조절 불량 → 비만대사외과·내분비\n- 재수술 검토 (재발성 비만·합병증) → 비만대사외과\n- 정신건강 (depression·식이장애) → 정신과\n\n관련: [[obesity]] · [[diabetes]] · [[osteoporosis]] · [[anemia]] · [[vitamin-b12]] · [[vitamin-d]] · [[depression-screening]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["post-bariatric-surgery"] = _post_bariatric_v2;
+KNOWLEDGE_BUNDLE["비만수술"] = _post_bariatric_v2;
+KNOWLEDGE_BUNDLE["bariatric surgery"] = _post_bariatric_v2;
+KNOWLEDGE_BUNDLE["metabolic surgery"] = _post_bariatric_v2;
+KNOWLEDGE_BUNDLE["sleeve gastrectomy"] = _post_bariatric_v2;
+KNOWLEDGE_BUNDLE["RYGB"] = _post_bariatric_v2;
+KNOWLEDGE_BUNDLE["덤핑증후군"] = _post_bariatric_v2;
+KNOWLEDGE_BUNDLE["dumping syndrome"] = _post_bariatric_v2;
+
+/* hypogonadism-male — 남성 성선기능저하증 (6-8 deep-extract 신규). [CLINICAL] */
+var _hypogonadism_v2 = {
+  kind: "disease",
+  keywords: ["hypogonadism-male","남성 성선기능저하증","hypogonadism","testosterone","테스토스테론","비만 유발 이차성","Klinefelter","TRT"],
+  primarySources: [
+    "Anawalt BD, O'Connor KM, Grossmann M. Adult Male Hypogonadism: A Review. JAMA 2026;335(20). PMID:42207626, DOI:10.1001/jama.2026.8526"
+  ],
+  sections: {
+    definition: {
+      content: "테스토스테론 결핍 증상/징후 + 지속적으로 낮은 아침 공복 혈청 T. 유병률: 기질성 <1% / **비만 유발 이차성 (BMI ≥30) 2-8%** — 외래 훨씬 흔함.",
+      sources: []
+    },
+    exam: {
+      content: "### 진단 기준\n**특이적 증상** (높은 양성 예측력):\n- 성욕 감소·자발적 발기 감소·작은 고환·여성형 유방 + 소정자증·음모/체모 감소\n\n**덜 특이적**: 피로·무기력·활력 저하\n\n### 검사\n- **공복 아침 (8-10am) 혈청 total T 2회 측정** (cutoff <264-300 ng/dL)\n- LH·FSH (1차 vs 2차 감별)\n- Prolactin·TSH·iron studies·SHBG\n- **비만 BMI ≥30 → 체중감량 ≥5% 1차** (T 회복 흔함)\n\n### 1차 (원발) vs 2차 (중추)\n| | 1차 (Primary) | 2차 (Secondary) |\n|---|---|---|\n| T | ↓ | ↓ |\n| LH/FSH | **↑** | **정상/↓** |\n| 원인 | 고환 문제 (Klinefelter·외상·orchitis·약물) | 시상하부·뇌하수체 (비만·OSA·약물·종양) |",
+      sources: []
+    },
+    protocol: {
+      content: "### 1차 치료 — 가역 원인 제거 우선\n- **비만 (BMI ≥30) → 체중감량 ≥5%** (T 회복 가능)\n- OSA 치료 (CPAP)\n- 약물 review (opioid·glucocorticoid·anabolic steroid 과거 사용)\n- 만성질환 조절 (DM·HF·CKD)\n\n### TRT (Testosterone Replacement Therapy)\n**적응증** (가역 원인 교정 후도 sx 지속 + 확진):\n- Topical gel (testosterone 1-2%)·IM injection·long-acting undecanoate\n- 환자 선호·생활 패턴·임신 계획 고려\n\n**Monitoring**:\n- 3, 6, 12개월 → T·Hct·PSA·LFT\n- 매년 → 위 + 골밀도 (DXA)\n\n**금기·주의**:\n- 전립선암·유방암 history\n- Hct >54%·PSA >4·심각한 LUTS·중증 HF (LVEF <30%)\n- 임신 계획 — TRT는 spermatogenesis 억제 → hCG/gonadotropin 필요",
+      sources: []
+    },
+    referral: {
+      content: "- 1차 hypogonadism (LH/FSH ↑) → 내분비\n- 임신 계획 + 저T → 비뇨기과·생식내분비\n- TRT 적응증 애매·monitoring 어려움 → 내분비\n- 전립선암 risk + TRT 검토 → 비뇨기과 협진\n\n관련: [[obesity]] · [[diabetes]] · [[osteoporosis]] · [[depression-screening]] · [[smoking-cessation]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["hypogonadism-male"] = _hypogonadism_v2;
+KNOWLEDGE_BUNDLE["남성 성선기능저하증"] = _hypogonadism_v2;
+KNOWLEDGE_BUNDLE["hypogonadism"] = _hypogonadism_v2;
+KNOWLEDGE_BUNDLE["testosterone"] = _hypogonadism_v2;
+KNOWLEDGE_BUNDLE["테스토스테론"] = _hypogonadism_v2;
+KNOWLEDGE_BUNDLE["TRT"] = _hypogonadism_v2;
