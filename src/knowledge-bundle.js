@@ -8359,3 +8359,331 @@ KNOWLEDGE_BUNDLE["ANC"] = _neutropenia_v2;
 KNOWLEDGE_BUNDLE["benign ethnic neutropenia"] = _neutropenia_v2;
 KNOWLEDGE_BUNDLE["BEN"] = _neutropenia_v2;
 KNOWLEDGE_BUNDLE["drug-induced neutropenia"] = _neutropenia_v2;
+
+/* ========== Drive gaps 2026-06-09 batch — 신규 9 entry ========== */
+
+/* statin-myopathy-management — Statin + CK 평가 quick reference (Drive gaps 6-9). [CLINICAL] */
+var _statin_myopathy_v2 = {
+  kind: "disease",
+  keywords: ["statin-myopathy-management","statin myopathy","SAMS","statin CK","rhabdomyolysis","statin rechallenge","격일 statin","rosuvastatin rechallenge"],
+  primarySources: [
+    "Grundy SM et al. 2018 ACC/AHA Cholesterol Guideline. Circulation 2019;139:e1082-e1143. PMID:30586774",
+    "Newman CB et al. NLA Statin-Associated Muscle Symptoms (SAMS) 2022. J Clin Lipidol 2022"
+  ],
+  sections: {
+    definition: {
+      content: "Statin 복용 환자 근통/CK 상승 평가·중단·재도전. ACC/AHA 2018: **CK >5×ULN history (또는 prior rhabdo)** = statin 보류 적응.",
+      sources: []
+    },
+    protocol: {
+      content: "### CK Cutoff 알고리듬\n| CK (×ULN) | 무증상 | 증상 동반 |\n|---|---|---|\n| **<4-5×** | monitor | 평가 (statin 외 원인 + 관련성) |\n| **4-10×** | 평가 + 일시중단 고려 | 중단 + 평가 1-2주 모니터 |\n| **>10×** | **중단 + workup** | 중단·즉시 workup |\n| **Rhabdo** | — | **CK ≥10×ULN + myoglobinuria/AKI** = 응급 |\n\n> ⚠ raw note \"40×\"는 임상 컨벤션·guideline 수치 아님. ACC/AHA: **5×ULN history = 보류 적응**.\n\n### SAMS — 기타 원인 배제 우선\n자동 statin 탓 가정 금지: 운동·외상·갑상선저하증·Vit D 결핍·신부전·약물 상호작용(fibrate·CYP3A4 inhibitor)·알코올·자가면역(anti-HMGCR)\n\n### Re-challenge 전략\n1. 호전 후 다른 statin·저용량으로 시도\n2. **Rosuvastatin·Pravastatin·Fluvastatin** 우선 (CYP3A4 metabolize 적고 muscle penetration 적음)\n3. **격일 또는 주 2-3회** 옵션\n4. 저용량 + ezetimibe 병합\n5. 3종 statin rechallenge 후도 SAMS 지속 → ezetimibe·bempedoic acid·PCSK9i 검토",
+      sources: []
+    },
+    referral: {
+      content: "- CK >10×ULN 또는 rhabdo 의심 (myoglobinuria·AKI·brown urine) → 응급\n- Statin 영구 불내성 + LDL 미달 → 내분비/심장 (PCSK9·bempedoic acid)\n- Autoimmune myopathy 의심 (statin 중단 후도 progressive 근력 저하·anti-HMGCR) → 류마티스\n\n관련: [[dyslipidemia]] · [[home-based-hypertension]] · [[diabetes-dyslipidemia]] · [[qtc-interpretation]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["statin-myopathy-management"] = _statin_myopathy_v2;
+KNOWLEDGE_BUNDLE["statin myopathy"] = _statin_myopathy_v2;
+KNOWLEDGE_BUNDLE["SAMS"] = _statin_myopathy_v2;
+KNOWLEDGE_BUNDLE["statin CK"] = _statin_myopathy_v2;
+KNOWLEDGE_BUNDLE["rhabdomyolysis"] = _statin_myopathy_v2;
+KNOWLEDGE_BUNDLE["statin rechallenge"] = _statin_myopathy_v2;
+
+/* qtc-interpretation — QTc 평가·QT 연장 약물 (Drive gaps 6-9). [CLINICAL] */
+var _qtc_interp_v2 = {
+  kind: "topic",
+  keywords: ["qtc-interpretation","QTc","QT prolongation","torsade de pointes","TdP","long QT","QT 연장 약물","drug-induced QT"],
+  primarySources: [
+    "Drew BJ et al. AHA/ACCF Scientific Statement on Prevention of Torsade de Pointes in the Hospital Setting. Circulation 2010;121(8):1047-1060. PMID:20142454, DOI:10.1161/CIRCULATIONAHA.109.192704"
+  ],
+  sections: {
+    definition: {
+      content: "QTc 정상: 남 ≤450ms·여 ≤460ms. 연장(위험): 남 >450·여 >470. **누구든 >500ms 또는 baseline 대비 >60ms 증가 = TdP 고위험** (AHA/ACCF 2010).",
+      sources: []
+    },
+    notes: {
+      content: "### QTc 평가\n| QTc | 분류 |\n|---|---|\n| 정상 | 남 ≤450 / 여 ≤460 |\n| 경계 | 450-470 (여 ~480) |\n| 연장 | 남 >450 / 여 >470 |\n| **고위험** | **>500ms 또는 baseline 대비 >60ms 증가** |\n| Short QT | <340-360 (드묾) |\n\n### QT 연장 약물 — 외래 처방 전 점검\n- **정신과**: quetiapine·haloperidol IV·ziprasidone·citalopram(>40mg 경고)·**TCA**\n- **항생제**: macrolides (clarithromycin·erythromycin·azithromycin)·fluoroquinolones (moxi·levo·cipro)\n- **항진균**: azoles (keto·flu·itra·voriconazole)\n- **소화기**: **metoclopramide(맥페란)**·ondansetron·domperidone\n- **항부정맥**: Class IA (quinidine·procainamide)·Class III (amiodarone·sotalol·dofetilide)\n- 기타: methadone·일부 TKI",
+      sources: []
+    },
+    precaution: {
+      content: "### 위험요인\n- 여성·저K/저Mg/저Ca·심부전·MI·LVH·서맥 (HR<50)\n- 가족력 (long QT)·신부전·간부전 (약물 축적)\n- **2개 이상 QT 연장 약물 병용**\n\n### 외래 routine\n1. 다약제 처방 전 ECG QTc 확인 (고령·심부전·항부정맥)\n2. K·Mg 정상화\n3. Cross-class 약물 조합 회피\n4. CredibleMeds.org 참조 (Known/Possible/Conditional risk)\n5. 증상 (palpitation·syncope) → 즉시 ECG + 응급실",
+      sources: []
+    },
+    referral: {
+      content: "- QTc >500ms 또는 baseline 대비 >60ms 증가 → 약물 중단 + 심장내과\n- TdP 발생 → 응급실 (Mg sulfate·overdrive pacing)\n- 가족력 long QT + syncope → 심장내과 (gene panel·운동 ECG)\n- Short QT (<340) + 가족력 → 심장내과\n\n관련: [[statin-myopathy-management]] · [[heart-failure]] · [[depression-screening]] · [[deprescribing]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["qtc-interpretation"] = _qtc_interp_v2;
+KNOWLEDGE_BUNDLE["QTc"] = _qtc_interp_v2;
+KNOWLEDGE_BUNDLE["QT prolongation"] = _qtc_interp_v2;
+KNOWLEDGE_BUNDLE["torsade de pointes"] = _qtc_interp_v2;
+KNOWLEDGE_BUNDLE["TdP"] = _qtc_interp_v2;
+KNOWLEDGE_BUNDLE["long QT"] = _qtc_interp_v2;
+KNOWLEDGE_BUNDLE["QT 연장 약물"] = _qtc_interp_v2;
+
+/* cardiorenal-anemia-syndrome — CRAS 심신성 빈혈 (Drive gaps 6-9). [CLINICAL] */
+var _cras_v2 = {
+  kind: "disease",
+  parents: ["heart-failure"],
+  keywords: ["cardiorenal-anemia-syndrome","CRAS","심신성 빈혈","cardiorenal anemia","HF anemia","CKD anemia","EPO 부족"],
+  primarySources: [
+    "Silverberg DS, Wexler D, Iaina A. Anemia, chronic renal disease and congestive heart failure—the cardio renal anaemia syndrome. Curr Opin Nephrol Hypertens 2004;13(2):163-170. PMID:15202610",
+    "Silverberg DS et al. Curr Opin Nephrol Hypertens (후속 review). PMID:16868702"
+  ],
+  sections: {
+    definition: {
+      content: "심장·신장·빈혈이 **서로 악화시키는 악순환 삼각**. 한 축 호전 시 나머지 둘 호전·한 축 악화 시 연쇄 무너짐.",
+      sources: []
+    },
+    notes: {
+      content: "### 3 악순환 고리\n1. **HF → 신장 악화**: 심박출 ↓ + 정맥 울혈 → 신정맥압 ↑ → GFR ↓\n2. **CKD → 빈혈**: EPO 생산 ↓ (peritubular fibroblast) + hepcidin 축적 → 철 이용 ↓\n3. **빈혈 → 심장 악화**: 산소운반능 ↓ → 보상적 cardiac output·HR ↑ → 만성 부담 + 조직 저산소 → 신장 더 손상\n\n### 임상 단서\n- NT-proBNP ↑ + cardiomegaly + congestion + 부종 (HF 울혈)\n- BUN/Cr >20 (prerenal 색채)\n- eGFR <60 특히 <45 (KDIGO 2012)\n- Hgb <11 + 부적절하게 낮은 reticulocyte (ARC <100K)\n- TIBC ↓ + ferritin 정상~상승 (ACD-like hepcidin)\n- 넓은 맥압·flow murmur·빈맥 (빈혈 심장 보상)",
+      sources: []
+    },
+    protocol: {
+      content: "### 평가 패널\nCBC + RBC indices + **Reticulocyte·ARC·IRF·RET-He** · Ferritin/Iron/TIBC/TSAT · BUN/Cr·eGFR·UA·ACR · **NT-proBNP** · TTE (LVEF) · TSH · B12/Folate\n\n### 치료 — 3 축 동시 개입\n1. **HF 안정화** ([[heart-failure]] GDMT 4-pillar; 울혈 시 loop diuretic — [[cardiorenal-aki-diuretic-management]])\n2. **CKD anemia 교정**: ESA (eGFR<30·Hgb<10 KDIGO 2012), IV iron (ferritin<100 또는 TSAT<20%); **target Hgb 10-11.5** (over-correction 회피)\n3. **빈혈 교정 → HF·신장 호전 기대** (cardiac output 보상 부담 ↓)\n\n> ⚠ Over-correction (Hgb >12) → 혈전·사망 ↑ (TREAT·CHOIR)",
+      sources: []
+    },
+    referral: {
+      content: "- eGFR <30 또는 Hgb <10 → 신장내과\n- LVEF <40% + 빈혈 → 심장 + 신장 협진\n- 급성 악화 → 응급/입원\n- Hgb <8 또는 증상 (DOE·syncope) → 수혈 검토\n\n관련: [[anemia]] · [[heart-failure]] · [[CKD]] · [[ckd-monitoring]] · [[cardiorenal-aki-diuretic-management]] · [[vitamin-b12]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["cardiorenal-anemia-syndrome"] = _cras_v2;
+KNOWLEDGE_BUNDLE["CRAS"] = _cras_v2;
+KNOWLEDGE_BUNDLE["심신성 빈혈"] = _cras_v2;
+KNOWLEDGE_BUNDLE["cardiorenal anemia"] = _cras_v2;
+KNOWLEDGE_BUNDLE["HF anemia"] = _cras_v2;
+KNOWLEDGE_BUNDLE["CKD anemia"] = _cras_v2;
+
+/* cardiorenal-aki-diuretic-management — 울혈성 prerenal AKI 이뇨 (Drive gaps 6-9). [CLINICAL] */
+var _crs_aki_v2 = {
+  kind: "disease",
+  parents: ["heart-failure"],
+  keywords: ["cardiorenal-aki-diuretic-management","울혈성 prerenal AKI","cardiorenal AKI","HF diuretic","furosemide HF","spironolactone HF","post-renal 배제"],
+  primarySources: [
+    "McDonagh TA et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J 2021;42:3599-3726. PMID:34447992",
+    "Heidenreich PA et al. 2022 AHA/ACC/HFSA Guideline. PMID:35379503"
+  ],
+  sections: {
+    definition: {
+      content: "**이뇨제 결정은 \"혈압\"이 아니라 \"용적 상태\"로**. HF에서 이뇨제=울혈 제거제. 일시적 Cr 상승은 적절한 decongestion이면 예후 악화 없음 (ESC 2021).",
+      sources: []
+    },
+    exam: {
+      content: "### Volume Overload (이뇨제 적응)\n- NT-proBNP ↑ (외래 >125 / 응급 age-adjusted)\n- Cardiomegaly + pulmonary congestion (CXR)\n- Pitting edema·JVD·crackles·간비대\n\n### Prerenal AKI 색채 (과이뇨 위험)\n- BUN/Cr >20·AKI on CKD (eGFR ↓)·핍뇨·기립 어지럼·hypotension\n\n### Cardiorenal 함정\n전신 물 넘침 + 신장 유효 순환 부족 동시 가능. **적절한 이뇨 → 정맥 울혈 ↓ → 신정맥압 ↓ → 신기능 호전**. 과이뇨는 prerenal AKI 악화.",
+      sources: []
+    },
+    protocol: {
+      content: "### 외래 결정 분기\n\n**1. Post-renal 폐색 배제 — 이뇨 전 우선**\n> ⚠ 폐색성 핍뇨에 이뇨제 → 방광만 채움. **PVR·방광스캔** + BPH·전립선 증상 확인. (남성 핍뇨 호소 시 PVR 우선)\n\n**2. 외래 단독 시작 — 신중**\nNT-proBNP 1700+ · 핍뇨 · AKI 조합 → 외래 단독 부적절, 심장내과 + 모니터링 환경\n\n**3. 외래 시작 가능 시**\n- 저용량 **loop (furosemide)** titration\n- **48-72h Cr/K 재검** 필수\n- 환자 교육: 매일 체중 — **0.5-1 kg/day 적정**\n- 과이뇨 징후 (기립 어지럼·Cr 급등·소변량 과다 감소) → 감량/중단\n- 빈혈 동반 ([[cardiorenal-anemia-syndrome]]) → Hgb 8 수준 천천히 이뇨\n\n### Spironolactone vs Furosemide — 역할 다름\n| | Furosemide (loop) | Spironolactone (MRA) |\n|---|---|---|\n| 주 역할 | **울혈 제거 (강력)** | HF **예후 개선** (이뇨 약함) |\n| K | ↓ | **↑** |\n| 신기능 의존 | eGFR ↓도 작동 | **eGFR <30 위험·효과 제한** |\n| HFrEF 사망률 | 미입증 | **30% 감소** (RALES PMID:10471456) |\n\n\"Spiro가 Lasix보다 안전\"은 오해 — 역할 자체가 다름.",
+      sources: []
+    },
+    referral: {
+      content: "- 외래 BNP/NT-proBNP ↑↑ + AKI on CKD + 핍뇨 → 심장내과 (입원 모니터링)\n- 이뇨 후 Cr 급등 (>0.3 mg/dL 또는 >25%) → 심장·신장 협진\n- Post-renal 의심 (PVR>200·anuria) → 비뇨기과\n- 외래 GFR <30 + 이뇨 결정 어려움 → 신장내과\n\n관련: [[heart-failure]] · [[heart-failure-monitoring]] · [[CKD]] · [[ckd-monitoring]] · [[cardiorenal-anemia-syndrome]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["cardiorenal-aki-diuretic-management"] = _crs_aki_v2;
+KNOWLEDGE_BUNDLE["울혈성 prerenal AKI"] = _crs_aki_v2;
+KNOWLEDGE_BUNDLE["cardiorenal AKI"] = _crs_aki_v2;
+KNOWLEDGE_BUNDLE["furosemide HF"] = _crs_aki_v2;
+KNOWLEDGE_BUNDLE["spironolactone HF"] = _crs_aki_v2;
+KNOWLEDGE_BUNDLE["post-renal 배제"] = _crs_aki_v2;
+
+/* platelet-function-test — PFA-100/200 해석 (Drive gaps 6-9). [CLINICAL] */
+var _platelet_v2 = {
+  kind: "topic",
+  keywords: ["platelet-function-test","PFA-100","PFA-200","aspirin response","von Willebrand disease","vWD","light transmission aggregometry","LTA"],
+  primarySources: [
+    "Hayward CPM et al. Best Pract Res Clin Haematol 2006;19(1):91-104. PMID:16377544",
+    "Favaloro EJ. Clinical utility of the PFA-100. Haemophilia 2015;21(5):642-649. PMID:26179127"
+  ],
+  sections: {
+    definition: {
+      content: "PFA-100/200 — in vitro 혈류 모방, closure time 측정. 두 cartridge: Col/EPI + Col/ADP.",
+      sources: []
+    },
+    notes: {
+      content: "### 해석 패턴\n| EPI | ADP | 해석 |\n|---|---|---|\n| 정상 | 정상 | 혈소판 기능 정상 (vWD·aspirin 1차 배제) |\n| **연장** | 정상 | Aspirin 효과 또는 경증 혈소판 이상 |\n| **연장** | **연장** | 의미 있는 혈소판 기능 이상·**vWD 가능성↑**·심한 혈소판 결함 |\n\n> ⚠ **Clopidogrel(P2Y12) PFA 민감도 낮음** (Favaloro 2015) — clopidogrel 효과 검출 신뢰성 제한. 필요 시 **VerifyNow P2Y12** 또는 PFA-200 Innovance P2Y cartridge 별도.\n\n### 검사 전 점검 — 위양성 회피\nPFA는 다음에 민감:\n- **Hct <25-30% 또는 platelet <150,000** → 연장 (위양성)\n- 시료 처리·약물 (NSAIDs·SSRI)\n\n> ⚠ **CBC 먼저 확인** — 빈혈·혈소판감소 보정 없이 판독 금지.",
+      sources: []
+    },
+    protocol: {
+      content: "### 정밀 평가 분기 (PFA 비정상 + 출혈 증상)\n| 의심 진단 | 추가 검사 |\n|---|---|\n| **von Willebrand disease (vWD)** | vWF antigen·vWF activity (Ristocetin)·Factor VIII |\n| 혈소판 기능 이상 | **Light transmission aggregometry (LTA)** — gold standard |\n| 약물 효과 | 약물력 재확인·중단 후 재검 |\n\nvWD type 1은 ristocetin-induced aggregation으로 검출.\n\n### 외래 활용\n- 수술·시술 전 출혈 위험 평가 (가족력 + 증상 + PFA)\n- 알 수 없는 잦은 멍·점막 출혈 평가 1차\n- Aspirin 순응도 보조 (표준 단독 검사 아님)",
+      sources: []
+    },
+    referral: {
+      content: "- PFA 비정상 + 출혈 증상 → 혈액내과 (LTA·vWF)\n- 수술 전 PFA 연장 + 가족 출혈력 → 혈액내과\n- Clopidogrel 효과 평가 필요 → 심장내과 (VerifyNow)\n\n관련: [[anemia]] · [[hematuria]] · [[chronic-pain-integrative]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["platelet-function-test"] = _platelet_v2;
+KNOWLEDGE_BUNDLE["PFA-100"] = _platelet_v2;
+KNOWLEDGE_BUNDLE["PFA-200"] = _platelet_v2;
+KNOWLEDGE_BUNDLE["aspirin response"] = _platelet_v2;
+KNOWLEDGE_BUNDLE["von Willebrand disease"] = _platelet_v2;
+KNOWLEDGE_BUNDLE["vWD"] = _platelet_v2;
+KNOWLEDGE_BUNDLE["light transmission aggregometry"] = _platelet_v2;
+
+/* subacute-thyroiditis — De Quervain (Drive gaps 6-9). [CLINICAL] */
+var _subacute_thyroiditis_v2 = {
+  kind: "disease",
+  parents: ["thyroid-disorder"],
+  keywords: ["subacute-thyroiditis","De Quervain thyroiditis","아급성 갑상선염","painful thyroiditis","갑상선 통증","post-URI thyroiditis"],
+  primarySources: [
+    "Ross DS et al. 2016 American Thyroid Association Guidelines for Diagnosis and Management of Hyperthyroidism and Other Causes of Thyrotoxicosis. Thyroid 2016;26(10):1343-1421. PMID:27521067, DOI:10.1089/thy.2016.0229"
+  ],
+  sections: {
+    definition: {
+      content: "**선행 URI 2-8주 (50-70%)** + 갑상선 통증·압통 (가장 특징적) + ESR/CRP ↑. Phase 변화: hyperthyroid (1-3mo) → euthyroid → 일시 hypothyroid → 회복. 호발 30-50대 여성.",
+      sources: []
+    },
+    exam: {
+      content: "### 진단 기준\n| Major | 내용 |\n|---|---|\n| 1 | Anterior neck pain·압통 (갑상선) |\n| 2 | **ESR >50 또는 CRP elevated** |\n| 3 | Sono: **hypoechoic + reduced vascularity** |\n| 4 | RAIU <5% (한국 routine X) |\n| 5 | TFT 변화 (early hyperthyroid) |\n\n진단 강도: 1+2 strong suspicion / 1+2+3 clinical / 1+2+3+4 definitive\n\n외래에서는 1+2+3 + 임상 경과로 진단·치료 시작 가능 (RAIU 없이).\n\n### 통증 특징\n- 한쪽 시작 → 반대쪽 확산\n- 턱·귀로 방사\n- 갑상선 swelling·firm\n- 발열·피로 동반 가능",
+      sources: []
+    },
+    protocol: {
+      content: "### Mild\n- **NSAIDs**: ibuprofen 400-600mg q6-8h 또는 naproxen 500mg BID\n- 1-2주 trial · 통증·압통 control 목표\n- 갑상선 기능 자연 회복 — **methimazole 부적절**\n\n### Moderate-Severe\n- **Prednisolone 40mg/day** 시작\n- 1-2주 후 평가 + **4-8주 tapering**\n- 통증 빠른 호전 — 호전 후 감량\n\n### Hyperthyroid phase 증상\n- **β-blocker** (propranolol·atenolol·bisoprolol) 일시적\n- ⚠ **Antithyroid drug (methimazole) 부적절** — destruction이 원인 (production 아님)\n\n### Hypothyroid phase (3-6개월 후)\n- 일시적 → 증상 동반 시 단기 LT4\n- 대부분 자연 회복",
+      sources: []
+    },
+    monitoring: {
+      content: "| 시점 | 검사 |\n|---|---|\n| 초진 + 2-4주 | TFT·ESR·CRP·sono |\n| 6개월 | TFT 회복 확인 |\n| 12개월 | TFT 영구 hypothyroid 배제 |\n\n대부분 1년 내 완전 회복. **5-15% 영구 hypothyroid** — long-term LT4 ([[thyroid-disorder]]).",
+      sources: []
+    },
+    referral: {
+      content: "- Severe + Prednisolone 반응 부족 → 내분비\n- 영구 hypothyroid (12개월 TSH ↑) → 내분비 또는 [[thyroid-disorder]]\n- Suppurative thyroiditis 의심 (농양·심한 발열·중독) → 응급/내분비\n\n관련: [[thyroid-disorder]] · [[thyroid-fna-cnb]] · [[clinical-reasoning]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["subacute-thyroiditis"] = _subacute_thyroiditis_v2;
+KNOWLEDGE_BUNDLE["De Quervain thyroiditis"] = _subacute_thyroiditis_v2;
+KNOWLEDGE_BUNDLE["아급성 갑상선염"] = _subacute_thyroiditis_v2;
+KNOWLEDGE_BUNDLE["painful thyroiditis"] = _subacute_thyroiditis_v2;
+KNOWLEDGE_BUNDLE["갑상선 통증"] = _subacute_thyroiditis_v2;
+
+/* cervical-referred-pain — 경추 → 등 referred (Drive gaps 6-9). [CLINICAL] */
+var _cervical_referred_v2 = {
+  kind: "disease",
+  keywords: ["cervical-referred-pain","경추 관련통","등통증 경추","thoracic referred from cervical","myofascial cervical","cervical radiculopathy back"],
+  primarySources: [
+    "Dwyer A, Aprill C, Bogduk N. Cervical zygapophyseal joint pain patterns. I: A study in normal volunteers. Spine 1990;15(6):453-457. PMID:2402682",
+    "Iyer S, Kim HJ. Cervical radiculopathy. Curr Rev Musculoskelet Med 2016;9(3):272-280. PMID:27250899",
+    "Childress MA, Becker BA. Nonoperative Management of Cervical Radiculopathy. Am Fam Physician 2016;93(9):746-754. PMID:27175952"
+  ],
+  sections: {
+    definition: {
+      content: "\"등이 아프다\" 호소 = 흉추 원인이 아닐 수 있다. Cervical disc·facet·muscle → 흉추·견갑 referred pain. **흉추 단독 평가 전 경추 ROM·신경학적 평가 routine**.",
+      sources: []
+    },
+    notes: {
+      content: "### 1. Referred Pain (facet, Dwyer 1990)\n| Cervical level | Referred area |\n|---|---|\n| C2-C3 | 후두부·관자놀이·목 뒤 |\n| C3-C4 | 어깨·견갑골 윗·흉골 윗 |\n| C4-C5 | 어깨·견갑골·**T1-T2** |\n| C5-C6 | 견갑골 사이·**T2-T4** |\n| C6-C7 | 견갑골 안쪽·**mid-thoracic**·팔 radial |\n| C7-T1 | 견갑골 안쪽 아래·**T4-T6**·팔 ulnar |\n\n> **핵심**: C5-T1 facet pathology가 흉추까지 referred.\n\n### 2. Myofascial Pain\nTrapezius·levator scapulae·rhomboid·cervical paraspinal trigger point → 흉추·견갑 referred.\n\n### 3. Cervical Radiculopathy\n| Root | Motor | Dermatome |\n|---|---|---|\n| C5 | Deltoid·이두근 | 외측 상완 → 어깨 |\n| C6 | Brachioradialis | 외측 전완·엄지·둘째 |\n| C7 | Triceps | 후방 상완·셋째 |\n| C8 | Hand intrinsic | 내측 전완·약지·새끼 |\n| T1 | Hand intrinsic | 내측 팔 |\n\n> 특히 **C7·C8·T1 → 견갑골 안쪽·등 중심부 referred 흔함**.",
+      sources: []
+    },
+    exam: {
+      content: "### 외래 평가 routine — \"등이 아프다\" 호소 시\n1. **경추 ROM** (굴곡·신전·회전·측굴) — 동작 시 등 통증 재현?\n2. **Spurling test** (경추 압박·동측 회전·신전) — radiculopathy 단서\n3. **신경학적**: 상지 DTR (biceps C5·brachioradialis C6·triceps C7)·감각·근력\n4. **Trigger point 촉진** — trapezius·levator scapulae·rhomboid·paraspinal\n5. **흉추 ROM + 촉진** — 흉추 단독 원인 배제\n\n→ 경추 ROM 시 등 통증 재현 또는 신경학적 이상 → cervical 원인 우선",
+      sources: []
+    },
+    protocol: {
+      content: "### 영상 적응\n- Red flag (외상·종양·감염·진행성 신경 이상) → MRI 우선\n- 6주 이상 보존 무반응 + radiculopathy → MRI\n- Trauma → cervical CT\n- 만성 등 통증 + 경추 평가 양성 → 경추 X-ray 4-view (flexion/extension)",
+      sources: []
+    },
+    referral: {
+      content: "- **Myelopathy 신호** (보행 장애·spasticity·hand clumsy·Hoffman 양성·bladder) → 신경외과 응급\n- Progressive radiculopathy (근력 저하 진행) → 신경외과/정형\n- 6주 보존 무반응 + MRI 단서 → 신경외과/정형\n- 만성 facet/myofascial → 통증의학과\n\n관련: [[spine-related-arm-pain]] · [[clinical-reasoning]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["cervical-referred-pain"] = _cervical_referred_v2;
+KNOWLEDGE_BUNDLE["경추 관련통"] = _cervical_referred_v2;
+KNOWLEDGE_BUNDLE["등통증 경추"] = _cervical_referred_v2;
+KNOWLEDGE_BUNDLE["thoracic referred from cervical"] = _cervical_referred_v2;
+KNOWLEDGE_BUNDLE["myofascial cervical"] = _cervical_referred_v2;
+
+/* gsm-genitourinary-menopause — GSM (Drive gaps 6-9). [CLINICAL] */
+var _gsm_v2 = {
+  kind: "topic",
+  keywords: ["gsm-genitourinary-menopause","GSM","폐경 비뇨생식기 증후군","atrophic vaginitis","vaginal estrogen","topical estrogen","recurrent UTI menopause","vulvovaginal atrophy"],
+  primarySources: [
+    "The 2020 genitourinary syndrome of menopause position statement of The North American Menopause Society. Menopause 2020;27(9):976-992. PMID:32852449"
+  ],
+  sections: {
+    definition: {
+      content: "폐경 estrogen 결핍으로 인한 질·외음·하부 요로 점막 위축·증상 군집. Atrophic vaginitis 포함 + 요도·방광 증상까지 통합 진단. **재발성 UTI ≥3/y = GSM 검사 신호**.",
+      sources: []
+    },
+    exam: {
+      content: "### Clinical\n- **질**: 건조·작열·가려움·**Dyspareunia**·분비물 변화\n- **요도·방광**: dysuria(UTI 없이도)·frequency·urgency·**recurrent UTI ≥3/y**·urethral discomfort\n- **외음**: vulvar irritation·redness·자극\n- **기타**: postmenopausal bleeding(drying/friction)·sexual dysfunction\n\n### 진단\n- 임상 진단 우선 (폐경 + sx + 위축 점막)\n- 별도 검사 routine 불필요\n- **Postmenopausal bleeding** → endometrial 평가 (TVUS·EMB) — GSM 단독 가정 X\n- 재발 UTI → urine culture + GSM 동반 평가",
+      sources: []
+    },
+    protocol: {
+      content: "### Step 1: Non-hormonal (first-line for mild)\n- **Vaginal lubricant** (성교 시): Astroglide·KY·Replens\n- **Vaginal moisturizer** (정기 hyaluronic acid): Replens·Hyalo Gyn\n- 비누·자극제 회피·cotton underwear\n- 골반저 운동 (요실금 동반)\n\n### Step 2: Topical Estrogen (first-line moderate-severe)\n- Estradiol vaginal cream (Premarin·Vagifem)·tablet·ring(3mo 1회)\n\n#### 사용법\n| Phase | 빈도 | 기간 |\n|---|---|---|\n| **Loading** | 매일 자기 전 1정 | **2-3주** (보통 2주) |\n| **Maintenance** | 주 2회 (월·목) | **Long-term 지속** |\n\n> 평생 사용 가능. 중단 시 sx·UTI 재발.\n\n#### 기타 (NAMS 2020)\n- **DHEA vaginal insert (prasterone)** — moderate-severe dyspareunia\n- **Ospemifene** (경구 SERM)\n\n### Recurrent UTI 동반\n- **Topical estrogen이 재발성 UTI 감소 근거** ([[recurrent-uti]])\n- 항생제 prophylaxis보다 우선 검토",
+      sources: []
+    },
+    precaution: {
+      content: "### ADR\n- Vaginal discharge·자극 (초기 mild — 자연 해소)\n- 가슴 압통 (드묾)\n- **비정상 출혈 → 즉시 내원·endometrial 평가**\n\n### 추적\n- 6-12개월 sx·유방 평가\n- **Postmenopausal bleeding → TVUS·EMB**\n- 유방암·자궁내막암 hx → 부인과 refer\n- Systemic absorption minimal (topical 저용량, NAMS 2020 재확인)",
+      sources: []
+    },
+    referral: {
+      content: "- Postmenopausal bleeding → 부인과 즉시\n- 유방암·자궁내막암 hx + topical estrogen 결정 → 부인과·종양내과 협진\n- 반응 부족 + dyspareunia 지속 → 부인과 (pelvic PT·DHEA·ospemifene)\n- 골반저 dysfunction → 비뇨부인과 (pelvic floor PT)\n\n관련: [[menopause]] · [[recurrent-uti]] · [[uti-complicated-classification]] · [[hematuria]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["gsm-genitourinary-menopause"] = _gsm_v2;
+KNOWLEDGE_BUNDLE["GSM"] = _gsm_v2;
+KNOWLEDGE_BUNDLE["폐경 비뇨생식기 증후군"] = _gsm_v2;
+KNOWLEDGE_BUNDLE["atrophic vaginitis"] = _gsm_v2;
+KNOWLEDGE_BUNDLE["vaginal estrogen"] = _gsm_v2;
+KNOWLEDGE_BUNDLE["topical estrogen"] = _gsm_v2;
+KNOWLEDGE_BUNDLE["recurrent UTI menopause"] = _gsm_v2;
+KNOWLEDGE_BUNDLE["vulvovaginal atrophy"] = _gsm_v2;
+
+/* uti-complicated-classification — Uncomplicated vs Complicated UTI (Drive gaps 6-9). [CLINICAL] */
+var _uti_complicated_v2 = {
+  kind: "topic",
+  keywords: ["uti-complicated-classification","complicated UTI","uncomplicated UTI","UTI classification","HAUTI","healthcare-associated UTI"],
+  primarySources: [
+    "Gupta K et al. IDSA 2011 Uncomplicated cystitis/pyelonephritis guideline. Clin Infect Dis 2011;52(5):e103-120. PMID:21292654",
+    "Anger J et al. AUA/CUA/SUFU Recurrent UTI Guideline 2019. PMID:31042112"
+  ],
+  sections: {
+    definition: {
+      content: "UTI 분류 = 항생제 선택·의뢰 결정의 1차 기준. **폐경 후 여성 자동 complicated 아님** (IDSA 2011 본문 명시 — 일부 전문가 uncomplicated로 봄).",
+      sources: []
+    },
+    notes: {
+      content: "### Uncomplicated UTI (IDSA 2011) — 모두 충족\n- Healthy non-pregnant **폐경 전** 여성\n- 정상 해부학·기능 / 면역 정상 / 동반 질환 없음\n- 최근 시술·catheter X / 항생제 노출 X\n\n### Complicated UTI — 다음 중 하나라도\n**환자 특성**: 남성 (모든 UTI)·임신·**65세+**·면역억제 (HIV·면역억제제·스테로이드)\n**동반 질환**: DM (특히 조절 불량)·신부전 (CrCl<60)·CKD·HIV\n**해부학·기능**: 결석·indwelling catheter·urologic 시술·신경인성 방광·요로 폐쇄·**BPH**·cystocele/prolapse·신장 이식\n**감염 특성**: 다제내성균 노출·최근 ABx (<3mo)·HAUTI·의료환경·pyelonephritis hx\n\n### 폐경 후 여성 — 사례별 (자동 complicated 분류 회피)\n다음 동반 시 complicated:\n- **GSM** ([[gsm-genitourinary-menopause]]) — recurrent UTI 흔한 원인\n- BPH equivalent (cystocele·prolapse)\n- 신경인성 방광·면역억제·조절 불량 DM\n\n무증상 GSM + 잘 관리되는 폐경 후 여성 단순 cystitis는 uncomplicated 외래 처방 가능 — **재발 시 GSM 평가 routine**.\n\n### 2025 IDSA 분류 재정비 (부기)\n전통 \"환자/해부학\" → **localized vs systemic 증상 기반** 재정비. Pyelonephritis·urosepsis = systemic / simple cystitis = localized. 외래에서는 **증상 + 환자/해부학 factor** 함께 평가.",
+      sources: []
+    },
+    protocol: {
+      content: "### Uncomplicated cystitis\n1차 ABx (IDSA 2011): **Nitrofurantoin** 100mg BID × 5d / **Fosfomycin** 3g 단회 / **TMP-SMX** 800/160mg BID × 3d (저항률 <20%)\n외래 follow-up 1주\n\n### Complicated cystitis (외래)\n- 광범위 ABx (fluoroquinolone·cephalosporin)\n- **소변배양 + 감수성 결과 확인**\n- 외래 follow-up 3-5일 + 결과 review\n\n### Pyelonephritis ([[acute-pyelonephritis]])\n- IDSA 2010 — 외래는 ciprofloxacin·levofloxacin (저항률 점검)\n- 입원 적응: hypotension·구토·면역저하·노인·임신·anatomic 이상\n\n### Recurrent UTI ([[recurrent-uti]])\n- AUA 2019: 행동수정·국소 estrogen·D-mannose·cranberry·prophylaxis ABx",
+      sources: []
+    },
+    referral: {
+      content: "- 복잡 해부학 (결석·폐색·이식·신경인성 방광) → 비뇨기과\n- Recurrent UTI ≥3/y + GSM → 부인과/비뇨부인과 ([[gsm-genitourinary-menopause]])\n- Pyelonephritis 입원 적응 → 응급실\n- 다제내성균 (ESBL·CRE) → 감염내과\n\n관련: [[recurrent-uti]] · [[acute-pyelonephritis]] · [[gsm-genitourinary-menopause]] · [[hematuria]] · [[CKD]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["uti-complicated-classification"] = _uti_complicated_v2;
+KNOWLEDGE_BUNDLE["complicated UTI"] = _uti_complicated_v2;
+KNOWLEDGE_BUNDLE["uncomplicated UTI"] = _uti_complicated_v2;
+KNOWLEDGE_BUNDLE["UTI classification"] = _uti_complicated_v2;
+KNOWLEDGE_BUNDLE["HAUTI"] = _uti_complicated_v2;
+KNOWLEDGE_BUNDLE["healthcare-associated UTI"] = _uti_complicated_v2;
