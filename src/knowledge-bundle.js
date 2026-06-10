@@ -3275,6 +3275,10 @@ var _cascade_v2 = {
     "elderly-mir-tips": {
       content: "### 노인 부종 → NSAIDs 문진 [TIPS — by 미르 경험]\n노인에서 이유 없이 붓는 경우 **NSAIDs를 꼭 문진**.\n- NSAID-induced edema: PGE2 차단 → renal sodium retention\n- 동반 약물: 칼슘 차단제(amlodipine), TZD, gabapentin\n- Cascade 회피: 이뇨제 추가 전 NSAIDs 중단·교체 우선\n\n### 노인 스테로이드 처방 전 4가지 사전 확인 [TIPS — by ENT 교수]\n| 확인 | 이유 |\n|---|---|\n| **당뇨** | 혈당 상승 — DM도 처방 가능, 환자 교육 필수 |\n| **황반변성** | 스테로이드 악화 — 다른 옵션 우선 고려 |\n| **녹내장** | 안압 상승 |\n| **위궤양·BPSD** | 소화기 출혈·정신 증상 악화 |\n\nDM이 있다고 절대 금지가 아님 — '혈당 상승에 유의'라는 환자 교육.\n\n### Cascade 방지 핵심 질문\n새 증상 호소 노인 환자에서 **첫 질문은 '기존 약 부작용?'**\n- 부종 → NSAIDs·CCB·TZD?\n- 변비 → CCB·항콜린·opioid?\n- 기침 → ACEi?\n- 어지럼 → 항고혈압·BZD·항히스타민?\n- 인지 저하 → 항콜린 burden·BZD?\n\n→ STOPP/START·Beers 활용 우선, 추가 처방은 마지막 수단.",
       sources: []
+    },
+    chei_oab_cascade_dementia: {
+      content: "### ChEI → OAB 항무스카린제 cascade — Mirabegron 우선 (Cooper JAGS 2026) [CLINICAL — 조건부]\n> Cooper N et al. J Am Geriatr Soc 2026;74(5):1314-1325 — 치매 환자 cascade 분석\n\n**핵심 발견**:\n- 치매 환자에서 ChEI (donepezil·rivastigmine) → urinary incontinence/OAB → **항무스카린제** 처방 cascade 흔함\n- 항무스카린제 (oxybutynin·tolterodine) 추가 시 **섬망 HR 1.35** (CI wide·통계적 유의성 경계)\n- Cognitive deterioration·낙상·hospitalization 위험 ↑\n\n**대체 전략**:\n- **Mirabegron** (β3 agonist) 우선 — 항콜린 부작용 없음\n- 행동 치료 (bladder training·골반저 운동)\n- ChEI 효과 재평가 → 효과 부족 시 중단 검토\n- GSM 동반 → topical estrogen ([[gsm-genitourinary-menopause]])",
+      sources: ["Cooper N et al. J Am Geriatr Soc 2026;74(5):1314-1325. PMID:41833520"]
     }
   },
   uiHooks: {
@@ -4378,6 +4382,10 @@ var _deprescribing_v2 = {
     antidepressant_slow_tapering: {
       content: "### 항우울제 감약 — Slow (Hyperbolic) Tapering + CBT (BMJ 2025)\n> Wise J. BMJ news 2025. PMID:41381099\n\n**급격 중단 금지** — 세로토닌 수용체 약리(점유율 비선형)에 기반한 **hyperbolic tapering**:\n- 수개월에 걸친 소량 단계 감량 (예: 50% → 25% → 12.5% → 6.25% ...)\n- 표준 \"매주 25% 감량\" 도식은 후반 단계에 수용체 점유 급락 → 금단 위험\n- CBT 동시 병행 → 재발·금단증상 위험 최소화\n\n**적응증**:\n- 장기 항우울제 사용 (>2년) + 적응증 해소 또는 부작용\n- 고령 STOPP 대상 (Beers/STOPP) 다약제 정리\n- 환자 자발적 감약 의사\n\n**외래 프로토콜**:\n1. 환자에 \"slow tapering = 정상 과정·실패 아님\" 설명\n2. 액상 제형 또는 정제 절반·1/4 활용 (드물게 compounded liquid 필요)\n3. 4–8주 간격 외래 추적 + 금단증상 체크리스트 (DESS — Discontinuation-Emergent Signs and Symptoms)\n4. CBT 단기 코스(8–12회) 동시 병행\n5. 금단증상 발생 시 → 최근 단계로 복귀 + 더 느린 감량\n\n**고령 우선 대상**: TCA·paroxetine·venlafaxine (반감기 짧고 금단 심함)",
       sources: ["Wise J. Mental health charity recommends slow tapering and CBT for antidepressant withdrawal. BMJ 2025;391:r2353. PMID:41381099, DOI:10.1136/bmj.r2353"]
+    },
+    ppi_cluster_rct: {
+      content: "### PPI 감약 — 클러스터 RCT (JAMA Intern Med 2026) [CLINICAL]\n> JAMA Intern Med 2026;186(6):668-676 — 환자 + GP 병행 개입 n=34,409\n\n**개입군 vs 대조군**:\n- PPI 감약 성공: **14.9% vs 7.0%** (대조)\n- **GERD 악화 없음** — 안전한 감약 가능\n- 통계적 유의: 환자 교육 + GP 교육 동시 진행이 효과적\n\n**임상 적용**:\n- 장기 PPI 사용 (≥2년) + Barrett's esophagus 없음·NSAID 동반 미복용 → 감약 시도\n- 단계: 1/2 dose × 2-4주 → on-demand → 중단\n- 환자 교육 (재발 증상 → 즉시 재개)·H2RA bridge\n- GP 외래 routine으로 PPI 적응증 재평가 (Stop the slowed-release dependency)",
+      sources: ["JAMA Intern Med 2026;186(6):668-676. PMID:41973459"]
     }
   },
   uiHooks: null
@@ -5068,6 +5076,10 @@ var _diabetes_v2 = {
     referral: {
       content: "- DKA/HHS → 응급실\n- 단백뇨 진행, eGFR<30 → [[CKD]] 신장내과\n- 망막증 → 안과\n- 1형 의심·임신·다중약제 후 조절 불량 → 내분비\n- 관련: [[diabetes-dyslipidemia]], [[CKD]], [[obesity]], [[glp1-selection-strategy]]",
       sources: []
+    },
+    tirzepatide_surpass_early: {
+      content: "### Tirzepatide 조기 T2DM — SURPASS-EARLY (Ann Intern Med 2026) [CLINICAL]\n> Eli Lilly 재원 오픈라벨 RCT (이해충돌 명시)\n\n**핵심 결과**:\n- **정상혈당 회복률 60.2% vs 24.0%** (대조 vs tirzepatide)\n- 초기 T2DM (진단 ≤5년·HbA1c <7.5%) 대상\n- 체중·HbA1c·인슐린 저항성 동시 개선\n\n**임상 메시지**:\n- 조기 T2DM에서 **tirzepatide 적극 검토** — metformin 1차 후 빠른 step-up 근거\n- 단 **이해충돌 (Eli Lilly 재원·오픈라벨)** — 결과 해석 신중\n- 한국 비급여·환자 부담·장기 안전성 데이터 부족\n- 비만 동반 시 [[glp1-selection-strategy]] · [[mounjaro]] 참조",
+      sources: ["Ann Intern Med 2026 (Epub 05-26). PMID:42184419"]
     }
   },
   uiHooks: null
@@ -5114,6 +5126,10 @@ var _hypertension_v2 = {
     referral: {
       content: "### 이차성 고혈압 의뢰\n- <30세(가족력 없는 청년) 또는 **≥55~60세 새로 발생**\n- 약물 저항성 → [[resistant-hypertension]]\n- 처음부터 ≥180/120 또는 심한 합병증\n- 임신 중 → 산부인과\n- 관련: [[resistant-hypertension]], [[home-based-hypertension]], [[CKD]], [[diabetes]], [[heart-failure]]",
       sources: []
+    },
+    severe_hypertension_afp_2026: {
+      content: "### Severe Hypertension (≥180/110, TOD 없음) — AFP 2026 (Gauer) [CLINICAL]\n> Gauer RL. Am Fam Physician 2026;113:459-468\n\n**핵심 구분**:\n- **Severe HTN** (≥180/110 + 표적장기손상 **없음**) ≠ Hypertensive emergency\n- 외래 1위 원인: **약물 비순응** → 재복용/증량으로 해결\n\n**관리 원칙**:\n- **입원 치료는 단기 결과 개선 X** — 오히려 심혈관 사건·AKI·재원기간 ↑ (RCT 근거)\n- **단기작용·IV 항고혈압제 금기** — 급격 BP 강하 → 허혈성 사건\n- 경구 약물 재시작·증량 + 1-3일 외래 f/u\n- 가정 BP 측정·생활습관 강화\n\n**이차성 HTN 평가 4대 트리거**:\n1. **저항성** 고혈압 (3제 + 이뇨제 후도 미달)\n2. **점진적 악화** (안정기 환자 BP 신규 상승)\n3. **<30세** 발생\n4. **조기 TOD** (LVH·proteinuria·신부전·망막증)\n\n→ 4대 트리거 시 RAAS·PA·갈색세포종·COA 평가 ([[resistant-hypertension]])",
+      sources: ["Gauer RL. Severe Hypertension: Evaluation and Treatment. Am Fam Physician 2026;113:459-468. PMID:42202349"]
     }
   },
   uiHooks: null
@@ -7178,6 +7194,10 @@ var _palliative_depression_ketamine_v2 = {
     precaution: {
       content: "- 완화의료 대상 rigorous RCT 부족 — 수술기 암 환자 소규모 + 개방 라벨 중심\n- 장기 유지 요법·용량 프로토콜 미확립\n- 기대 여명에 따른 유지 전략 개별화 필요\n- 정신과 협진 또는 완화의료팀 내 전문 역량 필요\n- [출처 미확인 — researcher 검증 권장]: 한국 케타민 완화의료 우울 적용 가이드라인·급여\n- 관련: [[palliative-pain]], [[anxiety-depression-cbt]], [[afp-eol-symptom-management]]",
       sources: []
+    },
+    psychostimulants_augmentation: {
+      content: "### 정신자극제 (Psychostimulants) — 완화의료 우울 (JPSM 2026) [CLINICAL — 조건부]\n> JPSM 2026 — 정신자극제(methylphenidate·modafinil) 완화의료 우울 review\n\n**핵심 결론**:\n- **단독 약물로서 근거 약함** — 항우울제 대체 X\n- **Augmentation (보조)으로 소폭 효과** — 항우울제 + 정신자극제 조합\n- **ADHD 동반 환자에서만 선별 적용** — 일반 완화의료 우울에 routine X\n\n**적응증 (선별)**:\n- 기대 여명 짧음 (SSRI 발현 대기 시간 부족) — 케타민·정신자극제 검토\n- 무기력·집중력 저하 우세 (피로 도메인) + ADHD hx\n- 항우울제 효과 부족 + 짧은 기대 여명\n\n**부작용**: 빈맥·HTN·식욕 ↓·수면 ↓·불안 ↑ — 완화의료에서 빈맥/HTN 부담 점검",
+      sources: ["JPSM 2026;72(1):e58-e63. PMID:41905727"]
     }
   },
   uiHooks: null
@@ -8984,3 +9004,39 @@ KNOWLEDGE_BUNDLE["hypogonadism"] = _hypogonadism_v2;
 KNOWLEDGE_BUNDLE["testosterone"] = _hypogonadism_v2;
 KNOWLEDGE_BUNDLE["테스토스테론"] = _hypogonadism_v2;
 KNOWLEDGE_BUNDLE["TRT"] = _hypogonadism_v2;
+
+/* adult-vaccination-korea-faq — 성인 예방접종 FAQ (5-27 + 6-8 deep-extract 신규). [INSIGHTS] */
+var _adult_vacc_korea_faq_v2 = {
+  kind: "topic",
+  keywords: ["adult-vaccination-korea-faq","성인 예방접종 FAQ","vaccine hesitancy","백신 이상반응","면역노화","훈련면역","trained immunity","immunosenescence"],
+  primarySources: [
+    "Coles VAH et al. Adult Vaccination: 5 Common Patient Concerns Addressed. Am Fam Physician 2026. PMID:42101598",
+    "Hum Vaccin Immunother 2026;22(1):2624234. PMID:41665459"
+  ],
+  sections: {
+    definition: {
+      content: "성인 환자 예방접종 상담 시 빈번한 5대 우려 + 근거 기반 응답. 면역노화(immunosenescence) + 훈련면역(trained immunity) 관점 통합.",
+      sources: []
+    },
+    notes: {
+      content: "### 5대 환자 우려 — 근거 기반 응답 (Coles AFP 2026)\n| 우려 | 응답 |\n|---|---|\n| **\"백신이 자가면역 유발?\"** | 대규모 코호트 — guillain-Barré 등 매우 드물고 절대 위험 미미 (감염 후 위험이 훨씬 큼) |\n| **\"여러 백신 동시 위험?\"** | ACIP/CDC 권고: 사백신·생백신 동시 안전. 면역 반응 부족 X |\n| **\"인플루엔자 백신이 독감 유발?\"** | 사백신 = 바이러스 비활성. 발열·근육통은 면역 활성 부산물 |\n| **\"이전 접종 후 부작용 = 영구 금기?\"** | 대부분 일시적·재접종 안전. 진짜 금기 (아나필락시스·중증 알러지)만 회피 |\n| **\"노인은 백신 효과 없다?\"** | 면역노화로 효과 ↓ but 절대 효과 여전히 의미 — **고용량 인플루엔자 (65+ 4배)**·RZV 등 적응 |\n\n### 면역노화·훈련면역 (Hum Vaccin Immunother 2026)\n- **Immunosenescence**: 노화로 T세포·항원 제시 ↓ → 백신 반응 ↓ (특히 75세+)\n- **Trained immunity**: 일부 백신 (BCG·MMR)이 비특이적 보호 효과 → 노인 감염 사망률 ↓ 가능성\n- 5대 백신 근거 표 (RZV·HD-flu·pneumococcal·RSV·COVID) — 면역노화 보완 전략",
+      sources: []
+    },
+    protocol: {
+      content: "### 외래 상담 routine\n1. **5대 우려 자가 screening** — 환자가 명시하지 않아도 가능성 점검\n2. 상담 시간 5분 이내 — 5대 응답 카드/포스터 활용\n3. **고령 65+**: HD-flu·PCV20/21·RSV·RZV·COVID 5종 systematic 권고\n4. **면역저하**: [[immunocompromised-vaccination]] 참조\n5. 한국 KDCA 65+ NIP (인플루엔자·PPSV23·대상포진) 무료 활용\n\n### 한국 실전\n- KDCA 무료 + 자비 권고 분리 설명\n- 비자가 비용 부담 환자 — 우선순위 (HD-flu·RZV) 명시\n- 만성질환 동반 시 추가 권고 (당뇨·CKD·HF·COPD)",
+      sources: []
+    },
+    referral: {
+      content: "- 면역억제 시작 예정 → 백신 2주 전 [[immunocompromised-vaccination]]\n- 백신 거부 강함 + 가족 압력 → 가정의학과 동기면담\n- 이전 아나필락시스 hx → 알러지내과 (재접종 가능성 평가)\n\n관련: [[adult-vaccination-summary]] · [[immunocompromised-vaccination]] · [[pneumococcal-vaccine]] · [[herpes-zoster-vaccine]] · [[hepatitis-ab-vaccine]] · [[travel-vaccination]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["adult-vaccination-korea-faq"] = _adult_vacc_korea_faq_v2;
+KNOWLEDGE_BUNDLE["성인 예방접종 FAQ"] = _adult_vacc_korea_faq_v2;
+KNOWLEDGE_BUNDLE["vaccine hesitancy"] = _adult_vacc_korea_faq_v2;
+KNOWLEDGE_BUNDLE["백신 이상반응"] = _adult_vacc_korea_faq_v2;
+KNOWLEDGE_BUNDLE["면역노화"] = _adult_vacc_korea_faq_v2;
+KNOWLEDGE_BUNDLE["immunosenescence"] = _adult_vacc_korea_faq_v2;
+KNOWLEDGE_BUNDLE["trained immunity"] = _adult_vacc_korea_faq_v2;

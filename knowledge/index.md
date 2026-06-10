@@ -100,6 +100,7 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - cervical-referred-pain.md — "등 통증"이 경추 referred·Dwyer facet pain map (C2-T1)·myofascial trigger point·radiculopathy C7-T1 견갑골 안쪽/등 중심부 referred·Spurling test routine [CLINICAL] PMID:2402682 Dwyer Spine 1990 + PMID:27250899 + PMID:27175952 AAFP
 - gsm-genitourinary-menopause.md — GSM 질·요도(recurrent UTI ≥3/y)·외음 sx + Step 1 non-hormonal (lubricant·moisturizer) + Step 2 topical estrogen loading 2주 daily → maintenance 주 2회·DHEA/ospemifene·postmenopausal bleeding 즉시 평가 [CLINICAL] PMID:32852449 NAMS 2020 — topic
 - uti-complicated-classification.md — Uncomplicated (건강 비임신 폐경 전 여성) vs Complicated (남성·임신·65+·면역억제·DM·해부학 이상·BPH·catheter·다제내성)·**폐경 후 자동 complicated 아님 정정**·2025 IDSA localized/systemic 재정비 [CLINICAL] PMID:21292654 IDSA 2011 + PMID:31042112 AUA recurrent 2019 — topic
+- adult-vaccination-korea-faq.md (guidelines/) — 성인 예방접종 5대 환자 우려 응답·면역노화·훈련면역·65+ 5종 systematic (HD-flu/PCV/RSV/RZV/COVID)·KDCA NIP 활용 [INSIGHTS] PMID:42101598 Coles AFP 2026 + PMID:41665459 Hum Vaccin Immunother 2026 — topic
 
 ### by-drug/
 - vaccine-interval.md — 백신 접종 간격 원칙 (생+사/생+생/사+사) [CLINICAL] — topic
