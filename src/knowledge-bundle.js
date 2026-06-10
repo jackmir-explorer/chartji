@@ -3991,6 +3991,10 @@ var _neck_mass_v2 = {
     differential: {
       content: "**Horses**: 림프절염/반응성 림프절병증 ★가장 흔함 / 피지낭종·지방종 / 갑상선 결절\n\n**Zebra**: ⚠ 림프종 (4–6주 지속·B증상·치료 무반응) / ⚠ 전이성 악성종양",
       sources: []
+    },
+    afp_2026_framework: {
+      content: "### AFP 2026 3범주 틀 + 영상·FNA 알고리듬 (Wilbur) [CLINICAL]\n> Wilbur J. Am Fam Physician 2026\n\n**3범주 틀**:\n| 범주 | 단서 | 평가 |\n|---|---|---|\n| **염증성 (Inflammatory)** | 급성·압통·동반 URI/치성 | 보존·항생제 trial |\n| **선천성 (Congenital)** | 청소년·정중선·낭성 | sono → 적응 시 ENT |\n| **종양성 (Neoplastic)** | **무통성·진행성·>1.5cm·≥4주** | sono 즉시 → FNA·ENT |\n\n**영상 알고리듬**:\n- **1차 영상 = 경부 sono** (염증·낭성·결절 분류)\n- 종양 의심 → 조영 CT/MRI + ENT 의뢰\n- 갑상선 결절 동반 → K-TIRADS ([[thyroid-fna-cnb]])\n\n**FNA 수치 단서**:\n- LN 단경 **>1.5cm + 동심성 ECHO·hilum 소실** → FNA 적응\n- 갑상선 K3-K5 + 크기 cutoff (K-TIRADS) → FNA\n- ENT 협진 후 결정 (외래 단독 FNA 비권고)\n\n관련: [[lymphadenopathy]] · [[thyroid-fna-cnb]] · [[cervical-lymphadenitis]] · [[hematologic-malignancy-uri-screening]]",
+      sources: ["Wilbur J. Neck Mass: Evaluation. Am Fam Physician 2026. PMID:41839107"]
     }
   },
   uiHooks: null
@@ -4830,6 +4834,10 @@ var _mash_v2_full = {
     referral: {
       content: "- FIB-4 ≥1.30 (중간) → FibroScan 또는 소화기내과 협진\n- FIB-4 ≥2.67 → 간전문의 의뢰\n- FibroScan F2 이상 + 레스메티롬 처방 고려 → 간전문의 협진\n- 간경변 의심 (복수·황달·혈소판↓) → 즉시 의뢰\n- 알코올 사용장애 동반 시 (MASH-Alc 중복) → 간내과 + 중독전문\n- 비만수술 고려 → 외과\n- 관련: [[wegovy]], [[glp1-selection-strategy]], [[diabetes-dyslipidemia]]",
       sources: []
+    },
+    masld_diagnosis_treatment_jama: {
+      content: "### MASLD/MASH 진단·치료 — JAMA 2026 종합 리뷰 (Tilg) [CLINICAL]\n> Tilg H et al. JAMA 2026\n\n**진단**:\n- MASLD 명명: NAFLD → MASLD (Metabolic dysfunction-Associated Steatotic Liver Disease) 공식 전환\n- **FIB-4** 1차 (외래) → ≥1.30 중간·≥2.67 고위험 → FibroScan/MRE 단계화\n- 간생검 적응: noninvasive 평가 불일치·중첩 진단 (AIH/PBC) 의심\n\n**치료 (FDA 조건부 승인 약제)**:\n- **Resmetirom** (Rezdiffra) — F2-F3 fibrosis MASH 1st FDA 승인 (2024.3)·MRI-PDFF·VCTE 개선 근거\n- **Semaglutide** — MASH F1-F3 효과 (NEJM 2024) — 추가 적응증 확대 검토\n- 병용·sequence 전략 발전 중\n\n**구 JAAPA 미승인 기술 정정**: 이전 entry의 \"FDA 미승인\" 기술 → **resmetirom 2024.3 승인 확정** 반영.\n\n**BMJ 2025 추가 단서** (초록 미제공): MASLD 진단·치료 갱신·일차의료 게이트키퍼 강화.",
+      sources: ["Tilg H et al. JAMA 2026. PMID:41212550", "BMJ 2025;391:r1928. PMID:41232955 (초록 미제공)"]
     }
   },
   uiHooks: null
@@ -6412,6 +6420,10 @@ var _pocus_efsumb_v2 = {
     referral: {
       content: "- POCUS Level 1 한계 초과 소견 → 영상의학과·해당 전문과 의뢰\n- 심각한 소견(심낭압전, 대동맥류 파열 의심) → 즉시 응급 의뢰",
       sources: []
+    },
+    dvt_pocus_qi: {
+      content: "### DVT POCUS QI — ED 회피 + 비용 절감 (Hui POCUS J 2026) [CLINICAL]\n> Hui CK et al. POCUS J 2026\n\n**핵심**: 일차의료 외래 POCUS DVT 평가 도입 후:\n- **46% ED 회피** (DVT 의심 환자)\n- **$85,000/year 비용 절감** (단일 클리닉 기준)\n- 진단 정확도 — 정식 doppler와 일치율 ↑\n\n**프로토콜 (간소화 2-point compression)**:\n1. **대퇴정맥 (common femoral)**: 대퇴 인대 직하방, 압박 가능성\n2. **슬와정맥 (popliteal)**: 슬와 fossa, 압박 가능성\n\n→ 두 위치 모두 압박 가능 = DVT 배제 가능 (sensitivity ~95%)\n→ 압박 불가 = DVT 의심 → doppler 또는 응급실\n\n**일차의료 적용 조건**:\n- 5-10시간 훈련으로 GP 단기 acquisition 가능\n- Wells score + age-adjusted D-dimer ([[clinical-reasoning]] pretest_probability_d_dimer) + POCUS 통합\n- 외래에서 DVT 의심 → bilateral 평가 → DVT 양측 vs 단측 ([[skin-soft-tissue-infection]] 양측 cellulitis 감별과 연계)",
+      sources: ["Hui CK et al. POCUS J 2026. PMID:42131561"]
     }
   },
   uiHooks: null
@@ -7560,6 +7572,10 @@ var _ramsay_hunt_syndrome_v2 = {
     referral: {
       content: "- **즉시 의심·확인 시 ENT/신경과 의뢰** — 72시간 이내 치료 시작 결정적\n- 안면마비 호전 없음·악화 → ENT (전기생리·재활)\n- 청력저하 동반 → 청력검사 + ENT\n- 신경학적 이상 (구음장애·복시·편측 위약·심한 어지럼) → 응급 영상 + 신경과\n\n### 관련\n- [[sudden-hearing-loss]] — 청력저하 단독·동반 시 감별\n- [[meniere]] — 어지럼 + 청력저하 감별\n- [[dizziness]] — 어지럼증 분기\n- [[macular-degeneration-steroid-caution]] — 스테로이드 처방 전 안과 확인",
       sources: []
+    },
+    bells_palsy_vs_rhs: {
+      content: "### Bell's palsy vs Ramsay Hunt — 분기 결정 (Kim J Audiol Otol 2025) [CLINICAL]\n> Kim et al. — 두 entity 감별·예후 예측·치료 결정 review\n\n**RHS 단서** (Bell's palsy 대비):\n- **귀 통증·이개 발진** (vesicular)\n- 청력저하·이명·어지럼증 동반\n- 안면마비 **더 심한 정도** (House-Brackmann grade ↑)\n- **예후 불량** (Bell's palsy 대비 회복률 ↓)\n\n**치료 분기**:\n- Bell's palsy: prednisolone 단독 (72h 이내) — antiviral 효과 불확실\n- **RHS**: **prednisolone + valacyclovir** (또는 famciclovir/acyclovir) — 72h 이내 병합 권고\n\n**저자 오기 정정**: 이전 PMID:38520982 RHS antiviral meta — Lin YY → **Fujiwara T 외** (이전 인용 정정).\n\n→ 외래 안면마비 환자 routine: 이개·외이도 진찰 + 청력·어지럼 문진. RHS 단서 1개라도 → antiviral 병합.",
+      sources: ["Kim et al. Bell's palsy vs Ramsay Hunt syndrome. J Audiol Otol 2025. PMID:39916394"]
     }
   },
   uiHooks: null
@@ -7759,6 +7775,22 @@ var _clinical_reasoning_v2 = {
     anchoring_case_example: {
       content: "### 사례 — \"환자가 원인을 말해도 동반 질환 고려\" [INSIGHTS — by 미르 gaps 2026-05-26]\n\n**케이스**: 스트레스 동반 체중감소 + 생리불순 + AFP 상승. 환자가 \"스트레스 때문에 빠졌다\" 호소.\n\n**Anchoring 함정**: 환자 제공 원인(스트레스)에 가설 고정 → 체중감소·생리불순·AFP 상승을 단일 framing(스트레스성)으로 설명 시도 → \"더 중요한 amplifier\"(갑상선·종양·DM·IBD·EDD/Depression·만성 감염·임신·간질환·난소 GCT) framing을 못 바꿈.\n\n**대응**:\n- 체중감소 → Thyroid·종양·DM·IBD·EDD/Depression·TB/HIV 감별\n- 생리불순 → Prolactin·LH·FSH·Estradiol·urine HCG·LMP/양/기간 (산부인과 evaluation 필요성 판단)\n- AFP 상승 → [[afp-elevation-workup]] 5축 differential (임신·간질환·GCT·흡연·유전적)\n\n**Routine**: 환자가 호소 원인을 단정해도 lab/증상 cluster가 그 단일 framing으로 모두 설명 안 되면 → 별개 가설 강제 평가. \"환자 발언 framing\"에 anchoring하지 말 것.",
       sources: []
+    },
+    education_strategy: {
+      content: "### 진단추론 교육 전략 [INSIGHTS]\n> Petersen 2025 — \"bias 인식\" 단독 강의는 임상 정확도 향상 미미. **A vs B 감별 단서 지식 강화**가 anchoring·premature closure 차단의 실효성 있는 경로.\n\n- 케이스 기반 교육 + immediate feedback\n- discriminating features 명시 (예: SLE vs viral arthralgia — symmetric peripheral·malar rash·photosensitivity)\n- self-explanation 훈련 (\"왜 이게 X 아닌 Y인가?\")",
+      sources: ["Petersen E. Cognitive bias and clinical reasoning education. AACN 2025. PMID:40445787"]
+    },
+    pretest_probability_d_dimer: {
+      content: "### Pretest Probability 적용 — Age-Adjusted D-dimer (Le Gal JAMA 2026)\n> RCT n=3,205\n\n**Age-adjusted D-dimer cutoff** (>50세): age × 10 ng/mL (예: 70세 → 700 ng/mL)\n- PE/DVT 의심에 적용 시 안전하게 추가 영상 검사 회피 가능\n- 단순 500 ng/mL cutoff 사용 시 고령 환자에서 false positive ↑·불필요 CT angiography\n\n**임상 적용**:\n- Wells/Geneva score 산출 → low-intermediate pretest probability\n- → age-adjusted D-dimer 음성 → PE/DVT 안전 배제\n- Pretest probability 명시 routine 강화",
+      sources: ["Le Gal G et al. JAMA 2026. PMID:41490105"]
+    },
+    anchoring_va_jama: {
+      content: "### Anchoring 편향 대규모 실증 — VA 10만명 (Ly JAMA Intern Med 2023)\n> VA 전국 108,019건 분석\n\n**핵심 발견**: triage 기록에 \"CHF\" 단 한 줄 기재만으로:\n- PE 검사율 **4.6 percentage point 감소**\n- 검사 **15.5분 지연**\n- BNP는 오히려 **6.9pp 더 많이** 시행 — anchoring이 **확증 방향**으로 검사를 편향\n\n→ 한 줄 triage 라벨이 differential 폭을 좁힘. **triage 정보 비판적 수용** + 자기 진단 path가 라벨에 끌려가는지 자문.",
+      sources: ["Ly DP et al. Evidence for Anchoring Bias During Physician Decision-Making. JAMA Intern Med 2023;183(8):818-823. PMID:37358843"]
+    },
+    anchoring_rct_mamede: {
+      content: "### Anchoring 극복 = 감별 지식 (Mamede BMJ Qual Saf 2024 RCT)\n> 레지던트 68명 RCT\n\n**핵심**: \"신중하게 더 생각하는 것 (metacognition)\"만으로는 anchoring 풀지 못함.\n- 더 긴 시간 + 낮은 자신감 → 두 그룹 동일\n- **감별 지식 높은 그룹만 anchoring에 저항** (p=0.02)\n\n→ \"천천히 생각하기\" 단독 부족. **A vs B 구별하는 discriminating features 지식**이 핵심.",
+      sources: ["Mamede S et al. BMJ Qual Saf 2024;33(9):563-572. PMID:38365449"]
     }
   },
   uiHooks: null
