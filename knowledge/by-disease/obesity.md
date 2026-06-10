@@ -192,6 +192,47 @@ relations: []
 
 ## 질환 특이 Template [TIPS]
 
+## Weight Gain 흔한 약물 — 비만 환자 hx 평가 필수 [CLINICAL]
+
+> 근거: Domecq JP et al. Drugs Commonly Associated With Weight Change: A Systematic Review and Meta-analysis. J Clin Endocrinol Metab 2015;100(2):363-370. PMID:25590213. 보조: Apovian CM et al. Endocrine Society 2015 Obesity Pharmacotherapy Guideline. PMID:25590212
+
+비만 환자 평가 시 **현재 복용 약물이 체중 증가에 기여하지 않는지 routine 점검**. 가능 시 대체 약물 검토.
+
+### 정신과
+- **항정신병약**: olanzapine·clozapine·quetiapine·risperidone (**가장 강함**)
+- 항우울제: **mirtazapine**·paroxetine·amitriptyline·TCA
+- 기분안정제: lithium·valproate
+- 항불안제 일부
+
+### 신경과
+- 항경련제: **gabapentin·pregabalin**·valproate·carbamazepine
+
+### 내분비
+- **인슐린**·**sulfonylurea** (glimepiride 등)·**TZD (pioglitazone)**
+- 스테로이드 (경구·관절내·국소·흡입)
+- 호르몬: 경구피임약·HRT·tamoxifen·testosterone
+- Anti-androgen
+
+### 심혈관
+- **β-blocker** (propranolol·metoprolol·atenolol)
+
+### 기타
+- 일부 항히스타민
+- α-blocker
+
+### 대체 검토
+| 기존 (체중 ↑) | 대체 (체중 중립~↓) |
+|---|---|
+| Glimepiride·인슐린 | **Metformin / GLP-1 RA / SGLT2** |
+| Olanzapine | Aripiprazole·ziprasidone (체중 영향 적음) |
+| Paroxetine·mirtazapine | Bupropion·fluoxetine (체중 중립~↓) |
+| β-blocker (HTN) | ACEi/ARB·CCB (체중 중립) |
+| Gabapentin·pregabalin | Duloxetine (체중 중립, neuropathic pain) |
+
+> ⚠ 대체는 적응증·환자 상황별 — 임의 변경 금지. **약 변경이 가능한지 + 비만 기여도** 함께 평가.
+
+---
+
 ```
 CC 체중감량
 과거 사용했던 비만 약물 :

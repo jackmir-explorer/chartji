@@ -306,3 +306,104 @@ relations: []
 - [출처 미확인 — researcher 검증 권장]: 한국 청소년·젊은 여성 ferritin 기준값 적용 여부 (연구는 스웨덴 고교생 대상)
 - 학교 보건 현장·청소년 외래 직접 적용 가능성 높음
 - 일본·동아시아 여성 식이 패턴 (쌀 중심·저육류) → 비잡식 항목 해석 맥락 보정 필요
+
+---
+
+## ACD 기전 — IL-6 / Hepcidin / TIBC 패턴 [CLINICAL]
+
+> 근거: Weiss G, Goodnough LT. Anemia of Chronic Disease. N Engl J Med 2005;352(10):1011-1023. PMID:15758012. DOI:10.1056/NEJMra041809
+
+만성 염증/감염 → IL-6 → 간에서 **hepcidin ↑** → ferroportin 분해 → (a) 장에서 철 흡수 차단 + (b) 대식세포·간세포 저장철 가둠 (철이 혈중으로 못 나옴).
+
+### ACD 검사 패턴 — IDA 감별 핵심
+
+| | IDA | **ACD** |
+|---|---|---|
+| Ferritin | 낮음 (<15-45) | **정상~상승** (급성기 반응물질) |
+| Serum iron | 낮음 | 낮음 |
+| **TIBC (transferrin)** | 높음 | **낮음** ← ACD 특징 |
+| TSAT | 매우 낮음 | 정상~약간 낮음 |
+| MCV | 정상 → 작아짐 | 보통 정구성, 진행 시 소구성 가능 |
+
+> ⚠ ACD vs IDA 감별 핵심 단서 = **TIBC 방향**. IDA는 TIBC ↑, ACD는 TIBC ↓.
+
+---
+
+## 신성빈혈 (Anemia of CKD) [CLINICAL]
+
+> 근거: KDIGO 2012 Clinical Practice Guideline for Anemia in CKD. Kidney Int Suppl 2012;2:279. PMID:23891356 (KDOQI commentary)
+
+### 기전
+- **EPO 부족**이 핵심 — 신장 peritubular fibroblast가 EPO 생성. CKD로 망가지면 EPO ↓ → 골수 적혈구 생성 부족
+- 기여 임계: **eGFR <60 (특히 <45)부터** 두드러짐
+- 추가: uremic toxin → 적혈구 수명 ↓, hepcidin 신 배설 ↓ → 축적 → ACD-like 철 가둠 겹침
+
+### 검사 패턴
+- **정구성** (보통)
+- **부적절하게 낮은 reticulocyte** — 빈혈인데 골수 반응 없음 = EPO 부족 표지
+- Iron studies — 다양 (순수 EPO 부족이면 정상 가능)
+
+### 외래 단서
+- eGFR 36 + reticulocyte 1.13% / **ARC 31.9 ×10³/μL** + Hgb 8.1 → "골수 공장이 안 돌고 있다" — Hgb 8.1이면 ARC가 **100,000+** 치솟아야 정상 반응
+
+---
+
+## Functional Iron Deficiency (FID) — RET-He 지표 [CLINICAL]
+
+> 근거: Thomas C, Thomas L. Biochemical markers and hematologic indices in the diagnosis of functional iron deficiency. Clin Chem 2002;48(7):1066-1076. PMID:12089176
+
+저장철은 충분(ferritin 정상~높음)하지만 **골수로 철 공급 속도가 부족**. "창고엔 철 있는데 생산라인으로 배달 안 됨". ACD hepcidin 기전 또는 EPO 치료로 골수 갑자기 가동 시 흔함.
+
+### RET-He (Reticulocyte Hemoglobin Equivalent)
+
+가장 민감한 지표. Reticulocyte 내 헤모글로빈 함량 → **현재 골수 철 공급 실시간 평가** (ferritin은 과거~현재 저장량).
+
+| RET-He | 해석 |
+|---|---|
+| 정상 | **~32-38 pg** |
+| **낮음 (<28-32 pg)** | 철 공급 부족 = **FID** 또는 진성 철결핍 |
+
+> Ferritin 정상이어도 RET-He 낮으면 골수 공급 부족. CKD·HF·만성 염증 환자 평가에 유용.
+
+---
+
+## ARC (Absolute Reticulocyte Count) — 함정과 해석 [CLINICAL]
+
+> 근거: Piva E et al. Clin Chem Lab Med 2015. PMID:25719320
+
+Reticulocyte는 골수에서 갓 나온 미성숙 적혈구 — 골수 적혈구 생성 활성도 지표.
+
+### % vs Absolute — 절대값 사용 필수
+- **Reticulocyte %**는 함정: "전체 적혈구 중 비율" — 빈혈로 분모(전체 RBC) 줄면 같은 생산량이라도 %가 부풀려 보임
+- **ARC = retic% × RBC수** — 정확한 절대값
+- 정상 범위: **25-75 ×10³/μL** (25,000-75,000/μL)
+
+### 빈혈 시 해석 — 핵심
+- 심한 빈혈 (Hgb 8 수준)이면 골수 정상 반응 시 **ARC 100,000+** 치솟아야 함
+- 낮은 ARC + 심한 빈혈 = **저생산성 빈혈** (ACD/신성/EPO 부족) 확증
+- 높은 ARC + 빈혈 = 출혈·용혈 (골수 멀쩡)
+
+---
+
+## IRF (Immature Reticulocyte Fraction) — 골수 회복 조기 지표 [CLINICAL]
+
+> 근거: Briggs C. Quality counts: new parameters in blood cell counting. Int J Lab Hematol 2009;31(3):277-297. PMID:19452619; CLSI H44-A2
+
+Reticulocyte 중 **가장 어린(갓 골수에서 나온) 분획의 비율** — RNA 많은 것. 골수 적혈구 생산의 **가장 빠른 실시간 지표**.
+
+| 지표 | 시점 |
+|---|---|
+| ARC | "지금까지 나온 총 생산량" |
+| **IRF** | "골수가 방금 막 가동을 올렸는지" — **며칠 더 일찍** |
+
+정상 범위: 약 **2-17%** (기기마다 다름).
+
+### 활용
+- **빈혈 회복/치료 반응 조기 신호**: 철분제·EPO·B12 후 ARC 오르기 전 **IRF 먼저 튐** — 골수 회복의 첫 봉화
+- **골수이식·항암 후 회복 monitoring**
+- 높은 IRF + 낮은 ARC = "골수가 막 반응 시작했으나 아직 성숙한 적혈구로 못 내보냄"
+
+> 치료 추적에서 유용 — 감염 치료·철 보충 후 IRF 먼저 ↑ → 빈혈 회복 궤도 진입 조기 증거
+
+### CRAS와 통합
+ACD·신성빈혈·FID·ARC·IRF가 한 환자에 동시 등장하면 → [[cardiorenal-anemia-syndrome]] 통합 평가.

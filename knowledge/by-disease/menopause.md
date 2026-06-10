@@ -132,7 +132,7 @@ relations: []
 - HT 시작 전 VTE 병력 / 가족력 / 혈전성향증 의심 → [[vte-hormone-therapy]] 평가
 - 유방·자궁 종양 의심 → 산부인과/유방외과
 - POI (<40세) → 산부인과 / 내분비
-- 관련: [[vte-hormone-therapy]], [[osteoporosis]], [[depression-screening]], [[smoking-cessation]]
+- 관련: [[vte-hormone-therapy]], [[osteoporosis]], [[depression-screening]], [[smoking-cessation]], [[gsm-genitourinary-menopause]], [[recurrent-uti]]
 
 ---
 

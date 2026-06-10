@@ -105,3 +105,46 @@ relations: []
 - Oncuria-Detect는 현재 미국에서 사용 가능; 한국 가용성 [출처 미확인 — researcher 검증 권장]
 - 단일 코호트 후향 분석 — 외부 검증 연구 필요
 - 방광경 대체 목적이 아닌 **의뢰 선별 보조 도구**로 사용
+
+---
+
+## Postmenopausal Woman — Microscopic Hematuria (+++) Workup [CLINICAL]
+
+> 근거: Barocas DA et al. AUA/SUFU Microhematuria Guideline. J Urol 2020;204(4):778-786. PMID:32698717
+
+> ⚠ AUA 2020은 "50세+ 단독"이 자동 cystoscopy 기준이 아님 — **risk category (low / intermediate / high)** 기반 결정. 폐경 후 여성 미세혈뇨는 risk-stratified 결정.
+
+### Step 1 — Today / Next Visit
+- **U/A with microscopy** (RBC count·morphology, ≥3 RBC/HPF 1회 확인)
+- Urine culture (UTI 평가 — LE+ Nitrite-)
+- Cr·eGFR
+- CBC (anemia)
+- 약물 review (anticoagulant·NSAID)
+
+### Step 2 — Risk Evaluation
+- 연령·흡연·직업 (염료·고무·페인트)·암 hx·항암·골반 RT 병력
+- **AUA 2020 risk category 결정** → Low / Intermediate / **High**
+- **High risk**: 60세+·≥30 pack-year 흡연·>50 RBC/HPF·gross hematuria hx·과거 미평가·urologic 노출
+
+### Step 3 — Imaging
+- **Renal US** (1차) — 폐경 후 외래 적절
+- **Intermediate/High risk → CT urography** 또는 urology 직접 의뢰
+- Risk-stratified 의사결정 (AUA 2020 algorithm)
+
+### Step 4 — Specialty Referral
+- **Intermediate/High risk → urology 의뢰 + cystoscopy** (bladder cancer 평가)
+- 의뢰 timing: **4-6주 내**
+- HCRS + Oncuria 조합 활용 (위 섹션 참조) — 의뢰 선별 보조
+
+### Step 5 — F/u
+- 결과 review
+- 음성 시: **6-12개월 후 재검**
+- 양성 시: 적극 평가
+- **Atrophic vaginitis·urethritis 고려** (estrogen 평가) — [[gsm-genitourinary-menopause]] cross-link
+
+### 환자 교육
+- "Hematuria 의미 (반드시 cancer 아님)"
+- 평가 단계 설명
+- **새 발생 sx**: gross hematuria·flank pain·dysuria·체중감소 → **즉시 내원**
+
+> 관련: [[gsm-genitourinary-menopause]] · [[uti-complicated-classification]] · [[recurrent-uti]]

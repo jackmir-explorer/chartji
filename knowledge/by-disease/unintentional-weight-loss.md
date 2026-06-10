@@ -18,6 +18,17 @@ relations: []
 **6~12개월 내 usual body weight의 5% 이상 감소** = 임상적으로 의미있는 체중감소.
 사망률·이환율 증가와 연관.
 
+> 근거: Gaddey HL, Holder K. Unintentional Weight Loss in Older Adults. Am Fam Physician 2014;89(9):718-722. PMID:24784334
+
+### Cutoff 단계 [CLINICAL]
+
+| Cutoff | 분류 | 행동 |
+|---|---|---|
+| **>5% in 6-12 months** | Workup 적응 (USPSTF·UpToDate) | 9 평가영역 가동 |
+| **>10%** | **Critical** — 악성·중증 만성질환 가능성 ↑↑ | 적극 workup + 신속 의뢰 검토 |
+
+> Involuntary (의도하지 않은) 기준 — 다이어트·운동·의도적 감량은 별개. 환자의 "체중 변화 인지 여부"도 확인 (특히 노인 — 체중 자가 모니터링 어려움).
+
 ---
 
 ## 흔한 원인 (외래 노인 코호트 빈도)
