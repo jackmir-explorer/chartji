@@ -3003,6 +3003,10 @@ var _ibs_v2 = {
     notes: {
       content: "- IBS와 기능성 소화불량 중복 흔함 — 동시 치료 ([[functional-dyspepsia]] 참조)\n- 심리 요인(불안·우울) 강한 연관 — CBT 보조 근거 ([[anxiety-depression-cbt]])\n- \"검사 없이 진단\" 패러다임 — Rome 기준 + alarm 배제로 충분",
       sources: []
+    },
+    rome_application_primary_care: {
+      content: "### IBS Rome 기준 1차의료 적용 한계 (Rauma 2026) [INSIGHTS]\n> Rauma J et al. Scand J Prim Health Care 2026\n\n**스웨덴 1차의료 코호트 분석**:\n- Rome 기준 정식 적용률 **36.2%**에 그침\n- **대장내시경 과잉 9.7%** — Red flag 없이 시행\n- IBS 진단 양극화: 정식 기준 미적용 + 과잉 검사 동시 존재\n\n**임상 메시지**:\n- Rome IV 기준 routine화 — 외래 진단 흐름 표준화\n- Red flag 없으면 **불필요 대장내시경 회피** (Choosing Wisely)\n- 진단 코드 입력 시 \"증후군\" 명시 — 가정적 진단 코드 회피",
+      sources: ["Rauma J et al. Scand J Prim Health Care 2026. PMID:41640253"]
     }
   },
   uiHooks: null
@@ -3148,6 +3152,10 @@ var _palliative_pain_v2 = {
     related_supportive: {
       content: "### 보조 케어 (OINV 예방·행동건강 BH 개입) → [[cancer-pain-supportive-care]]\n\n- 오피오이드 유발 오심구토(OINV) 올란자핀 예방 5mg/일 × 5일 — CC율 79.4%\n- 행동건강(BH) 개입 의사 권고 효과 — \"저는 이걸 권합니다\" 수용률 34%\n\n(2026-05-12 분할: OINV·BH 섹션은 cancer-pain-supportive-care 신규 entry로 이관)",
       sources: []
+    },
+    opioid_rotation_consensus: {
+      content: "### 오피오이드 전환 — 5개 학회 합의 가이드라인 (Davis JPSM 2026) [CLINICAL]\n> Davis MP et al. MASCC·ASCO·AAHPM·HPNA·NICSO 합의\n\n**핵심 권고**:\n- 오피오이드 전환 시 **최대 40% dose 감량** 적용 (불완전 cross-tolerance·약물 정확성 한계)\n- **메타돈**: QTc 가변·반감기 가변 (8-59h) — opioid-naive 전환 시 더 보수적 감량\n- **경피 펜타닐**: 양방향 전환 시 **비대칭** — Fentanyl→Morphine보다 Morphine→Fentanyl 감량 더 보수적\n- 모든 전환 후 **48-72시간 monitoring** + breakthrough 약 처방\n\n**임상 적용**:\n- 외래 → 입원/입원 → 외래 전환 시 dose recalculation\n- 효과 불충분 시 25-50% 증량 — 환자 호소 검증 신호 ([[chronic-pain-integrative]] [INSIGHTS] PMID:41574586)\n- 가족·보호자 교육: dose·간격·toxicity 단서 (sedation·호흡억제)",
+      sources: ["Davis MP et al. J Pain Symptom Manage 2026. PMID:41197973"]
     }
   },
   uiHooks: null
@@ -3267,6 +3275,10 @@ var _cascade_v2 = {
     "elderly-mir-tips": {
       content: "### 노인 부종 → NSAIDs 문진 [TIPS — by 미르 경험]\n노인에서 이유 없이 붓는 경우 **NSAIDs를 꼭 문진**.\n- NSAID-induced edema: PGE2 차단 → renal sodium retention\n- 동반 약물: 칼슘 차단제(amlodipine), TZD, gabapentin\n- Cascade 회피: 이뇨제 추가 전 NSAIDs 중단·교체 우선\n\n### 노인 스테로이드 처방 전 4가지 사전 확인 [TIPS — by ENT 교수]\n| 확인 | 이유 |\n|---|---|\n| **당뇨** | 혈당 상승 — DM도 처방 가능, 환자 교육 필수 |\n| **황반변성** | 스테로이드 악화 — 다른 옵션 우선 고려 |\n| **녹내장** | 안압 상승 |\n| **위궤양·BPSD** | 소화기 출혈·정신 증상 악화 |\n\nDM이 있다고 절대 금지가 아님 — '혈당 상승에 유의'라는 환자 교육.\n\n### Cascade 방지 핵심 질문\n새 증상 호소 노인 환자에서 **첫 질문은 '기존 약 부작용?'**\n- 부종 → NSAIDs·CCB·TZD?\n- 변비 → CCB·항콜린·opioid?\n- 기침 → ACEi?\n- 어지럼 → 항고혈압·BZD·항히스타민?\n- 인지 저하 → 항콜린 burden·BZD?\n\n→ STOPP/START·Beers 활용 우선, 추가 처방은 마지막 수단.",
       sources: []
+    },
+    chei_oab_cascade_dementia: {
+      content: "### ChEI → OAB 항무스카린제 cascade — Mirabegron 우선 (Cooper JAGS 2026) [CLINICAL — 조건부]\n> Cooper N et al. J Am Geriatr Soc 2026;74(5):1314-1325 — 치매 환자 cascade 분석\n\n**핵심 발견**:\n- 치매 환자에서 ChEI (donepezil·rivastigmine) → urinary incontinence/OAB → **항무스카린제** 처방 cascade 흔함\n- 항무스카린제 (oxybutynin·tolterodine) 추가 시 **섬망 HR 1.35** (CI wide·통계적 유의성 경계)\n- Cognitive deterioration·낙상·hospitalization 위험 ↑\n\n**대체 전략**:\n- **Mirabegron** (β3 agonist) 우선 — 항콜린 부작용 없음\n- 행동 치료 (bladder training·골반저 운동)\n- ChEI 효과 재평가 → 효과 부족 시 중단 검토\n- GSM 동반 → topical estrogen ([[gsm-genitourinary-menopause]])",
+      sources: ["Cooper N et al. J Am Geriatr Soc 2026;74(5):1314-1325. PMID:41833520"]
     }
   },
   uiHooks: {
@@ -3991,6 +4003,10 @@ var _neck_mass_v2 = {
     differential: {
       content: "**Horses**: 림프절염/반응성 림프절병증 ★가장 흔함 / 피지낭종·지방종 / 갑상선 결절\n\n**Zebra**: ⚠ 림프종 (4–6주 지속·B증상·치료 무반응) / ⚠ 전이성 악성종양",
       sources: []
+    },
+    afp_2026_framework: {
+      content: "### AFP 2026 3범주 틀 + 영상·FNA 알고리듬 (Wilbur) [CLINICAL]\n> Wilbur J. Am Fam Physician 2026\n\n**3범주 틀**:\n| 범주 | 단서 | 평가 |\n|---|---|---|\n| **염증성 (Inflammatory)** | 급성·압통·동반 URI/치성 | 보존·항생제 trial |\n| **선천성 (Congenital)** | 청소년·정중선·낭성 | sono → 적응 시 ENT |\n| **종양성 (Neoplastic)** | **무통성·진행성·>1.5cm·≥4주** | sono 즉시 → FNA·ENT |\n\n**영상 알고리듬**:\n- **1차 영상 = 경부 sono** (염증·낭성·결절 분류)\n- 종양 의심 → 조영 CT/MRI + ENT 의뢰\n- 갑상선 결절 동반 → K-TIRADS ([[thyroid-fna-cnb]])\n\n**FNA 수치 단서**:\n- LN 단경 **>1.5cm + 동심성 ECHO·hilum 소실** → FNA 적응\n- 갑상선 K3-K5 + 크기 cutoff (K-TIRADS) → FNA\n- ENT 협진 후 결정 (외래 단독 FNA 비권고)\n\n관련: [[lymphadenopathy]] · [[thyroid-fna-cnb]] · [[cervical-lymphadenitis]] · [[hematologic-malignancy-uri-screening]]",
+      sources: ["Wilbur J. Neck Mass: Evaluation. Am Fam Physician 2026. PMID:41839107"]
     }
   },
   uiHooks: null
@@ -4366,6 +4382,10 @@ var _deprescribing_v2 = {
     antidepressant_slow_tapering: {
       content: "### 항우울제 감약 — Slow (Hyperbolic) Tapering + CBT (BMJ 2025)\n> Wise J. BMJ news 2025. PMID:41381099\n\n**급격 중단 금지** — 세로토닌 수용체 약리(점유율 비선형)에 기반한 **hyperbolic tapering**:\n- 수개월에 걸친 소량 단계 감량 (예: 50% → 25% → 12.5% → 6.25% ...)\n- 표준 \"매주 25% 감량\" 도식은 후반 단계에 수용체 점유 급락 → 금단 위험\n- CBT 동시 병행 → 재발·금단증상 위험 최소화\n\n**적응증**:\n- 장기 항우울제 사용 (>2년) + 적응증 해소 또는 부작용\n- 고령 STOPP 대상 (Beers/STOPP) 다약제 정리\n- 환자 자발적 감약 의사\n\n**외래 프로토콜**:\n1. 환자에 \"slow tapering = 정상 과정·실패 아님\" 설명\n2. 액상 제형 또는 정제 절반·1/4 활용 (드물게 compounded liquid 필요)\n3. 4–8주 간격 외래 추적 + 금단증상 체크리스트 (DESS — Discontinuation-Emergent Signs and Symptoms)\n4. CBT 단기 코스(8–12회) 동시 병행\n5. 금단증상 발생 시 → 최근 단계로 복귀 + 더 느린 감량\n\n**고령 우선 대상**: TCA·paroxetine·venlafaxine (반감기 짧고 금단 심함)",
       sources: ["Wise J. Mental health charity recommends slow tapering and CBT for antidepressant withdrawal. BMJ 2025;391:r2353. PMID:41381099, DOI:10.1136/bmj.r2353"]
+    },
+    ppi_cluster_rct: {
+      content: "### PPI 감약 — 클러스터 RCT (JAMA Intern Med 2026) [CLINICAL]\n> JAMA Intern Med 2026;186(6):668-676 — 환자 + GP 병행 개입 n=34,409\n\n**개입군 vs 대조군**:\n- PPI 감약 성공: **14.9% vs 7.0%** (대조)\n- **GERD 악화 없음** — 안전한 감약 가능\n- 통계적 유의: 환자 교육 + GP 교육 동시 진행이 효과적\n\n**임상 적용**:\n- 장기 PPI 사용 (≥2년) + Barrett's esophagus 없음·NSAID 동반 미복용 → 감약 시도\n- 단계: 1/2 dose × 2-4주 → on-demand → 중단\n- 환자 교육 (재발 증상 → 즉시 재개)·H2RA bridge\n- GP 외래 routine으로 PPI 적응증 재평가 (Stop the slowed-release dependency)",
+      sources: ["JAMA Intern Med 2026;186(6):668-676. PMID:41973459"]
     }
   },
   uiHooks: null
@@ -4676,6 +4696,10 @@ var _chronic_pain_integrative_v2 = {
     opioid_communication: {
       content: "### 오피오이드 처방 갱신과 소통 — 검증·동맹 전략 [INSIGHTS]\n> [출처: Amin JR et al. Scand J Prim Health Care 2026;44(1):2616517. PMID:41574586]\n> 정성 연구, n=15, 만성통증 오피오이드 처방 환자, 스웨덴 농촌 일차의료. 반구조 인터뷰 → 반성적 주제 분석.\n\n**두 핵심 주제:**\n\n**주제 1 — \"Prescribing Validation\" (처방 = 검증):**\n- 처방 갱신 → 환자에게 **통증 상태의 '공식 검증·인정'** 신호\n- 거절·감량 → **불신(mistrust)** 으로 경험 (\"내 통증을 믿지 않는다\")\n- 환자는 자신의 통증을 가장 잘 아는 전문가로 **인정받고자** 함\n\n**주제 2 — \"Battle for the Steering Wheel\" (주도권):**\n- 만성통증 삶 경험 바탕으로 환자는 자신의 전문성 주장\n- 종종 **무시당한다는 좌절감** 경험\n\n**외래 감량 대화 전략:**\n| 상황 | 전략 |\n|---|---|\n| 감량·거절 논의 시작 전 | **먼저 통증 경험 검증(validation)** — \"얼마나 힘드셨을지 이해합니다\" |\n| 감량 이유 설명 | \"처방 줄이는 게 통증을 믿지 않아서가 아님\"을 명확히 전달 |\n| ICE 접근 연결 | Ideas: \"오피오이드가 어떻게 도움이 된다고 느끼시나요?\" / Concerns: \"줄이면 어떤 걱정이 드세요?\" |\n| 신뢰 동맹 | 생물심리사회 교육은 신뢰 형성 **후**에 유효 — 관계 없이 교육 먼저는 역효과 |\n\n**임상 메시지:**\n- 처방 갱신의 숨은 의미: \"당신의 통증을 믿는다\"는 신호 → 거절·감량 전 선제 검증 필수\n- \"처방 감소 ≠ 불신\"을 명시적으로 전달 → 감량 대화 장벽 낮춤\n- 소규모 질적 연구(n=15, 스웨덴 농촌) — 문화 외삽 주의, 그러나 소통 원칙은 범용 적용 가능",
       sources: []
+    },
+    va_whole_health_rct: {
+      content: "### VA Whole Health vs CBT vs 일반치료 RCT (Seal JAMA 2026) [CLINICAL]\n> Seal KH et al. JAMA 2026 — n=764 만성통증 RCT\n\n**3-arm 비교** (52주):\n- VA **Whole Health 팀** (다직종·환자중심·자기관리·통합의학) — 최우수\n- CBT — 중간\n- 일반치료 — 대조\n\n**결과**:\n- **Whole Health > CBT** (p=0.02) > 일반치료 (p=0.002)\n- BPI-Interference 차이는 MCID 미달 — 통계적 유의성 + 임상 의미 제한적\n\n**임상 메시지**:\n- 만성통증에 **다직종 + 자기관리 + 통합의학 (요가·마음챙김·태극권)** 모델이 CBT 단독보다 우수\n- 일차의료 외래 단독 CBT 한계 — Whole Health 자원 연계 검토\n- Patient-centered care가 통증 결과·QOL 향상 경로",
+      sources: ["Seal KH et al. Whole Health vs CBT for Chronic Pain. JAMA 2026. PMID:42054020"]
     }
   },
   uiHooks: null
@@ -4830,6 +4854,10 @@ var _mash_v2_full = {
     referral: {
       content: "- FIB-4 ≥1.30 (중간) → FibroScan 또는 소화기내과 협진\n- FIB-4 ≥2.67 → 간전문의 의뢰\n- FibroScan F2 이상 + 레스메티롬 처방 고려 → 간전문의 협진\n- 간경변 의심 (복수·황달·혈소판↓) → 즉시 의뢰\n- 알코올 사용장애 동반 시 (MASH-Alc 중복) → 간내과 + 중독전문\n- 비만수술 고려 → 외과\n- 관련: [[wegovy]], [[glp1-selection-strategy]], [[diabetes-dyslipidemia]]",
       sources: []
+    },
+    masld_diagnosis_treatment_jama: {
+      content: "### MASLD/MASH 진단·치료 — JAMA 2026 종합 리뷰 (Tilg) [CLINICAL]\n> Tilg H et al. JAMA 2026\n\n**진단**:\n- MASLD 명명: NAFLD → MASLD (Metabolic dysfunction-Associated Steatotic Liver Disease) 공식 전환\n- **FIB-4** 1차 (외래) → ≥1.30 중간·≥2.67 고위험 → FibroScan/MRE 단계화\n- 간생검 적응: noninvasive 평가 불일치·중첩 진단 (AIH/PBC) 의심\n\n**치료 (FDA 조건부 승인 약제)**:\n- **Resmetirom** (Rezdiffra) — F2-F3 fibrosis MASH 1st FDA 승인 (2024.3)·MRI-PDFF·VCTE 개선 근거\n- **Semaglutide** — MASH F1-F3 효과 (NEJM 2024) — 추가 적응증 확대 검토\n- 병용·sequence 전략 발전 중\n\n**구 JAAPA 미승인 기술 정정**: 이전 entry의 \"FDA 미승인\" 기술 → **resmetirom 2024.3 승인 확정** 반영.\n\n**BMJ 2025 추가 단서** (초록 미제공): MASLD 진단·치료 갱신·일차의료 게이트키퍼 강화.",
+      sources: ["Tilg H et al. JAMA 2026. PMID:41212550", "BMJ 2025;391:r1928. PMID:41232955 (초록 미제공)"]
     }
   },
   uiHooks: null
@@ -5048,6 +5076,10 @@ var _diabetes_v2 = {
     referral: {
       content: "- DKA/HHS → 응급실\n- 단백뇨 진행, eGFR<30 → [[CKD]] 신장내과\n- 망막증 → 안과\n- 1형 의심·임신·다중약제 후 조절 불량 → 내분비\n- 관련: [[diabetes-dyslipidemia]], [[CKD]], [[obesity]], [[glp1-selection-strategy]]",
       sources: []
+    },
+    tirzepatide_surpass_early: {
+      content: "### Tirzepatide 조기 T2DM — SURPASS-EARLY (Ann Intern Med 2026) [CLINICAL]\n> Eli Lilly 재원 오픈라벨 RCT (이해충돌 명시)\n\n**핵심 결과**:\n- **정상혈당 회복률 60.2% vs 24.0%** (대조 vs tirzepatide)\n- 초기 T2DM (진단 ≤5년·HbA1c <7.5%) 대상\n- 체중·HbA1c·인슐린 저항성 동시 개선\n\n**임상 메시지**:\n- 조기 T2DM에서 **tirzepatide 적극 검토** — metformin 1차 후 빠른 step-up 근거\n- 단 **이해충돌 (Eli Lilly 재원·오픈라벨)** — 결과 해석 신중\n- 한국 비급여·환자 부담·장기 안전성 데이터 부족\n- 비만 동반 시 [[glp1-selection-strategy]] · [[mounjaro]] 참조",
+      sources: ["Ann Intern Med 2026 (Epub 05-26). PMID:42184419"]
     }
   },
   uiHooks: null
@@ -5094,6 +5126,10 @@ var _hypertension_v2 = {
     referral: {
       content: "### 이차성 고혈압 의뢰\n- <30세(가족력 없는 청년) 또는 **≥55~60세 새로 발생**\n- 약물 저항성 → [[resistant-hypertension]]\n- 처음부터 ≥180/120 또는 심한 합병증\n- 임신 중 → 산부인과\n- 관련: [[resistant-hypertension]], [[home-based-hypertension]], [[CKD]], [[diabetes]], [[heart-failure]]",
       sources: []
+    },
+    severe_hypertension_afp_2026: {
+      content: "### Severe Hypertension (≥180/110, TOD 없음) — AFP 2026 (Gauer) [CLINICAL]\n> Gauer RL. Am Fam Physician 2026;113:459-468\n\n**핵심 구분**:\n- **Severe HTN** (≥180/110 + 표적장기손상 **없음**) ≠ Hypertensive emergency\n- 외래 1위 원인: **약물 비순응** → 재복용/증량으로 해결\n\n**관리 원칙**:\n- **입원 치료는 단기 결과 개선 X** — 오히려 심혈관 사건·AKI·재원기간 ↑ (RCT 근거)\n- **단기작용·IV 항고혈압제 금기** — 급격 BP 강하 → 허혈성 사건\n- 경구 약물 재시작·증량 + 1-3일 외래 f/u\n- 가정 BP 측정·생활습관 강화\n\n**이차성 HTN 평가 4대 트리거**:\n1. **저항성** 고혈압 (3제 + 이뇨제 후도 미달)\n2. **점진적 악화** (안정기 환자 BP 신규 상승)\n3. **<30세** 발생\n4. **조기 TOD** (LVH·proteinuria·신부전·망막증)\n\n→ 4대 트리거 시 RAAS·PA·갈색세포종·COA 평가 ([[resistant-hypertension]])",
+      sources: ["Gauer RL. Severe Hypertension: Evaluation and Treatment. Am Fam Physician 2026;113:459-468. PMID:42202349"]
     }
   },
   uiHooks: null
@@ -5207,6 +5243,26 @@ var _anemia_v2 = {
     "follow-up-schedule": {
       content: "### 철결핍 빈혈 F/U 검사 set [TIPS — by 미르 gaps]\n> **CBC + Ferritin + Reticulocyte + RDW** — 4종 동시 확인이 reactor·storage·micro 다층 평가\n\n### 철결핍 빈혈 치료 반응 기대 수치 [TIPS — by 미르 gaps]\n- **4주 후**: Hgb **1–2 g/dL 증가**\n- **8–12주 후**: Hgb **정상화**\n- → **Hgb 정상화 후에도 저장철 채우기 위해 3–6개월 추가 복용 필요**. **target: Ferritin >50**\n- → **반응 부족하면 IV iron 고려** (경구 흡수 장애·지속 출혈·심부전 동반 등)",
       sources: []
+    },
+    acd_mechanism: {
+      content: "### ACD 기전 — IL-6 / Hepcidin / TIBC 패턴\n만성 염증/감염 → IL-6 → 간 **hepcidin ↑** → ferroportin 분해 → (a) 장 철 흡수 차단 + (b) 대식세포·간세포 저장철 가둠.\n\n### ACD 검사 패턴 — IDA 감별 핵심\n| | IDA | **ACD** |\n|---|---|---|\n| Ferritin | 낮음 | **정상~상승** (급성기 반응물질) |\n| Serum iron | 낮음 | 낮음 |\n| **TIBC** | **높음** | **낮음** ← ACD 특징 |\n| TSAT | 매우 낮음 | 정상~약간 낮음 |\n| MCV | 정상→소구성 | 정구성·진행 시 소구성 |\n\n> **ACD vs IDA 감별 핵심 = TIBC 방향**. IDA는 TIBC ↑, ACD는 TIBC ↓.",
+      sources: ["Weiss G, Goodnough LT. Anemia of Chronic Disease. N Engl J Med 2005;352(10):1011-1023. PMID:15758012, DOI:10.1056/NEJMra041809"]
+    },
+    anemia_of_ckd: {
+      content: "### Anemia of CKD (신성빈혈)\n**EPO 부족이 핵심** — 신장 peritubular fibroblast EPO 생성. CKD로 망가지면 EPO ↓ → 골수 생성 부족.\n\n**기여 임계**: eGFR <60 (특히 <45)부터 두드러짐\n\n**추가 기전**: uremic toxin → 적혈구 수명 ↓, hepcidin 신 배설 ↓ → 축적 → ACD-like 철 가둠 겹침\n\n**검사 패턴**: 정구성·**부적절하게 낮은 reticulocyte** (빈혈인데 골수 반응 없음 = EPO 부족 표지)·Iron studies 다양\n\n**외래 단서**: eGFR 36 + reticulocyte 1.13% / ARC 31.9 ×10³/μL + Hgb 8.1 → \"골수 공장이 안 돌고 있다\" — Hgb 8.1이면 ARC가 **100,000+** 치솟아야 정상.",
+      sources: ["KDIGO 2012 Clinical Practice Guideline for Anemia in CKD. Kidney Int Suppl 2012;2:279. PMID:23891356 (KDOQI commentary)"]
+    },
+    functional_iron_deficiency_rethe: {
+      content: "### Functional Iron Deficiency (FID) — RET-He 지표\n저장철 충분(ferritin 정상~높음)인데 **골수 철 공급 속도 부족**. \"창고엔 철 있는데 생산라인 배달 안 됨\". ACD hepcidin 또는 EPO 치료로 골수 갑자기 가동 시 흔함.\n\n**RET-He (Reticulocyte Hemoglobin Equivalent)** = 현재 골수 철 공급 실시간 평가 (ferritin은 과거~현재 저장량).\n\n| RET-He | 해석 |\n|---|---|\n| 정상 | **~32-38 pg** |\n| **낮음 (<28-32 pg)** | 철 공급 부족 = **FID** 또는 진성 철결핍 |\n\n> Ferritin 정상이어도 RET-He 낮으면 골수 공급 부족. CKD·HF·만성 염증 환자 평가에 유용.",
+      sources: ["Thomas C, Thomas L. Biochemical markers and hematologic indices in the diagnosis of functional iron deficiency. Clin Chem 2002;48(7):1066-1076. PMID:12089176"]
+    },
+    arc_interpretation: {
+      content: "### ARC (Absolute Reticulocyte Count) — 함정과 해석\n**ARC = retic% × RBC수** — 정확한 절대값.\n\n**% vs Absolute 함정**: Reticulocyte %는 \"전체 적혈구 중 비율\" — 빈혈로 분모 줄면 같은 생산량도 %가 부풀려 보임. **절대값(ARC)으로 봐야 정확**.\n\n**정상 범위**: **25-75 ×10³/μL** (25,000-75,000/μL)\n\n**빈혈 시 해석 (핵심)**:\n- 심한 빈혈 (Hgb 8 수준)이면 골수 정상 반응 시 **ARC 100,000+** 치솟아야\n- 낮은 ARC + 심한 빈혈 = **저생산성 빈혈** (ACD/신성/EPO 부족) 확증\n- 높은 ARC + 빈혈 = 출혈·용혈 (골수 멀쩡)",
+      sources: ["Piva E et al. Clin Chem Lab Med 2015. PMID:25719320"]
+    },
+    irf_recovery_marker: {
+      content: "### IRF (Immature Reticulocyte Fraction) — 골수 회복 조기 지표\nReticulocyte 중 **가장 어린(갓 골수에서 나온) 분획 비율** — RNA 많은 것. 골수 생산의 가장 빠른 실시간 지표.\n\n| 지표 | 시점 |\n|---|---|\n| ARC | \"지금까지 나온 총 생산량\" |\n| **IRF** | \"골수가 방금 막 가동을 올렸는지\" — **며칠 더 일찍** |\n\n정상 범위: **2-17%** (기기마다 다름).\n\n**활용**:\n- 빈혈 회복/치료 반응 조기 신호 — 철분제·EPO·B12 후 ARC 오르기 전 **IRF 먼저 튐** — 골수 회복 첫 봉화\n- 골수이식·항암 후 회복 monitoring\n- 높은 IRF + 낮은 ARC = \"골수가 막 반응 시작했으나 아직 성숙한 적혈구로 못 내보냄\"\n\n### CRAS와 통합\nACD·신성빈혈·FID·ARC·IRF가 한 환자에 동시 등장 → [[cardiorenal-anemia-syndrome]] 통합 평가.",
+      sources: ["Briggs C. Quality counts: new parameters in blood cell counting. Int J Lab Hematol 2009;31(3):277-297. PMID:19452619"]
     }
   },
   uiHooks: null
@@ -5327,6 +5383,10 @@ var _weight_loss_v2 = {
     referral: {
       content: "- 영상·검사상 악성 의심 → 해당 분과\n- 6개월간 워크업 음성 + 지속 → 노인의학/내과 종합평가\n- 우울 양성 + 자살사고 → 정신건강의학과\n- 관련: [[depression-screening]], [[anxiety-depression-cbt]], [[frailty]], [[anemia]], [[diabetes]], [[obesity]]",
       sources: []
+    },
+    uspstf_cutoff_staging: {
+      content: "### Cutoff 단계 [CLINICAL]\n| Cutoff | 분류 | 행동 |\n|---|---|---|\n| **>5% in 6-12 months** | Workup 적응 (USPSTF·UpToDate) | 9 평가영역 가동 |\n| **>10%** | **Critical** — 악성·중증 만성질환 가능성 ↑↑ | 적극 workup + 신속 의뢰 검토 |\n\n> Involuntary (의도하지 않은) 기준 — 다이어트·운동·의도적 감량은 별개. 환자의 \"체중 변화 인지 여부\"도 확인 (특히 노인 — 체중 자가 모니터링 어려움).",
+      sources: ["Gaddey HL, Holder K. Unintentional Weight Loss in Older Adults. Am Fam Physician 2014;89(9):718-722. PMID:24784334"]
     }
   },
   uiHooks: null
@@ -5367,6 +5427,10 @@ var _hematuria_v2 = {
     referral: {
       content: "- **사구체혈뇨** → 신장내과\n- **비사구체 Intermediate~High** → 비뇨기과 (cystoscopy)\n- 육안혈뇨 + 통증·발열 → 응급 (감염·결석)\n- 관련: [[proteinuria]], [[CKD]], [[recurrent-uti]]",
       sources: []
+    },
+    postmenopausal_microscopic_workup: {
+      content: "### Postmenopausal Woman — Microscopic Hematuria (+++) Workup\n> ⚠ AUA 2020은 \"50세+ 단독\"이 자동 cystoscopy 기준이 아님 — **risk category (low/intermediate/high)** 기반 결정.\n\n**Step 1 — Today / Next Visit**\n- U/A microscopy (RBC count·morphology, ≥3 RBC/HPF 1회 확인)\n- Urine culture (UTI 평가 — LE+ Nitrite-)\n- Cr·eGFR · CBC (anemia)\n- 약물 review (anticoagulant·NSAID)\n\n**Step 2 — Risk Evaluation**\n- 연령·흡연·직업 (염료·고무·페인트)·암 hx·항암·골반 RT 병력\n- **High risk**: 60세+·≥30 pack-year 흡연·>50 RBC/HPF·gross hematuria hx·과거 미평가·urologic 노출\n\n**Step 3 — Imaging**\n- Renal US (1차) — 폐경 후 외래 적절\n- **Intermediate/High risk → CT urography 또는 urology 직접**\n\n**Step 4 — Specialty Referral**\n- **Intermediate/High risk → urology + cystoscopy** (4-6주 내)\n- HCRS + Oncuria 조합 활용 (의뢰 선별 보조)\n\n**Step 5 — F/u**\n- 음성 시: 6-12개월 후 재검\n- **Atrophic vaginitis·urethritis 고려** (estrogen 평가) — [[gsm-genitourinary-menopause]]\n\n**환자 교육**: \"Hematuria ≠ cancer\" + 새 발생 sx (gross hematuria·flank pain·dysuria·체중감소) → **즉시 내원**\n\n관련: [[gsm-genitourinary-menopause]] · [[uti-complicated-classification]] · [[recurrent-uti]]",
+      sources: ["Barocas DA et al. AUA/SUFU Microhematuria Guideline. J Urol 2020;204(4):778-786. PMID:32698717"]
     }
   },
   uiHooks: null
@@ -5989,6 +6053,10 @@ var _anticholinergic_burden_v2 = {
     notes: {
       content: "### 알츠하이머 다약제 → 인지기능 저하 1.68배 [CLINICAL]\n> [출처: Hu Y et al. Pak J Pharm Sci 2026;39(6):1792-1801. PMID:42001284]\n> AD 입원 노인 300명, 3년 추적 후향 코호트 (PSM 적용).\n\n**핵심 수치:**\n\n| 결과 | 다약제군(≥5제) vs 비다약제군 | p |\n|---|---|---|\n| 인지기능 저하(MMSE -3점↑) | 64.0% vs 38.0% — **RR 1.68 (95%CI:1.33–2.13)** | <0.001 |\n| 낙상 | **RR 1.82** | <0.01 |\n| 재입원 | **RR 1.67** | <0.001 |\n| CDR 악화 속도 | 다약제군 빠름 | 유의 |\n| MoCA 연간 감소율 | 다약제군 더 큼 | 유의 |\n\n**항콜린 부담(ACB) 독립 예측인자:**\n- ACB ≥ 3 → 인지기능 저하 **OR 2.5 (95%CI: 1.7–3.7)** (p<0.001)\n- 다약제 자체와 별개로 항콜린 부담이 독립적 위험\n\n**외래 감약 근거:**\n- AD 환자 5제 이상 복용 시 3년 내 인지기능 저하 가속 → 감약 면담 시작 근거\n- ACB 점검 우선 대상: oxybutynin·diphenhydramine·1세대 항히스타민·amitriptyline\n- STOPP/START + ACB 계산기 병행 처방 점검 루틴화 근거\n\n> ⚠ 중국 단일기관 입원 코호트 — 지역사회 외래 한국 노인에 직접 외삽 주의",
       sources: []
+    },
+    deprescribing_4step_algorithm: {
+      content: "### 4단계 감량 알고리듬 — Delphi (Garcia J Eval Clin Pract 2026) [CLINICAL]\n> Garcia TS et al. — Delphi 합의 CVI ≥0.8\n\n**4단계 감량 프로토콜**:\n1. **Step 1**: ACB 점수 산출·약물 list 작성·환자 동기 평가\n2. **Step 2**: 우선 감량 약물 선정 (high-ACB·대체 가능 약물 우선)\n   - **Amitriptyline → duloxetine·SNRI** (neuropathic pain)\n   - **Paroxetine → escitalopram/sertraline** (depression)\n   - **Promethazine → ondansetron** (구역)\n3. **Step 3**: 점진적 감량 (50% q2-4weeks) + 환자/보호자 교육 + 부작용·금단 monitoring\n4. **Step 4**: 재평가 (4-12주) — sx 추적·기능 평가·재처방 결정\n\n**대체 Flowchart**: 항히스타민 1세대→2세대 (loratadine·cetirizine), oxybutynin→**mirabegron** ([[nocturia]]), TCA→SNRI, BZD→비약물 수면 (CBT-i)\n\n**적응증**: ACB ≥3 노인·인지저하·낙상 hx·다약제 ≥5종",
+      sources: ["Garcia TS et al. J Eval Clin Pract 2026. PMID:42189088"]
     }
   },
   uiHooks: null
@@ -6384,6 +6452,10 @@ var _pocus_efsumb_v2 = {
     referral: {
       content: "- POCUS Level 1 한계 초과 소견 → 영상의학과·해당 전문과 의뢰\n- 심각한 소견(심낭압전, 대동맥류 파열 의심) → 즉시 응급 의뢰",
       sources: []
+    },
+    dvt_pocus_qi: {
+      content: "### DVT POCUS QI — ED 회피 + 비용 절감 (Hui POCUS J 2026) [CLINICAL]\n> Hui CK et al. POCUS J 2026\n\n**핵심**: 일차의료 외래 POCUS DVT 평가 도입 후:\n- **46% ED 회피** (DVT 의심 환자)\n- **$85,000/year 비용 절감** (단일 클리닉 기준)\n- 진단 정확도 — 정식 doppler와 일치율 ↑\n\n**프로토콜 (간소화 2-point compression)**:\n1. **대퇴정맥 (common femoral)**: 대퇴 인대 직하방, 압박 가능성\n2. **슬와정맥 (popliteal)**: 슬와 fossa, 압박 가능성\n\n→ 두 위치 모두 압박 가능 = DVT 배제 가능 (sensitivity ~95%)\n→ 압박 불가 = DVT 의심 → doppler 또는 응급실\n\n**일차의료 적용 조건**:\n- 5-10시간 훈련으로 GP 단기 acquisition 가능\n- Wells score + age-adjusted D-dimer ([[clinical-reasoning]] pretest_probability_d_dimer) + POCUS 통합\n- 외래에서 DVT 의심 → bilateral 평가 → DVT 양측 vs 단측 ([[skin-soft-tissue-infection]] 양측 cellulitis 감별과 연계)",
+      sources: ["Hui CK et al. POCUS J 2026. PMID:42131561"]
     }
   },
   uiHooks: null
@@ -7122,6 +7194,10 @@ var _palliative_depression_ketamine_v2 = {
     precaution: {
       content: "- 완화의료 대상 rigorous RCT 부족 — 수술기 암 환자 소규모 + 개방 라벨 중심\n- 장기 유지 요법·용량 프로토콜 미확립\n- 기대 여명에 따른 유지 전략 개별화 필요\n- 정신과 협진 또는 완화의료팀 내 전문 역량 필요\n- [출처 미확인 — researcher 검증 권장]: 한국 케타민 완화의료 우울 적용 가이드라인·급여\n- 관련: [[palliative-pain]], [[anxiety-depression-cbt]], [[afp-eol-symptom-management]]",
       sources: []
+    },
+    psychostimulants_augmentation: {
+      content: "### 정신자극제 (Psychostimulants) — 완화의료 우울 (JPSM 2026) [CLINICAL — 조건부]\n> JPSM 2026 — 정신자극제(methylphenidate·modafinil) 완화의료 우울 review\n\n**핵심 결론**:\n- **단독 약물로서 근거 약함** — 항우울제 대체 X\n- **Augmentation (보조)으로 소폭 효과** — 항우울제 + 정신자극제 조합\n- **ADHD 동반 환자에서만 선별 적용** — 일반 완화의료 우울에 routine X\n\n**적응증 (선별)**:\n- 기대 여명 짧음 (SSRI 발현 대기 시간 부족) — 케타민·정신자극제 검토\n- 무기력·집중력 저하 우세 (피로 도메인) + ADHD hx\n- 항우울제 효과 부족 + 짧은 기대 여명\n\n**부작용**: 빈맥·HTN·식욕 ↓·수면 ↓·불안 ↑ — 완화의료에서 빈맥/HTN 부담 점검",
+      sources: ["JPSM 2026;72(1):e58-e63. PMID:41905727"]
     }
   },
   uiHooks: null
@@ -7532,6 +7608,10 @@ var _ramsay_hunt_syndrome_v2 = {
     referral: {
       content: "- **즉시 의심·확인 시 ENT/신경과 의뢰** — 72시간 이내 치료 시작 결정적\n- 안면마비 호전 없음·악화 → ENT (전기생리·재활)\n- 청력저하 동반 → 청력검사 + ENT\n- 신경학적 이상 (구음장애·복시·편측 위약·심한 어지럼) → 응급 영상 + 신경과\n\n### 관련\n- [[sudden-hearing-loss]] — 청력저하 단독·동반 시 감별\n- [[meniere]] — 어지럼 + 청력저하 감별\n- [[dizziness]] — 어지럼증 분기\n- [[macular-degeneration-steroid-caution]] — 스테로이드 처방 전 안과 확인",
       sources: []
+    },
+    bells_palsy_vs_rhs: {
+      content: "### Bell's palsy vs Ramsay Hunt — 분기 결정 (Kim J Audiol Otol 2025) [CLINICAL]\n> Kim et al. — 두 entity 감별·예후 예측·치료 결정 review\n\n**RHS 단서** (Bell's palsy 대비):\n- **귀 통증·이개 발진** (vesicular)\n- 청력저하·이명·어지럼증 동반\n- 안면마비 **더 심한 정도** (House-Brackmann grade ↑)\n- **예후 불량** (Bell's palsy 대비 회복률 ↓)\n\n**치료 분기**:\n- Bell's palsy: prednisolone 단독 (72h 이내) — antiviral 효과 불확실\n- **RHS**: **prednisolone + valacyclovir** (또는 famciclovir/acyclovir) — 72h 이내 병합 권고\n\n**저자 오기 정정**: 이전 PMID:38520982 RHS antiviral meta — Lin YY → **Fujiwara T 외** (이전 인용 정정).\n\n→ 외래 안면마비 환자 routine: 이개·외이도 진찰 + 청력·어지럼 문진. RHS 단서 1개라도 → antiviral 병합.",
+      sources: ["Kim et al. Bell's palsy vs Ramsay Hunt syndrome. J Audiol Otol 2025. PMID:39916394"]
     }
   },
   uiHooks: null
@@ -7731,6 +7811,22 @@ var _clinical_reasoning_v2 = {
     anchoring_case_example: {
       content: "### 사례 — \"환자가 원인을 말해도 동반 질환 고려\" [INSIGHTS — by 미르 gaps 2026-05-26]\n\n**케이스**: 스트레스 동반 체중감소 + 생리불순 + AFP 상승. 환자가 \"스트레스 때문에 빠졌다\" 호소.\n\n**Anchoring 함정**: 환자 제공 원인(스트레스)에 가설 고정 → 체중감소·생리불순·AFP 상승을 단일 framing(스트레스성)으로 설명 시도 → \"더 중요한 amplifier\"(갑상선·종양·DM·IBD·EDD/Depression·만성 감염·임신·간질환·난소 GCT) framing을 못 바꿈.\n\n**대응**:\n- 체중감소 → Thyroid·종양·DM·IBD·EDD/Depression·TB/HIV 감별\n- 생리불순 → Prolactin·LH·FSH·Estradiol·urine HCG·LMP/양/기간 (산부인과 evaluation 필요성 판단)\n- AFP 상승 → [[afp-elevation-workup]] 5축 differential (임신·간질환·GCT·흡연·유전적)\n\n**Routine**: 환자가 호소 원인을 단정해도 lab/증상 cluster가 그 단일 framing으로 모두 설명 안 되면 → 별개 가설 강제 평가. \"환자 발언 framing\"에 anchoring하지 말 것.",
       sources: []
+    },
+    education_strategy: {
+      content: "### 진단추론 교육 전략 [INSIGHTS]\n> Petersen 2025 — \"bias 인식\" 단독 강의는 임상 정확도 향상 미미. **A vs B 감별 단서 지식 강화**가 anchoring·premature closure 차단의 실효성 있는 경로.\n\n- 케이스 기반 교육 + immediate feedback\n- discriminating features 명시 (예: SLE vs viral arthralgia — symmetric peripheral·malar rash·photosensitivity)\n- self-explanation 훈련 (\"왜 이게 X 아닌 Y인가?\")",
+      sources: ["Petersen E. Cognitive bias and clinical reasoning education. AACN 2025. PMID:40445787"]
+    },
+    pretest_probability_d_dimer: {
+      content: "### Pretest Probability 적용 — Age-Adjusted D-dimer (Le Gal JAMA 2026)\n> RCT n=3,205\n\n**Age-adjusted D-dimer cutoff** (>50세): age × 10 ng/mL (예: 70세 → 700 ng/mL)\n- PE/DVT 의심에 적용 시 안전하게 추가 영상 검사 회피 가능\n- 단순 500 ng/mL cutoff 사용 시 고령 환자에서 false positive ↑·불필요 CT angiography\n\n**임상 적용**:\n- Wells/Geneva score 산출 → low-intermediate pretest probability\n- → age-adjusted D-dimer 음성 → PE/DVT 안전 배제\n- Pretest probability 명시 routine 강화",
+      sources: ["Le Gal G et al. JAMA 2026. PMID:41490105"]
+    },
+    anchoring_va_jama: {
+      content: "### Anchoring 편향 대규모 실증 — VA 10만명 (Ly JAMA Intern Med 2023)\n> VA 전국 108,019건 분석\n\n**핵심 발견**: triage 기록에 \"CHF\" 단 한 줄 기재만으로:\n- PE 검사율 **4.6 percentage point 감소**\n- 검사 **15.5분 지연**\n- BNP는 오히려 **6.9pp 더 많이** 시행 — anchoring이 **확증 방향**으로 검사를 편향\n\n→ 한 줄 triage 라벨이 differential 폭을 좁힘. **triage 정보 비판적 수용** + 자기 진단 path가 라벨에 끌려가는지 자문.",
+      sources: ["Ly DP et al. Evidence for Anchoring Bias During Physician Decision-Making. JAMA Intern Med 2023;183(8):818-823. PMID:37358843"]
+    },
+    anchoring_rct_mamede: {
+      content: "### Anchoring 극복 = 감별 지식 (Mamede BMJ Qual Saf 2024 RCT)\n> 레지던트 68명 RCT\n\n**핵심**: \"신중하게 더 생각하는 것 (metacognition)\"만으로는 anchoring 풀지 못함.\n- 더 긴 시간 + 낮은 자신감 → 두 그룹 동일\n- **감별 지식 높은 그룹만 anchoring에 저항** (p=0.02)\n\n→ \"천천히 생각하기\" 단독 부족. **A vs B 구별하는 discriminating features 지식**이 핵심.",
+      sources: ["Mamede S et al. BMJ Qual Saf 2024;33(9):563-572. PMID:38365449"]
     }
   },
   uiHooks: null
@@ -7879,6 +7975,14 @@ var _peripheral_lymphadenopathy_v2 = {
     referral: {
       content: "### 영상·조직 검사\n- US: 첫 단계 영상 (size, shape, hilum, vascularity)\n- FNA: 감염성 의심 시 culture, 림프종 진단 한계\n- Core needle biopsy: 림프종 진단 가능성 ↑\n- Excisional biopsy: 림프종 의심 시 gold standard\n\n### 의뢰 기준\n- **Supraclavicular LAP** → 즉시 종양혈액내과\n- High-risk 양상 (firm·fixed·painless·>6주) → 외과 + 종양혈액내과\n- B symptoms → 종양혈액내과 staging\n- 양측·전신 + systemic 단서 → 감염내과 (HIV·TB) 또는 류마티스 (SLE·sarcoidosis)\n- 조직 진단 필요 → 외과 (excisional biopsy)\n\n관련: [[cervical-lymphadenitis]] · [[neck-mass]] · [[ldh-interpretation]] · [[diaphoresis]] · [[unintentional-weight-loss]] · [[clinical-reasoning]]",
       sources: []
+    },
+    afp_2025_falk_update: {
+      content: "### AFP 2025 업데이트 — Corticosteroid 금지 + Cutoff 기준 (Falk) [CLINICAL]\n> Falk B et al. Am Fam Physician 2025;112(3):286-293\n\n**핵심 권고 명문화**:\n- ⚠ **\"Corticosteroids should be avoided\"** — 진단 전 corticosteroid 투여 시 림프종·악성 조직진단 mask (lymphoma·기타 악성)\n- LAP+발열·B sx에 routine prednisolone 금기 ([[hematologic-malignancy-uri-screening]])\n\n**악성 의심 cutoff** (1차의료 의뢰 기준):\n- **>2cm** 단경\n- **hard·matted·fixed**\n- **4주 이상 지속**\n- **B 증상** (체중감소·야간발한·발열)\n- supraclavicular·epitrochlear (크기 무관)\n\n**4주 이상 지속 시 최소 workup**:\n- CBC w/diff·**CRP·ESR**·**TB 검사** (한국 호발)\n- LDH ([[ldh-interpretation]])·HIV·EBV (청장년)·HBV/HCV (혈청학)",
+      sources: ["Falk B et al. Lymphadenopathy: Evaluation and Differential Diagnosis. Am Fam Physician 2025;112(3):286-293. PMID:40961306"]
+    },
+    walker_jaapa_2025_7factors: {
+      content: "### JAAPA 2025 — 7요소 평가 + 악성 특이 조합 (Walker) [CLINICAL]\n> Walker CW. JAAPA 2025;38(6):20-27 — PA·일차의료 대상 포괄 리뷰\n\n**7요소 평가 (재확인)**:\n1. 위치 (cervical·axillary·inguinal·supraclavicular)\n2. 크기 (>1cm 일반·>1.5cm cervical·>0.5cm epitrochlear)\n3. 개수 (single vs multiple)\n4. 경도 (rubbery·firm·hard)\n5. 가동성 (mobile·fixed·matted)\n6. 압통 (염증 vs 악성 단서)\n7. 동반증상 (B sx·국소 감염·자가면역)\n\n**악성 특이 조합**:\n- **Supraclavicular (크기 무관) + >1cm + 4주 이상 + painless + firm + fixed + B sx**\n\n**지속 원인불명 LAP 체계적 workup 강조** — 4-6주 지나도 원인 미상 시 적극 검사·의뢰. **방치 금지**.",
+      sources: ["Walker CW. Evaluating lymphadenopathy. JAAPA 2025;38(6):20-27. PMID:40358102"]
     }
   },
   uiHooks: null
@@ -7970,6 +8074,10 @@ var _acute_bronchitis_v2 = {
     grace_score_cap: {
       content: "### GRACE Score — 외래 CAP 진단 예측 도구 (Ebell 2026)\n> Ebell M et al. Eur J Gen Pract 2026 — EAST-PC 718명 external validation, **AUROCC 0.81 (최고 정확도)**\n\n**GRACE Score 구성 7항목**:\n1. 콧물 **없음** (absence of runny nose)\n2. 호흡곤란 (breathlessness)\n3. 폐 수포음 (crackles)\n4. 호흡음 감소 (diminished vesicular breathing)\n5. 심박수 > 100/min\n6. 체온 > 37.8°C\n7. CRP > 30 mg/L *(없어도 유사 성능)*\n\n**CAP 분류 결과**:\n| 위험도 | 환자 수 | CAP 비율 | 임상 결정 |\n|---|---|---|---|\n| **저위험** | 280명 | **0.7%** | ABx 보류, bronchitis 관리 |\n| 중위험 | 265명 | 5.7% | 임상 판단 + 추적 |\n| **고위험** | 30명 | **33.3%** | CXR + 항생제 (CAP 처치) |\n\n→ CRP 없이도 유사 성능 — 즉시 CRP 불가 외래에서도 적용 가능",
       sources: ["Ebell M et al. External validation of risk scores and multivariate models for the diagnosis of community-acquired pneumonia in outpatients. Eur J Gen Pract 2026;32(1):2628370. PMID:41719027, DOI:10.1080/13814788.2026.2628370"]
+    },
+    purulent_sputum_education_japan: {
+      content: "### 누런 가래 ABx 처방 교육 효과·한계 (Kudoh 2024) [INSIGHTS]\n> Kudoh K et al. Antibiotics (Basel) 2024;13(11) — 일본 1,100명 의사 대상\n\n**교육 효과**:\n- \"누런 가래 = ABx 처방\" → **100% → 29.9%** 감소 (교육 후)\n- 가래 색이 세균 감염 단서 아님 인지도 향상\n\n**한계** (교육 후도 잔존):\n- \"환자가 원해서\" 처방 → **100% → 44%** (개선 폭 작음)\n- 환자 요구 압력에 의한 처방 = 교육만으로 차단 어려움\n\n**임상 메시지**:\n- 의사 교육 단독으로 처방 패턴 부분 개선만 가능\n- **환자 교육·포스터·외래 자료** 구조적 개입 병행 필요\n- \"가슴 감기\" 표현 명확화 ([[clinical-communication]] SDM)",
+      sources: ["Kudoh K et al. Antibiotics (Basel) 2024;13(11). PMID:39596717"]
     }
   },
   uiHooks: null
@@ -8359,3 +8467,576 @@ KNOWLEDGE_BUNDLE["ANC"] = _neutropenia_v2;
 KNOWLEDGE_BUNDLE["benign ethnic neutropenia"] = _neutropenia_v2;
 KNOWLEDGE_BUNDLE["BEN"] = _neutropenia_v2;
 KNOWLEDGE_BUNDLE["drug-induced neutropenia"] = _neutropenia_v2;
+
+/* ========== Drive gaps 2026-06-09 batch — 신규 9 entry ========== */
+
+/* statin-myopathy-management — Statin + CK 평가 quick reference (Drive gaps 6-9). [CLINICAL] */
+var _statin_myopathy_v2 = {
+  kind: "disease",
+  keywords: ["statin-myopathy-management","statin myopathy","SAMS","statin CK","rhabdomyolysis","statin rechallenge","격일 statin","rosuvastatin rechallenge"],
+  primarySources: [
+    "Grundy SM et al. 2018 ACC/AHA Cholesterol Guideline. Circulation 2019;139:e1082-e1143. PMID:30586774",
+    "Newman CB et al. NLA Statin-Associated Muscle Symptoms (SAMS) 2022. J Clin Lipidol 2022"
+  ],
+  sections: {
+    definition: {
+      content: "Statin 복용 환자 근통/CK 상승 평가·중단·재도전. ACC/AHA 2018: **CK >5×ULN history (또는 prior rhabdo)** = statin 보류 적응.",
+      sources: []
+    },
+    protocol: {
+      content: "### CK Cutoff 알고리듬\n| CK (×ULN) | 무증상 | 증상 동반 |\n|---|---|---|\n| **<4-5×** | monitor | 평가 (statin 외 원인 + 관련성) |\n| **4-10×** | 평가 + 일시중단 고려 | 중단 + 평가 1-2주 모니터 |\n| **>10×** | **중단 + workup** | 중단·즉시 workup |\n| **Rhabdo** | — | **CK ≥10×ULN + myoglobinuria/AKI** = 응급 |\n\n> ⚠ raw note \"40×\"는 임상 컨벤션·guideline 수치 아님. ACC/AHA: **5×ULN history = 보류 적응**.\n\n### SAMS — 기타 원인 배제 우선\n자동 statin 탓 가정 금지: 운동·외상·갑상선저하증·Vit D 결핍·신부전·약물 상호작용(fibrate·CYP3A4 inhibitor)·알코올·자가면역(anti-HMGCR)\n\n### Re-challenge 전략\n1. 호전 후 다른 statin·저용량으로 시도\n2. **Rosuvastatin·Pravastatin·Fluvastatin** 우선 (CYP3A4 metabolize 적고 muscle penetration 적음)\n3. **격일 또는 주 2-3회** 옵션\n4. 저용량 + ezetimibe 병합\n5. 3종 statin rechallenge 후도 SAMS 지속 → ezetimibe·bempedoic acid·PCSK9i 검토",
+      sources: []
+    },
+    referral: {
+      content: "- CK >10×ULN 또는 rhabdo 의심 (myoglobinuria·AKI·brown urine) → 응급\n- Statin 영구 불내성 + LDL 미달 → 내분비/심장 (PCSK9·bempedoic acid)\n- Autoimmune myopathy 의심 (statin 중단 후도 progressive 근력 저하·anti-HMGCR) → 류마티스\n\n관련: [[dyslipidemia]] · [[home-based-hypertension]] · [[diabetes-dyslipidemia]] · [[qtc-interpretation]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["statin-myopathy-management"] = _statin_myopathy_v2;
+KNOWLEDGE_BUNDLE["statin myopathy"] = _statin_myopathy_v2;
+KNOWLEDGE_BUNDLE["SAMS"] = _statin_myopathy_v2;
+KNOWLEDGE_BUNDLE["statin CK"] = _statin_myopathy_v2;
+KNOWLEDGE_BUNDLE["rhabdomyolysis"] = _statin_myopathy_v2;
+KNOWLEDGE_BUNDLE["statin rechallenge"] = _statin_myopathy_v2;
+
+/* qtc-interpretation — QTc 평가·QT 연장 약물 (Drive gaps 6-9). [CLINICAL] */
+var _qtc_interp_v2 = {
+  kind: "topic",
+  keywords: ["qtc-interpretation","QTc","QT prolongation","torsade de pointes","TdP","long QT","QT 연장 약물","drug-induced QT"],
+  primarySources: [
+    "Drew BJ et al. AHA/ACCF Scientific Statement on Prevention of Torsade de Pointes in the Hospital Setting. Circulation 2010;121(8):1047-1060. PMID:20142454, DOI:10.1161/CIRCULATIONAHA.109.192704"
+  ],
+  sections: {
+    definition: {
+      content: "QTc 정상: 남 ≤450ms·여 ≤460ms. 연장(위험): 남 >450·여 >470. **누구든 >500ms 또는 baseline 대비 >60ms 증가 = TdP 고위험** (AHA/ACCF 2010).",
+      sources: []
+    },
+    notes: {
+      content: "### QTc 평가\n| QTc | 분류 |\n|---|---|\n| 정상 | 남 ≤450 / 여 ≤460 |\n| 경계 | 450-470 (여 ~480) |\n| 연장 | 남 >450 / 여 >470 |\n| **고위험** | **>500ms 또는 baseline 대비 >60ms 증가** |\n| Short QT | <340-360 (드묾) |\n\n### QT 연장 약물 — 외래 처방 전 점검\n- **정신과**: quetiapine·haloperidol IV·ziprasidone·citalopram(>40mg 경고)·**TCA**\n- **항생제**: macrolides (clarithromycin·erythromycin·azithromycin)·fluoroquinolones (moxi·levo·cipro)\n- **항진균**: azoles (keto·flu·itra·voriconazole)\n- **소화기**: **metoclopramide(맥페란)**·ondansetron·domperidone\n- **항부정맥**: Class IA (quinidine·procainamide)·Class III (amiodarone·sotalol·dofetilide)\n- 기타: methadone·일부 TKI",
+      sources: []
+    },
+    precaution: {
+      content: "### 위험요인\n- 여성·저K/저Mg/저Ca·심부전·MI·LVH·서맥 (HR<50)\n- 가족력 (long QT)·신부전·간부전 (약물 축적)\n- **2개 이상 QT 연장 약물 병용**\n\n### 외래 routine\n1. 다약제 처방 전 ECG QTc 확인 (고령·심부전·항부정맥)\n2. K·Mg 정상화\n3. Cross-class 약물 조합 회피\n4. CredibleMeds.org 참조 (Known/Possible/Conditional risk)\n5. 증상 (palpitation·syncope) → 즉시 ECG + 응급실",
+      sources: []
+    },
+    referral: {
+      content: "- QTc >500ms 또는 baseline 대비 >60ms 증가 → 약물 중단 + 심장내과\n- TdP 발생 → 응급실 (Mg sulfate·overdrive pacing)\n- 가족력 long QT + syncope → 심장내과 (gene panel·운동 ECG)\n- Short QT (<340) + 가족력 → 심장내과\n\n관련: [[statin-myopathy-management]] · [[heart-failure]] · [[depression-screening]] · [[deprescribing]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["qtc-interpretation"] = _qtc_interp_v2;
+KNOWLEDGE_BUNDLE["QTc"] = _qtc_interp_v2;
+KNOWLEDGE_BUNDLE["QT prolongation"] = _qtc_interp_v2;
+KNOWLEDGE_BUNDLE["torsade de pointes"] = _qtc_interp_v2;
+KNOWLEDGE_BUNDLE["TdP"] = _qtc_interp_v2;
+KNOWLEDGE_BUNDLE["long QT"] = _qtc_interp_v2;
+KNOWLEDGE_BUNDLE["QT 연장 약물"] = _qtc_interp_v2;
+
+/* cardiorenal-anemia-syndrome — CRAS 심신성 빈혈 (Drive gaps 6-9). [CLINICAL] */
+var _cras_v2 = {
+  kind: "disease",
+  parents: ["heart-failure"],
+  keywords: ["cardiorenal-anemia-syndrome","CRAS","심신성 빈혈","cardiorenal anemia","HF anemia","CKD anemia","EPO 부족"],
+  primarySources: [
+    "Silverberg DS, Wexler D, Iaina A. Anemia, chronic renal disease and congestive heart failure—the cardio renal anaemia syndrome. Curr Opin Nephrol Hypertens 2004;13(2):163-170. PMID:15202610",
+    "Silverberg DS et al. Curr Opin Nephrol Hypertens (후속 review). PMID:16868702"
+  ],
+  sections: {
+    definition: {
+      content: "심장·신장·빈혈이 **서로 악화시키는 악순환 삼각**. 한 축 호전 시 나머지 둘 호전·한 축 악화 시 연쇄 무너짐.",
+      sources: []
+    },
+    notes: {
+      content: "### 3 악순환 고리\n1. **HF → 신장 악화**: 심박출 ↓ + 정맥 울혈 → 신정맥압 ↑ → GFR ↓\n2. **CKD → 빈혈**: EPO 생산 ↓ (peritubular fibroblast) + hepcidin 축적 → 철 이용 ↓\n3. **빈혈 → 심장 악화**: 산소운반능 ↓ → 보상적 cardiac output·HR ↑ → 만성 부담 + 조직 저산소 → 신장 더 손상\n\n### 임상 단서\n- NT-proBNP ↑ + cardiomegaly + congestion + 부종 (HF 울혈)\n- BUN/Cr >20 (prerenal 색채)\n- eGFR <60 특히 <45 (KDIGO 2012)\n- Hgb <11 + 부적절하게 낮은 reticulocyte (ARC <100K)\n- TIBC ↓ + ferritin 정상~상승 (ACD-like hepcidin)\n- 넓은 맥압·flow murmur·빈맥 (빈혈 심장 보상)",
+      sources: []
+    },
+    protocol: {
+      content: "### 평가 패널\nCBC + RBC indices + **Reticulocyte·ARC·IRF·RET-He** · Ferritin/Iron/TIBC/TSAT · BUN/Cr·eGFR·UA·ACR · **NT-proBNP** · TTE (LVEF) · TSH · B12/Folate\n\n### 치료 — 3 축 동시 개입\n1. **HF 안정화** ([[heart-failure]] GDMT 4-pillar; 울혈 시 loop diuretic — [[cardiorenal-aki-diuretic-management]])\n2. **CKD anemia 교정**: ESA (eGFR<30·Hgb<10 KDIGO 2012), IV iron (ferritin<100 또는 TSAT<20%); **target Hgb 10-11.5** (over-correction 회피)\n3. **빈혈 교정 → HF·신장 호전 기대** (cardiac output 보상 부담 ↓)\n\n> ⚠ Over-correction (Hgb >12) → 혈전·사망 ↑ (TREAT·CHOIR)",
+      sources: []
+    },
+    referral: {
+      content: "- eGFR <30 또는 Hgb <10 → 신장내과\n- LVEF <40% + 빈혈 → 심장 + 신장 협진\n- 급성 악화 → 응급/입원\n- Hgb <8 또는 증상 (DOE·syncope) → 수혈 검토\n\n관련: [[anemia]] · [[heart-failure]] · [[CKD]] · [[ckd-monitoring]] · [[cardiorenal-aki-diuretic-management]] · [[vitamin-b12]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["cardiorenal-anemia-syndrome"] = _cras_v2;
+KNOWLEDGE_BUNDLE["CRAS"] = _cras_v2;
+KNOWLEDGE_BUNDLE["심신성 빈혈"] = _cras_v2;
+KNOWLEDGE_BUNDLE["cardiorenal anemia"] = _cras_v2;
+KNOWLEDGE_BUNDLE["HF anemia"] = _cras_v2;
+KNOWLEDGE_BUNDLE["CKD anemia"] = _cras_v2;
+
+/* cardiorenal-aki-diuretic-management — 울혈성 prerenal AKI 이뇨 (Drive gaps 6-9). [CLINICAL] */
+var _crs_aki_v2 = {
+  kind: "disease",
+  parents: ["heart-failure"],
+  keywords: ["cardiorenal-aki-diuretic-management","울혈성 prerenal AKI","cardiorenal AKI","HF diuretic","furosemide HF","spironolactone HF","post-renal 배제"],
+  primarySources: [
+    "McDonagh TA et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J 2021;42:3599-3726. PMID:34447992",
+    "Heidenreich PA et al. 2022 AHA/ACC/HFSA Guideline. PMID:35379503"
+  ],
+  sections: {
+    definition: {
+      content: "**이뇨제 결정은 \"혈압\"이 아니라 \"용적 상태\"로**. HF에서 이뇨제=울혈 제거제. 일시적 Cr 상승은 적절한 decongestion이면 예후 악화 없음 (ESC 2021).",
+      sources: []
+    },
+    exam: {
+      content: "### Volume Overload (이뇨제 적응)\n- NT-proBNP ↑ (외래 >125 / 응급 age-adjusted)\n- Cardiomegaly + pulmonary congestion (CXR)\n- Pitting edema·JVD·crackles·간비대\n\n### Prerenal AKI 색채 (과이뇨 위험)\n- BUN/Cr >20·AKI on CKD (eGFR ↓)·핍뇨·기립 어지럼·hypotension\n\n### Cardiorenal 함정\n전신 물 넘침 + 신장 유효 순환 부족 동시 가능. **적절한 이뇨 → 정맥 울혈 ↓ → 신정맥압 ↓ → 신기능 호전**. 과이뇨는 prerenal AKI 악화.",
+      sources: []
+    },
+    protocol: {
+      content: "### 외래 결정 분기\n\n**1. Post-renal 폐색 배제 — 이뇨 전 우선**\n> ⚠ 폐색성 핍뇨에 이뇨제 → 방광만 채움. **PVR·방광스캔** + BPH·전립선 증상 확인. (남성 핍뇨 호소 시 PVR 우선)\n\n**2. 외래 단독 시작 — 신중**\nNT-proBNP 1700+ · 핍뇨 · AKI 조합 → 외래 단독 부적절, 심장내과 + 모니터링 환경\n\n**3. 외래 시작 가능 시**\n- 저용량 **loop (furosemide)** titration\n- **48-72h Cr/K 재검** 필수\n- 환자 교육: 매일 체중 — **0.5-1 kg/day 적정**\n- 과이뇨 징후 (기립 어지럼·Cr 급등·소변량 과다 감소) → 감량/중단\n- 빈혈 동반 ([[cardiorenal-anemia-syndrome]]) → Hgb 8 수준 천천히 이뇨\n\n### Spironolactone vs Furosemide — 역할 다름\n| | Furosemide (loop) | Spironolactone (MRA) |\n|---|---|---|\n| 주 역할 | **울혈 제거 (강력)** | HF **예후 개선** (이뇨 약함) |\n| K | ↓ | **↑** |\n| 신기능 의존 | eGFR ↓도 작동 | **eGFR <30 위험·효과 제한** |\n| HFrEF 사망률 | 미입증 | **30% 감소** (RALES PMID:10471456) |\n\n\"Spiro가 Lasix보다 안전\"은 오해 — 역할 자체가 다름.",
+      sources: []
+    },
+    referral: {
+      content: "- 외래 BNP/NT-proBNP ↑↑ + AKI on CKD + 핍뇨 → 심장내과 (입원 모니터링)\n- 이뇨 후 Cr 급등 (>0.3 mg/dL 또는 >25%) → 심장·신장 협진\n- Post-renal 의심 (PVR>200·anuria) → 비뇨기과\n- 외래 GFR <30 + 이뇨 결정 어려움 → 신장내과\n\n관련: [[heart-failure]] · [[heart-failure-monitoring]] · [[CKD]] · [[ckd-monitoring]] · [[cardiorenal-anemia-syndrome]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["cardiorenal-aki-diuretic-management"] = _crs_aki_v2;
+KNOWLEDGE_BUNDLE["울혈성 prerenal AKI"] = _crs_aki_v2;
+KNOWLEDGE_BUNDLE["cardiorenal AKI"] = _crs_aki_v2;
+KNOWLEDGE_BUNDLE["furosemide HF"] = _crs_aki_v2;
+KNOWLEDGE_BUNDLE["spironolactone HF"] = _crs_aki_v2;
+KNOWLEDGE_BUNDLE["post-renal 배제"] = _crs_aki_v2;
+
+/* platelet-function-test — PFA-100/200 해석 (Drive gaps 6-9). [CLINICAL] */
+var _platelet_v2 = {
+  kind: "topic",
+  keywords: ["platelet-function-test","PFA-100","PFA-200","aspirin response","von Willebrand disease","vWD","light transmission aggregometry","LTA"],
+  primarySources: [
+    "Hayward CPM et al. Best Pract Res Clin Haematol 2006;19(1):91-104. PMID:16377544",
+    "Favaloro EJ. Clinical utility of the PFA-100. Haemophilia 2015;21(5):642-649. PMID:26179127"
+  ],
+  sections: {
+    definition: {
+      content: "PFA-100/200 — in vitro 혈류 모방, closure time 측정. 두 cartridge: Col/EPI + Col/ADP.",
+      sources: []
+    },
+    notes: {
+      content: "### 해석 패턴\n| EPI | ADP | 해석 |\n|---|---|---|\n| 정상 | 정상 | 혈소판 기능 정상 (vWD·aspirin 1차 배제) |\n| **연장** | 정상 | Aspirin 효과 또는 경증 혈소판 이상 |\n| **연장** | **연장** | 의미 있는 혈소판 기능 이상·**vWD 가능성↑**·심한 혈소판 결함 |\n\n> ⚠ **Clopidogrel(P2Y12) PFA 민감도 낮음** (Favaloro 2015) — clopidogrel 효과 검출 신뢰성 제한. 필요 시 **VerifyNow P2Y12** 또는 PFA-200 Innovance P2Y cartridge 별도.\n\n### 검사 전 점검 — 위양성 회피\nPFA는 다음에 민감:\n- **Hct <25-30% 또는 platelet <150,000** → 연장 (위양성)\n- 시료 처리·약물 (NSAIDs·SSRI)\n\n> ⚠ **CBC 먼저 확인** — 빈혈·혈소판감소 보정 없이 판독 금지.",
+      sources: []
+    },
+    protocol: {
+      content: "### 정밀 평가 분기 (PFA 비정상 + 출혈 증상)\n| 의심 진단 | 추가 검사 |\n|---|---|\n| **von Willebrand disease (vWD)** | vWF antigen·vWF activity (Ristocetin)·Factor VIII |\n| 혈소판 기능 이상 | **Light transmission aggregometry (LTA)** — gold standard |\n| 약물 효과 | 약물력 재확인·중단 후 재검 |\n\nvWD type 1은 ristocetin-induced aggregation으로 검출.\n\n### 외래 활용\n- 수술·시술 전 출혈 위험 평가 (가족력 + 증상 + PFA)\n- 알 수 없는 잦은 멍·점막 출혈 평가 1차\n- Aspirin 순응도 보조 (표준 단독 검사 아님)",
+      sources: []
+    },
+    referral: {
+      content: "- PFA 비정상 + 출혈 증상 → 혈액내과 (LTA·vWF)\n- 수술 전 PFA 연장 + 가족 출혈력 → 혈액내과\n- Clopidogrel 효과 평가 필요 → 심장내과 (VerifyNow)\n\n관련: [[anemia]] · [[hematuria]] · [[chronic-pain-integrative]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["platelet-function-test"] = _platelet_v2;
+KNOWLEDGE_BUNDLE["PFA-100"] = _platelet_v2;
+KNOWLEDGE_BUNDLE["PFA-200"] = _platelet_v2;
+KNOWLEDGE_BUNDLE["aspirin response"] = _platelet_v2;
+KNOWLEDGE_BUNDLE["von Willebrand disease"] = _platelet_v2;
+KNOWLEDGE_BUNDLE["vWD"] = _platelet_v2;
+KNOWLEDGE_BUNDLE["light transmission aggregometry"] = _platelet_v2;
+
+/* subacute-thyroiditis — De Quervain (Drive gaps 6-9). [CLINICAL] */
+var _subacute_thyroiditis_v2 = {
+  kind: "disease",
+  parents: ["thyroid-disorder"],
+  keywords: ["subacute-thyroiditis","De Quervain thyroiditis","아급성 갑상선염","painful thyroiditis","갑상선 통증","post-URI thyroiditis"],
+  primarySources: [
+    "Ross DS et al. 2016 American Thyroid Association Guidelines for Diagnosis and Management of Hyperthyroidism and Other Causes of Thyrotoxicosis. Thyroid 2016;26(10):1343-1421. PMID:27521067, DOI:10.1089/thy.2016.0229"
+  ],
+  sections: {
+    definition: {
+      content: "**선행 URI 2-8주 (50-70%)** + 갑상선 통증·압통 (가장 특징적) + ESR/CRP ↑. Phase 변화: hyperthyroid (1-3mo) → euthyroid → 일시 hypothyroid → 회복. 호발 30-50대 여성.",
+      sources: []
+    },
+    exam: {
+      content: "### 진단 기준\n| Major | 내용 |\n|---|---|\n| 1 | Anterior neck pain·압통 (갑상선) |\n| 2 | **ESR >50 또는 CRP elevated** |\n| 3 | Sono: **hypoechoic + reduced vascularity** |\n| 4 | RAIU <5% (한국 routine X) |\n| 5 | TFT 변화 (early hyperthyroid) |\n\n진단 강도: 1+2 strong suspicion / 1+2+3 clinical / 1+2+3+4 definitive\n\n외래에서는 1+2+3 + 임상 경과로 진단·치료 시작 가능 (RAIU 없이).\n\n### 통증 특징\n- 한쪽 시작 → 반대쪽 확산\n- 턱·귀로 방사\n- 갑상선 swelling·firm\n- 발열·피로 동반 가능",
+      sources: []
+    },
+    protocol: {
+      content: "### Mild\n- **NSAIDs**: ibuprofen 400-600mg q6-8h 또는 naproxen 500mg BID\n- 1-2주 trial · 통증·압통 control 목표\n- 갑상선 기능 자연 회복 — **methimazole 부적절**\n\n### Moderate-Severe\n- **Prednisolone 40mg/day** 시작\n- 1-2주 후 평가 + **4-8주 tapering**\n- 통증 빠른 호전 — 호전 후 감량\n\n### Hyperthyroid phase 증상\n- **β-blocker** (propranolol·atenolol·bisoprolol) 일시적\n- ⚠ **Antithyroid drug (methimazole) 부적절** — destruction이 원인 (production 아님)\n\n### Hypothyroid phase (3-6개월 후)\n- 일시적 → 증상 동반 시 단기 LT4\n- 대부분 자연 회복",
+      sources: []
+    },
+    monitoring: {
+      content: "| 시점 | 검사 |\n|---|---|\n| 초진 + 2-4주 | TFT·ESR·CRP·sono |\n| 6개월 | TFT 회복 확인 |\n| 12개월 | TFT 영구 hypothyroid 배제 |\n\n대부분 1년 내 완전 회복. **5-15% 영구 hypothyroid** — long-term LT4 ([[thyroid-disorder]]).",
+      sources: []
+    },
+    referral: {
+      content: "- Severe + Prednisolone 반응 부족 → 내분비\n- 영구 hypothyroid (12개월 TSH ↑) → 내분비 또는 [[thyroid-disorder]]\n- Suppurative thyroiditis 의심 (농양·심한 발열·중독) → 응급/내분비\n\n관련: [[thyroid-disorder]] · [[thyroid-fna-cnb]] · [[clinical-reasoning]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["subacute-thyroiditis"] = _subacute_thyroiditis_v2;
+KNOWLEDGE_BUNDLE["De Quervain thyroiditis"] = _subacute_thyroiditis_v2;
+KNOWLEDGE_BUNDLE["아급성 갑상선염"] = _subacute_thyroiditis_v2;
+KNOWLEDGE_BUNDLE["painful thyroiditis"] = _subacute_thyroiditis_v2;
+KNOWLEDGE_BUNDLE["갑상선 통증"] = _subacute_thyroiditis_v2;
+
+/* cervical-referred-pain — 경추 → 등 referred (Drive gaps 6-9). [CLINICAL] */
+var _cervical_referred_v2 = {
+  kind: "disease",
+  keywords: ["cervical-referred-pain","경추 관련통","등통증 경추","thoracic referred from cervical","myofascial cervical","cervical radiculopathy back"],
+  primarySources: [
+    "Dwyer A, Aprill C, Bogduk N. Cervical zygapophyseal joint pain patterns. I: A study in normal volunteers. Spine 1990;15(6):453-457. PMID:2402682",
+    "Iyer S, Kim HJ. Cervical radiculopathy. Curr Rev Musculoskelet Med 2016;9(3):272-280. PMID:27250899",
+    "Childress MA, Becker BA. Nonoperative Management of Cervical Radiculopathy. Am Fam Physician 2016;93(9):746-754. PMID:27175952"
+  ],
+  sections: {
+    definition: {
+      content: "\"등이 아프다\" 호소 = 흉추 원인이 아닐 수 있다. Cervical disc·facet·muscle → 흉추·견갑 referred pain. **흉추 단독 평가 전 경추 ROM·신경학적 평가 routine**.",
+      sources: []
+    },
+    notes: {
+      content: "### 1. Referred Pain (facet, Dwyer 1990)\n| Cervical level | Referred area |\n|---|---|\n| C2-C3 | 후두부·관자놀이·목 뒤 |\n| C3-C4 | 어깨·견갑골 윗·흉골 윗 |\n| C4-C5 | 어깨·견갑골·**T1-T2** |\n| C5-C6 | 견갑골 사이·**T2-T4** |\n| C6-C7 | 견갑골 안쪽·**mid-thoracic**·팔 radial |\n| C7-T1 | 견갑골 안쪽 아래·**T4-T6**·팔 ulnar |\n\n> **핵심**: C5-T1 facet pathology가 흉추까지 referred.\n\n### 2. Myofascial Pain\nTrapezius·levator scapulae·rhomboid·cervical paraspinal trigger point → 흉추·견갑 referred.\n\n### 3. Cervical Radiculopathy\n| Root | Motor | Dermatome |\n|---|---|---|\n| C5 | Deltoid·이두근 | 외측 상완 → 어깨 |\n| C6 | Brachioradialis | 외측 전완·엄지·둘째 |\n| C7 | Triceps | 후방 상완·셋째 |\n| C8 | Hand intrinsic | 내측 전완·약지·새끼 |\n| T1 | Hand intrinsic | 내측 팔 |\n\n> 특히 **C7·C8·T1 → 견갑골 안쪽·등 중심부 referred 흔함**.",
+      sources: []
+    },
+    exam: {
+      content: "### 외래 평가 routine — \"등이 아프다\" 호소 시\n1. **경추 ROM** (굴곡·신전·회전·측굴) — 동작 시 등 통증 재현?\n2. **Spurling test** (경추 압박·동측 회전·신전) — radiculopathy 단서\n3. **신경학적**: 상지 DTR (biceps C5·brachioradialis C6·triceps C7)·감각·근력\n4. **Trigger point 촉진** — trapezius·levator scapulae·rhomboid·paraspinal\n5. **흉추 ROM + 촉진** — 흉추 단독 원인 배제\n\n→ 경추 ROM 시 등 통증 재현 또는 신경학적 이상 → cervical 원인 우선",
+      sources: []
+    },
+    protocol: {
+      content: "### 영상 적응\n- Red flag (외상·종양·감염·진행성 신경 이상) → MRI 우선\n- 6주 이상 보존 무반응 + radiculopathy → MRI\n- Trauma → cervical CT\n- 만성 등 통증 + 경추 평가 양성 → 경추 X-ray 4-view (flexion/extension)",
+      sources: []
+    },
+    referral: {
+      content: "- **Myelopathy 신호** (보행 장애·spasticity·hand clumsy·Hoffman 양성·bladder) → 신경외과 응급\n- Progressive radiculopathy (근력 저하 진행) → 신경외과/정형\n- 6주 보존 무반응 + MRI 단서 → 신경외과/정형\n- 만성 facet/myofascial → 통증의학과\n\n관련: [[spine-related-arm-pain]] · [[clinical-reasoning]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["cervical-referred-pain"] = _cervical_referred_v2;
+KNOWLEDGE_BUNDLE["경추 관련통"] = _cervical_referred_v2;
+KNOWLEDGE_BUNDLE["등통증 경추"] = _cervical_referred_v2;
+KNOWLEDGE_BUNDLE["thoracic referred from cervical"] = _cervical_referred_v2;
+KNOWLEDGE_BUNDLE["myofascial cervical"] = _cervical_referred_v2;
+
+/* gsm-genitourinary-menopause — GSM (Drive gaps 6-9). [CLINICAL] */
+var _gsm_v2 = {
+  kind: "topic",
+  keywords: ["gsm-genitourinary-menopause","GSM","폐경 비뇨생식기 증후군","atrophic vaginitis","vaginal estrogen","topical estrogen","recurrent UTI menopause","vulvovaginal atrophy"],
+  primarySources: [
+    "The 2020 genitourinary syndrome of menopause position statement of The North American Menopause Society. Menopause 2020;27(9):976-992. PMID:32852449"
+  ],
+  sections: {
+    definition: {
+      content: "폐경 estrogen 결핍으로 인한 질·외음·하부 요로 점막 위축·증상 군집. Atrophic vaginitis 포함 + 요도·방광 증상까지 통합 진단. **재발성 UTI ≥3/y = GSM 검사 신호**.",
+      sources: []
+    },
+    exam: {
+      content: "### Clinical\n- **질**: 건조·작열·가려움·**Dyspareunia**·분비물 변화\n- **요도·방광**: dysuria(UTI 없이도)·frequency·urgency·**recurrent UTI ≥3/y**·urethral discomfort\n- **외음**: vulvar irritation·redness·자극\n- **기타**: postmenopausal bleeding(drying/friction)·sexual dysfunction\n\n### 진단\n- 임상 진단 우선 (폐경 + sx + 위축 점막)\n- 별도 검사 routine 불필요\n- **Postmenopausal bleeding** → endometrial 평가 (TVUS·EMB) — GSM 단독 가정 X\n- 재발 UTI → urine culture + GSM 동반 평가",
+      sources: []
+    },
+    protocol: {
+      content: "### Step 1: Non-hormonal (first-line for mild)\n- **Vaginal lubricant** (성교 시): Astroglide·KY·Replens\n- **Vaginal moisturizer** (정기 hyaluronic acid): Replens·Hyalo Gyn\n- 비누·자극제 회피·cotton underwear\n- 골반저 운동 (요실금 동반)\n\n### Step 2: Topical Estrogen (first-line moderate-severe)\n- Estradiol vaginal cream (Premarin·Vagifem)·tablet·ring(3mo 1회)\n\n#### 사용법\n| Phase | 빈도 | 기간 |\n|---|---|---|\n| **Loading** | 매일 자기 전 1정 | **2-3주** (보통 2주) |\n| **Maintenance** | 주 2회 (월·목) | **Long-term 지속** |\n\n> 평생 사용 가능. 중단 시 sx·UTI 재발.\n\n#### 기타 (NAMS 2020)\n- **DHEA vaginal insert (prasterone)** — moderate-severe dyspareunia\n- **Ospemifene** (경구 SERM)\n\n### Recurrent UTI 동반\n- **Topical estrogen이 재발성 UTI 감소 근거** ([[recurrent-uti]])\n- 항생제 prophylaxis보다 우선 검토",
+      sources: []
+    },
+    precaution: {
+      content: "### ADR\n- Vaginal discharge·자극 (초기 mild — 자연 해소)\n- 가슴 압통 (드묾)\n- **비정상 출혈 → 즉시 내원·endometrial 평가**\n\n### 추적\n- 6-12개월 sx·유방 평가\n- **Postmenopausal bleeding → TVUS·EMB**\n- 유방암·자궁내막암 hx → 부인과 refer\n- Systemic absorption minimal (topical 저용량, NAMS 2020 재확인)",
+      sources: []
+    },
+    referral: {
+      content: "- Postmenopausal bleeding → 부인과 즉시\n- 유방암·자궁내막암 hx + topical estrogen 결정 → 부인과·종양내과 협진\n- 반응 부족 + dyspareunia 지속 → 부인과 (pelvic PT·DHEA·ospemifene)\n- 골반저 dysfunction → 비뇨부인과 (pelvic floor PT)\n\n관련: [[menopause]] · [[recurrent-uti]] · [[uti-complicated-classification]] · [[hematuria]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["gsm-genitourinary-menopause"] = _gsm_v2;
+KNOWLEDGE_BUNDLE["GSM"] = _gsm_v2;
+KNOWLEDGE_BUNDLE["폐경 비뇨생식기 증후군"] = _gsm_v2;
+KNOWLEDGE_BUNDLE["atrophic vaginitis"] = _gsm_v2;
+KNOWLEDGE_BUNDLE["vaginal estrogen"] = _gsm_v2;
+KNOWLEDGE_BUNDLE["topical estrogen"] = _gsm_v2;
+KNOWLEDGE_BUNDLE["recurrent UTI menopause"] = _gsm_v2;
+KNOWLEDGE_BUNDLE["vulvovaginal atrophy"] = _gsm_v2;
+
+/* uti-complicated-classification — Uncomplicated vs Complicated UTI (Drive gaps 6-9). [CLINICAL] */
+var _uti_complicated_v2 = {
+  kind: "topic",
+  keywords: ["uti-complicated-classification","complicated UTI","uncomplicated UTI","UTI classification","HAUTI","healthcare-associated UTI"],
+  primarySources: [
+    "Gupta K et al. IDSA 2011 Uncomplicated cystitis/pyelonephritis guideline. Clin Infect Dis 2011;52(5):e103-120. PMID:21292654",
+    "Anger J et al. AUA/CUA/SUFU Recurrent UTI Guideline 2019. PMID:31042112"
+  ],
+  sections: {
+    definition: {
+      content: "UTI 분류 = 항생제 선택·의뢰 결정의 1차 기준. **폐경 후 여성 자동 complicated 아님** (IDSA 2011 본문 명시 — 일부 전문가 uncomplicated로 봄).",
+      sources: []
+    },
+    notes: {
+      content: "### Uncomplicated UTI (IDSA 2011) — 모두 충족\n- Healthy non-pregnant **폐경 전** 여성\n- 정상 해부학·기능 / 면역 정상 / 동반 질환 없음\n- 최근 시술·catheter X / 항생제 노출 X\n\n### Complicated UTI — 다음 중 하나라도\n**환자 특성**: 남성 (모든 UTI)·임신·**65세+**·면역억제 (HIV·면역억제제·스테로이드)\n**동반 질환**: DM (특히 조절 불량)·신부전 (CrCl<60)·CKD·HIV\n**해부학·기능**: 결석·indwelling catheter·urologic 시술·신경인성 방광·요로 폐쇄·**BPH**·cystocele/prolapse·신장 이식\n**감염 특성**: 다제내성균 노출·최근 ABx (<3mo)·HAUTI·의료환경·pyelonephritis hx\n\n### 폐경 후 여성 — 사례별 (자동 complicated 분류 회피)\n다음 동반 시 complicated:\n- **GSM** ([[gsm-genitourinary-menopause]]) — recurrent UTI 흔한 원인\n- BPH equivalent (cystocele·prolapse)\n- 신경인성 방광·면역억제·조절 불량 DM\n\n무증상 GSM + 잘 관리되는 폐경 후 여성 단순 cystitis는 uncomplicated 외래 처방 가능 — **재발 시 GSM 평가 routine**.\n\n### 2025 IDSA 분류 재정비 (부기)\n전통 \"환자/해부학\" → **localized vs systemic 증상 기반** 재정비. Pyelonephritis·urosepsis = systemic / simple cystitis = localized. 외래에서는 **증상 + 환자/해부학 factor** 함께 평가.",
+      sources: []
+    },
+    protocol: {
+      content: "### Uncomplicated cystitis\n1차 ABx (IDSA 2011): **Nitrofurantoin** 100mg BID × 5d / **Fosfomycin** 3g 단회 / **TMP-SMX** 800/160mg BID × 3d (저항률 <20%)\n외래 follow-up 1주\n\n### Complicated cystitis (외래)\n- 광범위 ABx (fluoroquinolone·cephalosporin)\n- **소변배양 + 감수성 결과 확인**\n- 외래 follow-up 3-5일 + 결과 review\n\n### Pyelonephritis ([[acute-pyelonephritis]])\n- IDSA 2010 — 외래는 ciprofloxacin·levofloxacin (저항률 점검)\n- 입원 적응: hypotension·구토·면역저하·노인·임신·anatomic 이상\n\n### Recurrent UTI ([[recurrent-uti]])\n- AUA 2019: 행동수정·국소 estrogen·D-mannose·cranberry·prophylaxis ABx",
+      sources: []
+    },
+    referral: {
+      content: "- 복잡 해부학 (결석·폐색·이식·신경인성 방광) → 비뇨기과\n- Recurrent UTI ≥3/y + GSM → 부인과/비뇨부인과 ([[gsm-genitourinary-menopause]])\n- Pyelonephritis 입원 적응 → 응급실\n- 다제내성균 (ESBL·CRE) → 감염내과\n\n관련: [[recurrent-uti]] · [[acute-pyelonephritis]] · [[gsm-genitourinary-menopause]] · [[hematuria]] · [[CKD]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["uti-complicated-classification"] = _uti_complicated_v2;
+KNOWLEDGE_BUNDLE["complicated UTI"] = _uti_complicated_v2;
+KNOWLEDGE_BUNDLE["uncomplicated UTI"] = _uti_complicated_v2;
+KNOWLEDGE_BUNDLE["UTI classification"] = _uti_complicated_v2;
+KNOWLEDGE_BUNDLE["HAUTI"] = _uti_complicated_v2;
+KNOWLEDGE_BUNDLE["healthcare-associated UTI"] = _uti_complicated_v2;
+
+/* ========== Batch III — deep-extract 5-27 ~ 6-8 신규 6 entry ========== */
+
+/* transitional-care-elderly — 노인 병원→가정 전환기 돌봄 (5-27 deep-extract 신규). [CLINICAL — 조건부] */
+var _transitional_care_v2 = {
+  kind: "disease",
+  parents: ["frailty"],
+  keywords: ["transitional-care-elderly","전환기돌봄","transitional care","hospital-to-home","퇴원 계획","discharge planning","재입원","post-hospitalization syndrome"],
+  primarySources: [
+    "Steiner LM et al. Eur J Ageing 2025;22(1):58. PMID:41186737, DOI:10.1007/s10433-025-00890-w (SR 25 RCTs, n=17,542, ≥65세)"
+  ],
+  sections: {
+    definition: {
+      content: "병원→가정 전환기 = 노인 기능 저하·재입원·QOL 저하 고위험 시기. Krumholz 2013 **post-hospitalization syndrome** — deconditioning·식욕↓·인지 변화·면역 ↓ 복합. 구조화 개입으로 결과 개선 가능.",
+      sources: []
+    },
+    protocol: {
+      content: "### 효과적 중재 핵심 5요소 (SR 25 RCTs)\n| 구성요소 | 근거 |\n|---|---|\n| **구조화된 퇴원 계획** | 기능·재입원·응급실 방문 개선 |\n| **조기 퇴원 후 추적 방문** | 성공 핵심 — **빠를수록 효과** |\n| **보호자(가족) 참여** | 기능·기분·영양 개선 독립 기여 |\n| **다직종 팀** | 간호·물리치료·사회복지 통합 |\n| **가정 기반 지원** | 보행·ADL 회복 |\n\n### 외래 실천\n- 퇴원 후 **2주 내 (가능하면 1주)** 외래 f/u 확보\n- 보호자 동석 권장 — 약물·식이·운동 교육\n- 다약제 review (Beers·STOPP·이전 입원 신규 약물 점검)\n- BANC 평가 ([[elderly-nonspecific-symptoms]])\n- 영양·수면·인지 routine 점검",
+      sources: []
+    },
+    referral: {
+      content: "- 재입원 위험 ↑ + 다중 동반질환 → 노인의학·다직종 협진\n- 보호자 burden ↑ → 사회복지·요양 자원 연계\n- 기능 저하 progressive → 재활의학\n\n관련: [[frailty]] · [[elderly-nonspecific-symptoms]] · [[deprescribing]] · [[geriatric-assessment-4ms]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["transitional-care-elderly"] = _transitional_care_v2;
+KNOWLEDGE_BUNDLE["전환기돌봄"] = _transitional_care_v2;
+KNOWLEDGE_BUNDLE["transitional care"] = _transitional_care_v2;
+KNOWLEDGE_BUNDLE["hospital-to-home"] = _transitional_care_v2;
+KNOWLEDGE_BUNDLE["퇴원 계획"] = _transitional_care_v2;
+KNOWLEDGE_BUNDLE["post-hospitalization syndrome"] = _transitional_care_v2;
+
+/* osteoarthritis — 골관절염 + 수면 중재 (5-30 + 6-8 deep-extract 신규). [CLINICAL — 조건부] */
+var _osteoarthritis_v2 = {
+  kind: "disease",
+  keywords: ["osteoarthritis","골관절염","OA","관절통","joint pain","knee OA","hip OA","CBT-i OA","OA sleep","metformin OA"],
+  primarySources: [
+    "Hall M et al. Time to wake up to the potential benefits of targeting sleep in osteoarthritis management. Osteoarthritis Cartilage 2026;34(6):776-783. PMID:41876082, DOI:10.1016/j.joca.2026.03.122"
+  ],
+  sections: {
+    definition: {
+      content: "퇴행성 관절질환 — 통증·기능 저하. 외래 1차 = 운동·체중감량·NSAIDs·국소 치료. 최근 근거: **수면 중재·식이 동반·메트포르민 통증 가능성**.",
+      sources: []
+    },
+    notes: {
+      content: "### 수면 장애 → OA 통증 악화 (Hall 2026)\n- OA 환자 수면 장애 매우 흔하나 진료에서 거의 고려 안 됨\n- 수면 장애 → 근골격 통증 강도 ↑ + 신체·정서 결과 ↓\n- 동반: 피로·우울·통증 파국화·부정적 기분\n\n### 수면 중재 → OA 통증 개선\n| 중재 | 경로 | 통증 효과 |\n|---|---|---|\n| **CBT-i** | 수면 인지·행동 교정 | 수면 ↑ → OA 통증 ↓ |\n| **운동** | 일주기리듬 + 피로 ↓ | 수면 + **직접 통증 감소 (이중 이득)** |\n| **식이·체중감량** | 염증 ↓ | 수면 ↑ → 통증 ↓ |\n\n→ OA 외래 routine: \"요즘 잠은 잘 자고 계세요?\" 문진",
+      sources: []
+    },
+    protocol: {
+      content: "### 식이+운동 vs 운동 단독 (Ann Intern Med 2026 PMID:41974007)\n- **고관절 OA**: 식이+운동 > 운동 단독 (통증·기능 개선)\n- **슬관절 OA**: 보행 **1,000보/일** 증가 → OA 예방 근거\n- 운동 처방: 수영·자전거·태극권·요가 (저충격)\n\n### 약물\n- 1차: 국소 NSAIDs (topical diclofenac) — 전신 부작용 ↓\n- 2차: 경구 NSAIDs (단기 사용, GI/CV 위험 평가)\n- Capsaicin·duloxetine 보조\n- ⚠ Opioid 비권고 (장기 효과 미입증·부작용 ↑)\n\n### 메트포르민 통증 가능성 (Ann Intern Med 2026)\n관찰 연구 — DM 환자에서 메트포르민 사용이 OA 통증 ↓와 연관. RCT 근거 부족 — DM 적응증 외 처방 X.",
+      sources: ["Ann Intern Med 2026;179(5_Suppl):e2600984. PMID:41974007"]
+    },
+    referral: {
+      content: "- 기능 저하 심한 진행성 OA (KL grade 3-4) → 정형외과 (관절치환 검토)\n- 염증성 관절염 의심 (조조강직 >1h·다관절·CRP↑) → 류마티스\n- 신경병증성 통증 동반 → 통증의학과\n\n관련: [[chronic-pain-integrative]] · [[depression-screening]] · [[obesity]] · [[diabetes]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["osteoarthritis"] = _osteoarthritis_v2;
+KNOWLEDGE_BUNDLE["골관절염"] = _osteoarthritis_v2;
+KNOWLEDGE_BUNDLE["OA"] = _osteoarthritis_v2;
+KNOWLEDGE_BUNDLE["관절통"] = _osteoarthritis_v2;
+KNOWLEDGE_BUNDLE["joint pain"] = _osteoarthritis_v2;
+KNOWLEDGE_BUNDLE["knee OA"] = _osteoarthritis_v2;
+KNOWLEDGE_BUNDLE["hip OA"] = _osteoarthritis_v2;
+
+/* infectious-mononucleosis — EBV 단핵구증 (5-31 deep-extract 신규). [CLINICAL] */
+var _mono_v2 = {
+  kind: "disease",
+  keywords: ["infectious-mononucleosis","전염단핵구증","단핵구증","EBV","Epstein-Barr virus","heterophile antibody","Monospot","비장파열 예방"],
+  primarySources: [
+    "Sylvester JE et al. Infectious Mononucleosis: Rapid Evidence Review. Am Fam Physician 2023;107(1):71-78. PMID:36689975"
+  ],
+  sections: {
+    definition: {
+      content: "EBV 원발 감염 바이러스 증후군. **발열·인두염·후경부 림프절병증 3주징**. 15-24세 peak, 타액 전파. **3주 운동 금지** (비장파열 예방).",
+      sources: []
+    },
+    exam: {
+      content: "### 임상 3주징\n- 발열·인두염·**후경부 림프절병증** (posterior cervical LAP)\n→ 3가지 모두 → mono 감별 우선\n\n### 검사 순서\n1. **CBC w/diff**: >40% 림프구·>10% atypical lymphocytes\n2. **Heterophile antibody (Monospot)**: sens 87%·spec 91%\n   - **False-negative**: 5세 미만·발병 첫 1주\n3. Heterophile 음성 + 강력 의심 → **EBV VCA-IgM** (더 민감/특이)\n\n### 추가 평가 시\n- LFT (간염 흔함, AST/ALT 2-3배 ↑)\n- 비장 진찰 (HSM 동반)\n- 인후 streptococcal swab (group A strep 감별)",
+      sources: []
+    },
+    protocol: {
+      content: "### 치료 — Supportive Only\n- 휴식·수분·해열진통제 (acetaminophen·ibuprofen)\n- **항바이러스제 routine 비권고** (acyclovir 효과 X)\n- **Corticosteroid routine 비권고** — 기도 폐쇄 임박 시만 단기 prednisolone 검토\n\n### ⚠ 운동 제한 — 비장파열 예방\n- **발병 후 3주 운동 금지** (특히 contact sport)\n- 비장 비대 흔함 → 외상·복부 압박으로 파열 위험\n- 4주 이후 재평가 후 재개\n\n### Amoxicillin/Ampicillin 금기\n- Mono 환자 amoxicillin 투여 → **morbilliform rash** 흔함 (true allergy 아님, 일시적)\n- 인후염 ABx 처방 전 mono screening 권장\n\n### EBV 장기 관련 — 9종 암 연관\nNasopharyngeal cancer·Burkitt lymphoma·Hodgkin lymphoma 등. **MS, lupus 등 자가면역과도 연관**.",
+      sources: []
+    },
+    referral: {
+      content: "- 기도 폐쇄 임박 (인후 stridor·심한 부종) → 응급실 (스테로이드 + ENT)\n- 비장 파열 의심 (LUQ 통증·shock·외상 후) → 응급실\n- 4주+ 지속 LAP·LDH ↑ → 혈종내과 (림프종 배제)\n- 면역억제 환자 EBV → 감염내과\n\n관련: [[lymphadenopathy]] · [[ldh-interpretation]] · [[hematologic-malignancy-uri-screening]] · [[clinical-reasoning]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["infectious-mononucleosis"] = _mono_v2;
+KNOWLEDGE_BUNDLE["전염단핵구증"] = _mono_v2;
+KNOWLEDGE_BUNDLE["단핵구증"] = _mono_v2;
+KNOWLEDGE_BUNDLE["EBV"] = _mono_v2;
+KNOWLEDGE_BUNDLE["Epstein-Barr virus"] = _mono_v2;
+KNOWLEDGE_BUNDLE["heterophile antibody"] = _mono_v2;
+KNOWLEDGE_BUNDLE["Monospot"] = _mono_v2;
+
+/* skin-soft-tissue-infection — SSTI (6-8 deep-extract 신규). [CLINICAL] */
+var _ssti_v2 = {
+  kind: "disease",
+  keywords: ["skin-soft-tissue-infection","SSTI","cellulitis","연조직염","abscess","농양","MRSA","erysipelas","단독","necrotizing fasciitis"],
+  primarySources: [
+    "Chambliss ML, Rumball A, Brown CM. Skin and Soft Tissue Infections. Am Fam Physician 2026;113:440-448. PMID:42202366"
+  ],
+  sections: {
+    definition: {
+      content: "피부연조직 감염 분류 = **화농성(purulent) vs 비화농성(nonpurulent)** 이분법 (AFP 2026). 양측 연조직염은 드묾(≤5%) — **DVT·정맥울혈 우선 배제**.",
+      sources: []
+    },
+    exam: {
+      content: "### 화농성 vs 비화농성\n| | 비화농성 | 화농성 |\n|---|---|---|\n| 원인균 우세 | Streptococcus spp. | **MRSA ↑** (CA-MRSA) |\n| 대표 질환 | Erysipelas·Nonpurulent cellulitis | Furuncle·Carbuncle·Abscess |\n\n경증 → MSSA/Strep; 중증 → 다균성 + 혐기균\n\n### 3가지 핵심 감별\n**1. 양측 연조직염은 드물다 (≤5%)**\n- 양측 호소 → **DVT·정맥울혈피부염 우선 배제**\n- 단방향 사고 교정 신호\n\n**2. POCUS 농양 감별**\n- 손가락 촉진보다 정확 (fluid collection·loculation)\n- 의심 시 ED·외과 의뢰 전 POCUS 우선 시도\n\n**3. Necrotizing fasciitis red flag**\n- 통증이 진찰소견 대비 **과도** (pain out of proportion)\n- 빠른 진행·전신중독·crepitus·bullae·marbling\n- → **응급 surgical consult**",
+      sources: []
+    },
+    protocol: {
+      content: "### 외래 항생제\n**비화농성 cellulitis** — Strep 표적:\n- 1차: **Cephalexin** 500mg QID 5-7일 또는 **dicloxacillin** 500mg QID\n- Penicillin allergy: clindamycin 300-450mg QID\n\n**화농성 (abscess·furuncle)** — MRSA 표적:\n- **I&D 우선** — small abscess는 단독으로 충분\n- 큰 abscess·동반 cellulitis·면역저하 → **TMP-SMX** 800/160mg BID 또는 **doxycycline** 100mg BID 5-7일\n\n### 입원 적응\n- Sepsis 징후·hypotension·심한 동반질환\n- 광범위·빠른 진행·necrotizing 의심\n- 외래 치료 무반응 (48-72h)\n- 면역저하·DM 조절 불량",
+      sources: []
+    },
+    referral: {
+      content: "- Necrotizing fasciitis 의심 → 응급실 + 외과 즉시\n- 큰 abscess·복잡 위치 (얼굴·항문) → 외과\n- 재발성·이상 cellulitis → 감염내과/혈관내과\n- DVT 의심 → 즉시 응급실 (D-dimer·doppler)\n\n관련: [[cellulitis]] · [[nasal-furuncle]] · [[mrsa]] · [[diabetes]] · [[clinical-reasoning]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["skin-soft-tissue-infection"] = _ssti_v2;
+KNOWLEDGE_BUNDLE["SSTI"] = _ssti_v2;
+KNOWLEDGE_BUNDLE["cellulitis"] = _ssti_v2;
+KNOWLEDGE_BUNDLE["연조직염"] = _ssti_v2;
+KNOWLEDGE_BUNDLE["abscess"] = _ssti_v2;
+KNOWLEDGE_BUNDLE["농양"] = _ssti_v2;
+KNOWLEDGE_BUNDLE["erysipelas"] = _ssti_v2;
+KNOWLEDGE_BUNDLE["necrotizing fasciitis"] = _ssti_v2;
+
+/* post-bariatric-surgery — 비만대사수술 후 가정의학과 (6-8 deep-extract 신규). [CLINICAL] */
+var _post_bariatric_v2 = {
+  kind: "disease",
+  keywords: ["post-bariatric-surgery","비만수술","bariatric surgery","metabolic surgery","sleeve gastrectomy","RYGB","덤핑증후군","dumping syndrome","수술후 영양결핍"],
+  primarySources: [
+    "Green L, Dunlap C, Glass C. Postoperative Management After Metabolic Surgery: Role of the Family Physician. Am Fam Physician 2026;113:469-478. PMID:42202351"
+  ],
+  sections: {
+    definition: {
+      content: "비만대사수술 후 가정의학과 = 장기 만성질환 관리·합병증 감시·영양 모니터링 핵심 역할. 미국 연 ~27만 건. 개선 대상: T2DM·HTN·OSA·불임.",
+      sources: []
+    },
+    protocol: {
+      content: "### T2DM — 혈당약 감량 시점\n- 수술 후 T2DM **완해/유의 개선** 흔함 (특히 RYGB)\n- 혈당 정상화 시 **당뇨약 즉시 감량** 필수 — 저혈당 예방\n- **인슐린 → 수술 후 수일 내 대폭 감량**; 경구약 단계적 중단\n\n### HTN — 항고혈압제 조정\n- 체중 감량에 따라 BP 개선 → 감량/중단 검토\n- 초기 급속 감량 시기 BP monitoring 강화\n\n### 영양 결핍 routine check (RYGB·SG 둘 다)\n| 영양소 | 보충 | 검사 빈도 |\n|---|---|---|\n| Multivitamin + mineral | 매일 | 매년 |\n| **Vitamin B12** | 350-500 mcg/d 경구 또는 IM | 6-12mo |\n| **Iron** | 45-60 mg/d (월경 여성 ↑) | 6-12mo |\n| **Calcium citrate** | 1,200-1,500 mg/d | 매년 (DXA) |\n| **Vitamin D** | 3,000 IU/d (target 25-OH ≥30) | 매년 |\n| Thiamine (B1) | 합병증 시 | 임상 단서 시 |\n\n### 덤핑증후군 (Dumping syndrome)\n- **Early (수 분-1h)**: 식후 nausea·복통·설사·tachycardia·발한 — 음식 빠른 위→소장 이동\n- **Late (1-3h)**: 저혈당 sx (reactive hypoglycemia) — 인슐린 spike\n- 관리: **소량 자주·단순당 회피·식사 중 수분 분리**·고단백/고섬유\n\n### 피임 — **수술 후 12-18개월 금지**\n- 급속 체중감량·영양결핍 시기 임신 → 태아 영양결핍·소아기 합병증\n- 경구 피임약 흡수 ↓ — **IUD·implant 권고**",
+      sources: []
+    },
+    notes: {
+      content: "### Long-term monitoring\n- 매년 영양·체중·BP·HbA1c·lipid·B12·iron·Vit D·calcium\n- DXA 매년 (수술 후 골밀도 ↓ risk)\n- 우울·식이장애 screening (수술 후 정신건강 변화)\n- 알코올 사용 — 흡수 변화로 알코올 의존 위험 ↑",
+      sources: []
+    },
+    referral: {
+      content: "- 영양 결핍 심함·교정 어려움 → 임상영양사·비만대사외과\n- 덤핑증후군 조절 불량 → 비만대사외과·내분비\n- 재수술 검토 (재발성 비만·합병증) → 비만대사외과\n- 정신건강 (depression·식이장애) → 정신과\n\n관련: [[obesity]] · [[diabetes]] · [[osteoporosis]] · [[anemia]] · [[vitamin-b12]] · [[vitamin-d]] · [[depression-screening]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["post-bariatric-surgery"] = _post_bariatric_v2;
+KNOWLEDGE_BUNDLE["비만수술"] = _post_bariatric_v2;
+KNOWLEDGE_BUNDLE["bariatric surgery"] = _post_bariatric_v2;
+KNOWLEDGE_BUNDLE["metabolic surgery"] = _post_bariatric_v2;
+KNOWLEDGE_BUNDLE["sleeve gastrectomy"] = _post_bariatric_v2;
+KNOWLEDGE_BUNDLE["RYGB"] = _post_bariatric_v2;
+KNOWLEDGE_BUNDLE["덤핑증후군"] = _post_bariatric_v2;
+KNOWLEDGE_BUNDLE["dumping syndrome"] = _post_bariatric_v2;
+
+/* hypogonadism-male — 남성 성선기능저하증 (6-8 deep-extract 신규). [CLINICAL] */
+var _hypogonadism_v2 = {
+  kind: "disease",
+  keywords: ["hypogonadism-male","남성 성선기능저하증","hypogonadism","testosterone","테스토스테론","비만 유발 이차성","Klinefelter","TRT"],
+  primarySources: [
+    "Anawalt BD, O'Connor KM, Grossmann M. Adult Male Hypogonadism: A Review. JAMA 2026;335(20). PMID:42207626, DOI:10.1001/jama.2026.8526"
+  ],
+  sections: {
+    definition: {
+      content: "테스토스테론 결핍 증상/징후 + 지속적으로 낮은 아침 공복 혈청 T. 유병률: 기질성 <1% / **비만 유발 이차성 (BMI ≥30) 2-8%** — 외래 훨씬 흔함.",
+      sources: []
+    },
+    exam: {
+      content: "### 진단 기준\n**특이적 증상** (높은 양성 예측력):\n- 성욕 감소·자발적 발기 감소·작은 고환·여성형 유방 + 소정자증·음모/체모 감소\n\n**덜 특이적**: 피로·무기력·활력 저하\n\n### 검사\n- **공복 아침 (8-10am) 혈청 total T 2회 측정** (cutoff <264-300 ng/dL)\n- LH·FSH (1차 vs 2차 감별)\n- Prolactin·TSH·iron studies·SHBG\n- **비만 BMI ≥30 → 체중감량 ≥5% 1차** (T 회복 흔함)\n\n### 1차 (원발) vs 2차 (중추)\n| | 1차 (Primary) | 2차 (Secondary) |\n|---|---|---|\n| T | ↓ | ↓ |\n| LH/FSH | **↑** | **정상/↓** |\n| 원인 | 고환 문제 (Klinefelter·외상·orchitis·약물) | 시상하부·뇌하수체 (비만·OSA·약물·종양) |",
+      sources: []
+    },
+    protocol: {
+      content: "### 1차 치료 — 가역 원인 제거 우선\n- **비만 (BMI ≥30) → 체중감량 ≥5%** (T 회복 가능)\n- OSA 치료 (CPAP)\n- 약물 review (opioid·glucocorticoid·anabolic steroid 과거 사용)\n- 만성질환 조절 (DM·HF·CKD)\n\n### TRT (Testosterone Replacement Therapy)\n**적응증** (가역 원인 교정 후도 sx 지속 + 확진):\n- Topical gel (testosterone 1-2%)·IM injection·long-acting undecanoate\n- 환자 선호·생활 패턴·임신 계획 고려\n\n**Monitoring**:\n- 3, 6, 12개월 → T·Hct·PSA·LFT\n- 매년 → 위 + 골밀도 (DXA)\n\n**금기·주의**:\n- 전립선암·유방암 history\n- Hct >54%·PSA >4·심각한 LUTS·중증 HF (LVEF <30%)\n- 임신 계획 — TRT는 spermatogenesis 억제 → hCG/gonadotropin 필요",
+      sources: []
+    },
+    referral: {
+      content: "- 1차 hypogonadism (LH/FSH ↑) → 내분비\n- 임신 계획 + 저T → 비뇨기과·생식내분비\n- TRT 적응증 애매·monitoring 어려움 → 내분비\n- 전립선암 risk + TRT 검토 → 비뇨기과 협진\n\n관련: [[obesity]] · [[diabetes]] · [[osteoporosis]] · [[depression-screening]] · [[smoking-cessation]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["hypogonadism-male"] = _hypogonadism_v2;
+KNOWLEDGE_BUNDLE["남성 성선기능저하증"] = _hypogonadism_v2;
+KNOWLEDGE_BUNDLE["hypogonadism"] = _hypogonadism_v2;
+KNOWLEDGE_BUNDLE["testosterone"] = _hypogonadism_v2;
+KNOWLEDGE_BUNDLE["테스토스테론"] = _hypogonadism_v2;
+KNOWLEDGE_BUNDLE["TRT"] = _hypogonadism_v2;
+
+/* adult-vaccination-korea-faq — 성인 예방접종 FAQ (5-27 + 6-8 deep-extract 신규). [INSIGHTS] */
+var _adult_vacc_korea_faq_v2 = {
+  kind: "topic",
+  keywords: ["adult-vaccination-korea-faq","성인 예방접종 FAQ","vaccine hesitancy","백신 이상반응","면역노화","훈련면역","trained immunity","immunosenescence"],
+  primarySources: [
+    "Coles VAH et al. Adult Vaccination: 5 Common Patient Concerns Addressed. Am Fam Physician 2026. PMID:42101598",
+    "Hum Vaccin Immunother 2026;22(1):2624234. PMID:41665459"
+  ],
+  sections: {
+    definition: {
+      content: "성인 환자 예방접종 상담 시 빈번한 5대 우려 + 근거 기반 응답. 면역노화(immunosenescence) + 훈련면역(trained immunity) 관점 통합.",
+      sources: []
+    },
+    notes: {
+      content: "### 5대 환자 우려 — 근거 기반 응답 (Coles AFP 2026)\n| 우려 | 응답 |\n|---|---|\n| **\"백신이 자가면역 유발?\"** | 대규모 코호트 — guillain-Barré 등 매우 드물고 절대 위험 미미 (감염 후 위험이 훨씬 큼) |\n| **\"여러 백신 동시 위험?\"** | ACIP/CDC 권고: 사백신·생백신 동시 안전. 면역 반응 부족 X |\n| **\"인플루엔자 백신이 독감 유발?\"** | 사백신 = 바이러스 비활성. 발열·근육통은 면역 활성 부산물 |\n| **\"이전 접종 후 부작용 = 영구 금기?\"** | 대부분 일시적·재접종 안전. 진짜 금기 (아나필락시스·중증 알러지)만 회피 |\n| **\"노인은 백신 효과 없다?\"** | 면역노화로 효과 ↓ but 절대 효과 여전히 의미 — **고용량 인플루엔자 (65+ 4배)**·RZV 등 적응 |\n\n### 면역노화·훈련면역 (Hum Vaccin Immunother 2026)\n- **Immunosenescence**: 노화로 T세포·항원 제시 ↓ → 백신 반응 ↓ (특히 75세+)\n- **Trained immunity**: 일부 백신 (BCG·MMR)이 비특이적 보호 효과 → 노인 감염 사망률 ↓ 가능성\n- 5대 백신 근거 표 (RZV·HD-flu·pneumococcal·RSV·COVID) — 면역노화 보완 전략",
+      sources: []
+    },
+    protocol: {
+      content: "### 외래 상담 routine\n1. **5대 우려 자가 screening** — 환자가 명시하지 않아도 가능성 점검\n2. 상담 시간 5분 이내 — 5대 응답 카드/포스터 활용\n3. **고령 65+**: HD-flu·PCV20/21·RSV·RZV·COVID 5종 systematic 권고\n4. **면역저하**: [[immunocompromised-vaccination]] 참조\n5. 한국 KDCA 65+ NIP (인플루엔자·PPSV23·대상포진) 무료 활용\n\n### 한국 실전\n- KDCA 무료 + 자비 권고 분리 설명\n- 비자가 비용 부담 환자 — 우선순위 (HD-flu·RZV) 명시\n- 만성질환 동반 시 추가 권고 (당뇨·CKD·HF·COPD)",
+      sources: []
+    },
+    referral: {
+      content: "- 면역억제 시작 예정 → 백신 2주 전 [[immunocompromised-vaccination]]\n- 백신 거부 강함 + 가족 압력 → 가정의학과 동기면담\n- 이전 아나필락시스 hx → 알러지내과 (재접종 가능성 평가)\n\n관련: [[adult-vaccination-summary]] · [[immunocompromised-vaccination]] · [[pneumococcal-vaccine]] · [[herpes-zoster-vaccine]] · [[hepatitis-ab-vaccine]] · [[travel-vaccination]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["adult-vaccination-korea-faq"] = _adult_vacc_korea_faq_v2;
+KNOWLEDGE_BUNDLE["성인 예방접종 FAQ"] = _adult_vacc_korea_faq_v2;
+KNOWLEDGE_BUNDLE["vaccine hesitancy"] = _adult_vacc_korea_faq_v2;
+KNOWLEDGE_BUNDLE["백신 이상반응"] = _adult_vacc_korea_faq_v2;
+KNOWLEDGE_BUNDLE["면역노화"] = _adult_vacc_korea_faq_v2;
+KNOWLEDGE_BUNDLE["immunosenescence"] = _adult_vacc_korea_faq_v2;
+KNOWLEDGE_BUNDLE["trained immunity"] = _adult_vacc_korea_faq_v2;

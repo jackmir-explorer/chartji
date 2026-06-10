@@ -247,7 +247,28 @@ HFmrEF·HFpEF는 BNP↑ 또는 구조이상/충만압 상승 근거 추가 필�
 
 심부전 환자 재진 시 체크: ① 예방접종 상태(독감·폐렴구균·RSV·대상포진·COVID·Tdap) ② 의뢰 기준 해당 여부(I NEED HELP 약어) ③ BP/HR ④ BUN·Cr·전해질.
 
-> 관련 엔트리: [[heart-failure-monitoring]] · [[heart-failure-gdmt-dosing]] · [[heart-failure-pocus-ducs]] · [[heart-failure-hfpef-obesity]] · [[heart-failure-cardiology-2025-update]] · [[heart-failure-volume-overload]] · [[heart-failure-referral]]
+> 관련 엔트리: [[heart-failure-monitoring]] · [[heart-failure-gdmt-dosing]] · [[heart-failure-pocus-ducs]] · [[heart-failure-hfpef-obesity]] · [[heart-failure-cardiology-2025-update]] · [[heart-failure-volume-overload]] · [[heart-failure-referral]] · [[cardiorenal-aki-diuretic-management]] · [[cardiorenal-anemia-syndrome]]
 
+---
 
-심부전 환자 재진 시 체크: ① 예방접종 상태(독감·폐렴구균·RSV·대상포진·COVID·Tdap) ② 의뢰 기준 해당 여부(I NEED HELP 약어) ③ BP/HR ④ BUN·Cr·전해질.
+## Spironolactone vs Furosemide — 역할 다름 [CLINICAL]
+
+> 근거: Pitt B et al. RALES (Randomized Aldactone Evaluation Study). N Engl J Med 1999;341(10):709-717. PMID:10471456; Heidenreich PA et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. PMID:35379503
+
+"Spironolactone이 Lasix보다 부드러우니 안전" 인식은 **오해** — 두 약 역할이 자체로 다르다. 이 환자에선 오히려 반대일 수 있음.
+
+| | **Furosemide (loop diuretic)** | **Spironolactone (MRA)** |
+|---|---|---|
+| 주 역할 | **울혈 제거 (감량 이뇨)** | HF **예후 개선 약** (이뇨 효과 약함) |
+| 효과 발현 | 빠름, 강력 | 느림, 약함 |
+| K | 낮춤 | **높임** |
+| 신기능 의존 | eGFR 낮아도 증량하면 작동 | **eGFR <30에서 위험·효과 제한** |
+| HFrEF 사망률 | 미입증 (증상 완화 목적) | **30% 감소** (RALES NEJM 1999) |
+
+### 임상 결정
+- **급성 울혈 (호흡곤란·부종·NT-proBNP ↑↑)** → Furosemide (loop) — 강력·빠른 감량 이뇨
+- **만성 HFrEF GDMT 4-pillar** → MRA (spironolactone·eplerenone) — 예후 개선 약물
+- **두 약 병용** — HFrEF 표준 (loop은 증상 조절, MRA는 mortality 감소)
+- K 모니터 — MRA + ACEi/ARNI 병용 시 hyperkalemia 위험 (특히 eGFR <30)
+
+울혈성 prerenal AKI 외래 결정은 [[cardiorenal-aki-diuretic-management]] 참조.

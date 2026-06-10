@@ -91,6 +91,16 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - hepatic-cyst.md — Simple vs complex (septation/mural nodule/thick wall/enhancement→GI 의뢰) + PCLD ADPKD link + 크기별 임상 컨벤션 (4cm/4-10cm/10cm+ 또는 증상) [CLINICAL] PMID:35728731 EASL 2022
 - lymphocytosis-workup.md — ALC 계산 (WBC×Lymph%) + 연령별 first concern (<30 감염/30-50 자가면역+감염/≥65 악성) + iwCLL 2018 (clonal B≥5,000×3mo) + MBL (pre-CLL 1-2%/y) [CLINICAL] PMID:29540348 Hallek iwCLL 2018
 - neutropenia-workup.md — ANC 분류 (mild 1k-1.5k/moderate/severe <500) + 약물·만성감염·자가면역·MDS·BEN(Duffy)·B12/Folate 감별 + febrile neutropenia 응급 임계 [CLINICAL] AAFP 2025 + PMID:30828799 Atallah-Yunes BEN 2019
+- statin-myopathy-management.md — Statin + CK 평가 quick reference: 5×ULN history → 보류 적응(ACC/AHA 2018)·10× 중단·rhabdo (≥10×+myoglobinuria/AKI) + rechallenge rosuvastatin/pravastatin/fluvastatin 우선·격일 옵션 [CLINICAL] PMID:30586774 ACC/AHA 2018 + NLA SAMS 2022
+- qtc-interpretation.md — QTc 정상/경계/연장(>500ms TdP·>60ms baseline 증가)·short QT + QT 연장 약물 list (QTP·맥페란·퀴놀론·매크로라이드·azole·TCA·항부정맥)·위험요인 [CLINICAL] PMID:20142454 AHA/ACCF Drew 2010 — topic
+- cardiorenal-anemia-syndrome.md — HF·CKD·빈혈 악순환 삼각·EPO 부족·hepcidin·정맥울혈 신정맥압·평가 패널·3축 동시 개입 [CLINICAL] PMID:15202610 Silverberg 2004 + PMID:16868702
+- cardiorenal-aki-diuretic-management.md — 울혈성 prerenal AKI 이뇨제 결정 (혈압 아니라 용적 상태)·post-renal 폐색 배제 우선·48-72h Cr/K 재검·매일 체중 0.5-1kg/d·Spiro vs Furosemide 역할 [CLINICAL] PMID:34447992 ESC 2021 + PMID:35379503 AHA/ACC/HFSA 2022
+- platelet-function-test.md — PFA-100/200 EPI/ADP 해석·aspirin 효과·vWD 단서·**clopidogrel 민감도 낮음** 정정·Hct/platelet 위양성·LTA/vWF 정밀 평가 [CLINICAL] PMID:16377544 Hayward 2006 + PMID:26179127 Favaloro 2015
+- subacute-thyroiditis.md — De Quervain: URI 선행 50-70%·갑상선 통증·phase 변화·ESR>50·sono hypoechoic·NSAID 1차/prednisolone 40mg moderate-severe·β-blocker·자연회복 1년·5-15% 영구 hypothyroid [CLINICAL] PMID:27521067 ATA 2016
+- cervical-referred-pain.md — "등 통증"이 경추 referred·Dwyer facet pain map (C2-T1)·myofascial trigger point·radiculopathy C7-T1 견갑골 안쪽/등 중심부 referred·Spurling test routine [CLINICAL] PMID:2402682 Dwyer Spine 1990 + PMID:27250899 + PMID:27175952 AAFP
+- gsm-genitourinary-menopause.md — GSM 질·요도(recurrent UTI ≥3/y)·외음 sx + Step 1 non-hormonal (lubricant·moisturizer) + Step 2 topical estrogen loading 2주 daily → maintenance 주 2회·DHEA/ospemifene·postmenopausal bleeding 즉시 평가 [CLINICAL] PMID:32852449 NAMS 2020 — topic
+- uti-complicated-classification.md — Uncomplicated (건강 비임신 폐경 전 여성) vs Complicated (남성·임신·65+·면역억제·DM·해부학 이상·BPH·catheter·다제내성)·**폐경 후 자동 complicated 아님 정정**·2025 IDSA localized/systemic 재정비 [CLINICAL] PMID:21292654 IDSA 2011 + PMID:31042112 AUA recurrent 2019 — topic
+- adult-vaccination-korea-faq.md (guidelines/) — 성인 예방접종 5대 환자 우려 응답·면역노화·훈련면역·65+ 5종 systematic (HD-flu/PCV/RSV/RZV/COVID)·KDCA NIP 활용 [INSIGHTS] PMID:42101598 Coles AFP 2026 + PMID:41665459 Hum Vaccin Immunother 2026 — topic
 
 ### by-drug/
 - vaccine-interval.md — 백신 접종 간격 원칙 (생+사/생+생/사+사) [CLINICAL] — topic
