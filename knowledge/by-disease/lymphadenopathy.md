@@ -152,6 +152,43 @@ AFP 2025가 이 원칙을 명시적으로 게재함으로써 이전 AFP 2016 기
 
 ---
 
+---
+
+## JAAPA 2025 종합 리뷰 — PA·일차의료 실무 적용 [CLINICAL]
+
+> [출처: Walker CW et al. Evaluating lymphadenopathy. JAAPA. 2025;38(6):20-27. PMID:40358102, DOI:10.1097/01.JAA.0000000000000212]
+> PA·일차의료 대상 포괄 리뷰; 에티올로지·병태생리·임상 발현·진단 평가 종합 제시. [초록 기반 — 전문 미확인]
+
+### 핵심 메시지
+
+- **원인 다양성 강조**: 감염·자가면역·악성·약물 등 — "흔하고 양성"으로 단정 금지
+- **단계적 진단 평가**: 병태생리 이해 → 임상 발현 → 체계적 진단 검사 순서
+- **지속 원인불명 LAP의 체계적 workup** 특히 강조 — 재평가 없이 방치 금지
+
+### 7요소 평가 — 2025년 PA/일차의료 맥락에서 재확인
+
+기존 7요소 평가 틀이 최신 임상에서도 유효한 기본 체계로 재검증됨:
+
+| 평가 요소 | 악성 시사 특성 |
+|---|---|
+| **위치** | Supraclavicular, epitrochlear, popliteal |
+| **크기** | >1 cm (epitrochlear >0.5 cm, inguinal >1.5 cm tolerable) |
+| **경도** | Firm·rubbery (림프종) / Rock-hard (전이암) |
+| **가동성** | Fixed (악성 강한 의심) |
+| **압통** | Painless (악성·림프종) |
+| **기간** | >4주 지속 |
+| **동반증상** | B symptoms (발열·야간발한·체중감소) |
+
+### 악성 위험 특이 조합 (JAAPA 2025 명시)
+
+- **Supraclavicular** 위치 (크기 무관)
+- **>1 cm + 4주 이상 + painless + firm + fixed**
+- **B symptoms 동반**
+
+→ 위 조합 → 조기 systemic workup 개시 + 종양혈액내과 의뢰
+
+---
+
 ## 관련
 
 - [[cervical-lymphadenitis]] — 화농성 cervical LAP 처치
