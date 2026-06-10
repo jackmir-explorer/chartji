@@ -5207,6 +5207,26 @@ var _anemia_v2 = {
     "follow-up-schedule": {
       content: "### 철결핍 빈혈 F/U 검사 set [TIPS — by 미르 gaps]\n> **CBC + Ferritin + Reticulocyte + RDW** — 4종 동시 확인이 reactor·storage·micro 다층 평가\n\n### 철결핍 빈혈 치료 반응 기대 수치 [TIPS — by 미르 gaps]\n- **4주 후**: Hgb **1–2 g/dL 증가**\n- **8–12주 후**: Hgb **정상화**\n- → **Hgb 정상화 후에도 저장철 채우기 위해 3–6개월 추가 복용 필요**. **target: Ferritin >50**\n- → **반응 부족하면 IV iron 고려** (경구 흡수 장애·지속 출혈·심부전 동반 등)",
       sources: []
+    },
+    acd_mechanism: {
+      content: "### ACD 기전 — IL-6 / Hepcidin / TIBC 패턴\n만성 염증/감염 → IL-6 → 간 **hepcidin ↑** → ferroportin 분해 → (a) 장 철 흡수 차단 + (b) 대식세포·간세포 저장철 가둠.\n\n### ACD 검사 패턴 — IDA 감별 핵심\n| | IDA | **ACD** |\n|---|---|---|\n| Ferritin | 낮음 | **정상~상승** (급성기 반응물질) |\n| Serum iron | 낮음 | 낮음 |\n| **TIBC** | **높음** | **낮음** ← ACD 특징 |\n| TSAT | 매우 낮음 | 정상~약간 낮음 |\n| MCV | 정상→소구성 | 정구성·진행 시 소구성 |\n\n> **ACD vs IDA 감별 핵심 = TIBC 방향**. IDA는 TIBC ↑, ACD는 TIBC ↓.",
+      sources: ["Weiss G, Goodnough LT. Anemia of Chronic Disease. N Engl J Med 2005;352(10):1011-1023. PMID:15758012, DOI:10.1056/NEJMra041809"]
+    },
+    anemia_of_ckd: {
+      content: "### Anemia of CKD (신성빈혈)\n**EPO 부족이 핵심** — 신장 peritubular fibroblast EPO 생성. CKD로 망가지면 EPO ↓ → 골수 생성 부족.\n\n**기여 임계**: eGFR <60 (특히 <45)부터 두드러짐\n\n**추가 기전**: uremic toxin → 적혈구 수명 ↓, hepcidin 신 배설 ↓ → 축적 → ACD-like 철 가둠 겹침\n\n**검사 패턴**: 정구성·**부적절하게 낮은 reticulocyte** (빈혈인데 골수 반응 없음 = EPO 부족 표지)·Iron studies 다양\n\n**외래 단서**: eGFR 36 + reticulocyte 1.13% / ARC 31.9 ×10³/μL + Hgb 8.1 → \"골수 공장이 안 돌고 있다\" — Hgb 8.1이면 ARC가 **100,000+** 치솟아야 정상.",
+      sources: ["KDIGO 2012 Clinical Practice Guideline for Anemia in CKD. Kidney Int Suppl 2012;2:279. PMID:23891356 (KDOQI commentary)"]
+    },
+    functional_iron_deficiency_rethe: {
+      content: "### Functional Iron Deficiency (FID) — RET-He 지표\n저장철 충분(ferritin 정상~높음)인데 **골수 철 공급 속도 부족**. \"창고엔 철 있는데 생산라인 배달 안 됨\". ACD hepcidin 또는 EPO 치료로 골수 갑자기 가동 시 흔함.\n\n**RET-He (Reticulocyte Hemoglobin Equivalent)** = 현재 골수 철 공급 실시간 평가 (ferritin은 과거~현재 저장량).\n\n| RET-He | 해석 |\n|---|---|\n| 정상 | **~32-38 pg** |\n| **낮음 (<28-32 pg)** | 철 공급 부족 = **FID** 또는 진성 철결핍 |\n\n> Ferritin 정상이어도 RET-He 낮으면 골수 공급 부족. CKD·HF·만성 염증 환자 평가에 유용.",
+      sources: ["Thomas C, Thomas L. Biochemical markers and hematologic indices in the diagnosis of functional iron deficiency. Clin Chem 2002;48(7):1066-1076. PMID:12089176"]
+    },
+    arc_interpretation: {
+      content: "### ARC (Absolute Reticulocyte Count) — 함정과 해석\n**ARC = retic% × RBC수** — 정확한 절대값.\n\n**% vs Absolute 함정**: Reticulocyte %는 \"전체 적혈구 중 비율\" — 빈혈로 분모 줄면 같은 생산량도 %가 부풀려 보임. **절대값(ARC)으로 봐야 정확**.\n\n**정상 범위**: **25-75 ×10³/μL** (25,000-75,000/μL)\n\n**빈혈 시 해석 (핵심)**:\n- 심한 빈혈 (Hgb 8 수준)이면 골수 정상 반응 시 **ARC 100,000+** 치솟아야\n- 낮은 ARC + 심한 빈혈 = **저생산성 빈혈** (ACD/신성/EPO 부족) 확증\n- 높은 ARC + 빈혈 = 출혈·용혈 (골수 멀쩡)",
+      sources: ["Piva E et al. Clin Chem Lab Med 2015. PMID:25719320"]
+    },
+    irf_recovery_marker: {
+      content: "### IRF (Immature Reticulocyte Fraction) — 골수 회복 조기 지표\nReticulocyte 중 **가장 어린(갓 골수에서 나온) 분획 비율** — RNA 많은 것. 골수 생산의 가장 빠른 실시간 지표.\n\n| 지표 | 시점 |\n|---|---|\n| ARC | \"지금까지 나온 총 생산량\" |\n| **IRF** | \"골수가 방금 막 가동을 올렸는지\" — **며칠 더 일찍** |\n\n정상 범위: **2-17%** (기기마다 다름).\n\n**활용**:\n- 빈혈 회복/치료 반응 조기 신호 — 철분제·EPO·B12 후 ARC 오르기 전 **IRF 먼저 튐** — 골수 회복 첫 봉화\n- 골수이식·항암 후 회복 monitoring\n- 높은 IRF + 낮은 ARC = \"골수가 막 반응 시작했으나 아직 성숙한 적혈구로 못 내보냄\"\n\n### CRAS와 통합\nACD·신성빈혈·FID·ARC·IRF가 한 환자에 동시 등장 → [[cardiorenal-anemia-syndrome]] 통합 평가.",
+      sources: ["Briggs C. Quality counts: new parameters in blood cell counting. Int J Lab Hematol 2009;31(3):277-297. PMID:19452619"]
     }
   },
   uiHooks: null
@@ -5327,6 +5347,10 @@ var _weight_loss_v2 = {
     referral: {
       content: "- 영상·검사상 악성 의심 → 해당 분과\n- 6개월간 워크업 음성 + 지속 → 노인의학/내과 종합평가\n- 우울 양성 + 자살사고 → 정신건강의학과\n- 관련: [[depression-screening]], [[anxiety-depression-cbt]], [[frailty]], [[anemia]], [[diabetes]], [[obesity]]",
       sources: []
+    },
+    uspstf_cutoff_staging: {
+      content: "### Cutoff 단계 [CLINICAL]\n| Cutoff | 분류 | 행동 |\n|---|---|---|\n| **>5% in 6-12 months** | Workup 적응 (USPSTF·UpToDate) | 9 평가영역 가동 |\n| **>10%** | **Critical** — 악성·중증 만성질환 가능성 ↑↑ | 적극 workup + 신속 의뢰 검토 |\n\n> Involuntary (의도하지 않은) 기준 — 다이어트·운동·의도적 감량은 별개. 환자의 \"체중 변화 인지 여부\"도 확인 (특히 노인 — 체중 자가 모니터링 어려움).",
+      sources: ["Gaddey HL, Holder K. Unintentional Weight Loss in Older Adults. Am Fam Physician 2014;89(9):718-722. PMID:24784334"]
     }
   },
   uiHooks: null
@@ -5367,6 +5391,10 @@ var _hematuria_v2 = {
     referral: {
       content: "- **사구체혈뇨** → 신장내과\n- **비사구체 Intermediate~High** → 비뇨기과 (cystoscopy)\n- 육안혈뇨 + 통증·발열 → 응급 (감염·결석)\n- 관련: [[proteinuria]], [[CKD]], [[recurrent-uti]]",
       sources: []
+    },
+    postmenopausal_microscopic_workup: {
+      content: "### Postmenopausal Woman — Microscopic Hematuria (+++) Workup\n> ⚠ AUA 2020은 \"50세+ 단독\"이 자동 cystoscopy 기준이 아님 — **risk category (low/intermediate/high)** 기반 결정.\n\n**Step 1 — Today / Next Visit**\n- U/A microscopy (RBC count·morphology, ≥3 RBC/HPF 1회 확인)\n- Urine culture (UTI 평가 — LE+ Nitrite-)\n- Cr·eGFR · CBC (anemia)\n- 약물 review (anticoagulant·NSAID)\n\n**Step 2 — Risk Evaluation**\n- 연령·흡연·직업 (염료·고무·페인트)·암 hx·항암·골반 RT 병력\n- **High risk**: 60세+·≥30 pack-year 흡연·>50 RBC/HPF·gross hematuria hx·과거 미평가·urologic 노출\n\n**Step 3 — Imaging**\n- Renal US (1차) — 폐경 후 외래 적절\n- **Intermediate/High risk → CT urography 또는 urology 직접**\n\n**Step 4 — Specialty Referral**\n- **Intermediate/High risk → urology + cystoscopy** (4-6주 내)\n- HCRS + Oncuria 조합 활용 (의뢰 선별 보조)\n\n**Step 5 — F/u**\n- 음성 시: 6-12개월 후 재검\n- **Atrophic vaginitis·urethritis 고려** (estrogen 평가) — [[gsm-genitourinary-menopause]]\n\n**환자 교육**: \"Hematuria ≠ cancer\" + 새 발생 sx (gross hematuria·flank pain·dysuria·체중감소) → **즉시 내원**\n\n관련: [[gsm-genitourinary-menopause]] · [[uti-complicated-classification]] · [[recurrent-uti]]",
+      sources: ["Barocas DA et al. AUA/SUFU Microhematuria Guideline. J Urol 2020;204(4):778-786. PMID:32698717"]
     }
   },
   uiHooks: null
