@@ -3003,6 +3003,10 @@ var _ibs_v2 = {
     notes: {
       content: "- IBS와 기능성 소화불량 중복 흔함 — 동시 치료 ([[functional-dyspepsia]] 참조)\n- 심리 요인(불안·우울) 강한 연관 — CBT 보조 근거 ([[anxiety-depression-cbt]])\n- \"검사 없이 진단\" 패러다임 — Rome 기준 + alarm 배제로 충분",
       sources: []
+    },
+    rome_application_primary_care: {
+      content: "### IBS Rome 기준 1차의료 적용 한계 (Rauma 2026) [INSIGHTS]\n> Rauma J et al. Scand J Prim Health Care 2026\n\n**스웨덴 1차의료 코호트 분석**:\n- Rome 기준 정식 적용률 **36.2%**에 그침\n- **대장내시경 과잉 9.7%** — Red flag 없이 시행\n- IBS 진단 양극화: 정식 기준 미적용 + 과잉 검사 동시 존재\n\n**임상 메시지**:\n- Rome IV 기준 routine화 — 외래 진단 흐름 표준화\n- Red flag 없으면 **불필요 대장내시경 회피** (Choosing Wisely)\n- 진단 코드 입력 시 \"증후군\" 명시 — 가정적 진단 코드 회피",
+      sources: ["Rauma J et al. Scand J Prim Health Care 2026. PMID:41640253"]
     }
   },
   uiHooks: null
@@ -3148,6 +3152,10 @@ var _palliative_pain_v2 = {
     related_supportive: {
       content: "### 보조 케어 (OINV 예방·행동건강 BH 개입) → [[cancer-pain-supportive-care]]\n\n- 오피오이드 유발 오심구토(OINV) 올란자핀 예방 5mg/일 × 5일 — CC율 79.4%\n- 행동건강(BH) 개입 의사 권고 효과 — \"저는 이걸 권합니다\" 수용률 34%\n\n(2026-05-12 분할: OINV·BH 섹션은 cancer-pain-supportive-care 신규 entry로 이관)",
       sources: []
+    },
+    opioid_rotation_consensus: {
+      content: "### 오피오이드 전환 — 5개 학회 합의 가이드라인 (Davis JPSM 2026) [CLINICAL]\n> Davis MP et al. MASCC·ASCO·AAHPM·HPNA·NICSO 합의\n\n**핵심 권고**:\n- 오피오이드 전환 시 **최대 40% dose 감량** 적용 (불완전 cross-tolerance·약물 정확성 한계)\n- **메타돈**: QTc 가변·반감기 가변 (8-59h) — opioid-naive 전환 시 더 보수적 감량\n- **경피 펜타닐**: 양방향 전환 시 **비대칭** — Fentanyl→Morphine보다 Morphine→Fentanyl 감량 더 보수적\n- 모든 전환 후 **48-72시간 monitoring** + breakthrough 약 처방\n\n**임상 적용**:\n- 외래 → 입원/입원 → 외래 전환 시 dose recalculation\n- 효과 불충분 시 25-50% 증량 — 환자 호소 검증 신호 ([[chronic-pain-integrative]] [INSIGHTS] PMID:41574586)\n- 가족·보호자 교육: dose·간격·toxicity 단서 (sedation·호흡억제)",
+      sources: ["Davis MP et al. J Pain Symptom Manage 2026. PMID:41197973"]
     }
   },
   uiHooks: null
@@ -4680,6 +4688,10 @@ var _chronic_pain_integrative_v2 = {
     opioid_communication: {
       content: "### 오피오이드 처방 갱신과 소통 — 검증·동맹 전략 [INSIGHTS]\n> [출처: Amin JR et al. Scand J Prim Health Care 2026;44(1):2616517. PMID:41574586]\n> 정성 연구, n=15, 만성통증 오피오이드 처방 환자, 스웨덴 농촌 일차의료. 반구조 인터뷰 → 반성적 주제 분석.\n\n**두 핵심 주제:**\n\n**주제 1 — \"Prescribing Validation\" (처방 = 검증):**\n- 처방 갱신 → 환자에게 **통증 상태의 '공식 검증·인정'** 신호\n- 거절·감량 → **불신(mistrust)** 으로 경험 (\"내 통증을 믿지 않는다\")\n- 환자는 자신의 통증을 가장 잘 아는 전문가로 **인정받고자** 함\n\n**주제 2 — \"Battle for the Steering Wheel\" (주도권):**\n- 만성통증 삶 경험 바탕으로 환자는 자신의 전문성 주장\n- 종종 **무시당한다는 좌절감** 경험\n\n**외래 감량 대화 전략:**\n| 상황 | 전략 |\n|---|---|\n| 감량·거절 논의 시작 전 | **먼저 통증 경험 검증(validation)** — \"얼마나 힘드셨을지 이해합니다\" |\n| 감량 이유 설명 | \"처방 줄이는 게 통증을 믿지 않아서가 아님\"을 명확히 전달 |\n| ICE 접근 연결 | Ideas: \"오피오이드가 어떻게 도움이 된다고 느끼시나요?\" / Concerns: \"줄이면 어떤 걱정이 드세요?\" |\n| 신뢰 동맹 | 생물심리사회 교육은 신뢰 형성 **후**에 유효 — 관계 없이 교육 먼저는 역효과 |\n\n**임상 메시지:**\n- 처방 갱신의 숨은 의미: \"당신의 통증을 믿는다\"는 신호 → 거절·감량 전 선제 검증 필수\n- \"처방 감소 ≠ 불신\"을 명시적으로 전달 → 감량 대화 장벽 낮춤\n- 소규모 질적 연구(n=15, 스웨덴 농촌) — 문화 외삽 주의, 그러나 소통 원칙은 범용 적용 가능",
       sources: []
+    },
+    va_whole_health_rct: {
+      content: "### VA Whole Health vs CBT vs 일반치료 RCT (Seal JAMA 2026) [CLINICAL]\n> Seal KH et al. JAMA 2026 — n=764 만성통증 RCT\n\n**3-arm 비교** (52주):\n- VA **Whole Health 팀** (다직종·환자중심·자기관리·통합의학) — 최우수\n- CBT — 중간\n- 일반치료 — 대조\n\n**결과**:\n- **Whole Health > CBT** (p=0.02) > 일반치료 (p=0.002)\n- BPI-Interference 차이는 MCID 미달 — 통계적 유의성 + 임상 의미 제한적\n\n**임상 메시지**:\n- 만성통증에 **다직종 + 자기관리 + 통합의학 (요가·마음챙김·태극권)** 모델이 CBT 단독보다 우수\n- 일차의료 외래 단독 CBT 한계 — Whole Health 자원 연계 검토\n- Patient-centered care가 통증 결과·QOL 향상 경로",
+      sources: ["Seal KH et al. Whole Health vs CBT for Chronic Pain. JAMA 2026. PMID:42054020"]
     }
   },
   uiHooks: null
@@ -6025,6 +6037,10 @@ var _anticholinergic_burden_v2 = {
     notes: {
       content: "### 알츠하이머 다약제 → 인지기능 저하 1.68배 [CLINICAL]\n> [출처: Hu Y et al. Pak J Pharm Sci 2026;39(6):1792-1801. PMID:42001284]\n> AD 입원 노인 300명, 3년 추적 후향 코호트 (PSM 적용).\n\n**핵심 수치:**\n\n| 결과 | 다약제군(≥5제) vs 비다약제군 | p |\n|---|---|---|\n| 인지기능 저하(MMSE -3점↑) | 64.0% vs 38.0% — **RR 1.68 (95%CI:1.33–2.13)** | <0.001 |\n| 낙상 | **RR 1.82** | <0.01 |\n| 재입원 | **RR 1.67** | <0.001 |\n| CDR 악화 속도 | 다약제군 빠름 | 유의 |\n| MoCA 연간 감소율 | 다약제군 더 큼 | 유의 |\n\n**항콜린 부담(ACB) 독립 예측인자:**\n- ACB ≥ 3 → 인지기능 저하 **OR 2.5 (95%CI: 1.7–3.7)** (p<0.001)\n- 다약제 자체와 별개로 항콜린 부담이 독립적 위험\n\n**외래 감약 근거:**\n- AD 환자 5제 이상 복용 시 3년 내 인지기능 저하 가속 → 감약 면담 시작 근거\n- ACB 점검 우선 대상: oxybutynin·diphenhydramine·1세대 항히스타민·amitriptyline\n- STOPP/START + ACB 계산기 병행 처방 점검 루틴화 근거\n\n> ⚠ 중국 단일기관 입원 코호트 — 지역사회 외래 한국 노인에 직접 외삽 주의",
       sources: []
+    },
+    deprescribing_4step_algorithm: {
+      content: "### 4단계 감량 알고리듬 — Delphi (Garcia J Eval Clin Pract 2026) [CLINICAL]\n> Garcia TS et al. — Delphi 합의 CVI ≥0.8\n\n**4단계 감량 프로토콜**:\n1. **Step 1**: ACB 점수 산출·약물 list 작성·환자 동기 평가\n2. **Step 2**: 우선 감량 약물 선정 (high-ACB·대체 가능 약물 우선)\n   - **Amitriptyline → duloxetine·SNRI** (neuropathic pain)\n   - **Paroxetine → escitalopram/sertraline** (depression)\n   - **Promethazine → ondansetron** (구역)\n3. **Step 3**: 점진적 감량 (50% q2-4weeks) + 환자/보호자 교육 + 부작용·금단 monitoring\n4. **Step 4**: 재평가 (4-12주) — sx 추적·기능 평가·재처방 결정\n\n**대체 Flowchart**: 항히스타민 1세대→2세대 (loratadine·cetirizine), oxybutynin→**mirabegron** ([[nocturia]]), TCA→SNRI, BZD→비약물 수면 (CBT-i)\n\n**적응증**: ACB ≥3 노인·인지저하·낙상 hx·다약제 ≥5종",
+      sources: ["Garcia TS et al. J Eval Clin Pract 2026. PMID:42189088"]
     }
   },
   uiHooks: null
@@ -7939,6 +7955,14 @@ var _peripheral_lymphadenopathy_v2 = {
     referral: {
       content: "### 영상·조직 검사\n- US: 첫 단계 영상 (size, shape, hilum, vascularity)\n- FNA: 감염성 의심 시 culture, 림프종 진단 한계\n- Core needle biopsy: 림프종 진단 가능성 ↑\n- Excisional biopsy: 림프종 의심 시 gold standard\n\n### 의뢰 기준\n- **Supraclavicular LAP** → 즉시 종양혈액내과\n- High-risk 양상 (firm·fixed·painless·>6주) → 외과 + 종양혈액내과\n- B symptoms → 종양혈액내과 staging\n- 양측·전신 + systemic 단서 → 감염내과 (HIV·TB) 또는 류마티스 (SLE·sarcoidosis)\n- 조직 진단 필요 → 외과 (excisional biopsy)\n\n관련: [[cervical-lymphadenitis]] · [[neck-mass]] · [[ldh-interpretation]] · [[diaphoresis]] · [[unintentional-weight-loss]] · [[clinical-reasoning]]",
       sources: []
+    },
+    afp_2025_falk_update: {
+      content: "### AFP 2025 업데이트 — Corticosteroid 금지 + Cutoff 기준 (Falk) [CLINICAL]\n> Falk B et al. Am Fam Physician 2025;112(3):286-293\n\n**핵심 권고 명문화**:\n- ⚠ **\"Corticosteroids should be avoided\"** — 진단 전 corticosteroid 투여 시 림프종·악성 조직진단 mask (lymphoma·기타 악성)\n- LAP+발열·B sx에 routine prednisolone 금기 ([[hematologic-malignancy-uri-screening]])\n\n**악성 의심 cutoff** (1차의료 의뢰 기준):\n- **>2cm** 단경\n- **hard·matted·fixed**\n- **4주 이상 지속**\n- **B 증상** (체중감소·야간발한·발열)\n- supraclavicular·epitrochlear (크기 무관)\n\n**4주 이상 지속 시 최소 workup**:\n- CBC w/diff·**CRP·ESR**·**TB 검사** (한국 호발)\n- LDH ([[ldh-interpretation]])·HIV·EBV (청장년)·HBV/HCV (혈청학)",
+      sources: ["Falk B et al. Lymphadenopathy: Evaluation and Differential Diagnosis. Am Fam Physician 2025;112(3):286-293. PMID:40961306"]
+    },
+    walker_jaapa_2025_7factors: {
+      content: "### JAAPA 2025 — 7요소 평가 + 악성 특이 조합 (Walker) [CLINICAL]\n> Walker CW. JAAPA 2025;38(6):20-27 — PA·일차의료 대상 포괄 리뷰\n\n**7요소 평가 (재확인)**:\n1. 위치 (cervical·axillary·inguinal·supraclavicular)\n2. 크기 (>1cm 일반·>1.5cm cervical·>0.5cm epitrochlear)\n3. 개수 (single vs multiple)\n4. 경도 (rubbery·firm·hard)\n5. 가동성 (mobile·fixed·matted)\n6. 압통 (염증 vs 악성 단서)\n7. 동반증상 (B sx·국소 감염·자가면역)\n\n**악성 특이 조합**:\n- **Supraclavicular (크기 무관) + >1cm + 4주 이상 + painless + firm + fixed + B sx**\n\n**지속 원인불명 LAP 체계적 workup 강조** — 4-6주 지나도 원인 미상 시 적극 검사·의뢰. **방치 금지**.",
+      sources: ["Walker CW. Evaluating lymphadenopathy. JAAPA 2025;38(6):20-27. PMID:40358102"]
     }
   },
   uiHooks: null
@@ -8030,6 +8054,10 @@ var _acute_bronchitis_v2 = {
     grace_score_cap: {
       content: "### GRACE Score — 외래 CAP 진단 예측 도구 (Ebell 2026)\n> Ebell M et al. Eur J Gen Pract 2026 — EAST-PC 718명 external validation, **AUROCC 0.81 (최고 정확도)**\n\n**GRACE Score 구성 7항목**:\n1. 콧물 **없음** (absence of runny nose)\n2. 호흡곤란 (breathlessness)\n3. 폐 수포음 (crackles)\n4. 호흡음 감소 (diminished vesicular breathing)\n5. 심박수 > 100/min\n6. 체온 > 37.8°C\n7. CRP > 30 mg/L *(없어도 유사 성능)*\n\n**CAP 분류 결과**:\n| 위험도 | 환자 수 | CAP 비율 | 임상 결정 |\n|---|---|---|---|\n| **저위험** | 280명 | **0.7%** | ABx 보류, bronchitis 관리 |\n| 중위험 | 265명 | 5.7% | 임상 판단 + 추적 |\n| **고위험** | 30명 | **33.3%** | CXR + 항생제 (CAP 처치) |\n\n→ CRP 없이도 유사 성능 — 즉시 CRP 불가 외래에서도 적용 가능",
       sources: ["Ebell M et al. External validation of risk scores and multivariate models for the diagnosis of community-acquired pneumonia in outpatients. Eur J Gen Pract 2026;32(1):2628370. PMID:41719027, DOI:10.1080/13814788.2026.2628370"]
+    },
+    purulent_sputum_education_japan: {
+      content: "### 누런 가래 ABx 처방 교육 효과·한계 (Kudoh 2024) [INSIGHTS]\n> Kudoh K et al. Antibiotics (Basel) 2024;13(11) — 일본 1,100명 의사 대상\n\n**교육 효과**:\n- \"누런 가래 = ABx 처방\" → **100% → 29.9%** 감소 (교육 후)\n- 가래 색이 세균 감염 단서 아님 인지도 향상\n\n**한계** (교육 후도 잔존):\n- \"환자가 원해서\" 처방 → **100% → 44%** (개선 폭 작음)\n- 환자 요구 압력에 의한 처방 = 교육만으로 차단 어려움\n\n**임상 메시지**:\n- 의사 교육 단독으로 처방 패턴 부분 개선만 가능\n- **환자 교육·포스터·외래 자료** 구조적 개입 병행 필요\n- \"가슴 감기\" 표현 명확화 ([[clinical-communication]] SDM)",
+      sources: ["Kudoh K et al. Antibiotics (Basel) 2024;13(11). PMID:39596717"]
     }
   },
   uiHooks: null
