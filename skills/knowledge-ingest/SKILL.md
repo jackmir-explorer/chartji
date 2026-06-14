@@ -7,7 +7,9 @@
 > - 데이터 흐름: `rules/data-flow.md`
 
 ## 입력
-미르가 제공한 임상 경험/가이드라인 raw 텍스트
+미르가 제공한 임상 경험/가이드라인 raw 텍스트, 이미지, PDF, **URL(단축 URL 포함)**
+
+> URL 입력 시 `agents/librarian.md` "URL 입력 감지" 절차를 먼저 실행한 뒤 Step 4부터 진입.
 
 ## 절차
 

@@ -62,12 +62,31 @@ ingest 직전 체크: `sections` key 전부가 vocabulary 18개 또는 slugify(k
 3. 미르 승인 후 → knowledge-ingest SKILL.md Step 1부터 정상 진행
 4. 이미지·PDF + 텍스트 동시 제공 시: 텍스트는 Draft 검토 시 미르가 보완 가능하도록 함께 제시
 
+### URL 입력 감지 (2026-06-14 신설)
+미르가 Liby 호출 시 URL(단축 URL 포함)을 제공한 경우:
+
+1. **WebFetch로 URL 열기** — 단축 URL(naver.me 등)은 redirect 따라가 최종 페이지 fetch
+2. **콘텐츠 추출** — 기사 제목·날짜·매체명·핵심 임상 내용 추출. 광고·네비게이션 등 비임상 노이즈 제거
+3. **태그 판단**:
+   - 뉴스 기사·리뷰 기사 → `[INSIGHTS]`
+   - 심평원·건보공단 공식 공지 → `[REGULATORY]`
+   - 원저 논문 직접 링크 → `[CLINICAL]`
+4. **Researcher 검증 필수** (태그 무관하게 항상) — URL 출처는 신뢰 등급이 낮으므로 Skip 불가
+   - 뉴스 기사가 원 논문을 인용한 경우: Researcher가 실제 PMID 확보 후 Tier 1 source로 대체
+   - 원 논문 확보 불가 시: `[출처: {매체명} {날짜}]` + `[원 논문 미확인]` 이중 태그
+5. **Attribution 자동 추출**: `by {매체명}` 형식으로 기록 (`sourcing-rules.md` Attribution 원칙 준수)
+6. Draft를 미르에게 제시 + 승인 대기
+7. 미르 승인 후 → knowledge-ingest SKILL.md Step 4(기존 파일 확인)부터 정상 진행
+
+> ⚠ **URL ingest 절대 금지**: 환자 커뮤니티 게시글·SNS·블로그 — 공신력 없는 출처는 [INSIGHTS]로도 저장 금지. Researcher가 원 논문 못 찾으면 미르에게 보고 후 미르 판단.
+
 ## Inbox 트리거 (핸드폰 → GitHub → 데스크탑)
 미르가 "inbox 확인해줘" 호출 시:
 1. `inbox/` 스캔 (processed/·scout/·study-notes/ 제외) — 지원 형식:
    - `.md` → knowledge-ingest SKILL.md로 처리
    - `.jpg` `.jpeg` `.png` `.webp` → image-extract SKILL.md로 처리
    - `.pdf` → image-extract SKILL.md로 처리 (PDF 모드)
+   - URL이 포함된 `.md` → URL 감지 시 "URL 입력 감지" 절차 적용
 2. 각 파일 형식에 맞는 스킬로 draft 생성
 3. 미르 승인 후 정상 ingest
 4. 처리 완료 파일 → `inbox/processed/` 이동
