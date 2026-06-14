@@ -83,6 +83,7 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - ldh-interpretation.md — LDH 단계별 (>2000 응급 HLH/TLS·1000-2000 림프종/용혈/sepsis·500-1000 경증 용혈/간염/폐렴) + HLH cluster + 용혈 평가 + in vitro hemolysis 함정 [CLINICAL] — topic
 - acute-bronchitis.md — 급성 기관지염 90% viral + **가래 색 myth** (호중구 MPO, Cochrane: 가래색·인후통 단독 ABx 효과 예측 X) + **외래 호흡기 vital 필수** (SpO2·RR·CRB-65) + post-infectious cough [CLINICAL] PMID:29488727 Smith Cochrane 2017 + AAFP 2025
 - chronic-diarrhea-workup.md — 만성 설사 ≥4주 + Red flags (빈혈·체중감소·혈변·야간설사·50세+ 신규·CRP↑) + IBS 가정 금지 + 5축 organic 감별 (celiac·IBD·colon ca·microscopic colitis·bile acid) + Anti-tTG·fecal calprotectin [CLINICAL] PMID:32293842 Burgers AFP 2020 + AGA 2019
+- ibd.md — 염증성 장 질환(크론병·UC): 한국 역학 92,665명(30%↑) + 초가공곡물 IBD 위험 (≥19g/day 86%↑·식빵 1장/day 2.1배, PURE Study 21개국) + 보호식품 + 의뢰 기준 [INSIGHTS — by 코메디닷컴/Narula 2025] PMID:40758217
 - hematologic-malignancy-uri-screening.md — 관해 중 혈액암 환자 URI: ANC·LDH·LN·B sx gatekeeper + febrile neutropenia 응급 + Rituximab HBV/PJP/백신 cross-link [CLINICAL] PMID:30575480 Shapiro NEJM 2018 + AAFP PMID:25591238
 - anthracycline-cardiotoxicity.md — Doxorubicin 노출+DOE 지속 = cardiomyopathy 의심: BNP/NT-proBNP+troponin→TTE→cardio-oncology, CTRCD 기준 (LVEF<50% or GLS>15% 상대 감소) [CLINICAL] PMID:36017568 ESC 2022 cardio-oncology
 - ana-interpretation.md — ANA Titer 1:40-1:640 해석·Pattern과 연관 항체·FP(약물/감염/악성/정상변이)·FN(early SLE/cutaneous lupus/면역억제) [CLINICAL] PMID:31385462 ACR/EULAR 2019 + PMID:30862649 ICAP + PMID:15767027 Rubin 2005 — topic

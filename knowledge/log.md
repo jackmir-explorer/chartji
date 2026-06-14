@@ -315,3 +315,4 @@
 2026-05-08 | by-disease/heel-pain.md | 신규 — 발뒤꿈치 통증 진단·관리 AFP 리뷰: 족저근막염(기상통증·종골압통), POCUS >4mm, 야간부목·스트레칭·ESWT·주사, Sever disease 소아, 대부분 보존치료 [CLINICAL] PMID:41533410 (AFP 2025)
 
 2026-05-20 | guidelines/adult-vaccination-korea-faq.md | 신규 — 김대균 교수(인천성모) 성인예방접종 강의: 6 Key Switches 판단 프레임, 국내 제품명 매핑, B형간염 투석 고용량/무반응자 6회 프로토콜+환자설명 스크립트, A형간염 40세 컷, MMR 4주2회, 싱그릭스 50세미만 응대·생백신 기접종 8주, PCV20/21·NIP vs 임상선택, Tdap 매임신 27~36주·가족 cocooning, RSV 75+ 전원·60~74 고위험, HPV 지연·성경험·중년여성 응대 [INSIGHTS — 연수강의 김대균 2025]
+2026-06-14 | by-disease/ibd.md | 신규 — 초가공곡물과 IBD(크론병·궤양성대장염) 위험: PURE Study 21개국 124,590명, ≥19g/day 86%↑·가공 식빵 1장/day 2.1배↑·보호식품(통밀·쌀밥), 한국 역학 92,665명(2019 대비 30%↑) [INSIGHTS — by 코메디닷컴/Narula 2025] PMID:40758217
