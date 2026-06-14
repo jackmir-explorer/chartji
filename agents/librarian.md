@@ -80,6 +80,8 @@ ingest 직전 체크: `sections` key 전부가 vocabulary 18개 또는 slugify(k
 
 > ⚠ **URL ingest 절대 금지**: 환자 커뮤니티 게시글·SNS·블로그 — 공신력 없는 출처는 [INSIGHTS]로도 저장 금지. Researcher가 원 논문 못 찾으면 미르에게 보고 후 미르 판단.
 
+> ⚠ **환경 제약 (2026-06-14 확인)**: 원격 실행 환경에서 `naver.me` 등 한국 뉴스 단축 URL은 네트워크 정책상 접근 불가. 이 경우 미르에게 두 가지 대안 안내: ① 기사 본문 텍스트 직접 붙여넣기 ② `inbox/` .md 파일로 전달.
+
 ## Inbox 트리거 (핸드폰 → GitHub → 데스크탑)
 미르가 "inbox 확인해줘" 호출 시:
 1. `inbox/` 스캔 (processed/·scout/·study-notes/ 제외) — 지원 형식:
