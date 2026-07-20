@@ -12,11 +12,12 @@
 `inbox/scout/YYYY-MM-DD.md` 에 저장한다.
 미르가 ⭐ 항목을 선택하면 Deep Extract Routine이 정식 ingest한다.
 
-## 핵심 원칙 (2026-05-26 재편)
-- **회전 기반 push형 radar 복귀** — 2026-05-17 problem-based 전환에서 0~3건 산출 패턴 굳어진 문제 해결
-- **하루 ⭐ 3-5건 목표** — 9-10건 매일 의무 폐기, 영역 rotation으로 cycle 내 cover
+## 핵심 원칙 (2026-07-20 재편)
+- **하루 ⭐ 1건** — 파인만식: 인풋 양보다 한 편을 끌어안고 생각하는 게 우선. 매일 단일 슬롯 rotation(10일 cycle)으로 발행. (연혁: 2026-05-26 하루 3-5건 → 2026-07-20 하루 1건)
+- **PR 제목 = 논문 제목** — 하루 1건이므로 PR 제목에 논문 제목을 그대로 실어 모바일 알림 가독성 확보
+- **답변 게이트** — 관심 논문 💬 반응 칸에 한 문장 쓰면 정오 Deep Extract 처리 (2026-07-16 도입)
 - **gaps.md 의존 제거** — 미르가 Google Drive에서 수동 관리, scout는 읽지도 쓰지도 않음
-- **Liby Follow-up 슬롯 신설** — 최근 업데이트된 `knowledge/*.md` 주제를 회전 탐색하여 자기보강
+- **Liby Follow-up 슬롯** — 최근 업데이트된 `knowledge/*.md` 주제를 회전 탐색하여 자기보강 (SLOT 9)
 
 ---
 
@@ -40,21 +41,37 @@ echo "Scout 대상 날짜 (KST): $TODAY"
 - `inbox/scout/$TODAY.md` 가 **이미 존재하면 → 현재 run 종료** (덮어쓰기·자동 보완 금지)
 - 같은 날짜 재실행이 필요하면: 미르가 기존 파일을 `inbox/scout/archive/` 로 이동 후 재실행
 
-### Step 1 — 슬롯 할당 (2026-05-26 rotation 재편)
+### Step 1 — 슬롯 할당 (2026-07-20 하루 1건 재편)
 
 > 본 routine은 미르의 임상 핵심영역(Mir-Tier 1)에 정렬된다.
 > source of truth: `~/.claude/projects/.../memory/user_clinical_focus.md` + `knowledge/scope.md` Mir-Tier 1 섹션.
-> **2026-05-26**: 7영역 매일 cover 의무 폐기 → **매일 2영역 rotation (7일 cycle)**. 1-E gaps 슬롯을 **Liby Follow-up**으로 교체.
+> **2026-07-20 (하루 1건)**: 파인만식 — 인풋 양보다 한 편을 끌어안고 생각하는 게 우선. 하루 5건(2+1+1+1)을 폐기하고 **매일 단 1건**만 발행. 회전으로 cycle 내 영역 cover 유지.
+> (연혁: 2026-05-26 7영역 매일 cover 의무 폐기 → 매일 2영역 rotation. 2026-07-20 매일 1 슬롯으로 축소.)
+
+**1-0. 오늘의 단일 슬롯 결정 (매일 1건, 10일 cycle)**
+
+하루에 슬롯 하나만 고른다. `SLOT = DAY % 10`:
+
+```bash
+DAY=$(($(date -d "$TODAY" +%s) / 86400))
+SLOT=$((DAY % 10))
+# SLOT 0~6 → 1-B Mir-Tier 1 영역[SLOT] (7영역 순회, 10일 중 7일)
+# SLOT 7   → 1-C 횡단 모듈 (모듈 = DAY % 3)
+# SLOT 8   → 1-D Tier 2 라운드로빈 (영역 = DAY % 8)
+# SLOT 9   → 1-E Liby Follow-up
+```
+
+**오늘 SLOT에 해당하는 하위 섹션(1-B/1-C/1-D/1-E) 하나만 수행**한다. 나머지 섹션은 건너뛴다. 목표 산출 = **⭐ 1건**.
 
 **1-A. 영역 내부 세부 키워드 추출**
 
-`knowledge/log.md` 마지막 30개 항목 → Mir-Tier 1 7영역 각각의 빈도 TOP 1 세부 키워드 추출.
+`knowledge/log.md` 마지막 30개 항목 → 오늘 슬롯이 1-B일 때 해당 1영역의 빈도 TOP 1 세부 키워드 추출.
 
-오늘 cover하는 2영역에 대해서만 추출하면 충분. 해당 영역 log.md 항목이 없으면 영역 default 키워드 사용 (`knowledge/scope.md` Mir-Tier 1 표 "세부 키워드" 컬럼 참조).
+해당 영역 log.md 항목이 없으면 영역 default 키워드 사용 (`knowledge/scope.md` Mir-Tier 1 표 "세부 키워드" 컬럼 참조). (SLOT 7~9면 1-A 생략.)
 
-**1-B. Mir-Tier 1 슬롯 할당 (매일 2영역 rotation, 7일 cycle)**
+**1-B. Mir-Tier 1 영역 (SLOT 0~6일 때, 1건)**
 
-7영역에 인덱스 0~6 부여:
+7영역에 인덱스 0~6 부여. **오늘 영역 = `knowledge/scope.md` 인덱스 = SLOT** (SLOT 0~6일 때만 이 섹션 수행):
 
 | # | idx | 영역 | 검색 키워드 (default) | Anchor 저널 |
 |---|---|---|---|---|
@@ -66,28 +83,20 @@ echo "Scout 대상 날짜 (KST): $TODAY"
 | 6 | 5 | 임상약물학·Deprescribing | `deprescribing OR drug interaction OR opioid stewardship` | Drugs & Aging · BMJ Practice Pointers |
 | 7 | 6 | 생활습관의학 | `lifestyle medicine OR exercise prescription` | AFP · JAMA RCE |
 
-**오늘 cover 영역 결정**:
-```bash
-DAY=$(($(date -d "$TODAY" +%s) / 86400))
-IDX1=$((DAY % 7))
-IDX2=$(((DAY + 1) % 7))
-# 오늘 cover = [영역 IDX1, 영역 IDX2]
-```
+오늘 영역 = 위 표에서 `idx == SLOT`인 행. 검색 키워드 = 1-A 추출 키워드 + default 키워드 OR 조합. **1건**.
 
-각 슬롯 1건 → **2건 의무**. 검색 키워드 = 1-A 추출 키워드 + default 키워드 OR 조합.
+**Fallback**: 오늘 영역에서 후보가 없거나 모두 ✕ 판정이면 → 대체 검색(Step 2 "대체 검색") 시도. 그래도 없으면 오늘은 **1-E Liby Follow-up으로 대체**(복습 성격이라 후보 풀이 넓음). 그것도 실패 시 빈손 종료 + footer에 `발행 부족` 기록.
 
-**Fallback**: 특정 영역에서 후보가 없거나 모두 ✕ 판정이면 슬롯 비우고 footer에 `{영역} 발행 부족` 기록. 보충 슬롯은 두지 않음 (다음 cycle에서 자연 회복).
-
-**1-C. 횡단 모듈 슬롯 (3일 cycle, 1건)**
+**1-C. 횡단 모듈 슬롯 (SLOT 7일 때, 1건)**
 
 `day = (UNIX day epoch) % 3`:
 - `0` → **A. 통증·완화·노인 정신건강** (`chronic pain depression OR palliative adjustment disorder OR geriatric depression`)
 - `1` → **B. Communication & Counseling** (`motivational interviewing OR breaking bad news OR shared decision making`)
 - `2` → **C. Diagnostic Reasoning** (`clinical problem solving OR diagnostic reasoning OR clinical pearls`)
 
-Anchor 저널: NEJM Clinical Problem-Solving · JAMA Patient Page · AFP. 1슬롯.
+Anchor 저널: NEJM Clinical Problem-Solving · JAMA Patient Page · AFP. 1슬롯. (SLOT 7일 때만 수행.)
 
-**1-D. Tier 2 라운드로빈 (8일 cycle, 1건)**
+**1-D. Tier 2 라운드로빈 (SLOT 8일 때, 1건)**
 
 `day = (UNIX day epoch) % 8`:
 
@@ -102,9 +111,9 @@ Anchor 저널: NEJM Clinical Problem-Solving · JAMA Patient Page · AFP. 1슬�
 | 6 | **외래응급** | `anaphylaxis OR hypoglycemia OR arrhythmia initial OR seizure OR laceration repair OR burn first aid primary care` |
 | 7 | 심혈관·신경 | `cardiology OR neurology primary care OR headache OR dementia OR stroke prevention` |
 
-직전 7일 scout 보고서 footer "Tier 2: [{영역}]" 회피해 cycling 보장. Anchor 저널: AFP · BMJ PP · NEJM CP · JAMA RCE · Ann Int Med ITC. 1슬롯.
+직전 scout 보고서 footer "Tier 2: [{영역}]" 회피해 cycling 보장. Anchor 저널: AFP · BMJ PP · NEJM CP · JAMA RCE · Ann Int Med ITC. 1슬롯. (SLOT 8일 때만 수행.)
 
-**1-E. Liby Follow-up 슬롯 (2026-05-26 신설, 1건)**
+**1-E. Liby Follow-up 슬롯 (SLOT 9일 때 또는 1-B Fallback, 1건)**
 
 최근 업데이트된 `knowledge/*.md` 주제를 회전 탐색해 **knowledge 엔트리 자체를 보강**하는 후속 논문을 찾는다. 미르가 이미 학습한 주제의 신규 review·guideline·반박 RCT 등을 자연 등장시키는 메커니즘.
 
@@ -147,7 +156,7 @@ PubMed 쿼리:
 Liby Follow-up: by-disease/acute-bronchitis.md (last update 2026-05-26)
 ```
 
-**합계**: 1-B 2건 + 1-C 1건 + 1-D 1건 + 1-E 1건 = **5건 목표**. ⭐ 3~5 안전 범위. 발행 부족 영역 있어도 3건 하한 회복 가능.
+**합계**: 오늘 SLOT에 해당하는 슬롯 1개만 수행 = **⭐ 1건 목표**. (10일 cycle로 1-B 7일 + 1-C·1-D·1-E 각 1일 cover.)
 
 ### Step 2 — 탐색 (Anchor 저널 + 영역 매핑)
 
@@ -175,7 +184,7 @@ Step 1 슬롯별 Anchor 저널 매핑:
 - 영역 default 키워드 단독 + `primary care review 2024[dp]:2026[dp]`
 - review·guideline·textbook 우선 (1차의료 외래 적용성 높음)
 
-**탐색 부하**: 매일 ~5 슬롯 × 1~2 쿼리 = ~7-10 쿼리.
+**탐색 부하**: 매일 1 슬롯 × 1~2 쿼리 = ~1-2 쿼리 (Fallback 시 +1-2).
 
 ※ 전체 스코프·영역 정의: `knowledge/scope.md` Mir-Tier 1 섹션 참조
 
@@ -211,39 +220,37 @@ Step 3 필터링 직전 적용:
 
 > **답변 게이트 (2026-07-16)**: Deep Extract를 원하는 논문은 `💬 반응:` 뒤 `___` 를 지우고 **한 문장**을 쓰세요. 예측·반박·연결 무엇이든 됩니다 ("우리 클리닉은 이미 안 함", "aOR 0.29? 의외", "다음에 85세 다약제 환자 오면 이걸로"). **한 문장이 곧 ingest 신호** — 반응을 쓴 논문만 정오 12:00 Deep Extract가 처리하고, 그 반응은 study-note에 함께 저장됩니다. 빈칸(`___`)은 처리하지 않습니다.
 
-## ⭐ 주목 논문
-### 1. {제목 축약}
+## ⭐ 오늘의 논문
+### {제목 축약}
 - **저널:** {저널명} | **PMID:** {번호}
-- **슬롯:** {1-B #N / 1-C / 1-D / 1-E Liby Follow-up}
+- **슬롯:** {1-B {영역} / 1-C / 1-D / 1-E Liby Follow-up}
 - **한 줄:** {임상 핵심 1줄}
 - **왜 유용:** {1차의료/시험 적용 포인트}
 - **💬 반응:** `___`
 
-### 2. ...
-
 *Scout 실행: {실행 시각} | 키워드: {사용한 키워드 목록}*
 ```
+
+> 하루 1건이므로 논문 항목은 **1개만**. 발행 부족(Fallback까지 실패)이면 논문 항목 없이 footer의 "발행 부족: 예"만 기록.
 
 ### Step 5 — 아카이브 정리
 `inbox/scout/` 에서 오늘 날짜 기준 **7일 초과** 파일을 `inbox/scout/archive/` 로 이동한다.
 (archive/ 는 보관 전용 — Deep Extract 대상 아님)
 
-### Step 6 — 완료 보고 (2026-05-26 rotation footer)
+### Step 6 — 완료 보고 (2026-07-20 단일 슬롯 footer)
 
-scout 보고서 footer에 다음 양식 추가:
+scout 보고서 footer에 다음 양식 추가 (오늘 SLOT 하나만 기재):
 
 ```
 ---
-오늘 cover 영역 (1-B): [{영역명1}, {영역명2}] (7일 cycle Day {N})
-횡단 모듈: [A/B/C] (3일 cycle)
-Tier 2: [{영역}] (8일 cycle Day {N})
-Liby Follow-up: {파일경로} (last update YYYY-MM-DD)
+오늘 슬롯: SLOT {N}/10 → {1-B 영역명 / 1-C 모듈 / 1-D Tier2 영역 / 1-E Liby Follow-up}
+Liby Follow-up: {파일경로} (last update YYYY-MM-DD)  ← SLOT 9 또는 Fallback 시만
 PMID 차단: {N}건 (30일)
-영역별 발행 부족: [{영역명}, ...] (해당 시만)
+발행 부족: 예/아니오 (Fallback까지 실패 시만 "예")
 ```
 
 마지막 줄에 다음 추가:
-`> Scout 완료 {실행시각}. ⭐ {N}건 발견. 관심 논문의 💬 반응 칸에 한 문장 쓰면 정오 12:00에 자동 처리됩니다.`
+`> Scout 완료 {실행시각}. 오늘의 논문 1건. 💬 반응 칸에 한 문장 쓰면 정오 12:00에 자동 처리됩니다.`
 
 ### Step 7 — 브랜치 생성 + PR (Deep Extract 와 동일 흐름)
 
@@ -263,8 +270,8 @@ git checkout -B $BRANCH origin/main
 # Scout 결과 파일 + archive 이동 결과만 stage (gaps.md 제외 — 2026-05-26)
 git add -A inbox/scout/
 
-# 커밋 ({TODAY}, {N} 은 실제 값으로 치환)
-git commit -m "feat(scout): $TODAY Scout Report — ⭐ {N}건"
+# 커밋 ({TODAY}, {제목 축약} 은 실제 값으로 치환. 발행 부족이면 "발행 부족")
+git commit -m "feat(scout): $TODAY — {논문 제목 축약}"
 
 # 브랜치 push (실패 시 1회 재시도)
 git push -u origin $BRANCH || (sleep 5 && git push -u origin $BRANCH)
@@ -277,8 +284,8 @@ git push -u origin $BRANCH || (sleep 5 && git push -u origin $BRANCH)
 - repo: `chartji`
 - base: `main`
 - head: `$BRANCH` (즉 `claude/scout-$TODAY`)
-- title: `feat(scout): $TODAY Scout Report — ⭐ {N}건`
-- body: ⭐ 논문 각각의 PMID + 한 줄 요약 + 슬롯 출처 (미르가 모바일에서 제목·본문만 보고도 대략 파악 가능하도록)
+- title: `feat(scout): $TODAY — {논문 제목 축약}` (하루 1건이므로 **PR 제목 = 논문 제목** = 모바일 알림에 그대로 노출. 발행 부족이면 `$TODAY — 발행 부족`)
+- body: 논문 PMID + 한 줄 요약 + 왜 유용 + 슬롯 출처 (미르가 모바일에서 제목·본문만 보고도 파악 가능하도록)
 
 #### 7-3. 동작 흐름
 - 미르가 GitHub 모바일 앱 PR 알림 확인 → 원탭 머지 → main 반영
@@ -311,7 +318,7 @@ Scout 파일 내 각 논문의 상태는 `💬 반응:` 필드로 표시됨:
 - 논문 내용 재현 금지 (저작권) — 핵심 임상 포인트 + PMID 링크만
 - PMID 없는 논문은 DOI 또는 저널+연도+저자 표기
 - 탐색 실패 시 (검색 결과 없음): 해당 슬롯 건너뜀, 사유 기록
-- **하루 ⭐ 3-5건 목표 (2026-05-26 rotation 재편)** — 하한 3건·상한 5건. push형 daily radar 복귀 + 회전 기반으로 cycle 내 cover 보장.
-  - 3건 미만: 1-B Fallback 슬롯에서 대체 키워드(영역 default OR review 단독) 추가 탐색 시도. 그래도 부족하면 footer에 "탐색 부족 사유: ...(저널 신규 발행 부족·공백 영역 적합 논문 부재 등)" 한 줄 기재
-  - 5건 초과: 일차의료/시험 적용성·근거 강도 우선순위로 상위 5건만 선정
+- **하루 ⭐ 1건 (2026-07-20 재편)** — 파인만식: 인풋 양보다 한 편을 끌어안고 생각하는 게 우선. 오늘 SLOT 슬롯에서 최적 1건만 선정.
+  - 후보 여럿이면: 일차의료/시험 적용성·근거 강도 우선순위로 **상위 1건**만.
+  - 후보 없음: Step 2 대체 검색 → 그래도 없으면 1-E Liby Follow-up 대체 → 그것도 실패 시 footer "발행 부족: 예" 기록 후 빈손 종료(무리한 채움 금지).
 - **gaps.md 의존 절대 금지** (2026-05-26) — scout는 `inbox/gaps.md`를 읽지도 쓰지도 않는다. 미르가 Google Drive에서 수동 관리 중.
