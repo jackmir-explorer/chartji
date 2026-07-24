@@ -2,19 +2,19 @@
 
 ## 실행 주기
 매일 오전 6:00 (KST) 자동 실행
-→ 결과는 `claude/scout-YYYY-MM-DD` 브랜치에 커밋되어 PR 생성 (main ← head)
-→ 미르가 모바일 GitHub 앱 알림으로 PR 확인 → 원탭 머지
-→ main 반영된 파일에서 관심 논문의 💬 반응 칸에 한 문장 작성 (답변 게이트 = Deep Extract 신호)
+→ 결과 파일을 **main 에 직접 반영** (GitHub MCP write, PR 없음 — 2026-07-24)
+→ scout 완료 알림(논문 제목 포함)이 미르에게 전달
+→ 미르가 Obsidian(main 추적) 또는 GitHub 에서 오늘 논문의 💬 반응 칸에 한 문장 작성 (답변 게이트 = Deep Extract 신호)
 → Deep Extract Routine 이 정오 12:00 (KST) 에 반응이 채워진 항목 처리
 
 ## 목적
 일차의료 외래 의사·전문의 시험에 유용한 최신 논문을 자동 탐색해
 `inbox/scout/YYYY-MM-DD.md` 에 저장한다.
-미르가 ⭐ 항목을 선택하면 Deep Extract Routine이 정식 ingest한다.
+미르가 💬 반응을 남기면 Deep Extract Routine이 정식 ingest한다.
 
 ## 핵심 원칙 (2026-07-20 재편)
 - **하루 ⭐ 1건** — 파인만식: 인풋 양보다 한 편을 끌어안고 생각하는 게 우선. 매일 단일 슬롯 rotation(10일 cycle)으로 발행. (연혁: 2026-05-26 하루 3-5건 → 2026-07-20 하루 1건)
-- **PR 제목 = 논문 제목** — 하루 1건이므로 PR 제목에 논문 제목을 그대로 실어 모바일 알림 가독성 확보
+- **커밋 메시지 = 논문 제목** — 하루 1건이므로 main 커밋 메시지에 논문 제목을 실어 완료 알림 가독성 확보 (2026-07-24 PR 폐지 후 알림 경로)
 - **답변 게이트** — 관심 논문 💬 반응 칸에 한 문장 쓰면 정오 Deep Extract 처리 (2026-07-16 도입)
 - **gaps.md 의존 제거** — 미르가 Google Drive에서 수동 관리, scout는 읽지도 쓰지도 않음
 - **Liby Follow-up 슬롯** — 최근 업데이트된 `knowledge/*.md` 주제를 회전 탐색하여 자기보강 (SLOT 9)
@@ -233,8 +233,9 @@ Step 3 필터링 직전 적용:
 
 > 하루 1건이므로 논문 항목은 **1개만**. 발행 부족(Fallback까지 실패)이면 논문 항목 없이 footer의 "발행 부족: 예"만 기록.
 
-### Step 5 — 아카이브 정리
-`inbox/scout/` 에서 오늘 날짜 기준 **7일 초과** 파일을 `inbox/scout/archive/` 로 이동한다.
+### Step 5 — 아카이브 정리 (2026-07-24 자동 이동 폐지)
+하루 1건이라 파일 축적이 미미하므로 **일 단위 자동 아카이브는 하지 않는다.**
+`inbox/scout/` 에 파일이 누적돼도 무방 (Obsidian은 날짜순으로 봄). 대량 정리가 필요하면 미르가 별도 요청 시에만 `inbox/scout/archive/` 로 이동.
 (archive/ 는 보관 전용 — Deep Extract 대상 아님)
 
 ### Step 6 — 완료 보고 (2026-07-20 단일 슬롯 footer)
@@ -252,51 +253,37 @@ PMID 차단: {N}건 (30일)
 마지막 줄에 다음 추가:
 `> Scout 완료 {실행시각}. 오늘의 논문 1건. 💬 반응 칸에 한 문장 쓰면 정오 12:00에 자동 처리됩니다.`
 
-### Step 7 — 브랜치 생성 + PR (Deep Extract 와 동일 흐름)
+### Step 7 — main 직접 반영 (2026-07-24 PR 폐지)
 
-**배경 (2026-04-19 변경)**: 이전 Step 7 은 `git push origin main` 직접 푸시였으나,
-플랫폼 샌드박스가 main 직접 push 를 차단하고 `main-{random}` 브랜치로 자동 리다이렉트함이 확인됨 (`sessions/2026-04-19-routines-trigger-diagnosis.md` 참조).
-예측 가능한 브랜치명 + PR 생성으로 전환 — 미르가 모바일 GitHub 앱 알림으로 인지 → 원탭 머지.
+**배경 (2026-07-24 변경)**: PR 방식은 유일한 목적이 "모바일 푸시 알림"이었으나, scout 루틴 실행 시 완료 알림이 이미 미르에게 전달됨이 확인됨 → PR은 순수 마찰(머지 탭)만 남음. **PR 폐지, main 직접 반영으로 전환.**
 
-#### 7-1. 브랜치 생성 및 push
+⚠ 단, scout 루틴 환경은 `git push origin main` 이 샌드박스에서 차단됨 (2026-04-19 진단 — `main-{random}` 리다이렉트). 따라서 **git push 대신 GitHub MCP 로 main 에 직접 파일 write** (CLAUDE.md 「git push origin main 403 우회」와 동일 경로).
 
-```bash
-BRANCH="claude/scout-$TODAY"
+#### 7-1. Scout 파일을 main 에 직접 write
 
-# origin/main 최신을 base 로 새 브랜치 생성
-git fetch origin main
-git checkout -B $BRANCH origin/main
+Step 4 에서 작성한 `inbox/scout/$TODAY.md` 의 내용을 그대로 사용:
 
-# Scout 결과 파일 + archive 이동 결과만 stage (gaps.md 제외 — 2026-05-26)
-git add -A inbox/scout/
-
-# 커밋 ({TODAY}, {제목 축약} 은 실제 값으로 치환. 발행 부족이면 "발행 부족")
-git commit -m "feat(scout): $TODAY — {논문 제목 축약}"
-
-# 브랜치 push (실패 시 1회 재시도)
-git push -u origin $BRANCH || (sleep 5 && git push -u origin $BRANCH)
-```
-
-#### 7-2. PR 생성 (MCP GitHub 도구)
-
-`mcp__github__create_pull_request` 로:
+`mcp__github__create_or_update_file` 호출:
 - owner: `jackmir-explorer`
 - repo: `chartji`
-- base: `main`
-- head: `$BRANCH` (즉 `claude/scout-$TODAY`)
-- title: `feat(scout): $TODAY — {논문 제목 축약}` (하루 1건이므로 **PR 제목 = 논문 제목** = 모바일 알림에 그대로 노출. 발행 부족이면 `$TODAY — 발행 부족`)
-- body: 논문 PMID + 한 줄 요약 + 왜 유용 + 슬롯 출처 (미르가 모바일에서 제목·본문만 보고도 파악 가능하도록)
+- branch: `main`
+- path: `inbox/scout/$TODAY.md`
+- content: Step 4 파일 전체 내용
+- message: `feat(scout): $TODAY — {논문 제목 축약}` (발행 부족이면 `$TODAY — 발행 부족`)
+- (신규 파일이므로 `sha` 불필요. Step 0 의 "기존 파일 존재 시 종료" 정책이 재실행을 이미 차단하므로 항상 신규.)
 
-#### 7-3. 동작 흐름
-- 미르가 GitHub 모바일 앱 PR 알림 확인 → 원탭 머지 → main 반영
-- merge 후 💬 반응 작성은 main 의 `inbox/scout/$TODAY.md` 에서 수행 가능
+커밋 메시지 = 논문 제목 → 루틴 완료 알림 요약에 논문 제목이 실려 미르가 알림만 보고도 오늘 논문을 인지.
+
+#### 7-2. 동작 흐름
+- scout 완료 알림(논문 제목 포함)이 미르에게 전달 → main 에 이미 반영됨
+- 미르는 Obsidian(볼트가 main 추적) 또는 GitHub 에서 `inbox/scout/$TODAY.md` 열어 💬 반응 작성
 - Deep Extract routine 은 정오 12:00 에 main 기준으로 반응이 채워진 항목 처리 (답변 게이트)
 
 #### 주의
-- 브랜치명은 예측 가능한 `claude/scout-YYYY-MM-DD` — 랜덤 suffix 금지
-- 재실행 방지는 Step 0 의 "기존 파일 존재 시 종료" 정책이 담당 — Step 7 에 도달하는 시점에는 항상 새 파일
-- PR 생성 실패 시 사유 기록 후 종료 (브랜치는 이미 push 됐으므로 미르가 수동으로 PR 생성 가능)
-- **gaps.md는 절대 stage 하지 않음** (2026-05-26) — 미르가 Google Drive에서 수동 관리하므로 scout는 읽지도 쓰지도 않는다
+- 재실행 방지는 Step 0 의 "기존 파일 존재 시 종료" 정책이 담당
+- MCP write 실패 시 사유 기록 후 종료 (다음 실행에서 Step 0 이 재시도 허용)
+- **gaps.md 는 절대 write 하지 않음** (2026-05-26) — 미르가 Google Drive 에서 수동 관리
+- 아카이브(Step 5)는 파일 축적이 하루 1건으로 미미하므로 **일 단위 자동 이동 폐지** — 별도 정리 시에만 수행
 
 ---
 
