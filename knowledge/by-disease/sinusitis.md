@@ -111,6 +111,50 @@ keywords: 부비동염, 축농증, sinusitis, ABRS, acute bacterial rhinosinusit
 
 ---
 
+## AFP 2025 Rapid Evidence Review — 항생제 결정 원칙 [CLINICAL]
+
+> [출처: Butler FM, Hernandez DR. Am Fam Physician. 2025;111(1):47-53. PMID:39823615]
+
+### 세균성 ABRS 감별 — 3대 특징
+
+| 특징 | 내용 |
+|---|---|
+| **단측 안면통·압박감** | 편측 국소화 |
+| **발열 >39°C** | 고열 동반 |
+| **화농성 비루 + 비폐색** | 콧물 화농성·코막힘 동반 |
+
+### 항생제 사용 기준 (3개 중 1개 해당 시)
+
+1. **증상 3일 이상 + 중증** (고열·안면통 심함)
+2. **3–5일 후 뚜렷한 악화** (처음엔 호전됐다가 다시 나빠짐)
+3. **7일 이상 증상 지속** ← 핵심: 7일 미만 경증은 대기 원칙
+
+> ⚠ 대부분의 급성 비부비동염은 7–10일 내 자연 호전. 경증·7일 미만이면 항생제 없이 대증치료 먼저.
+
+### 1차 항생제 — AFP 2025 권고
+
+| 상황 | 선택 약제 | 비고 |
+|---|---|---|
+| beta-lactam 알레르기 없음 | **Amoxicillin** | amoxicillin-clavulanate와 **동등 효과** — 비용 우위로 단순 아목시 우선 |
+| beta-lactam 알레르기 (성인) | Doxycycline 또는 호흡기 fluoroquinolone | |
+| beta-lactam non-type I 알레르기 (소아) | Clindamycin + 3세대 cephalosporin | |
+
+> ⚠ 기존 ladder의 amoxicillin-clavulanate(목시클) 1차 우선 관행 → AFP 2025는 단순 amoxicillin을 동등한 1차로 명시 (내성 패턴에 따라 현장 판단)
+
+### 보조 치료
+
+- 식염수 세척, 비강 스테로이드, 항히스타민, 충혈 제거제 → 증상 완화 가능
+- CRP POCT: 세균/바이러스 감별에 도움이 될 수 있으나 광범위 사용 어려움
+
+### 합병증 Red Flag → CT + ENT 의뢰
+
+- 안와 봉와직염 (안구 운동 제한·주위 부종)
+- 뇌수막염 징후
+- 농양 의심
+- 재발성 비부비동염
+
+---
+
 ## 비고 (notes)
 
 - 한국 외래에서 매크로라이드(Clarithromycin·Roxithromycin)를 1차 또는 step에 끼워 쓰는 임상 관행 존재 — 가이드라인과 괴리 ([TACIT — guideline-vs-practice])
