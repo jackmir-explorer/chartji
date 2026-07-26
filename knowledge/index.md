@@ -94,6 +94,8 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - neutropenia-workup.md — ANC 분류 (mild 1k-1.5k/moderate/severe <500) + 약물·만성감염·자가면역·MDS·BEN(Duffy)·B12/Folate 감별 + febrile neutropenia 응급 임계 [CLINICAL] AAFP 2025 + PMID:30828799 Atallah-Yunes BEN 2019
 - statin-myopathy-management.md — Statin + CK 평가 quick reference: 5×ULN history → 보류 적응(ACC/AHA 2018)·10× 중단·rhabdo (≥10×+myoglobinuria/AKI) + rechallenge rosuvastatin/pravastatin/fluvastatin 우선·격일 옵션 [CLINICAL] PMID:30586774 ACC/AHA 2018 + NLA SAMS 2022
 - qtc-interpretation.md — QTc 정상/경계/연장(>500ms TdP·>60ms baseline 증가)·short QT + QT 연장 약물 list (QTP·맥페란·퀴놀론·매크로라이드·azole·TCA·항부정맥)·위험요인 [CLINICAL] PMID:20142454 AHA/ACCF Drew 2010 — topic
+- crp-interpretation.md — CRP kinetics(6-12h↑·정점 36-50h·반감기 19h)·절대값 구간(10-40/40-100/100-200)·NICE 호흡기 항생제 임계값(<20/20-100/>100)·"내려갔다≠좋아졌다"·고령 silent pneumonia pearl [CLINICAL] PMID:12813013 Pepys JCI 2003 + NICE CG191 — topic
+- aaa-screening.md — 복부대동맥류 스크리닝: USPSTF 2019 65-75세 남성 흡연자 평생 1회 US(Grade B)·expansile palpation·SVS surveillance(3.0-3.4→3년/3.5-4.4→12mo/4.5-5.4→6mo)·금연 중심 관리 [CLINICAL] PMID:31821437 USPSTF 2019 + PMID:29268916 SVS 2018 — topic
 - cardiorenal-anemia-syndrome.md — HF·CKD·빈혈 악순환 삼각·EPO 부족·hepcidin·정맥울혈 신정맥압·평가 패널·3축 동시 개입 [CLINICAL] PMID:15202610 Silverberg 2004 + PMID:16868702
 - cardiorenal-aki-diuretic-management.md — 울혈성 prerenal AKI 이뇨제 결정 (혈압 아니라 용적 상태)·post-renal 폐색 배제 우선·48-72h Cr/K 재검·매일 체중 0.5-1kg/d·Spiro vs Furosemide 역할 [CLINICAL] PMID:34447992 ESC 2021 + PMID:35379503 AHA/ACC/HFSA 2022
 - platelet-function-test.md — PFA-100/200 EPI/ADP 해석·aspirin 효과·vWD 단서·**clopidogrel 민감도 낮음** 정정·Hct/platelet 위양성·LTA/vWF 정밀 평가 [CLINICAL] PMID:16377544 Hayward 2006 + PMID:26179127 Favaloro 2015

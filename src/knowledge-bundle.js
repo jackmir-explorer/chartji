@@ -9071,3 +9071,67 @@ KNOWLEDGE_BUNDLE["IBD"] = _ibd_v2;
 KNOWLEDGE_BUNDLE["염증성 장 질환"] = _ibd_v2;
 KNOWLEDGE_BUNDLE["크론병"] = _ibd_v2;
 KNOWLEDGE_BUNDLE["궤양성대장염"] = _ibd_v2;
+
+/* crp-interpretation — CRP 해석: kinetics·절대값 구간·항생제 결정 (Drive gaps 최신화). [CLINICAL] */
+var _crp_interp_v2 = {
+  kind: "topic",
+  keywords: ["crp-interpretation","CRP","C-reactive protein","씨알피","염증수치","CRP 해석","CRP kinetics"],
+  primarySources: [
+    "Pepys MB, Hirschfield GM. C-reactive protein: a critical update. J Clin Invest 2003;111(12):1805-1812. PMID:12813013, DOI:10.1172/JCI18921",
+    "NICE. Pneumonia in adults: diagnosis and management (CG191). 2014 (updated)"
+  ],
+  sections: {
+    definition: {
+      content: "CRP는 IL-6 자극으로 간에서 생성되는 **급성기 반응물질**. 감염·염증·조직손상의 비특이적 표지. **단일 절대값보다 kinetics(추세)** 로, 항상 **임상소견과 함께** 해석.",
+      sources: []
+    },
+    notes: {
+      content: "### Kinetics (Pepys 2003)\n- 상승 시작: 자극 후 **6-12h** → 정점 **36-50h** → 반감기 **~19h**\n- 감염 초기(<12h)엔 아직 안 올라 **위음성** 가능\n\n### 절대값 구간 (mg/L)\n| 구간 | 해석 |\n|---|---|\n| 10-40 | 경증~중등도 (바이러스·경증세균·자가면역·조직손상) |\n| 40-100 | 유의 염증 — **세균성 의심 시작** (단순 URI로 정당화 어려움) |\n| 100-200 | 중증 세균성·패혈증 가능 → 입원·배양·경험적 항생제 |\n\n### 호흡기 감염 항생제 (NICE CG191)\n| CRP | 권고 |\n|---|---|\n| <20 | 항생제 비권장 |\n| 20-100 | 임상 판단 — delayed(back-up) 처방 고려 |\n| >100 | 세균성 가능성 높음 — 항생제 고려 |",
+      sources: []
+    },
+    precaution: {
+      content: "- **\"내려갔다 ≠ 좋아졌다\"** — CRP 하강해도 임상이 나쁘면 임상을 믿는다. 단일 시점보다 추세.\n- **고령 + CRP 40-60 + 호흡기 증상**: 청진·플레인 필름 음성이어도 silent/early pneumonia 배제 못 함 → 폐렴구균·Legionella 소변항원, CT 문턱 낮추기. 폐렴구균 소변항원(≈9천원) 선제.\n- 한 감염원 잡았다고 다른 source 평가 늦추지 말 것 (노인 다중 source).\n- 재검 간격은 kinetics(6-12h 지연·정점 36-50h) 감안.\n\n관련: [[acute-bronchitis]] · [[sinusitis]] · [[meningitis]] · [[elderly-nonspecific-symptoms]] · [[ldh-interpretation]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["crp-interpretation"] = _crp_interp_v2;
+KNOWLEDGE_BUNDLE["CRP"] = _crp_interp_v2;
+KNOWLEDGE_BUNDLE["C-reactive protein"] = _crp_interp_v2;
+KNOWLEDGE_BUNDLE["씨알피"] = _crp_interp_v2;
+KNOWLEDGE_BUNDLE["CRP 해석"] = _crp_interp_v2;
+
+/* aaa-screening — 복부대동맥류 스크리닝·surveillance (Drive gaps 최신화). [CLINICAL] */
+var _aaa_screening_v2 = {
+  kind: "topic",
+  keywords: ["aaa-screening","AAA","복부대동맥류","abdominal aortic aneurysm","대동맥류 스크리닝","aneurysm surveillance"],
+  primarySources: [
+    "US Preventive Services Task Force. Screening for Abdominal Aortic Aneurysm: USPSTF Recommendation Statement. JAMA 2019;322(22):2211-2218. PMID:31821437, DOI:10.1001/jama.2019.18928",
+    "Chaikof EL et al. SVS practice guidelines on the care of patients with an abdominal aortic aneurysm. J Vasc Surg 2018;67(1):2-77.e2. PMID:29268916, DOI:10.1016/j.jvs.2017.10.044"
+  ],
+  sections: {
+    definition: {
+      content: "복부대동맥 직경 **≥3.0 cm** (정상 ~2.0). 크기별: **3.0-3.9** small(surveillance) · **4.0-5.4** medium(surveillance+의뢰) · **≥5.5(남)/≥5.0(여)** large(수술). 대부분 무증상 → 스크리닝으로 조기 발견.",
+      sources: []
+    },
+    notes: {
+      content: "### 위험인자\n★ 흡연(dose-dependent) · ★ 남성(4-6배) · ★ 65세+ · 가족력 · 죽상경화(CAD·PAD)\n\n### 스크리닝 (USPSTF 2019)\n| 대상 | 권고 |\n|---|---|\n| 65-75세 남성 + 흡연력 | 평생 **1회 복부 US** (Grade B) |\n| 65-75세 남성 비흡연 | selective (Grade C) |\n| 여성 비흡연 | routine 권고 안 함 |\n- Tool = 복부 US (sens/spec ~95%), 1회로 충분\n\n### Surveillance 간격 (SVS 2018)\n| 직경 | 재검 |\n|---|---|\n| 3.0-3.4 cm | 3년 |\n| 3.5-4.4 cm | 12개월 |\n| 4.5-5.4 cm | 6개월 |\n\n### 위험인자 관리\n★금연(가장 강력) · BP<130/80 · statin · 항혈소판(CAD/PAD 동반) · 운동(heavy lifting 회피) · 체중·DM·이상지질 통합",
+      sources: []
+    },
+    precaution: {
+      content: "**Palpation** (배꼽 위·약간 좌측 양손, 깊은 호흡 중 촉진, expansile pulsation 평가) — 민감도 제한(비만·소형에서 낮음), **촉진 음성이 AAA 배제 못 함**. 확진은 US.",
+      sources: []
+    },
+    referral: {
+      content: "- **4.0 cm 이상** → 혈관외과 의뢰\n- **≥5.5 cm(남)/≥5.0 cm(여) · 빠른 성장(>0.5cm/6개월) · 증상성** → 응급성 평가·수술\n\n관련: [[pocus-abdominal]] · [[dyslipidemia]] · [[smoking-cessation]] · [[hypertension]]",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["aaa-screening"] = _aaa_screening_v2;
+KNOWLEDGE_BUNDLE["AAA"] = _aaa_screening_v2;
+KNOWLEDGE_BUNDLE["복부대동맥류"] = _aaa_screening_v2;
+KNOWLEDGE_BUNDLE["abdominal aortic aneurysm"] = _aaa_screening_v2;
+KNOWLEDGE_BUNDLE["대동맥류 스크리닝"] = _aaa_screening_v2;
