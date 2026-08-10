@@ -136,3 +136,4 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - travel-vaccination.md — 해외여행 예방접종: CDC Yellow Book 2024 지역별 매트릭스, 황열 ICVP 2016 평생 유효, 일본뇌염 ≥1mo+위험요인, 말라리아 화학예방, 사우디 ACWY 의무 [CLINICAL] — topic
 - chest-xray-template.md — 기숙사 입소·검진 SOAP template (Z115), 변형 4종 (취업·학교·흉부 검진) [TIPS — by 미르] — topic
 - immunocompromised-vaccination.md — 면역저하자 백신 일차의료 프로토콜: RZV(생백신 금기·항암 후 3mo)·HD-influenza·PCV20/PCV15→≥8주 PPSV23·RSV 60세+·COVID·Tdap·Rituximab HBV screening 필수 [CLINICAL] PMID:24421306 IDSA 2013 — topic
+- clinical-experience-quality.md — 임상 경력과 진료 질의 역관계: 62 evaluation 중 45건(73%) 경력↑→수행↓ · 조절변수 3개(고volume 소실·술기 역전·진짜 변수는 현재 지식수준) · CME 지식점수↑ but MOC↔환자 outcome 무관 · 한국 실증근거 없음 [CLINICAL — 조건부] PMID:15710959 Choudhry Ann Intern Med 2005 + PMID:28512089/29695473 Tsugawa BMJ 2017·2018 — topic (Triage 미등록 — 의사 자가 점검용)
