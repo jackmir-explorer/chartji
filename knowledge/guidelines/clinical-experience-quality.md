@@ -123,3 +123,43 @@ relations: []
 - 인지 측면의 짝 개념은 [[clinical-reasoning]] — 경력이 쌓일수록 System 1(패턴 인식) 의존이 커지며 anchoring·premature closure에 취약해지는 경로
 - 종단적 정보 통합 실패라는 시스템 축은 [[delayed-diagnosis]] 참조
 - 오래 유지된 처방 습관의 실물 사례는 [[deprescribing]] — 처방 재검토 routine과 직접 연결
+
+---
+
+## 지식 쇠퇴 결정인자 — 능동적 사용 빈도 (active-usage-frequency) [CLINICAL — 조건부]
+
+> [출처: Liu Y, Jiang Y, Dallas AD, Bruza-Augatis M. Medical knowledge decline: the role of active usage. Adv Health Sci Educ Theory Pract. 2025 Jul 30;31(2):561-571. PMID:40736666, DOI:10.1007/s10459-025-10461-4]
+> PA(Physician Assistant) 초기 자격시험(PANCE) → 재인증시험(PANRE-LA, 6년 후) 데이터 분석. UC Berkeley · NCCPA.
+
+**핵심 발견 — 지식 쇠퇴는 균일하지 않다:**
+
+지식을 **사용 빈도**에 따라 3단계로 분류:
+
+| 분류 | 정의 | 지식 쇠퇴 확률 (dominant 대비) |
+|---|---|---|
+| **Dominant** | 매일 사용하는 지식 (기준) | — |
+| **Relevant** | 중간 빈도 사용 | OR **2.31** (95% CI 1.82–2.94) |
+| **Distant** | 드물게 사용하는 지식 | OR **2.26** (95% CI 1.84–2.78) |
+
+- Dominant 지식은 오히려 **향상** 가능 (OR 2.19 for improvement vs relevant/distant)
+- 지식 쇠퇴는 "경력"이 아니라 **"얼마나 자주 쓰는가"가 결정**
+
+**외래 자가 점검 적용 — 실천적 틀:**
+
+> 미르의 핵심 지적: "빈도가 낮으면 쇠퇴한다는 건 당연. 중요한 것은 그래서 어떻게 할 것이냐?"
+
+이 논문은 진단만 했을 뿐 처방을 직접 제시하지 않는다. 논문 범위 내 적용 방향:
+
+1. **"Distant knowledge 목록 만들기"** — 외래에서 가끔 마주치는 질환·상황을 명시적으로 식별
+2. **우선 재점검 표적 = Distant knowledge** — 매일 보는 질환보다 드물게 보는 영역이 위험 구간
+3. **Dominant 지식은 현재 상태 유지로 충분** — 매일 쓰는 지식은 실력이 유지/향상됨
+4. **Knowledge currency 점검**: "내가 이 영역을 얼마나 자주 보는가?" → 빈도 낮으면 정기 복습 대상으로
+
+**한계 — 이 논문의 처방 부재:**
+- 논문은 "빈도가 낮을수록 쇠퇴" 패턴을 PA 재인증 데이터로 입증했지만, **어떻게 대응할지 검증된 개입은 제시하지 않음**
+- PA 데이터 → 의사 일반화 시 주의 (직종·진료 패턴·재인증 구조 상이)
+- "실천적 지침"은 논문에서 직접 나오지 않음 — 적용 전략은 임상 맥락에서 추론한 것 [초록 기반 — 전문 미확인]
+
+**관련 엔트리:**
+- [[clinical-reasoning]] — 경험축적과 인지 편향 관계
+- [[delayed-diagnosis]] — 드물게 보는 질환에서 진단 지연 위험

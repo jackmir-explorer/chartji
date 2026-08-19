@@ -91,6 +91,41 @@ relations: [[[diabetes-deprescribing-lifestyle]], [[elderly-psychotropic-depresc
 
 ---
 
+## 치매 환자 감약 4단계 로드맵 — Johns Hopkins (protocol) [CLINICAL]
+
+> [출처: Green AR et al. Deprescribing for People with Dementia: A Roadmap. Drugs Aging. 2025 Aug 26;42(9):795-806. PMID:40856967, DOI:10.1007/s40266-025-01238-w]
+> 리뷰 논문. Johns Hopkins University School of Medicine (Division of Geriatric Medicine and Gerontology). NIH 연구비 지원.
+
+치매 환자(PWD)는 다약제 노출 + 잠재적 부적절 약물이 집중되는 집단. 치매 특유 장벽(행동증상 재발 위험·가변적 경과·보호자 중심 의사결정)을 다루는 감약 로드맵.
+
+**Johns Hopkins 4단계 로드맵:**
+
+| 단계 | 내용 |
+|---|---|
+| **1단계** | 감약 대상 선별 — 약물 관련 목표 파악 + 위험·이득 trade-off 검토 |
+| **2단계** | 감량 계획 수립 — 우선순위 약물 선정, 감량 속도·순서 결정 |
+| **3단계** | 사전 조치 완료 — 감약 전 비약물 대안 준비 등 |
+| **4단계** | 밀접 추적관찰 — 증상 재발·금단·행동 변화 모니터링 |
+
+**FRAME 보호자 소통 도구 (외래 면담 스크립트로 즉시 사용):**
+
+| 글자 | 의미 | 외래 적용 |
+|---|---|---|
+| **F**raming | 감약을 "돌봄 개선"으로 프레임 | "약을 줄이면 더 안전하게 지내실 수 있어요" |
+| **R**ationale | 감약 근거 설명 | "이 약의 위험이 이익보다 커졌습니다" |
+| **A**cknowledgement | 보호자 우려 수용 | "걱정되시는 마음 충분히 이해합니다" |
+| **M**aking a plan | 구체적 감량 계획 공동 수립 | 감량 일정·추적 간격 함께 결정 |
+| **E**mpathy | 감정적 공감 유지 | 보호자 피로·갈등 인정 |
+
+**치매 환자 우선 감약 대상 약물:**
+- 항콜린제 (OAB 약물·항히스타민제·삼환계 항우울제)
+- 수면진정제 (BZD·Z-drug)
+- 항정신병약 — BPSD 외 적응증 없을 때
+- 스타틴·혈압약 (임종기 치매·기대여명 단기)
+- 처방 cascade 약물 (ChEI → OAB 항무스카린제 → [[prescribing-cascade]] 참조)
+
+---
+
 ## 노인 Z-수면제 간략 개입으로 부적절 사용 감소 (protocol) [CLINICAL — 조건부]
 
 > [출처: Siddiqui TG et al. Brief intervention for inappropriate z-hypnotics use in older adults: a before and after intervention study in primary care. Scand J Prim Health Care. 2026;44(1):2660168. PMID:42031000, DOI:10.1080/02813432.2026.2660168]

@@ -132,8 +132,50 @@ EFSUMB Level 1 영역과 한국 가정의학과 외래 적용 연계:
 
 ---
 
+## FM 전공의 POCUS Tier 1 — STFM 공식 권고 (protocol) [CLINICAL]
+
+> [출처: Paulus R, on behalf of the STFM POCUS Education Task Force. Multiorganizational Recommendations for Point-of-Care Ultrasound in Family Medicine Residency Education. Fam Med. 2026 Jul 31. PMID:42546336, DOI:10.22454/FamMed.2026.426882]
+> STFM(Society of Teachers of Family Medicine) POCUS Education Task Force 최종 권고. ABFM·AFMRD·ADFM 이사회 승인.
+
+**배경:** FM 전공 교육에 포함될 POCUS 적용 **52가지**를 도출 → 5개 tier로 우선순위 분류.
+
+**Tier 1 — 2028년까지 역량 달성 목표 (6가지):**
+
+| 적용 | 임상 상황 |
+|---|---|
+| **Cellulitis (연조직염)** | 농양 vs 순수 연조직염 감별 → 항생제 vs 절개배농 결정 |
+| **Abscess (농양)** | 농양 확인·위치 파악 |
+| **Abscess drainage (농양 배액)** | 절개배액 시 POCUS 유도 |
+| **Knee effusion (슬관절삼출)** | 관절삼출 확인 → 천자 적응증 판단 |
+| **Bladder volume (방광용량)** | 배뇨 후 잔뇨량(PVR) 측정 |
+| **Fetal presentation (태아위치)** | 두정위·둔위 확인 |
+
+**왜 이 6가지인가 — 외래 즉시 활용 이유:**
+- **Cellulitis/Abscess**: AFP 2026 연조직감염 리뷰([[skin-soft-tissue-infection]])와 완전 일치 — POCUS 없으면 항생제·절개 결정이 시각적으로 불명확
+- **Knee effusion**: 관절삼출 확인 → 천자 여부·스테로이드 주사 결정에 직결
+- **Bladder volume**: BPH·신경인성 방광 외래 평가에 즉시 적용; 요도 카테터 삽입 전 확인
+- **Fetal presentation**: 산전 진찰 제공 FM 의사의 핵심 역량
+
+**임상 시사점 — 미르 반응 핵심:**
+"어떻게 활용할지 구체적 예시" → Tier 1 6가지는 전부 **외래 임상 결정을 바꾸는 적용**:
+- 연조직염 POCUS: 농양 있으면 절개배농, 없으면 항생제 단독 → 처방 방향이 달라짐
+- 슬관절삼출 POCUS: 삼출 확인 시 즉시 천자·스테로이드 결정 가능
+- 방광 잔뇨 POCUS: PVR >150~200mL 시 의뢰·카테터 결정
+
+**교육 함의:**
+- ABFM·ACGME FM 전공의 과정에서 2028년까지 Tier 1 역량 의무화 방향
+- 전문의 시험 POCUS 문항의 출제 기준이 이 Tier 1에서 나올 가능성 높음
+- Tier 2~5는 추후 단계적 확대 예정
+
+**한국 외래 변환 시 확인:**
+- 한국 가정의학과 POCUS 수련 공식화 수준 [출처 미확인 — researcher 검증 권장]
+- 건강보험 POCUS 적용 항목·급여 기준 [출처 미확인]
+
+---
+
 ## 연관 knowledge 엔트리
 
 - [[pocus-lung]] — 폐 POCUS B-lines 임상 근거 (PMID:42031864)
 - [[pocus-abdominal]] — 복부 POCUS GP 적용 (PMID:41528024)
 - [[msk-injection-therapy]] — MSK 초음파 유도 주사 (PMID:41838996)
+- [[skin-soft-tissue-infection]] — 연조직염·농양 POCUS 감별 (AFP 2026)
