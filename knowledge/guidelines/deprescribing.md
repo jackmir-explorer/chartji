@@ -305,3 +305,47 @@ relations: [[[diabetes-deprescribing-lifestyle]], [[elderly-psychotropic-depresc
 
 관련: [[functional-dyspepsia]] — 기능성 소화불량·GERD 감별
 관련: [[prescribing-cascade]] — PPI 추가 cascade (NSAID → 위장 → PPI → 마그네슘 결핍 → 보충제)
+
+---
+
+## 고독감 스크리닝 → 부적절 약물 우선 감약 대상 선별 — 고령 여성 특이적 연관 (관찰 연구) [CLINICAL — 조건부]
+
+> [출처: Savage RD et al. Loneliness and Initiation of Potentially Inappropriate Pain and Psychotropic Medications: A Retrospective Cohort Study. Drugs Aging. 2026;DOI:10.1007/s40266-026-01324-7. PMID:42536335]
+> 후향적 코호트 연구. 캐나다 지역사회 거주 ≥66세 온타리오 주민 n=2,348 (여성 54.6%, 평균 75.4세). 2008–2009년 Canadian Community Health Survey-Healthy Aging 응답자 → 건강기록 연계, 3년 추적.
+> [초록 기반 — 전문 미확인]
+
+**핵심 발견:**
+
+고독감(Three-Item Loneliness Scale ≥6)이 있는 고령 **여성**은, 고독감 없는 여성 대비 **2019 AGS Beers 기준 부적절 진통제** 신규 시작률이 시간 경과에 따라 급격히 증가:
+
+| 추적 시점 | HR (95% CI) |
+|---|---|
+| 90일 | 1.57 (0.96–2.27) |
+| 630일 | 1.52 (1.05–2.12) |
+| **1080일** | **3.22 (1.22–7.78)** |
+
+- Beers 기준 부적절 정신과약(psychotropic) 신규 시작도 증가 경향 (추정치 정밀도 낮음)
+- **고독감 있는 남성**: 유의한 연관 없음 — **성별 이질성(sex interaction)** 확인
+
+**전체 코호트에서 고독감 유병률**: 12.3% (383명/2,348명)
+
+**Beers PIM 정의**: 2019 AGS Beers Criteria — 부적절 진통제 + 부적절 정신과약
+
+**임상 함의 — 감약 우선 대상 선별:**
+
+1. **외래 고령 여성 환자** → 3문항 외로움 척도 스크리닝 → 고독감 양성이면 현재 복용 진통제·정신과약 Beers 기준 적합성 재검토 우선화
+2. "통증으로 약을 시작했다" → 고독감이 통증의 사회적 증폭(social amplification) 요인으로 작용하고 있을 가능성 고려
+3. 외로운 여성 환자에서 Beers PIM 처방이 시간에 따라 누적되는 경향 → 장기 추적 환자 약물 재검토 시 고독 스크리닝 추가
+4. 남성에서 연관 없음: 성별 맥락 고려 — 동일 고독감도 여성에서 처방 행동 변화로 귀결되는 기전 연구 필요
+
+**외래 적용 흐름 제안 (논문 저자 권고 기반):**
+- 외로움 스크리닝 (3문항) → Beers/STOPP 기반 약물 재검토 → 감약/대체 검토 → 고독감 근본 원인 개입 (사회처방·지역사회 프로그램 연계)
+
+**주의사항:**
+- 후향적 코호트 연구 → 인과관계 방향성 확정 불가 (역인과: 통증·정신과 문제 때문에 고독해졌을 가능성도 존재)
+- 캐나다 온타리오 코호트 — 한국 지역사회 노인 외삽 시 사회 문화적 차이 고려 [조건부 외삽]
+- 정신과약 추정치 정밀도 낮음 (표본 수 제한)
+
+관련: [[fall-prevention-awv]] — FRIDs 낙상 위험 약물 (Beers 기준과 중복 대상 多)
+관련: [[elderly-psychotropic-deprescribing]] — 노인 정신과약 감약 프로토콜
+관련: [[depression-screening]] — 고령 여성 우울·사회적 결정인자 스크리닝
