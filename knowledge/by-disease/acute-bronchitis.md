@@ -224,6 +224,42 @@ relations: []
 
 ---
 
+## 거담제(Mucolytics·Expectorants) — 경과 단축 근거 없음 [CLINICAL]
+
+> [출처: Mulhem E et al. Acute Bronchitis: Rapid Evidence Review. Am Fam Physician. 2025;111(3):214-217. PMID:40106287, 초록 기반 — 전문 미확인]
+> [AFP 2025 RER 원문 섹션 요약; 한국 유통 개별 성분 효과 크기는 별도 검토 필요]
+
+### 근거 정리
+
+**AFP 2025 RER 입장**: 거담제(expectorants·mucolytics) — "근거 없음(evidence against use)"
+
+- **경과(clinical course) 단축 효과 없음** — 회복 기간 단축, 기침 종료 시점 앞당김 없음
+- 임상 활용 상 "경과에 의미 없다" = **회복 속도에 영향 없음**. QoL(증상 불편감) 개선 여부는 연구마다 결과 불일치 [출처 미확인 — researcher 검증 권장]
+- guaifenesin(한국명: 과이아콜) — 미국 가장 흔한 거담제; 일부 연구에서 증상 완화 제한적 시사 [출처 미확인]
+
+### 한국 외래 맥락 — 거담제 처방 관행
+
+> ⚠ 아래는 임상 맥락 정리이며 AFP 2025 RER 원문 범위 밖 [한국 임상 외삽]
+
+| 성분 | 한국 상품명(예) | 약리 분류 | AFP 2025 RER 근거 |
+|---|---|---|---|
+| Ambroxol | Umkamin(움카민 아님 — Umckaloabo 식물성) / 암브록솔 | Mucolytic | 명시적 언급 없음, 범주 포함 추정 [출처 미확인] |
+| Carbocisteine / L-carbocisteine | 시네츄라, 뮤카진 | Mucoregulator | 명시적 언급 없음, 범주 포함 추정 [출처 미확인] |
+| Erdosteine | 엘도스(Erdos) | Mucolytic | 명시적 언급 없음, 범주 포함 추정 [출처 미확인] |
+| N-acetylcysteine (NAC) | 뮤테란, 아세틸시스테인 | Mucolytic | 명시적 언급 없음, 범주 포함 추정 [출처 미확인] |
+
+> **핵심 구분**: AFP 2025 RER의 "근거 없음"은 급성 기관지염에서 **경과(duration, recovery)**에 의미 있는 영향이 없다는 것. 환자가 주관적으로 "가래가 뱉기 쉬워졌다"는 경험과 실제 회복 기간 단축은 별개.
+
+### 외래 적용 원칙
+
+- **처방 금지 원칙보다는** — 환자에게 기대 조율이 우선
+  - "이 약은 기침이 더 빨리 낫게 하지 않지만, 가래를 뱉기 쉽게 만들어 줄 수 있습니다"
+  - "2-3주 기침은 정상 경과이며, 약이 없어도 낫는 병입니다"
+- **실제 처방 시**: 증상 완화 목적(symptom relief)으로 처방하되 "감기를 빨리 낫게 한다"는 메시지 삼가
+- **항생제 비처방 원칙은 유지** — 거담제 처방 자체가 항생제 필요성을 의미하지 않음
+
+---
+
 ## 관련
 
 - [[chronic-cough]] — 8주 이상 지속 시

@@ -175,6 +175,50 @@ EFSUMB Level 1 영역과 한국 가정의학과 외래 적용 연계:
 
 ## 연관 knowledge 엔트리
 
+## STFM Delphi — FM 레지던시 필수 POCUS 54개 적용 (Family Medicine 2026) [CLINICAL]
+
+> [출처: Paulus A et al. Family Medicine 2026 Jul. PMID:42546326, 초록 기반 — 전문 미확인]
+> 미국 STFM(Society of Teachers of Family Medicine) / ABFM Foundation 후원, 전문가 25명 3라운드 Delphi
+
+### 합의 과정
+
+- 후보 목록: 243개 POCUS 적용
+- 최종 선정: **54개** FM 레지던시 필수 커리큘럼
+- 제외: **41개** (전문과 중심 수술·처치)
+- 의의: FM 레지던시 간 불일치했던 POCUS 범위를 **첫 증거기반 청사진**으로 표준화
+
+### 핵심 영역 (합의 포함 범주) [CLINICAL]
+
+| 영역 | 대표 적용 |
+|---|---|
+| **피부·연부조직** | 농양 평가·drainage 가이드, 연조직염 심부 평가 |
+| **근골격** | 건·관절 삼출 (슬관절), 어깨·엘보우 건병증 평가 |
+| **폐·흉막** | B-lines (폐부종·폐렴), 흉막삼출 |
+| **심장** | FOCUS cardiac (EF, pericardial effusion) |
+| **복부대동맥** | AAA 스크리닝 |
+| **방광** | 방광 잔뇨량(bladder volume) |
+| **산과** | 태아심음·태위 확인 (fetal presentation) |
+| **DVT** | 하지 근위부 DVT (2-point/3-point compression) |
+
+> STFM Tier 1 (2028 목표 확인 불가 — 기존 PMID:42546336 Paulus 데이터와 구별 필요) [초록 미확인]
+
+### 제외 영역 (41개 — 전문과 수술·처치 중심)
+
+- 복잡 시술 가이드 (내시경 초음파, 고급 인터벤션)
+- 전문 심장 평가 (복잡 판막·선천성)
+- 고급 산과 초음파 (태아 해부 확인 등)
+
+→ **"일차의료에서 하지 않아도 되는 것"도 명확해짐** — 장비·교육 투자 우선순위 결정에 활용
+
+### 한국 일차의료 적용
+
+- 한국 FM 외래에서 즉시 활용 가능 범주: 방광 잔뇨, 연조직염·농양, DVT (하지 부종 평가), 흉막삼출, 슬관절 삼출
+- [한국 보험·장비 가용성 출처 미확인 — researcher 검증 권장]
+
+---
+
+## 관련
+
 - [[pocus-lung]] — 폐 POCUS B-lines 임상 근거 (PMID:42031864)
 - [[pocus-abdominal]] — 복부 POCUS GP 적용 (PMID:41528024)
 - [[msk-injection-therapy]] — MSK 초음파 유도 주사 (PMID:41838996)
