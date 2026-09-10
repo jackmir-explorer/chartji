@@ -9188,3 +9188,48 @@ KNOWLEDGE_BUNDLE["지식 노후화"] = _clinical_experience_quality_v2;
 KNOWLEDGE_BUNDLE["knowledge decay"] = _clinical_experience_quality_v2;
 KNOWLEDGE_BUNDLE["평생교육"] = _clinical_experience_quality_v2;
 KNOWLEDGE_BUNDLE["CME"] = _clinical_experience_quality_v2;
+
+/* myopia-outdoor-taiwan — 근시 예방과 실외활동: 대만 天天120 인구 단위 추세 반전. 공중보건·환자교육 참고 topic. [INSIGHTS] (원 논문 PMID 미확인) */
+var _myopia_outdoor_taiwan_v2 = {
+  kind: "topic",
+  keywords: ["myopia-outdoor-taiwan","근시","myopia","실외활동","outdoor activity","天天120","톈톈120","천천120","myopia prevention","근시 예방","Wu Pei-Chang"],
+  primarySources: [
+    "대만 교육부(MOE) 天天120(톈톈120) 정책 — 2010.9 시행. 재학 중 하루 120분 실외활동 권고 (국가 근시 예방 전략)",
+    "Wu PC(吳佩昌) 등 — 전국 초등학생 나안시력 반기별 검진 데이터 분절회귀 분석. [원 논문 PMID 미확인 — Researcher 검증 대기]"
+  ],
+  sections: {
+    definition: {
+      content: "**세계 최초의 국가 단위 근시 예방 정책 — \"실외 빛 노출량 자체를 표적으로 삼아 학교 일과에 심은\" 사례.**\n\n- **天天120**: 대만 교육부가 2010년 9월 도입. 학교가 재학 중 **하루 120분 실외활동**을 확보하도록 하는 전략\n- **도입 경위**: 앞서 교실 조명 개선·책상 높이 조정·먼 곳 보기·근거리 작업 사이 휴식 등을 썼으나 유병률이 계속 악화. 연구자 **Pei-Chang Wu(吳佩昌)** 가 자문회의에서 실외활동을 최우선으로 삼자고 제안 → 채택\n- **표적 기전**: 교정·근거리 작업 관리가 아니라 **실외 빛 노출량(outdoor light exposure)** 자체\n\n> 개별 환자 진료 알고리즘이 아니라 **인구 단위 근시 예방 전략·환자교육 참고** 문서. Triage 감지(calcCategories) 대상이 아니며 Guide tab 큐레이션 전용.",
+      sources: []
+    },
+    evidence: {
+      content: "대만은 전국 초등학생(1~6학년, **매년 120만~190만 명**)의 나안시력을 **반기마다** 측정한다. 저시력(근시 대리지표) 유병률:\n\n| 연도 | 저시력 유병률 | 비고 |\n|---|---|---|\n| 2001 | 34.8% | 상승 추세 시작 |\n| 2011 | 50.0% | 개입 직전 정점 |\n| 2012 | 49.4% | 天天120 시행 후 |\n| 2015 | 46.1% | 하락 지속 |\n\n- **분절회귀**: 개입 **전 연 +1.58%** → 개입 **후 연 −2.34%** 로 방향 반전\n- 꾸준히 오르던 연간 추세가 天天120 시행 후 **하락으로 반전** — \"추세를 꺾은 사례\"의 핵심 근거",
+      sources: ["Wu PC 등, 전국 학생 시력검진 데이터 분절회귀. [원 논문 PMID 미확인 — Researcher 검증 대기]"]
+    },
+    "program-design": {
+      content: "두 가지 단서를 붙여야 정확하다.\n\n1. **의무가 아니라 권고** — 지금도 학교 참여는 강제되지 않는다. 그럼에도 **인구 단위 효과**가 나왔다는 점이 오히려 개입의 강력함을 보여준다.\n2. **용량(dose)**: 하루 120분 = **주 10시간** 실외활동. \"실외 빛 노출량\"을 학교 일과에 직접 심은 설계.",
+      sources: []
+    },
+    caveats: {
+      content: "- **재상승 조짐**: 타이베이 최근 자료에서 진행 정도는 완만하나 **유병률이 다시 오름세**. 디지털 기기 사용·교육 압박·도시화가 실외 효과를 상쇄.\n- **방과후 실외활동은 여전히 낮음**: 방과후 하루 1시간 이상 실외 아동 비율 **2013년 15.8% → 2023년 29.9%** 로 늘었으나 여전히 낮음.\n- **유치원 공백**: 초기 天天120은 유치원 미적용. 그 공백은 **이란(宜蘭) 지역 프로그램**이 유아 대상 변형판으로 메웠고 **근시 유병률을 거의 절반으로** 줄였다.",
+      sources: []
+    },
+    "korea-comparison": {
+      content: "한국의 실외활동 권고와는 **설계 철학·용량이 근본적으로 다르다.**\n\n| 구분 | 대만 天天120 | 한국 (144시간) |\n|---|---|---|\n| 용량 | **하루 120분 (주 10시간)** | 주 2시간 수준 (주 2회, **실내 포함**) |\n| 표적 | 실외 빛 노출량 자체 | 활동 시간(실내 포함) |\n\n→ 대만은 실외 빛 노출을 학교 일과에 심어 **인구 단위 추세 반전을 입증**. 한국 설계는 용량·표적 모두 약함.",
+      sources: []
+    },
+    notes: {
+      content: "- **출처 상태**: 인용 수치·서사는 본문 내장 출처(대만 MOE 정책 + Wu PC 분절회귀)에 근거하나 **원 논문 정확한 서지·PMID는 미확인**. Researcher 검증 후 primarySources를 정식 Tier 1 인용으로 교체할 것.\n- 생활습관·예방 축 전반은 [[scope]] Tier 7(생활습관의학) 참조.",
+      sources: []
+    }
+  },
+  uiHooks: null
+};
+KNOWLEDGE_BUNDLE["myopia-outdoor-taiwan"] = _myopia_outdoor_taiwan_v2;
+KNOWLEDGE_BUNDLE["天天120"] = _myopia_outdoor_taiwan_v2;
+KNOWLEDGE_BUNDLE["톈톈120"] = _myopia_outdoor_taiwan_v2;
+KNOWLEDGE_BUNDLE["천천120"] = _myopia_outdoor_taiwan_v2;
+KNOWLEDGE_BUNDLE["myopia"] = _myopia_outdoor_taiwan_v2;
+KNOWLEDGE_BUNDLE["근시"] = _myopia_outdoor_taiwan_v2;
+KNOWLEDGE_BUNDLE["myopia prevention"] = _myopia_outdoor_taiwan_v2;
+KNOWLEDGE_BUNDLE["근시 예방"] = _myopia_outdoor_taiwan_v2;
