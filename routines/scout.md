@@ -18,6 +18,7 @@
 - **답변 게이트** — 관심 논문 💬 반응 칸에 한 문장 쓰면 정오 Deep Extract 처리 (2026-07-16 도입)
 - **gaps.md 의존 제거** — 미르가 Google Drive에서 수동 관리, scout는 읽지도 쓰지도 않음
 - **Liby Follow-up 슬롯** — 최근 업데이트된 `knowledge/*.md` 주제를 회전 탐색하여 자기보강 (SLOT 9)
+- **겹침 완화 재편 (2026-09-14)** — scout 산출이 이전 주제와 과다 중복(30일 PMID 차단 5→24건 급증)한 진단에 따라 3가지 조정: ① **1-A 반전** — 영역 내 "빈도 TOP 1"(반복 강화 루프) → "최소 커버 세부주제 회전". ② **Tier-2 breadth 비중 상향** — SLOT 1개→2개(각 영역 ~80일→~40일 주기). ③ **Wildcard 신선도 슬롯(1-F) 신설** — 영역 무관 practice-changing 1건. 슬롯 배분: 1-B 7→5일, 1-D 1→2일, 1-F 신설. (하루 1건·파인만 원칙 불변.)
 
 ---
 
@@ -55,23 +56,29 @@ echo "Scout 대상 날짜 (KST): $TODAY"
 ```bash
 DAY=$(($(date -d "$TODAY" +%s) / 86400))
 SLOT=$((DAY % 10))
-# SLOT 0~6 → 1-B Mir-Tier 1 영역[SLOT] (7영역 순회, 10일 중 7일)
+# (2026-09-14 재편 — 겹침 완화: Tier-1 7→5일, Tier-2 1→2일, Wildcard 신설)
+# SLOT 0~4 → 1-B Mir-Tier 1 영역 (영역 = DAY % 7, 7영역 회전 / 10일 중 5일)
+# SLOT 5~6 → 1-D Tier 2 라운드로빈 (영역 = DAY % 8 / 10일 중 2일)
 # SLOT 7   → 1-C 횡단 모듈 (모듈 = DAY % 3)
-# SLOT 8   → 1-D Tier 2 라운드로빈 (영역 = DAY % 8)
+# SLOT 8   → 1-F Wildcard 신선도 (영역 무관 practice-changing)
 # SLOT 9   → 1-E Liby Follow-up
 ```
 
-**오늘 SLOT에 해당하는 하위 섹션(1-B/1-C/1-D/1-E) 하나만 수행**한다. 나머지 섹션은 건너뛴다. 목표 산출 = **⭐ 1건**.
+**오늘 SLOT에 해당하는 하위 섹션(1-B/1-C/1-D/1-E/1-F) 하나만 수행**한다. 나머지 섹션은 건너뛴다. 목표 산출 = **⭐ 1건**.
 
-**1-A. 영역 내부 세부 키워드 추출**
+**1-A. 영역 내부 세부 키워드 회전 (2026-09-14 반전 — 최소 커버 우선)**
 
-`knowledge/log.md` 마지막 30개 항목 → 오늘 슬롯이 1-B일 때 해당 1영역의 빈도 TOP 1 세부 키워드 추출.
+오늘 슬롯이 1-B일 때, 해당 영역의 세부 키워드 목록(`knowledge/scope.md` Mir-Tier 1 표 "세부 키워드" 컬럼)에서 **`knowledge/log.md` 최근 60개 항목 기준 등장 빈도가 가장 낮은(=최소 커버) 세부 키워드 1개**를 고른다.
 
-해당 영역 log.md 항목이 없으면 영역 default 키워드 사용 (`knowledge/scope.md` Mir-Tier 1 표 "세부 키워드" 컬럼 참조). (SLOT 7~9면 1-A 생략.)
+> ⚠ **반전 배경**: 이전 로직은 "빈도 TOP 1" 세부 키워드를 다시 검색 → 가장 많이 다룬 슬라이스를 재탐색하는 **양성 피드백 루프**로 겹침의 직접 원인이었다. 최소 커버 우선으로 반전하여 같은 영역 재방문 때마다 **덜 다룬 슬라이스**를 탐색한다.
 
-**1-B. Mir-Tier 1 영역 (SLOT 0~6일 때, 1건)**
+- 빈도 동률이면 `DAY % (동률 개수)` 로 회전 선택.
+- 해당 영역 log.md 항목이 전혀 없으면 세부 키워드 목록을 `DAY` 로 회전해 첫 후보 선정.
+- (SLOT 5~9면 1-A 생략.)
 
-7영역에 인덱스 0~6 부여. **오늘 영역 = `knowledge/scope.md` 인덱스 = SLOT** (SLOT 0~6일 때만 이 섹션 수행):
+**1-B. Mir-Tier 1 영역 (SLOT 0~4일 때, 1건)**
+
+7영역에 인덱스 0~6 부여. **오늘 영역 = `DAY % 7`** (SLOT 0~4일 때만 이 섹션 수행). 영역이 SLOT과 분리돼 7영역을 10일 cycle과 무관하게 회전 — **같은 영역을 10일마다 재방문하던 saturation 제거** (각 영역 ~14일 주기로 완화):
 
 | # | idx | 영역 | 검색 키워드 (default) | Anchor 저널 |
 |---|---|---|---|---|
@@ -83,7 +90,7 @@ SLOT=$((DAY % 10))
 | 6 | 5 | 임상약물학·Deprescribing | `deprescribing OR drug interaction OR opioid stewardship` | Drugs & Aging · BMJ Practice Pointers |
 | 7 | 6 | 생활습관의학 | `lifestyle medicine OR exercise prescription` | AFP · JAMA RCE |
 
-오늘 영역 = 위 표에서 `idx == SLOT`인 행. 검색 키워드 = 1-A 추출 키워드 + default 키워드 OR 조합. **1건**.
+오늘 영역 = 위 표에서 `idx == (DAY % 7)`인 행. 검색 키워드 = 1-A 회전 키워드(최소 커버 세부주제) + default 키워드 OR 조합. **1건**.
 
 **Fallback**: 오늘 영역에서 후보가 없거나 모두 ✕ 판정이면 → 대체 검색(Step 2 "대체 검색") 시도. 그래도 없으면 오늘은 **1-E Liby Follow-up으로 대체**(복습 성격이라 후보 풀이 넓음). 그것도 실패 시 빈손 종료 + footer에 `발행 부족` 기록.
 
@@ -96,7 +103,9 @@ SLOT=$((DAY % 10))
 
 Anchor 저널: NEJM Clinical Problem-Solving · JAMA Patient Page · AFP. 1슬롯. (SLOT 7일 때만 수행.)
 
-**1-D. Tier 2 라운드로빈 (SLOT 8일 때, 1건)**
+**1-D. Tier 2 라운드로빈 (SLOT 5~6일 때, 2일/cycle · 각 1건) — 2026-09-14 비중 상향**
+
+> **배분 상향 배경**: 기존 Tier-2 breadth 8영역이 SLOT 8 하나(10일 중 1일)를 8개가 나눠 써 **각 영역 ~80일에 1번**꼴로 사실상 방치됐다. SLOT 5·6 2일로 상향해 이미 스코프 안에 있는 넓은 영토를 더 자주 노출한다(각 영역 ~40일 주기).
 
 `day = (UNIX day epoch) % 8`:
 
@@ -111,7 +120,7 @@ Anchor 저널: NEJM Clinical Problem-Solving · JAMA Patient Page · AFP. 1슬�
 | 6 | **외래응급** | `anaphylaxis OR hypoglycemia OR arrhythmia initial OR seizure OR laceration repair OR burn first aid primary care` |
 | 7 | 심혈관·신경 | `cardiology OR neurology primary care OR headache OR dementia OR stroke prevention` |
 
-직전 scout 보고서 footer "Tier 2: [{영역}]" 회피해 cycling 보장. Anchor 저널: AFP · BMJ PP · NEJM CP · JAMA RCE · Ann Int Med ITC. 1슬롯. (SLOT 8일 때만 수행.)
+직전 scout 보고서 footer "Tier 2: [{영역}]" 회피해 cycling 보장. Anchor 저널: AFP · BMJ PP · NEJM CP · JAMA RCE · Ann Int Med ITC. (SLOT 5·6 두 슬롯 각각 수행 — 하루 1건씩. SLOT 5·6은 서로 다른 날이므로 `DAY % 8` 값이 달라 cycle당 2개 영역이 잡힌다.)
 
 **1-E. Liby Follow-up 슬롯 (SLOT 9일 때 또는 1-B Fallback, 1건)**
 
@@ -156,7 +165,27 @@ PubMed 쿼리:
 Liby Follow-up: by-disease/acute-bronchitis.md (last update 2026-05-26)
 ```
 
-**합계**: 오늘 SLOT에 해당하는 슬롯 1개만 수행 = **⭐ 1건 목표**. (10일 cycle로 1-B 7일 + 1-C·1-D·1-E 각 1일 cover.)
+**1-F. Wildcard 신선도 슬롯 (SLOT 8일 때, 1건) — 2026-09-14 신설**
+
+고정 영역(1-B~1-E)에 매이지 않고 **영역 무관 practice-changing 근거** 1건을 발굴한다. 반복 회피 엔진(고정 키워드·저널)이 구조적으로 놓치는 신선도를 주입하는 슬롯. "주제 확장"을 모든 영역을 넓히는 대신 **전용 신선도 슬롯 하나**로 구현한 것.
+
+#### 검색 전략
+- Anchor: AFP POEMs · BMJ · JAMA · NEJM · Ann Intern Med · Lancet (1차의료 파급 큰 종합지)
+- 쿼리 예:
+```
+(POEM OR "practice changing" OR "practice-changing" OR "clinical practice guideline") AND "primary care" 2025[dp]:2026[dp]
+```
+- 선정 기준: ① 1차의료 외래에서 처방·판단을 바꿀 잠재력 ② 최근 30일 scout·기존 knowledge/에서 다루지 않은 **신규 주제** ③ 특정 Mir-Tier 1 영역에 깔끔히 안 들어가는 "경계 밖" 주제 우선(신선도 목적)
+
+#### 회피 규칙
+- Step 2-B(30일 PMID 차단) 그대로 적용.
+- 이미 knowledge/에 엔트리가 있는 주제면 skip — 재방문·자기보강은 1-E Liby Follow-up 담당, 1-F는 **신규 노출 전용**.
+- 후보 없음 → Fallback으로 1-E Liby Follow-up 대체(1-B와 동일 처리).
+
+#### Scout 보고서 표기
+footer에 `Wildcard: {주제 한 줄}` 명시.
+
+**합계**: 오늘 SLOT에 해당하는 슬롯 1개만 수행 = **⭐ 1건 목표**. (10일 cycle: 1-B 5일 + 1-D 2일 + 1-C·1-F·1-E 각 1일.)
 
 ### Step 2 — 탐색 (Anchor 저널 + 영역 매핑)
 
@@ -173,6 +202,7 @@ Step 1 슬롯별 Anchor 저널 매핑:
 | 1-B #6 생활습관의학 | AFP · JAMA RCE |
 | 1-C 횡단 A·B·C | NEJM Clinical Problem-Solving · JAMA Patient Page · AFP |
 | 1-D Tier 2 (8일 cycle) | AFP · BMJ PP · NEJM CP · JAMA RCE · Ann Int Med ITC |
+| 1-F Wildcard | AFP POEMs · BMJ · JAMA · NEJM · Ann Int Med · Lancet |
 | 1-E Liby Follow-up | (주제 영역에 매핑된 저널 사용 — 위 표 참조) |
 
 **검색 쿼리 형식**:
@@ -244,7 +274,9 @@ scout 보고서 footer에 다음 양식 추가 (오늘 SLOT 하나만 기재):
 
 ```
 ---
-오늘 슬롯: SLOT {N}/10 → {1-B 영역명 / 1-C 모듈 / 1-D Tier2 영역 / 1-E Liby Follow-up}
+오늘 슬롯: SLOT {N}/10 → {1-B 영역명 / 1-D Tier2 영역 / 1-C 모듈 / 1-F Wildcard / 1-E Liby Follow-up}
+1-A 회전 키워드: {최소 커버 세부주제}  ← SLOT 0~4(1-B) 시만
+Wildcard: {주제 한 줄}  ← SLOT 8 시만
 Liby Follow-up: {파일경로} (last update YYYY-MM-DD)  ← SLOT 9 또는 Fallback 시만
 PMID 차단: {N}건 (30일)
 발행 부족: 예/아니오 (Fallback까지 실패 시만 "예")
