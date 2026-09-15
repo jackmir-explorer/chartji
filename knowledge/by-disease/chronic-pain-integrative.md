@@ -198,3 +198,45 @@ relations: []
 - VA 특화 RCT — 한국 외래 적용 시: 다학제 협력(재활·심리·생활습관 코치) 의뢰 근거로 활용
 
 **부작용:** 자살 사고 CBT군 15.9% / Whole Health 13.7% / 일반치료 13.4% — 군간 유의한 차이 없음 (만성통증 환자 기저 위험 높음)
+
+---
+
+## 병태별 Nonopioid 약물치료 지침 [CLINICAL] (2026-09-15 추가)
+
+> 출처 (Tier 2): Sokol R, Grossman E, Bourgery R. Am Fam Physician. 2025;112(2):187-196. PMID:40834375
+
+**대원칙**: 만성 비암성 통증 → biopsychosocial 접근 + 기능 회복 목표 + 병태별 약물 선택
+
+### 병태별 1차 Nonopioid 약물 (요약표)
+
+| 병태 | 1차 | 2차/보조 |
+|---|---|---|
+| **골관절염** | Topical NSAIDs (무릎·손) → Oral NSAIDs | SNRI (duloxetine), 가바펜티노이드 (근거 제한적) |
+| **만성 요통** | NSAIDs 단기 / SNRI 단기 | 없음 (유의한 장기 효과 없음) |
+| **신경병증 통증** | Duloxetine, Gabapentin, Pregabalin | 8% Capsaicin (국소) |
+| **섬유근통** | Pregabalin (최강 근거) | Duloxetine, Milnacipran |
+
+### 핵심 임상 메시지
+
+- **만성 요통**: 사실상 유효한 약물 없음 — NSAIDs/SNRI 단기 소폭 효과만, 장기 효과 무
+- **신경병증**: Duloxetine 먼저 (1일 1회, 당뇨·우울 동반 시 추가 이득) → Gabapentin/Pregabalin 2차
+- **OA**: Topical NSAIDs 먼저 (전신 부작용 최소) → 불충분 시 Oral NSAIDs
+- **오피오이드**: 위 모든 전략 실패 + 위험-편익 평가 후 최후 선택지
+
+### 처방 디테일 (논문 기반 — 일반 가이드라인 수준)
+
+| 약물 | 용량 범위 | 비고 |
+|---|---|---|
+| Duloxetine | 30-60-120 mg/일 | 신경병증·OA·우울 삼중 이득 |
+| Pregabalin | 150-600 mg/일 (분복) | 섬유근통 1차, 신경병증 2차 |
+| Gabapentin | 300-3600 mg/일 (분복) | 신경병증 2차; 어지럼·진정 주의 |
+| 8% Capsaicin | 60분 패치, 3개월 간격 | 신경병증 국소 — 전문 적용 |
+
+> [가이드라인 default 인용: AFP 2025;112(2):187-196 PMID:40834375]
+> [한국 보험 기준 — 출처 미확인: researcher 검증 권장]
+
+### 한국 외래 적용
+
+- **Topical diclofenac**: 처방 가능, GI 부작용↓ 장점
+- **Duloxetine**: 당뇨신경병증 급여 가능 — [[diabetic-peripheral-neuropathy]] 참조
+- **Pregabalin**: 한국에서 fibromyalgia 급여 기준 [출처 미확인 — researcher 검증 권장]

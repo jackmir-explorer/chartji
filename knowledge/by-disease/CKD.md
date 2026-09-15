@@ -202,3 +202,52 @@ CKD G3 환자 추적 시 **시스타틴C 추가 검사 권장:**
 ---
 
 관련: [[ckd-monitoring]], [[diabetes]], [[heart-failure]]
+
+---
+
+## 2025 VA/DoD CKD 일차의료 관리 가이드라인 업데이트 [CLINICAL] (2026-09-15 추가)
+
+> 출처 (Tier 2): Schwartz AR, Sosnov J, Brown J et al. Ann Intern Med. 2025;179(3):411-424. DOI:10.7326/ANNALS-25-03499. PMID:41461086
+
+**의의**: 2025년 VA/DoD가 2019년 가이드라인을 업데이트. **SGLT-2i·GLP-1RA·Finerenone(비스테로이드 MRA)** 명시적 권고 첫 포함. GRADE 방법론, 23개 권고.
+
+### 주요 신규 약물 권고 (2025 업데이트 핵심)
+
+| 약물군 | 역할 | 비고 |
+|---|---|---|
+| **ACEi/ARB** | CKD + 고혈압 1차 (기존 유지) | eGFR 급격 하락 시 중단 고려 |
+| **SGLT-2i** | CKD 진행·CV 사건·사망↓ | 당뇨 여부 무관 권고 (2025 신규) |
+| **GLP-1RA** | 당뇨+CKD에서 신기능 보호 | CKD 관리 지침 최초 명시 권고 |
+| **Finerenone (비스테로이드 MRA)** | T2DM+CKD에서 심신 보호 | 고칼륨혈증 위험 모니터링 |
+| **스타틴** | CV 위험 감소 | CKD 단계에 따른 적응증 |
+
+### 진단·모니터링 프레임
+
+- **CKD 병기**: eGFR + ACR(알부민/크레아티닌 비) 조합 — GFR 단독으로 병기 불충분
+- **모니터링 빈도**: 병기·진행 위험도에 따라 연 1-4회
+- **GFR 경보 기준**: eGFR <30 → 신장내과 의뢰 시작 고려 (투석·보존적 관리 공유의사결정)
+
+### 조영제 신독성 예방 (contrast-associated AKI)
+
+- eGFR <30: 조영제 필요 시 사전 수액 공급 + 신기능 추적
+- 고위험: DM + CKD 동반 → 조영제 사용 전 신장내과 협의 강력 권고
+- [최신 ACR 조영제 안전 가이드라인과 병행 확인 권장]
+
+### 외래 처방 결정 포인트
+
+1. **CKD + 당뇨** → SGLT-2i + GLP-1RA 모두 고려 (심신 동반 보호)
+2. **CKD + 단백뇨** → ACEi/ARB 1차 + SGLT-2i 추가
+3. **T2DM + CKD + 심부전** → SGLT-2i 가장 강력 적응증 (DAPA-CKD, CREDENCE 근거)
+4. **CKD + 고위험 알부민뇨** → Finerenone 추가 고려 (FIDELIO, FIGARO 근거)
+
+### 한국 외래 적용
+
+- SGLT-2i: 한국 CKD + 당뇨 급여 가능 (empagliflozin, dapagliflozin)
+- GLP-1RA + CKD: 신기능 보호 근거 축적 중 — 처방 시 eGFR 모니터링 권장
+- [한국 KDIGO 2024 vs VA/DoD 2025 비교 — 출처 미확인: researcher 검증 권장]
+
+### 관련
+
+- [[ckd-monitoring]] — CKD 모니터링 세부
+- [[diabetes]] — 당뇨+CKD 복합 관리
+- [[ckm-syndrome]] — CKM 통합 접근
