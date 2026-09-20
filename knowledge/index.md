@@ -12,6 +12,7 @@ knowledge/
   by-drug/       약물 단위 (처방 노하우·부작용 패턴)
   guidelines/    공식 가이드라인 [CLINICAL] · 심평원 기준 [REGULATORY]
                  · 최신지견 [INSIGHTS] · 실전 Tip [TIPS]
+  reading/       관심 아티클 lane [READING] — bundle 밖·Obsidian 전용·inject 격리 (README 참조)
   log.md         추가 기록 (날짜순)
   index.md       전체 목록 (이 파일)
 ```

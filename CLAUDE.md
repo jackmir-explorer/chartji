@@ -27,6 +27,7 @@
    - `git log --oneline {bundle_commit}..HEAD -- knowledge/` → 미반영 deep-extract commit 리스트
    - `knowledge/log.md` 항목과 bundle.js 내 키 비교
    - 미반영 entry는 날짜별 batch로 컴파일 (한 번에 전체 처리 금지 — 2026-05-07 "20건 데이터 손실 사건" 재발 위험)
+   - ⚠ **`knowledge/reading/` 제외**: Reading lane(관심 아티클)은 bundle 컴파일 대상 아님. backlog 스캔에서 제외 (2026-09-20, `knowledge/reading/README.md`).
 4. **gaps.md 처리** (`skills/gaps-process/SKILL.md`) — 지식 격차 항목을 Researcher 위임으로 해소, Archive 이동
 
 > ⚠ **빠뜨리기 쉬운 지점**: 미르가 "liby ingest" 또는 "liby 돌려보자"라고 했을 때 (1)/(2)만 처리하고 (3) bundle 컴파일 backlog를 누락하는 패턴이 반복 관찰됨. 호출 시 반드시 4가지 모두 점검 + backlog 상태 보고.
