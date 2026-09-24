@@ -3,6 +3,8 @@
 새 내용이 추가될 때마다 Claude Code가 여기에 한 줄 기록한다.
 형식: YYYY-MM-DD | 파일명 | 내용 요약
 
+2026-09-24 | reading/moral-injury-burnout.md (신규) | **Reading lane 2번째 입주** — 의료진의 고통: 소진(Maslach, 에너지 고갈) vs 도덕적 고통(Jameton 1984, 옳은 걸 알지만 제도 제약으로 못 함) vs 도덕적 손상(Litz 2009, 도덕 신념 위반을 행/목격/방지실패). Dean&Talbot 2019 "소진 아니라 도덕적 손상" 반향 — 진단명 바꾸면 개입대상(개인 회복탄력성 vs 시스템)이 바뀜. [READING — INSIGHTS], 미르 raw 텍스트. ⚠ 원 문헌 4건 PMID 미확인(이 환경 PubMed 차단). bundle 미반영(reading lane 설계상 제외). cross-link [[clinical-experience-quality]].
+
 2026-09-20 | reading/README.md (신규 lane) · reading/hikikomori.md (신규) | **Reading lane 신설 + 첫 입주** — 진료 inject 아닌 "관심 아티클" lane(bundle 밖·Obsidian 전용, myth-log·study-notes와 동일 격리). hikikomori: 병적 사회적 위축 생물심리사회 개관 — 행동·상태 증후군, 문화결속→범문화(Kato 2019 ≥6mo·HQ-25), 일차성 vs 이차성(SAD·회피성PD·MDD·ASD·조현병스펙트럼 선별 필수), 기여인자 층위, 한국 2023 실태조사(고립·은둔 19~34세 최대 54만·취업실패24.1%·자살생각75.4%·자살시도26.7%). [READING — INSIGHTS], YouTube(강사 미상)→Gemini 정리 경유. ⚠ 원 문헌(Saito1998·Kato2019·TeoAR) PMID 미확인 — 이 환경 PubMed 차단. bundle 미반영(설계상 제외). 거버넌스: librarian.md·CLAUDE.md 격리 규칙 추가.
 
 2026-09-16 | guidelines/myopia-outdoor-activity-taiwan.md (보강) · by-disease/chronic-pain-integrative.md (보강) | **Deep Extract 2026-09-16 — 2건 보강** — PMID:41928550 실외활동·근시 메타분석 SR/MA 31연구 380,215명 중국 아동 [CLINICAL] 2시간/일 OR=0.74 天天120 용량 독립 검증 → myopia-outdoor-activity-taiwan.md 보강. PMID:40531149 장기 오피오이드 AFP 2025;111(6):508-514 [CLINICAL] 비종말성 만성통증 오피오이드 최후선택·OUD 위험평가·PDMP·UDS·부프레노르핀 대안 → chronic-pain-integrative.md 보강. ⚠ bundle 반영(앱 실제 노출)은 Liby 별도 호출 필요.
