@@ -3156,6 +3156,10 @@ var _palliative_pain_v2 = {
     opioid_rotation_consensus: {
       content: "### 오피오이드 전환 — 5개 학회 합의 가이드라인 (Davis JPSM 2026) [CLINICAL]\n> Davis MP et al. MASCC·ASCO·AAHPM·HPNA·NICSO 합의\n\n**핵심 권고**:\n- 오피오이드 전환 시 **최대 40% dose 감량** 적용 (불완전 cross-tolerance·약물 정확성 한계)\n- **메타돈**: QTc 가변·반감기 가변 (8-59h) — opioid-naive 전환 시 더 보수적 감량\n- **경피 펜타닐**: 양방향 전환 시 **비대칭** — Fentanyl→Morphine보다 Morphine→Fentanyl 감량 더 보수적\n- 모든 전환 후 **48-72시간 monitoring** + breakthrough 약 처방\n\n**임상 적용**:\n- 외래 → 입원/입원 → 외래 전환 시 dose recalculation\n- 효과 불충분 시 25-50% 증량 — 환자 호소 검증 신호 ([[chronic-pain-integrative]] [INSIGHTS] PMID:41574586)\n- 가족·보호자 교육: dose·간격·toxicity 단서 (sedation·호흡억제)",
       sources: ["Davis MP et al. J Pain Symptom Manage 2026. PMID:41197973"]
+    },
+    routine_uds_critique: {
+      content: "### 완화의료 routine UDS 비권고 (JPSM 2026) [CLINICAL]\n> [출처: J Pain Symptom Manage 2026;72(4):e314-e323. PMID:42362165] 내러티브 리뷰+비판.\n\n완화·암성통증 오피오이드 환자 routine 소변약물검사(UDS): **안전성 종점 개선 근거 전무**(NCCN·ASCO·CDC도 최저티어·해악 가능 인정). 이상소견율 15~54%는 감시지표일 뿐 결정변화 미보고. **4대 해악**: 재정독성·낙인·부당한 진료종료·인종 불균등. self-report 우위 — UDS는 환자가 부인할 때만 정보 추가(역설).",
+      sources: ["J Pain Symptom Manage 2026;72(4):e314-e323. PMID:42362165"]
     }
   },
   uiHooks: null
@@ -3193,6 +3197,10 @@ var _cancer_pain_supportive_v2 = {
     referral: {
       content: "- OINV 지속·올란자핀 무반응 → 완화의학·종양내과 협진\n- BH 개입 적응증 환자 → 종양심리·정신건강의학과 협진 (CBT·마음챙김 기반)\n- 다중 보조 치료 필요 → 완화의료팀 다학제 평가",
       sources: []
+    },
+    nccn_cancer_pain_v2: {
+      content: "### NCCN 암성통증 v2.2025 [CLINICAL]\n> [출처: Swarm RA et al. J Natl Compr Canc Netw 2025;23(7). PMID:40639401]\n\n**\"Judicious use of opioids\"** — 과다·과소 투여 양방향 안전. 3축: ① 선별·평가(매 방문 스크리닝, NRS+기능+통증유형, 돌파성통증) ② 처방(경도=비오피오이드 1차, 중등도~중증=오피오이드 단계적; **과소투여도 위험**; 신경병증=가바펜티노이드·항우울제, 뼈전이=NSAID·스테로이드·비스포스포네이트; 통합의학 공식 포함) ③ **감량·스튜어드십(암 생존자 감량 원칙 신설, 10–25%/주)**",
+      sources: ["Swarm RA et al. J Natl Compr Canc Netw 2025;23(7). PMID:40639401, DOI:10.6004/jnccn.2025.0032"]
     }
   },
   uiHooks: null
@@ -4391,6 +4399,18 @@ var _deprescribing_v2 = {
     elderly_opioid_safety: {
       content: "### 노인 오피오이드 안전 처방 [CLINICAL]\n> [출처: Ribeiro H et al. Drugs Aging 2026. PMID:42627454]\n\n**약동학 변화**: 신·간 청소율↓(반감기↑) · 체지방↑(지용성 분포↑) · 알부민↓(유리형↑) · 근육량↓.\n\n**처방 원칙 (start low, go slow)**:\n- 비활성 대사체 선호 — morphine(M6G 축적) 회피 → hydromorphone·fentanyl\n- 초기 용량 성인 표준의 **25–50%**, 증량 간격 연장, 정기 재평가(통증·기능·부작용)\n\n**선제적 부작용 관리**: ① 변비 — 시작 시 완하제 동시 처방(대기 아님) ② 낙상 — 오피오이드+항우울제 중복 aOR 1.40–1.45([[fall-prevention-awv]], PMID:42343007) ③ 인지 — 2–4주 내 모니터링(Mini-Cog)\n\n**암성 vs 비암성**: 암성=강효 오피오이드+경피 고정용량+돌발통 fentanyl / 비암성=기전특이 치료 우선·**시간 제한** 사용(영구 처방 금지, 기능 목표 명시).",
       sources: ["Ribeiro H et al. Drugs Aging 2026. PMID:42627454, DOI:10.1007/s40266-026-01329-2"]
+    },
+    dementia_deprescribing_roadmap: {
+      content: "### 치매 환자 감약 로드맵 (Green Drugs Aging 2025) [CLINICAL]\n> [출처: Green AR et al. Drugs Aging 2025;42(9):795-806. PMID:40856967]\n\nJohns Hopkins **4단계**: ① 대상선별(약물 목표·위험-이득) ② 감량계획(우선순위·속도·순서) ③ 사전조치(비약물 대안 준비) ④ 밀접추적(재발·금단·행동). **FRAME 보호자 소통**: Framing(돌봄개선)·Rationale·Acknowledgement·Making a plan·Empathy. 우선 감약: 항콜린제·수면진정제·항정신병약(BPSD 외)·스타틴/혈압약(임종기)·[[prescribing-cascade]] 약물.",
+      sources: ["Green AR et al. Drugs Aging 2025;42(9):795-806. PMID:40856967, DOI:10.1007/s40266-025-01238-w"]
+    },
+    loneliness_beers_pim: {
+      content: "### 고독감과 부적절 약물 신규 시작 (Savage Drugs Aging 2026) [CLINICAL — 조건부]\n> [출처: Savage RD et al. Drugs Aging 2026. PMID:42536335] 캐나다 ≥66세 n=2,348, 3년.\n\n고독감(3항목 척도 ≥6) 있는 **여성**: Beers 부적절 진통제 신규시작 HR 1080일 **3.22**(1.22–7.78). **남성 무연관(성별 이질성)**. → 고독한 고령 여성 = 부적절 진통제 감약 우선 표적. 고독감 유병 12.3%.",
+      sources: ["Savage RD et al. Drugs Aging 2026. PMID:42536335, DOI:10.1007/s40266-026-01324-7"]
+    },
+    korea_polypharmacy_hira: {
+      content: "### 한국 HIRA 다약제 관리 시범 (Drugs Aging 2026) [CLINICAL]\n> [출처: Drugs Aging 2026. PMID:42570168] 심평원 2020–21, 34병원, ≥65세 입원+≥10종(또는 ≥5종+고위험).\n\n약사-의사 협력 처방 최적화 → **90일 재입원 aHR 0.85(15%↓)**, $340/환자 절감, **비용편익비 3.8**. 응급실 방문 차이 없음. 한국 실증 근거.",
+      sources: ["Drugs Aging 2026. PMID:42570168"]
     }
   },
   uiHooks: null
@@ -5104,6 +5124,10 @@ var _diabetes_v2 = {
     tirzepatide_surpass_early: {
       content: "### Tirzepatide 조기 T2DM — SURPASS-EARLY (Ann Intern Med 2026) [CLINICAL]\n> Eli Lilly 재원 오픈라벨 RCT (이해충돌 명시)\n\n**핵심 결과**:\n- **정상혈당 회복률 60.2% vs 24.0%** (대조 vs tirzepatide)\n- 초기 T2DM (진단 ≤5년·HbA1c <7.5%) 대상\n- 체중·HbA1c·인슐린 저항성 동시 개선\n\n**임상 메시지**:\n- 조기 T2DM에서 **tirzepatide 적극 검토** — metformin 1차 후 빠른 step-up 근거\n- 단 **이해충돌 (Eli Lilly 재원·오픈라벨)** — 결과 해석 신중\n- 한국 비급여·환자 부담·장기 안전성 데이터 부족\n- 비만 동반 시 [[glp1-selection-strategy]] · [[mounjaro]] 참조",
       sources: ["Ann Intern Med 2026 (Epub 05-26). PMID:42184419"]
+    },
+    outpatient_insulin: {
+      content: "### 외래 인슐린 관리 (Marrison AFP 2026) [CLINICAL]\n> [출처: Marrison ST et al. Am Fam Physician 2026;113(6):542-550. PMID:42301874]\n\n**인슐린 1차 적응**: HbA1c >10% · 혈당 ≥300(고혈당 증상) · 이화작용(체중·근육 감소). **시작**=기저인슐린(취침 전 장기작용 analogue), **2~3일 titration**, 미달성 시 식전(prandial)/혼합 추가. 장기작용 analogue > NPH(**저혈당↓** — 외래 핵심 장점). CGM 인슐린 환자 조절 개선.",
+      sources: ["Marrison ST et al. Am Fam Physician 2026;113(6):542-550. PMID:42301874"]
     }
   },
   uiHooks: null
@@ -6485,6 +6509,10 @@ var _pocus_efsumb_v2 = {
     fm_pocus_10yr_alumni: {
       content: "### FM POCUS 10년 커리큘럼 추적 — 실사용 패턴 [INSIGHTS]\n> [출처: Vaughan A et al. Family Medicine 2026;58(6). PMID:42308619] — 레지던트 POCUS 커리큘럼 10년 alumni(2015–2022, 58% 응답).\n\n**핵심**: 졸업 후 **44% 지속 사용** · 농촌 의사 활용률↑(의뢰 장벽) · 청구율 전국 평균 초과. 생존율 높은 영역 = **피부·연부조직 > 근골격 > 시술 유도** (심장·폐보다 실사용↑, 다른 연구와 일치).\n\n### 피부 POCUS 활용 (선형 고주파 7–15MHz)\n- **농양(abscess)**: 경계 있는 저에코 액체집적 ± 주변 에코↑ → \"만져서 연하다\" 판단 대체, 절개배농 결정 (STFM Tier 1 적응증)\n- **연조직염(cellulitis)**: cobblestone appearance(진피·피하 부종 격자) — 액체집적 없으면 절개 불필요 → 항생제 단독\n- 한국 적용: 체격 작은·고령·당뇨 환자 촉진 불확실 시 보조, drainage 결정 전 확인. 보험급여 [출처 미확인 — Researcher 검증 권장]\n- ⚠ 단일 프로그램 alumni — 일반화 주의",
       sources: ["Vaughan A et al. Family Medicine 2026;58(6). PMID:42308619, DOI:10.22454/FamMed.2026.621160"]
+    },
+    stfm_delphi_54: {
+      content: "### FM 레지던시 필수 POCUS 54개 — STFM Delphi (Family Medicine 2026) [CLINICAL]\n> [출처: Paulus A et al. Family Medicine 2026 Jul. PMID:42546326] STFM/ABFM, 전문가 25명 3라운드.\n\n후보 243개 → **필수 54개** 선정(41개 제외=전문과 수술·처치). FM POCUS 첫 증거기반 청사진. 핵심영역: 피부·연부조직(농양·drainage)·근골격(건·관절삼출)·폐/흉막(B-line·삼출)·심장(FOCUS EF·심낭)·AAA·방광잔뇨. (Tier 1 six와 별개 — 광범위 커리큘럼)",
+      sources: ["Paulus A et al. Family Medicine 2026 Jul. PMID:42546326"]
     }
   },
   uiHooks: null
@@ -7870,6 +7898,14 @@ var _clinical_reasoning_v2 = {
     anchoring_rct_mamede: {
       content: "### Anchoring 극복 = 감별 지식 (Mamede BMJ Qual Saf 2024 RCT)\n> 레지던트 68명 RCT\n\n**핵심**: \"신중하게 더 생각하는 것 (metacognition)\"만으로는 anchoring 풀지 못함.\n- 더 긴 시간 + 낮은 자신감 → 두 그룹 동일\n- **감별 지식 높은 그룹만 anchoring에 저항** (p=0.02)\n\n→ \"천천히 생각하기\" 단독 부족. **A vs B 구별하는 discriminating features 지식**이 핵심.",
       sources: ["Mamede S et al. BMJ Qual Saf 2024;33(9):563-572. PMID:38365449"]
+    },
+    uncertainty_tolerance: {
+      content: "### 불확실성 내성 4역량 (Ghosh J Prim Health Care 2025) [INSIGHTS]\n> [출처: Ghosh T, Blair E. J Prim Health Care 2025;17(1):23-29. PMID:40152954]\n\n불확실성 '제거'가 아닌 **'함께 일하는 역량'**(미분화증상 1차의료 필수). 4역량: **협업**(불확실할수록 환자에 솔직히 공유·의견 구하기)·**공감**(대기 중 감정 탐색)·**통찰**(내 지식·경험 한계 메타인지)·**비관습적 사고**(루틴 알고리즘 의문 제기).",
+      sources: ["Ghosh T, Blair E. J Prim Health Care 2025;17(1):23-29. PMID:40152954, DOI:10.1071/HC24055"]
+    },
+    gp_dizziness_reasoning: {
+      content: "### 경력≠진단정확도 — 급성 어지럼 (Cavallin PLoS One 2026) [INSIGHTS]\n> [출처: Cavallin F et al. PLoS One 2026;21(7):e0347129. PMID:42455821]\n\nGP(실무중) 정확도 **54%** < 의대졸업반 **61%**(p<0.05). 경력 자체는 추론정확도 안 높임(anchoring·Gestalt 의존 강화 위험). 독립 예측인자: **어지럼 CME β=0.77(최강)** · 자기효능감 · 저volume(<30명/일, 인지부하↓). → 주제집중 학습이 추론개선 핵심(Mamede 2024와 정합).",
+      sources: ["Cavallin F et al. PLoS One 2026;21(7):e0347129. PMID:42455821"]
     }
   },
   uiHooks: null
@@ -8861,6 +8897,10 @@ var _transitional_care_v2 = {
     referral: {
       content: "- 재입원 위험 ↑ + 다중 동반질환 → 노인의학·다직종 협진\n- 보호자 burden ↑ → 사회복지·요양 자원 연계\n- 기능 저하 progressive → 재활의학\n\n관련: [[frailty]] · [[elderly-nonspecific-symptoms]] · [[deprescribing]] · [[geriatric-assessment-4ms]]",
       sources: []
+    },
+    va_choose_home: {
+      content: "### VA Choose Home — 집중 재택의료 (JAGS 2026) [CLINICAL — 조건부]\n> [출처: J Am Geriatr Soc 2026. PMID:42601806] 요양원 위험 노인 305명, 평균 99.8일 중재, 탐색적 전후비교.\n\n12개월: 입원 RR 0.63(**37%↓**)·응급실 RR 0.44(**56%↓**)·SNF 이송 4.9%. 경제: 순이익 $720만·**ROI 239%**. 다학제팀(노인과의·NP·RN·사회복지사·OT). ⚠ 탐색적 설계 — 인과 해석 주의.",
+      sources: ["J Am Geriatr Soc 2026. PMID:42601806, DOI:10.1111/jgs.70595"]
     }
   },
   uiHooks: null
@@ -9223,6 +9263,10 @@ var _clinical_experience_quality_v2 = {
     notes: {
       content: "- 인지 측면의 짝 개념은 [[clinical-reasoning]] — 경력이 쌓일수록 System 1(패턴 인식) 의존이 커지며 anchoring·premature closure에 취약해지는 경로\n- 종단적 정보 통합 실패라는 시스템 축은 [[delayed-diagnosis]] 참조\n- 오래 유지된 처방 습관의 실물 사례는 [[deprescribing]] — 처방 재검토 routine과 직접 연결",
       sources: []
+    },
+    knowledge_decline_active_usage: {
+      content: "### 지식 쇠퇴 = 사용 빈도가 결정 (Liu Adv Health Sci Educ 2025) [CLINICAL]\n> [출처: Liu Y et al. Adv Health Sci Educ 2025;31(2):561-571. PMID:40736666]\n\nPA 자격시험→재인증(6년) 분석. 지식 사용빈도 3분류: Dominant(매일, 기준)·Relevant(중간, 쇠퇴 **OR 2.31**)·Distant(드묾, **OR 2.26**). Dominant는 오히려 향상 가능. → 쇠퇴는 '경력'이 아니라 **'얼마나 자주 쓰는가'**. 자가점검: 드물게 보는 영역이 위험 구간.",
+      sources: ["Liu Y et al. Adv Health Sci Educ 2025;31(2):561-571. PMID:40736666, DOI:10.1007/s10459-025-10461-4"]
     }
   },
   uiHooks: null
@@ -9431,3 +9475,108 @@ KNOWLEDGE_BUNDLE["knee-pain-evaluation"] = _knee_pain_evaluation_v2;
 KNOWLEDGE_BUNDLE["무릎통증"] = _knee_pain_evaluation_v2;
 KNOWLEDGE_BUNDLE["슬개대퇴통증"] = _knee_pain_evaluation_v2;
 KNOWLEDGE_BUNDLE["오타와 무릎 규칙"] = _knee_pain_evaluation_v2;
+
+/* cannabinoid-chronic-pain — 칸나비노이드 만성 비암성 통증 (Chou Ann Intern Med 2025). [CLINICAL — 조건부] */
+var _cannabinoid_chronic_pain_v2 = {
+  kind: "disease",
+  keywords: ["cannabinoid-chronic-pain","칸나비노이드","cannabinoid","cannabis","nabilone","나빌론","dronabinol","CBD","THC","대마 제제"],
+  relations: [{ kind: "coprescribe", target: "chronic-pain-integrative" }],
+  primarySources: [
+    "Chou R et al. Cannabis-Based Products for Chronic Pain: An Updated Systematic Review. Ann Intern Med 2025 Dec 23;179(2):230-241. PMID:41429020, DOI:10.7326/ANNALS-25-03152"
+  ],
+  sections: {
+    definition: {
+      content: "### 25개 단기 RCT SR (n=2,303, 64% 신경병증, 1–6개월) [CLINICAL — 조건부]\n| 제품 | 통증감소(VAS 0–10) | 부작용 |\n|---|---|---|\n| 고비율 THC(경구) | −0.78 (소폭·불확실) | 어지럼·진정·오심↑↑ |\n| THC/CBD 유사비율 | −0.54 (소폭·중간근거) | 어지럼·진정·오심↑ |\n| 저비율 THC/CBD | 개선 없음 | 가능 |\n| **CBD 단독** | **효과 없음** | 부작용 증가 없음 |\n\n**THC 단독 핵심 구분**: Nabilone(합성 THC) **−1.59/10 효과 확인** vs Dronabinol −0.23 **효과 없음**. → \"합성 THC=효과\" 일반화 금지.",
+      sources: []
+    },
+    protocol: {
+      content: "**\"만성 통증에 대마 제품 써도 되나요?\" 외래 답변**:\n- CBD 단독 → 효과 없음(RCT 근거). \"CBD만 있는 제품은 만성 통증 근거 없습니다.\"\n- THC 함유 → 소폭 효과이나 어지럼·진정·오심↑, 고령·운전자 주의. Nabilone(합성 THC)이 신경병증서 가장 효과 명확(−1.59/10).\n- 비오피오이드 1차(duloxetine·gabapentin·pregabalin)는 [[chronic-pain-integrative]] 우선.",
+      sources: []
+    }
+  },
+  uiHooks: { guide: ["*"] }
+};
+KNOWLEDGE_BUNDLE["cannabinoid-chronic-pain"] = _cannabinoid_chronic_pain_v2;
+KNOWLEDGE_BUNDLE["칸나비노이드"] = _cannabinoid_chronic_pain_v2;
+KNOWLEDGE_BUNDLE["nabilone"] = _cannabinoid_chronic_pain_v2;
+
+/* ckm-syndrome — 심혈관·신장·대사 통합 관리 (Fordan Postgrad Med 2026, AHA 2023). [CLINICAL] */
+var _ckm_syndrome_v2 = {
+  kind: "disease",
+  keywords: ["ckm-syndrome","CKM 증후군","CKM","심혈관신장대사","cardiovascular-kidney-metabolic","SGLT-2i","GLP-1RA","통합관리"],
+  parents: ["diabetes","CKD","dyslipidemia"],
+  primarySources: [
+    "Fordan S et al. Managing patients with cardiovascular-kidney-metabolic syndrome: a guideline-driven practical guide for primary care physicians. Postgrad Med 2026 Jul 7;138(6):643-653. PMID:42415318, DOI:10.1080/00325481.2026.2686460",
+    "AHA 2023 Presidential Advisory on CKM Syndrome (프레임워크)"
+  ],
+  sections: {
+    definition: {
+      content: "**CKM(Cardiovascular-Kidney-Metabolic) 증후군** — AHA 2023 신패러다임: ≥2개 심혈관·신장·대사 위험인자 상호작용으로 심혈관 건강 저하. 당뇨·CKD·CVD를 각개격파 대신 **하나의 스펙트럼**으로 통합 관리 → 다약제 환자 처방 간소화.",
+      sources: []
+    },
+    classification: {
+      content: "### 4단계 [초록 기반 — 단계별 상세는 원문 Table]\n| 단계 | 특징 | 개입 |\n|---|---|---|\n| 0기 | 위험인자 없음 | 예방 |\n| 1기 | 대사 위험(비만·당뇨전단계·고혈압·이상지질) | 생활습관 |\n| 2기 | CKD 동반(단백뇨·eGFR↓) | 신보호(SGLT-2i·RAS차단제) |\n| 3~4기 | CVD 동반(심부전·관상동맥·뇌졸중) | 다장기 이익 약제 통합 |",
+      sources: []
+    },
+    notes: {
+      content: "병태생리: 비만·대사증후군 →(인슐린저항·염증)→ 신손상(단백뇨·eGFR↓) →(볼륨과부하·신장-심장 교차)→ 심혈관 손상. SGLT-2i·GLP-1RA·finerenone이 여러 구성요소 동시 개선. 관련: [[diabetes]]·[[CKD]]·[[dyslipidemia]]·[[heart-failure-referral]]",
+      sources: []
+    }
+  },
+  uiHooks: { guide: ["*"] }
+};
+KNOWLEDGE_BUNDLE["ckm-syndrome"] = _ckm_syndrome_v2;
+KNOWLEDGE_BUNDLE["CKM 증후군"] = _ckm_syndrome_v2;
+KNOWLEDGE_BUNDLE["CKM"] = _ckm_syndrome_v2;
+
+/* dbt-brief-counseling — 변증법적 행동치료 외래 단기 상담 (Bylotas AFP 2025). [CLINICAL] */
+var _dbt_brief_counseling_v2 = {
+  kind: "disease",
+  keywords: ["dbt-brief-counseling","DBT","변증법적 행동치료","dialectical behavior therapy","TIPP","PLEASE","정서위기","단기상담"],
+  parents: ["anxiety-depression-cbt"],
+  primarySources: [
+    "Bylotas J, Cherubini MK, Dixon MA. Dialectical Behavior Therapy: A Brief Counseling Skill for Clinical Practice. Am Fam Physician 2025 Jul;112(1):88-90. PMID:40736500 [초록 미제공 — 개요 기반]"
+  ],
+  sections: {
+    definition: {
+      content: "**DBT(변증법적 행동치료, Linehan)** — 수용+변화의 변증법. 원래 BPD 대상이나 외래 단기 적용 가능. CBT(Beck, 인지왜곡 교정, 우울·불안)와 달리 **정서위기·자해 관리**에 강점.",
+      sources: []
+    },
+    protocol: {
+      content: "### 4대 모듈\n마음챙김(현재 비판단 관찰) · 고통감내(위기 견디기, TIPP) · 감정조절(PLEASE) · 대인효능(DEAR MAN).\n\n### TIPP — 급성 정서위기 5분 진정\n- **T**emperature: 냉수 안면침수/얼음 쥐기 → 미주신경 자극·심박↓\n- **I**ntense exercise: 단기 고강도 운동 → 코르티솔 소모\n- **P**aced breathing: 날숨을 들숨보다 길게 → 부교감 활성\n- **P**MR: 근육 순차 긴장-이완\n→ 자해·자살 충동 위기 환자에 1–2가지 외래 5분 교육 후 귀가 자가사용.",
+      sources: []
+    }
+  },
+  uiHooks: { guide: ["*"] }
+};
+KNOWLEDGE_BUNDLE["dbt-brief-counseling"] = _dbt_brief_counseling_v2;
+KNOWLEDGE_BUNDLE["DBT"] = _dbt_brief_counseling_v2;
+KNOWLEDGE_BUNDLE["변증법적 행동치료"] = _dbt_brief_counseling_v2;
+
+/* obesity — 비만 일반 관리: 표현형·VA/DoD 2025·GLP-1 flow. [CLINICAL/TIPS] (일반 obesity 엔트리 신규) */
+var _obesity_general_v2 = {
+  kind: "disease",
+  keywords: ["obesity","비만","phenotype","비만 표현형","hungry brain","hungry gut","slow burn","VA/DoD 비만","BMI"],
+  primarySources: [
+    "Doubeni CA et al. VA/DoD Clinical Practice Guideline for Obesity 2025. Ann Intern Med 2026. PMID:42636450",
+    "Acosta A et al. Mayo Clinic 비만 표현형. Obesity 2021. PMID:33759389"
+  ],
+  sections: {
+    definition: {
+      content: "### VA/DoD 2025 — 비만은 만성 신경호르몬 질환 [CLINICAL]\n> [출처: PMID:42636450, Ann Intern Med 2026]\n- **아시아인 BMI ≥23** 개입 기준(서양 ≥25/30보다 낮음)\n- 포괄적 생활중재(CLI) + 약물 **즉시 병행** 유연화(단계적 강제 폐기)\n- **GLP-1RA 임의 중단 비권고** — 중단 시 체중 재증가(만성질환 관점)",
+      sources: []
+    },
+    classification: {
+      content: "### Mayo 표현형 (Acosta 2021, PMID:33759389) — 표현형 기반 15.9% vs 비표현형 9.0% 체중감량(1.75배)\n| 표현형 | 특징 | 접근 |\n|---|---|---|\n| Hungry Brain | 뇌 포만신호 이상·과식 | GLP-1 효과 좋음 |\n| Hungry Gut | 위장관 포만신호 이상 | GLP-1 효과 좋음 |\n| Emotional Hunger | 감정·보상 섭식 | 콘트라브+행동치료 |\n| Slow Burn | 대사율↓·근육량 부족 | 약물 효과 작음, 까다로움 |\n\n### \"적게 먹어도 살찐다\" 3유형 [TIPS — by 로컬원장님]\n- Metabolic(저장효율): intake↓에도 유지·요요 → GLP-1 반응 좋으나 중단 시 regain 빠름\n- Perception(과소평가): 간식·액상칼로리·주말·음주 → 실제 섭취 인지시키기\n- Sarcopenic low BMR: 근육↓·기초대사↓ → 규칙식사·정제탄수↓·단백질 먼저·주2회+ 근력운동",
+      sources: ["Acosta A. Obesity 2021. PMID:33759389"]
+    },
+    protocol: {
+      content: "### GLP-1 초진 8단계 Flow [TIPS — by 로컬원장님]\n1. 비만/대사 설문 2. 인바디 3. BP·pulse·심전도(prn) 4. 인바디+설문 상담 5. 혈액검사(HbA1c·Lipid·LFT·Cr·HOMA-IR prn·TSH prn) 6~8. 목표 체중·기간 합의 후 처방.\n- **환자 기대 청취 필수**: 목표 체중·기간 직접 질문 → 함께 계획 → 순응도↑\n- 약물 선택 전략은 [[glp1-selection-strategy]] 참조",
+      sources: ["[TIPS — by 로컬원장님]"]
+    }
+  },
+  uiHooks: { guide: ["*"] }
+};
+KNOWLEDGE_BUNDLE["obesity"] = _obesity_general_v2;
+KNOWLEDGE_BUNDLE["비만"] = _obesity_general_v2;
+KNOWLEDGE_BUNDLE["비만 표현형"] = _obesity_general_v2;

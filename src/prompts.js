@@ -151,6 +151,10 @@ JSON만 반환 (다른 텍스트 절대 금지):
   dvt-d-dimer (하지 심부정맥혈전증/하지 통증·부종/Wells 점수/D-이합체 나이-보정(50세↑ 나이×10 µg/L) 배제/고위험은 압박초음파 — DVT 의심 배제 검사 맥락)
   primary-aldosteronism (일차성 알도스테론증/고혈압 전원 ARR 선별(2025 패러다임)/알도스테론·레닌/저항성·저칼륨 고혈압/스피로노락톤 MRA — 고혈압 이차성 선별 맥락)
   knee-pain-evaluation (무릎 통증 초기평가/5단계 신체검진/오타와 무릎 규칙(외상 X-ray)/관절삼출·POCUS 유도 관절천자/OA·PFPS·화농성관절염 감별 — 무릎통증 외래 초기 평가 맥락)
+  obesity (비만 일반 관리/Mayo 표현형(hungry brain·gut·slow burn)/VA-DoD 2025 아시아인 BMI≥23·CLI+약물 병행/GLP-1 초진 flow·"적게 먹어도 살찜" 3유형 — 비만 상담·GLP-1 처방 맥락. 비만약물 GRADE는 별도 키)
+  cannabinoid-chronic-pain (칸나비노이드 만성 비암성 통증/nabilone 효과 확인 vs dronabinol·CBD 효과 없음/THC 소폭효과+부작용 — "대마 제품 써도 되나" 상담 맥락)
+  ckm-syndrome (심혈관·신장·대사 증후군/AHA 2023 통합 프레임/SGLT-2i·GLP-1RA·finerenone 다장기 이익/DM+CKD+CVD 동반 — 다질환 통합 처방 맥락)
+  dbt-brief-counseling (변증법적 행동치료 외래 단기/TIPP 급성 정서위기 5분 진정·PLEASE/자해·자살충동·정서조절장애 — 정서위기 단기상담 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */
