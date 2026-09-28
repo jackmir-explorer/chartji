@@ -10,12 +10,13 @@ applicability: 관심 주제 정리(reading lane) — 진료 inject 아님. 단 
 relations: []
 
 > primarySources (Tier 1):
-> - Saito T(斎藤環). 히키코모리 최초 개념화, 1998. **[원 문헌 미확인 — Researcher 검증 대기]**
-> - Kato TA(가토, 규슈대) 등. 히키코모리 국제 진단기준 제안·개정 조작적 정의, 2019. **[PMID 미확인 — Researcher 검증 대기]**
-> - Teo AR(오리건대) 등 — 범문화적 히키코모리 연구. **[원 문헌 미확인 — Researcher 검증 대기]**
+> - Saito T(斎藤環). 『社会的ひきこもり』(사회적 위축) — 히키코모리 최초 개념화, PHP研究所 1998. (단행본, PMID 없음)
+> - Kato TA, Kanba S, Teo AR. Hikikomori: Multidimensional understanding, assessment, and future international perspectives. Psychiatry Clin Neurosci 2019;73(8):427-440. PMID:[31148350](https://pubmed.ncbi.nlm.nih.gov/31148350/)
+> - Kato TA, Kanba S, Teo AR. Defining pathological social withdrawal: proposed diagnostic criteria for hikikomori. World Psychiatry 2020;19(1):116-117. PMID:[31922682](https://pubmed.ncbi.nlm.nih.gov/31922682/) — ≥6개월 조작적 정의
+> - Teo AR et al. Development and validation of the 25-item Hikikomori Questionnaire (HQ-25). Psychiatry Clin Neurosci 2018;72(10):780-788. PMID:[29926525](https://pubmed.ncbi.nlm.nih.gov/29926525/)
 > - 보건복지부·한국보건사회연구원. **2023 고립·은둔 청년 실태조사** (한국 역학 근거).
 
-> ⚠ **[READING — INSIGHTS]** — 문헌 종합 개관. 출처 이름은 확실하나 이 세션 환경에서 PubMed 검증이 차단되어 정확한 PMID·서지는 미확인. Researcher 검증 후 정식 인용으로 교체할 것.
+> ⚠ **[READING — INSIGHTS]** — 문헌 종합 개관. 학술 일차 문헌 PMID 검증 완료(2026-09-28, web search): Kato 2019 PMID:31148350 · World Psychiatry 2020 PMID:31922682 · HQ-25 PMID:29926525. Saito 1998은 단행본(PMID 없음). 한국 통계는 보건복지부 2023 실태조사(언론 재인용).
 > **출처 매체**: YouTube 영상(강사·채널 미상) → Gemini 정리 → Liby 통합 (2026-09-20). 영상 강사 확인 시 attribution 보강.
 
 ---
@@ -102,6 +103,6 @@ relations: []
 
 ## 비고 (notes)
 
-- **출처 상태**: 학술 일차 문헌(Saito 1998 · Kato 2019 · Teo AR · HQ-25)은 이름 확실하나 **PMID 미확인**(이 환경 PubMed 차단). 한국 통계는 2023 실태조사가 원 출처(언론 재인용). 정식화 시 Researcher 검증 후 교체.
+- **출처 상태**: 학술 일차 문헌 PMID 검증 완료(2026-09-28 web search) — Kato 2019 PMID:31148350 · World Psychiatry 2020 PMID:31922682 · HQ-25 Teo 2018 PMID:29926525. Saito 1998은 단행본. 한국 통계는 2023 실태조사가 원 출처(언론 재인용).
 - **민감 주제**: 자살·정신질환 포함. 실제 어려움을 겪는 사람 지원이 목적이라면 지역 정신건강복지센터·자살예방상담(☎109) 등 연계 정보 별도 정리 가능.
 - 연관 임상 엔트리: [[depression-screening]] · [[anxiety-depression-cbt]] · [[persistent-physical-symptoms]].

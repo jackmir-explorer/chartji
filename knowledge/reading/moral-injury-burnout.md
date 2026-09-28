@@ -9,12 +9,12 @@ freshness.primarySourceYear: 2019
 applicability: 관심 주제 정리(reading lane) — 의료진 본인의 직업적 고통을 이해하는 개념틀. 진료 inject 아님
 
 > primarySources (Tier 1):
-> - Maslach C. — 소진(burnout) 3차원 모델 / Maslach Burnout Inventory. **[원 문헌 미확인 — Researcher 검증 대기]**
-> - Jameton A. *Nursing Practice: The Ethical Issues*, 1984 — 도덕적 고통(moral distress) 정의. **[원 문헌 미확인 — Researcher 검증 대기]**
-> - Litz BT 등, 2009 — 도덕적 손상(moral injury) 정의 (Clin Psychol Rev 추정). **[PMID 미확인 — Researcher 검증 대기]**
-> - Dean W, Talbot S, 2019 — "의료진은 소진이 아니라 도덕적 손상을 겪는다" 주장. **[원 문헌 미확인 — Researcher 검증 대기]**
+> - Maslach C, Schaufeli WB, Leiter MP. Job burnout. Annu Rev Psychol 2001;52:397-422. PMID:[11148311](https://pubmed.ncbi.nlm.nih.gov/11148311/), DOI:10.1146/annurev.psych.52.1.397. (소진 3차원 모델; 측정도구 MBI — Maslach & Jackson 1981)
+> - Jameton A. *Nursing Practice: The Ethical Issues*. Prentice-Hall, 1984 — 도덕적 고통(moral distress) 정의. (단행본, PMID 없음)
+> - Litz BT, Stein N, Delaney E, et al. Moral injury and moral repair in war veterans: a preliminary model and intervention strategy. Clin Psychol Rev 2009;29(8):695-706. PMID:[19683376](https://pubmed.ncbi.nlm.nih.gov/19683376/), DOI:10.1016/j.cpr.2009.07.003
+> - Dean W, Talbot S, Dean A. Reframing Clinician Distress: Moral Injury Not Burnout. Fed Pract 2019;36(9):400-402. PMID:[31892770](https://pubmed.ncbi.nlm.nih.gov/31892770/) (선행: Talbot SG, Dean W. STAT 2018, 언론)
 
-> ⚠ **[READING — INSIGHTS]** — 개념 정리. 출처 이름·연도는 확실하나 이 세션 환경에서 PubMed 검증 차단으로 정확한 서지·PMID 미확인. Researcher 검증 후 정식 인용으로 교체할 것.
+> ⚠ **[READING — INSIGHTS]** — 개념 정리. 학술 일차 문헌 PMID 검증 완료(2026-09-28 web search): Maslach 2001 · Litz 2009 · Dean&Talbot 2019. Jameton 1984는 단행본(PMID 없음).
 
 ---
 
@@ -56,6 +56,6 @@ applicability: 관심 주제 정리(reading lane) — 의료진 본인의 직업
 
 ## 비고 (notes)
 
-- **출처 상태**: 4개 원 출처 이름·연도는 확실하나 **PMID/서지 미확인**(이 환경 PubMed 차단). 정식화 시 Researcher 검증 후 교체.
+- **출처 상태**: 학술 일차 문헌 PMID 검증 완료(2026-09-28 web search) — Maslach 2001 PMID:11148311 · Litz 2009 PMID:19683376 · Dean&Talbot 2019 PMID:31892770. Jameton 1984는 단행본.
 - 짝 개념 — 경력·지식 노후화가 진료 질에 미치는 영향(의사 자가 점검 축)은 [[clinical-experience-quality]] 참조.
 - reading lane(관심 아티클) 엔트리 — 진료 패널 inject 없음.
