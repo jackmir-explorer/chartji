@@ -22,12 +22,11 @@
 
 1. **Raw 노트 → knowledge/*.md** (`skills/knowledge-ingest/SKILL.md`) — 미르가 던진 raw 텍스트·이미지·PDF를 knowledge 엔트리로 저장
 2. **inbox/ 파일 처리** (`agents/librarian.md` Inbox 트리거 §) — `.md`·이미지·PDF 자동 분류 + draft 제시
-3. **⚠ Deep Extract 산출물 → src/knowledge-bundle.js 컴파일** — `routines/deep-extract.md`가 매일 정오에 `knowledge/*.md`를 갱신하지만 bundle 반영은 자동화되지 않음. **Liby ingest 호출 시 반드시 backlog 점검**:
-   - `git log --oneline -- src/knowledge-bundle.js | head -1` → 최근 bundle 작업 commit
-   - `git log --oneline {bundle_commit}..HEAD -- knowledge/` → 미반영 deep-extract commit 리스트
-   - `knowledge/log.md` 항목과 bundle.js 내 키 비교
-   - 미반영 entry는 날짜별 batch로 컴파일 (한 번에 전체 처리 금지 — 2026-05-07 "20건 데이터 손실 사건" 재발 위험)
-   - ⚠ **`knowledge/reading/` 제외**: Reading lane(관심 아티클)은 bundle 컴파일 대상 아님. backlog 스캔에서 제외 (2026-09-20, `knowledge/reading/README.md`).
+3. **⚠ Deep Extract 산출물 → src/knowledge-bundle.js 컴파일** — **2026-09-28 개정: 보강은 `routines/deep-extract.md` Step 3.5가 자동 컴파일. Liby는 신규 엔트리 큐만 처리.**
+   - **주 경로**: `inbox/bundle-queue.md` 읽기 → 대기 중인 **신규 엔트리** + 일회성 backlog를 `skills/knowledge-ingest/SKILL.md`로 처리 (kind·parents·uiHooks·Triage·중복판단). 처리 후 줄 끝 `✅ 처리 YYYY-MM-DD` + Archive 이동.
+   - **교차검증(선택)**: `git log {bundle_commit}..HEAD -- knowledge/`·`log.md`↔bundle 키 비교로 큐 누락 확인. 미반영 entry는 날짜별 batch (한 번에 전체 처리 금지 — 2026-05-07 "20건 손실 사건").
+   - ⚠ **`knowledge/reading/` 제외**: Reading lane은 bundle 대상 아님 (2026-09-20).
+   - 배경: bundle 수동 컴파일이 수개월 누락돼 앱이 최신 근거 미수신한 사건 후속 → 보강 자동화 + 큐로 신규 표면화.
 4. **gaps.md 처리** (`skills/gaps-process/SKILL.md`) — 지식 격차 항목을 Researcher 위임으로 해소, Archive 이동
 
 > ⚠ **빠뜨리기 쉬운 지점**: 미르가 "liby ingest" 또는 "liby 돌려보자"라고 했을 때 (1)/(2)만 처리하고 (3) bundle 컴파일 backlog를 누락하는 패턴이 반복 관찰됨. 호출 시 반드시 4가지 모두 점검 + backlog 상태 보고.

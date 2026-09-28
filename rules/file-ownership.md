@@ -82,10 +82,11 @@
       - v1 shape: {kind, exam, treatment, differential, differentialShort, draftTemplate, draftAppend}
       - v2 shape: {kind, keywords, primarySources, sections, uiHooks}
       Consumer 감지 규칙: `entry.sections ? "v2" : "v1"`
-금지: **직접 편집 금지** — 수정은 Liby ingest skill만 권한 있음
+금지: **직접 편집 금지** — 수정은 Liby ingest skill + Deep Extract Step 3.5(보강 자동)만 권한 있음
+      Deep Extract Step 3.5는 **기존 엔트리에 섹션 추가(보강)만** 자동 허용 (guardrail: PMID 중복·node -c·추가만). 신규 엔트리·구조 변경은 Liby만 (`inbox/bundle-queue.md` 경유, 2026-09-28).
       v2 엔트리를 3B/3C runtime 준비 전에 추가 금지 (inject 깨짐)
       파일 내 파싱·변환 로직 도입 금지 (consumer 책임)
-참조: skills/knowledge-ingest/SKILL.md (Step 7 v1 / Step 7-B v2)
+참조: skills/knowledge-ingest/SKILL.md (Step 7 v1 / Step 7-B v2) · routines/deep-extract.md (Step 3.5 보강 자동)
       knowledge/section-vocabulary.md, knowledge/sourcing-rules.md
       rules/data-flow.md (UI surface × section 매트릭스)
 
