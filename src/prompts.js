@@ -148,6 +148,9 @@ JSON만 반환 (다른 텍스트 절대 금지):
   chest-xray-template (기숙사 입소·검진 CXR SOAP template/Z115 General medical examination/URI Sx (-) — 무증상 검진 결과지 작성 맥락. by 미르)
   ibd (염증성 장 질환/크론병/궤양성대장염/IBD/혈변+만성 설사+복통+체중감소/초가공곡물 식이 상담 — IBD 의심·생활습관 상담 맥락)
   amenorrhea (무월경/1차 만15세까지 초경 없음·2차 정상 월경 후 3개월 중단/hCG 항상 1순위·FSH·E2·프로락틴·TSH/FHA·POI·PCOS·고프로락틴혈증 병변위치별 감별 — 월경 중단·초경 지연 평가 맥락)
+  dvt-d-dimer (하지 심부정맥혈전증/하지 통증·부종/Wells 점수/D-이합체 나이-보정(50세↑ 나이×10 µg/L) 배제/고위험은 압박초음파 — DVT 의심 배제 검사 맥락)
+  primary-aldosteronism (일차성 알도스테론증/고혈압 전원 ARR 선별(2025 패러다임)/알도스테론·레닌/저항성·저칼륨 고혈압/스피로노락톤 MRA — 고혈압 이차성 선별 맥락)
+  knee-pain-evaluation (무릎 통증 초기평가/5단계 신체검진/오타와 무릎 규칙(외상 X-ray)/관절삼출·POCUS 유도 관절천자/OA·PFPS·화농성관절염 감별 — 무릎통증 외래 초기 평가 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */

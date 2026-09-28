@@ -4676,7 +4676,8 @@ var _chronic_pain_integrative_v2 = {
     "Sokol R et al. Nonopioid Pharmacologic Management of Chronic Noncancer Pain. Am Fam Physician. 2025 Aug;112(2):187-196. PMID:40834375",
     "Zeliadt SB et al. Adding Self-Care Complementary and Integrative Health Therapies to Care for Chronic Pain: The APPROACH Study. Med Care 2026 Mar;64(5):283-292. PMID:41771006, DOI:10.1097/MLR.0000000000002295",
     "Amin JR et al. Expectations and communication in opioid pain management: a qualitative study of patients' experience. Scand J Prim Health Care 2026;44(1):2616517. PMID:41574586, DOI:10.1080/02813432.2026.2616517",
-    "Sonoda K, Wakabayashi M. Long-Term Opioid Therapy for Nonterminal Pain. Am Fam Physician 2025 Jun;111(6):508-514. PMID:40531149"
+    "Sonoda K, Wakabayashi M. Long-Term Opioid Therapy for Nonterminal Pain. Am Fam Physician 2025 Jun;111(6):508-514. PMID:40531149",
+    "Ramos Silva A et al. Behaviour change techniques for opioid tapering in chronic noncancer pain: a systematic review. Medicine (Baltimore) 2026 Aug 7;105(32):e50106. PMID:42566632, DOI:10.1097/MD.0000000000050106"
   ],
   sections: {
     notes: {
@@ -4710,6 +4711,10 @@ var _chronic_pain_integrative_v2 = {
     long_term_opioid_therapy: {
       content: "### 장기 오피오이드 치료 — 비종말성 만성통증 [CLINICAL]\n> [출처: Sonoda K, Wakabayashi M. Am Fam Physician 2025 Jun;111(6):508-514. PMID:40531149]\n\n**대원칙**: 만성통증(>12주, 성인 ~20%) — **비오피오이드 우선**, 오피오이드는 모든 중재 실패 후 **최후 선택**. 처방 전 위험-이익 비교(OUD·호흡억제) + 정신건강 동반 동시 치료.\n\n**처방 전 위험 평가**: OUD 위험인자(약물남용력·정신건강력·가족력) 검토. 기능 목표 현실화(통증 완전 제거 ≠ 목표 → 기능·QOL). 부작용 인지: 변비·우울·호르몬이상·통각과민·과다복용.\n\n**모니터링**: 기능 개선 평가 · 소변약물검사(UDS) · PDMP(한국: 마약류 통합관리시스템) 조회 · 취약군 형평성 인식.\n\n**부프레노르핀 — OUD 위험군 대안**: 부분작용제 천장효과(호흡억제·과다복용 위험↓) → OUD·오남용·과다복용 위험 환자에서 전통 오피오이드보다 안전한 대안. 한국 형태(Norspan 패치 등) 급여·적응증 [출처 미확인 — Researcher 검증 권장].",
       sources: ["Sonoda K, Wakabayashi M. Am Fam Physician 2025;111(6):508-514. PMID:40531149"]
+    },
+    opioid_tapering_bct: {
+      content: "### CNCP 오피오이드 감량 — 행동변화기법(BCT) 체계적 고찰 [CLINICAL — 조건부]\n> [출처: Ramos Silva A et al. Medicine (Baltimore) 2026;105(32):e50106. PMID:42566632] (13편, RCT7+코호트6, n=3,130)\n\n**핵심**: 13편 중 8개 중재가 오피오이드 감량 성공. **일관된 효과를 보인 유일한 BCT = Behaviour Substitution(대체 행동 처방)**.\n\n**Behaviour Substitution 적용** — 오피오이드 사용 충동 상황을 대안 행동으로 대체:\n- 이완(점진적 근이완·심호흡·바디스캔)\n- 운동(걷기·수영·자전거 — 통증과 무관하게 정해진 시간 수행)\n- 마음챙김(통증 감각 판단 없이 관찰)\n\n> ⚠ 근거 품질: 강함 1·중등도 2·낮음 10, 이질성 높음 → 방향성 참고.",
+      sources: ["Ramos Silva A et al. Medicine (Baltimore) 2026;105(32):e50106. PMID:42566632"]
     }
   },
   uiHooks: null
@@ -4842,7 +4847,8 @@ var _mash_v2_full = {
   keywords: ["MASH","MASLD","비알코올지방간염","비알코올성지방간","NAFLD","NASH","지방간","지방간염","FIB-4","GLP-1","semaglutide","tirzepatide","resmetirom","Rezdiffra","FibroScan","간섬유화"],
   primarySources: [
     "Geary A. JAAPA 2025 Dec 23;39(1):21-25. PMID:41369205, DOI:10.1097/01.JAA.0000000000000296",
-    "Monami M et al. GLP-1 RA in MASH: Network Meta-Analysis. Diabetes Obes Metab 2026;28(5):4253-4260. PMID:41804193, DOI:10.1111/dom.70617"
+    "Monami M et al. GLP-1 RA in MASH: Network Meta-Analysis. Diabetes Obes Metab 2026;28(5):4253-4260. PMID:41804193, DOI:10.1111/dom.70617",
+    "Ohri S et al. MASLD: Primary Care Diagnosis and Management. Am Fam Physician 2026 Jun;113(6):578-585. PMID:42301877"
   ],
   sections: {
     definition: {
@@ -4868,6 +4874,10 @@ var _mash_v2_full = {
     masld_diagnosis_treatment_jama: {
       content: "### MASLD/MASH 진단·치료 — JAMA 2026 종합 리뷰 (Tilg) [CLINICAL]\n> Tilg H et al. JAMA 2026\n\n**진단**:\n- MASLD 명명: NAFLD → MASLD (Metabolic dysfunction-Associated Steatotic Liver Disease) 공식 전환\n- **FIB-4** 1차 (외래) → ≥1.30 중간·≥2.67 고위험 → FibroScan/MRE 단계화\n- 간생검 적응: noninvasive 평가 불일치·중첩 진단 (AIH/PBC) 의심\n\n**치료 (FDA 조건부 승인 약제)**:\n- **Resmetirom** (Rezdiffra) — F2-F3 fibrosis MASH 1st FDA 승인 (2024.3)·MRI-PDFF·VCTE 개선 근거\n- **Semaglutide** — MASH F1-F3 효과 (NEJM 2024) — 추가 적응증 확대 검토\n- 병용·sequence 전략 발전 중\n\n**구 JAAPA 미승인 기술 정정**: 이전 entry의 \"FDA 미승인\" 기술 → **resmetirom 2024.3 승인 확정** 반영.\n\n**BMJ 2025 추가 단서** (초록 미제공): MASLD 진단·치료 갱신·일차의료 게이트키퍼 강화.",
       sources: ["Tilg H et al. JAMA 2026. PMID:41212550", "BMJ 2025;391:r1928. PMID:41232955 (초록 미제공)"]
+    },
+    afp_2026_primary_care: {
+      content: "### MASLD 1차진료 관리 (AFP 2026)\n> [출처: Ohri S et al. Am Fam Physician 2026;113(6):578-585. PMID:42301877]\n\n**FIB-4 2단계 선별**: FIB-4(나이×AST/[혈소판×√ALT]) <1.30 진행성섬유화 배제→일차 모니터링 / 1.30–2.67 → 탄성검사(FibroScan/SWE) / ≥2.67 고위험 → 간전문의.\n- **FibroScan 없으면**: <1.30 일차 모니터링 · ≥1.30 소화기 의뢰 · ≥2.67 즉시 간전문의. FIB-4는 CBC+LFT로 계산 가능 → 기계 없어도 1차 위험분류.\n\n**생활습관 처방 수치**: 체중감량 **≥5%**(간지방·ALT 개선) · 유산소 **주 ≥150분 중등도** · 알코올(경증=소량 제한, 유의 섬유화=**완전 금주**) · 금연.",
+      sources: ["Ohri S et al. Am Fam Physician 2026;113(6):578-585. PMID:42301877"]
     }
   },
   uiHooks: null
@@ -5040,6 +5050,10 @@ var _dyslipidemia_v2 = {
     fh_evaluation: {
       content: "### 가족성 고콜레스테롤혈증(FH) 평가 — LDL≥190 [CLINICAL]\n> EAS Consensus Statement on FH (Nordestgaard 2013)\n\n- **LDL ≥190 mg/dL** = severe hypercholesterolemia → statin 즉시 시작 + FH 평가 병행\n- **진단 도구**: Dutch Lipid Clinic Network (DLCN) score (**≥8 definite / 6-8 probable**) 또는 Simon Broome criteria\n- **평가 항목**:\n  - 가족력 — 1촌 조기 CAD (남<55 / 여<60) 또는 1촌 severe lipid\n  - 신체검진 — **tendon xanthoma** (Achilles·extensor digitorum) · **corneal arcus**\n  - 2차 원인 배제 — 갑상선저하증·신증후군·간담도 폐쇄·약물(diuretic·cyclosporine)\n- FH 확정 → 가족 cascade screening (1촌 LDL 측정)·소아 조기 statin·PCSK9i 적응증 확대",
       sources: ["Nordestgaard BG et al. EAS Consensus Statement on FH. Eur Heart J 2013;34(45):3478-3490. PMID:23956253, DOI:10.1093/eurheartj/eht273"]
+    },
+    ahaacc_2026_statin_expansion: {
+      content: "### 2026 AHA/ACC 이상지질혈증 — 1차예방 스타틴 확대 [REGULATORY]\n> [출처: Anderson TS et al. JAMA 2026 Aug 18;336(7):557-564. PMID:42475062] (NHANES 2017–2023, 미국 성인)\n\n| | 2018 | 2026 |\n|---|---|---|\n| 70–79세 스타틴 대상 | 제한적 | **93%** |\n| 60–69세 | 일부 | **85%** |\n| 신규 편입 | — | **미국 2,150만명 (10yr ASCVD 평균 3.1%)** |\n\n30–79세의 56.6%(8,750만명) 대상 — 2018 대비 +2,150만명.\n\n**외래 SDM**: 신규군 10yr ASCVD 평균 3.1%(절대위험 낮음)·젊은 저위험 주류 → \"스타틴 필요한가\" 환자와 직접 논의. LDL≥190·DM·CKD는 위험추정 불필요 직접 적응증.\n\n**한국 주의**: 미국 인구 기반 — 한국 **KSoLA 2022 기준·위험도구 우선**, 본 가이드는 글로벌 트렌드 참고. [한국 적용 Researcher 검증 권장]",
+      sources: ["Anderson TS et al. JAMA 2026;336(7):557-564. PMID:42475062, DOI:10.1001/jama.2026.11246"]
     }
   },
   uiHooks: null
@@ -6699,6 +6713,10 @@ var _pocus_focus_cardiac_v2 = {
     referral: {
       content: "- AI FoCUS에서 이상 소견 발견 → 심장전문의 공식 심초음파 의뢰\n- 우심계 이상 임상 의심 (폐고혈압·RV 부전) → 직접 심초음파 의뢰 (FoCUS 우회)\n- 심낭삼출 발견 + 혈역학적 불안정 → 즉시 의뢰",
       sources: []
+    },
+    gp_focus_5elements: {
+      content: "### GP 심장 POCUS 5 필수 요소 — HF 선별 (Ann Fam Med 2026)\n> [출처: Segura-Rodríguez D et al. Ann Fam Med 2026;24(4):376. PMID:42509170]\n\n| 요소 | 뷰 | 이상 시 |\n|---|---|---|\n| LV 수축기능(EF) | 시각/AI | 저하 → HFrEF 즉각 치료 |\n| 판막 이상 | 파라스터널 장·단축 | 협착·부전 → 의뢰 |\n| 심낭삼출 | 4-방 | 삼출량 파악 |\n| IVC 크기·호흡변이 | 검상돌기하 | 확장(>2.1cm·변이<50%) → 정수압↑ |\n| 폐 B-line(폐POCUS 병행) | 앞가슴 2구역+ | ≥3/zone → 폐울혈 |\n\n- 신규 호흡곤란·부종·피로 → 핸드헬드 심장 POCUS 우선 선별, AI flagging으로 심초음파 의뢰 우선순위 결정\n- ⚠ AI는 LV·판막·심낭 감도↑, **우심계 감도 낮음**(Fisher 근거와 일치)",
+      sources: ["Segura-Rodríguez D et al. Ann Fam Med 2026;24(4):376. PMID:42509170, DOI:10.1370/afm.260066"]
     }
   },
   uiHooks: null
@@ -7475,7 +7493,8 @@ var _diabetes_prevention_v2 = {
   keywords: ["diabetes-prevention","당뇨예방","diabetes prevention","prediabetes","당뇨전단계","DPP","Diabetes Prevention Program","AI-DPP","생활습관","lifestyle intervention","체중감량","HbA1c","비열등성","IFG","IGT"],
   parents: ["diabetes"],
   primarySources: [
-    "Mathioudakis N et al. An AI-Powered Lifestyle Intervention vs Human Coaching in the Diabetes Prevention Program: A Randomized Clinical Trial. JAMA 2025 Dec 16;334(23):2079-2089. PMID:41144242, DOI:10.1001/jama.2025.19563"
+    "Mathioudakis N et al. An AI-Powered Lifestyle Intervention vs Human Coaching in the Diabetes Prevention Program: A Randomized Clinical Trial. JAMA 2025 Dec 16;334(23):2079-2089. PMID:41144242, DOI:10.1001/jama.2025.19563",
+    "Salive ME et al. Lifestyle Intervention, Metformin, and Long-Term Multimorbidity in the DPP/DPPOS. JAMA 2026 Aug 18;336(7):577-586. PMID:42295772, DOI:10.1001/jama.2026.8492"
   ],
   sections: {
     definition: {
@@ -7497,6 +7516,10 @@ var _diabetes_prevention_v2 = {
     referral: {
       content: "### 관련 엔트리\n- [[diabetes]] — T2DM 진단·관리\n- [[glp1-selection-strategy]] — GLP-1RA 체중감량 처방 (당뇨전단계 고위험군 옵션)",
       sources: []
+    },
+    dpp_26yr_multimorbidity: {
+      content: "### DPP/DPPOS 26년 추적 — 다질환 예방 (JAMA 2026)\n> [출처: Salive ME et al. JAMA 2026 Aug 18;336(7):577-586. PMID:42295772] (n=1,173, 1996–2021)\n\n| 중재 | 다질환(만성질환 ≥2) HR vs 위약 | 유의성 |\n|---|---|---|\n| **생활습관 집중** | **0.79** (0.68–0.93) | ✅ 유의 |\n| 메트포르민 | 0.91 (0.78–1.07) | ❌ 비유의 |\n\n- 생활습관: 26년간 다질환 부담 21%↓ · 고비용 동반질환 이중발생 HR 0.57(0.38–0.85, 45%↓)\n- ⚠ **메트포르민은 다질환 예방 근거 불충분**(당뇨 발생 예방 효과는 별개). 생활습관이 핵심.\n- 상담: \"당뇨 전단계에 걷고 체중 줄이면 당뇨뿐 아니라 심장병·콩팥병 등 여러 병을 함께 막는다\"\n- 한국 급여: 당뇨전단계 메트포르민 **보험 적용 밖**(T2DM 확진 후 급여)",
+      sources: ["Salive ME et al. JAMA 2026;336(7):577-586. PMID:42295772, DOI:10.1001/jama.2026.8492"]
     }
   },
   uiHooks: null
@@ -9251,6 +9274,10 @@ var _myopia_outdoor_taiwan_v2 = {
     notes: {
       content: "- **출처 상태**: Wu PC 분절회귀 원 논문 PMID:32197911(Ophthalmology 2020) 확인 완료 + Dai 2026 메타분석(PMID:41928550) 독립 검증. 정식 Tier 1 인용.\n- 생활습관·예방 축 전반은 [[scope]] Tier 7(생활습관의학) 참조.",
       sources: []
+    },
+    "10년 후 재평가 (2013→2023)": {
+      content: "### 천천120 10년 후 — \"야외활동만으론 부족\" [INSIGHTS]\n> [출처: Yang YC et al. Taiwan J Ophthalmol 2026;16(2):294-302. PMID:42549256] (초2 코호트: 타이베이 2013 n=11,590 / 2023 n=6,350 / 이란 농촌 2023 n=804, 사이클로플레지아 굴절)\n\n| 코호트 | 근시 유병률 |\n|---|---|\n| 타이베이 2013 | 36.4% |\n| 타이베이 2023 | 39.4% (+3%p) |\n| **이란(宜蘭) 농촌 2023** | **24.0%** |\n\n**역설**: 타이베이 주중 실외 ≥1h/일 15.8%→33.1%(2배↑)에도 근시 **상승** — 디지털기기(86.8%→92.8%)·도시화가 상쇄.\n**다변량 OR**: 타이베이 거주 1.82 · 부모근시 2명 2.35 · 부모 1명 1.30 · 난시 1.85.\n→ 실외활동은 필요조건이나 디지털·교육압·도시화 앞에서 단독으론 불충분(caveats '재상승 조짐' 정량 확인).",
+      sources: ["Yang YC et al. Taiwan J Ophthalmol 2026;16(2):294-302. PMID:42549256, DOI:10.4103/tjo.TJO-D-25-00213"]
     }
   },
   uiHooks: null
@@ -9301,3 +9328,106 @@ KNOWLEDGE_BUNDLE["1차무월경"] = _amenorrhea_v2;
 KNOWLEDGE_BUNDLE["2차무월경"] = _amenorrhea_v2;
 KNOWLEDGE_BUNDLE["기능성시상하부무월경"] = _amenorrhea_v2;
 KNOWLEDGE_BUNDLE["조기난소부전"] = _amenorrhea_v2;
+
+/* dvt-d-dimer — 하지 DVT 나이-보정 D-이합체 배제 (Le Gal JAMA 2026). Wells + age-adjusted cutoff. [CLINICAL] */
+var _dvt_d_dimer_v2 = {
+  kind: "disease",
+  keywords: ["dvt-d-dimer","DVT","심부정맥혈전증","D-dimer","D-이합체","age-adjusted","나이-보정","Wells score","하지부종","VTE"],
+  relations: [{ kind: "parent", target: "clinical-reasoning" }],
+  primarySources: [
+    "Le Gal G et al. Age-Adjusted D-Dimer Cutoff Levels to Rule Out Deep Vein Thrombosis. JAMA 2026 Feb 3;335(5):416-424. PMID:41490105, DOI:10.1001/jama.2025.21561"
+  ],
+  sections: {
+    definition: {
+      content: "### 나이-보정 D-이합체로 DVT 안전 배제 (JAMA 2026)\n**공식**: 표준 500 µg/L → **50세 이상은 나이×10 µg/L** (예: 65세→650, 80세→800). PE에서 검증된 공식을 DVT에서 최초 전향 검증.\n\n**순차 전략**: 하지통증·부종 → Wells DVT score → 고위험(≥3) 즉시 압박초음파 / 저·중위험(<3) D-이합체 → <나이보정 기준 → **DVT 배제** / ≥기준 → 압박초음파.\n\n**수치**: 표준 음성 24.5% → 나이보정 +7.4%p. 75세↑ 음성 **8.7%→26.1%**. 나이보정 이하 3개월 VTE **0%** (95%CI 0–2.3%).",
+      sources: []
+    },
+    protocol: {
+      content: "### Wells DVT 점수\n활동성 암·하지마비/석고·3일↑침상 or 12주내 수술·종아리 압통·하지 전체 부종·종아리 3cm↑ 부종·함요부종·표재정맥 측부·이전 DVT = 각 +1 / **DVT 외 진단 더 가능성 = −2**.\n- ≤0 저위험 · 1–2 중위험 · ≥3 고위험\n- 중위험↑ 초음파 대기 중이면 LMWH 시작 고려",
+      sources: []
+    },
+    indication: {
+      content: "- Wells 저/중위험 + DVT 의심 외래·응급 성인\n- **특히 50세↑ 고령**: 나이-보정으로 불필요 초음파 크게 감소 (75세↑ 음성 26.1%)",
+      sources: []
+    },
+    precaution: {
+      content: "- **고위험(Wells ≥3)은 D-이합체 무의미** → 직접 압박초음파\n- D-이합체 = 배제 검사(고민감·저특이), 확진 불가. 임신·활동성 암·염증서 위양성\n- 나이-보정 공식 한국 보험 명시 없음 [출처 미확인 — Researcher 검증 권장]\n- 관련: [[clinical-reasoning]] (pretest probability)",
+      sources: []
+    }
+  },
+  uiHooks: { guide: ["*"] }
+};
+KNOWLEDGE_BUNDLE["dvt-d-dimer"] = _dvt_d_dimer_v2;
+KNOWLEDGE_BUNDLE["DVT"] = _dvt_d_dimer_v2;
+KNOWLEDGE_BUNDLE["심부정맥혈전증"] = _dvt_d_dimer_v2;
+KNOWLEDGE_BUNDLE["D-이합체"] = _dvt_d_dimer_v2;
+
+/* primary-aldosteronism — 일차성 알도스테론증: 고혈압 전원 ARR 선별 (Endocrine Society 2025). [CLINICAL, REGULATORY] */
+var _primary_aldosteronism_v2 = {
+  kind: "disease",
+  keywords: ["primary-aldosteronism","일차성 알도스테론증","ARR","알도스테론","레닌","이차성 고혈압","스피로노락톤","spironolactone","MRA"],
+  relations: [{ kind: "parent", target: "hypertension" }],
+  primarySources: [
+    "Adler GK et al. Primary Aldosteronism: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab 2025 Aug 7;110(9):2453-2495. PMID:40658480, DOI:10.1210/clinem/dgaf284"
+  ],
+  sections: {
+    definition: {
+      content: "### 2025 패러다임 전환 — 고혈압 전원 선별\n| | 기존 | 2025 Endocrine Society CPG |\n|---|---|---|\n| 선별 대상 | 저항성·저칼륨·부신종괴 **고위험군 한정** | **고혈압 환자 전원** |\n| 검사 | 위험요소 있을 때만 | 알도스테론+레닌 → ARR |\n\n고혈압 외래의 **최대 14%가 PA**(현저히 저진단). 같은 혈압에서도 본태성보다 **심혈관 합병증 위험↑** → 조기 발견 의미.",
+      sources: []
+    },
+    exam: {
+      content: "### 진단 알고리즘\nStep 1 **ARR 선별**(알도스테론/레닌): 고위험 → 억제검사 생략 가능 / 중간 → 알도스테론 억제검사 / 저위험 → 본태성 관리.\nStep 2 억제검사(필요 시) → 확진 시 CT + **부신정맥 샘플링(AVS)**: 편측 → 부신절제(수술 원할 때) / 양측 → MRA.\n- 부신 선종 있으면 1mg 야간 덱사메타손 억제검사(동반 쿠싱 배제)\n- **ARR 전 약물 주의**: β차단제·클로니딘·NSAID → 위음성 / CCB·α차단제는 영향 최소 → 검사 중 이 약으로 혈압 조절, 저칼륨 먼저 교정",
+      sources: []
+    },
+    protocol: {
+      content: "### MRA (수술 불가·비원 시)\n| 약물 | 순위 |\n|---|---|\n| **스피로노락톤** | 1차(저비용·광범위) |\n| 에플레레논 | 여성형유방 등 부작용 시 대체 |\n\n- 등역가 titration 시 효능 유사 — 비용·부작용으로 선택\n- **레닌 추적**: 억제 상태서 고혈압 지속 → 증량\n- 스피로노락톤 부작용: 여성형유방(남 최대 40%)·성욕↓·월경불순 → 에플레레논 교체",
+      sources: []
+    },
+    referral: {
+      content: "- ARR 양성 → 내분비내과(확진+AVS)\n- 부신 CT 종괴 → 내분비내과\n- MRA 최고용량 조절 불량 → 내분비내과\n- 편측 수술 후 혈압 정상화율 ~40–60% (수술 후에도 약 필요 많음)\n- 관련: [[hypertension]] · [[resistant-hypertension]]",
+      sources: []
+    }
+  },
+  uiHooks: { guide: ["*"] }
+};
+KNOWLEDGE_BUNDLE["primary-aldosteronism"] = _primary_aldosteronism_v2;
+KNOWLEDGE_BUNDLE["일차성 알도스테론증"] = _primary_aldosteronism_v2;
+KNOWLEDGE_BUNDLE["ARR"] = _primary_aldosteronism_v2;
+KNOWLEDGE_BUNDLE["이차성 고혈압"] = _primary_aldosteronism_v2;
+
+/* knee-pain-evaluation — 무릎통증 초기평가: 5단계 검진·오타와규칙·POCUS 관절천자 (AFP 2026). [CLINICAL] */
+var _knee_pain_evaluation_v2 = {
+  kind: "disease",
+  keywords: ["knee-pain-evaluation","무릎통증","knee pain","슬관절","PFPS","슬개대퇴통증","오타와 무릎 규칙","Ottawa knee rule","관절천자","슬관절 삼출"],
+  relations: [{ kind: "coprescribe", target: "osteoarthritis" }],
+  primarySources: [
+    "Pendergraph B et al. Knee Pain in Adults and Adolescents: The Initial Evaluation. Am Fam Physician 2026 Jul;114(1):49-62. PMID:42607259"
+  ],
+  sections: {
+    indication: {
+      content: "빈도: 40세↑ 증상성 슬관절 **OA 30–45%** / 청소년~30대 **슬개대퇴통증증후군(PFPS) 25–40%**.",
+      sources: []
+    },
+    exam: {
+      content: "### 5단계 신체검진\n1. 육안(외반/내반·삼출·근위축·보행) 2. 촉진(슬개골 부유·파동, 압통점) 3. 능동·수동 ROM 4. 근력(대퇴사두·슬굴곡·엉덩이) 5. 특수검사(Lachman·전방서랍·내외반 스트레스 / McMurray·Thessaly).\n> ⚠ 단일 특수검사 의존 금지 — **조합**으로 정확도↑",
+      sources: []
+    },
+    differential: {
+      content: "### 오타와 무릎 규칙 (외상 시 X-ray 적응증)\n다음 중 하나 → 방사선: ① 55세↑ ② 비골두 압통 ③ 슬개골 단독 압통 ④ 굴곡 90° 불가 ⑤ 체중부하 4보 불가. 민감도 ~99% — 해당 없으면 X-ray 불필요.\n\n### 연령별 감별\n- 청소년: Osgood-Schlatter·PFPS·슬개건증\n- 20–40대: PFPS·ACL/반월판 손상\n- 40대↑: OA·반월판 퇴행·거위발건염\n- 전 연령: 화농성 관절염·통풍·가성통풍·RA",
+      sources: []
+    },
+    protocol: {
+      content: "### 삼출 확인 + POCUS 유도 관절천자\n- 삼출: 슬개골 부유검사(patellar tap)·파동검사(bulge sign)\n- 삼출 시 **POCUS 유도 관절천자**(정확도↑·합병증↓) — 급성 고요산·화농성·출혈성 감별. STFM Tier 1 POCUS 필수항목(knee effusion, PMID:42546336)\n- 삼출액 검사(감염·염증 의심): WBC·요산·배양·결정체",
+      sources: []
+    },
+    referral: {
+      content: "- 오타와 양성 + 골절 의심 → 정형외과\n- **화농성 관절염 의심 → 즉시 의뢰(응급)**\n- ACL/반월판 완전손상 → 정형외과\n- 3–6주 보존 후 무호전 OA → 정형외과·통증의학과\n- 관련: [[osteoarthritis]] · [[pocus-primary-care-efsumb]]",
+      sources: []
+    }
+  },
+  uiHooks: { guide: ["*"] }
+};
+KNOWLEDGE_BUNDLE["knee-pain-evaluation"] = _knee_pain_evaluation_v2;
+KNOWLEDGE_BUNDLE["무릎통증"] = _knee_pain_evaluation_v2;
+KNOWLEDGE_BUNDLE["슬개대퇴통증"] = _knee_pain_evaluation_v2;
+KNOWLEDGE_BUNDLE["오타와 무릎 규칙"] = _knee_pain_evaluation_v2;

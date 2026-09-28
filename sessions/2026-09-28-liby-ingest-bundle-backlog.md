@@ -41,3 +41,14 @@
 - **PMID별 검증이 backlog 가정을 교정** — "2dcafc2 이후 변경 전부 컴파일" 방식이었으면 CKD·nonopioid 중복 삽입 위험. CLAUDE.md의 "log↔bundle 비교" 단계가 실효.
 - WebSearch 작동 확인 = 향후 Researcher 검증(CLINICAL PMID 확보)이 이 환경에서 가능. `[원 논문 미확인]` 마커들 점진 해소 경로 확보.
 - 다음 세션 반영: bundle·prompts·Triage 변경 → 앱 runtime 영향 → main 반영 필수.
+
+---
+
+## 추가 — 09-28 deep-extract 배치 (세션 중 main에 새로 착지)
+09-15/16 컴파일 push 직후, rebase 중 origin main에 **09-28 deep-extract(9건)** 가 이미 올라와 있음을 발견. "전부 다" 지시에 따라 이어서 컴파일.
+
+- **PMID별 검증**: dvt-d-dimer의 PMID:41490105(age-adjusted D-dimer)는 clinical-reasoning에 이미 있었으나, 신규 md는 **DVT 특화 standalone**(Wells·2점 프로토콜·indication)이라 별개 키로 신규 생성 판단(중복 아님).
+- **신규 3**: dvt-d-dimer · primary-aldosteronism · knee-pain-evaluation (각 kind:disease, uiHooks:{guide:["*"]}, 신규 키 hard-check 0, Triage 등록). relations 필드로 clinical-reasoning/hypertension/osteoarthritis 관계 표기(R2 예약·inert).
+- **보강 6**: MASH·pocus-focus-cardiac·dyslipidemia·diabetes-prevention·chronic-pain-integrative·myopia (섹션+source 추가, 키 재할당 없음).
+- 검증: node -c OK, 9 PMID 전부 반영, 3키 중복 0. ?v 0928-liby→0928-liby2.
+- 회고: **PMID별 검증이 dvt-d-dimer 중복 오판을 방지**(clinical-reasoning과 주제 분리 확인 후 별개 생성). 세션 중 새 deep-extract가 착지하는 경우가 있으니, 컴파일 후에도 origin 재확인 필요.
