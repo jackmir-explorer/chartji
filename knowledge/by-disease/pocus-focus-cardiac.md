@@ -118,3 +118,32 @@ relations: [[[pocus-lung]], [[pocus-primary-care-efsumb]], [[pocus-abdominal]]]
 
 - study-note: [[2026-05-08-ai-focus-cardiac-pocus]]
 - study-note: [[2026-05-10-pocus-hf-primary-care-gp]]
+
+---
+
+## 핸드헬드 AI 심장 POCUS로 1차의료 전반 심부전 선별 (Ann Fam Med 2026) (2026-09-28 추가)
+
+> [출처: Segura-Rodríguez D et al. Ann Fam Med 2026;24(4):376. PMID:42509170, DOI:10.1370/afm.260066]
+> [초록 미제공 — Scout 요약 기반]
+
+**연구 초점:** AI 보조 핸드헬드 심장 초음파의 1차의료 외래 전반(primary care across) 심부전 검출 유효성 검증
+
+### GP 심장 POCUS 필수 체크 요소 (FoCUS 기반)
+
+| 요소 | 방법 | 이상 시 의의 |
+|---|---|---|
+| **LV 수축 기능 (EF)** | 시각 평가 (eyeballing) or AI 자동 분석 | EF 저하 → HFrEF, 즉각 치료 |
+| **판막 이상** | 파라스터널 장축·단축 뷰 | 협착·폐쇄 부전 → 전문의 의뢰 |
+| **심낭 삼출** | 4-방 뷰 | 삼출량 파악 |
+| **IVC 크기·호흡 변이** | 검상돌기하 뷰 | IVC 확장(>2.1 cm, 변이 <50%) → 전신 정수압↑ |
+| **폐 B-line (폐 POCUS 병행)** | 앞가슴 2구역 이상 스캔 | ≥3/zone → 폐울혈 시사 |
+
+> AI 알고리즘은 LV 기능·판막 이상·심낙삼출 탐지 감도↑, **우심계 이상은 감도 낮음** (Fisher L et al. Mayo Clin Proc Digit Health 2026 기존 근거와 일치)
+
+### 일차의료 외래 적용 시나리오
+
+- **신규 호흡곤란·부종·피로** 주소 → 심부전 선별 목적으로 핸드헬드 POCUS 우선 시행
+- AI 이상 flagging → 심장초음파 의뢰 우선순위 결정에 활용
+- 훈련된 GP가 외래에서 직접 시행 → 전문의 의뢰 전 조기 선별 구현 가능
+
+**study-note:** [[inbox/study-notes/2026-09-28-ai-pocus-hf-primary-care]]
