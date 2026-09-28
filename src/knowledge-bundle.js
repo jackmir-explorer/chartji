@@ -4355,7 +4355,8 @@ var _deprescribing_v2 = {
   primarySources: [
     "McDonald EG et al. Can Fam Physician 2026 Mar;72(3):173-178. PMID:41844291, DOI:10.46747/cfp.7203173",
     "Marcellaud E et al. Attitudes Toward Deprescribing Among Community-Dwelling Adults. Drugs Aging. 2026 May 2. PMID:42068533, DOI:10.1007/s40266-026-01298-6",
-    "Siddiqui TG et al. Brief intervention for inappropriate z-hypnotics use in older adults: a before and after intervention study in primary care. Scand J Prim Health Care. 2026;44(1):2660168. PMID:42031000, DOI:10.1080/02813432.2026.2660168"
+    "Siddiqui TG et al. Brief intervention for inappropriate z-hypnotics use in older adults: a before and after intervention study in primary care. Scand J Prim Health Care. 2026;44(1):2660168. PMID:42031000, DOI:10.1080/02813432.2026.2660168",
+    "Ribeiro H et al. Opioid prescribing in older adults. Drugs Aging 2026. PMID:42627454, DOI:10.1007/s40266-026-01329-2"
   ],
   /* 2026-05-12 Auditor R2 분할: T2DM 감약(Jacob)·치매 항우울제(Liang)·정신과 약물 낙상(Yin) → 별도 entry 이관 */
   sections: {
@@ -4386,6 +4387,10 @@ var _deprescribing_v2 = {
     ppi_cluster_rct: {
       content: "### PPI 감약 — 클러스터 RCT (JAMA Intern Med 2026) [CLINICAL]\n> JAMA Intern Med 2026;186(6):668-676 — 환자 + GP 병행 개입 n=34,409\n\n**개입군 vs 대조군**:\n- PPI 감약 성공: **14.9% vs 7.0%** (대조)\n- **GERD 악화 없음** — 안전한 감약 가능\n- 통계적 유의: 환자 교육 + GP 교육 동시 진행이 효과적\n\n**임상 적용**:\n- 장기 PPI 사용 (≥2년) + Barrett's esophagus 없음·NSAID 동반 미복용 → 감약 시도\n- 단계: 1/2 dose × 2-4주 → on-demand → 중단\n- 환자 교육 (재발 증상 → 즉시 재개)·H2RA bridge\n- GP 외래 routine으로 PPI 적응증 재평가 (Stop the slowed-release dependency)",
       sources: ["JAMA Intern Med 2026;186(6):668-676. PMID:41973459"]
+    },
+    elderly_opioid_safety: {
+      content: "### 노인 오피오이드 안전 처방 [CLINICAL]\n> [출처: Ribeiro H et al. Drugs Aging 2026. PMID:42627454]\n\n**약동학 변화**: 신·간 청소율↓(반감기↑) · 체지방↑(지용성 분포↑) · 알부민↓(유리형↑) · 근육량↓.\n\n**처방 원칙 (start low, go slow)**:\n- 비활성 대사체 선호 — morphine(M6G 축적) 회피 → hydromorphone·fentanyl\n- 초기 용량 성인 표준의 **25–50%**, 증량 간격 연장, 정기 재평가(통증·기능·부작용)\n\n**선제적 부작용 관리**: ① 변비 — 시작 시 완하제 동시 처방(대기 아님) ② 낙상 — 오피오이드+항우울제 중복 aOR 1.40–1.45([[fall-prevention-awv]], PMID:42343007) ③ 인지 — 2–4주 내 모니터링(Mini-Cog)\n\n**암성 vs 비암성**: 암성=강효 오피오이드+경피 고정용량+돌발통 fentanyl / 비암성=기전특이 치료 우선·**시간 제한** 사용(영구 처방 금지, 기능 목표 명시).",
+      sources: ["Ribeiro H et al. Drugs Aging 2026. PMID:42627454, DOI:10.1007/s40266-026-01329-2"]
     }
   },
   uiHooks: null
@@ -4670,7 +4675,8 @@ var _chronic_pain_integrative_v2 = {
     "Polizzi CP et al. J Psychiatr Res 2026 Feb 25;197:97-106. PMID:41774973, DOI:10.1016/j.jpsychires.2026.02.045",
     "Sokol R et al. Nonopioid Pharmacologic Management of Chronic Noncancer Pain. Am Fam Physician. 2025 Aug;112(2):187-196. PMID:40834375",
     "Zeliadt SB et al. Adding Self-Care Complementary and Integrative Health Therapies to Care for Chronic Pain: The APPROACH Study. Med Care 2026 Mar;64(5):283-292. PMID:41771006, DOI:10.1097/MLR.0000000000002295",
-    "Amin JR et al. Expectations and communication in opioid pain management: a qualitative study of patients' experience. Scand J Prim Health Care 2026;44(1):2616517. PMID:41574586, DOI:10.1080/02813432.2026.2616517"
+    "Amin JR et al. Expectations and communication in opioid pain management: a qualitative study of patients' experience. Scand J Prim Health Care 2026;44(1):2616517. PMID:41574586, DOI:10.1080/02813432.2026.2616517",
+    "Sonoda K, Wakabayashi M. Long-Term Opioid Therapy for Nonterminal Pain. Am Fam Physician 2025 Jun;111(6):508-514. PMID:40531149"
   ],
   sections: {
     notes: {
@@ -4700,6 +4706,10 @@ var _chronic_pain_integrative_v2 = {
     va_whole_health_rct: {
       content: "### VA Whole Health vs CBT vs 일반치료 RCT (Seal JAMA 2026) [CLINICAL]\n> Seal KH et al. JAMA 2026 — n=764 만성통증 RCT\n\n**3-arm 비교** (52주):\n- VA **Whole Health 팀** (다직종·환자중심·자기관리·통합의학) — 최우수\n- CBT — 중간\n- 일반치료 — 대조\n\n**결과**:\n- **Whole Health > CBT** (p=0.02) > 일반치료 (p=0.002)\n- BPI-Interference 차이는 MCID 미달 — 통계적 유의성 + 임상 의미 제한적\n\n**임상 메시지**:\n- 만성통증에 **다직종 + 자기관리 + 통합의학 (요가·마음챙김·태극권)** 모델이 CBT 단독보다 우수\n- 일차의료 외래 단독 CBT 한계 — Whole Health 자원 연계 검토\n- Patient-centered care가 통증 결과·QOL 향상 경로",
       sources: ["Seal KH et al. Whole Health vs CBT for Chronic Pain. JAMA 2026. PMID:42054020"]
+    },
+    long_term_opioid_therapy: {
+      content: "### 장기 오피오이드 치료 — 비종말성 만성통증 [CLINICAL]\n> [출처: Sonoda K, Wakabayashi M. Am Fam Physician 2025 Jun;111(6):508-514. PMID:40531149]\n\n**대원칙**: 만성통증(>12주, 성인 ~20%) — **비오피오이드 우선**, 오피오이드는 모든 중재 실패 후 **최후 선택**. 처방 전 위험-이익 비교(OUD·호흡억제) + 정신건강 동반 동시 치료.\n\n**처방 전 위험 평가**: OUD 위험인자(약물남용력·정신건강력·가족력) 검토. 기능 목표 현실화(통증 완전 제거 ≠ 목표 → 기능·QOL). 부작용 인지: 변비·우울·호르몬이상·통각과민·과다복용.\n\n**모니터링**: 기능 개선 평가 · 소변약물검사(UDS) · PDMP(한국: 마약류 통합관리시스템) 조회 · 취약군 형평성 인식.\n\n**부프레노르핀 — OUD 위험군 대안**: 부분작용제 천장효과(호흡억제·과다복용 위험↓) → OUD·오남용·과다복용 위험 환자에서 전통 오피오이드보다 안전한 대안. 한국 형태(Norspan 패치 등) 급여·적응증 [출처 미확인 — Researcher 검증 권장].",
+      sources: ["Sonoda K, Wakabayashi M. Am Fam Physician 2025;111(6):508-514. PMID:40531149"]
     }
   },
   uiHooks: null
@@ -6434,7 +6444,8 @@ var _pocus_efsumb_v2 = {
   parents: [],
   primarySources: [
     "Andersen CA, Jenssen C, Poppleton A, et al. Point-of-care ultrasound in primary care — EFSUMB core curriculum and training recommendations. Ultraschall Med. 2026. PMID:41386291, DOI:10.1055/a-2771-2848",
-    "Hui W. An Academic Family Physician's Point-of-Care Ultrasound (POCUS) Experience. J Am Board Fam Med 2025;38(6):949-954. PMID:41593014, DOI:10.3122/jabfm.2024.240379R1"
+    "Hui W. An Academic Family Physician's Point-of-Care Ultrasound (POCUS) Experience. J Am Board Fam Med 2025;38(6):949-954. PMID:41593014, DOI:10.3122/jabfm.2024.240379R1",
+    "Vaughan A et al. Family Medicine residency POCUS curriculum: 10-year alumni follow-up. Family Medicine 2026;58(6). PMID:42308619, DOI:10.22454/FamMed.2026.621160"
   ],
   sections: {
     notes: {
@@ -6456,6 +6467,10 @@ var _pocus_efsumb_v2 = {
     dvt_pocus_qi: {
       content: "### DVT POCUS QI — ED 회피 + 비용 절감 (Hui POCUS J 2026) [CLINICAL]\n> Hui CK et al. POCUS J 2026\n\n**핵심**: 일차의료 외래 POCUS DVT 평가 도입 후:\n- **46% ED 회피** (DVT 의심 환자)\n- **$85,000/year 비용 절감** (단일 클리닉 기준)\n- 진단 정확도 — 정식 doppler와 일치율 ↑\n\n**프로토콜 (간소화 2-point compression)**:\n1. **대퇴정맥 (common femoral)**: 대퇴 인대 직하방, 압박 가능성\n2. **슬와정맥 (popliteal)**: 슬와 fossa, 압박 가능성\n\n→ 두 위치 모두 압박 가능 = DVT 배제 가능 (sensitivity ~95%)\n→ 압박 불가 = DVT 의심 → doppler 또는 응급실\n\n**일차의료 적용 조건**:\n- 5-10시간 훈련으로 GP 단기 acquisition 가능\n- Wells score + age-adjusted D-dimer ([[clinical-reasoning]] pretest_probability_d_dimer) + POCUS 통합\n- 외래에서 DVT 의심 → bilateral 평가 → DVT 양측 vs 단측 ([[skin-soft-tissue-infection]] 양측 cellulitis 감별과 연계)",
       sources: ["Hui CK et al. POCUS J 2026. PMID:42131561"]
+    },
+    fm_pocus_10yr_alumni: {
+      content: "### FM POCUS 10년 커리큘럼 추적 — 실사용 패턴 [INSIGHTS]\n> [출처: Vaughan A et al. Family Medicine 2026;58(6). PMID:42308619] — 레지던트 POCUS 커리큘럼 10년 alumni(2015–2022, 58% 응답).\n\n**핵심**: 졸업 후 **44% 지속 사용** · 농촌 의사 활용률↑(의뢰 장벽) · 청구율 전국 평균 초과. 생존율 높은 영역 = **피부·연부조직 > 근골격 > 시술 유도** (심장·폐보다 실사용↑, 다른 연구와 일치).\n\n### 피부 POCUS 활용 (선형 고주파 7–15MHz)\n- **농양(abscess)**: 경계 있는 저에코 액체집적 ± 주변 에코↑ → \"만져서 연하다\" 판단 대체, 절개배농 결정 (STFM Tier 1 적응증)\n- **연조직염(cellulitis)**: cobblestone appearance(진피·피하 부종 격자) — 액체집적 없으면 절개 불필요 → 항생제 단독\n- 한국 적용: 체격 작은·고령·당뇨 환자 촉진 불확실 시 보조, drainage 결정 전 확인. 보험급여 [출처 미확인 — Researcher 검증 권장]\n- ⚠ 단일 프로그램 alumni — 일반화 주의",
+      sources: ["Vaughan A et al. Family Medicine 2026;58(6). PMID:42308619, DOI:10.22454/FamMed.2026.621160"]
     }
   },
   uiHooks: null
@@ -7380,7 +7395,8 @@ var _clinical_communication_v2 = {
   keywords: ["clinical-communication","임상소통","clinical communication","Glasgow Consensus Statement","글래스고 합의문","인지과부하","cognitive overload","신뢰형성","취약성","권력비대칭","power asymmetry","가정","assumption","소통장벽","communication barriers","Calgary-Cambridge"],
   parents: [],
   primarySources: [
-    "Gulbrandsen P, Udvardi A. Could the overarching tasks in the Glasgow Consensus Statement change teaching and practice? Patient Educ Couns 2026;148:109561. PMID:41762451, DOI:10.1016/j.pec.2026.109561"
+    "Gulbrandsen P, Udvardi A. Could the overarching tasks in the Glasgow Consensus Statement change teaching and practice? Patient Educ Couns 2026;148:109561. PMID:41762451, DOI:10.1016/j.pec.2026.109561",
+    "O'Leary ST, Danchin M. Addressing Vaccine Hesitancy. N Engl J Med 2026;394(21):2134-2145. PMID:42160716, DOI:10.1056/NEJMcp2516616"
   ],
   sections: {
     notes: {
@@ -7398,6 +7414,10 @@ var _clinical_communication_v2 = {
     sdm_burden_scoping: {
       content: "### SDM 부담 — 218개 연구 범위 리뷰 [INSIGHTS]\n> Montori V et al. Patient Educ Couns 2026 — scoping review 218 studies\n\n**SDM 부담을 명시적으로 측정한 연구는 단 한 건도 없음**\n\n| 부담 유형 | 간접 포착 비율 |\n|---|---|\n| **인지적 부담** (정보처리·이해) | **98.6%** |\n| **정서적 부담** (불안·두려움·불확실성) | 95.8% |\n| **사회적 부담** (가족·역할 갈등) | 92.6% |\n\n- 최다 사용 대리 지표: **Decisional Conflict Scale (DCS)** — 71% 연구\n- SDM 전용 부담 측정 도구 현재 없음\n\n**외래 SDM 실천 시사점**:\n- 환자가 SDM 부담 느껴도 의료진 인식 못하는 구조적 문제\n- 고부담 결정 시 인지·정서 부담 명시 탐색: \"어떤 점이 결정하기 어려우세요?\"\n- DCS 항목 스크리닝: \"확실하지 않아서 걱정된다\", \"어떻게 결정해야 할지 모르겠다\"\n- SDM ≠ 정보 제공 — 부담 없이 결정 돕는 것이 본질\n- 인지 부담 최소화: 한 번에 1–2 핵심 옵션·결정 분할(지금 결정+다음 외래 확인)·보호자 동석·결정 메모 제공",
       sources: ["Montori V et al. The burden of shared decision-making: A scoping review of burden assessments in SDM research. Patient Educ Couns 2026;148:109550. PMID:41713171, DOI:10.1016/j.pec.2026.109550"]
+    },
+    vaccine_hesitancy_communication: {
+      content: "### 소아 백신 망설임 커뮤니케이션 [CLINICAL]\n> [출처: O'Leary ST, Danchin M. N Engl J Med 2026;394(21):2134-2145. PMID:42160716]\n\n**핵심**: 백신 망설임 부모에게 **추정적(presumptive) 접근**(\"오늘 MMR 맞춰드릴게요\")이 개방형(\"맞추실 건가요?\")보다 접종률 유의하게 높음.\n\n**동기면담(MI) 4기술**: ① 반영적 경청 ② 정보교환 허락(\"말씀드려도 될까요?\") ③ 자율성 지지(\"결정은 부모님께\") ④ 마무리 열기(\"다음에 다시 얘기해요\").\n\n**상황별**: 가벼운 망설임=추정적+열린질문 / 강한 거부=논쟁 금지·공통분모(\"아이 건강 최우선 알아요\")·우려 청취 후 정보허락 / 미신정보=**사실-오개념-사실 샌드위치**(자폐-백신설: \"아이 안전 중요→2010 철회·이후 수백만명 연구 무관→접종이 가장 확실한 보호\").\n\n**프로세스**: 예약 전 백신 목록 안내 → 추정적 시작 → 거부 시 우려청취·정보교환·자율성 존중 → 거부 사유 차트 기록.",
+      sources: ["O'Leary ST, Danchin M. N Engl J Med 2026;394(21):2134-2145. PMID:42160716, DOI:10.1056/NEJMcp2516616"]
     }
   },
   uiHooks: null
@@ -8834,7 +8854,8 @@ var _osteoarthritis_v2 = {
   kind: "disease",
   keywords: ["osteoarthritis","골관절염","OA","관절통","joint pain","knee OA","hip OA","CBT-i OA","OA sleep","metformin OA"],
   primarySources: [
-    "Hall M et al. Time to wake up to the potential benefits of targeting sleep in osteoarthritis management. Osteoarthritis Cartilage 2026;34(6):776-783. PMID:41876082, DOI:10.1016/j.joca.2026.03.122"
+    "Hall M et al. Time to wake up to the potential benefits of targeting sleep in osteoarthritis management. Osteoarthritis Cartilage 2026;34(6):776-783. PMID:41876082, DOI:10.1016/j.joca.2026.03.122",
+    "Shaughnessy AF. Aerobic Exercise More Effective Than Resistance Exercise for Knee OA. Am Fam Physician 2026;113(6):604-605. PMID:42301876"
   ],
   sections: {
     definition: {
@@ -8852,6 +8873,10 @@ var _osteoarthritis_v2 = {
     referral: {
       content: "- 기능 저하 심한 진행성 OA (KL grade 3-4) → 정형외과 (관절치환 검토)\n- 염증성 관절염 의심 (조조강직 >1h·다관절·CRP↑) → 류마티스\n- 신경병증성 통증 동반 → 통증의학과\n\n관련: [[chronic-pain-integrative]] · [[depression-screening]] · [[obesity]] · [[diabetes]]",
       sources: []
+    },
+    aerobic_vs_resistance: {
+      content: "### 슬관절 OA: 유산소 > 저항운동 (AFP POEM 2026)\n> [출처: Shaughnessy AF. Am Fam Physician 2026;113(6):604-605. PMID:42301876]\n\n**핵심**: 무릎 OA 운동 처방 시 **유산소 운동이 저항운동보다 통증·기능 개선 우월**. 저충격 유산소(수영·자전거·빠르게 걷기·수중운동) 1차 권고.\n\n**러닝과 연골 (근거 외 참고)**: '러닝→연골 악화' 통념은 대규모 관찰연구로 지지 안 됨 — 오히려 recreational running은 슬관절 OA 위험↓ 연관(연골 영양=압력-부하 사이클). 단 고충격 반복(마라톤·고강도)은 OA 환자 주의. 실용: OA 있으면 러닝보다 수영·자전거 우선 + 증상 없으면 가벼운 걷기 병행. [러닝+OA 직접 근거는 이 POEM 범위 밖 — 별도 SR 검증 권장]",
+      sources: ["Shaughnessy AF. Am Fam Physician 2026;113(6):604-605. PMID:42301876"]
     }
   },
   uiHooks: null
@@ -9195,7 +9220,8 @@ var _myopia_outdoor_taiwan_v2 = {
   keywords: ["myopia-outdoor-taiwan","근시","myopia","실외활동","outdoor activity","天天120","톈톈120","천천120","myopia prevention","근시 예방","Wu Pei-Chang"],
   primarySources: [
     "대만 교육부(MOE) 天天120(톈톈120) 정책 — 2010.9 시행. 재학 중 하루 120분 실외활동 권고 (국가 근시 예방 전략)",
-    "Wu PC(吳佩昌) 등 — 전국 초등학생 나안시력 반기별 검진 데이터 분절회귀 분석. [원 논문 PMID 미확인 — Researcher 검증 대기]"
+    "Wu PC, Chen CT, Chang LC, et al. Increased Time Outdoors Is Followed by Reversal of the Long-Term Trend to Reduced Visual Acuity in Taiwan Primary School Students. Ophthalmology 2020 Nov;127(11):1462-1469. PMID:32197911 (전국 초등학생 나안시력 분절회귀)",
+    "Dai J et al. Exposure-response association between outdoor activity time and myopia risk in Chinese children and adolescents: SR/MA. J Glob Health 2026;16:04122. PMID:41928550, DOI:10.7189/jogh.16.04122 (31연구 n=380,215)"
   ],
   sections: {
     definition: {
@@ -9204,7 +9230,11 @@ var _myopia_outdoor_taiwan_v2 = {
     },
     evidence: {
       content: "대만은 전국 초등학생(1~6학년, **매년 120만~190만 명**)의 나안시력을 **반기마다** 측정한다. 저시력(근시 대리지표) 유병률:\n\n| 연도 | 저시력 유병률 | 비고 |\n|---|---|---|\n| 2001 | 34.8% | 상승 추세 시작 |\n| 2011 | 50.0% | 개입 직전 정점 |\n| 2012 | 49.4% | 天天120 시행 후 |\n| 2015 | 46.1% | 하락 지속 |\n\n- **분절회귀**: 개입 **전 연 +1.58%** → 개입 **후 연 −2.34%** 로 방향 반전\n- 꾸준히 오르던 연간 추세가 天天120 시행 후 **하락으로 반전** — \"추세를 꺾은 사례\"의 핵심 근거",
-      sources: ["Wu PC 등, 전국 학생 시력검진 데이터 분절회귀. [원 논문 PMID 미확인 — Researcher 검증 대기]"]
+      sources: ["Wu PC et al. Ophthalmology 2020;127(11):1462-1469. PMID:32197911"]
+    },
+    "메타분석 검증 (2시간 임계치)": {
+      content: "대규모 SR/MA(Dai J, J Glob Health 2026;16:04122, 31연구 n=380,215 중국 아동)가 실외활동-근시 노출반응을 독립 검증:\n\n| 실외활동 | OR (vs <1h/일) | 95% CI |\n|---|---|---|\n| 1~2h/일 | 0.85 | 0.79–0.92 |\n| 2~3h/일 | 0.86 | 0.78–0.95 |\n| ≥3h/일 | 0.74 | 0.63–0.87 |\n| **≥2h(이분화)** | **0.74** | 0.69–0.80 |\n\n- 天天120의 **120분(2시간) 용량**이 노출-반응 곡선의 **실용 임계치**로 독립 검증\n- 환자교육 강화 근거: \"하루 2시간 밖에서 놀기\" = OR 0.74(위험 25%↓)\n- 한계: 관찰연구 풀링(I²=94%)·중국 아동 대상, 2시간 초과 추가 이득은 완만",
+      sources: ["Dai J et al. J Glob Health 2026;16:04122. PMID:41928550"]
     },
     "program-design": {
       content: "두 가지 단서를 붙여야 정확하다.\n\n1. **의무가 아니라 권고** — 지금도 학교 참여는 강제되지 않는다. 그럼에도 **인구 단위 효과**가 나왔다는 점이 오히려 개입의 강력함을 보여준다.\n2. **용량(dose)**: 하루 120분 = **주 10시간** 실외활동. \"실외 빛 노출량\"을 학교 일과에 직접 심은 설계.",
@@ -9219,7 +9249,7 @@ var _myopia_outdoor_taiwan_v2 = {
       sources: []
     },
     notes: {
-      content: "- **출처 상태**: 인용 수치·서사는 본문 내장 출처(대만 MOE 정책 + Wu PC 분절회귀)에 근거하나 **원 논문 정확한 서지·PMID는 미확인**. Researcher 검증 후 primarySources를 정식 Tier 1 인용으로 교체할 것.\n- 생활습관·예방 축 전반은 [[scope]] Tier 7(생활습관의학) 참조.",
+      content: "- **출처 상태**: Wu PC 분절회귀 원 논문 PMID:32197911(Ophthalmology 2020) 확인 완료 + Dai 2026 메타분석(PMID:41928550) 독립 검증. 정식 Tier 1 인용.\n- 생활습관·예방 축 전반은 [[scope]] Tier 7(생활습관의학) 참조.",
       sources: []
     }
   },
@@ -9233,3 +9263,41 @@ KNOWLEDGE_BUNDLE["myopia"] = _myopia_outdoor_taiwan_v2;
 KNOWLEDGE_BUNDLE["근시"] = _myopia_outdoor_taiwan_v2;
 KNOWLEDGE_BUNDLE["myopia prevention"] = _myopia_outdoor_taiwan_v2;
 KNOWLEDGE_BUNDLE["근시 예방"] = _myopia_outdoor_taiwan_v2;
+
+/* amenorrhea — 무월경 진단·관리 (Klein AFP 2026). 병변위치별 감별 + 기본검사세트 + 진단패턴. [CLINICAL] */
+var _amenorrhea_v2 = {
+  kind: "disease",
+  keywords: ["amenorrhea","무월경","1차무월경","2차무월경","primary amenorrhea","secondary amenorrhea","FHA","기능성시상하부무월경","POI","조기난소부전","PCOS","고프로락틴혈증"],
+  primarySources: [
+    "Klein DA, Sylvester JE, Paradise SL. Amenorrhea: A Practical Approach to Diagnosis and Management. Am Fam Physician 2026;114(1):72-85. PMID:42607239"
+  ],
+  sections: {
+    definition: {
+      content: "- **1차 무월경**: 만 15세까지 초경 없음, 또는 유방 발달(thelarche) 3년 이후 미발현\n- **2차 무월경**: 이전 정상 월경 후 **3개월** 중단 (불규칙 월경은 **6개월**)",
+      sources: []
+    },
+    differential: {
+      content: "### 병변 위치별 (FSH/LH·E2 패턴)\n| 위치 | 진단 | FSH/LH | E2 | 특징 |\n|---|---|---|---|---|\n| 시상하부↓ | 기능성 시상하부 무월경(FHA) | ↓/정상 | ↓ | 섭식장애·과운동·스트레스 |\n| 뇌하수체 | 고프로락틴혈증 | 정상/↓ | ↓ | 프로락틴↑·시야장애 |\n| 난소 | 조기난소부전(POI)·터너 | ↑↑ | ↓↓ | 열감·40세 미만 |\n| 자궁·유출로 | Asherman·처녀막폐쇄 | 정상 | 정상 | 주기 복통(유출차단) |\n| 과잉안드로겐 | PCOS | 정상~↑ | 정상~↓ | 안드로겐 증상 |\n\n### 1차 무월경 추가: 터너(45,X)·마이어-로키탄스키(자궁·질 부재)·안드로겐불감증(46,XY) → 핵형 검사",
+      sources: []
+    },
+    exam: {
+      content: "### 기본 검사 세트 (필수)\n| 검사 | 해석 |\n|---|---|\n| **임신검사(hCG)** | 항상 1순위 — 가장 흔한 2차 무월경 원인 |\n| E2 | ↓ = 에스트로겐 결핍 |\n| FSH | ↑+↓E2=난소부전 / ↓=시상하부·뇌하수체 |\n| 프로락틴 | ↑ → 뇌하수체 MRI |\n| TSH | 갑상선저하 → 프로락틴 상승 가능 |\n\n추가(개별화): 안드로겐(testosterone·DHEAS, PCOS 의심) · 핵형(1차 무월경·POI<40세) · 골반/뇌 영상(프로락틴>100)",
+      sources: []
+    },
+    protocol: {
+      content: "- **FHA**: 원인 교정(섭식·운동·스트레스) + BMD 평가(DXA)·칼슘/비타민D, 지속 시 에스트로겐 보충\n- **POI(<40세)**: HRT/MHT 자연폐경(51세)까지 — 심혈관·골·인지 보호. 임신 계획 시 생식의학 의뢰\n- **PCOS**: 생활습관(체중 5%↓ → 월경 회복) + 대사 모니터링(평생, T2DM·자궁내막암) + 자궁내막 보호(주기적 프로게스틴/OCP)\n- **고프로락틴혈증**: 원인 약물 중단 → 선종 시 Cabergoline/Bromocriptine(신경내분비 주도)",
+      sources: []
+    },
+    "진단 패턴 요약": {
+      content: "| 패턴 | 진단 |\n|---|---|\n| FSH↑↑ + E2↓↓ | 난소부전(POI/터너) |\n| FSH↓ + E2↓ | 시상하부(FHA) |\n| 프로락틴↑ + FSH정상 | 고프로락틴혈증 |\n| 안드로겐↑ + 난소다낭 | PCOS |\n| hCG↑ | 임신 |\n\n주의: PCOS는 배제 진단 · 1차무월경+고FSH → 핵형 필수 · FHA는 정상체중에도 과운동·저칼로리로 발생",
+      sources: []
+    }
+  },
+  uiHooks: { guide: ["*"] }
+};
+KNOWLEDGE_BUNDLE["amenorrhea"] = _amenorrhea_v2;
+KNOWLEDGE_BUNDLE["무월경"] = _amenorrhea_v2;
+KNOWLEDGE_BUNDLE["1차무월경"] = _amenorrhea_v2;
+KNOWLEDGE_BUNDLE["2차무월경"] = _amenorrhea_v2;
+KNOWLEDGE_BUNDLE["기능성시상하부무월경"] = _amenorrhea_v2;
+KNOWLEDGE_BUNDLE["조기난소부전"] = _amenorrhea_v2;

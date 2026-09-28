@@ -147,6 +147,7 @@ JSON만 반환 (다른 텍스트 절대 금지):
   paresthesia (손발저림/대칭 vs 비대칭/AAFP 2020·AAN 2022 painful DPN 4계열 동등/SPEP/IFE 1차 패널/INH B6 결핍/CIPN duloxetine ASCO 2020 — 일반 말초신경병증 평가·약물 선택 맥락. DPN·수근관·CKD·B12·갑상선저하증 모두 별도 키와 보완)
   chest-xray-template (기숙사 입소·검진 CXR SOAP template/Z115 General medical examination/URI Sx (-) — 무증상 검진 결과지 작성 맥락. by 미르)
   ibd (염증성 장 질환/크론병/궤양성대장염/IBD/혈변+만성 설사+복통+체중감소/초가공곡물 식이 상담 — IBD 의심·생활습관 상담 맥락)
+  amenorrhea (무월경/1차 만15세까지 초경 없음·2차 정상 월경 후 3개월 중단/hCG 항상 1순위·FSH·E2·프로락틴·TSH/FHA·POI·PCOS·고프로락틴혈증 병변위치별 감별 — 월경 중단·초경 지연 평가 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */

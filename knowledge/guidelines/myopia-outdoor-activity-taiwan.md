@@ -11,9 +11,9 @@ relations: []
 
 > primarySources (Tier 1):
 > - 대만 교육부(MOE) **天天120(톈톈120, "매일 120분")** 정책 — 2010.9 시행. 재학 중 하루 120분 실외활동 확보를 학교에 권고하는 국가 근시 예방 전략
-> - Wu PC(吳佩昌, Kaohsiung Chang Gung) 등 — 전국 초등학생(1~6학년) 나안시력 반기별 검진 데이터 **분절회귀(segmented regression) 분석**. **[원 논문 PMID 미확인 — Researcher 검증 대기]**
+> - Wu PC, Chen CT, Chang LC, et al. **Increased Time Outdoors Is Followed by Reversal of the Long-Term Trend to Reduced Visual Acuity in Taiwan Primary School Students.** Ophthalmology 2020 Nov;127(11):1462-1469. PMID:[32197911](https://pubmed.ncbi.nlm.nih.gov/32197911/) — 전국 초등학생 나안시력 분절회귀 분석 (원 논문 확인 완료 2026-09-28)
 
-> ⚠ **[INSIGHTS]** — 정책·인구역학 요약. 인용 수치는 본문 내장 출처에 근거하나 **원 논문(Wu PC 분절회귀)의 정확한 서지·PMID는 미검증 상태**. Researcher 검증 후 Tier 1 정식 인용으로 교체할 것.
+> ⚠ **[INSIGHTS]** — 정책·인구역학 요약. Wu PC 분절회귀 원 논문(PMID:32197911) + Dai 2026 메타분석(PMID:41928550, 아래 섹션) 정식 인용 확인 완료.
 
 ---
 
