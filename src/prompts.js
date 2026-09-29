@@ -155,6 +155,9 @@ JSON만 반환 (다른 텍스트 절대 금지):
   cannabinoid-chronic-pain (칸나비노이드 만성 비암성 통증/nabilone 효과 확인 vs dronabinol·CBD 효과 없음/THC 소폭효과+부작용 — "대마 제품 써도 되나" 상담 맥락)
   ckm-syndrome (심혈관·신장·대사 증후군/AHA 2023 통합 프레임/SGLT-2i·GLP-1RA·finerenone 다장기 이익/DM+CKD+CVD 동반 — 다질환 통합 처방 맥락)
   dbt-brief-counseling (변증법적 행동치료 외래 단기/TIPP 급성 정서위기 5분 진정·PLEASE/자해·자살충동·정서조절장애 — 정서위기 단기상담 맥락)
+  incidental-physical-activity (우발적 신체활동/VILPA 고강도 4.6분·중강도 23.8분 CV사망↓/L자형/계단·장보기 일상활동 — 운동 안 하는 환자 첫 운동상담 맥락)
+  episodic-vestibular-syndrome (중년여성 삽화성 어지럼/폐경 증상↔어지러움 독립연관·편두통 무관/이명 동반/BPPV·HINTS + 폐경 스크리닝 병행 — 중년여성 반복 어지럼 평가 맥락)
+  tramadol-depression (장기 트라마돌 우울 위험/기간·용량 의존 HR ≥90일 1.37·>200mg 1.72/PHQ-9 재평가·SNRI 전환 — 근골격통증 트라마돌 장기처방 모니터 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */

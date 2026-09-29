@@ -1909,6 +1909,10 @@ var _resistant_htn_v2 = {
     referral: {
       content: "### 1차의료 적용\n- 가정혈압 모니터링 + 정확한 측정 기술 확인 먼저\n- 3제 최적화 확인 후 spironolactone 추가\n- 조절 불가 시 심장내과·신장내과 의뢰\n\n### 시술적 옵션 (의뢰 고려)\n- 신장 교감신경 차단술 (Renal sympathetic denervation)\n- 경동맥 압수용체 증폭술 (Carotid baroreceptor amplification)\n- 적응: 약물 내성 또는 충분한 혈압 조절 불가 시",
       sources: []
+    },
+    jama_2026_review: {
+      content: "### 저항성 고혈압 진단·관리 리뷰 (JAMA 2026) [CLINICAL]\n> [출처: Azizi M et al. JAMA 2026;335(16):1428-1439. PMID:41870448]\n\napparent 저항성 = 치료환자 ~19.7%, **진성(백의·비순응·이차성 배제 후) ~10%**. 진단 전 배제(부정확 측정·비순응·백의·이차성) 필수. 확정 시 **MRA(스피로노락톤) 추가**가 핵심.",
+      sources: ["Azizi M et al. JAMA 2026;335(16):1428-1439. PMID:41870448, DOI:10.1001/jama.2026.1221"]
     }
   },
   uiHooks: null
@@ -2654,6 +2658,10 @@ var _recurrent_uti_v2 = {
     notes: {
       content: "외래 실전:\n- **폐경 여성 재발성 UTI → 질 에스트로겐 크림/좌제** 처방 고려 (비항생제 1차)\n- 재발 예방 시 요배양 없이 항생제 처방 반복 금지 → 내성 유발\n- D-만노스는 OTC — 경증 예방에 먼저 안내 가능",
       sources: []
+    },
+    afp_2026_rutis: {
+      content: "### 여성 재발성 UTI 진단·관리 (AFP 2026) [CLINICAL]\n> [출처: Zwahlen D et al. Am Fam Physician 2026;113(6):568-577. PMID:42301870]\n\n정의: 6개월 2회 또는 12개월 3회 비합병 UTI(연 재발 14–25%). AUA 기반 평가·예방: 행동요법·**질 에스트로겐(폐경)**·예방적 항생제·비항생제(D-mannose 등). 반복 배양·불필요 영상 지양.",
+      sources: ["Zwahlen D et al. Am Fam Physician 2026;113(6):568-577. PMID:42301870"]
     }
   },
   uiHooks: null
@@ -2806,6 +2814,10 @@ var _dm_dyslipidemia_v2 = {
     referral: {
       content: "- 당뇨 환자 지질 검사 시 **Non-HDL-C 계산해 목표 달성 여부 확인** — 직접 적용\n- Statin → Ezetimibe 추가: 일차진료 처방\n- PCSK9 억제제: 보험 기준 확인 후 처방 (고위험군 급여 요건)\n- 심혈관 전문의: 매우 고위험 + 목표 미달 + PCSK9 고려 시",
       sources: []
+    },
+    statin_baseline_risk: {
+      content: "### T2DM 스타틴 — 기저위험별 효과·안전 (Ann Intern Med 2025, target trial) [CLINICAL]\n> [출처: Yan VKC et al. Ann Intern Med 2025;179(2):157-167. PMID:41461087] UK 실데이터, T2DM 10년.\n\n**저위험(QRISK3<10%)에서도** 전사망 RR 0.80(0.67–0.97)·주요 CVD RR 0.78(0.66–0.91) 유의 감소(모든 위험층 유의). → T2DM에선 기저 CV위험이 낮아도 스타틴 이익.",
+      sources: ["Yan VKC et al. Ann Intern Med 2025;179(2):157-167. PMID:41461087, DOI:10.7326/ANNALS-25-00662"]
     }
   },
   uiHooks: null
@@ -2891,6 +2903,10 @@ var _glp1_strategy_v2 = {
     precaution: {
       content: "### GLP-1 반응 예측 인자 — 미신 vs 근거\n- ❌ **위장관 부작용이 큰 경우** → 미신. 부작용과 체중감량은 독립적 (STEP 1-3 mediation, GI AE 기여 <1%p, PMID:34514682)\n- ❌ **Insulin resistance 있는 경우** → 반대. T2DM 환자가 오히려 감량 적음 (STEP2 ~10% vs STEP1 ~15-17%, PMID:36050763)\n- ✓ 초기 식욕 감소·meal size↓ [CLINICAL — 조건부]\n- ✓ 음식 보상/갈망 감소 [CLINICAL — 조건부]\n- ✓ **초기 체중감소 속도 — 가장 강력한 predictor** (PMID:31682516)\n\n### 효과 안 좋을 것으로 예상\n1. Adaptive thermogenesis 강한 경우 [CLINICAL]\n2. 식사량 이미 적음 [TIPS — 출처미확인]\n3. 다이어트 반복 이력 [TIPS — 출처미확인]\n4. 조기 plateau\n5. 근육량 낮음 [CLINICAL — 조건부] (효능보다 안전성 우려)\n6. GLP-1 사용 중에도 음주 지속 [TIPS — 출처미확인]\n\n### 인크레틴 계열 체중감량 시 근육 손실 경고 [CLINICAL]\n> [출처: Batsis JA et al. Ann Intern Med 2026 Apr 17. PMID:41996180]\n> 36 RCT 체계적 고찰 — liraglutide·semaglutide·tirzepatide·dulaglutide; 기간 중앙 26주.\n\n| 측정 방식 | 근육 지표 손실 비율 (중앙) | 25% 기준치 초과 |\n|---|---|---|\n| BIA / DXA (FFM·LST) | **34.9%** (IQR 17.0–46.9%) | **65%** |\n| CT / MRI (골격근 지수) | **35.8%** (IQR 29.8–50.4%) | **100%** |\n| 전체 합산 | **중앙 34.9%** (IQR 19.0–48.2%) | **68%** |\n\n> 비약물 비교군(생활습관·위약)도 50%에서 기준치 초과 — 빠른 체중감량 자체가 근육 손실 유발.\n\n**임상 시사점:**\n- GLP-1RA 처방 시 **저항운동 + 단백질 ≥1.2g/kg/일 교육 필수**\n- 고령(≥70세)·근감소증·저활동 → 체성분 모니터링 (BIA 또는 악력검사)\n- 객관적 신체기능 지표(보행 속도·악력) 추적 — 기능적 영향 데이터 아직 부족\n\n**환자 교육 문구:**\n> \"이 약으로 살을 빼다 보면 근육도 같이 빠질 수 있어요. 단백질 섭취와 근력 운동을 꼭 함께 해야 합니다.\"\n\n### ONS 병용 — 체성분 보존 근거 [CLINICAL — 조건부]\n> [출처: Hong K et al. Diabetes Metab Syndr Obes 2026;19:574765. PMID:42117035]\n> 미국 외래 252명 후향 코호트, CEM 매칭 (ONS n=88 vs 비ONS n=32). 단백질 영양불량 진단 + GLP-1 RA 치료군에 ONS 처방.\n> ⚠ **COI**: 저자 3명 Abbott Nutrition 소속 — 독립 복제 전까지 신중 적용.\n\n**ONS vs 비ONS (difference-in-differences):**\n| 지표 | ONS 효과 | 유의성 |\n|---|---|---|\n| BMI | -1.4 kg/m² | p<0.05 |\n| 체지방 | -8.4 lbs | p<0.05 |\n| 체지방률 | -2%p | p<0.05 |\n| 제지방(LBM) 손실 | -5.5 lbs | p<0.01 |\n| **지방:LBM 손실비** | **2.3** | p<0.01 |\n\n효과 가장 큰 서브그룹: <50세 · ONS 순응 ↑ · GLP-1 RA 181~365일 사용 · 당뇨 없는 비만\n\n**임상 적용:**\n- GLP-1 RA 처방 시 **단백질 영양불량 고위험군 식별 → ONS 병행 처방 고려**\n- 고위험 프로파일: 저체중·근감소·저활동·영양불량력·≥50세\n- LBM도 일부 손실되나 fat-to-LBM 손실비 2.3 — 체성분 개선 방향 유지\n- 위 \"저항운동 + 단백질 ≥1.2g/kg/일\" 원칙과 병행",
       sources: []
+    },
+    hypersomnolence_iron: {
+      content: "### GLP-1RA 과다수면·철결핍 신호 (J Diabetes Metab Disord 2026) [CLINICAL — 조건부]\n> [출처: Kamel-Abusalha L et al. PMID:41867417] TriNetX, T2DM·비만, 118,993 매칭.\n\n과다수면 HR 1년 1.21·5년 1.23(절대위험 작음 ~0.4–0.7%) · 철결핍 5년 HR 1.11. → 장기 GLP-1 환자서 졸림·철결핍 모니터 고려. 관련 [[anemia]].",
+      sources: ["Kamel-Abusalha L et al. J Diabetes Metab Disord 2026;25(1):117. PMID:41867417, DOI:10.1007/s40200-026-01929-0"]
     }
   },
   uiHooks: null
@@ -3287,6 +3303,10 @@ var _cascade_v2 = {
     chei_oab_cascade_dementia: {
       content: "### ChEI → OAB 항무스카린제 cascade — Mirabegron 우선 (Cooper JAGS 2026) [CLINICAL — 조건부]\n> Cooper N et al. J Am Geriatr Soc 2026;74(5):1314-1325 — 치매 환자 cascade 분석\n\n**핵심 발견**:\n- 치매 환자에서 ChEI (donepezil·rivastigmine) → urinary incontinence/OAB → **항무스카린제** 처방 cascade 흔함\n- 항무스카린제 (oxybutynin·tolterodine) 추가 시 **섬망 HR 1.35** (CI wide·통계적 유의성 경계)\n- Cognitive deterioration·낙상·hospitalization 위험 ↑\n\n**대체 전략**:\n- **Mirabegron** (β3 agonist) 우선 — 항콜린 부작용 없음\n- 행동 치료 (bladder training·골반저 운동)\n- ChEI 효과 재평가 → 효과 부족 시 중단 검토\n- GSM 동반 → topical estrogen ([[gsm-genitourinary-menopause]])",
       sources: ["Cooper N et al. J Am Geriatr Soc 2026;74(5):1314-1325. PMID:41833520"]
+    },
+    antihtn_nsaid_prochlorperazine: {
+      content: "### 항고혈압제·NSAID → 프로클로르페라진 cascade (Drugs Aging 2026) [CLINICAL]\n> [출처: Gilmore S et al. Drugs Aging 2026;43(4):373-383. PMID:41865214]\n\n노인에서 항고혈압제 또는 NSAID 시작 후 **어지럼·구역** 호소 시 → 프로클로르페라진(항구토제) 즉시 추가 **전에 원인 약물 재검토** 우선. \"최근 새 약 추가·용량 변경 있었나요?\" 질문이 cascade 차단 열쇠.",
+      sources: ["Gilmore S et al. Drugs Aging 2026;43(4):373-383. PMID:41865214, DOI:10.1007/s40266-026-01293-x"]
     }
   },
   uiHooks: {
@@ -3425,6 +3445,10 @@ var _sinusitis_v2 = {
     notes: {
       content: "한국 외래에서 매크로라이드(Clarithromycin·Roxithromycin)를 1차 또는 step에 끼워 쓰는 임상 관행 존재 — 가이드라인과 괴리 [TACIT — guideline-vs-practice]. ABRS 90% 이상은 viral → 항생제 없이 자연 호전. 항생제 적응증: 10일 이상 지속 + 악화 + 고열·심한 안면통.",
       sources: []
+    },
+    abrs_rer_2025: {
+      content: "### 세균성 ABRS 감별·항생제 기준 (AFP 2025 RER) [CLINICAL]\n> [출처: Butler FM, Hernandez DR. Am Fam Physician 2025;111(1):47-53. PMID:39823615]\n\n세균성 3징: 편측 안면통·압박, 발열 >39°C, 화농성 비루+비폐색. 항생제 기준(3중 1 해당). **7일 미만 경증 = 대기**. amoxicillin ≈ amoxicillin-clavulanate(동등).",
+      sources: ["Butler FM, Hernandez DR. Am Fam Physician 2025;111(1):47-53. PMID:39823615"]
     }
   },
   uiHooks: null
@@ -4411,6 +4435,10 @@ var _deprescribing_v2 = {
     korea_polypharmacy_hira: {
       content: "### 한국 HIRA 다약제 관리 시범 (Drugs Aging 2026) [CLINICAL]\n> [출처: Drugs Aging 2026. PMID:42570168] 심평원 2020–21, 34병원, ≥65세 입원+≥10종(또는 ≥5종+고위험).\n\n약사-의사 협력 처방 최적화 → **90일 재입원 aHR 0.85(15%↓)**, $340/환자 절감, **비용편익비 3.8**. 응급실 방문 차이 없음. 한국 실증 근거.",
       sources: ["Drugs Aging 2026. PMID:42570168"]
+    },
+    home_healthcare_decision_letters: {
+      content: "### 재택 약물관리 결정서한 미확인 문제 (Scand J Prim Health Care 2026) [INSIGHTS]\n> [출처: Nilsen MK et al. PMID:42132490] 노르웨이 농촌 질적 사례연구.\n\n약물관리 결정서한을 환자·간호사 거의 안 읽음 → 케어플랜·구두협의에 의존. 모호한 언어 → 해석편차 → 환자 권리 제한. → 재택 다약제 약물안전은 서한보다 **직접 소통·케어플랜**에 설계.",
+      sources: ["Nilsen MK et al. Scand J Prim Health Care 2026;44:2669814. PMID:42132490, DOI:10.1080/02813432.2026.2669814"]
     }
   },
   uiHooks: null
@@ -4847,6 +4875,10 @@ var _ckd_v2_full = {
     referral: {
       content: "- eGFR <30 (G4) → 신장내과\n- eGFR 30–44 (G3b) + 단백뇨 (ACR >300) → 조기 의뢰\n- eGFR 빠른 감소 (>5 mL/min/1.73m²/year) → 의뢰\n- 원인 불명 CKD·혈뇨 동반·약물 내성 고혈압 → 의뢰\n- 관련: [[diabetes-dyslipidemia]], [[heart-failure]], [[glp1-selection-strategy]]",
       sources: []
+    },
+    antiviral_aki_ckd_elderly: {
+      content: "### CKD 노인 고용량 항바이러스 AKI 위험 (Pharmacol Res Perspect 2024) [CLINICAL]\n> [출처: Olar P et al. PMID:39428714] 온타리오 ≥66세 CKD.\n\n고용량 acyclovir/valacyclovir/famciclovir → lab 확인 AKI **가중 RR 3.83(1.87–7.87)**, 절대위험차 0.62%. → CKD 노인 herpes(대상포진 등) 치료 시 **신기능 기반 용량 조정** 필수.",
+      sources: ["Olar P et al. Pharmacol Res Perspect 2024;12(6):e70028. PMID:39428714, DOI:10.1002/prp2.70028"]
     }
   },
   uiHooks: null
@@ -4953,6 +4985,18 @@ var _frailty_v2_full = {
     notes: {
       content: "허약은 가역적임을 환자·보호자에게 명확히 전달. 일차의료에서 다약제 재검토·낙상 예방·예방접종이 허약 회복의 핵심 레버. ITC 2026 표준화: 정의·스크리닝·역전 가능성 모두 일관 메시지.\n\n### 건강한 노인 — 생활습관 복합 교정과 건강수명 [CLINICAL]\n> [출처: Robb C et al. J Am Geriatr Soc 2026 May 7. PMID:42095703]\n> ASPREE (NCT01038583) 코호트, 호주 지역사회 거주 노인 11,287명 (중앙 74세), 추적 중앙 6.6년.\n\n| 생활습관 그룹 | 복합 결과(사망/치매/장애) 위험 |\n|---|---|\n| 비호의적 (0~1개 요소) | 기준 |\n| 중간 (2개) | **HR 0.75** (95% CI: 0.65~0.87) |\n| **호의적 (≥3개)** | **HR 0.60** (95% CI: 0.52~0.70) |\n| 건강수명 증가 (호의적 vs 비호의적) | **+10%** (6.6년 추적) |\n| 이환 압축 | 중간 수준 확인 |\n\n**4가지 생활습관 요소 (각 1점):**\n| 요소 | 기준 |\n|---|---|\n| **지중해 식이** | 준수 (점수 기반) |\n| **중등도 신체 활동** | 규칙적 유산소·근력 활동 |\n| **비흡연** | 현재 흡연 없음 |\n| **절주** | 중등도 이하 음주 |\n\n**외래 적용 포인트:**\n- **이미 건강한** 고령 환자에서도 생활습관 복합 교정이 노쇠·인지장애·사망 예방에 강력 근거\n- \"이미 건강하니까 괜찮다\"는 안일함 차단 — 예방 상담 대상을 병약 노인에만 한정하지 않음\n- 4요소 중 **3개 이상** 충족 시 복합 결과 40% 감소 → 구체적 목표 설정 근거\n- 연령·성별·교육·당뇨·비만·고혈압과 무관하게 효과 일관\n\n**재택·노인 클리닉 적용:**\n- 재택의료 방문 시: 4요소 충족 개수 간단 확인\n- 미충족 요소별 맞춤 개입 (영양사·운동처방사·금연)\n- [출처 미확인 — researcher 검증 권장]: 한국 노인 대상 지중해 식이 도구·신체활동 처방 급여\n\n### 지역사회 집합장소 참여 — 운동 부족 노인의 인지장애 예방 [CLINICAL]\n> [출처: Uemura K et al. J Am Geriatr Soc 2026 May 9. PMID:42105326]\n> 후향적 코호트, n=2,758명 ≥65세 지역사회 노인, 일본 Habikino시, 2020-2024 추적.\n\n| 운동습관 유무 | 집합장소 참여 → 인지장애 위험 |\n|---|---|\n| **운동습관 없는 노인** | HR **0.51** (95% CI 0.27~0.97) — 인지장애 **49% 감소** |\n| 운동습관 있는 노인 | HR 1.09 (0.57~2.09) — 효과 없음 |\n| 상호작용 p값 | 0.092 (경계 유의) |\n\n**임상 해석:**\n- 집합장소 참여 = 신체활동 + 사회적 교류 + 인지 자극 복합 노출\n- 이미 운동하는 노인은 추가 이익 없음 → **비활동 노인 특화 전략**\n\n**일차의료 적용:**\n- 관절통·허약·동기 부족으로 운동이 어려운 고령 환자에게 적용\n- \"경로당, 마을회관, 동네 모임에 꾸준히 나가세요\" — 인지장애 예방 근거로 권고\n- 재택의료 방문 시: 사회적 격리 + 지역사회 참여 정도 루틴 문진 추가\n\n**한계:** 후향적 관찰 — 역인과성 배제 불가, p=0.092 경계선, 1개 일본 시 데이터.",
       sources: []
+    },
+    geriatric_care_models: {
+      content: "### 국제 노인의료 모델 (EuGMS 2025) [INSIGHTS]\n> [출처: van der Velde N et al. J Am Geriatr Soc 2026. PMID:42117876]\n\n3개국 핵심: 섬망예방 **HELP**(미국 — 비약물: 수면·조기이동·수분·인지자극·시청각보조) · 낙상재활 **ACE Unit+STEADI**(캐나다) · 다약제 **구조화 약물검토 Beers/STOPP**(유럽).",
+      sources: ["van der Velde N et al. J Am Geriatr Soc 2026. PMID:42117876, DOI:10.1111/jgs.70478"]
+    },
+    activity_late_life_depression: {
+      content: "### 활동 참여 → 후기우울 위험↓ (Aging Ment Health 2026) [CLINICAL — 조건부]\n> [출처: Kappe J et al. PMID:41770608] AgeCoDe/AgeQualiDe n=2,305, 평균 81세, GDS-15≥6.\n\n전체 활동 HR 0.97 · **신체활동 HR 0.96(유일하게 유의)** · 사회·인지활동 무의. 성별차 없음. → 후기우울 예방엔 **신체활동** 처방.",
+      sources: ["Kappe J et al. Aging Ment Health 2026. PMID:41770608, DOI:10.1080/13607863.2026.2634130"]
+    },
+    korean_transitional_care_qual: {
+      content: "### 한국 허약노인 전환기 돌봄 질적연구 (2026) [INSIGHTS]\n> [출처: Lee JY et al. Int J Qual Stud Health Well-being 2026;21:2641803. PMID:41842916] Re-home 12주, 노인 9+보호자 9 인터뷰.\n\n주제: 건강 취약성 좌절 · 도움 구하기/받기 · 일상 루틴 재구성 → 통합 **\"현재 건강 수용 + 변형된 루틴 적응\"**. 한국 재택의료 적용 근거.",
+      sources: ["Lee JY et al. Int J Qual Stud Health Well-being 2026;21:2641803. PMID:41842916"]
     }
   },
   uiHooks: null
@@ -5019,6 +5063,10 @@ var _depression_screening_v2 = {
     referral: {
       content: "- 자살 사고 양성 → 즉시 정신건강의학과·응급실\n- 항우울제 2-3종 실패 → 정신건강의학과 (TRD 평가)\n- 양극성 의심 → 정신건강의학과\n- 관련: [[anxiety-depression-cbt]], [[chronic-pain-integrative]]",
       sources: []
+    },
+    sdoh_incident_depression: {
+      content: "### SDOH·노인 우울 발생 (SHARE, JAGS 2026) [CLINICAL — 조건부]\n> [출처: Besoain-Saldaña Á et al. PMID:41919405] SHARE 50세+ 만성질환자 12,319명, 3년.\n\n우울 발생 HR: **저교육 1.36** · 중교육 1.15 · 저소득 1.10 · 경제적 비활동 1.17. → 만성질환 노인 우울 선별 시 사회적 결정요인(교육·소득·고용) 고려.",
+      sources: ["Besoain-Saldaña Á et al. J Am Geriatr Soc 2026. PMID:41919405, DOI:10.1111/jgs.70414"]
     }
   },
   uiHooks: null
@@ -5074,6 +5122,10 @@ var _dyslipidemia_v2 = {
     ahaacc_2026_statin_expansion: {
       content: "### 2026 AHA/ACC 이상지질혈증 — 1차예방 스타틴 확대 [REGULATORY]\n> [출처: Anderson TS et al. JAMA 2026 Aug 18;336(7):557-564. PMID:42475062] (NHANES 2017–2023, 미국 성인)\n\n| | 2018 | 2026 |\n|---|---|---|\n| 70–79세 스타틴 대상 | 제한적 | **93%** |\n| 60–69세 | 일부 | **85%** |\n| 신규 편입 | — | **미국 2,150만명 (10yr ASCVD 평균 3.1%)** |\n\n30–79세의 56.6%(8,750만명) 대상 — 2018 대비 +2,150만명.\n\n**외래 SDM**: 신규군 10yr ASCVD 평균 3.1%(절대위험 낮음)·젊은 저위험 주류 → \"스타틴 필요한가\" 환자와 직접 논의. LDL≥190·DM·CKD는 위험추정 불필요 직접 적응증.\n\n**한국 주의**: 미국 인구 기반 — 한국 **KSoLA 2022 기준·위험도구 우선**, 본 가이드는 글로벌 트렌드 참고. [한국 적용 Researcher 검증 권장]",
       sources: ["Anderson TS et al. JAMA 2026;336(7):557-564. PMID:42475062, DOI:10.1001/jama.2026.11246"]
+    },
+    ezpave_ldl55: {
+      content: "### Ez-PAVE — LDL<55 집중강하 (NEJM 2026, 한국) [CLINICAL]\n> [출처: Lee YJ et al. N Engl J Med 2026;394(14):1365-1375. PMID:41910315]\n\n한국 ASCVD 3,048명, LDL<55 vs <70, 3년. 달성 LDL 56 vs 66. 복합 심혈관사건 **6.6% vs 9.7%, HR 0.67(0.52–0.86)** — 33%↓, NNT≈32/3년. → 초고위험 ASCVD 2차예방서 LDL<55 목표 지지(한국 근거).",
+      sources: ["Lee YJ et al. N Engl J Med 2026;394(14):1365-1375. PMID:41910315, DOI:10.1056/NEJMoa2600283"]
     }
   },
   uiHooks: null
@@ -5178,6 +5230,10 @@ var _hypertension_v2 = {
     severe_hypertension_afp_2026: {
       content: "### Severe Hypertension (≥180/110, TOD 없음) — AFP 2026 (Gauer) [CLINICAL]\n> Gauer RL. Am Fam Physician 2026;113:459-468\n\n**핵심 구분**:\n- **Severe HTN** (≥180/110 + 표적장기손상 **없음**) ≠ Hypertensive emergency\n- 외래 1위 원인: **약물 비순응** → 재복용/증량으로 해결\n\n**관리 원칙**:\n- **입원 치료는 단기 결과 개선 X** — 오히려 심혈관 사건·AKI·재원기간 ↑ (RCT 근거)\n- **단기작용·IV 항고혈압제 금기** — 급격 BP 강하 → 허혈성 사건\n- 경구 약물 재시작·증량 + 1-3일 외래 f/u\n- 가정 BP 측정·생활습관 강화\n\n**이차성 HTN 평가 4대 트리거**:\n1. **저항성** 고혈압 (3제 + 이뇨제 후도 미달)\n2. **점진적 악화** (안정기 환자 BP 신규 상승)\n3. **<30세** 발생\n4. **조기 TOD** (LVH·proteinuria·신부전·망막증)\n\n→ 4대 트리거 시 RAAS·PA·갈색세포종·COA 평가 ([[resistant-hypertension]])",
       sources: ["Gauer RL. Severe Hypertension: Evaluation and Treatment. Am Fam Physician 2026;113:459-468. PMID:42202349"]
+    },
+    impacts_bp_team: {
+      content: "### 저소득 팀기반 고혈압 RCT — IMPACTS-BP (NEJM 2026) [CLINICAL]\n> [출처: Mills KT et al. N Engl J Med 2026;394(14):1376-1387. PMID:41950472] FQHC 36곳 n=1,272 저소득(63% 흑인·76% 실직).\n\n다면 팀기반(약사·간호사 역할분담 · **약사 주도 up-titration 위임** · audit/피드백 · 코칭 · 가정혈압) → 조절률 유의 개선. 취약계층 고혈압 관리 모델 근거.",
+      sources: ["Mills KT et al. N Engl J Med 2026;394(14):1376-1387. PMID:41950472, DOI:10.1056/NEJMoa2504068"]
     }
   },
   uiHooks: null
@@ -5311,6 +5367,18 @@ var _anemia_v2 = {
     irf_recovery_marker: {
       content: "### IRF (Immature Reticulocyte Fraction) — 골수 회복 조기 지표\nReticulocyte 중 **가장 어린(갓 골수에서 나온) 분획 비율** — RNA 많은 것. 골수 생산의 가장 빠른 실시간 지표.\n\n| 지표 | 시점 |\n|---|---|\n| ARC | \"지금까지 나온 총 생산량\" |\n| **IRF** | \"골수가 방금 막 가동을 올렸는지\" — **며칠 더 일찍** |\n\n정상 범위: **2-17%** (기기마다 다름).\n\n**활용**:\n- 빈혈 회복/치료 반응 조기 신호 — 철분제·EPO·B12 후 ARC 오르기 전 **IRF 먼저 튐** — 골수 회복 첫 봉화\n- 골수이식·항암 후 회복 monitoring\n- 높은 IRF + 낮은 ARC = \"골수가 막 반응 시작했으나 아직 성숙한 적혈구로 못 내보냄\"\n\n### CRAS와 통합\nACD·신성빈혈·FID·ARC·IRF가 한 환자에 동시 등장 → [[cardiorenal-anemia-syndrome]] 통합 평가.",
       sources: ["Briggs C. Quality counts: new parameters in blood cell counting. Int J Lab Hematol 2009;31(3):277-297. PMID:19452619"]
+    },
+    panda_iron_pregnancy: {
+      content: "### 임신 철분 용량 — PANDA RCT (Blood Adv 2026) [CLINICAL]\n> [출처: Haynes S et al. PMID:42024457] 비빈혈 임산부 n=135, 황산철 200mg 매일 vs 격일 vs 주3회.\n\n**격일의 헵시딘 억제 이점이 임신 철수요 앞에서 상쇄** — sTfR 상승(철결핍)이 격일·주3회서 발생, 매일은 없음. 26–30주 철결핍 69–72%(3군 동일). → 임신 중엔 격일 이점 약함, 매일 투여 고려.",
+      sources: ["Haynes S et al. Blood Adv 2026. PMID:42024457, DOI:10.1182/bloodadvances.2026019740"]
+    },
+    menstrual_blood_loss_east_asian: {
+      content: "### 동아시아 월경 실혈·철상태 (AJCN 2026) [INSIGHTS]\n> [출처: Lee MR et al. PMID:42044770] FeGenes, 폐경 전 동아시아(EA) vs 북유럽(NE) 여성.\n\n동아시아 초경 이르고(12세) MBL 점수 높으나(24.0 vs 16.0), **MBL↑→ferritin↓ 연관이 북유럽에만 있고 동아시아엔 없음**. → 동아시아 여성 철결핍은 월경량만으로 설명 안 됨(식이 등 다요인 고려).",
+      sources: ["Lee MR et al. Am J Clin Nutr 2026. PMID:42044770, DOI:10.1016/j.ajcnut.2026.101326"]
+    },
+    iron5_screening: {
+      content: "### IRON-5 젊은 여성 철결핍 선별 (Scand J Prim Health Care 2026) [CLINICAL]\n> [출처: Vinge F et al. PMID:41916414] 스웨덴 여고생, ferritin<15 μg/L.\n\n5문항(각 1점): ①채식/비잡식 ②과다월경+불편 ③월경으로 활동제한 ④철분보충 미복용 ⑤호르몬피임 미사용. 일차의료·학교보건 빠른 선별 도구.",
+      sources: ["Vinge F et al. Scand J Prim Health Care 2026;44(1):2649329. PMID:41916414, DOI:10.1080/02813432.2026.2649329"]
     }
   },
   uiHooks: null
@@ -5933,6 +6001,10 @@ var _hf_pocus_ducs_v2 = {
     protocol: {
       content: "### POCUS DUCS 임상 적용 단계\n1. 입원 시 DUCS 측정 (baseline)\n2. 이뇨제 치료 후 ΔDUCS 추적 (72시간 변화)\n3. 퇴원 전 DUCS 재측정 → 30일 위험 stratification\n4. 퇴원 시 DUCS 높음 → 30일 follow-up 강화\n\n### POCUS 술기 요점\n- **B-lines**: 8 zone scan (≥3 B-lines = positive)\n- **VEXUS**: IVC + 간 정맥·문맥·간세정맥 doppler grade 0~3\n- ADHF 외래·응급 환경에서 POCUS 보유 시 적용 가능 (Mir-T1 #1 POCUS·초음파 중재 영역)",
       sources: []
+    },
+    vexus_prognosis_meta: {
+      content: "### VExUS 급성심부전 예후 (베이즈 메타, Curr Probl Cardiol 2026) [CLINICAL — 조건부]\n> [출처: Chaves VB et al. PMID:41747972] 5연구 565명(대부분 CICU·HFrEF).\n\n원내 사망률 VExUS ≤1: **1.9%** vs ≥2: **14.1%**. 평균 OR 0.175(≤1 보호). → VExUS 정맥울혈 등급이 급성심부전 예후 지표. ⚠ 중증 입원 코호트 — 외래 외삽 주의.",
+      sources: ["Chaves VB et al. Curr Probl Cardiol 2026;51(6):103305. PMID:41747972, DOI:10.1016/j.cpcardiol.2026.103305"]
     }
   },
   uiHooks: null
@@ -6582,6 +6654,10 @@ var _continuity_of_care_v2 = {
     sdm_training: {
       content: "### SDM 블렌디드 훈련 — GP 환자 중심 의사소통 기술 단기 2배 향상 [INSIGHTS]\n> [출처: Jaeken J et al. BMC Prim Care 2026. PMID:42104282]\n> 전후 비교 파일럿, n=10 GP, 벨기에, e-learning + 시뮬레이션 환자 면대면 세션. 관찰자·환자·의사 3관점 평가.\n\n| 지표 | 훈련 전 | 훈련 후 | p값 | Cohen's d |\n|---|---|---|---|---|\n| OPTION12 (관찰자 SDM) | 19.4 | 37.7 | 0.001 | — |\n| 4SDM 척도 | 9.2 | 17.0 | 0.0001 | **2.39** |\n\n- SDM 지식·기술·의도 모두 유의 향상\n- Cohen's d 2.39: **대형 효과** — \"연습하면 는다\"는 강력 실증\n\n**블렌디드 훈련 구성:**\n1. **e-learning** — SDM 개념·지식 선행 학습\n2. **시뮬레이션 환자(SP) 면대면** — 실제 의사소통 기술 연습\n\n**임상 의의:**\n- ICE(Ideas·Concerns·Expectations)·SDM은 타고나는 기술이 아닌 **훈련으로 획득 가능**\n- 가정의학과 레지던트 교육, 지속 의학교육(CME) 커리큘럼에 도입 근거\n- 소규모 파일럿(n=10, 벨기에 단일 기관) — 확증 연구 필요\n\n**한국 적용:**\n- e-learning 플랫폼 가용; 시뮬레이션 환자 프로그램은 일부 의대·가정의학과 전공의 수련에서 운용 [출처 미확인 — researcher 검증 권장]\n- 관련: [[delayed-diagnosis]], [[chronic-pain-integrative]] (ICE 접근)",
       sources: []
+    },
+    unplanned_admissions_factors: {
+      content: "### 노인 계획외 입원 요인 (Eur J Gen Pract 2026) [INSIGHTS]\n> [출처: Klunder JH et al. PMID:42095496] 네덜란드 GP 포커스그룹.\n\n위험: 만성질환 다수·비공식돌봄 부재·문화적 입원기대·정보 연속성 결여·조정 미흡·입원대안 부재. 보호: **GP 연속성·ACP 사전수립·방문진료/재택 대안**. → 연속성·ACP·재택이 계획외 입원 완충.",
+      sources: ["Klunder JH et al. Eur J Gen Pract 2026;32:2650928. PMID:42095496, DOI:10.1080/13814788.2026.2650928"]
     }
   },
   uiHooks: null
@@ -8569,6 +8645,10 @@ var _statin_myopathy_v2 = {
     referral: {
       content: "- CK >10×ULN 또는 rhabdo 의심 (myoglobinuria·AKI·brown urine) → 응급\n- Statin 영구 불내성 + LDL 미달 → 내분비/심장 (PCSK9·bempedoic acid)\n- Autoimmune myopathy 의심 (statin 중단 후도 progressive 근력 저하·anti-HMGCR) → 류마티스\n\n관련: [[dyslipidemia]] · [[home-based-hypertension]] · [[diabetes-dyslipidemia]] · [[qtc-interpretation]]",
       sources: []
+    },
+    sams_jgim_2026: {
+      content: "### SAMS 유병률·실무 접근 (JGIM 2026) [CLINICAL]\n> [출처: Ng IKS et al. J Gen Intern Med 2026. PMID:42343053]\n\nSAMS(스타틴 근증상) 유병 **5~10%**. 스펙트럼: 경증 근통 → 드물게 횡문근융해·면역매개 괴사성 근병증(IMNM). 실무: CK 확인·중단 후 재도전(rechallenge)·수용성 스타틴 전환·용량 조정.",
+      sources: ["Ng IKS et al. J Gen Intern Med 2026. PMID:42343053, DOI:10.1007/s11606-026-10563-8"]
     }
   },
   uiHooks: null
@@ -9580,3 +9660,77 @@ var _obesity_general_v2 = {
 KNOWLEDGE_BUNDLE["obesity"] = _obesity_general_v2;
 KNOWLEDGE_BUNDLE["비만"] = _obesity_general_v2;
 KNOWLEDGE_BUNDLE["비만 표현형"] = _obesity_general_v2;
+
+/* incidental-physical-activity — 우발적 신체활동 CV 이점 (Stamatakis Circulation 2025 / Ebell AFP POEM). [CLINICAL] */
+var _incidental_pa_v2 = {
+  kind: "disease",
+  keywords: ["incidental-physical-activity","우발적 신체활동","VILPA","일상 고강도 활동","운동처방","비구조화 운동"],
+  relations: [{ kind: "coprescribe", target: "diabetes-prevention" }],
+  primarySources: [
+    "Stamatakis E et al. Vigorous Intermittent Lifestyle Physical Activity (VILPA) and CVD/CVD Mortality Risk: UK Biobank Prospective Cohort (n=25,241). Circulation 2025.",
+    "Ebell MH (POEM). Incidental Activity Is Associated With Large Reductions in Cardiovascular Events and Mortality. Am Fam Physician 2025 Dec;112(6):692-693. PMID:41533422"
+  ],
+  sections: {
+    notes: {
+      content: "\"운동할 시간이 없다\"는 환자도 일상 활동만으로 심혈관 이점. UK Biobank 구조적 운동 안 하는 24,139명서 **우발적 신체활동 L자형 용량반응** — 아주 적은 양에서도 큰 효과(완전 비순응자의 첫 발판).",
+      sources: []
+    },
+    "핵심 수치": {
+      content: "| 유형 | 일일 활동량 | 심혈관 사망↓ |\n|---|---|---|\n| **고강도(VILPA)** | ~4.6분/일 | **38%↓** |\n| **중강도** | ~23.8분/일 | **50%↓** |\n\n강도 등가: 고강도 1분 = 중강도 3분 = 저강도 35–49분. [Scout 기반 — 원저 Circulation 2025, AFP POEM 초록 미제공]",
+      sources: ["Ebell MH. Am Fam Physician 2025;112(6):692-693. PMID:41533422"]
+    },
+    protocol: {
+      content: "### 외래 운동 상담 — 고강도 일상 활동 예시\n계단 빠르게 오르기 · 빠른 걸음 장보기 · 짐 들고 계단 · 자전거 단거리 빠르게. → 구조적 운동 안 하는 환자에게 \"일상 속 짧은 고강도\"를 첫 처방으로.",
+      sources: []
+    }
+  },
+  uiHooks: { guide: ["*"] }
+};
+KNOWLEDGE_BUNDLE["incidental-physical-activity"] = _incidental_pa_v2;
+KNOWLEDGE_BUNDLE["우발적 신체활동"] = _incidental_pa_v2;
+KNOWLEDGE_BUNDLE["VILPA"] = _incidental_pa_v2;
+
+/* episodic-vestibular-menopause — 중년여성 삽화성 전정증후군·폐경 (Mangia Otol Neurotol 2026). [CLINICAL] */
+var _episodic_vestibular_menopause_v2 = {
+  kind: "disease",
+  keywords: ["episodic-vestibular-syndrome","삽화성 전정 증후군","중년여성 어지럼","폐경 어지럼","EVS","vestibular menopause"],
+  primarySources: [
+    "Mangia LRL, Bittar RSM. Clinical Features of Midlife Women With Isolated Episodic Vestibular Syndrome and Their Relationship With Migraine and Menopause Transition. Otol Neurotol 2026. PMID:42108535"
+  ],
+  sections: {
+    definition: {
+      content: "중년(40–65세) 여성 반복성 자발 전정 증상(청력 정상). 브라질 외래 n=93 횡단연구.\n- **폐경 증상(MRS)↑ ↔ 어지러움 장애(DHI)↑**: p=0.0007 (독립 연관)\n- 편두통 장애(MIDAS) ↔ DHI: p=0.819 (**연관 없음**)\n- 이명 동반 78.5% → DHI 유의 상승(p=0.042) · 발작 ≥주1회 80.6%",
+      sources: []
+    },
+    exam: {
+      content: "중년 여성 삽화성 어지러움 평가 확장:\n- 기존: 두부운동 유발 → BPPV 감별·HINTS\n- **추가**: 폐경 증상(MRS/MENQoL) 스크리닝 병행\n- \"이명 + 삽화성 어지러움 + 폐경 증상\" 복합 → 전정-호르몬 통합 평가. 관련 [[dizziness]]·[[meniere]].",
+      sources: []
+    }
+  },
+  uiHooks: { guide: ["*"] }
+};
+KNOWLEDGE_BUNDLE["episodic-vestibular-syndrome"] = _episodic_vestibular_menopause_v2;
+KNOWLEDGE_BUNDLE["삽화성 전정 증후군"] = _episodic_vestibular_menopause_v2;
+
+/* tramadol-depression-risk — 장기 트라마돌·우울 위험 (Lee J Affect Disord 2026, 한국 NHIS). [CLINICAL] */
+var _tramadol_depression_v2 = {
+  kind: "disease",
+  keywords: ["tramadol-depression","트라마돌 우울","트라마돌 장기처방","근골격통증 트라마돌","tramadol"],
+  relations: [{ kind: "coprescribe", target: "chronic-pain-integrative" }],
+  primarySources: [
+    "Lee JE et al. Long-term Tramadol Use Increases the Risk of Depression in Patients with Musculoskeletal Pain. J Affect Disord 2026. PMID:41921874 (한국 NHIS-HSC 코호트, n=48,066 매칭)"
+  ],
+  sections: {
+    notes: {
+      content: "한국 NHIS 코호트, 근골격통증 트라마돌 사용자 vs 매칭 비사용자. **기간·용량 의존적 우울 위험↑**:\n| 사용 기간 | 우울 HR |\n|---|---|\n| 1–29일 | 1.19 |\n| 30–89일 | 1.26 |\n| **≥90일** | **1.37** |\n| **>200mg/일** | **1.72** |\nP for trend <0.001.",
+      sources: []
+    },
+    protocol: {
+      content: "**장기 트라마돌 환자 정신건강 모니터링**:\n- **≥90일 처방 시점 PHQ-9 재평가** 일정.\n- 통증 조절됐는데 기분저하·무기력·수면악화 → 트라마돌 기여 의심.\n- SSRI/SNRI 병용 시 세로토닌 증후군 + 우울 부작용 중복 주의.\n- 대안 전환: SNRI(duloxetine)·8% capsaicin·가바펜티노이드(신경병증 동반 시). 관련 [[chronic-pain-integrative]]·[[prescribing-cascade]].",
+      sources: []
+    }
+  },
+  uiHooks: { guide: ["*"] }
+};
+KNOWLEDGE_BUNDLE["tramadol-depression"] = _tramadol_depression_v2;
+KNOWLEDGE_BUNDLE["트라마돌 우울"] = _tramadol_depression_v2;
