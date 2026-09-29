@@ -1,7 +1,7 @@
 # 의료진의 고통 — 소진(Burnout) vs 도덕적 손상(Moral Injury)
 
 tags: [READING — INSIGHTS]
-keywords: 소진, burnout, 도덕적 고통, moral distress, 도덕적 손상, moral injury, 의료진 웰빙, physician wellbeing, Maslach, Jameton, Litz, Dean Talbot
+keywords: 소진, burnout, 도덕적 고통, moral distress, 도덕적 손상, moral injury, 의료진 웰빙, physician wellbeing, Maslach, Jameton, Litz, Dean Talbot, Karasek, 요구-통제, demand-control, high strain, active job, 소진 6영역, areas of worklife
 
 version: (미정)
 supersedes: (미정)
@@ -13,8 +13,10 @@ applicability: 관심 주제 정리(reading lane) — 의료진 본인의 직업
 > - Jameton A. *Nursing Practice: The Ethical Issues*. Prentice-Hall, 1984 — 도덕적 고통(moral distress) 정의. (단행본, PMID 없음)
 > - Litz BT, Stein N, Delaney E, et al. Moral injury and moral repair in war veterans: a preliminary model and intervention strategy. Clin Psychol Rev 2009;29(8):695-706. PMID:[19683376](https://pubmed.ncbi.nlm.nih.gov/19683376/), DOI:10.1016/j.cpr.2009.07.003
 > - Dean W, Talbot S, Dean A. Reframing Clinician Distress: Moral Injury Not Burnout. Fed Pract 2019;36(9):400-402. PMID:[31892770](https://pubmed.ncbi.nlm.nih.gov/31892770/) (선행: Talbot SG, Dean W. STAT 2018, 언론)
+> - Karasek RA. Job Demands, Job Decision Latitude, and Mental Strain: Implications for Job Redesign. Administrative Science Quarterly 1979;24(2):285-308. (요구-통제 모델 원전 — 경영 저널, PMID 없음)
+> - Leiter MP, Maslach C. Six areas of worklife: a model of the organizational context of burnout. J Health Hum Serv Adm 1999;21(4):472-489. (소진 6영역 — 행정 저널, PMID 없음)
 
-> ⚠ **[READING — INSIGHTS]** — 개념 정리. 학술 일차 문헌 PMID 검증 완료(2026-09-28 web search): Maslach 2001 · Litz 2009 · Dean&Talbot 2019. Jameton 1984는 단행본(PMID 없음).
+> ⚠ **[READING — INSIGHTS]** — 개념 정리. 학술 일차 문헌 PMID 검증 완료(2026-09-28 web search): Maslach 2001 · Litz 2009 · Dean&Talbot 2019. 서지 확인(2026-09-29 web search): Karasek 1979 Admin Sci Q · Leiter&Maslach 1999. Jameton 1984·Karasek·Leiter&Maslach은 비-PubMed 저널/단행본(PMID 없음).
 
 ---
 
@@ -54,8 +56,34 @@ applicability: 관심 주제 정리(reading lane) — 의료진 본인의 직업
 
 ---
 
+## 소진의 메커니즘 — Karasek 요구-통제 + Maslach 6영역 (job-strain)
+
+### Karasek 요구-통제 모델 (Demand-Control, 1979)
+
+직무 스트레스 연구의 고전. **핵심: 요구 수준이 같아도 통제권(decision latitude) 유무로 결과가 정반대.**
+
+| 직무 유형 | 요구 | 통제 | 결과 |
+|---|---|---|---|
+| **고긴장 직무 (high strain)** | 높음 | **낮음** | 소진·신체질환 위험 **최고** |
+| **활성 직무 (active job)** | 높음 | **높음** | 소진 아니라 **학습·동기·몰입** — 오히려 성장 |
+
+→ 요구가 높아도 통제권이 있으면 사람은 성장한다. "재밌었다"는 반응은 정확히 **활성 직무** 상태의 신호.
+
+### Maslach 소진 6영역 (Areas of Worklife, Leiter & Maslach 1999)
+
+소진을 일으키는 6개 영역 — **불일치(mismatch)**가 클수록 소진:
+**업무량 · 통제 · 보상 · 공동체 · 공정성 · 가치**
+
+### 적용 — 봉사직/운영위원장 류
+
+운영위원장 자리는 **통제·공정성·보상이 동시에 어긋나기 쉬운** 자리(봉사직이라 보상도 없음). 요구-통제 축으로 보면 통제권 확보 여부가 고긴장(소진) vs 활성(몰입)을 가른다.
+
+> 두 모델의 연결: 앞의 "소진 vs 도덕적 손상"이 **개인 vs 시스템** 책임 소재를 가른다면, Karasek·Maslach-6영역은 그 **시스템 요인을 구조적으로 분해**(통제·공정성·보상 등)해 어디를 손봐야 하는지 짚어준다.
+
+---
+
 ## 비고 (notes)
 
-- **출처 상태**: 학술 일차 문헌 PMID 검증 완료(2026-09-28 web search) — Maslach 2001 PMID:11148311 · Litz 2009 PMID:19683376 · Dean&Talbot 2019 PMID:31892770. Jameton 1984는 단행본.
+- **출처 상태**: Maslach 2001 PMID:11148311 · Litz 2009 PMID:19683376 · Dean&Talbot 2019 PMID:31892770 (PMID 검증). Karasek 1979(Admin Sci Q)·Leiter&Maslach 1999(J Health Hum Serv Adm)·Jameton 1984는 비-PubMed 저널/단행본 — 완전 서지로 표기(PMID 없음).
 - 짝 개념 — 경력·지식 노후화가 진료 질에 미치는 영향(의사 자가 점검 축)은 [[clinical-experience-quality]] 참조.
 - reading lane(관심 아티클) 엔트리 — 진료 패널 inject 없음.
