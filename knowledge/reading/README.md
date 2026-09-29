@@ -24,3 +24,4 @@ created: 2026-09-20
 - `moral-injury-burnout.md` — 의료진 소진 vs 도덕적 고통·손상 개념 구분 (2026-09-24) + Karasek 요구-통제·Maslach 6영역 (2026-09-29)
 - `watzlawick-communication-layers.md` — 커뮤니케이션 내용층 vs 관계층 + 두 종류의 예민함 (2026-09-29)
 - `job-crafting.md` — 잡 크래프팅: 과업·관계·인지 3차원, 병원 청소부 사례, Tims-Bakker JD-R (2026-09-29)
+- `persuasion-for-builder.md` — 만드는 사람의 설득법: 프로토타입·IKEA 효과·70% 열어두기·무설득 자리 (2026-09-29)
