@@ -3,6 +3,8 @@
 새 내용이 추가될 때마다 Claude Code가 여기에 한 줄 기록한다.
 형식: YYYY-MM-DD | 파일명 | 내용 요약
 
+2026-09-29 | reading/watzlawick-communication-layers.md (신규) | **커뮤니케이션 내용층 vs 관계층 (Watzlawick)** — 비의료 개념(미르 요청). 새 reading 엔트리(hikikomori·소진과 다른 주제). 모든 말=내용층(문자정보)+관계층(우리 사이 신호), "왜 말랐어요?" 예시. 두 종류 예민함: 관계층 예민(사회적 민감성) vs 내용층 예민(선의도 무례하게 들림) — 원저 분류 아닌 적용으로 명시. 출처 Watzlawick 1967 단행본(PMID 없음). [READING — INSIGHTS]. bundle 무변경(reading lane).
+
 2026-09-29 | reading/moral-injury-burnout.md (심화) | **Karasek 요구-통제 + Maslach 6영역 추가** — 비의료 개념(미르 "의료 아니지만 ingest"). 기존 소진 entry와 같은 도메인이라 심화 섹션으로. Karasek Demand-Control(1979): 요구 같아도 통제 유무로 고긴장(소진↑) vs 활성직무(학습·몰입) 정반대. Maslach 6영역(업무량·통제·보상·공동체·공정성·가치, Leiter&Maslach 1999) mismatch=소진. 봉사직/운영위원장 적용. web 검증: Karasek Admin Sci Q 1979;24(2):285-308 · Leiter&Maslach J Health Hum Serv Adm 1999;21(4):472-489 (둘 다 비-PubMed, 완전 서지). [READING — INSIGHTS]. bundle 무변경(reading lane).
 
 2026-09-28 | src/knowledge-bundle.js · src/prompts.js · src/index.html | **study-note gap 컴파일 — 08월 batch (최근·고가치 우선)** — study-note PMID 대조로 드러난 미컴파일 backlog 중 08월분. 신규 4 엔트리(Triage 등록): **cannabinoid-chronic-pain**(Chou Ann Intern Med 2025 PMID:41429020)·**ckm-syndrome**(Postgrad Med 2026 PMID:42415318)·**dbt-brief-counseling**(AFP 2025 PMID:40736500)·**obesity 일반**(VA/DoD 2025 PMID:42636450 + Mayo 표현형 PMID:33759389 + GLP-1 flow[TIPS] — 일반 비만 엔트리 최초 신설). 보강 11: cancer-pain(NCCN 40639401)·transitional-care(42601806)·deprescribing×3(40856967·42536335·42570168)·clinical-experience-quality(40736666)·diabetes(42301874)·clinical-reasoning×2(40152954·42455821)·palliative-pain(42362165)·pocus-efsumb(42546326). ?v liby2→liby3. node -c OK. **잔여: 05~07월 ~21건 + 진짜 study-note-only 2건(episodic-vestibular-menopause·tramadol-depression) 후속.**
