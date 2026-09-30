@@ -4325,6 +4325,10 @@ var _afp_eol_symptom_management_v2 = {
     counseling: {
       content: "### 암환자의 '원인' 욕구 [INSIGHTS — by 미르 관찰]\n\n암환자들은 '원인'을 항상 알고 싶어한다. 내가 왜 걸린 건지, 유전인지, 환경인지, 무슨 인자가 있는 건지. 전근대에는 그것을 죄나 업보로 해석했다. 사람들은 **'설명'되기를 원하며 적절한 설명을 들으면 마음을 놓는 것 같다**.\n\n### 임상 함의\n- **답할 수 없는 질문에도 답하려는 시도가 정서적 의미** — '정확한 원인은 알기 어렵지만…'으로 시작\n- 가족력 / 환경 / 흡연 / 식이 / 감염 등 **알려진 위험인자 점검·언급**\n- 환자가 '내 잘못 아닌데' 안심할 수 있는 framing — 자책·죄의식 완화\n- 모를 때는 **'많은 경우 명확한 단일 원인은 없습니다'** — 솔직함이 신뢰\n- **시간을 충분히** — 1–2분 설명이 환자 만족도·치료 순응도에 큰 영향\n\n### 전근대 vs 현대\n- 전근대: 죄·업보·악령\n- 현대: 유전·환경·생활습관·확률\n- 공통: **사람은 '설명되지 않은 고통'을 견디기 매우 어려워함** → 의사가 의미 부여(meaning-making) 역할",
       sources: []
+    },
+    acute_dyspnea_opioid_route: {
+      content: "### 급성 호흡곤란 속효성 약물 — 경로별 효과 차이 [CLINICAL]\n\n11 RCTs (n=334), **진행성/중증 급성 질환** 성인 (암 한정 아님), 치료 20분 이내 측정.\n\n**효과 있음**: SC 모르핀 (−1.1 cm vs 위약) · IV 모르핀 (−1.8 cm vs 위약)\n**효과 없음**: 흡입 오피오이드 · 비강내 펜타닐 · 경구 hydromorphone · 미다졸람\n\n적용 순서: ① 비약물(체위·팬 에어·냉각) → ② 실패 시 SC/IV 모르핀\n⚠ 암 외 COPD 말기·심부전 말기에도 동일 원칙 적용 가능",
+      sources: ["Haubner A et al. J Pain Symptom Manage 2026;72(3):e169-e195. PMID:42142671"]
     }
   },
   uiHooks: null
@@ -7254,6 +7258,10 @@ var _fall_prevention_awv_v2 = {
     referral: {
       content: "- STEADI 양성 + TUG 비정상 → 노인의학·재활의학 의뢰\n- 다약제·인지 동반 → CGA\n- 관련: [[frailty]], [[deprescribing]], [[geriatric-assessment-4ms]], [[osteoporosis]]",
       sources: []
+    },
+    footwear_fall_prevention: {
+      content: "### 낙상 예방 신발 특성 [CLINICAL]\n\n13개 연구 SR (2017–2024), 노인 보행·균형에 대한 신발 특성.\n\n**균형 개선 일관**: 최소 아웃솔(얇은 밑창) + 질감 인솔(발바닥 마찰 감각 피드백) + 높은 칼라(발목 지지) 조합\n**주의/혼재**: 발가락 경사형 (mixed), 두꺼운 쿠션·맨발 (일부 연구 음성)\n\n외래 적용: AWV 낙상 평가 시 신발 검토 항목 추가 — 가정 내 두꺼운 슬리퍼·맨발 → 기능성 실내화 권고\n⚠ 특정 브랜드 권고는 이 고찰 범위 밖 [출처 미확인]",
+      sources: ["Chen CH et al. J Am Geriatr Soc 2026;74(9):2771-2780. PMID:42467939"]
     }
   },
   uiHooks: null
