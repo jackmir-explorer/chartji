@@ -48,6 +48,18 @@ relations: []
 > HIT abnormal + skew deviation 없음·nystagmus 단방향 = **HINTS 양성 → 말초성**
 > HIT normal + skew deviation 있음·nystagmus 변화 = **HINTS 음성 → 중추성 의심 (소뇌 경색)**
 
+### HINTS+ — 청력 한 항목 추가로 AICA 맹점 잡기 [CLINICAL]
+
+> 출처: Newman-Toker DE, Kerber KA, Hsieh YH, et al. HINTS outperforms ABCD2 to screen for stroke in acute continuous vertigo and dizziness. Acad Emerg Med 2013;20(10):986-996. DOI:10.1111/acem.12223 [PMID 검증 대기 — DOI 확정]
+> (HINTS 원전: Kattah JC, et al. HINTS to diagnose stroke in the acute vestibular syndrome. Stroke 2009;40(11):3504-3510. PMID:19762709)
+
+- **HINTS+ = 기존 HINTS 3항목(HIT·Nystagmus·Test of Skew) + 침상 청력검사 한 단계.** "Plus"가 바로 **새로 생긴 일측 난청** 확인 단계.
+- **왜 필요한가 — HINTS 최대 맹점 = AICA 경색**: AICA는 대개 미로동맥을 냄 → AICA 막히면 **내이(달팽이관·전정) 자체가 경색**. 말초 전정기관이 실제 손상되니 **두부충동검사(HIT)가 비정상 = "말초성"으로 나옴** → HINTS만 보면 전정신경염처럼 안심하게 됨. 이때 동반 단서가 **같은 쪽 급성 난청**.
+- **판정**: HINTS 3항목이 **모두 말초성이어도, 새로 생긴 일측 난청이 있으면 중추성(뇌졸중)으로 간주** → MRI + 신경과 평가.
+- **검사 방법**: 거창한 청력검사 아님 — 양쪽 귀 옆에서 **손가락 비벼 소리 차이 묻는 finger rub** 정도로 충분. 필요하면 **소리굽쇠 Weber** 추가.
+- **성적·한계**: 난청 항목 추가 시 **뇌졸중 민감도 ≈100%**로 상승, **특이도는 약간↓** (미로염·어지럼 동반 돌발성 난청 등 말초질환도 난청 동반 가능). 놓쳤을 때 대가 큰 쪽(뇌졸중)을 잡는 설계 — 이 정도 거짓양성은 감수.
+- **전제(원래 HINTS와 동일)**: **안진 있는 급성 지속성 어지럼(AVS)** 환자에게만 적용. 삽화성·자세성 어지럼엔 쓰지 않음.
+
 ### 귀에 물약 → 일시적 어지럼 [TIPS — by ENT 교수]
 
 - 귀에 물약을 넣었을 때 어지러울 수 있음
