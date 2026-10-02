@@ -25,3 +25,4 @@ created: 2026-09-20
 - `watzlawick-communication-layers.md` — 커뮤니케이션 내용층 vs 관계층 + 두 종류의 예민함 (2026-09-29)
 - `job-crafting.md` — 잡 크래프팅: 과업·관계·인지 3차원, 병원 청소부 사례, Tims-Bakker JD-R (2026-09-29)
 - `persuasion-for-builder.md` — 만드는 사람의 설득법: 프로토타입·IKEA 효과·70% 열어두기·무설득 자리 (2026-09-29)
+- `expressive-writing.md` — 표현적 글쓰기(Pennebaker): 억제가설→의미만들기 재구성, 표준 지시문, Frattaroli 메타 (2026-10-02)
