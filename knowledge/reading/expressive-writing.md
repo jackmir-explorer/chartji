@@ -15,6 +15,7 @@ applicability: 관심 주제 정리(reading lane) — 근거기반 행동중재�
 > - Smyth JM, Stone AA, Hurewitz A, Kaell A. Effects of writing about stressful experiences on symptom reduction in patients with asthma or rheumatoid arthritis: a randomized trial. JAMA 1999;281(14):1304-1309. (만성질환 RCT)
 > - Smyth JM. Written emotional expression: effect sizes, outcome types, and moderating variables. J Consult Clin Psychol 1998;66(1):174-184. (초기 메타분석)
 > - Frattaroli J. Experimental disclosure and its moderators: a meta-analysis. Psychol Bull 2006;132(6):823-865. (146개 연구 대규모 메타)
+> - Greenberg MA, Wortman CB, Stone AA. Emotional expression and physical health: revising traumatic memories or fostering self-regulation? J Pers Soc Psychol 1996;71(3):588-602. (가상의 외상 쓰기 — 픽션 통로)
 
 > ⚠ **[READING — INSIGHTS]** — 근거기반 행동중재 정리. 서지 web 검증 2026-10-02(volume·pages). PMID은 미확정분 생략(조작 금지) — 필요 시 Researcher 확인. **reading lane 선택(미르 2026-10-02)**: 진료 inject·Triage 등록 없음.
 
@@ -49,6 +50,14 @@ applicability: 관심 주제 정리(reading lane) — 근거기반 행동중재�
 > 앞으로 며칠 동안 하루 15~20분, 당신에게 **가장 깊은 영향을 준 경험**에 대해 **가장 깊은 생각과 감정**을 써주세요. 맞춤법·문법은 신경 쓰지 마세요. 쓴 글은 **아무에게도 보여주지 않아도 되고, 버려도 됩니다.**
 
 핵심 3요소: **사실만이 아니라 감정+생각 함께 · 며칠 반복 · 남에게 보여줄 부담 없이.**
+
+---
+
+## 가상의 외상도 효과 — 픽션이라는 통로 (Greenberg, Wortman, Stone 1996)
+
+참가자들에게 **자기가 겪지 않은 가상의 외상을 마치 자기 일처럼** 쓰게 했더니, **실제 경험을 쓴 사람들과 비슷하게 건강 지표가 개선**됐다. 효과가 "진짜 기억을 다시 꺼내 노출하는 것"에만 달려 있지 않음을 시사 — 원 논문 제목 그대로 **"외상 기억 교정 vs 자기조절 촉진"** 중 **자기조절·정서 처리** 쪽 손을 들어주는 결과.
+
+→ 함의: **직접 말하기 어려운 것을 화자(가상의 '나')에게 맡기는 픽션**이, 정서 처리의 통로로서 의미가 있을 수 있다. 자기 이야기를 1인칭으로 직면하기 버거운 사람에게 **거리 둔 서사(distanced narrative)**가 우회로가 된다는 뜻.
 
 ---
 
