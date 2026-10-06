@@ -60,6 +60,41 @@ relations: []
 
 ---
 
+## 치료 — AASM 2024 임상진료지침 [CLINICAL]
+
+> [출처: Winkelman JW, et al. Treatment of RLS and PLMD: an AASM clinical practice guideline. J Clin Sleep Med 2025;21(1):137-152. DOI:10.5664/jcsm.11390] — 2012판 대체, GRADE 방법론
+
+### 강하게 권고 (strong for)
+
+- **철분 보충** (철분 지표에 따라) — 정맥 철분제 중 **ferric carboxymaltose 우선** (타 IV 철분·경구 황산철은 조건부)
+- **α2δ 리간드**: **가바펜틴 에나카빌 · 가바펜틴 · 프레가발린** (탄탄한 RCT 근거)
+
+### 조건부 권고 (conditional for)
+
+- 경구 황산철 · 기타 정맥 철분제
+- 디피리다몰
+- 서방형 아편유사제 (난치성·증강 환자)
+- 양측 고주파 비골신경 자극 (비약물)
+
+### 표준 사용에 반대 (conditional against)
+
+- ⚠ **도파민 작용제(프라미펙솔·로피니롤·로티고틴)** — **증강(augmentation)** 때문에 표준 사용 비권고. 금지는 아니며, **단기 사용·타 치료 부적합 환자에서는 개별 판단 여지**.
+- 레보도파 · 부프로피온 · 카바마제핀 · 클로나제팜 · 발레리안 · 발프로산
+
+### 철분 목표 — 일반 결핍 기준보다 훨씬 높게
+
+- 페리틴 **15~20은 RLS엔 너무 낮음**(많은 의사가 정상으로 넘김) → **페리틴 100 이상**을 목표 (지침 저자 Winkelman).
+
+---
+
+## 증강(augmentation) 위험과 통념 변화
+
+- **증강 위험 크기**(도파민 작용제): 연 **7~10%** 누적 → **3년 20~30% · 5년 35~50%**.
+- **통념 변화**: 2012 지침은 도파민 작용제를 1차로 권고 → 장기 추적의 증강 위험으로 전환. 2016 IRLSSG·EURLSSG·RLS재단 합의가 이미 **α2δ 리간드 시작**을 선제 제안.
+- **실전 연결**: 저용량 프라미펙솔로 **반응 확인**(단기)은 지침과 크게 어긋나지 않음 — **쟁점은 장기 유지를 무엇으로 하느냐**(α2δ 리간드·철분 최적화 쪽).
+
+---
+
 ## 관련 엔트리
 
 - [[iron-deficiency-anemia]] — 철분 결핍 평가 (페리틴·TSAT)
@@ -67,4 +102,5 @@ relations: []
 
 ## 출처
 
-- Allen RP, et al. IRLSSG consensus criteria. Sleep Med 2014;15(8):860-873. PMID:25023924
+- Allen RP, et al. IRLSSG consensus criteria. Sleep Med 2014;15(8):860-873. PMID:25023924 (진단 기준)
+- Winkelman JW, et al. Treatment of RLS and PLMD: an AASM clinical practice guideline. J Clin Sleep Med 2025;21(1):137-152. DOI:10.5664/jcsm.11390 (치료 — 2024 개정)
