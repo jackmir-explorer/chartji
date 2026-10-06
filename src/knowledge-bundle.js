@@ -5407,7 +5407,7 @@ var _headache_v2 = {
   ],
   sections: {
     exam: {
-      content: "**문진**: 언제·어떻게·어디·한쪽? 점점 악화? 동반증상? Aggravating/relieving (수면·스트레스·음식·환경). First episode? 진통제 사용 빈도(MOH).\n\n### Red flags — SNNOOP10\n| 항목 | 의미 |\n|---|---|\n| **S** Systemic | 발열·체중감소·면역저하 |\n| **N** Neurologic | 의식변화·국소결손·papilledema |\n| **N** New onset | 50세+ 새 두통 |\n| **O** Onset | **Thunderclap** (수초 내 최고조) |\n| **O** Older | 65세+ 새 두통 |\n| **P** Pattern change | 패턴 변화·진행 악화 |\n| **P** Pregnancy | 임신/산후 |\n| **P** Painful eye | 자율신경 동반 안통 |\n| **P** Posttraumatic | 외상 후 |\n| **P** Pathology | 진통제 남용·기저질환 |\n\n→ 양성 시 영상(CT/MRI), 응급평가.",
+      content: "**문진**: 언제·어떻게·어디·한쪽? 점점 악화? 동반증상? Aggravating/relieving (수면·스트레스·음식·환경). First episode? 진통제 사용 빈도(MOH).\n\n### Red flags — SNNOOP10\n| 항목 | 의미 |\n|---|---|\n| **S** Systemic | 발열·체중감소·면역저하 |\n| **N** Neurologic | 의식변화·국소결손·papilledema |\n| **N** New onset | 50세+ 새 두통 |\n| **O** Onset | **Thunderclap** (수초 내 최고조) |\n| **O** Older | 65세+ 새 두통 |\n| **P** Pattern change | 패턴 변화·진행 악화 |\n| **P** Pregnancy | 임신/산후 |\n| **P** Painful eye | 자율신경 동반 안통 |\n| **P** Posttraumatic | 외상 후 |\n| **P** Pathology | 진통제 남용·기저질환 |\n\n→ 양성 시 영상(CT/MRI), 응급평가.\n\n### 두통 외래 신체검사 — 꼭 할 것 [CLINICAL]\n| 항목 | 무엇을·왜 |\n|---|---|\n| **혈압** | 기본 — 고혈압성 두통·응급 배제 |\n| **안저(유두부종)** | 두개내압 상승 단서. 검안경 없으면 **시력 저하·일과성 시야 흐림만이라도 질문** |\n| **동공·안구운동** | 동공 비대칭, **외전 제한(6번 신경 마비)** — ICP 상승 false localizing sign |\n| **회내근 표류(pronator drift)** | **미세 편마비** 포착 |\n| **일자보행(tandem gait)** | **소뇌·후두와 병변** 선별 |",
       sources: []
     },
     differential: {
