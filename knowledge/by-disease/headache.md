@@ -48,6 +48,26 @@ relations: []
 
 ---
 
+## 편두통 vs 긴장형두통 감별 [CLINICAL]
+
+> 근거: Tepper SJ, et al. Landmark Study. Headache 2004;44(9):856-864. PMID:15447694 · Lipton RB, et al. ID Migraine validation. Neurology 2003;61(3):375-382 · ICHD-3 (Cephalalgia 2018;38(1):1-211. PMID:29368949)
+
+### "편두통 특징이 하나라도 있나"로 묻는다
+
+- **Landmark 연구(Tepper 2004)**: 1차 의료 두통 환자를 두통일지로 재분류하니, 처음 '편두통 아님'으로 판단된 환자의 **94%가 결국 편두통(76%) 또는 개연편두통(18%)으로 재분류**. → 1차에서 긴장형두통은 과진단, 편두통은 과소진단되는 경향.
+- **긴장형두통은 '없는 것'으로 진단** (ICHD-3): 특징이 거의 없는 두통 — 오심 없음, 빛·소리 과민은 **둘 중 하나 이하**, 일상 활동으로 악화 안 됨, 강도 경도~중등도.
+- → 감별 질문은 **"긴장형 특징이 있나"가 아니라 "편두통 특징이 하나라도 있나"**가 되어야 한다.
+
+### ID Migraine — 예진 3문항 (Lipton 2003)
+
+최근 **3개월** 두통에 대해: ① 두통으로 **일상 지장**(disability) ② 두통 때 **메스꺼움**(nausea) ③ **빛 거슬림**(photophobia)
+
+→ **2개 이상 → 편두통 가능성 높음** (민감도 ~0.81, 특이도 ~0.75, PPV ~0.93).
+
+> ⚠ **질문 기준 = '평소 두통'이 아니라 '가장 심했던 두통 날'.** 편두통 환자는 발작 사이에 가벼운 두통이 섞여 있어, 평소 두통만 물으면 긴장형처럼 들린다 (Landmark 과소진단의 기전).
+
+---
+
 ## 편두통 (Migraine)
 
 ### 급성기 1차
@@ -112,3 +132,6 @@ relations: []
 - AAN/AHS 2012 Episodic Migraine Prevention (Silberstein)
 - EFNS 2010 Tension-type Headache Guideline (Bendtsen)
 - 대한두통학회 2019/2021 지침
+- Tepper SJ, et al. Landmark Study. Headache 2004;44(9):856-864. PMID:15447694 (편두통 과소진단·일지 재분류)
+- Lipton RB, et al. ID Migraine validation study. Neurology 2003;61(3):375-382 (3문항 예진 screener)
+- ICHD-3 (Headache Classification Committee. Cephalalgia 2018;38(1):1-211. PMID:29368949)
