@@ -9746,3 +9746,26 @@ var _tramadol_depression_v2 = {
 };
 KNOWLEDGE_BUNDLE["tramadol-depression"] = _tramadol_depression_v2;
 KNOWLEDGE_BUNDLE["트라마돌 우울"] = _tramadol_depression_v2;
+
+/* restless-leg-syndrome — 하지불안증후군 진단 (미르 ingest 2026-10-06). [CLINICAL] */
+var _restless_leg_syndrome_v2 = {
+  kind: "disease",
+  keywords: ["restless-leg-syndrome","하지불안증후군","하지불안","RLS","Willis-Ekbom","다리 불편감","URGE","PLMS","ferritin 하지불안"],
+  primarySources: [
+    "Allen RP, et al. Restless legs syndrome/Willis-Ekbom disease diagnostic criteria: updated IRLSSG consensus criteria. Sleep Med 2014;15(8):860-873. PMID:25023924"
+  ],
+  sections: {
+    definition: {
+      content: "### 필수 진단 기준 — 5개 모두 충족 (IRLSSG 2014)\n1. **다리를 움직이고 싶은 충동** — 대개 불편·불쾌한 감각 동반(벌레 기어가는 느낌·저릿함·당김)\n2. **쉬거나 가만히 있을 때**(눕거나 앉아 있을 때) 시작/악화\n3. **움직이면 완화** — 걷기·스트레칭 동안 부분/완전 완화\n4. **저녁·밤에 악화** 또는 저녁·밤에만 발생\n5. **다른 질환으로 설명 안 됨** (흉내 질환 배제)\n\n> 외우기: **URGE** — **U**rge to move · **R**est가 악화 · **G**ets better with activity · **E**vening·밤 악화. + 흉내 질환 배제.\n\n### 흉내 질환 (mimics — 배제 대상)\n근육통 · 정맥울혈 · 하지부종 · 관절염 · 다리 쥐(경련) · 자세성 불편감 · 습관적 발 떨기.\n\n### 경과 구분 (진단 후 기술)\n- **만성 지속형**: 미치료 시 지난 1년 평균 **주 2회 이상**\n- **간헐형**: 주 2회 미만 + 평생 5회 이상\n- 수면·기분·일상 기능 지장/고통 동반 여부 함께 기록.\n\n### 진단 지지 소견 (필수 아님)\n수면 중 주기적 사지운동(**PLMS**) · 1차 **가족력** · **도파민 약물 반응** · 심한 주간 졸림 없음.",
+      sources: []
+    },
+    exam: {
+      content: "### 외래에서 같이 확인할 것\n| 항목 | 이유 |\n|---|---|\n| **철분 — 페리틴 + TSAT**(트랜스페린 포화도) | **뇌 철분 결핍이 핵심 병태생리** — 필수 확인 |\n| **신기능** | 말기신부전은 대표적 이차성 원인 |\n| **약물 검토** | 항히스타민제 · 항도파민제(메토클로프라미드·레보설피리드·항정신병약) · SSRI·SNRI · 미르타자핀 |\n| **임신** | 특히 3분기에 흔함 |\n\n### 말초신경병증 감별\n신경병증 통증도 휴식·밤에 심해질 수 있으나 — **움직여도 좋아지지 않는 점**이 RLS와 다르다(움직임 완화 = RLS 필수 기준 3).",
+      sources: []
+    }
+  },
+  uiHooks: { guide: ["*"] }
+};
+KNOWLEDGE_BUNDLE["restless-leg-syndrome"] = _restless_leg_syndrome_v2;
+KNOWLEDGE_BUNDLE["하지불안증후군"] = _restless_leg_syndrome_v2;
+KNOWLEDGE_BUNDLE["RLS"] = _restless_leg_syndrome_v2;
