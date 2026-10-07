@@ -159,6 +159,7 @@ JSON만 반환 (다른 텍스트 절대 금지):
   episodic-vestibular-syndrome (중년여성 삽화성 어지럼/폐경 증상↔어지러움 독립연관·편두통 무관/이명 동반/BPPV·HINTS + 폐경 스크리닝 병행 — 중년여성 반복 어지럼 평가 맥락)
   tramadol-depression (장기 트라마돌 우울 위험/기간·용량 의존 HR ≥90일 1.37·>200mg 1.72/PHQ-9 재평가·SNRI 전환 — 근골격통증 트라마돌 장기처방 모니터 맥락)
   restless-leg-syndrome (하지불안증후군/움직이고 싶은 충동·휴식 악화·움직임 완화·저녁밤 악화 URGE 5기준/페리틴·TSAT 철분·신기능·유발약물(항히스타민·항도파민·SSRI/SNRI·미르타자핀)·임신 확인/말초신경병증 감별 — 하지 불편감·수면 지장 평가 맥락)
+  neurologic-exam (신경학적 진찰 기본 틀/CN exam·pronator drift·FNF 기본+시간되면 gait/두통·어지럼·감각이상·근력저하 상황별 focused 추가 — 신경학적 진찰 접근 참조 맥락)
   복합 환자면 여러 개 가능. 키워드 매칭이 아닌 대화 맥락으로 판단할 것.`;
 
 /* B. Missing Checklist */

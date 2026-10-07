@@ -9785,3 +9785,19 @@ var _restless_leg_syndrome_v2 = {
 KNOWLEDGE_BUNDLE["restless-leg-syndrome"] = _restless_leg_syndrome_v2;
 KNOWLEDGE_BUNDLE["하지불안증후군"] = _restless_leg_syndrome_v2;
 KNOWLEDGE_BUNDLE["RLS"] = _restless_leg_syndrome_v2;
+
+/* neurologic-exam — 신경학적 진찰 기본 틀 (미르 routine, 2026-10-07 ingest). [TIPS] */
+var _neurologic_exam_v2 = {
+  kind: "topic",
+  keywords: ["neurologic-exam","신경학적 진찰","신경학적 검사","neuro exam","CN exam","뇌신경","pronator drift","회내근 표류","FNF","finger-nose-finger","tandem gait","보행검사"],
+  primarySources: [],
+  sections: {
+    exam: {
+      content: "### 신경학적 진찰 — 기본 틀 [TIPS — 미르 routine]\n**모든 환자 기본 (빠른 선별):**\n- **CN exam** (뇌신경)\n- **Pronator drift**(회내근 표류) — 미세 편마비 포착\n- **FNF**(finger-nose-finger, 손가락-코 검사) — 소뇌·조화운동\n- **시간 있으면 gait**(보행, tandem 포함) — 소뇌·후순환 병변\n\n### 상황별 focused 추가\n| 상황 | 추가로 볼 것 |\n|---|---|\n| **두통** | 혈압 · 안저(유두부종) · 동공·안구운동(외전 제한=6번 마비) → [[headache]] |\n| **어지럼** | HINTS/HINTS+ · tandem gait → [[dizziness]] |\n| **감각이상** | 감각 분포(dermatome vs 말초신경 영역) · 진동·고유감각 |\n| **근력이상** | MRC 근력 등급 · 심부건반사 · 병적반사(Babinski) |",
+      sources: ["[TIPS — 미르 routine]"]
+    }
+  },
+  uiHooks: { guide: ["*"] }
+};
+KNOWLEDGE_BUNDLE["neurologic-exam"] = _neurologic_exam_v2;
+KNOWLEDGE_BUNDLE["신경학적 진찰"] = _neurologic_exam_v2;
