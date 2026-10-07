@@ -63,6 +63,21 @@ relations: []
 ⚠️ 림프종 — 4~6주 이상 지속, 치료 반응 없음, B증상(발열/야간발한/체중감소) 동반 시 의심
 ⚠️ 전이성 악성종양
 
+## AAO-HNS 악성 위험 신호 — 하나라도 있으면 고위험 (2017) [CLINICAL]
+
+> [출처: Pynnonen MA, et al. Clinical Practice Guideline: Evaluation of the Neck Mass in Adults. Otolaryngol Head Neck Surg 2017;157(2_suppl):S1-S30. DOI:10.1177/0194599817722550]
+
+**종괴 자체 소견:**
+- **2주 이상 지속** (감염 병력 없이, 또는 기간 불명)
+- **크기 >1.5cm**
+- **단단한 질감(firm)**
+- **고정됨(fixed)**
+- **궤양(ulceration)**
+
+**동반 증상:** 원인 미상 **체중 감소** · **쉰 목소리** · **삼킴 곤란** · **연관 이통(referred otalgia)**
+
+> ⚠ **40세 이상 성인의 지속적 경부 종괴는 그 자체로 전이성 암(두경부 SCC 등)을 먼저 배제**해야 하는 대상. 크기·질감·고정 등 **여러 항목 동시 만족 시 악성 위험 누적↑ → 지체 없이 조영 영상 + ENT 의뢰 + 조직검사**.
+
 ## AFP 2026 — 성인 경부종괴 평가 체계 [CLINICAL]
 
 > [출처: Wilbur J, Tran VL, Doobay MF. Am Fam Physician. 2026;113(2):156-165. PMID:41839107]

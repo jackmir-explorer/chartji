@@ -4044,6 +4044,10 @@ var _neck_mass_v2 = {
       content: "**Horses**: 림프절염/반응성 림프절병증 ★가장 흔함 / 피지낭종·지방종 / 갑상선 결절\n\n**Zebra**: ⚠ 림프종 (4–6주 지속·B증상·치료 무반응) / ⚠ 전이성 악성종양",
       sources: []
     },
+    aao_hns_malignancy_risk: {
+      content: "### AAO-HNS 악성 위험 신호 — 하나라도 있으면 고위험 (2017) [CLINICAL]\n> [출처: Pynnonen MA, et al. Clinical Practice Guideline: Evaluation of the Neck Mass in Adults. Otolaryngol Head Neck Surg 2017;157(2_suppl):S1-S30. DOI:10.1177/0194599817722550]\n\n**종괴 자체 소견:**\n- **2주 이상 지속** (감염 병력 없이, 또는 기간 불명)\n- **크기 >1.5cm**\n- **단단한 질감(firm)**\n- **고정됨(fixed)**\n- **궤양(ulceration)**\n\n**동반 증상:**\n- 원인 미상 **체중 감소** · **쉰 목소리(hoarseness)** · **삼킴 곤란(dysphagia)** · **연관 이통(referred otalgia)**\n\n⚠ **40세 이상 성인의 지속적 경부 종괴는 그 자체로 전이성 암(두경부 SCC 등)을 먼저 배제**해야 하는 대상. 크기·질감·고정 등 **여러 항목 동시 만족 시 악성 위험 누적↑ → 지체 없이 조영 영상 + ENT 의뢰 + 조직검사**.",
+      sources: ["Pynnonen MA, et al. Evaluation of the Neck Mass in Adults. Otolaryngol Head Neck Surg 2017;157(2_suppl):S1-S30. DOI:10.1177/0194599817722550"]
+    },
     afp_2026_framework: {
       content: "### AFP 2026 3범주 틀 + 영상·FNA 알고리듬 (Wilbur) [CLINICAL]\n> Wilbur J. Am Fam Physician 2026\n\n**3범주 틀**:\n| 범주 | 단서 | 평가 |\n|---|---|---|\n| **염증성 (Inflammatory)** | 급성·압통·동반 URI/치성 | 보존·항생제 trial |\n| **선천성 (Congenital)** | 청소년·정중선·낭성 | sono → 적응 시 ENT |\n| **종양성 (Neoplastic)** | **무통성·진행성·>1.5cm·≥4주** | sono 즉시 → FNA·ENT |\n\n**영상 알고리듬**:\n- **1차 영상 = 경부 sono** (염증·낭성·결절 분류)\n- 종양 의심 → 조영 CT/MRI + ENT 의뢰\n- 갑상선 결절 동반 → K-TIRADS ([[thyroid-fna-cnb]])\n\n**FNA 수치 단서**:\n- LN 단경 **>1.5cm + 동심성 ECHO·hilum 소실** → FNA 적응\n- 갑상선 K3-K5 + 크기 cutoff (K-TIRADS) → FNA\n- ENT 협진 후 결정 (외래 단독 FNA 비권고)\n\n관련: [[lymphadenopathy]] · [[thyroid-fna-cnb]] · [[cervical-lymphadenitis]] · [[hematologic-malignancy-uri-screening]]",
       sources: ["Wilbur J. Neck Mass: Evaluation. Am Fam Physician 2026. PMID:41839107"]
