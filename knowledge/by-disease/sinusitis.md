@@ -17,7 +17,7 @@ keywords: 부비동염, 축농증, sinusitis, ABRS, acute bacterial rhinosinusit
 | 그래도 실패 | **Levofloxacin / Moxifloxacin** | 퀴놀론 — IDSA 명시 step-up |
 | PCN 알러지 (non-anaphylactic) | **Macrolide** (Clarithromycin / Roxithromycin) 또는 cefditoren | **alternative만**, step-up 약제 아님 |
 
-> ⚠ Macrolide는 *S. pneumoniae* 내성률 ~30%이라 IDSA는 **경험적 1차 비추천**. PCN 알러지·intolerance 시 alternative로만.
+> ⚠ **Macrolide(clarithromycin 등)는 ABRS 경험적 1차 비추천** (IDSA 2012). 이유: ① *S. pneumoniae* 마크로라이드 내성 **국내 70~80%+**(세계 최고 수준·고농도 내성 **erm(B)** 주도) — 미국 ~30%보다 훨씬 나쁨 ② *H. influenzae*에 clarithromycin 활성 원래 약함. → **amoxicillin(±clavulanate) 1차**(IDSA·국내 지침 동일). PCN 알러지·intolerance 시 **alternative로만**.
 
 ### 한국 임상 패턴 [TIPS — by ENT 교수]
 
@@ -37,7 +37,7 @@ keywords: 부비동염, 축농증, sinusitis, ABRS, acute bacterial rhinosinusit
 
 ### 강윤진 교수님 ABRS 외래 처방 패키지 [TIPS — by 강윤진 교수님]
 
-> 한국 외래 실전 패턴 — 가이드라인 1차(amox/clav)와 괴리 있음. 임상 판단·환자 상황·내성 패턴 고려해 선택. macrolide 1차는 IDSA 권고 아님 (S. pneumoniae 내성 ~30%).
+> 한국 외래 실전 패턴 — 가이드라인 1차(amox/clav)와 괴리 있음. 임상 판단·환자 상황·내성 패턴 고려해 선택. macrolide 1차는 IDSA 권고 아님 (국내 S. pneumoniae 마크로라이드 내성 70~80%+·erm(B) 고농도 내성 + H. influenzae 활성 약함).
 
 | 약제 | 역할 |
 |---|---|
