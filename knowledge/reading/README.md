@@ -20,7 +20,7 @@ created: 2026-09-20
 - `knowledge/log.md`에 1줄 기록(추적용). `src/knowledge-bundle.js`·앱 `index.md` 목록에는 **넣지 않음**.
 
 ## 입주 목록
-- `hikikomori.md` — 병적 사회적 위축(히키코모리) 생물심리사회 개관 (2026-09-20)
+- `hikikomori.md` — 병적 사회적 위축(히키코모리) 생물심리사회 개관 (2026-09-20) + 고립 장기화·한국형 8050 (2026-10-08)
 - `moral-injury-burnout.md` — 의료진 소진 vs 도덕적 고통·손상 개념 구분 (2026-09-24) + Karasek 요구-통제·Maslach 6영역 (2026-09-29)
 - `watzlawick-communication-layers.md` — 커뮤니케이션 내용층 vs 관계층 + 두 종류의 예민함 (2026-09-29)
 - `job-crafting.md` — 잡 크래프팅: 과업·관계·인지 3차원, 병원 청소부 사례, Tims-Bakker JD-R (2026-09-29)
