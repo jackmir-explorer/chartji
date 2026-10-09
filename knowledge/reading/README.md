@@ -28,3 +28,4 @@ created: 2026-09-20
 - `expressive-writing.md` — 표현적 글쓰기(Pennebaker): 억제가설→의미만들기 재구성, 표준 지시문, Frattaroli 메타 (2026-10-02)
 - `compassion-vs-empathy.md` — 자비 vs 공감: 짧은 훈련 효과(Hutcherson·Weng), 공감↑고통 vs 자비↑친사회(Klimecki-Singer), 정서전염 약한 성향엔 자비 지향 (2026-10-02)
 - `milk-fat-variation.md` — 우유 지방 함량은 왜 다른가: 종·품종·생산량·사료·기후·가공(몽골 우유가 진한 이유). 비의료 일반 상식 (2026-10-09)
+- `anesthesia-safety-case.md` — 소아 전신마취 사고 환자안전 교훈: 장비 사전점검·DOPES 장비우선 감별·정직한 공개·개인vs시스템 (2026-10-09)
