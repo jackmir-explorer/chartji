@@ -9828,3 +9828,31 @@ var _dysphagia_v2 = {
 KNOWLEDGE_BUNDLE["dysphagia"] = _dysphagia_v2;
 KNOWLEDGE_BUNDLE["연하곤란"] = _dysphagia_v2;
 KNOWLEDGE_BUNDLE["삼킴곤란"] = _dysphagia_v2;
+
+/* colon-ischemia-mesenteric-ischemia — 고령 급성 복통+혈변 전원 판단 (미르 ingest 2026-10-13). [CLINICAL] */
+var _colon_mesenteric_ischemia_v2 = {
+  kind: "disease",
+  keywords: ["허혈성 대장염","허혈성대장염","ischemic colitis","colon ischemia","급성 장간막 허혈","mesenteric ischemia","acute mesenteric ischemia","AMI","노인 복통 혈변","고령 급성복통","혈변 전원","CTA 복부","hematochezia elderly"],
+  primarySources: [
+    "Brandt LJ, Feuerstadt P, Longstreth GF, Boley SJ. ACG Clinical Guideline: Epidemiology, Risk Factors, Patterns of Presentation, Diagnosis, and Management of Colon Ischemia (CI). Am J Gastroenterol 2015;110(1):18-44. PMID:25559486"
+  ],
+  sections: {
+    triage: {
+      content: "### 고령 급성 복통+혈변 = 당일 CT 가능 병원 전원 [CLINICAL]\n**증상만으로 경과를 지켜볼 대상이 아니다.** 고령자의 급성 복통+혈변은 **당일 CT 가능 병원으로 전원이 원칙**. (\"경증 허혈성 대장염은 외래에서 관리\"는 **CT로 진단·중증도가 확인된 뒤**의 이야기 — 외래 단독 판단 대상 아님.)\n\n### 증상만으로 판단하면 안 되는 이유\n- **두 질환이 겹침**: 우측 허혈성 대장염은 상장간막동맥(SMA) 질환이 원인일 수 있고, 급성 장간막 허혈(AMI)도 진행하면 혈변. → 경증 대장염과 장괴사 직전을 증상으로 못 가름.\n- **고령은 소견이 둔함**: 복막자극 징후 늦게 나타남, **젖산 정상이어도 배제 안 됨**.\n- **감별 많음**: 게실 출혈 · 대장암 · 감염성 대장염 · IBD 모두 같은 양상.\n- **검사 순서가 정해져 있음**(ACG) → 아래.",
+      sources: ["Brandt LJ, et al. ACG Guideline Colon Ischemia. Am J Gastroenterol 2015;110(1):18-44. PMID:25559486"]
+    },
+    protocol: {
+      content: "### 검사 순서 (ACG 2015) [CLINICAL]\n1. **CT를 첫 영상검사**로.\n2. **우측 허혈이거나 AMI를 배제할 수 없으면 → CT 혈관조영술(CTA)**.\n3. **대장내시경은 CT로 괴저·천공 배제한 뒤 48시간 안에** (증상만 보고 내시경부터 하는 것은 위험).\n\n### 전원 전 진료실에서 할 것\n- **정맥로 확보 + 수액 시작**, **금식(NPO)**.\n- **심전도로 심방세동 확인**(AMI 색전원).\n- **항응고제·항혈소판제 복용 여부 확인**.",
+      sources: []
+    },
+    referral: {
+      content: "### 보낼 병원 조건\n단순 'CT 있는 곳'보다 다음을 갖춘 곳:\n- **24시간 CT 혈관조영술(CTA)**\n- **소화기내과 · 외과**, 가능하면 **중재영상의학과** — AMI면 바로 혈관내 치료·수술로 이어져야 함.\n\n### 전원 방법\n- **활력징후 불안정 또는 복막자극 징후** → **119로 응급실**.\n- **안정적이면 당일 응급실 직접** 가도록 — 단 지체 없이.\n\n관련: [[lower-gi-bleed]] · [[diverticulosis]] · [[atrial-fibrillation]](AMI 색전원)",
+      sources: []
+    }
+  },
+  uiHooks: { guide: ["*"] }
+};
+KNOWLEDGE_BUNDLE["colon-ischemia-mesenteric-ischemia"] = _colon_mesenteric_ischemia_v2;
+KNOWLEDGE_BUNDLE["허혈성 대장염"] = _colon_mesenteric_ischemia_v2;
+KNOWLEDGE_BUNDLE["급성 장간막 허혈"] = _colon_mesenteric_ischemia_v2;
+KNOWLEDGE_BUNDLE["mesenteric-ischemia"] = _colon_mesenteric_ischemia_v2;
