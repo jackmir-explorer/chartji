@@ -85,6 +85,7 @@ relations: []
 - Saxenda(리라글루타이드): **16주 4% 미만** → 중단 고려 (FDA label)
 - Wegovy(세마글루타이드): 공식 stopping rule **없음** (증량 자체가 16-20주 소요)
 - 참고: 1개월 체중감소가 6개월 반응의 유일한 유의 예측인자 [출처: Maccora 2019]
+- **조기 무반응 ≠ 실패 (Tirzepatide, SURMOUNT-1 post-hoc)**: 12주에 <5% 감량한 'late responder' 18%(278/1545) 중 **24주 70%·72주 90%가 ≥5% 달성** (평균 5% 도달 24.8±12.7주). late responder = 남성·고체중·고BMI 비중↑. → **12주 무반응으로 조기 중단 말고 치료 연장** 고려. 같은 용량에도 반응이 다른 건 개인 GLP-1 수용체 민감도 차이('이긴자로' 현상의 근거). [출처: Ard J et al. Diabetes Obes Metab 2025;27(9):5064-5071. PMID:40677091, DOI:10.1111/dom.16554]
 
 ### 효과 안 좋을 것으로 예상되는 경우
 1. Adaptive thermogenesis 강한 경우 [CLINICAL] [출처: Egan & Collins Proc Nutr Soc 2022 PMID:35103583]
