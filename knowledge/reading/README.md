@@ -30,3 +30,4 @@ created: 2026-09-20
 - `milk-fat-variation.md` — 우유 지방 함량은 왜 다른가: 종·품종·생산량·사료·기후·가공(몽골 우유가 진한 이유). 비의료 일반 상식 (2026-10-09)
 - `anesthesia-safety-case.md` — 소아 전신마취 사고 환자안전 교훈: 장비 사전점검·DOPES 장비우선 감별·정직한 공개·개인vs시스템 (2026-10-09)
 - `dietary-nitrate-reappraisal.md` — 식이 질산염 재평가: 발암 통념→채소 질산염 NO 경로(혈압강하), matrix가 위험 가름 (2026-10-10, myth-log에서 이동)
+- `expert-overconfidence.md` — 전문가의 확신이 검증을 대체할 때(유홍준 유묵 오인): 확신≠검증·실수 후 정직성·AI 과잉확신 병치 (2026-10-19)
