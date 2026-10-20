@@ -9511,6 +9511,41 @@ KNOWLEDGE_BUNDLE["DVT"] = _dvt_d_dimer_v2;
 KNOWLEDGE_BUNDLE["심부정맥혈전증"] = _dvt_d_dimer_v2;
 KNOWLEDGE_BUNDLE["D-이합체"] = _dvt_d_dimer_v2;
 
+/* pe-perc-rule — PERC 폐색전 배제 기준 8항목 (Kline 2008 검증·PROPER RCT 2018). 저의심 전용 2차 필터. [CLINICAL] */
+var _pe_perc_rule_v2 = {
+  kind: "disease",
+  keywords: ["pe-perc-rule","PERC","폐색전","폐동맥색전증","pulmonary embolism","PE","배제규칙","rule-out","pretest probability","gestalt","CTPA","VTE"],
+  relations: [{ kind: "parent", target: "clinical-reasoning" }],
+  primarySources: [
+    "Kline JA et al. Prospective multicenter evaluation of the pulmonary embolism rule-out criteria. J Thromb Haemost 2008;6(5):772-80. PMID:18318689, DOI:10.1111/j.1538-7836.2008.02944.x",
+    "Freund Y et al. (PROPER) Effect of the PERC on Subsequent Thromboembolic Events Among Low-Risk ED Patients. JAMA 2018;319(6):559-566. PMID:29450523, DOI:10.1001/jama.2017.21904",
+    "Singh B et al. Diagnostic accuracy of PERC: a systematic review and meta-analysis. Ann Emerg Med 2012;59(6):517-20.e1-4. PMID:22177109, DOI:10.1016/j.annemergmed.2011.10.022"
+  ],
+  sections: {
+    definition: {
+      content: "### PERC — 저의심 PE 배제 전용 2차 필터\n**PERC는 독립 진단 도구가 아니다.** gestalt(임상 종합 인상) 또는 Wells로 **이미 \"낮은 의심(<15%)\"**이 성립한 환자에서만 적용. 8항목 **전부 음성(PERC−)** → D-이합체·영상 없이 PE 배제. **하나라도 양성** → PERC로 배제 불가 → Wells + (나이-보정) D-이합체로 진행([[dvt-d-dimer]]).\n\n**순서가 전부**: ① 저의심 확정 → ② PERC 8항목 → ③ PERC− 종료 / 1개라도 + → 정식 평가. 중등도·고위험에 쓰는 것이 가장 흔한 오용(특이도 ≈22%, rule-in 불가).",
+      sources: []
+    },
+    protocol: {
+      content: "### 8항목 — 하나라도 어기면 적용 불가\n| # | 기준 |\n|---|---|\n| 1 | 50세 미만 |\n| 2 | 맥박 100/min 미만 |\n| 3 | SaO₂ ≥ 95% (실내공기) |\n| 4 | 객혈 없음 |\n| 5 | 에스트로겐 사용 없음 |\n| 6 | 이전 VTE(DVT/PE) 없음 |\n| 7 | 한쪽 다리 부종 없음 |\n| 8 | 최근 4주 내 입원 요한 수술·외상 없음 |\n\n> 8개 전부 음성 → PE 배제, 추가 검사 불필요.",
+      sources: []
+    },
+    evidence: {
+      content: "### 검증 수치\n- **전향 검증**(Kline 2008, n=8,138): 저의심 + PERC− 에서 45일 VTE/사망 **위양성률 1.0%**(16/1666), 민감도 97.4%, 특이도 21.9%. 외래 PE 의심 환자의 약 20%가 해당.\n- **메타분석**(Singh 2012, 12코호트·13,885명): 통합 민감도 0.97, 특이도 0.23, 음성우도비 0.17.\n- **RCT**(PROPER 2018): 저위험에서 PERC 전략 3개월 혈전색전 사건 **비열등**(PERC군 0.1%), **CTPA 13% vs 23%**, 체류시간·입원율 감소.",
+      sources: ["Kline JA et al. J Thromb Haemost 2008;6(5):772-80. PMID:18318689, DOI:10.1111/j.1538-7836.2008.02944.x", "Freund Y et al. JAMA 2018;319(6):559-566. PMID:29450523, DOI:10.1001/jama.2017.21904", "Singh B et al. Ann Emerg Med 2012;59(6):517-20.e1-4. PMID:22177109, DOI:10.1016/j.annemergmed.2011.10.022"]
+    },
+    precaution: {
+      content: "- **배제 전용**: 특이도 낮음 → PE 확정 불가. PERC+ 는 \"PE다\"가 아니라 \"PERC로는 못 거른다\".\n- **ED 유래·검증**: 응급실 저위험 코호트 기반. 다른 유병률 환경 외삽 주의(저위험일수록 안전).\n- **임신**: 심박수·하지부종·에스트로겐 항목에서 흔히 걸림 → 보통 PERC로 배제 안 됨. 임신 PE는 별도 경로.\n- 관련: [[dvt-d-dimer]](Wells + 나이-보정 D-이합체) · [[clinical-reasoning]](pretest probability).",
+      sources: []
+    }
+  },
+  uiHooks: { guide: ["*"] }
+};
+KNOWLEDGE_BUNDLE["pe-perc-rule"] = _pe_perc_rule_v2;
+KNOWLEDGE_BUNDLE["PERC"] = _pe_perc_rule_v2;
+KNOWLEDGE_BUNDLE["폐색전"] = _pe_perc_rule_v2;
+KNOWLEDGE_BUNDLE["폐동맥색전증"] = _pe_perc_rule_v2;
+
 /* primary-aldosteronism — 일차성 알도스테론증: 고혈압 전원 ARR 선별 (Endocrine Society 2025). [CLINICAL, REGULATORY] */
 var _primary_aldosteronism_v2 = {
   kind: "disease",
