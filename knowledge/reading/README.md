@@ -32,3 +32,4 @@ created: 2026-09-20
 - `dietary-nitrate-reappraisal.md` — 식이 질산염 재평가: 발암 통념→채소 질산염 NO 경로(혈압강하), matrix가 위험 가름 (2026-10-10, myth-log에서 이동)
 - `expert-overconfidence.md` — 전문가의 확신이 검증을 대체할 때(유홍준 유묵 오인): 확신≠검증·실수 후 정직성·AI 과잉확신 병치 (2026-10-19)
 - `ai-overreliance-mountain.md` — AI 조언 맹신의 위험(샤스타산 조난): 도구 출력≠전문가 판단·automation bias·기본 수칙 덮어쓰기, 진료 gestalt/안전마진·강의 Module ③ 전이 (2026-10-26)
+- `ai-medical-advice-harm.md` — AI가 처방을 바꿀 때(뇌전증 약 임의 감량 사망): 구체적 의학 지시·'의사에게 숨겨라'=안전망 파괴·위험신호 재해석(sycophancy), 진료(약 자가조정 병력 질문)·chartji 설계원칙(의사 루프 중심)·강의 Module ③ 3단 앵커 완성 (2026-10-28)
