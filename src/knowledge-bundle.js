@@ -9546,6 +9546,41 @@ KNOWLEDGE_BUNDLE["PERC"] = _pe_perc_rule_v2;
 KNOWLEDGE_BUNDLE["폐색전"] = _pe_perc_rule_v2;
 KNOWLEDGE_BUNDLE["폐동맥색전증"] = _pe_perc_rule_v2;
 
+/* ocad-clinical-likelihood — 안정형 흉통 폐쇄성 CAD 임상가능도 RF-CL/CACS-CL (Winther JACC 2020·2022). [CLINICAL] */
+var _ocad_clinical_likelihood_v2 = {
+  kind: "disease",
+  keywords: ["ocad-clinical-likelihood","협심증","안정형 흉통","stable chest pain","폐쇄성 관상동맥질환","OCAD","obstructive CAD","pretest probability","PTP","clinical likelihood","RF-CL","CACS-CL","관상동맥 칼슘점수","CACS","Diamond-Forrester"],
+  relations: [{ kind: "parent", target: "clinical-reasoning" }],
+  primarySources: [
+    "Winther S et al. Incorporating Coronary Calcification Into Pre-Test Assessment of the Likelihood of CAD. J Am Coll Cardiol 2020;76(21):2421-2432. PMID:33213720, DOI:10.1016/j.jacc.2020.09.585",
+    "Winther S et al. Coronary Calcium Scoring Improves Risk Prediction in Patients With Suspected Obstructive CAD. J Am Coll Cardiol 2022;80(21):1965-1977. PMID:36396197, DOI:10.1016/j.jacc.2022.08.805"
+  ],
+  sections: {
+    definition: {
+      content: "### 안정형 흉통 — 폐쇄성 CAD 임상가능도\n증상 환자의 폐쇄성 CAD 가능도를 **나이·성별·증상유형 + 위험인자(RF-CL)**, 필요 시 **관상동맥 칼슘점수(CACS-CL)**로 추정해 \"검사 안 해도 되는 저위험\"을 걸러내는 리스크 층화 도구. 단독 Diamond-Forrester PTP보다 저가능도로 안전하게 재분류되는 환자가 크게 늘어남.\n\n> **안정형(만성) 흉통 전용.** 급성 흉통·ACS 의심은 이 도구가 아니라 troponin·ECG 기반 응급 경로. 계산기: calciumscorecalculator.com/en/ocad/",
+      sources: []
+    },
+    protocol: {
+      content: "### 두 모델\n| 모델 | 입력 |\n|---|---|\n| **RF-CL**(위험인자 가중) | 증상유형(전형/비전형 협심증·비협심증성) + 나이 + 성별 + 당뇨·고혈압·이상지질혈증·흡연·조기 CAD 가족력 |\n| **CACS-CL**(칼슘점수 가중) | RF-CL 입력 + 관상동맥 칼슘점수(CACS) |\n\n### 가능도 구간·처분\n| 구간 | 가능도 | 처분 |\n|---|---|---|\n| 매우 낮음 | ≤5% | 추가 검사 불필요(안심·추적) |\n| 낮음 | >5–≤15% | 대개 보류 가능. **CACS 가장 유용**(재분류 NNT 최저) |\n| 중간 | >15–≤50% | 비침습 검사(CCTA/기능검사) |\n| 높음 | >50% | 추가 평가 진행 |\n\n흐름: RF-CL 산출 → 매우낮음/낮음=보류 또는 CACS 재확인 / 중간=CACS-CL 또는 비침습 / 높음=평가.",
+      sources: []
+    },
+    evidence: {
+      content: "### 검증 수치\n- **판별력**(Winther 2020, 개발 n=41,177·검증 n=15,411): AUC **PTP 72→RF-CL 75→CACS-CL 85**. 저가능도 분류 **PTP 11%→RF-CL 38%→CACS-CL 54%**.\n- **예후**(Winther 2022, n=41,177+3,952): ≤5% 하향재분류 **PTP 18%→RF-CL 45%→CACS-CL 60%**인데도 연간 MI/사망률 세 모델 모두 낮음(0.37–0.51%). C-통계 **PTP 0.61→RF-CL 0.64→CACS-CL 0.69**. RF-CL·CACS-CL이 각 2.5·3.3배 많은 환자를 \"추가 검사 불필요\"로 안전 식별.",
+      sources: ["Winther S et al. J Am Coll Cardiol 2020;76(21):2421-2432. PMID:33213720, DOI:10.1016/j.jacc.2020.09.585", "Winther S et al. J Am Coll Cardiol 2022;80(21):1965-1977. PMID:36396197, DOI:10.1016/j.jacc.2022.08.805"]
+    },
+    precaution: {
+      content: "- **안정형 전용**: 급성 흉통·ACS는 응급 경로.\n- **참조기준=해부학적 협착**(luminal stenosis) → 기능적 허혈과 불완전 일치, 최근 CCTA 재보정 진행 중.\n- **CACS 가용성·급여**: 한국 관상동맥 칼슘 CT 접근성·급여 별도 확인. CACS-CL은 CACS 얻을 때만.\n- 저가능도라도 **증상 경과·red flag(불안정 양상)**는 임상 판단으로 재평가 — 모델은 확률일 뿐.\n- 관련: [[clinical-reasoning]] · [[dyslipidemia]](CAC·statin) · [[dvt-d-dimer]].",
+      sources: []
+    }
+  },
+  uiHooks: { guide: ["*"] }
+};
+KNOWLEDGE_BUNDLE["ocad-clinical-likelihood"] = _ocad_clinical_likelihood_v2;
+KNOWLEDGE_BUNDLE["협심증"] = _ocad_clinical_likelihood_v2;
+KNOWLEDGE_BUNDLE["안정형흉통"] = _ocad_clinical_likelihood_v2;
+KNOWLEDGE_BUNDLE["RF-CL"] = _ocad_clinical_likelihood_v2;
+KNOWLEDGE_BUNDLE["CACS-CL"] = _ocad_clinical_likelihood_v2;
+
 /* primary-aldosteronism — 일차성 알도스테론증: 고혈압 전원 ARR 선별 (Endocrine Society 2025). [CLINICAL, REGULATORY] */
 var _primary_aldosteronism_v2 = {
   kind: "disease",
