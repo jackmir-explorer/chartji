@@ -9581,6 +9581,40 @@ KNOWLEDGE_BUNDLE["안정형흉통"] = _ocad_clinical_likelihood_v2;
 KNOWLEDGE_BUNDLE["RF-CL"] = _ocad_clinical_likelihood_v2;
 KNOWLEDGE_BUNDLE["CACS-CL"] = _ocad_clinical_likelihood_v2;
 
+/* obesity-clinical-preclinical — 비만 진단 재정의: 임상적/전임상 비만 (Lancet 2025 Commission·Nature 2026 검증). [CLINICAL] */
+var _obesity_clinical_preclinical_v2 = {
+  kind: "disease",
+  keywords: ["obesity-clinical-preclinical","비만진단","임상적 비만","clinical obesity","전임상 비만","preclinical obesity","BMI 한계","허리둘레","waist circumference","키대비허리둘레","체지방","adiposity","장기기능이상","Lancet Commission"],
+  relations: [{ kind: "parent", target: "obesity" }],
+  primarySources: [
+    "Rubino F et al. Definition and diagnostic criteria of clinical obesity. Lancet Diabetes Endocrinol 2025;13(3):221-262. PMID:39824205, DOI:10.1016/S2213-8587(24)00316-4",
+    "Nature 2026 (화중과기대·KCL 등) 4개국 844,108명 검증 — DOI:10.1038/s41586-026-11237-5 [PubMed 미색인 2026-11; 수치 보도 기준]"
+  ],
+  sections: {
+    definition: {
+      content: "### 비만 = BMI 수치가 아니라 '체지방이 장기·기능에 미치는 영향'\n**BMI는 폐기가 아니라 초기 선별로 강등**(역학·집단 지표로만, 개인 건강위험 판정엔 단독 사용 금지). Lancet 2025 Commission은 비만을 두 단계로 진단:\n① BMI + 허리둘레(또는 키대비허리둘레·허리-엉덩이비)로 **과도한 체지방 확인**(BMI>40은 추정 가능).\n② 장기·기능 이상 유무로 **임상적 비만(질병)** vs **전임상 비만(위험 상태)** 구분.\n\n**왜**: BMI는 체지방·근육 구분 못 하고 복부지방 반영 못 함 — BMI만으로 1.2~3.1% 과잉분류·5.2~8.6% 누락(Nature 2026 보도).",
+      sources: []
+    },
+    protocol: {
+      content: "### Step 1 — 과도한 체지방 확인\nBMI + 직접 체지방 측정 **또는 최소 1개 인체계측**(허리둘레·허리-엉덩이비·키대비허리둘레, 연령·성별·인종 cutoff). BMI>40 → 추정 가능. BMI 비만 미달이라도 복부지방 확인 시 비만 분류 가능.\n\n### Step 2 — 임상적 vs 전임상 (주 기준 ≥1)\n1. 비만으로 인한 **장기·조직 기능 저하**(증상·징후·검사 이상)\n2. 비만으로 인한 **상당한(연령보정) ADL 제약**(이동·목욕·옷입기·배변·식사)\n\n| 구분 | 정의 | 처분 |\n|---|---|---|\n| **임상적 비만** | 체지방으로 장기기능 저하·ADL 제약 = 질병(심근경색·뇌졸중·신부전 유발 가능) | **적극 근거기반 치료**(개선·관해, 말기 장기손상 예방) |\n| **전임상 비만** | 체지방 과도하나 기능 유지, T2DM·CVD·일부 암·정신질환 위험↑ | **상담·모니터링 + 위험별 조기개입** |",
+      sources: []
+    },
+    evidence: {
+      content: "### 검증 수치 (Nature 2026, 4개국 844,108명 — 보도 기준)\n- 허리둘레·키대비허리둘레 추가 시 **비만 유병률 +3.3~7.4%p**(중 17.8→21.3·영 24.0→27.3·미 42.5→48.1·스 18.7→26.1%).\n- 새 기준 비만 중 **장기이상 동반(임상적) 22.7~31.3%**, 전체 성인 임상적 비만 **5.6~10.9%**.\n- **사망위험**(비만·장기이상 없음 기준): 임상적 비만 **+69%**, 전임상 **+19%**.\n- **BMI 비만이나 새 기준 비만 아님 → 사망위험 유의 증가 없음** = 체지방·분포·장기기능을 봐야 위험이 보임.",
+      sources: ["Rubino F et al. Lancet Diabetes Endocrinol 2025;13(3):221-262. PMID:39824205, DOI:10.1016/S2213-8587(24)00316-4", "Nature 2026 DOI:10.1038/s41586-026-11237-5 [PubMed 미색인; 수치 보도 기준]"]
+    },
+    precaution: {
+      content: "- **BMI 폐기 아님**: 초기 선별·역학·집단 지표로 유지, 개인 위험 판정에만 단독 사용 금지.\n- **한국 적용**: 한국인 체형·대사위험 반영 cutoff 검증 선행 필요(국내 전문가 의견). 아시아인 BMI·허리둘레 기준 별도.\n- **치료성과 개선 여부는 후속 검증 필요**.\n- Nature 검증논문 2026-11 발행으로 **PubMed 미색인**, 수치 보도 요약 기준 [원문 확인 시 재검증].\n- 관련: [[obesity]](표현형·GLP-1) · [[dyslipidemia]]·[[ckm-syndrome]] · [[clinical-reasoning]].",
+      sources: []
+    }
+  },
+  uiHooks: { guide: ["*"] }
+};
+KNOWLEDGE_BUNDLE["obesity-clinical-preclinical"] = _obesity_clinical_preclinical_v2;
+KNOWLEDGE_BUNDLE["임상적비만"] = _obesity_clinical_preclinical_v2;
+KNOWLEDGE_BUNDLE["전임상비만"] = _obesity_clinical_preclinical_v2;
+KNOWLEDGE_BUNDLE["비만진단기준"] = _obesity_clinical_preclinical_v2;
+
 /* primary-aldosteronism — 일차성 알도스테론증: 고혈압 전원 ARR 선별 (Endocrine Society 2025). [CLINICAL, REGULATORY] */
 var _primary_aldosteronism_v2 = {
   kind: "disease",
