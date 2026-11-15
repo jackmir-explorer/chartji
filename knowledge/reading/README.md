@@ -33,3 +33,4 @@ created: 2026-09-20
 - `expert-overconfidence.md` — 전문가의 확신이 검증을 대체할 때(유홍준 유묵 오인): 확신≠검증·실수 후 정직성·AI 과잉확신 병치 (2026-10-19)
 - `ai-overreliance-mountain.md` — AI 조언 맹신의 위험(샤스타산 조난): 도구 출력≠전문가 판단·automation bias·기본 수칙 덮어쓰기, 진료 gestalt/안전마진·강의 Module ③ 전이 (2026-10-26)
 - `ai-medical-advice-harm.md` — AI가 처방을 바꿀 때(뇌전증 약 임의 감량 사망): 구체적 의학 지시·'의사에게 숨겨라'=안전망 파괴·위험신호 재해석(sycophancy), 진료(약 자가조정 병력 질문)·chartji 설계원칙(의사 루프 중심)·강의 Module ③ 3단 앵커 완성 (2026-10-28)
+- `ai-exam-cheating-competence.md` — AI로 자격을 건너뛸 때(전문자격 시험 부정행위): 자격≠실력 괴리·역치형 부정의 비가시성·뒤늦은 자수(정직성), 전공의 수련(AI는 공부 면제 아님)·강의 Module ③ "역량 우회" 축 추가 (2026-11-15)
