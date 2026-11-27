@@ -1,41 +1,33 @@
 #!/usr/bin/env node
-// scout-digest.mjs — inbox/scout/*.md 를 한 장짜리 뉴스레터(HTML)로 합친다.
-// 목적: 매일 쌓이는 scout 리포트를 "눌러 들어가는 병목" 없이 한눈에.
-// 사용: node scripts/scout-digest.mjs [--days 28] [--out digest.html] [--max-unreacted 40]
+// scout-digest.mjs — inbox/scout/*.md 를 한 장짜리 인터랙티브 웹페이지로 합친다.
+// 목적: 매일 쌓이는 scout 리포트를 "눌러 들어가는 병목" 없이 한눈에 + 카드 안에서
+//       '세부 요약(deep-extract급)' 토글로 펼쳐 보기.
+// 사용: node scripts/scout-digest.mjs [--days 28] [--out digest.html] [--max-unreacted 60]
 //
-// 파싱 대상(파일당 1개 이상 논문 블록):
-//   # Scout Report — YYYY-MM-DD
-//   ### <제목>
-//   - **저널:** <journal> | **PMID:** <pmid>
-//   - **슬롯:** <slot>
-//   - **한 줄:** <one-liner>
-//   - **왜 유용:** <why>
-//   - **💬 반응:** <text | `___`>  [ `✅ 반영됨 DATE` ]
+// 입력:
+//   inbox/scout/*.md               — 스카우트 리포트(파싱)
+//   inbox/scout/deep-summaries.json — PMID→deep 요약 캐시(초록 기반; 매일 새 논문만 추가)
 
 import fs from "node:fs";
 import path from "node:path";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const SCOUT_DIR = path.join(ROOT, "inbox", "scout");
+const DEEP_FILE = path.join(SCOUT_DIR, "deep-summaries.json");
 const REPO_BLOB = "https://github.com/jackmir-explorer/chartji/blob/main/inbox/scout";
 
-// ---- args ----
 const args = process.argv.slice(2);
-const getArg = (name, def) => {
-  const i = args.indexOf(`--${name}`);
-  return i >= 0 && args[i + 1] ? args[i + 1] : def;
-};
+const getArg = (name, def) => { const i = args.indexOf(`--${name}`); return i >= 0 && args[i + 1] ? args[i + 1] : def; };
 const DAYS = parseInt(getArg("days", "28"), 10);
-const MAX_UNREACTED = parseInt(getArg("max-unreacted", "40"), 10);
-const OUT = getArg("out", path.join(ROOT, "inbox", "scout", "digest.html"));
+const MAX_UNREACTED = parseInt(getArg("max-unreacted", "60"), 10);
+const OUT = getArg("out", path.join(SCOUT_DIR, "digest.html"));
 
-// ---- 도메인(슬롯) → 색 ----
 const DOMAIN_COLORS = [
-  [/약물|deprescrib|polypharm|처방/i, "#b45309", "약물"],
-  [/생활습관|lifestyle|운동|exercise|식이|alcohol|smoking/i, "#047857", "생활습관"],
-  [/감염|antibiotic|vaccin|부비동|URI/i, "#0369a1", "감염"],
-  [/심|cardio|CVD|고혈압|HTN|지질|statin/i, "#be123c", "심혈관"],
-  [/신경|neuro|두통|어지럼|dizz|헤드|migraine/i, "#7c3aed", "신경"],
+  [/약물|deprescrib|polypharm|처방|BZD|benzodiaz/i, "#b45309", "약물"],
+  [/생활습관|lifestyle|운동|exercise|식이|diet|alcohol|smoking/i, "#047857", "생활습관"],
+  [/감염|antibiotic|vaccin|부비동|URI|POCUS|초음파|ultrasound/i, "#0369a1", "감염·술기"],
+  [/심|cardio|CVD|고혈압|HTN|지질|statin|CKD|신장|renal|빈혈|anemia/i, "#be123c", "심·신"],
+  [/신경|neuro|두통|어지럼|dizz|통증|pain|migraine/i, "#7c3aed", "신경·통증"],
   [/내분비|당뇨|diabet|갑상|thyroid|비만|obes/i, "#c026d3", "내분비"],
   [/정신|psych|우울|depress|불안|anxiety/i, "#4f46e5", "정신"],
   [/Wildcard|Liby|Follow/i, "#475569", "와일드카드"],
@@ -45,24 +37,19 @@ const domainOf = (slot) => {
   return { color: "#64748b", label: "일반" };
 };
 
-// ---- 파싱 ----
 function parseFile(file) {
   const raw = fs.readFileSync(file, "utf8");
   const base = path.basename(file, ".md");
   const dateM = raw.match(/Scout Report\s*—\s*(\d{4}-\d{2}-\d{2})/) || [null, base];
   const date = dateM[1];
-  const lines = raw.split("\n");
   const papers = [];
   let cur = null;
   const pushCur = () => { if (cur && cur.title) papers.push(cur); cur = null; };
-  for (const line of lines) {
+  for (const line of raw.split("\n")) {
     const h = line.match(/^###\s+(.+?)\s*$/);
     if (h) { pushCur(); cur = { date, title: h[1].trim() }; continue; }
     if (!cur) continue;
-    const field = (label) => {
-      const m = line.match(new RegExp(`^-\\s*\\*\\*${label}:\\*\\*\\s*(.*)$`));
-      return m ? m[1].trim() : null;
-    };
+    const field = (label) => { const m = line.match(new RegExp(`^-\\s*\\*\\*${label}:\\*\\*\\s*(.*)$`)); return m ? m[1].trim() : null; };
     let v;
     if ((v = field("저널")) !== null) {
       const pm = v.match(/\*\*PMID:\*\*\s*([0-9]+)/);
@@ -74,8 +61,8 @@ function parseFile(file) {
     else if ((v = field("💬 반응")) !== null) {
       const applied = /✅\s*반영/.test(v);
       const stripped = v.replace(/`[^`]*`/g, "").replace(/✅.*$/, "").trim();
-      const isBlank = /^_*$/.test(v.replace(/`/g, "").trim()) || stripped === "" && !applied && /_{3,}/.test(v);
-      cur.reaction = { raw: v, applied, reacted: applied || (!isBlank && stripped.length > 0) };
+      const isBlank = /^_*$/.test(v.replace(/`/g, "").trim());
+      cur.reaction = { applied, reacted: applied || (!isBlank && stripped.length > 0) };
     }
   }
   pushCur();
@@ -84,125 +71,141 @@ function parseFile(file) {
 
 const esc = (s) => String(s || "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
-// '왜 유용' 본문: ①②③… 구조가 있으면 줄바꿈 불릿으로 분해, 없으면 한 덩어리.
 function renderWhy(why) {
   if (!why) return "";
   const parts = why.split(/(?=[①②③④⑤⑥⑦⑧⑨⑩])/).map((s) => s.trim()).filter(Boolean);
-  if (parts.length > 1) {
-    return `<div style="margin-top:4px;">` + parts.map((p) =>
-      `<div style="font-size:13px;line-height:1.62;color:#334155;margin-bottom:6px;">${esc(p)}</div>`
-    ).join("") + `</div>`;
-  }
-  return `<div style="font-size:13px;line-height:1.62;color:#334155;margin-top:4px;">${esc(why)}</div>`;
+  if (parts.length > 1) return `<ul class="why">` + parts.map((p) => `<li>${esc(p)}</li>`).join("") + `</ul>`;
+  return `<div class="why-plain">${esc(why)}</div>`;
+}
+
+function renderDeep(deep) {
+  if (!deep) return `<div class="deep-pending">📄 세부 요약 생성 대기 (매일 자동 추가)</div>`;
+  const points = (deep.points || []).map((p) => `<li>${esc(p)}</li>`).join("");
+  return `<details class="deep">
+    <summary>📄 세부 요약 펼치기 <span class="deep-tag">deep · 초록 기반</span></summary>
+    <div class="deep-body">
+      ${deep.core ? `<div class="deep-core">${esc(deep.core)}</div>` : ""}
+      ${points ? `<ul class="deep-points">${points}</ul>` : ""}
+      ${deep.exam ? `<div class="deep-exam"><b>시험·실무 포인트</b> ${esc(deep.exam)}</div>` : ""}
+      ${deep.apply ? `<div class="deep-apply"><b>1차의료 적용</b> ${esc(deep.apply)}</div>` : ""}
+      ${deep.cite ? `<div class="deep-cite">${esc(deep.cite)}${deep.basis ? ` · ${esc(deep.basis)}` : ""}</div>` : ""}
+    </div>
+  </details>`;
 }
 
 // ---- 수집 ----
+let DEEP = {};
+try { DEEP = JSON.parse(fs.readFileSync(DEEP_FILE, "utf8")); } catch {}
 const files = fs.readdirSync(SCOUT_DIR).filter((f) => /^\d{4}-\d{2}-\d{2}\.md$/.test(f)).sort().reverse();
 let papers = [];
 for (const f of files) papers = papers.concat(parseFile(path.join(SCOUT_DIR, f)));
 
-const today = new Date();
-const cutoff = new Date(today.getTime() - DAYS * 86400000);
+const cutoff = new Date(Date.now() - DAYS * 86400000);
 const inWindow = (p) => new Date(p.date) >= cutoff;
-
 const unreacted = papers.filter((p) => p.reaction && !p.reaction.reacted);
 const unreactedRecent = unreacted.filter(inWindow);
 const unreactedOlder = unreacted.length - unreactedRecent.length;
 const reactedRecent = papers.filter((p) => inWindow(p) && p.reaction && p.reaction.reacted);
 
-// ---- 렌더 ----
 function card(p) {
-  const d = domainOf(p.slot);
+  const d = domainOf(p.slot + " " + p.title);
   const fileUrl = `${REPO_BLOB}/${p.date}.md`;
   const pubmed = p.pmid ? `https://pubmed.ncbi.nlm.nih.gov/${p.pmid}/` : null;
-  return `
-  <tr><td style="padding:0 0 18px 0;">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate;border-left:4px solid ${d.color};background:#ffffff;border-radius:8px;box-shadow:0 1px 3px rgba(15,23,42,.08);">
-      <tr><td style="padding:18px 20px;">
-        <div style="font-size:11px;color:${d.color};font-weight:700;letter-spacing:.3px;margin-bottom:6px;">
-          ${esc(d.label)} &nbsp;·&nbsp; <span style="color:#94a3b8;font-weight:600;">${esc(p.date)}</span>
-          ${p.reaction && !p.reaction.reacted ? `&nbsp;·&nbsp;<span style="background:#fef3c7;color:#92400e;padding:1px 7px;border-radius:10px;font-size:10px;">미반응</span>` : ""}
-        </div>
-        <div style="font-size:16px;line-height:1.4;font-weight:700;color:#0f172a;margin-bottom:7px;">${esc(p.title)}</div>
-        <div style="font-size:12px;color:#64748b;margin-bottom:12px;">
-          ${esc(p.journal || "")}${pubmed ? ` &nbsp;·&nbsp; <a href="${pubmed}" style="color:#0369a1;text-decoration:none;font-weight:600;">PMID ${esc(p.pmid)} ↗</a>` : ""}
-        </div>
-        ${p.oneLiner ? `<div style="background:#f8fafc;border-radius:7px;padding:11px 13px;margin-bottom:12px;">
-          <div style="font-size:11px;color:${d.color};font-weight:700;margin-bottom:3px;">📌 핵심</div>
-          <div style="font-size:14.5px;line-height:1.55;color:#0f172a;font-weight:600;">${esc(p.oneLiner)}</div>
-        </div>` : ""}
-        ${p.why ? `<div style="margin-bottom:14px;">
-          <div style="font-size:11px;color:#94a3b8;font-weight:700;margin-bottom:2px;">왜 유용한가</div>
-          ${renderWhy(p.why)}
-        </div>` : ""}
-        <a href="${fileUrl}" style="display:inline-block;font-size:12.5px;font-weight:700;color:#ffffff;background:${d.color};padding:8px 14px;border-radius:6px;text-decoration:none;">💬 반응 한 문장 쓰기 →</a>
-      </td></tr>
-    </table>
-  </td></tr>`;
+  const deep = p.pmid ? DEEP[p.pmid] : null;
+  return `<article class="card" style="--c:${d.color}">
+    <div class="meta"><span class="dom">${esc(d.label)}</span><span class="date">${esc(p.date)}</span>${p.reaction && !p.reaction.reacted ? `<span class="badge">미반응</span>` : ""}</div>
+    <h2>${esc(p.title)}</h2>
+    <div class="jr">${esc(p.journal || "")}${pubmed ? ` · <a href="${pubmed}" target="_blank" rel="noopener">PMID ${esc(p.pmid)} ↗</a>` : ""}</div>
+    ${p.oneLiner ? `<div class="core"><div class="core-lbl">📌 핵심</div>${esc(p.oneLiner)}</div>` : ""}
+    ${p.why ? `<div class="why-wrap"><div class="lbl">왜 유용한가</div>${renderWhy(p.why)}</div>` : ""}
+    ${renderDeep(deep)}
+    <a class="react" href="${fileUrl}" target="_blank" rel="noopener">💬 반응 한 문장 쓰기 →</a>
+  </article>`;
 }
 
-const dateRange = `${papers.length ? papers[papers.length - 1].date : ""} ~ ${papers.length ? papers[0].date : ""}`;
-const genTime = new Date().toISOString().slice(0, 10);
+const genTime = new Date().toISOString().slice(0, 16).replace("T", " ");
+const cards = unreactedRecent.slice(0, MAX_UNREACTED).map(card).join("\n");
 
 const html = `<!DOCTYPE html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Chartji Scout Digest</title></head>
-<body style="margin:0;padding:0;background:#f1f5f9;font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f1f5f9;"><tr><td align="center" style="padding:20px 12px;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;">
-
-  <!-- header -->
-  <tr><td style="padding:4px 4px 16px;">
-    <div style="font-size:20px;font-weight:800;color:#0f172a;">🔬 Chartji Scout Digest</div>
-    <div style="font-size:12px;color:#64748b;margin-top:3px;">최근 ${DAYS}일 · 생성 ${genTime}</div>
-  </td></tr>
-
-  <!-- summary strip -->
-  <tr><td style="padding:0 0 18px;">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#0f172a;border-radius:10px;">
-      <tr>
-        <td align="center" style="padding:14px 8px;color:#fff;">
-          <div style="font-size:26px;font-weight:800;color:#fbbf24;">${unreactedRecent.length}</div>
-          <div style="font-size:11px;color:#cbd5e1;">미반응 (최근 ${DAYS}일)</div>
-        </td>
-        <td align="center" style="padding:14px 8px;color:#fff;border-left:1px solid #1e293b;border-right:1px solid #1e293b;">
-          <div style="font-size:26px;font-weight:800;color:#34d399;">${reactedRecent.length}</div>
-          <div style="font-size:11px;color:#cbd5e1;">반영됨</div>
-        </td>
-        <td align="center" style="padding:14px 8px;color:#fff;">
-          <div style="font-size:26px;font-weight:800;color:#f1f5f9;">${unreactedOlder}</div>
-          <div style="font-size:11px;color:#cbd5e1;">${DAYS}일 이전 미반응</div>
-        </td>
-      </tr>
-    </table>
-  </td></tr>
-
-  <!-- unreacted -->
-  <tr><td style="padding:0 0 6px;"><div style="font-size:14px;font-weight:700;color:#0f172a;">📬 아직 안 읽은 논문</div>
-    <div style="font-size:11px;color:#94a3b8;margin:2px 0 10px;">한 줄만 읽고, 쓸 게 있으면 카드의 버튼으로 바로 점프</div></td></tr>
-  <tr><td><table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-    ${unreactedRecent.slice(0, MAX_UNREACTED).map(card).join("") || `<tr><td style="padding:20px;text-align:center;color:#94a3b8;font-size:13px;background:#fff;border-radius:8px;">🎉 최근 ${DAYS}일 미반응 없음 — 다 읽으셨어요!</td></tr>`}
-  </table></td></tr>
-  ${unreactedRecent.length > MAX_UNREACTED ? `<tr><td style="padding:4px 0 0;font-size:12px;color:#94a3b8;">…외 ${unreactedRecent.length - MAX_UNREACTED}건 더</td></tr>` : ""}
-
-  <!-- footer -->
-  <tr><td style="padding:22px 4px 8px;border-top:1px solid #e2e8f0;margin-top:10px;">
-    <div style="font-size:11px;color:#94a3b8;line-height:1.6;">
-      반응을 쓴 논문만 정오 12:00 Deep Extract가 처리합니다. 빈칸은 넘어갑니다.<br>
-      이 다이제스트는 inbox/scout/*.md 에서 매일 자동 생성됩니다.
-    </div>
-  </td></tr>
-
-</table></td></tr></table></body></html>`;
+<title>Chartji Scout Digest</title>
+<style>
+  :root{color-scheme:light}
+  *{box-sizing:border-box}
+  body{margin:0;background:#f1f5f9;color:#0f172a;font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;-webkit-text-size-adjust:100%}
+  .wrap{max-width:640px;margin:0 auto;padding:20px 14px 48px}
+  header h1{font-size:21px;font-weight:800;margin:0}
+  header .sub{font-size:12px;color:#64748b;margin-top:3px}
+  .stats{display:flex;background:#0f172a;border-radius:12px;margin:16px 0 22px;overflow:hidden}
+  .stats div{flex:1;text-align:center;padding:14px 6px;color:#cbd5e1;border-right:1px solid #1e293b}
+  .stats div:last-child{border-right:0}
+  .stats b{display:block;font-size:26px;font-weight:800;line-height:1}
+  .stats .s-un b{color:#fbbf24}.stats .s-ok b{color:#34d399}.stats .s-old b{color:#f1f5f9}
+  .stats span{font-size:11px}
+  .sec-h{font-size:15px;font-weight:700;margin:0 0 2px}
+  .sec-s{font-size:11px;color:#94a3b8;margin:0 0 14px}
+  .card{background:#fff;border-left:4px solid var(--c);border-radius:10px;box-shadow:0 1px 3px rgba(15,23,42,.08);padding:17px 18px;margin-bottom:16px}
+  .meta{font-size:11px;font-weight:700;letter-spacing:.3px;margin-bottom:6px}
+  .meta .dom{color:var(--c)}.meta .date{color:#94a3b8;margin-left:8px}
+  .meta .badge{background:#fef3c7;color:#92400e;padding:1px 7px;border-radius:10px;font-size:10px;margin-left:8px}
+  .card h2{font-size:16px;line-height:1.4;font-weight:700;margin:0 0 7px}
+  .jr{font-size:12px;color:#64748b;margin-bottom:12px}
+  .jr a{color:#0369a1;text-decoration:none;font-weight:600}
+  .core{background:#f8fafc;border-radius:7px;padding:11px 13px;margin-bottom:13px;font-size:14.5px;line-height:1.55;font-weight:600;color:#0f172a}
+  .core-lbl{font-size:11px;color:var(--c);font-weight:700;margin-bottom:3px}
+  .lbl{font-size:11px;color:#94a3b8;font-weight:700;margin-bottom:3px}
+  .why-wrap{margin-bottom:13px}
+  ul.why{margin:0;padding-left:0;list-style:none}
+  ul.why li{font-size:13px;line-height:1.62;color:#334155;margin-bottom:6px}
+  .why-plain{font-size:13px;line-height:1.62;color:#334155}
+  details.deep{border:1px solid #e2e8f0;border-radius:8px;margin-bottom:13px;background:#fafcff}
+  details.deep summary{cursor:pointer;list-style:none;padding:10px 13px;font-size:13px;font-weight:700;color:var(--c);user-select:none}
+  details.deep summary::-webkit-details-marker{display:none}
+  details.deep summary::before{content:"▸ ";font-size:11px}
+  details.deep[open] summary::before{content:"▾ "}
+  .deep-tag{font-size:10px;font-weight:600;color:#94a3b8;background:#eef2f7;padding:1px 6px;border-radius:9px;margin-left:5px}
+  .deep-body{padding:0 14px 14px;border-top:1px solid #eef2f7}
+  .deep-core{font-size:13.5px;line-height:1.6;color:#0f172a;font-weight:600;margin:11px 0 10px}
+  ul.deep-points{margin:0 0 11px;padding-left:18px}
+  ul.deep-points li{font-size:13px;line-height:1.6;color:#334155;margin-bottom:6px}
+  .deep-exam,.deep-apply{font-size:12.5px;line-height:1.55;color:#334155;background:#f1f5f9;border-radius:6px;padding:8px 11px;margin-bottom:8px}
+  .deep-exam b,.deep-apply b{display:block;font-size:11px;color:var(--c);margin-bottom:2px}
+  .deep-cite{font-size:11px;color:#94a3b8;line-height:1.5;margin-top:4px}
+  .deep-pending{font-size:12px;color:#b45309;background:#fffbeb;border:1px dashed #fde68a;border-radius:8px;padding:9px 12px;margin-bottom:13px}
+  a.react{display:inline-block;font-size:12.5px;font-weight:700;color:#fff;background:var(--c);padding:9px 15px;border-radius:7px;text-decoration:none}
+  footer{font-size:11px;color:#94a3b8;line-height:1.7;margin-top:26px;padding-top:18px;border-top:1px solid #e2e8f0}
+  @media(prefers-color-scheme:dark){
+    body{background:#0b1220;color:#e2e8f0}
+    .card{background:#131c2e;box-shadow:none}
+    .core,.deep-exam,.deep-apply{background:#1b2740}.core,.core .core-lbl{color:inherit}
+    details.deep{background:#121a2b;border-color:#24304a}.deep-body{border-color:#24304a}
+    .jr a{color:#60a5fa}
+  }
+</style></head>
+<body><div class="wrap">
+  <header>
+    <h1>🔬 Chartji Scout Digest</h1>
+    <div class="sub">최근 ${DAYS}일 · 생성 ${genTime}</div>
+  </header>
+  <div class="stats">
+    <div class="s-un"><b>${unreactedRecent.length}</b><span>미반응 (최근 ${DAYS}일)</span></div>
+    <div class="s-ok"><b>${reactedRecent.length}</b><span>반영됨</span></div>
+    <div class="s-old"><b>${unreactedOlder}</b><span>${DAYS}일 이전 미반응</span></div>
+  </div>
+  <div class="sec-h">📬 아직 안 읽은 논문</div>
+  <div class="sec-s">제목·핵심만 훑고, 더 보고 싶으면 '세부 요약 펼치기' · 쓸 게 있으면 '반응' 버튼으로 바로 점프</div>
+  ${cards || `<div class="card">🎉 최근 ${DAYS}일 미반응 없음 — 다 읽으셨어요!</div>`}
+  ${unreactedRecent.length > MAX_UNREACTED ? `<div class="sec-s">…외 ${unreactedRecent.length - MAX_UNREACTED}건 더</div>` : ""}
+  <footer>
+    반응을 쓴 논문만 정오 12:00 Deep Extract가 처리합니다. 빈칸은 넘어갑니다.<br>
+    세부 요약은 논문 초록(PubMed) 기반이며 inbox/scout 에서 매일 자동 생성됩니다.
+  </footer>
+</div></body></html>`;
 
 fs.writeFileSync(OUT, html);
-// stdout: 요약(예약 작업이 이메일 제목/본문에 쓰도록)
 console.log(JSON.stringify({
-  out: OUT,
-  totalPapers: papers.length,
-  unreactedRecent: unreactedRecent.length,
-  unreactedOlder,
-  reactedRecent: reactedRecent.length,
-  dateRange,
+  out: OUT, totalPapers: papers.length,
+  unreactedRecent: unreactedRecent.length, unreactedOlder, reactedRecent: reactedRecent.length,
+  deepCached: Object.keys(DEEP).filter((k) => !k.startsWith("_")).length,
   subject: `🔬 Scout Digest — 안 읽은 논문 ${unreactedRecent.length}건 (최근 ${DAYS}일)`,
 }));
