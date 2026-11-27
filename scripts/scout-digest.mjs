@@ -83,7 +83,18 @@ function parseFile(file) {
 }
 
 const esc = (s) => String(s || "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-const truncate = (s, n) => (s && s.length > n ? s.slice(0, n).trim() + "…" : s || "");
+
+// '왜 유용' 본문: ①②③… 구조가 있으면 줄바꿈 불릿으로 분해, 없으면 한 덩어리.
+function renderWhy(why) {
+  if (!why) return "";
+  const parts = why.split(/(?=[①②③④⑤⑥⑦⑧⑨⑩])/).map((s) => s.trim()).filter(Boolean);
+  if (parts.length > 1) {
+    return `<div style="margin-top:4px;">` + parts.map((p) =>
+      `<div style="font-size:13px;line-height:1.62;color:#334155;margin-bottom:6px;">${esc(p)}</div>`
+    ).join("") + `</div>`;
+  }
+  return `<div style="font-size:13px;line-height:1.62;color:#334155;margin-top:4px;">${esc(why)}</div>`;
+}
 
 // ---- 수집 ----
 const files = fs.readdirSync(SCOUT_DIR).filter((f) => /^\d{4}-\d{2}-\d{2}\.md$/.test(f)).sort().reverse();
@@ -105,20 +116,26 @@ function card(p) {
   const fileUrl = `${REPO_BLOB}/${p.date}.md`;
   const pubmed = p.pmid ? `https://pubmed.ncbi.nlm.nih.gov/${p.pmid}/` : null;
   return `
-  <tr><td style="padding:0 0 14px 0;">
+  <tr><td style="padding:0 0 18px 0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate;border-left:4px solid ${d.color};background:#ffffff;border-radius:8px;box-shadow:0 1px 3px rgba(15,23,42,.08);">
-      <tr><td style="padding:14px 16px;">
-        <div style="font-size:11px;color:${d.color};font-weight:700;letter-spacing:.3px;">
+      <tr><td style="padding:18px 20px;">
+        <div style="font-size:11px;color:${d.color};font-weight:700;letter-spacing:.3px;margin-bottom:6px;">
           ${esc(d.label)} &nbsp;·&nbsp; <span style="color:#94a3b8;font-weight:600;">${esc(p.date)}</span>
-          ${p.reaction && !p.reaction.reacted ? `&nbsp;·&nbsp;<span style="background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:10px;font-size:10px;">미반응</span>` : ""}
+          ${p.reaction && !p.reaction.reacted ? `&nbsp;·&nbsp;<span style="background:#fef3c7;color:#92400e;padding:1px 7px;border-radius:10px;font-size:10px;">미반응</span>` : ""}
         </div>
-        <div style="font-size:15px;line-height:1.35;font-weight:700;color:#0f172a;margin:5px 0 6px;">${esc(p.title)}</div>
-        <div style="font-size:12px;color:#64748b;margin-bottom:8px;">
-          ${esc(p.journal || "")}${pubmed ? ` &nbsp;·&nbsp; <a href="${pubmed}" style="color:#0369a1;text-decoration:none;">PMID ${esc(p.pmid)} ↗</a>` : ""}
+        <div style="font-size:16px;line-height:1.4;font-weight:700;color:#0f172a;margin-bottom:7px;">${esc(p.title)}</div>
+        <div style="font-size:12px;color:#64748b;margin-bottom:12px;">
+          ${esc(p.journal || "")}${pubmed ? ` &nbsp;·&nbsp; <a href="${pubmed}" style="color:#0369a1;text-decoration:none;font-weight:600;">PMID ${esc(p.pmid)} ↗</a>` : ""}
         </div>
-        ${p.oneLiner ? `<div style="font-size:13.5px;line-height:1.5;color:#1e293b;margin-bottom:8px;">${esc(p.oneLiner)}</div>` : ""}
-        ${p.why ? `<div style="font-size:12px;line-height:1.5;color:#64748b;margin-bottom:10px;">${esc(truncate(p.why, 240))}</div>` : ""}
-        <a href="${fileUrl}" style="display:inline-block;font-size:12px;font-weight:600;color:#ffffff;background:${d.color};padding:6px 12px;border-radius:6px;text-decoration:none;">💬 반응 한 문장 쓰기 →</a>
+        ${p.oneLiner ? `<div style="background:#f8fafc;border-radius:7px;padding:11px 13px;margin-bottom:12px;">
+          <div style="font-size:11px;color:${d.color};font-weight:700;margin-bottom:3px;">📌 핵심</div>
+          <div style="font-size:14.5px;line-height:1.55;color:#0f172a;font-weight:600;">${esc(p.oneLiner)}</div>
+        </div>` : ""}
+        ${p.why ? `<div style="margin-bottom:14px;">
+          <div style="font-size:11px;color:#94a3b8;font-weight:700;margin-bottom:2px;">왜 유용한가</div>
+          ${renderWhy(p.why)}
+        </div>` : ""}
+        <a href="${fileUrl}" style="display:inline-block;font-size:12.5px;font-weight:700;color:#ffffff;background:${d.color};padding:8px 14px;border-radius:6px;text-decoration:none;">💬 반응 한 문장 쓰기 →</a>
       </td></tr>
     </table>
   </td></tr>`;
