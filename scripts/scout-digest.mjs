@@ -88,6 +88,7 @@ function renderDeep(deep) {
       ${points ? `<ul class="deep-points">${points}</ul>` : ""}
       ${deep.exam ? `<div class="deep-exam"><b>시험·실무 포인트</b> ${esc(deep.exam)}</div>` : ""}
       ${deep.apply ? `<div class="deep-apply"><b>1차의료 적용</b> ${esc(deep.apply)}</div>` : ""}
+      ${deep.limits ? `<div class="deep-limit"><b>한계·주의</b> ${esc(deep.limits)}</div>` : ""}
       ${deep.cite ? `<div class="deep-cite">${esc(deep.cite)}${deep.basis ? ` · ${esc(deep.basis)}` : ""}</div>` : ""}
     </div>
   </details>`;
@@ -130,7 +131,7 @@ const html = `<!DOCTYPE html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Chartji Scout Digest</title>
 <style>
-  :root{color-scheme:light}
+  :root{color-scheme:light only}
   *{box-sizing:border-box}
   body{margin:0;background:#f1f5f9;color:#0f172a;font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;-webkit-text-size-adjust:100%}
   .wrap{max-width:640px;margin:0 auto;padding:20px 14px 48px}
@@ -168,19 +169,13 @@ const html = `<!DOCTYPE html>
   .deep-core{font-size:13.5px;line-height:1.6;color:#0f172a;font-weight:600;margin:11px 0 10px}
   ul.deep-points{margin:0 0 11px;padding-left:18px}
   ul.deep-points li{font-size:13px;line-height:1.6;color:#334155;margin-bottom:6px}
-  .deep-exam,.deep-apply{font-size:12.5px;line-height:1.55;color:#334155;background:#f1f5f9;border-radius:6px;padding:8px 11px;margin-bottom:8px}
-  .deep-exam b,.deep-apply b{display:block;font-size:11px;color:var(--c);margin-bottom:2px}
+  .deep-exam,.deep-apply,.deep-limit{font-size:12.5px;line-height:1.55;color:#334155;background:#f1f5f9;border-radius:6px;padding:8px 11px;margin-bottom:8px}
+  .deep-exam b,.deep-apply b,.deep-limit b{display:block;font-size:11px;color:var(--c);margin-bottom:2px}
+  .deep-limit{background:#fff7ed}.deep-limit b{color:#b45309}
   .deep-cite{font-size:11px;color:#94a3b8;line-height:1.5;margin-top:4px}
   .deep-pending{font-size:12px;color:#b45309;background:#fffbeb;border:1px dashed #fde68a;border-radius:8px;padding:9px 12px;margin-bottom:13px}
   a.react{display:inline-block;font-size:12.5px;font-weight:700;color:#fff;background:var(--c);padding:9px 15px;border-radius:7px;text-decoration:none}
   footer{font-size:11px;color:#94a3b8;line-height:1.7;margin-top:26px;padding-top:18px;border-top:1px solid #e2e8f0}
-  @media(prefers-color-scheme:dark){
-    body{background:#0b1220;color:#e2e8f0}
-    .card{background:#131c2e;box-shadow:none}
-    .core,.deep-exam,.deep-apply{background:#1b2740}.core,.core .core-lbl{color:inherit}
-    details.deep{background:#121a2b;border-color:#24304a}.deep-body{border-color:#24304a}
-    .jr a{color:#60a5fa}
-  }
 </style></head>
 <body><div class="wrap">
   <header>
