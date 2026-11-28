@@ -127,7 +127,7 @@ const reactedRecent = papers.filter((p) => inWindow(p) && p.reaction && p.reacti
 const reviewable = papers.filter((p) => p.reaction && p.reaction.reacted && p.pmid && NOTES[p.pmid]).slice(0, 12);
 
 function renderDeep(deep) {
-  if (!deep) return `<div class="deep-pending">📄 세부 요약 생성 대기 (매일 자동 추가)</div>`;
+  if (!deep) return "";
   const tag = /전문|full/i.test(deep.basis || "") ? "전문 기반" : "초록 기반";
   const points = (deep.points || []).map((p) => `<li>${esc(p)}</li>`).join("");
   return `<details class="deep">
@@ -209,7 +209,6 @@ const html = `<!DOCTYPE html>
   .deep-exam b,.deep-apply b,.deep-limit b{display:block;font-size:11px;color:var(--c);margin-bottom:2px}
   .deep-limit{background:#fff7ed}.deep-limit b{color:#b45309}
   .deep-cite{font-size:11px;color:#94a3b8;line-height:1.5;margin-top:4px}
-  .deep-pending{font-size:12px;color:#b45309;background:#fffbeb;border:1px dashed #fde68a;border-radius:8px;padding:9px 12px;margin-bottom:13px}
   .note-body{padding:4px 15px 14px;border-top:1px solid #d1fae5;font-size:13px;line-height:1.62;color:#1e293b}
   .note-body h2{font-size:14px;margin:14px 0 5px;color:#065f46}.note-body h3{font-size:12.5px;margin:11px 0 4px;color:#047857}
   .note-body ul,.note-body ol{padding-left:19px;margin:5px 0}.note-body li{margin-bottom:4px}
@@ -230,11 +229,11 @@ const html = `<!DOCTYPE html>
     <div class="s-old"><b>${unreactedOlder}</b><span>${DAYS}일 이전 미반응</span></div>
   </div>
   <div class="sec-h">📬 아직 안 읽은 논문</div>
-  <div class="sec-s">훑고 → 더 보려면 '세부 요약' · 반응 쓴 건 '내 study-note'로 복습</div>
+  <div class="sec-s">훑고 → 꽂히면 반응 한 문장 → 정오 Deep Extract가 study-note를 만들어 아래 '복습'에 띄웁니다</div>
   ${cardsHtml || `<div class="card">🎉 최근 ${DAYS}일 미반응 없음 — 다 읽으셨어요!</div>`}
   ${unreactedRecent.length > MAX_UNREACTED ? `<div class="sec-s">…외 ${unreactedRecent.length - MAX_UNREACTED}건 더</div>` : ""}
   ${reviewable.length ? `<div class="sec-h" style="margin-top:26px">✅ 복습 — 내 study-note</div><div class="sec-s">반응을 써서 정오 Deep Extract가 노트를 만든 논문. 카드에서 바로 펼쳐 복습</div>${reviewable.map(card).join("\n")}` : ""}
-  <footer>반응을 쓴 논문만 정오 12:00 Deep Extract가 처리합니다. 세부 요약은 논문 초록·전문(PubMed) 기반이며 inbox/scout 에서 매일 자동 생성됩니다.</footer>
+  <footer>반응을 쓴 논문만 정오 12:00 Deep Extract가 study-note로 만듭니다(빈칸은 건너뜀). 페이지는 매일 06:35·13:35에 자동 갱신됩니다.</footer>
 </div></body></html>`;
 
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
