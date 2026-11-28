@@ -163,7 +163,7 @@ function card(p) {
     ${note ? `<details class="note"><summary>✅ 내 study-note 보기 <span class="note-tag">정오 Deep Extract</span></summary><div class="note-body">${note.html}</div></details>` : ""}
     <div class="actions">
       <a class="react" href="${fileUrl}" target="_blank" rel="noopener">💬 반응 쓰기 →</a>
-      <a class="addkeep" href="${KEEPS_EDIT}" target="_blank" rel="noopener">➕ keeps에 추가</a>
+      <button class="addkeep" type="button" data-ref="[${p.date}] ${esc(p.title)}">➕ keeps에 추가</button>
     </div>
   </article>`;
 }
@@ -192,6 +192,12 @@ const html = `<!DOCTYPE html>
   .keeps-body h2{font-size:13px;font-weight:700;color:#92400e;margin:10px 0 4px}
   .keeps-body ul{margin:0 0 6px;padding-left:18px}.keeps-body li{margin-bottom:4px}
   .keeps a.edit{display:inline-block;margin-top:8px;font-size:12px;font-weight:700;color:#92400e;text-decoration:none;border:1px solid #fcd34d;border-radius:6px;padding:5px 11px}
+  .keeps-ta{width:100%;min-height:118px;border:1px solid #fcd34d;border-radius:8px;padding:10px 12px;font-family:inherit;font-size:13px;line-height:1.65;color:#334155;background:#fff;resize:vertical}
+  .keeps-actions{display:flex;align-items:center;gap:10px;margin-top:7px}
+  .keeps-ind{font-size:11px;color:#059669;font-weight:700}
+  .keeps-copy{font-size:12px;font-weight:700;color:#92400e;background:#fff;border:1px solid #fcd34d;border-radius:6px;padding:5px 11px;cursor:pointer;font-family:inherit}
+  .keeps-repo{margin-top:11px}.keeps-repo summary{cursor:pointer;font-size:12px;font-weight:700;color:#b45309;list-style:none}
+  .keeps-body h2{font-size:13px;font-weight:700;color:#92400e;margin:10px 0 4px}.keeps-body ul{margin:0 0 6px;padding-left:18px}.keeps-body li{margin-bottom:4px;font-size:13px;color:#334155}
   .sec-h{font-size:15px;font-weight:700;margin:0 0 2px}
   .sec-s{font-size:11px;color:#94a3b8;margin:0 0 14px}
   .card{background:#fff;border-left:4px solid var(--c);border-radius:10px;box-shadow:0 1px 3px rgba(15,23,42,.08);padding:17px 18px;margin-bottom:16px}
@@ -232,7 +238,7 @@ const html = `<!DOCTYPE html>
   .note-body code{background:#eef2f7;padding:1px 5px;border-radius:4px;font-size:12px}
   .actions{display:flex;gap:8px;flex-wrap:wrap}
   a.react{display:inline-block;font-size:12.5px;font-weight:700;color:#fff;background:var(--c);padding:9px 15px;border-radius:7px;text-decoration:none}
-  a.addkeep{display:inline-block;font-size:12.5px;font-weight:700;color:var(--c);background:#fff;border:1.5px solid var(--c);padding:8px 13px;border-radius:7px;text-decoration:none}
+  .addkeep{display:inline-block;font-size:12.5px;font-weight:700;color:var(--c);background:#fff;border:1.5px solid var(--c);padding:8px 13px;border-radius:7px;text-decoration:none;cursor:pointer;font-family:inherit;line-height:1}
   footer{font-size:11px;color:#94a3b8;line-height:1.7;margin-top:26px;padding-top:18px;border-top:1px solid #e2e8f0}
 </style></head>
 <body><div class="wrap">
@@ -242,14 +248,40 @@ const html = `<!DOCTYPE html>
     <div class="s-ok"><b>${reactedRecent.length}</b><span>반영됨</span></div>
     <div class="s-old"><b>${unreactedOlder}</b><span>${DAYS}일 이전 미반응</span></div>
   </div>
-  ${KEEPS_HTML ? `<section class="keeps"><div class="kh">📌 내 약속처방·메모</div><div class="ks">개인 메모(미검증) + 승격된 약속처방. 환자 앞에서 믿고 쓰기 전 검증 원칙.</div><div class="keeps-body">${KEEPS_HTML}</div><a class="edit" href="${KEEPS_EDIT}" target="_blank" rel="noopener">✏️ 메모 편집(GitHub)</a></section>` : ""}
+  <section class="keeps">
+    <div class="kh">📌 빠른 메모</div>
+    <div class="ks">이 기기 브라우저에만 저장됩니다(동기화·레포 백업 아님). 환자 앞에서 믿고 쓰기 전 검증 원칙.</div>
+    <textarea id="keeps-ta" class="keeps-ta" placeholder="꽂힌 내용을 한 줄씩…  (카드의 ‘➕ keeps에 추가’를 누르면 여기로 들어옵니다)"></textarea>
+    <div class="keeps-actions"><span id="keeps-ind" class="keeps-ind"></span><button id="keeps-copy" type="button" class="keeps-copy">📋 복사</button></div>
+    ${KEEPS_HTML ? `<details class="keeps-repo"><summary>레포 저장본(검증·백업용)</summary><div class="keeps-body">${KEEPS_HTML}</div><a class="edit" href="${KEEPS_EDIT}" target="_blank" rel="noopener">✏️ 레포 편집(GitHub)</a></details>` : ""}
+  </section>
   <div class="sec-h">📬 아직 안 읽은 논문</div>
   <div class="sec-s">훑고 → 더 보려면 '세부 요약' · 반응 쓴 건 '내 study-note'로 복습 · 꽂히면 'keeps에 추가'</div>
   ${cardsHtml || `<div class="card">🎉 최근 ${DAYS}일 미반응 없음 — 다 읽으셨어요!</div>`}
   ${unreactedRecent.length > MAX_UNREACTED ? `<div class="sec-s">…외 ${unreactedRecent.length - MAX_UNREACTED}건 더</div>` : ""}
   ${reviewable.length ? `<div class="sec-h" style="margin-top:26px">✅ 복습 — 내 study-note</div><div class="sec-s">반응을 써서 정오 Deep Extract가 노트를 만든 논문. 카드에서 바로 펼쳐 복습</div>${reviewable.map(card).join("\n")}` : ""}
-  <footer>반응을 쓴 논문만 정오 12:00 Deep Extract가 처리합니다. 세부 요약은 논문 초록·전문(PubMed) 기반이며 inbox/scout 에서 매일 자동 생성됩니다.</footer>
-</div></body></html>`;
+  <footer>반응을 쓴 논문만 정오 12:00 Deep Extract가 처리합니다. 세부 요약은 논문 초록·전문(PubMed) 기반이며 inbox/scout 에서 매일 자동 생성됩니다. 빠른 메모는 이 기기 브라우저에 저장됩니다.</footer>
+</div>
+<script>
+(function(){
+  var K='chartji_keeps_v1', ta=document.getElementById('keeps-ta'), ind=document.getElementById('keeps-ind');
+  if(!ta) return;
+  function save(){try{localStorage.setItem(K,ta.value);if(ind)ind.textContent='✓ 이 기기에 저장됨';}catch(e){if(ind)ind.textContent='⚠ 저장 불가(브라우저 설정)';}}
+  try{var v=localStorage.getItem(K);if(v!==null)ta.value=v;}catch(e){}
+  ta.addEventListener('input',save);
+  document.querySelectorAll('.addkeep').forEach(function(b){
+    b.addEventListener('click',function(){
+      var ref=b.getAttribute('data-ref')||'', cur=ta.value.replace(/\\s*$/,'');
+      ta.value=(cur?cur+'\\n':'')+'- '+ref; save();
+      ta.scrollIntoView({behavior:'smooth',block:'center'});
+      var o=b.textContent; b.textContent='✓ 추가됨'; setTimeout(function(){b.textContent=o;},1400);
+    });
+  });
+  var cp=document.getElementById('keeps-copy');
+  if(cp)cp.addEventListener('click',function(){try{navigator.clipboard.writeText(ta.value);cp.textContent='✓ 복사됨';setTimeout(function(){cp.textContent='📋 복사';},1400);}catch(e){}});
+})();
+</script>
+</body></html>`;
 
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, html);
