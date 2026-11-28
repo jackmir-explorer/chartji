@@ -81,8 +81,9 @@ function renderWhy(why) {
 function renderDeep(deep) {
   if (!deep) return `<div class="deep-pending">📄 세부 요약 생성 대기 (매일 자동 추가)</div>`;
   const points = (deep.points || []).map((p) => `<li>${esc(p)}</li>`).join("");
+  const tag = /전문|full/i.test(deep.basis || "") ? "전문 기반" : "초록 기반";
   return `<details class="deep">
-    <summary>📄 세부 요약 펼치기 <span class="deep-tag">deep · 초록 기반</span></summary>
+    <summary>📄 세부 요약 펼치기 <span class="deep-tag">deep · ${esc(tag)}</span></summary>
     <div class="deep-body">
       ${deep.core ? `<div class="deep-core">${esc(deep.core)}</div>` : ""}
       ${points ? `<ul class="deep-points">${points}</ul>` : ""}
