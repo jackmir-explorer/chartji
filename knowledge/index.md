@@ -138,4 +138,5 @@ RedFlag 패널에는 절대 inject 하지 않는다.
 - chest-xray-template.md — 기숙사 입소·검진 SOAP template (Z115), 변형 4종 (취업·학교·흉부 검진) [TIPS — by 미르] — topic
 - immunocompromised-vaccination.md — 면역저하자 백신 일차의료 프로토콜: RZV(생백신 금기·항암 후 3mo)·HD-influenza·PCV20/PCV15→≥8주 PPSV23·RSV 60세+·COVID·Tdap·Rituximab HBV screening 필수 [CLINICAL] PMID:24421306 IDSA 2013 — topic
 - clinical-experience-quality.md — 임상 경력과 진료 질의 역관계: 62 evaluation 중 45건(73%) 경력↑→수행↓ · 조절변수 3개(고volume 소실·술기 역전·진짜 변수는 현재 지식수준) · CME 지식점수↑ but MOC↔환자 outcome 무관 · 한국 실증근거 없음 [CLINICAL — 조건부] PMID:15710959 Choudhry Ann Intern Med 2005 + PMID:28512089/29695473 Tsugawa BMJ 2017·2018 — topic (Triage 미등록 — 의사 자가 점검용)
+- physician-trust-ai.md — Mayer et al. (1995) 신뢰 3요소(능력·선의·정직) + AI 시대 의사 신뢰 기반 전환: AI가 능력 대체 시 환자는 선의·정직을 찾는다 → "더 잘 아는 사람"에서 "끝까지 함께하는 사람"으로 [INSIGHTS — by 미르] — topic (Triage 미등록 — 직업철학용)
 - myopia-outdoor-activity-taiwan.md — 근시 예방과 실외활동: 대만 天天120(2010.9, 하루 120분 실외활동 권고) 인구 단위 추세 반전. 저시력 유병률 34.8%(2001)→50.0%(2011)→46.1%(2015), 분절회귀 +1.58%→−2.34%/yr. 권고(의무X)·주10시간·최근 재상승·유치원 공백(宜蘭)·한국 144시간 대비 [INSIGHTS] — topic (Triage 미등록, 원 논문 PMID:32197911 확인)
